@@ -88,6 +88,44 @@ jobs:
           PY
           echo "VERSION=$VERSION" >> "$GITHUB_ENV"
 
+      # gradle/verification-metadata.xml was generated on Windows and macOS, so it has no checksum
+      # for the Linux aapt2 jar and Gradle refuses to use it on this runner. Fetch that one jar
+      # from Google's Maven repository, cross-check it against Google's published SHA-1 when the
+      # repository serves one, and add its SHA-256 for this run. Every other dependency stays
+      # fully verified. The edit is never committed.
+      - name: Add the Linux aapt2 checksum
+        run: |
+          set -euo pipefail
+          python3 - <<'PY'
+          import hashlib, re, sys, urllib.request
+          path = "gradle/verification-metadata.xml"
+          xml = open(path, encoding="utf-8", newline="").read()
+          m = re.search(r'<component group="com\.android\.tools\.build" name="aapt2" version="([^"]+)">', xml)
+          if not m:
+              print("::error::No aapt2 component in gradle/verification-metadata.xml."); sys.exit(1)
+          version = m.group(1)
+          name = f"aapt2-{version}-linux.jar"
+          if f'<artifact name="{name}">' in xml:
+              print(f"{name} is already listed."); sys.exit(0)
+          url = f"https://dl.google.com/dl/android/maven2/com/android/tools/build/aapt2/{version}/{name}"
+          data = urllib.request.urlopen(url, timeout=180).read()
+          digest = hashlib.sha256(data).hexdigest()
+          try:
+              published = urllib.request.urlopen(url + ".sha1", timeout=60).read().decode().split()[0].lower()
+              if hashlib.sha1(data).hexdigest() != published:
+                  print("::error::The downloaded aapt2 jar doesn't match Google's published SHA-1."); sys.exit(1)
+              print("Matches Google's published SHA-1.")
+          except Exception as problem:
+              print(f"::warning::No published SHA-1 to cross-check ({problem}).")
+          marker = f'<artifact name="aapt2-{version}-osx.jar">'
+          if marker not in xml:
+              print("::error::Couldn't find where to add the Linux checksum."); sys.exit(1)
+          entry = (f'<artifact name="{name}">\n            <sha256 value="{digest}" '
+                   f'origin="Fetched from Google Maven by the release workflow"/>\n         </artifact>\n         ')
+          open(path, "w", encoding="utf-8", newline="").write(xml.replace(marker, entry + marker, 1))
+          print(f"Added {name} {digest}")
+          PY
+
       - name: Build and sign the bundle
         env:
           MORPHE_SIGNING_KEY: ${{ secrets.MORPHE_SIGNING_KEY }}
@@ -130,6 +168,7 @@ jobs:
           GH_TOKEN: ${{ github.token }}
         run: |
           set -euo pipefail
+          git checkout -- gradle/verification-metadata.xml
           DEFAULT=$(gh repo view --json defaultBranchRef --jq .defaultBranchRef.name)
           git fetch origin "$DEFAULT"
           git checkout -B "$DEFAULT" "origin/$DEFAULT"
@@ -152,3 +191,4 @@ jobs:
               cat patches-bundle.json
             }
           fi
+          
