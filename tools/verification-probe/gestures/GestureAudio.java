@@ -1,4 +1,4 @@
-package app.hushfeed.verification.gestures;
+package app.larpfeed.verification.gestures;
 
 /** Audio restoration uses the unmuted index because Android reports zero while muted. */
 final class GestureAudio {

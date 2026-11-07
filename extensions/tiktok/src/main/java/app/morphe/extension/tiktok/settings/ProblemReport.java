@@ -1,6 +1,6 @@
 /*
- * Copyright 2026 Hushfeed contributors
- * https://github.com/SysAdminDoc/hushfeed
+ * Copyright 2026 Larpfeed contributors
+ * https://github.com/SysAdminDoc/larpfeed
  */
 package app.morphe.extension.tiktok.settings;
 
@@ -27,7 +27,7 @@ import app.morphe.extension.shared.Utils;
  * serial or a file path: titles, versions and the model only.
  */
 public final class ProblemReport {
-    static final String NEW_ISSUE_URL = "https://github.com/SysAdminDoc/HushFeed/issues/new";
+    static final String NEW_ISSUE_URL = "https://github.com/SysAdminDoc/LarpFeed/issues/new";
     /** The bug form in .github/ISSUE_TEMPLATE, whose field ids the link fills. */
     static final String TEMPLATE = "bug_report.yml";
     /** The form's own title prefix; the reporter adds the rest. */
@@ -152,7 +152,7 @@ public final class ProblemReport {
     }
 
     private static String head(Facts facts) {
-        return "Hushfeed and TikTok: " + versions(facts) + "\n" + "Phone: " + device(facts) + "\n\n";
+        return "Larpfeed and TikTok: " + versions(facts) + "\n" + "Phone: " + device(facts) + "\n\n";
     }
 
     private static String tail() {
@@ -171,8 +171,8 @@ public final class ProblemReport {
     static String switches(Facts facts, int room) {
         List<String> titles = facts.switchesOn;
         String heading = titles.isEmpty()
-                ? "Hushfeed switches that are on: none"
-                : "Hushfeed switches that are on (" + titles.size() + "):";
+                ? "Larpfeed switches that are on: none"
+                : "Larpfeed switches that are on (" + titles.size() + "):";
         StringBuilder text = new StringBuilder(heading);
         for (int index = 0; index < titles.size(); index++) {
             String line = "\n- " + titles.get(index);

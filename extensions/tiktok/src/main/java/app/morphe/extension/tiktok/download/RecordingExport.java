@@ -1,6 +1,6 @@
 /*
- * Copyright 2026 Hushfeed contributors
- * https://github.com/SysAdminDoc/hushfeed
+ * Copyright 2026 Larpfeed contributors
+ * https://github.com/SysAdminDoc/larpfeed
  */
 package app.morphe.extension.tiktok.download;
 
@@ -30,7 +30,7 @@ public final class RecordingExport {
     private RecordingExport() {}
 
     static void open(Activity activity, String id) {
-        if (activity.getFragmentManager().findFragmentByTag("hushfeed-recording-export") != null)
+        if (activity.getFragmentManager().findFragmentByTag("larpfeed-recording-export") != null)
             return;
         Request request = new Request();
         Bundle arguments = new Bundle();
@@ -38,7 +38,7 @@ public final class RecordingExport {
         request.setArguments(arguments);
         activity.getFragmentManager()
                 .beginTransaction()
-                .add(request, "hushfeed-recording-export")
+                .add(request, "larpfeed-recording-export")
                 .commitAllowingStateLoss();
     }
 
@@ -74,7 +74,7 @@ public final class RecordingExport {
             if (uri == null || activity == null) return;
             Context app = activity.getApplicationContext();
             Utils.runOnOwnThread(
-                    "hushfeed-recording-export",
+                    "larpfeed-recording-export",
                     () -> {
                         try {
                             exportTo(app, id, uri);

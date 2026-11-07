@@ -1,6 +1,6 @@
 /*
- * Copyright 2026 Hushfeed contributors
- * https://github.com/SysAdminDoc/hushfeed
+ * Copyright 2026 Larpfeed contributors
+ * https://github.com/SysAdminDoc/larpfeed
  */
 package app.morphe.extension.tiktok.settings.preference;
 
@@ -34,7 +34,7 @@ import org.robolectric.annotation.Config;
 @Config(sdk = 28)
 @SuppressWarnings("deprecation")
 public class SettingsFooterRowsTest {
-    private static final String ISSUE_FORM = "https://github.com/SysAdminDoc/HushFeed/issues/new?template=bug_report.yml&";
+    private static final String ISSUE_FORM = "https://github.com/SysAdminDoc/LarpFeed/issues/new?template=bug_report.yml&";
 
     @Rule public final SettingsContextRule settingsContext = new SettingsContextRule();
 
@@ -46,7 +46,7 @@ public class SettingsFooterRowsTest {
             Preference support = screen.getPreference(count - 1);
             Preference report = screen.getPreference(count - 2);
             assertEquals(TikTokPreferenceFragment.SUPPORT_KEY, support.getKey());
-            assertEquals("Support Hushfeed", String.valueOf(support.getTitle()));
+            assertEquals("Support Larpfeed", String.valueOf(support.getTitle()));
             assertEquals("the Support row carries its title and nothing under it",
                     "", String.valueOf(support.getSummary()));
             assertEquals(TikTokPreferenceFragment.REPORT_PROBLEM_KEY, report.getKey());

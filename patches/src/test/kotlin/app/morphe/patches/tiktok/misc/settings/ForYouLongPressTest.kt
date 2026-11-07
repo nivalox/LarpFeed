@@ -1,6 +1,6 @@
 /*
- * Copyright 2026 Hushfeed contributors
- * https://github.com/SysAdminDoc/hushfeed
+ * Copyright 2026 Larpfeed contributors
+ * https://github.com/SysAdminDoc/larpfeed
  */
 package app.morphe.patches.tiktok.misc.settings
 
@@ -43,7 +43,7 @@ private const val TAB = "LX/Tab;"
 private const val VIEW = "Landroid/view/View;"
 
 /**
- * A long press on For You opens Hushfeed settings: the settings patch hands every top tab TikTok
+ * A long press on For You opens Larpfeed settings: the settings patch hands every top tab TikTok
  * binds to the extension, with the tag of the tab it shows. The site is held to every declared
  * build, and a build that binds its top tabs some other way keeps the rest of the settings patch
  * and leaves For You as TikTok made it.

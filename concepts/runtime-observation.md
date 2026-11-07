@@ -2,7 +2,7 @@
 
 This protocol measures the installed `com.zhiliaoapp.musically` build. A patched installation with patch behavior paused remains a modified, differently signed build. Label it as a paused patched baseline. An official-stock comparison requires an independently identified official build under matched conditions.
 
-The [October 9 physical-device results](runtime-results-2026-10-09.md) apply this method to TikTok 47.1.4 with Hushfeed 0.68.0 paused. Keep those observations separate from the 0.70.0 source review below.
+The [October 9 physical-device results](runtime-results-2026-10-09.md) apply this method to TikTok 47.1.4 with Larpfeed 0.68.0 paused. Keep those observations separate from the 0.70.0 source review below.
 
 ## Identity and reproducibility
 
@@ -27,7 +27,7 @@ Use a bounded diagnostic recording with consecutive foreground, background and s
 
 Mark each phase after verifying its starting state and end it before the next transition. Exclude transitions from phase totals. Do not force-stop the app, clear its data, force Doze, reset statistics or change battery restrictions to create an apparently quiet baseline.
 
-If `android.log` is advertised and produces marker events, capture only a fresh exact `HushfeedAudit_<RUN_ID>` tag from the MAIN log buffer. Emit one marker at each boundary. Log timestamps mark those writes, not the exact display or activity transition. Require complete, ordered marker pairs. If unavailable, use separately bounded phase recordings and disclose boundary uncertainty. The official documentation limits this log source to userdebug builds, so production-device support must be established rather than assumed. [Android log tracing](https://perfetto.dev/docs/data-sources/android-log)
+If `android.log` is advertised and produces marker events, capture only a fresh exact `LarpfeedAudit_<RUN_ID>` tag from the MAIN log buffer. Emit one marker at each boundary. Log timestamps mark those writes, not the exact display or activity transition. Require complete, ordered marker pairs. If unavailable, use separately bounded phase recordings and disclose boundary uncertainty. The official documentation limits this log source to userdebug builds, so production-device support must be established rather than assumed. [Android log tracing](https://perfetto.dev/docs/data-sources/android-log)
 
 ```text
 rtk proxy adb -s <TRANSPORT> shell log -p i -t <RUN_TAG> phase.begin.background
@@ -126,9 +126,9 @@ Preserve the capture configuration, measurement boundaries, analyzer version and
 
 Keep raw captures private. They can contain device and network identifiers, package inventories, account-related text or other apps' activity. Capture only the data needed for the question, filter marker logging at collection, and publish only the target app's relevant aggregates and redacted evidence. Do not publish credentials, device identifiers, private content, complete packet payloads or unrelated application records.
 
-## Interpreting results against Hushfeed source
+## Interpreting results against Larpfeed source
 
-This map describes Hushfeed 0.70.0 targeting TikTok 47.1.4, reviewed on 2026-10-09. Match the installed build and selected patches before using it to explain a measurement. Source capabilities are separate from observed behavior.
+This map describes Larpfeed 0.70.0 targeting TikTok 47.1.4, reviewed on 2026-10-09. Match the installed build and selected patches before using it to explain a measurement. Source capabilities are separate from observed behavior.
 
 ### Pause, saved settings, and baseline labels
 
@@ -195,11 +195,11 @@ Other static changes, including asset removal, screen-capture/login fixes, and s
 - UID netstats can support byte deltas for the intended TikTok UID. It cannot assign endpoints or intent. A separate packet capture can add visible DNS/SNI and IP evidence. Encrypted payloads, QUIC/ECH, name caching, VPN overhead and capture gaps limit interpretation. The Perfetto packet table used above does not expose IP addresses, DNS or SNI. Neither packet bytes nor request counts alone measure energy.
 - Strongest comparisons record the installed build/static inventory, saved and effective settings, process restart, lifecycle state, playback/brightness/refresh conditions, capture coverage and elapsed duration. Report observed bytes, processes or power separately from the mechanism proposed to explain them. This source reference establishes no measured result or causal power claim.
 
-[pause]: ../extensions/shared/library/src/main/java/app/morphe/extension/shared/settings/HushfeedPause.java#L32
+[pause]: ../extensions/shared/library/src/main/java/app/morphe/extension/shared/settings/LarpfeedPause.java#L32
 [setting]: ../extensions/shared/library/src/main/java/app/morphe/extension/shared/settings/Setting.java#L455
 [boolean]: ../extensions/shared/library/src/main/java/app/morphe/extension/shared/settings/BooleanSetting.java#L77
 [toggle]: ../extensions/tiktok/src/main/java/app/morphe/extension/tiktok/settings/preference/TogglePreference.java#L57
-[probe]: ../tools/verification-probe/src/app/hushfeed/verification/Probe.java#L3526
+[probe]: ../tools/verification-probe/src/app/larpfeed/verification/Probe.java#L3526
 [base]: ../extensions/shared/library/src/main/java/app/morphe/extension/shared/settings/BaseSettings.java#L27
 [exceptions]: ../extensions/tiktok/src/main/java/app/morphe/extension/tiktok/settings/Settings.java#L954
 [readme]: ../README.md#L166

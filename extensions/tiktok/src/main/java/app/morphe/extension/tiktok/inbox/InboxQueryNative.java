@@ -1,6 +1,6 @@
 /*
- * Copyright 2026 Hushfeed contributors
- * https://github.com/SysAdminDoc/hushfeed
+ * Copyright 2026 Larpfeed contributors
+ * https://github.com/SysAdminDoc/larpfeed
  *
  * Built on icysymmetra/tiktok-patches-for-morphe (GPL-3.0).
  */
@@ -115,12 +115,12 @@ final class InboxQueryNative {
 
     static void resetForTests() { threw = false; fault = null; }
 
-    /** A seam for tests: lets one throw come from Hushfeed's own part of a native delegate. */
+    /** A seam for tests: lets one throw come from Larpfeed's own part of a native delegate. */
     interface Fault { void at(String hook); }
     static volatile Fault fault;
 
     /**
-     * Ends the search after Hushfeed's own code threw inside a delegate TikTok's frames call. The
+     * Ends the search after Larpfeed's own code threw inside a delegate TikTok's frames call. The
      * owner is not needed: every open list is handed back to TikTok. Reporting must never throw
      * into the native frame either, or the guard would only move the crash.
      */
@@ -251,7 +251,7 @@ final class InboxQueryNative {
 
     /**
      * Both the list and native visible pair belong to the accepted aggregate, not a queued diff.
-     * Hushfeed decides inside the guard what the native helper should receive; the helper call
+     * Larpfeed decides inside the guard what the native helper should receive; the helper call
      * itself runs outside it, so a throw from TikTok's own replaced call keeps its identity.
      */
     static void indexed(Object closure, Object helper, List<?> original, Object pair) {

@@ -1,6 +1,6 @@
 /*
- * Copyright 2026 Hushfeed contributors
- * https://github.com/SysAdminDoc/hushfeed
+ * Copyright 2026 Larpfeed contributors
+ * https://github.com/SysAdminDoc/larpfeed
  */
 package app.morphe.extension.tiktok.privacy;
 
@@ -14,7 +14,7 @@ import app.morphe.extension.tiktok.settings.Settings;
  * <p>Its three hooks are the Pitaya plugin lookup, the door a real Pitaya core comes in by, and
  * the start of Pitaya Lite. With the switch on the lookup answers "no plugin", which every caller
  * already copes with, and the other two return before they do anything. With it off, and while
- * Hushfeed is paused, all three run as TikTok wrote them. Pitaya starts during launch, so a call
+ * Larpfeed is paused, all three run as TikTok wrote them. Pitaya starts during launch, so a call
  * before the settings context exists reads the switch from the saved file.
  */
 @SuppressWarnings("unused")

@@ -1,6 +1,6 @@
 /*
- * Copyright 2026 Hushfeed contributors
- * https://github.com/SysAdminDoc/hushfeed
+ * Copyright 2026 Larpfeed contributors
+ * https://github.com/SysAdminDoc/larpfeed
  */
 package app.morphe.extension.tiktok.download;
 
@@ -127,16 +127,16 @@ public class DownloadNamePreviewTest {
             assertEquals(template,
                     DownloadFilenameFormatter.destinationPath(post, false) + "/"
                             + DownloadFilenameFormatter.formatSelectedVideoName(post),
-                    line(preview, "Hushfeed's downloader: "));
+                    line(preview, "Larpfeed's downloader: "));
             assertEquals(template, tiktokSave(template), line(preview, "TikTok's downloader: "));
         }
     }
 
-    @Test public void anEmptyTemplateKeepsTikToksNameWhileHushfeedUsesItsDefault() throws Exception {
+    @Test public void anEmptyTemplateKeepsTikToksNameWhileLarpfeedUsesItsDefault() throws Exception {
         String preview = DownloadNamePreview.video("", NOW);
 
         assertEquals("DCIM/Clips/creator_name_2023-11-14_7312345678901234567.mp4",
-                line(preview, "Hushfeed's downloader: "));
+                line(preview, "Larpfeed's downloader: "));
         assertEquals("DCIM/Clips/TikTok's own name", line(preview, "TikTok's downloader: "));
         assertEquals("TikTok really does keep its own name",
                 "DCIM/Clips/tiktok_name.mp4", tiktokSave(""));
@@ -152,7 +152,7 @@ public class DownloadNamePreviewTest {
         String preview = DownloadNamePreview.video("{creator}/{video_id}", NOW);
 
         // A TXT beside the video moves the pair to Download on scoped storage.
-        assertEquals("Download/Clips/creator_name/7312345678901234567.mp4", line(preview, "Hushfeed's downloader: "));
+        assertEquals("Download/Clips/creator_name/7312345678901234567.mp4", line(preview, "Larpfeed's downloader: "));
         assertEquals("Music/Clips/creator_name/7312345678901234567.m4a", line(preview, "Sound: "));
         assertEquals("Download/Clips/creator_name/7312345678901234567.txt", line(preview, "Details: "));
         assertEquals("Download/Clips/creator_name/7312345678901234567.en.srt", line(preview, "Subtitles: "));
@@ -167,19 +167,19 @@ public class DownloadNamePreviewTest {
 
         String preview = DownloadNamePreview.video("{video_id}", NOW);
 
-        assertEquals("DCIM/Clips/7312345678901234567.mp4", line(preview, "Hushfeed's downloader: "));
+        assertEquals("DCIM/Clips/7312345678901234567.mp4", line(preview, "Larpfeed's downloader: "));
         assertEquals("DCIM/Clips/7312345678901234567.en.srt", line(preview, "Subtitles: "));
         assertFalse("the switch is off", preview.contains("Sound: "));
-        assertTrue(preview.endsWith("If that name is taken, Hushfeed adds a number to the new file."));
+        assertTrue(preview.endsWith("If that name is taken, Larpfeed adds a number to the new file."));
     }
 
     @Test public void photosKeepTheirNumbersAndAMisspelledTokenIsNamed() {
         String preview = DownloadNamePreview.photo("{creator}_{vidoe_id}", NOW);
 
         assertEquals("Pictures/Posts/creator_name_{vidoe_id}_1.jpg, creator_name_{vidoe_id}_2.jpg",
-                line(preview, "Hushfeed's downloader: "));
+                line(preview, "Larpfeed's downloader: "));
         assertEquals("Pictures/Posts/creator_name_{vidoe_id}.jpg", line(preview, "TikTok's downloader: "));
-        assertEquals("{vidoe_id}", line(preview, "Not a part Hushfeed fills in, so it's kept as typed: "));
+        assertEquals("{vidoe_id}", line(preview, "Not a part Larpfeed fills in, so it's kept as typed: "));
         Settings.DOWNLOAD_PHOTO_FILENAME_TEMPLATE.save("{creator}_{vidoe_id}");
         assertEquals("creator_name_{vidoe_id}_2.jpg", DownloadFilenameFormatter.formatOriginalPhotoName(post, 2, "jpg"));
     }
@@ -191,23 +191,23 @@ public class DownloadNamePreviewTest {
         assertFalse("braces around spaces aren't a try at a token",
                 DownloadNamePreview.video("{creator} { }", NOW).contains("kept as typed"));
         String preview = DownloadNamePreview.video("{creator}_{video-id}", NOW);
-        assertEquals("{video-id}", line(preview, "Not a part Hushfeed fills in, so it's kept as typed: "));
-        assertEquals("DCIM/Clips/creator_name_{video-id}.mp4", line(preview, "Hushfeed's downloader: "));
+        assertEquals("{video-id}", line(preview, "Not a part Larpfeed fills in, so it's kept as typed: "));
+        assertEquals("DCIM/Clips/creator_name_{video-id}.mp4", line(preview, "Larpfeed's downloader: "));
     }
 
-    @Test public void tokensOnlyTikToksDownloaderFillsAreNamedForHushfeeds() throws Exception {
+    @Test public void tokensOnlyTikToksDownloaderFillsAreNamedForLarpfeeds() throws Exception {
         String preview = DownloadNamePreview.video("{original}_{media_id}_{vidoe}", NOW);
 
-        assertEquals("{vidoe}", line(preview, "Not a part Hushfeed fills in, so it's kept as typed: "));
-        assertEquals("{original}, {media_id}", line(preview, "Hushfeed's downloader doesn't fill this in, so it's kept as typed: "));
+        assertEquals("{vidoe}", line(preview, "Not a part Larpfeed fills in, so it's kept as typed: "));
+        assertEquals("{original}, {media_id}", line(preview, "Larpfeed's downloader doesn't fill this in, so it's kept as typed: "));
         Settings.DOWNLOAD_VIDEO_FILENAME_TEMPLATE.save("{original}_{media_id}_{vidoe}");
-        assertEquals("what Hushfeed's downloader really saves", "{original}_{media_id}_{vidoe}.mp4",
+        assertEquals("what Larpfeed's downloader really saves", "{original}_{media_id}_{vidoe}.mp4",
                 DownloadFilenameFormatter.formatSelectedVideoName(post));
         assertTrue("and TikTok's fills {original}",
                 tiktokSave("{original}_{media_id}_{vidoe}").contains(DownloadNamePreview.TIKTOK_NAME + "_"));
 
         SettingsStatus.advancedDownloadsEnabled = false;
-        assertFalse("without Hushfeed's downloader there's nothing to say about it",
+        assertFalse("without Larpfeed's downloader there's nothing to say about it",
                 DownloadNamePreview.video("{original}", NOW).contains("kept as typed"));
         assertFalse("the comment media saver fills both",
                 DownloadNamePreview.commentMedia("{original}_{media_id}", NOW).contains("kept as typed"));
@@ -217,7 +217,7 @@ public class DownloadNamePreviewTest {
         SettingsStatus.advancedDownloadsEnabled = false;
         String preview = DownloadNamePreview.video("{video_id}", NOW);
 
-        assertFalse(preview.contains("Hushfeed's downloader: "));
+        assertFalse(preview.contains("Larpfeed's downloader: "));
         assertTrue(preview.contains("TikTok's downloader: "));
     }
 
@@ -228,6 +228,6 @@ public class DownloadNamePreviewTest {
         // A sticker has no creator, and the saver writes "unknown" for one, as the preview does.
         assertEquals(sticker + "/2023-11-14_7f3a9c21_unknown_{vidoe}.png", line(preview, "Stickers: "));
         assertEquals("Pictures/Posts/2023-11-14_7f3a9c21-live_unknown_{vidoe}.mp4", line(preview, "Live photo clips: "));
-        assertEquals("{vidoe}", line(preview, "Not a part Hushfeed fills in, so it's kept as typed: "));
+        assertEquals("{vidoe}", line(preview, "Not a part Larpfeed fills in, so it's kept as typed: "));
     }
 }

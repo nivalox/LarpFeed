@@ -154,7 +154,7 @@ public class PrivacySwitchesTest {
     /**
      * A null projection asks for every column. TikTok's file-name and path helpers ask that way
      * and look _display_name up before they check for a row, so a blocked read keeps the contacts
-     * provider's columns in every overload, before Hushfeed has a context too, and the provider
+     * provider's columns in every overload, before Larpfeed has a context too, and the provider
      * is never asked.
      */
     @Test public void aBlockedReadWithNoProjectionStillHasTheContactsColumns() {
@@ -461,7 +461,7 @@ public class PrivacySwitchesTest {
         assertEquals(Settings.BLOCK_ADVERTISING_ID.key, DevicePrivacyGuard.ADVERTISING_ID_KEY);
     }
 
-    /** The device-access blocks start off, so a read before Hushfeed has a context goes through too. */
+    /** The device-access blocks start off, so a read before Larpfeed has a context goes through too. */
     @Test public void beforeTheExtensionHasAContextNoDeviceReadIsBlockedWhileTheSwitchesAreOff() {
         for (var setting : deviceAccess()) {
             assertEquals("the patch is in the default selection, so " + setting.key + " starts off",
@@ -480,7 +480,7 @@ public class PrivacySwitchesTest {
 
     /**
      * TikTok checks its connection and reads the advertising id early in startup, before
-     * Hushfeed has a context to read settings with. A switch that's on still covers those reads,
+     * Larpfeed has a context to read settings with. A switch that's on still covers those reads,
      * since the saved value is read straight from the file.
      */
     @Test public void beforeTheExtensionHasAContextASwitchThatsOnStillBlocks() {
@@ -608,7 +608,7 @@ public class PrivacySwitchesTest {
         }
     }
 
-    @Test public void searchHistoryIsSkippedOnlyWhileThePatchedSwitchIsOnAndHushfeedRuns() {
+    @Test public void searchHistoryIsSkippedOnlyWhileThePatchedSwitchIsOnAndLarpfeedRuns() {
         assertEquals("the patch is in the default selection, so its switch starts off",
                 Boolean.FALSE, Settings.STOP_SEARCH_HISTORY.defaultValue);
         Settings.STOP_SEARCH_HISTORY.save(true);
@@ -631,7 +631,7 @@ public class PrivacySwitchesTest {
         assertTrue("the next search after the pause is skipped again", SearchHistoryRecording.shouldSkip());
     }
 
-    @Test public void viewReportsAreHeldBackOnlyWhileTheSwitchIsOnAndHushfeedRuns() {
+    @Test public void viewReportsAreHeldBackOnlyWhileTheSwitchIsOnAndLarpfeedRuns() {
         assertEquals("picking the patch isn't enough, since people use Watch history",
                 Boolean.FALSE, Settings.STOP_WATCH_HISTORY.defaultValue);
         SettingsStatus.watchHistoryEnabled = true;

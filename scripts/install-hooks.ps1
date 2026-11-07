@@ -36,7 +36,7 @@ if (-not (Test-Path -LiteralPath $hooksDirectory)) {
     New-Item -ItemType Directory -Path $hooksDirectory | Out-Null
 }
 
-$marker = '# hushfeed-pre-push'
+$marker = '# larpfeed-pre-push'
 $hookPath = Join-Path $hooksDirectory 'pre-push'
 if ((Test-Path -LiteralPath $hookPath) -and -not $Force) {
     $existing = Get-Content -LiteralPath $hookPath -Raw
@@ -73,4 +73,4 @@ if ($IsLinux -or $IsMacOS) {
 
 Write-Host "Installed $hookPath"
 Write-Host 'A push now takes a couple of seconds to check authorship and added lines for a device'
-Write-Host 'serial or a home folder path. Set HUSHFEED_SKIP_PRE_PUSH=1 to skip it.'
+Write-Host 'serial or a home folder path. Set LARPFEED_SKIP_PRE_PUSH=1 to skip it.'

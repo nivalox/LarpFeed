@@ -1,6 +1,6 @@
 /*
- * Copyright 2026 Hushfeed contributors
- * https://github.com/SysAdminDoc/hushfeed
+ * Copyright 2026 Larpfeed contributors
+ * https://github.com/SysAdminDoc/larpfeed
  *
  * Built on icysymmetra/tiktok-patches-for-morphe (GPL-3.0).
  */
@@ -664,7 +664,7 @@ public final class VideoFit {
             lines.add("Fit the video to the screen: " + (fit ? "on" : "off"));
             lines.add("Fill the screen with the video: " + (fill ? "on" : "off"));
             if ((fit || fill) && !Settings.FIT_VIDEO_TO_SCREEN.get() && !Settings.FILL_VIDEO_TO_SCREEN.get()) {
-                lines.add("Hushfeed is paused, so videos keep TikTok's size");
+                lines.add("Larpfeed is paused, so videos keep TikTok's size");
             }
             // Counted per check, and the feed checks twice for each video it shows.
             lines.add("Fit checks since TikTok started: " + RESIZED.get() + " resized the video, "

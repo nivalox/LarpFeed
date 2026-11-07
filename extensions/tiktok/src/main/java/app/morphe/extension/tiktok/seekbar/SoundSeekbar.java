@@ -1,6 +1,6 @@
 /*
- * Copyright 2026 Hushfeed contributors
- * https://github.com/SysAdminDoc/hushfeed
+ * Copyright 2026 Larpfeed contributors
+ * https://github.com/SysAdminDoc/larpfeed
  */
 package app.morphe.extension.tiktok.seekbar;
 
@@ -43,7 +43,7 @@ import app.morphe.extension.tiktok.settings.Settings;
  *
  * <p>The line stays hidden, leaving TikTok's own controls as they are, while nothing plays, while
  * the player doesn't know the length, and for a sound whose stream didn't move when it was asked
- * to. Off, or with Hushfeed paused (every switch then answers off), its next tick takes it out.
+ * to. Off, or with Larpfeed paused (every switch then answers off), its next tick takes it out.
  */
 @SuppressWarnings("unused")
 public final class SoundSeekbar {

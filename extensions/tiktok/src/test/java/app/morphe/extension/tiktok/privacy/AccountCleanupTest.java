@@ -93,12 +93,12 @@ public class AccountCleanupTest {
     }
 
     private String bannerText() {
-        View label = content.findViewWithTag("hushfeed_settings_action_message");
+        View label = content.findViewWithTag("larpfeed_settings_action_message");
         return label instanceof TextView ? ((TextView) label).getText().toString() : null;
     }
 
     private TextView bannerAction() {
-        return content.findViewWithTag("hushfeed_settings_action_button");
+        return content.findViewWithTag("larpfeed_settings_action_button");
     }
 
     private void countDown() {
@@ -231,7 +231,7 @@ public class AccountCleanupTest {
         AccountCleanup.start(activity, Kind.REPOSTS);
         countDown();
         assertEquals("Reposts removed: 0", bannerText());
-        View banner = content.findViewWithTag("hushfeed_settings_action_banner");
+        View banner = content.findViewWithTag("larpfeed_settings_action_banner");
 
         // Run the removal by hand and let only its count updates through.
         duringPause = pause -> {
@@ -239,7 +239,7 @@ public class AccountCleanupTest {
                 looper.idle();
                 assertEquals("Reposts removed: 2", bannerText());
                 assertEquals("the count changed the banner's text rather than replacing it", banner,
-                        content.findViewWithTag("hushfeed_settings_action_banner"));
+                        content.findViewWithTag("larpfeed_settings_action_banner"));
             }
         };
         later.get(0).run();
@@ -272,7 +272,7 @@ public class AccountCleanupTest {
 
         AccountCleanup.start(activity, Kind.REPOSTS);
         // A tap on the banner's body takes it down.
-        assertTrue(content.findViewWithTag("hushfeed_settings_action_banner").performClick());
+        assertTrue(content.findViewWithTag("larpfeed_settings_action_banner").performClick());
         countDown();
         assertEquals(List.of(), account.requests);
         assertFalse(AccountCleanup.running());

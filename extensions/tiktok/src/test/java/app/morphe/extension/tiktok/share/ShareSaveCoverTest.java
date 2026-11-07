@@ -1,6 +1,6 @@
 /*
- * Copyright 2026 Hushfeed contributors
- * https://github.com/SysAdminDoc/hushfeed
+ * Copyright 2026 Larpfeed contributors
+ * https://github.com/SysAdminDoc/larpfeed
  */
 package app.morphe.extension.tiktok.share;
 
@@ -126,7 +126,7 @@ public class ShareSaveCoverTest {
         assertEquals(1, constructed);
         assertEquals("Save cover", OwnedShareActions.label(finished.get(2)));
         assertTrue(ShareActionCatalog.entries(ShareSurface.VIDEO).stream().anyMatch(entry ->
-                entry.key.equals("hushfeed save cover") && entry.label.equals("Save cover")));
+                entry.key.equals("larpfeed save cover") && entry.label.equals("Save cover")));
     }
 
     @Test public void withoutDownloadInTheRowItLeadsTheRow() {

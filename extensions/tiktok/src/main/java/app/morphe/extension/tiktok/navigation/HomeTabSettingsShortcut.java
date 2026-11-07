@@ -1,6 +1,6 @@
 /*
- * Copyright 2026 Hushfeed contributors
- * https://github.com/SysAdminDoc/hushfeed
+ * Copyright 2026 Larpfeed contributors
+ * https://github.com/SysAdminDoc/larpfeed
  */
 package app.morphe.extension.tiktok.navigation;
 
@@ -23,7 +23,7 @@ import app.morphe.extension.tiktok.settings.TikTokActivityHook;
 import app.morphe.extension.tiktok.wellbeing.IdleLeave;
 
 /**
- * A long press on the Home tab opens Hushfeed's settings (#45), which otherwise sit behind
+ * A long press on the Home tab opens Larpfeed's settings (#45), which otherwise sit behind
  * Profile, the menu and TikTok's settings list.
  *
  * <p>TikTok gives that press nothing of its own: on 47.0.3 a held Home acts as a tap. A tab that
@@ -71,7 +71,7 @@ public final class HomeTabSettingsShortcut {
             view.performHapticFeedback(HapticFeedbackConstants.LONG_PRESS);
             TikTokActivityHook.openSettings();
         } catch (Throwable error) {
-            Logger.printException(() -> "Could not open Hushfeed settings from the Home tab", error);
+            Logger.printException(() -> "Could not open Larpfeed settings from the Home tab", error);
         }
         // Handled, so the release that ends the press isn't also a tap that reloads the feed.
         return true;
@@ -155,7 +155,7 @@ public final class HomeTabSettingsShortcut {
         return FRONT.get();
     }
 
-    /** Whether the settings long press is on this tab, which is then Hushfeed's and not TikTok's. */
+    /** Whether the settings long press is on this tab, which is then Larpfeed's and not TikTok's. */
     static boolean holds(View view) {
         return view != null && attached.get() == view;
     }

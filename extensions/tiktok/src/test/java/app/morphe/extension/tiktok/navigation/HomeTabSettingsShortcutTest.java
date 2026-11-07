@@ -32,7 +32,7 @@ import org.robolectric.util.ReflectionHelpers;
 
 import java.util.concurrent.atomic.AtomicInteger;
 
-/** A long press on the Home tab opens Hushfeed's settings, and nothing else about the tab moves (#45). */
+/** A long press on the Home tab opens Larpfeed's settings, and nothing else about the tab moves (#45). */
 @RunWith(RobolectricTestRunner.class)
 @Config(sdk = 28)
 public class HomeTabSettingsShortcutTest {
@@ -75,7 +75,7 @@ public class HomeTabSettingsShortcutTest {
         owner.pause().stop().destroy();
     }
 
-    @Test public void aLongPressOnHomeOpensHushfeedSettings() {
+    @Test public void aLongPressOnHomeOpensLarpfeedSettings() {
         installAndResume();
 
         assertTrue("the long press was not handled", home.performLongClick());

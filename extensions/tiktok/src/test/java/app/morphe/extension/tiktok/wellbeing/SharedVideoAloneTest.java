@@ -262,7 +262,7 @@ public class SharedVideoAloneTest {
             PausedProcess.set(true);
             assertFalse("paused, the feed still can't swipe", FinishLastVideo.holdsSwipe(pager));
             PausedProcess.set(false);
-            assertTrue("it didn't come back with Hushfeed", FinishLastVideo.holdsSwipe(pager));
+            assertTrue("it didn't come back with Larpfeed", FinishLastVideo.holdsSwipe(pager));
 
             SettingsStatus.feedNavigationEnabled = false;
             assertFalse("without the link hooks a switch nobody can see held the feed",

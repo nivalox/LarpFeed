@@ -1,6 +1,6 @@
 /*
- * Copyright 2026 Hushfeed contributors
- * https://github.com/SysAdminDoc/hushfeed
+ * Copyright 2026 Larpfeed contributors
+ * https://github.com/SysAdminDoc/larpfeed
  */
 package app.morphe.extension.tiktok.settings.preference;
 
@@ -67,7 +67,7 @@ public final class ScreenLayoutPreference extends Preference
                     "A screen's layout is recorded. Export the diagnostic report to send it, or tap to record another."));
         } else {
             setSummary(L10n.f(getContext(),
-                    "Tap, then go to the screen with what you want hidden. After %1$d seconds Hushfeed records how that screen is built, without any of its text, for the diagnostic report.",
+                    "Tap, then go to the screen with what you want hidden. After %1$d seconds Larpfeed records how that screen is built, without any of its text, for the diagnostic report.",
                     seconds()));
         }
     }

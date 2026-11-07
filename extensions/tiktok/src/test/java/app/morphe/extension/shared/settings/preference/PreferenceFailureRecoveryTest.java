@@ -453,7 +453,7 @@ public class PreferenceFailureRecoveryTest {
             row.onInitializeAccessibilityNodeInfo(info);
             assertEquals(Button.class.getName(), String.valueOf(info.getClassName()));
             assertTrue(info.isClickable());
-            assertNull(row.findViewWithTag("hushfeed_chevron"));
+            assertNull(row.findViewWithTag("larpfeed_chevron"));
             info.recycle();
             return row;
         }

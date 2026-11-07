@@ -1,6 +1,6 @@
 /*
- * Copyright 2026 Hushfeed contributors
- * https://github.com/SysAdminDoc/hushfeed
+ * Copyright 2026 Larpfeed contributors
+ * https://github.com/SysAdminDoc/larpfeed
  *
  * Built on icysymmetra/tiktok-patches-for-morphe (GPL-3.0).
  */
@@ -124,7 +124,7 @@ val notificationControlsPatch = bytecodePatch(
     name = "Notification controls",
     description = "Lets you turn off new follower notifications and streak reminders, which " +
         "TikTok has no switch for, or turn off TikTok's notifications altogether. Starts off. " +
-        "Turn it on in Hushfeed settings > Inbox.",
+        "Turn it on in Larpfeed settings > Inbox.",
 ) {
     category("Inbox")
     // The notify filter carries the drawer half of Turn off push notifications.

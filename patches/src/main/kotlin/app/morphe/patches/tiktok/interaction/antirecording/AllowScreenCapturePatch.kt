@@ -1,6 +1,6 @@
 /*
- * Copyright 2026 Hushfeed contributors
- * https://github.com/SysAdminDoc/hushfeed
+ * Copyright 2026 Larpfeed contributors
+ * https://github.com/SysAdminDoc/larpfeed
  *
  * Built on icysymmetra/tiktok-patches-for-morphe (GPL-3.0).
  */
@@ -67,7 +67,7 @@ private object CircleSearchBlockFingerprint : Fingerprint(
 val allowScreenCapturePatch = bytecodePatch(
     name = "Allow screenshots and Circle to Search",
     description = "Lets screenshots, screen recordings and Circle to Search work on TikTok " +
-        "screens that would otherwise come out black. Starts off. Turn it on in Hushfeed settings " +
+        "screens that would otherwise come out black. Starts off. Turn it on in Larpfeed settings " +
         "> App, then restart TikTok.",
 ) {
     category("Downloads")

@@ -1,6 +1,6 @@
 /*
- * Copyright 2026 Hushfeed contributors
- * https://github.com/SysAdminDoc/hushfeed
+ * Copyright 2026 Larpfeed contributors
+ * https://github.com/SysAdminDoc/larpfeed
  */
 package app.morphe.extension.tiktok.download;
 
@@ -276,7 +276,7 @@ public final class LiveRecorder {
             started = true;
             startedAtMs = clock.now();
             pumping = true;
-            thread = new Thread(this::run, "hushfeed-live-record");
+            thread = new Thread(this::run, "larpfeed-live-record");
             thread.setPriority(Thread.NORM_PRIORITY - 1);
             thread.start();
         }

@@ -1,7 +1,7 @@
 #Requires -Version 7
 <#
 .SYNOPSIS
-    One command for a Hushfeed release: cut, test, bundle, apply, walk, publish, index.
+    One command for a Larpfeed release: cut, test, bundle, apply, walk, publish, index.
 
 .DESCRIPTION
     Works in its own detached worktree under the temp folder, made from origin/main, so the main
@@ -12,7 +12,7 @@
 
     Device, key and fixture details live in the untracked JSON file $env:HUSH_RELEASE_CONFIG
     names, under this repo's name:
-      { "hushfeed": { "fixtureDirs": ["..."], "labels": { "<serial>": "a Galaxy phone" },
+      { "larpfeed": { "fixtureDirs": ["..."], "labels": { "<serial>": "a Galaxy phone" },
                       "keys": { "default": { "Keystore": "...", "KeyAlias": "...", "KeystoreType": "...",
                                              "KeystorePassword": "", "KeyPassword": "..." } },
                       "walk": { "<package>": ["<serial>", "avd:<name>"] } } }
@@ -41,7 +41,7 @@ $ErrorActionPreference = 'Stop'
 
 # What differs from repo to repo.
 $Repo = @{
-    Name = 'hushfeed'; Title = 'Hushfeed'; Repository = 'SysAdminDoc/HushFeed'; Prefix = 'HUSHFEED'; Verify = 'com.zhiliaoapp.musically'
+    Name = 'larpfeed'; Title = 'Larpfeed'; Repository = 'SysAdminDoc/LarpFeed'; Prefix = 'LARPFEED'; Verify = 'com.zhiliaoapp.musically'
     Tests = @('--continue', ':extensions:tiktok:test', ':patches:test', ':extensions:shared:library:lint', ':extensions:tiktok:lint')
 }
 

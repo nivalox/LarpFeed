@@ -1,6 +1,6 @@
 /*
- * Copyright 2026 Hushfeed contributors
- * https://github.com/SysAdminDoc/hushfeed
+ * Copyright 2026 Larpfeed contributors
+ * https://github.com/SysAdminDoc/larpfeed
  */
 package app.morphe.extension.tiktok.inbox;
 
@@ -10,7 +10,7 @@ import app.morphe.extension.shared.Logger;
 import app.morphe.extension.shared.Utils;
 
 /**
- * Rebuild message search, an action in Hushfeed settings > Inbox.
+ * Rebuild message search, an action in Larpfeed settings > Inbox.
  *
  * <p>TikTok's Inbox search reads a local index of the messages saved on the phone. Its message
  * search engine fills that index from the newest saved message back to the oldest, a batch at a

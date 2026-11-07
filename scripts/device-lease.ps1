@@ -23,14 +23,14 @@ function Initialize-DeviceLeaseFile {
     if ([Environment]::OSVersion.Platform -ne [PlatformID]::Win32NT) {
         throw 'Device leases require Windows file-handle locking. No device command was sent.'
     }
-    if ('Hushfeed.DeviceLeaseFile' -as [type]) { return }
+    if ('Larpfeed.DeviceLeaseFile' -as [type]) { return }
     Add-Type -ErrorAction Stop -TypeDefinition @'
 using System;
 using System.ComponentModel;
 using System.IO;
 using System.Runtime.InteropServices;
 using Microsoft.Win32.SafeHandles;
-namespace Hushfeed {
+namespace Larpfeed {
     public static class DeviceLeaseFile {
         [DllImport("kernel32.dll", CharSet = CharSet.Unicode, SetLastError = true)]
         private static extern SafeFileHandle CreateFileW(string path, uint access, uint share,
@@ -145,7 +145,7 @@ function Remove-DeviceLeaseFile {
     $stream = $null
     while ($null -eq $stream) {
         try {
-            $stream = [Hushfeed.DeviceLeaseFile]::OpenForDeletion($Path)
+            $stream = [Larpfeed.DeviceLeaseFile]::OpenForDeletion($Path)
             if ($null -eq $stream) { return }
         } catch {
             $failure = $_.Exception
@@ -164,7 +164,7 @@ function Remove-DeviceLeaseFile {
         try { $token = (Read-DeviceLeaseText $stream | ConvertFrom-Json -ErrorAction Stop).ownershipToken }
         catch { $token = $null }
         if ($token -ceq $OwnershipToken -or ($Partial -and $null -eq $token)) {
-            [Hushfeed.DeviceLeaseFile]::MarkForDeletion($stream)
+            [Larpfeed.DeviceLeaseFile]::MarkForDeletion($stream)
         }
     } finally { $stream.Dispose() }
 }
@@ -186,7 +186,7 @@ function New-DeviceLease {
     $path = Get-DeviceLeasePath -LeaseDir $LeaseDir -Serial $Serial
     Initialize-DeviceLeaseFile
     [void][IO.Directory]::CreateDirectory([IO.Path]::GetDirectoryName($path))
-    try { $stream = [Hushfeed.DeviceLeaseFile]::Create($path) }
+    try { $stream = [Larpfeed.DeviceLeaseFile]::Create($path) }
     catch {
         throw "Could not acquire the device lease for '$Serial'. Existing leases require external confirmation that their test stopped before recovery. $($_.Exception.Message)"
     }

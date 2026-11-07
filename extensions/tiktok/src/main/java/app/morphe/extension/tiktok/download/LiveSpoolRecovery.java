@@ -1,6 +1,6 @@
 /*
- * Copyright 2026 Hushfeed contributors
- * https://github.com/SysAdminDoc/hushfeed
+ * Copyright 2026 Larpfeed contributors
+ * https://github.com/SysAdminDoc/larpfeed
  */
 package app.morphe.extension.tiktok.download;
 
@@ -37,7 +37,7 @@ final class LiveSpoolRecovery {
 
     static void atStart(Context context) {
         if (context == null || !STARTED.compareAndSet(false, true)) return;
-        Utils.runOnMainThread(() -> Utils.runOnOwnThread("hushfeed-live-recovery", () -> {
+        Utils.runOnMainThread(() -> Utils.runOnOwnThread("larpfeed-live-recovery", () -> {
             Context app = Utils.getContext() == null ? context : Utils.getContext();
             try {
                 adoptLegacy(RecordingRetention.in(app), MediaCache.cacheDirectory(app));

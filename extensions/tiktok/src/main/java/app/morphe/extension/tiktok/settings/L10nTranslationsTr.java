@@ -1,6 +1,6 @@
 /*
- * Copyright 2026 Hushfeed contributors
- * https://github.com/SysAdminDoc/hushfeed
+ * Copyright 2026 Larpfeed contributors
+ * https://github.com/SysAdminDoc/larpfeed
  *
  * Built on icysymmetra/tiktok-patches-for-morphe (GPL-3.0).
  */
@@ -239,8 +239,8 @@ final class L10nTranslationsTr {
                 "%1$s izlenen video eklendi.");
         table.put("%1$s were already saved",
                 "%1$s tanesi zaten kaydedilmişti");
-        table.put("%1$s · Hushfeed's list only",
-                "%1$s · yalnızca Hushfeed listesinde");
+        table.put("%1$s · Larpfeed's list only",
+                "%1$s · yalnızca Larpfeed listesinde");
         table.put("%1$s · current value only",
                 "%1$s · yalnızca geçerli değer");
         table.put("%1$s · declared by TikTok",
@@ -344,8 +344,8 @@ final class L10nTranslationsTr {
                 "Bir mesaja çift dokunmak artık ona kalp eklemiyor. Tek dokunma ve uzun basma eskisi gibi çalışır.");
         table.put("A few seconds",
                 "Birkaç saniye");
-        table.put("A file named hushfeed-safe-mode in TikTok's folder under Android/data paused Hushfeed. Your settings stay as they are.",
-                "Android/data altındaki TikTok klasöründe bulunan hushfeed-safe-mode adlı bir dosya Hushfeed'i duraklattı. Ayarların olduğu gibi kalır.");
+        table.put("A file named larpfeed-safe-mode in TikTok's folder under Android/data paused Larpfeed. Your settings stay as they are.",
+                "Android/data altındaki TikTok klasöründe bulunan larpfeed-safe-mode adlı bir dosya Larpfeed'i duraklattı. Ayarların olduğu gibi kalır.");
         table.put("A forced value applies to this copy of TikTok whichever account is signed in. It can't get past a check the server makes.",
                 "Zorlanan bir değer, hangi hesap oturum açmış olursa olsun bu TikTok kopyası için geçerlidir. Sunucunun yaptığı bir denetimi aşamaz.");
         table.put("A good place to stop, if you want one.",
@@ -402,8 +402,8 @@ final class L10nTranslationsTr {
                 "Hakkında");
         table.put("About %1$s of storage at this limit",
                 "Bu sınırda yaklaşık %1$s depolama alanı");
-        table.put("About Hushfeed",
-                "Hushfeed hakkında");
+        table.put("About Larpfeed",
+                "Larpfeed hakkında");
         table.put("About overrides",
                 "Geçersiz kılmalar hakkında");
         table.put("Above moves the caption and the buttons up a little so the time fits over the right end of the bar. When something else is in the way, the time goes beside the bar.",
@@ -441,10 +441,10 @@ final class L10nTranslationsTr {
                 "İçerik üreticisi ekle");
         table.put("Add a line along the bottom of a sound's cover while its preview plays, with the time played and the preview's length. Tap or drag it to move through the preview.",
                 "Bir sesin önizlemesi çalarken kapağının altına, çalınan süreyi ve önizlemenin uzunluğunu gösteren bir çizgi ekle. Önizlemede ilerlemek için çizgiye dokun veya sürükle.");
-        table.put("Add a seen-history file saved by Hushfeed to the videos @%1$s has seen. A video in both keeps the newer date.",
-                "Hushfeed'in kaydettiği bir geçmiş dosyasını @%1$s hesabının gördüğü videolara ekle. İkisinde de olan bir video daha yeni tarihi korur.");
-        table.put("Add a seen-history file saved by Hushfeed to this account's seen videos. A video in both keeps the newer date.",
-                "Hushfeed'in kaydettiği bir geçmiş dosyasını bu hesabın gördüğü videolara ekle. İkisinde de olan bir video daha yeni tarihi korur.");
+        table.put("Add a seen-history file saved by Larpfeed to the videos @%1$s has seen. A video in both keeps the newer date.",
+                "Larpfeed'in kaydettiği bir geçmiş dosyasını @%1$s hesabının gördüğü videolara ekle. İkisinde de olan bir video daha yeni tarihi korur.");
+        table.put("Add a seen-history file saved by Larpfeed to this account's seen videos. A video in both keeps the newer date.",
+                "Larpfeed'in kaydettiği bir geçmiş dosyasını bu hesabın gördüğü videolara ekle. İkisinde de olan bir video daha yeni tarihi korur.");
         table.put("Add a separate button that skips videos using the current sound.",
                 "O anki sesi kullanan videoları atlayan ayrı bir düğme ekle.");
         table.put("Add a thin line along the bottom of a video story that you can drag to go back or skip ahead. The time shows while you drag, and a tap on it still moves between stories.",
@@ -666,8 +666,8 @@ final class L10nTranslationsTr {
                 "Video metninin arkasındaki zemin");
         table.put("Background play in the long-press menu",
                 "Uzun basma menüsünde arka planda oynatma");
-        table.put("Background play in the long-press menu is on in Hushfeed's Playback settings, so TikTok gets 1 for this key and an override here has no effect until that switch is off.",
-                "Hushfeed'in Oynatma ayarlarında Uzun basma menüsünde arka planda oynatma açık, bu yüzden TikTok bu anahtar için 1 alır ve buradaki bir geçersiz kılma o anahtar kapanana kadar etkisizdir.");
+        table.put("Background play in the long-press menu is on in Larpfeed's Playback settings, so TikTok gets 1 for this key and an override here has no effect until that switch is off.",
+                "Larpfeed'in Oynatma ayarlarında Uzun basma menüsünde arka planda oynatma açık, bu yüzden TikTok bu anahtar için 1 alır ve buradaki bir geçersiz kılma o anahtar kapanana kadar etkisizdir.");
         table.put("Backup and restore",
                 "Yedekleme ve geri yükleme");
         table.put("Bend the video at the edges",
@@ -816,8 +816,8 @@ final class L10nTranslationsTr {
                 "Akışı kaydet");
         table.put("Capturing. Find the problem, then come back to stop.",
                 "Kaydediliyor. Sorunu bul, durdurmak için buraya dön.");
-        table.put("Changes in Hushfeed %1$s",
-                "Hushfeed %1$s sürümündeki değişiklikler");
+        table.put("Changes in Larpfeed %1$s",
+                "Larpfeed %1$s sürümündeki değişiklikler");
         table.put("Changes to %1$s at %2$s",
                 "%2$s saatinde %1$s olarak değişir");
         table.put("Check for already-saved videos",
@@ -975,8 +975,8 @@ final class L10nTranslationsTr {
                 "Adı kopyala");
         table.put("Copy only the comment text when using TikTok's copy comment action.",
                 "TikTok'un yorumu kopyala eylemini kullanırken yalnızca yorum metnini kopyala.");
-        table.put("Copy or save which patches and options this Hushfeed was built with.",
-                "Bu Hushfeed'in hangi yamalar ve seçeneklerle oluşturulduğunu kopyala veya kaydet.");
+        table.put("Copy or save which patches and options this Larpfeed was built with.",
+                "Bu Larpfeed'in hangi yamalar ve seçeneklerle oluşturulduğunu kopyala veya kaydet.");
         table.put("Copy quick report",
                 "Hızlı raporu kopyala");
         table.put("Copy report",
@@ -1292,8 +1292,8 @@ final class L10nTranslationsTr {
     }
 
     private static void fill10(Map<String, String> table) {
-        table.put("Each area shows how many of the things Hushfeed looks for were found in this TikTok and how many are missing.",
-                "Her alan, Hushfeed'in aradığı şeylerden kaçının bu TikTok'ta bulunduğunu ve kaçının eksik olduğunu gösterir.");
+        table.put("Each area shows how many of the things Larpfeed looks for were found in this TikTok and how many are missing.",
+                "Her alan, Larpfeed'in aradığı şeylerden kaçının bu TikTok'ta bulunduğunu ve kaçının eksik olduğunu gösterir.");
         table.put("Earlier this session",
                 "Bu oturumda daha önce");
         table.put("Easier comment likes",
@@ -1503,8 +1503,8 @@ final class L10nTranslationsTr {
                 "@%2$s hesabının gördüğü videoyu unut.");
         table.put("Forget what has been counted today and end any hold. The budgets themselves are left alone.",
                 "Bugün sayılanları unut ve varsa bekletmeyi bitir. Bütçelerin kendisine dokunulmaz.");
-        table.put("Forget which videos Hushfeed saved here, so the already-saved check starts over. The saved files and your settings stay. Turning the check off doesn't erase this record.",
-                "Hushfeed'in burada hangi videoları kaydettiğini unutur, böylece zaten kaydedilmiş kontrolü baştan başlar. Kaydedilen dosyalar ve ayarların kalır. Kontrolü kapatmak bu kaydı silmez.");
+        table.put("Forget which videos Larpfeed saved here, so the already-saved check starts over. The saved files and your settings stay. Turning the check off doesn't erase this record.",
+                "Larpfeed'in burada hangi videoları kaydettiğini unutur, böylece zaten kaydedilmiş kontrolü baştan başlar. Kaydedilen dosyalar ve ayarların kalır. Kontrolü kapatmak bu kaydı silmez.");
         table.put("Forgetting saved videos",
                 "Kaydedilen videolar unutuluyor");
         table.put("Forgotten. Tap to put them back.",
@@ -1644,8 +1644,8 @@ final class L10nTranslationsTr {
                 "Aramada TikTok Shop'u gizle");
         table.put("Hide TikTok Shop posts from the feed, and the shop buttons under captions.",
                 "TikTok Shop gönderilerini akıştan, mağaza düğmelerini de açıklamaların altından gizle.");
-        table.put("Hide TikTok's \"Search: ...\" banner above the comment count. This doesn't hide the comments or Hushfeed's comment-search box.",
-                "Yorum sayısının üzerindeki TikTok'un \"Ara: ...\" bandını gizle. Bu, yorumları veya Hushfeed'in yorum arama kutusunu gizlemez.");
+        table.put("Hide TikTok's \"Search: ...\" banner above the comment count. This doesn't hide the comments or Larpfeed's comment-search box.",
+                "Yorum sayısının üzerindeki TikTok'un \"Ara: ...\" bandını gizle. Bu, yorumları veya Larpfeed'in yorum arama kutusunu gizlemez.");
         table.put("Hide TikTok's Auto scroll button",
                 "TikTok'un Otomatik kaydırma düğmesini gizle");
         table.put("Hide TikTok's short drama episodes and the cards that promote them.",
@@ -1834,8 +1834,8 @@ final class L10nTranslationsTr {
                 "Tam ekran düğmesini gizle");
         table.put("Hide the Full screen button over videos. Playback and automatic rotation keep working as before.",
                 "Videoların üzerindeki Tam ekran düğmesini gizle. Oynatma ve otomatik döndürme eskisi gibi çalışmaya devam eder.");
-        table.put("Hide the Hushfeed row",
-                "Hushfeed satırını gizle");
+        table.put("Hide the Larpfeed row",
+                "Larpfeed satırını gizle");
         table.put("Hide the Inbox search button",
                 "Gelen Kutusu arama düğmesini gizle");
         table.put("Hide the LIVE bubble",
@@ -2078,30 +2078,30 @@ final class L10nTranslationsTr {
                 "Ana akıştaki yüzen kapsülün çubuğun içinde ne kadar yüksek olduğu. Kompakt, çevresinde videonun daha fazlasını gösterir. Sekmeler boyutlarını ve dokunuşlarını korur.");
         table.put("How wide each edge strip is, as a percent of the screen width.",
                 "Her kenar şeridinin genişliği, ekran genişliğinin yüzdesi olarak.");
-        table.put("Hushfeed",
-                "Hushfeed");
-        table.put("Hushfeed blocked TikTok's reports here. It hasn't confirmed that you stay off viewer lists.",
-                "Hushfeed burada TikTok'un raporlarını engelledi. İzleyici listelerinde görünmediğini henüz doğrulamadı.");
-        table.put("Hushfeed can't read the creator pattern %1$s",
-                "Hushfeed %1$s üretici kalıbını okuyamıyor");
-        table.put("Hushfeed is active",
-                "Hushfeed etkin");
-        table.put("Hushfeed is paused",
-                "Hushfeed duraklatıldı");
-        table.put("Hushfeed is paused. Ghost mode isn't active.",
-                "Hushfeed duraklatıldı. Hayalet modu etkin değil.");
-        table.put("Hushfeed turns back on when TikTok restarts.",
-                "Hushfeed, TikTok yeniden başladığında tekrar açılır.");
-        table.put("Hushfeed's downloader doesn't fill this in, so it's kept as typed: %1$s",
-                "Hushfeed'in indiricisi bunu doldurmaz, bu yüzden yazdığın gibi kalır: %1$s");
-        table.put("Hushfeed's downloader: %1$s",
-                "Hushfeed indiricisi: %1$s");
-        table.put("Hushfeed's switches are paused. Your settings stay saved. Changes made when you patched, like the app's name or icon, stay.",
-                "Hushfeed'in anahtarları duraklatıldı. Ayarların kayıtlı kalır. Yamalarken yapılan değişiklikler, uygulamanın adı ya da simgesi gibi, kalır.");
+        table.put("Larpfeed",
+                "Larpfeed");
+        table.put("Larpfeed blocked TikTok's reports here. It hasn't confirmed that you stay off viewer lists.",
+                "Larpfeed burada TikTok'un raporlarını engelledi. İzleyici listelerinde görünmediğini henüz doğrulamadı.");
+        table.put("Larpfeed can't read the creator pattern %1$s",
+                "Larpfeed %1$s üretici kalıbını okuyamıyor");
+        table.put("Larpfeed is active",
+                "Larpfeed etkin");
+        table.put("Larpfeed is paused",
+                "Larpfeed duraklatıldı");
+        table.put("Larpfeed is paused. Ghost mode isn't active.",
+                "Larpfeed duraklatıldı. Hayalet modu etkin değil.");
+        table.put("Larpfeed turns back on when TikTok restarts.",
+                "Larpfeed, TikTok yeniden başladığında tekrar açılır.");
+        table.put("Larpfeed's downloader doesn't fill this in, so it's kept as typed: %1$s",
+                "Larpfeed'in indiricisi bunu doldurmaz, bu yüzden yazdığın gibi kalır: %1$s");
+        table.put("Larpfeed's downloader: %1$s",
+                "Larpfeed indiricisi: %1$s");
+        table.put("Larpfeed's switches are paused. Your settings stay saved. Changes made when you patched, like the app's name or icon, stay.",
+                "Larpfeed'in anahtarları duraklatıldı. Ayarların kayıtlı kalır. Yamalarken yapılan değişiklikler, uygulamanın adı ya da simgesi gibi, kalır.");
         table.put("If that name is taken, Android adds a number to the new file.",
                 "Bu ad alınmışsa Android yeni dosyaya bir sayı ekler.");
-        table.put("If that name is taken, Hushfeed adds a number to the new file.",
-                "Bu ad alınmışsa Hushfeed yeni dosyaya bir sayı ekler.");
+        table.put("If that name is taken, Larpfeed adds a number to the new file.",
+                "Bu ad alınmışsa Larpfeed yeni dosyaya bir sayı ekler.");
         table.put("If the video blinks as you swipe with See-through bottom bar on, this draws it inside TikTok instead of on a layer of its own. It can use a little more battery. Needs See-through bottom bar.",
                 "Şeffaf alt çubuk açıkken kaydırırken video yanıp sönüyorsa, bu seçenek videoyu ayrı bir katman yerine TikTok'un içinde çizer. Biraz daha fazla pil kullanabilir. Şeffaf alt çubuk açık olmalıdır.");
         table.put("Import a font file",
@@ -2191,8 +2191,8 @@ final class L10nTranslationsTr {
                 "Fotoğrafları TikTok'un gönderdiği gibi tut");
         table.put("Keep playing in the background",
                 "Arka planda oynatmaya devam et");
-        table.put("Keep playing in the background is on in Hushfeed's Playback settings, so TikTok gets 2 for this key and an override here has no effect until that switch is off.",
-                "Hushfeed'in Oynatma ayarlarında Arka planda oynatmaya devam et açık, bu yüzden TikTok bu anahtar için 2 alır ve buradaki bir geçersiz kılma o anahtar kapanana kadar etkisizdir.");
+        table.put("Keep playing in the background is on in Larpfeed's Playback settings, so TikTok gets 2 for this key and an override here has no effect until that switch is off.",
+                "Larpfeed'in Oynatma ayarlarında Arka planda oynatmaya devam et açık, bu yüzden TikTok bu anahtar için 2 alır ve buradaki bir geçersiz kılma o anahtar kapanana kadar etkisizdir.");
         table.put("Keep the Favorites tab",
                 "Favoriler sekmesini koru");
         table.put("Keep the For You feed on your real SIM",
@@ -2449,8 +2449,8 @@ final class L10nTranslationsTr {
                 "Senin İçin'e uzun basmak izleme geçmişimi açar");
         table.put("Long press on Profile opens my watch history",
                 "Profil'e uzun basmak izleme geçmişimi açar");
-        table.put("Long-press Home for Hushfeed settings",
-                "Hushfeed ayarları için Ana Sayfa'ya basılı tut");
+        table.put("Long-press Home for Larpfeed settings",
+                "Larpfeed ayarları için Ana Sayfa'ya basılı tut");
         table.put("Long-press Inbox for read receipts",
                 "Gelen kutusuna uzun basarak okundu bilgisi");
         table.put("Long-press Profile for Watch history",
@@ -2725,8 +2725,8 @@ final class L10nTranslationsTr {
                 "Normal");
         table.put("Not a handle or id, so ignored: %1$s",
                 "Hesap adı veya kimlik değil, bu yüzden yok sayıldı: %1$s");
-        table.put("Not a part Hushfeed fills in, so it's kept as typed: %1$s",
-                "Hushfeed'in doldurduğu bir parça değil, bu yüzden yazdığın gibi kalır: %1$s");
+        table.put("Not a part Larpfeed fills in, so it's kept as typed: %1$s",
+                "Larpfeed'in doldurduğu bir parça değil, bu yüzden yazdığın gibi kalır: %1$s");
         table.put("Not available on this TikTok version",
                 "Bu TikTok sürümünde kullanılamıyor");
         table.put("Not blocked",
@@ -2784,8 +2784,8 @@ final class L10nTranslationsTr {
                 "Kapalı");
         table.put("Off forces the value to false, on forces it to true. Reset lets TikTok decide again.",
                 "Kapalı değeri false'a, açık true'ya zorlar. Sıfırla, kararı yine TikTok'a bırakır.");
-        table.put("Off until you tap it. Wipes TikTok's data once, on the next start, and gives it a new Android ID and advertising ID, so it sees a phone it hasn't met. You'll be signed out and lose your drafts. Hushfeed's settings stay.",
-                "Dokunana kadar kapalı. Bir sonraki açılışta TikTok verilerini bir kez siler ve ona yeni bir Android kimliği ile reklam kimliği verir, böylece tanımadığı bir telefon görür. Oturumunuz kapanır ve taslaklarınızı kaybedersiniz. Hushfeed ayarları kalır.");
+        table.put("Off until you tap it. Wipes TikTok's data once, on the next start, and gives it a new Android ID and advertising ID, so it sees a phone it hasn't met. You'll be signed out and lose your drafts. Larpfeed's settings stay.",
+                "Dokunana kadar kapalı. Bir sonraki açılışta TikTok verilerini bir kez siler ve ona yeni bir Android kimliği ile reklam kimliği verir, böylece tanımadığı bir telefon görür. Oturumunuz kapanır ve taslaklarınızı kaybedersiniz. Larpfeed ayarları kalır.");
         table.put("Off, only its button closes it.",
                 "Kapalıyken yalnızca düğmesi kapatır.");
         table.put("Off. TikTok can report views and typing.",
@@ -2818,8 +2818,8 @@ final class L10nTranslationsTr {
                 "Ana akışta, bulunduğun sekmenin arkasında kabarık bir cam kabarcığı durur ve seçtiğin sonraki sekmeye kayar. Sıvı cam görünümü açık olmalıdır.");
         table.put("On the main feed, slide a finger along the glass pill and the lens follows it. Let go and that tab opens. Taps and long presses work as before. Needs Glass lens on the current tab.",
                 "Ana akışta parmağını cam kapsül boyunca kaydır, mercek onu takip eder. Bırakınca o sekme açılır. Dokunmalar ve uzun basmalar eskisi gibi çalışır. Geçerli sekmede cam mercek açık olmalıdır.");
-        table.put("On. Hushfeed hasn't seen TikTok send any reports since it started.",
-                "Açık. Hushfeed, TikTok başladığından beri onun herhangi bir rapor gönderdiğini görmedi.");
+        table.put("On. Larpfeed hasn't seen TikTok send any reports since it started.",
+                "Açık. Larpfeed, TikTok başladığından beri onun herhangi bir rapor gönderdiğini görmedi.");
         table.put("Once today's budget runs out, the hold stays and can't be dismissed. The budget settings are locked until the day starts over. Turn this off any time before the budget runs out.",
                 "Bugünün bütçesi bitince bekletme ekranı kalır ve kapatılamaz. Bütçe ayarları gün yeniden başlayana kadar kilitlenir. Bütçe bitmeden önce bunu istediğin zaman kapatabilirsin.");
         table.put("One area was checked and everything it needs is here.",
@@ -2860,8 +2860,8 @@ final class L10nTranslationsTr {
                 "Yalnızca bu altyazı dilleri");
         table.put("Open",
                 "Aç");
-        table.put("Open Hushfeed settings",
-                "Hushfeed ayarlarını aç");
+        table.put("Open Larpfeed settings",
+                "Larpfeed ayarlarını aç");
         table.put("Open TikTok on",
                 "TikTok'u şu sayfada aç");
         table.put("Open a share sheet once, then return here to choose its actions.",
@@ -2893,10 +2893,10 @@ final class L10nTranslationsTr {
     private static void fill23(Map<String, String> table) {
         table.put("Open the feed anyway, the last time today",
                 "Akışı yine de aç, bugün son kez");
-        table.put("Open the feed once so Hushfeed can see which bottom tabs TikTok loaded.",
-                "Hushfeed'in TikTok'un hangi alt sekmeleri yüklediğini görebilmesi için akışı bir kez aç.");
-        table.put("Open the feed once so Hushfeed can see which tabs TikTok loaded.",
-                "Hushfeed'in TikTok'un hangi sekmeleri yüklediğini görebilmesi için akışı bir kez aç.");
+        table.put("Open the feed once so Larpfeed can see which bottom tabs TikTok loaded.",
+                "Larpfeed'in TikTok'un hangi alt sekmeleri yüklediğini görebilmesi için akışı bir kez aç.");
+        table.put("Open the feed once so Larpfeed can see which tabs TikTok loaded.",
+                "Larpfeed'in TikTok'un hangi sekmeleri yüklediğini görebilmesi için akışı bir kez aç.");
         table.put("Open the profile again and try once more",
                 "Profili yeniden aç ve bir kez daha dene");
         table.put("Open the search page",
@@ -2973,10 +2973,10 @@ final class L10nTranslationsTr {
                 "TikTok'un yükleme kontrollerini geç");
         table.put("Pause",
                 "Duraklat");
-        table.put("Pause Hushfeed",
-                "Hushfeed'i duraklat");
-        table.put("Pause Hushfeed's switches after TikTok restarts. Your settings stay saved. Changes made when you patched, like the app's name or icon, stay.",
-                "TikTok'u yeniden başlattıktan sonra Hushfeed'in anahtarlarını duraklat. Ayarların kayıtlı kalır. Yamalarken yapılan değişiklikler, uygulamanın adı ya da simgesi gibi, kalır.");
+        table.put("Pause Larpfeed",
+                "Larpfeed'i duraklat");
+        table.put("Pause Larpfeed's switches after TikTok restarts. Your settings stay saved. Changes made when you patched, like the app's name or icon, stay.",
+                "TikTok'u yeniden başlattıktan sonra Larpfeed'in anahtarlarını duraklat. Ayarların kayıtlı kalır. Yamalarken yapılan değişiklikler, uygulamanın adı ya da simgesi gibi, kalır.");
         table.put("Pause the video while comments are open",
                 "Yorumlar açıkken videoyu duraklat");
         table.put("Paused",
@@ -3179,8 +3179,8 @@ final class L10nTranslationsTr {
                 "Profil, Beğenilenler veya Favoriler ızgarasındaki her videoya bir daire koyar. En fazla %1$s tane seç, sonra Kaydet'e dokun. Hepsi sayaç ve İptal ile sırayla kaydedilir.");
         table.put("Puts a save button in the sheet a story's Share button opens. It saves the story you're watching, and holding a story still pauses it.",
                 "Bir hikayenin Paylaş düğmesinin açtığı menüye bir kaydet düğmesi ekler. İzlediğin hikayeyi kaydeder ve bir hikayeye basılı tutmak onu yine duraklatır.");
-        table.put("Puts a ✓ by videos and photo posts you saved with Hushfeed, on profile grids and next to the time in the feed. Works only while Check for already-saved videos is on.",
-                "Hushfeed ile kaydettiğin videolara ve fotoğraf gönderilerine profil ızgaralarında ve akışta saatin yanında ✓ koyar. Yalnızca “Önceden kaydedilen videoları kontrol et” açıkken çalışır.");
+        table.put("Puts a ✓ by videos and photo posts you saved with Larpfeed, on profile grids and next to the time in the feed. Works only while Check for already-saved videos is on.",
+                "Larpfeed ile kaydettiğin videolara ve fotoğraf gönderilerine profil ızgaralarında ve akışta saatin yanında ✓ koyar. Yalnızca “Önceden kaydedilen videoları kontrol et” açıkken çalışır.");
         table.put("Puts your time zone after the time to the second, like EDT.",
                 "Saniyesine kadar gösterilen saatin ardına saat dilimini ekler, örneğin EDT.");
         table.put("Putting seen videos back",
@@ -3302,8 +3302,8 @@ final class L10nTranslationsTr {
                 "Yeniden yayınlamalar siliniyor: %1$d");
         table.put("Removing the kept messages",
                 "Korunan mesajlar kaldırılıyor");
-        table.put("Reopen Hushfeed settings, then choose the file",
-                "Hushfeed ayarlarını yeniden açıp dosyayı seçin");
+        table.put("Reopen Larpfeed settings, then choose the file",
+                "Larpfeed ayarlarını yeniden açıp dosyayı seçin");
         table.put("Replace values when TikTok asks for them",
                 "TikTok istediğinde değerleri değiştir");
         table.put("Replay a story from the start when it ends instead of moving to the next one. Tap or swipe to move on.",
@@ -3546,8 +3546,8 @@ final class L10nTranslationsTr {
                 "Kaydedilen videolar unutuldu. Dosyalar hâlâ orada.");
         table.put("Saved videos put back",
                 "Kaydedilen videolar geri getirildi");
-        table.put("Saved videos show the @username and the first line of the caption in the bottom left corner. The phone encodes the whole video again to do it, so saving takes longer. Applies to saves made by Hushfeed.",
-                "Kaydedilen videolarda sol alt köşede @kullanıcı adı ve açıklamanın ilk satırı görünür. Bunun için telefon videonun tamamını yeniden kodlar, bu yüzden kaydetmek daha uzun sürer. Hushfeed'in yaptığı kayıtlar için geçerlidir.");
+        table.put("Saved videos show the @username and the first line of the caption in the bottom left corner. The phone encodes the whole video again to do it, so saving takes longer. Applies to saves made by Larpfeed.",
+                "Kaydedilen videolarda sol alt köşede @kullanıcı adı ve açıklamanın ilk satırı görünür. Bunun için telefon videonun tamamını yeniden kodlar, bu yüzden kaydetmek daha uzun sürer. Larpfeed'in yaptığı kayıtlar için geçerlidir.");
         table.put("Saved, but a later save may make a second copy",
                 "Kaydedildi. Tekrar kaydetmek ikinci kopya yapabilir");
         table.put("Saved, override off",
@@ -3562,14 +3562,14 @@ final class L10nTranslationsTr {
                 "Şu anki kayıtlar");
         table.put("Saves subtitle (SRT) files with the video. They go to Movies on Android 11 and newer, Download on Android 10, and your video folder on older versions. On Android 11 and newer with Save details on, the video moves to Download or Documents and the subtitles stay in Movies.",
                 "Altyazı (SRT) dosyalarını videoyla birlikte kaydeder. Android 11 ve üzerinde Movies, Android 10'da Download, daha eski sürümlerde video klasörüne gider. Android 11 ve üzerinde Ayrıntıları kaydet açıkken video Download veya Documents içine taşınır, altyazılar Movies'te kalır.");
-        table.put("Saves the caption, creator, link and post date in a text file next to the video, or one file for a photo post's original photos. On Android 10 and later, they go in Download or Documents under the same folder name. Applies to saves made by Hushfeed.",
-                "Açıklamayı, içerik üreticisini, bağlantıyı ve paylaşım tarihini videonun yanında bir metin dosyasına, fotoğraf gönderisinin orijinal fotoğrafları için ise tek bir dosyaya kaydeder. Android 10 ve üzerinde bunlar aynı klasör adıyla Download veya Documents içine gider. Hushfeed'in yaptığı kayıtlar için geçerlidir.");
+        table.put("Saves the caption, creator, link and post date in a text file next to the video, or one file for a photo post's original photos. On Android 10 and later, they go in Download or Documents under the same folder name. Applies to saves made by Larpfeed.",
+                "Açıklamayı, içerik üreticisini, bağlantıyı ve paylaşım tarihini videonun yanında bir metin dosyasına, fotoğraf gönderisinin orijinal fotoğrafları için ise tek bir dosyaya kaydeder. Android 10 ve üzerinde bunlar aynı klasör adıyla Download veya Documents içine gider. Larpfeed'in yaptığı kayıtlar için geçerlidir.");
         table.put("Saves the details file in JSON format instead of plain text. Useful if another tool will read it.",
                 "Ayrıntı dosyasını düz metin yerine JSON biçiminde kaydeder. Başka bir araç okuyacaksa işe yarar.");
         table.put("Saves wait for Wi-Fi or another network that isn't metered, for up to 30 minutes, and stop if you leave it. Saving a frame still works anywhere.",
                 "Kayıtlar 30 dakikaya kadar Wi-Fi'ı veya kotasız başka bir ağı bekler, ağdan çıkarsan durur. Kare kaydetme her yerde çalışır.");
-        table.put("Saves your Hushfeed settings and Feature Gate Lab rules to a file.",
-                "Hushfeed ayarlarını ve Feature Gate Lab kurallarını bir dosyaya kaydeder.");
+        table.put("Saves your Larpfeed settings and Feature Gate Lab rules to a file.",
+                "Larpfeed ayarlarını ve Feature Gate Lab kurallarını bir dosyaya kaydeder.");
         table.put("Saving",
                 "Kaydediliyor");
         table.put("Saving %1$s of %2$s",
@@ -3701,8 +3701,8 @@ final class L10nTranslationsTr {
                 "Geri bildirim gönderme");
         table.put("Sending the message",
                 "Mesaj gönderiliyor");
-        table.put("Sends TikTok's feed, search, comments and other app traffic through the proxy below. Videos and LIVE streams still connect directly. Saves and short-link lookups from Hushfeed also connect directly, after their own address checks. Other apps aren't affected.",
-                "TikTok'un akışını, aramasını, yorumlarını ve diğer uygulama trafiğini aşağıdaki proxy üzerinden gönderir. Videolar ve LIVE yayınları yine doğrudan bağlanır. Hushfeed'in kaydetme işlemleri ve kısa bağlantı sorguları da kendi adres denetimlerinden sonra doğrudan bağlanır. Diğer uygulamalar etkilenmez.");
+        table.put("Sends TikTok's feed, search, comments and other app traffic through the proxy below. Videos and LIVE streams still connect directly. Saves and short-link lookups from Larpfeed also connect directly, after their own address checks. Other apps aren't affected.",
+                "TikTok'un akışını, aramasını, yorumlarını ve diğer uygulama trafiğini aşağıdaki proxy üzerinden gönderir. Videolar ve LIVE yayınları yine doğrudan bağlanır. Larpfeed'in kaydetme işlemleri ve kısa bağlantı sorguları da kendi adres denetimlerinden sonra doğrudan bağlanır. Diğer uygulamalar etkilenmez.");
         table.put("Sends one message a day to each person below at the time below, so your streaks keep going on days you don't open TikTok.",
                 "Aşağıdaki herkese belirtilen saatte günde bir mesaj gönderir, böylece TikTok'u açmadığın günlerde de serilerin devam eder.");
         table.put("Sends today's message right away. The daily one then waits for tomorrow.",
@@ -4203,8 +4203,8 @@ final class L10nTranslationsTr {
                 "Depolama dolmak üzere. Kayıt kaydedildi: %1$s");
         table.put("Store TikTok thinks it came from",
                 "TikTok'un geldiğini sandığı mağaza");
-        table.put("Stores the caption, creator, post date and link inside the video file, where media players can read them. Applies to saves made by Hushfeed.",
-                "Açıklamayı, içerik üreticisini, paylaşım tarihini ve bağlantıyı videonun dosyasının içine yazar; medya oynatıcılar bunları okuyabilir. Hushfeed'in yaptığı kayıtlar için geçerlidir.");
+        table.put("Stores the caption, creator, post date and link inside the video file, where media players can read them. Applies to saves made by Larpfeed.",
+                "Açıklamayı, içerik üreticisini, paylaşım tarihini ve bağlantıyı videonun dosyasının içine yazar; medya oynatıcılar bunları okuyabilir. Larpfeed'in yaptığı kayıtlar için geçerlidir.");
         table.put("Stories",
                 "Hikayeler");
         table.put("Story",
@@ -4231,8 +4231,8 @@ final class L10nTranslationsTr {
                 "Altyazılar");
         table.put("Subtitles: %1$s",
                 "Altyazılar: %1$s");
-        table.put("Support Hushfeed",
-                "Hushfeed'i destekle");
+        table.put("Support Larpfeed",
+                "Larpfeed'i destekle");
         table.put("Swap the website in shared links",
                 "Paylaşılan bağlantılardaki siteyi değiştir");
         table.put("Swipe for brightness and volume",
@@ -4250,8 +4250,8 @@ final class L10nTranslationsTr {
                 "Sistem");
         table.put("Tag saved videos with their details",
                 "Kaydedilen videolara ayrıntılarını etiket olarak yaz");
-        table.put("Take Hushfeed out of TikTok's Settings and privacy. To open these settings, press and hold For You at the top of the feed, or Home if Long-press Home for Hushfeed settings is on.",
-                "Hushfeed'i TikTok'un Ayarlar ve gizlilik listesinden çıkarır. Bu ayarları açmak için akışın üstündeki Senin İçin'e basılı tut, ya da Hushfeed ayarları için Ana Sayfa'ya basılı tut açıksa Ana Sayfa'ya.");
+        table.put("Take Larpfeed out of TikTok's Settings and privacy. To open these settings, press and hold For You at the top of the feed, or Home if Long-press Home for Larpfeed settings is on.",
+                "Larpfeed'i TikTok'un Ayarlar ve gizlilik listesinden çıkarır. Bu ayarları açmak için akışın üstündeki Senin İçin'e basılı tut, ya da Larpfeed ayarları için Ana Sayfa'ya basılı tut açıksa Ana Sayfa'ya.");
         table.put("Take the Add comment bar off videos you open from a profile, a hashtag, a sound or search, so the video fills the screen down to the bottom. The comment button on the right still opens comments.",
                 "Bir profilden, hashtag'den, sesten veya aramadan açtığın videolardaki yorum yazma çubuğunu kaldır, böylece video ekranı en alta kadar doldurur. Sağdaki yorum düğmesi yorumları açmaya devam eder.");
         table.put("Take the pulsing LIVE ring off profile pictures on the feed and in comments. Tapping the picture of a creator who's live opens their profile instead of the LIVE.",
@@ -4288,8 +4288,8 @@ final class L10nTranslationsTr {
                 "Akışı başlatmak için dokun");
         table.put("Tap to start, then scroll until the feed problem shows up and come back here to save it. The file has no captions or names, and videos and creators appear only as short codes. Read it before you share it.",
                 "Başlatmak için dokun, sonra akıştaki sorun görünene kadar kaydır ve kaydetmek için buraya dön. Dosyada altyazı veya ad bulunmaz, videolar ve içerik üreticileri yalnızca kısa kodlarla görünür. Paylaşmadan önce dosyayı oku.");
-        table.put("Tap, then go to the screen with what you want hidden. After %1$d seconds Hushfeed records how that screen is built, without any of its text, for the diagnostic report.",
-                "Dokun, sonra gizlemek istediğin şeyin olduğu ekrana git. %1$d saniye sonra Hushfeed o ekranın nasıl kurulduğunu, metnini almadan, tanılama raporu için kaydeder.");
+        table.put("Tap, then go to the screen with what you want hidden. After %1$d seconds Larpfeed records how that screen is built, without any of its text, for the diagnostic report.",
+                "Dokun, sonra gizlemek istediğin şeyin olduğu ekrana git. %1$d saniye sonra Larpfeed o ekranın nasıl kurulduğunu, metnini almadan, tanılama raporu için kaydeder.");
         table.put("Tapping a sticker someone sent you in a chat opens a box with Save media. Turn this off to skip it.",
                 "Sohbette birinin gönderdiği bir çıkartmaya dokununca Medyayı kaydet düğmesi olan bir kutu açılır. Atlamak için bunu kapatın.");
         table.put("Tapping more under a video opens its comments with the whole caption at the top instead of spreading the caption over the video. A tap on the caption itself does the same. Photo posts keep TikTok's own page for this.",
@@ -4302,8 +4302,8 @@ final class L10nTranslationsTr {
                 "Metin çıkartması kelimeleri");
         table.put("That JSON file doesn't contain the supported TikTok watch history.",
                 "Bu JSON dosyası desteklenen TikTok izleme geçmişini içermiyor.");
-        table.put("That backup was written by a newer Hushfeed than this one. Nothing was altered.",
-                "Bu yedek, bundan daha yeni bir Hushfeed sürümüyle yazılmış. Hiçbir şey değiştirilmedi.");
+        table.put("That backup was written by a newer Larpfeed than this one. Nothing was altered.",
+                "Bu yedek, bundan daha yeni bir Larpfeed sürümüyle yazılmış. Hiçbir şey değiştirilmedi.");
         table.put("That creator is already in the list",
                 "Bu içerik üreticisi zaten listede");
         table.put("That creator pattern could stall the feed, so it wasn't added: %1$s",
@@ -4312,8 +4312,8 @@ final class L10nTranslationsTr {
                 "Bu içerik üreticisi kalıbı çok uzun olduğu için eklenmedi: %1$s");
         table.put("That file has more than %1$s watch-history entries.",
                 "Dosyada %1$s'den fazla izleme geçmişi kaydı var.");
-        table.put("That file is larger than %1$s MB. Choose a seen-history file saved by Hushfeed.",
-                "Bu dosya %1$s MB'tan büyük. Hushfeed'in kaydettiği bir geçmiş dosyası seçin.");
+        table.put("That file is larger than %1$s MB. Choose a seen-history file saved by Larpfeed.",
+                "Bu dosya %1$s MB'tan büyük. Larpfeed'in kaydettiği bir geçmiş dosyası seçin.");
         table.put("That file is larger than %1$s MB. Choose a smaller font file.",
                 "Dosya %1$s MB'tan büyük. Daha küçük bir yazı tipi dosyası seçin.");
         table.put("That file is larger than %1$s MB. Choose a smaller watch-history export.",
@@ -4328,8 +4328,8 @@ final class L10nTranslationsTr {
                 "Bu dosya okunabilir bir metin değil, aktarım sırasında zarar görmüş olabilir. Hiçbir şey değiştirilmedi.");
         table.put("That file lists more than %1$s videos. Nothing was restored.",
                 "Bu dosyada %1$s videodan fazlası var. Hiçbir şey geri yüklenmedi.");
-        table.put("That file was saved by a newer Hushfeed. Update Hushfeed, then try again.",
-                "Bu dosya Hushfeed'in daha yeni bir sürümüyle kaydedilmiş. Hushfeed'i güncelleyip tekrar deneyin.");
+        table.put("That file was saved by a newer Larpfeed. Update Larpfeed, then try again.",
+                "Bu dosya Larpfeed'in daha yeni bir sürümüyle kaydedilmiş. Larpfeed'i güncelleyip tekrar deneyin.");
         table.put("That folder name has a character Android doesn't allow. Use letters, numbers, spaces or dashes.",
                 "Bu klasör adında Android'in izin vermediği bir karakter var. Harf, rakam, boşluk veya kısa çizgi kullan.");
         table.put("That is %1$d minutes today",
@@ -4340,10 +4340,10 @@ final class L10nTranslationsTr {
                 "Bugün bir dakika etti");
         table.put("That is one video today",
                 "Bugün bir video etti");
-        table.put("That isn't a Hushfeed settings backup. Nothing was altered.",
-                "Bu bir Hushfeed ayar yedeği değil. Hiçbir şey değiştirilmedi.");
-        table.put("That isn't a seen-history file saved by Hushfeed. For TikTok's own data export, use Import watch history.",
-                "Bu, Hushfeed'in kaydettiği bir geçmiş dosyası değil. TikTok'un kendi veri dışa aktarımı için İzleme geçmişini içe aktar'ı kullanın.");
+        table.put("That isn't a Larpfeed settings backup. Nothing was altered.",
+                "Bu bir Larpfeed ayar yedeği değil. Hiçbir şey değiştirilmedi.");
+        table.put("That isn't a seen-history file saved by Larpfeed. For TikTok's own data export, use Import watch history.",
+                "Bu, Larpfeed'in kaydettiği bir geçmiş dosyası değil. TikTok'un kendi veri dışa aktarımı için İzleme geçmişini içe aktar'ı kullanın.");
         table.put("That isn't an app name. Try something like com.example.downloader, or leave the box empty to keep saving in TikTok.",
                 "Bu bir uygulama adı değil. com.example.downloader gibi bir şey dene ya da TikTok'a kaydetmeye devam etmek için kutuyu boş bırak.");
         table.put("That list has too many entries. Keep it to %1$s or fewer.",
@@ -4358,10 +4358,10 @@ final class L10nTranslationsTr {
                 "Bu hazır ayar tanınmıyor. Başka birini seç.");
         table.put("That seen-history file is damaged or was edited. Nothing was restored.",
                 "Bu geçmiş dosyası bozuk ya da düzenlenmiş. Hiçbir şey geri yüklenmedi.");
-        table.put("That settings backup contains a feed rule list larger than Hushfeed accepts. Nothing was altered.",
-                "Bu ayar yedeği, Hushfeed'in kabul ettiğinden büyük bir akış kuralı listesi içeriyor. Hiçbir şey değiştirilmedi.");
-        table.put("That settings backup holds a value Hushfeed can't read. Nothing was altered.",
-                "Bu ayar yedeğinde Hushfeed'in okuyamadığı bir değer var. Hiçbir şey değiştirilmedi.");
+        table.put("That settings backup contains a feed rule list larger than Larpfeed accepts. Nothing was altered.",
+                "Bu ayar yedeği, Larpfeed'in kabul ettiğinden büyük bir akış kuralı listesi içeriyor. Hiçbir şey değiştirilmedi.");
+        table.put("That settings backup holds a value Larpfeed can't read. Nothing was altered.",
+                "Bu ayar yedeğinde Larpfeed'in okuyamadığı bir değer var. Hiçbir şey değiştirilmedi.");
         table.put("That settings backup holds more Feature Gate Lab rules than the Lab takes. Nothing was altered.",
                 "Bu ayar yedeğinde Lab'in aldığından fazla Feature Gate Lab kuralı var. Hiçbir şey değiştirilmedi.");
     }
@@ -4373,8 +4373,8 @@ final class L10nTranslationsTr {
                 "Bu ayar yedeği eksik, yarıda kesilmiş olabilir. Hiçbir şey değiştirilmedi.");
         table.put("That settings change didn't go through. Nothing was altered.",
                 "Bu ayar değişikliği uygulanamadı. Hiçbir şey değiştirilmedi.");
-        table.put("That sticker is in a format Hushfeed can't read",
-                "Bu çıkartma Hushfeed'in okuyamadığı bir biçimde");
+        table.put("That sticker is in a format Larpfeed can't read",
+                "Bu çıkartma Larpfeed'in okuyamadığı bir biçimde");
         table.put("That watch-history file is damaged. Nothing was imported.",
                 "İzleme geçmişi dosyası bozuk. Hiçbir şey içe aktarılmadı.");
         table.put("The Activity row of likes and comments on your posts leaves the Inbox. Notifications about them still arrive.",
@@ -4397,8 +4397,8 @@ final class L10nTranslationsTr {
                 "Yeni takipçiler satırı Gelen Kutusu'nun üstünden kalkar. Hesaplar seni takip etmeye devam eder.");
         table.put("The Tako assistant's conversation leaves the Inbox list. The Tako bubble on the feed has its own switch under Feed tabs.",
                 "Tako asistanıyla olan sohbet Gelen Kutusu listesinden kalkar. Akıştaki Tako balonunun Akış sekmeleri altında kendi anahtarı var.");
-        table.put("The Translate comments button in a LIVE room also needs a Japanese SIM. Turn on Override SIM details in Hushfeed settings > Region, set SIM country preset to Japan, NTT DOCOMO (44010), then restart TikTok.",
-                "Bir LIVE odasındaki Yorumları çevir düğmesi için ayrıca Japon SIM gerekir. Hushfeed ayarları > Bölge içinde SIM bilgilerini geçersiz kıl seçeneğini aç, SIM ülke hazır ayarı olarak Japan, NTT DOCOMO (44010) seç, sonra TikTok'u yeniden başlat.");
+        table.put("The Translate comments button in a LIVE room also needs a Japanese SIM. Turn on Override SIM details in Larpfeed settings > Region, set SIM country preset to Japan, NTT DOCOMO (44010), then restart TikTok.",
+                "Bir LIVE odasındaki Yorumları çevir düğmesi için ayrıca Japon SIM gerekir. Larpfeed ayarları > Bölge içinde SIM bilgilerini geçersiz kıl seçeneğini aç, SIM ülke hazır ayarı olarak Japan, NTT DOCOMO (44010) seç, sonra TikTok'u yeniden başlat.");
         table.put("The accounts TikTok suggests you follow no longer take up rows in the Inbox.",
                 "TikTok'un takip etmen için önerdiği hesaplar artık Gelen Kutusu'nda satır kaplamaz.");
         table.put("The activity status control leaves the Inbox header. Whether others see you as active is unchanged.",
@@ -4445,8 +4445,8 @@ final class L10nTranslationsTr {
                 "Uygulamaya döndüğünde akış yeniden oynamaya başlamadan önce tek bir dokunuş bekler. Mesajlar, profiller ve arama hâlâ bir dokunuş uzakta.");
         table.put("The file app still has the last file. Try again once it lets go, or restart TikTok.",
                 "Dosya uygulaması son dosyayı hâlâ tutuyor. Bıraktığında tekrar dene ya da TikTok'u yeniden başlat.");
-        table.put("The file hushfeed-safe-mode couldn't be removed. Delete it from TikTok's folder under Android/data to turn Hushfeed back on.",
-                "hushfeed-safe-mode dosyası kaldırılamadı. Hushfeed'i yeniden açmak için onu Android/data altındaki TikTok klasöründen sil.");
+        table.put("The file larpfeed-safe-mode couldn't be removed. Delete it from TikTok's folder under Android/data to turn Larpfeed back on.",
+                "larpfeed-safe-mode dosyası kaldırılamadı. Larpfeed'i yeniden açmak için onu Android/data altındaki TikTok klasöründen sil.");
         table.put("The frame couldn't be read. Try again.",
                 "Kare okunamadı. Yeniden dene.");
         table.put("The frame couldn't be saved. Try again.",
@@ -4578,8 +4578,8 @@ final class L10nTranslationsTr {
                 "Bu dosya bir yüklenen değerler dışa aktarımı değil");
         table.put("This gate type isn't supported",
                 "Bu özellik kapısı türü desteklenmiyor");
-        table.put("This key isn't in Hushfeed's list, so its type can't be checked. Reset the override.",
-                "Bu anahtar Hushfeed listesinde yok, bu yüzden türü denetlenemiyor. Geçersiz kılmayı sıfırla.");
+        table.put("This key isn't in Larpfeed's list, so its type can't be checked. Reset the override.",
+                "Bu anahtar Larpfeed listesinde yok, bu yüzden türü denetlenemiyor. Geçersiz kılmayı sıfırla.");
         table.put("This key touches account safety. Forcing it can change login, region, payment or security checks.",
                 "Bu anahtar hesap güvenliğine dokunur. Zorlamak giriş, bölge, ödeme veya güvenlik denetimlerini değiştirebilir.");
         table.put("This line opens a rule and doesn't finish it: %1$s. Write two phrases as \"a\" & \"b\" for both, or \"a\" !& \"b\" for the first without the second.",
@@ -4633,8 +4633,8 @@ final class L10nTranslationsTr {
                 "TikTok nasıl imzalandığını ve yüklendiğini kontrol eder. Bu, söz konusu kontrollere Play Store sürümünün vereceği gibi yanıt verir. Takipler veya beğeniler yenilemeden sonra kendiliğinden geri alınıyorsa dene. TikTok'un başka kontrolleri de olduğu için işe yaramayabilir.");
         table.put("TikTok closed during these saves",
                 "TikTok bu kayıtlar sırasında kapandı");
-        table.put("TikTok closed three times within a minute of starting, so Hushfeed paused itself. Your settings stay as they are.",
-                "TikTok açıldıktan sonraki bir dakika içinde üç kez kapandı, bu yüzden Hushfeed kendini duraklattı. Ayarların olduğu gibi kalır.");
+        table.put("TikTok closed three times within a minute of starting, so Larpfeed paused itself. Your settings stay as they are.",
+                "TikTok açıldıktan sonraki bir dakika içinde üç kez kapandı, bu yüzden Larpfeed kendini duraklattı. Ayarların olduğu gibi kalır.");
         table.put("TikTok closed. What was recorded is saved to %1$s",
                 "TikTok kapandı. Kayıt kaydedildi: %1$s");
         table.put("TikTok closes at %1$s",
@@ -4800,8 +4800,8 @@ final class L10nTranslationsTr {
                 "Yeniden dene ya da TikTok'a geri dön.");
         table.put("Turn Clear display on or off",
                 "Temiz ekranı aç veya kapat");
-        table.put("Turn Hushfeed back on",
-                "Hushfeed'i yeniden aç");
+        table.put("Turn Larpfeed back on",
+                "Larpfeed'i yeniden aç");
         table.put("Turn off double tap to react",
                 "Tepki için çift dokunmayı kapat");
         table.put("Turn off haptics",
@@ -5024,8 +5024,8 @@ final class L10nTranslationsTr {
                 "Ses");
         table.put("Wait a day to loosen the budget",
                 "Bütçeyi gevşetmek için bir gün bekle");
-        table.put("Wait a day to loosen the budget is on, so Hushfeed stays on",
-                "Bütçeyi gevşetmek için bir gün bekle açık, bu yüzden Hushfeed açık kalıyor");
+        table.put("Wait a day to loosen the budget is on, so Larpfeed stays on",
+                "Bütçeyi gevşetmek için bir gün bekle açık, bu yüzden Larpfeed açık kalıyor");
         table.put("Wait before hiding the controls.",
                 "Kontrolleri gizlemeden önce bekle.");
         table.put("Wait for loading to finish",
@@ -5056,8 +5056,8 @@ final class L10nTranslationsTr {
                 "Mesajda yazacaklar.");
         table.put("What's new",
                 "Yenilikler");
-        table.put("When Copy link gives a short vt.tiktok.com or vm.tiktok.com link, Hushfeed opens it once in the background to find the full video link and copies that instead. TikTok sees that visit, and it connects directly even when a proxy is on. Links you send to another app go out as they were.",
-                "Bağlantıyı kopyala kısa bir vt.tiktok.com veya vm.tiktok.com bağlantısı verdiğinde, Hushfeed onu arka planda bir kez açıp videonun tam bağlantısını bulur ve onu kopyalar. TikTok bu ziyareti görür ve bir proxy açık olsa bile doğrudan bağlanır. Başka bir uygulamaya gönderdiğin bağlantılar olduğu gibi gider.");
+        table.put("When Copy link gives a short vt.tiktok.com or vm.tiktok.com link, Larpfeed opens it once in the background to find the full video link and copies that instead. TikTok sees that visit, and it connects directly even when a proxy is on. Links you send to another app go out as they were.",
+                "Bağlantıyı kopyala kısa bir vt.tiktok.com veya vm.tiktok.com bağlantısı verdiğinde, Larpfeed onu arka planda bir kez açıp videonun tam bağlantısını bulur ve onu kopyalar. TikTok bu ziyareti görür ve bir proxy açık olsa bile doğrudan bağlanır. Başka bir uygulamaya gönderdiğin bağlantılar olduğu gibi gider.");
         table.put("When TikTok is in dark mode, the list of collections you get by holding the Favorites button is dark too instead of white.",
                 "TikTok karanlık moddayken Favoriler düğmesine basılı tutunca açılan koleksiyon listesi de beyaz yerine koyu olur.");
         table.put("When TikTok requests this key, return the selected value below",
@@ -5086,8 +5086,8 @@ final class L10nTranslationsTr {
                 "Süre nerede görünsün");
         table.put("While Clear display is on, also hide the progress bar, the close button and the pause and speed buttons at the bottom. You can still drag along the bottom edge to move through the video. To leave Clear display, press and hold the video and tap Restore display, or pinch the screen.",
                 "Temiz ekran açıkken alttaki ilerleme çubuğunu, kapatma düğmesini, duraklatma ve hız düğmelerini de gizle. Videoda ileri geri gitmek için yine de alt kenar boyunca sürükleyebilirsin. Temiz ekrandan çıkmak için videoya basılı tut ve Ekranı geri yükle'ye dokun. Ekranda iki parmağını birbirine yaklaştırarak da çıkabilirsin.");
-        table.put("While diagnostic logging is on, a message names the part of Hushfeed that failed. Off keeps failures in the report only.",
-                "Tanılama günlüğü açıkken bir mesaj, Hushfeed'in hata veren bölümünün adını söyler. Kapalıyken hatalar yalnızca raporda kalır.");
+        table.put("While diagnostic logging is on, a message names the part of Larpfeed that failed. Off keeps failures in the report only.",
+                "Tanılama günlüğü açıkken bir mesaj, Larpfeed'in hata veren bölümünün adını söyler. Kapalıyken hatalar yalnızca raporda kalır.");
         table.put("While you hold a video, slide left or right to step through the speed menu's speeds, and a bubble shows the one you're on. Your next hold starts there. Letting go goes back to normal. A pull-down lock keeps the speed you slid to. On a locked video, letting go locks the new speed.",
                 "Bir videoyu basılı tutarken hız menüsündeki hızlar arasında geçmek için sola veya sağa kaydır. Geçerli hızı bir balon gösterir. Bir sonraki basılı tutma oradan başlar. Bıraktığında normale döner. Aşağı çekerek kilitlersen seçtiğin hız kalır. Kilitli bir videoda bıraktığında yeni hız kilitlenir.");
         table.put("White",
@@ -5177,8 +5177,8 @@ final class L10nTranslationsTr {
                 "İçe aktarma bitmeden izleme geçmişiniz değişti. Dosyayı yeniden seçin.");
         table.put("Your settings",
                 "Ayarların");
-        table.put("Zero means no limit. Counts the videos Hushfeed advanced past for you, not the ones you swiped yourself, and starts again when the feed is rebuilt or you change this number.",
-                "Sıfır, sınır yok demektir. Kendi kaydırdıklarını değil, Hushfeed'in senin için geçtiği videoları sayar ve akış yeniden oluşturulduğunda ya da bu sayıyı değiştirdiğinde baştan başlar.");
+        table.put("Zero means no limit. Counts the videos Larpfeed advanced past for you, not the ones you swiped yourself, and starts again when the feed is rebuilt or you change this number.",
+                "Sıfır, sınır yok demektir. Kendi kaydırdıklarını değil, Larpfeed'in senin için geçtiği videoları sayar ve akış yeniden oluşturulduğunda ya da bu sayıyı değiştirdiğinde baştan başlar.");
         table.put("Zero means the way out of the hold is always there. Any other number is how many times a day it works. Once they're used up, the hold stays until the day starts over. Ignored while the budget is locked, which removes the way out.",
                 "Sıfır, bekletmeden çıkış yolunun her zaman olduğu anlamına gelir. Başka bir sayı, bunun günde kaç kez işe yaradığıdır. Bittiğinde bekletme, gün yeniden başlayana kadar kalır. Bütçe kilitliyken yok sayılır, çünkü kilit çıkış yolunu kaldırır.");
         table.put("Zero shows the notice and leaves the feed alone. Anything else covers the feed for that many minutes once a budget is reached. Messages, profiles and search keep working, and nothing in the feed is thrown away.",
@@ -5189,8 +5189,8 @@ final class L10nTranslationsTr {
                 "Sıfır bunu kapatır. Ekrana o kadar dakika dokunulmazsa video durur ve TikTok arka plana geçer, izlerken uyuyakaldığın durumlar için. Herhangi bir dokunuş beklemeyi baştan başlatır.");
         table.put("Zero switches this off. Count the minutes the player spends running in the feed. Time on messages, a profile or search doesn't count.",
                 "Sıfır bunu kapatır. Oynatıcının akışta çalışarak geçirdiği dakikaları say. Mesajlarda, bir profilde veya aramada geçen süre sayılmaz.");
-        table.put("Zero switches this off. Counts every video that comes up in the feed and tells you when you reach the limit. Separate from the auto-advance session limit under Playback, which counts only videos Hushfeed moved past for you.",
-                "Sıfır bunu kapatır. Akışta çıkan her videoyu sayar ve sınıra ulaştığında sana haber verir. Oynatma altındaki otomatik ilerleme oturum sınırından ayrıdır; o yalnızca Hushfeed'in senin yerine geçtiği videoları sayar.");
+        table.put("Zero switches this off. Counts every video that comes up in the feed and tells you when you reach the limit. Separate from the auto-advance session limit under Playback, which counts only videos Larpfeed moved past for you.",
+                "Sıfır bunu kapatır. Akışta çıkan her videoyu sayar ve sınıra ulaştığında sana haber verir. Oynatma altındaki otomatik ilerleme oturum sınırından ayrıdır; o yalnızca Larpfeed'in senin yerine geçtiği videoları sayar.");
         table.put("autoplay auto play",
                 "otomatik oynatma");
         table.put("collapsed",

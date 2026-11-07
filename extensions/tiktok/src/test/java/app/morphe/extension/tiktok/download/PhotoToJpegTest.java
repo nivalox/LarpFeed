@@ -75,7 +75,7 @@ public class PhotoToJpegTest {
         assertEquals("off converts again", "jpg", PhotoToJpeg.convert(context, webp, "webp"));
     }
 
-    /** Make sticker's cover (#88) is read by Hushfeed, not saved, so it's a JPEG whatever the switch says. */
+    /** Make sticker's cover (#88) is read by Larpfeed, not saved, so it's a JPEG whatever the switch says. */
     @Test
     public void rewriteIgnoresKeepPhotosAsSent() throws IOException {
         Settings.KEEP_PHOTOS_AS_SENT.save(true);

@@ -116,7 +116,7 @@ public class KeepPausedTest {
 
     /**
      * TikTok's own stop as the feed's activity pauses: its player stops in a lifecycle observer,
-     * which comes after the application's pre-pause callbacks. Registered after Hushfeed's.
+     * which comes after the application's pre-pause callbacks. Registered after Larpfeed's.
      */
     private void stopThePlayerOnEveryPause() {
         RuntimeEnvironment.getApplication().registerActivityLifecycleCallbacks(new EmptyCallbacks() {
@@ -146,7 +146,7 @@ public class KeepPausedTest {
         }
     }
 
-    /** Messages, a web page or Hushfeed's settings cover the feed and pause on the way back. */
+    /** Messages, a web page or Larpfeed's settings cover the feed and pause on the way back. */
     @Test @Config(sdk = 30) public void anotherTikTokScreenOnTheWayBackIsNotTheFeed() {
         Settings.KEEP_PAUSED_ON_RETURN.save(true);
         ReflectionHelpers.callStaticMethod(PausePlayback.class, "resetForTests");

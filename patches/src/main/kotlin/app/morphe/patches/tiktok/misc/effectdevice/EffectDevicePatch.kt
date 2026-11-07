@@ -1,6 +1,6 @@
 /*
- * Copyright 2026 Hushfeed contributors
- * https://github.com/SysAdminDoc/hushfeed
+ * Copyright 2026 Larpfeed contributors
+ * https://github.com/SysAdminDoc/larpfeed
  */
 package app.morphe.patches.tiktok.misc.effectdevice
 
@@ -107,7 +107,7 @@ private fun MutableMethod.swapExactly(expected: Int) {
 val effectDevicePatch = bytecodePatch(
     name = "Report a newer phone to effects",
     description = "Tells TikTok's effects server you have a newer phone, so effects it turns down " +
-        "on older phones get another chance. Starts off. Turn it on in Hushfeed settings > App.",
+        "on older phones get another chance. Starts off. Turn it on in Larpfeed settings > App.",
 ) {
     category("Interface")
     dependsOn(settingsPatch, sharedExtensionPatch)

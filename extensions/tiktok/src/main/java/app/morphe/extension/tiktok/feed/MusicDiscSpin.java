@@ -1,6 +1,6 @@
 /*
- * Copyright 2026 Hushfeed contributors
- * https://github.com/SysAdminDoc/hushfeed
+ * Copyright 2026 Larpfeed contributors
+ * https://github.com/SysAdminDoc/larpfeed
  */
 package app.morphe.extension.tiktok.feed;
 
@@ -26,7 +26,7 @@ import java.util.concurrent.ConcurrentHashMap;
  *       when the phone's load reaches SEVERE.</li>
  *   <li>The play subscriber returns when the app AB int {@code music_animation_close_exp} is 1 or
  *       3, unless {@code video_music_cover_visual_opt_rotation_duration} is above 0. TikTok's own
- *       defaults are 3 and 0, which is why the disc stays still with every Hushfeed switch off.</li>
+ *       defaults are 3 and 0, which is why the disc stays still with every Larpfeed switch off.</li>
  *   <li>It returns again on a photo without music, once it has started, while VideoMusicCoverVM's
  *       hold is true (the app AB boolean {@code anim_opt}, or a tablet layout), in power mode, and
  *       while the high frame rate hold is true. That hold is set at launch from

@@ -11,7 +11,7 @@
     Steps are data. "apk" steps read the patched APK itself (emptied files, the manifest, the
     resource table, strings in the dex) and need no phone. Every other step drives the phone
     through adb and the verification probe (tools/verification-probe), which runs inside
-    the patched app and answers in logcat: "set" writes a Hushfeed setting, "probe" asks a question and
+    the patched app and answers in logcat: "set" writes a Larpfeed setting, "probe" asks a question and
     holds its answer to a regex, "log" waits for a logcat line, "shot" saves a screenshot for a
     person to judge against the check's review text. A check whose decisions are all
     expectations is marked auto; one with a "shot" ends as "review" until a verdict is merged
@@ -43,13 +43,13 @@
     concepts/patch-development.md has the whole routine.
 
 .EXAMPLE
-    audit/run-audit.ps1 -Apk C:\scratch\hushfeed-0.74.0-signed.apk -Serial $env:HUSHFEED_DEVICE_SERIAL -Install
+    audit/run-audit.ps1 -Apk C:\scratch\larpfeed-0.74.0-signed.apk -Serial $env:LARPFEED_DEVICE_SERIAL -Install
 
 .EXAMPLE
-    audit/run-audit.ps1 -Apk C:\scratch\hushfeed-0.74.0-signed.apk -NoDevice
+    audit/run-audit.ps1 -Apk C:\scratch\larpfeed-0.74.0-signed.apk -NoDevice
 
 .EXAMPLE
-    audit/run-audit.ps1 -Apk C:\scratch\hushfeed-0.74.0-signed.apk -Serial <serial> -Only 'Hide the LIVE button,category:Comments'
+    audit/run-audit.ps1 -Apk C:\scratch\larpfeed-0.74.0-signed.apk -Serial <serial> -Only 'Hide the LIVE button,category:Comments'
 
 .EXAMPLE
     audit/run-audit.ps1 -Validate
@@ -60,7 +60,7 @@
 [CmdletBinding()]
 param(
     [string]$Apk,
-    [string]$Serial = $env:HUSHFEED_DEVICE_SERIAL,
+    [string]$Serial = $env:LARPFEED_DEVICE_SERIAL,
     [switch]$Install,
     [string]$Catalog,
     [string]$Only,
@@ -69,8 +69,8 @@ param(
     [string]$Adb,
     [string]$Aapt2,
     [string]$Ffmpeg,
-    [string]$LeaseDir = $env:HUSHFEED_DEVICE_LEASE_DIR,
-    [string]$ChatIdentity = $env:HUSHFEED_CHAT_IDENTITY,
+    [string]$LeaseDir = $env:LARPFEED_DEVICE_LEASE_DIR,
+    [string]$ChatIdentity = $env:LARPFEED_CHAT_IDENTITY,
     [ValidateRange(1, 30)][int]$LeaseMinutes = 30,
     [switch]$NoDevice,
     [string]$ApplyVerdicts,
@@ -166,7 +166,7 @@ if ($Validate) {
     foreach ($name in $declared) { if ($named -notcontains $name) { $problems.Add("no entry for the patch '$name'") } }
     foreach ($name in $named) { if ($declared -notcontains $name) { $problems.Add("'$name' is not a patch in patches-list.json") } }
     foreach ($twice in @($named | Group-Object | Where-Object Count -gt 1)) { $problems.Add("'$($twice.Name)' has $($twice.Count) entries") }
-    $probeSource = Get-Content -LiteralPath (Join-Path $root 'tools/verification-probe/src/app/hushfeed/verification/Probe.java') -Raw
+    $probeSource = Get-Content -LiteralPath (Join-Path $root 'tools/verification-probe/src/app/larpfeed/verification/Probe.java') -Raw
     $actions = @([regex]::Matches($probeSource, 'case "([a-z0-9-]+)"\s*:') | ForEach-Object { $_.Groups[1].Value })
     $keys = New-Object System.Collections.Generic.HashSet[string]
     Get-ChildItem -Path (Join-Path $root 'extensions') -Recurse -Filter *.java | Where-Object { $_.FullName -match '[\\/]src[\\/]main[\\/]' } | ForEach-Object {
@@ -256,18 +256,18 @@ $Apk = (Resolve-Path -LiteralPath $Apk).Path
 
 function Resolve-AuditAdb {
     if ($Adb) { return $Adb }
-    if ($env:HUSHFEED_ADB) { return $env:HUSHFEED_ADB }
+    if ($env:LARPFEED_ADB) { return $env:LARPFEED_ADB }
     $onPath = Get-Command adb -ErrorAction SilentlyContinue
     if ($onPath) { return $onPath.Source }
     $sdkAdb = Join-Path $env:LOCALAPPDATA 'Android\Sdk\platform-tools\adb.exe'
     if (Test-Path -LiteralPath $sdkAdb) { return $sdkAdb }
-    throw 'No adb found. Pass -Adb or set HUSHFEED_ADB.'
+    throw 'No adb found. Pass -Adb or set LARPFEED_ADB.'
 }
 
 # Only a record step needs it, so a missing ffmpeg fails that step and nothing else.
 function Resolve-AuditFfmpeg {
     if ($Ffmpeg) { return $Ffmpeg }
-    if ($env:HUSHFEED_FFMPEG) { return $env:HUSHFEED_FFMPEG }
+    if ($env:LARPFEED_FFMPEG) { return $env:LARPFEED_FFMPEG }
     $onPath = Get-Command ffmpeg -ErrorAction SilentlyContinue
     if ($onPath) { return $onPath.Source }
     # winget's Gyan.FFmpeg package doesn't always reach PATH.
@@ -281,13 +281,13 @@ function Resolve-AuditFfmpeg {
 
 function Resolve-AuditAapt2 {
     if ($Aapt2) { return $Aapt2 }
-    if ($env:HUSHFEED_AAPT2) { return $env:HUSHFEED_AAPT2 }
+    if ($env:LARPFEED_AAPT2) { return $env:LARPFEED_AAPT2 }
     $sdk = if ($env:ANDROID_HOME) { $env:ANDROID_HOME } else { Join-Path $env:LOCALAPPDATA 'Android\Sdk' }
     # Newest by version number: as text, 9.0.0 sorts above 37.0.0.
     $tools = Get-ChildItem (Join-Path $sdk 'build-tools') -Directory -ErrorAction SilentlyContinue |
         Where-Object { $_.Name -match '^\d+(\.\d+)*$' -and (Test-Path (Join-Path $_.FullName 'aapt2.exe')) } |
         Sort-Object { [version]$_.Name } -Descending | Select-Object -First 1
-    if (-not $tools) { throw 'No aapt2 found. Pass -Aapt2 or set HUSHFEED_AAPT2.' }
+    if (-not $tools) { throw 'No aapt2 found. Pass -Aapt2 or set LARPFEED_AAPT2.' }
     return Join-Path $tools.FullName 'aapt2.exe'
 }
 
@@ -323,7 +323,7 @@ if ($catalogEntries.Count -eq 0) {
 
 if (-not $Results) { $Results = Join-Path $PSScriptRoot "results\$($auditProfile.ResultsPrefix)-$versionName$(if ($optionBuild) { '-options' }).json" }
 $stamp = [DateTime]::UtcNow.ToString('yyyyMMdd-HHmmss')
-if (-not $OutDir) { $OutDir = Join-Path ([IO.Path]::GetTempPath()) "hushfeed-audit\$stamp" }
+if (-not $OutDir) { $OutDir = Join-Path ([IO.Path]::GetTempPath()) "larpfeed-audit\$stamp" }
 New-Item -ItemType Directory -Force -Path $OutDir | Out-Null
 New-Item -ItemType Directory -Force -Path (Split-Path -Parent $Results) | Out-Null
 
@@ -392,15 +392,15 @@ if ($dexWanted.Count -gt 0) {
 $adbExe = $null
 $deviceUp = -not $NoDevice
 if ($deviceUp) {
-    if (-not $Serial) { throw 'Pass -Serial (or set HUSHFEED_DEVICE_SERIAL), or -NoDevice for the APK checks only.' }
-    if (-not $LeaseDir) { throw 'Device checks require -LeaseDir or HUSHFEED_DEVICE_LEASE_DIR for the shared device pool.' }
-    if (-not $ChatIdentity) { throw 'Device checks require -ChatIdentity or HUSHFEED_CHAT_IDENTITY.' }
+    if (-not $Serial) { throw 'Pass -Serial (or set LARPFEED_DEVICE_SERIAL), or -NoDevice for the APK checks only.' }
+    if (-not $LeaseDir) { throw 'Device checks require -LeaseDir or LARPFEED_DEVICE_LEASE_DIR for the shared device pool.' }
+    if (-not $ChatIdentity) { throw 'Device checks require -ChatIdentity or LARPFEED_CHAT_IDENTITY.' }
     $adbExe = Resolve-AuditAdb
 }
 $auditLease = $null
 function Grant-AuditLease {
     if ($null -eq $script:auditLease) {
-        $script:auditLease = New-DeviceLease -LeaseDir $LeaseDir -Serial $Serial -Project 'hushfeed' `
+        $script:auditLease = New-DeviceLease -LeaseDir $LeaseDir -Serial $Serial -Project 'larpfeed' `
             -ChatIdentity $ChatIdentity -Purpose 'patch audit' -LeaseMinutes $LeaseMinutes
     } else {
         Assert-DeviceLease -Lease $script:auditLease -Serial $Serial
@@ -434,20 +434,20 @@ function Invoke-DeviceShell([string]$Command) { Invoke-AuditAdb shell $Command }
 # A line in logcat that later reads start from. The phone's clock comes back with it, so a read
 # asks logcat only for what was logged since (-T) instead of pulling the whole buffer each time.
 function Write-Marker {
-    $id = "hushfeed-audit-$([guid]::NewGuid().ToString('N'))"
-    $clock = "$(Invoke-DeviceShell "date '+%m-%d %H:%M:%S'; log -t HushfeedAudit $id")".Trim()
+    $id = "larpfeed-audit-$([guid]::NewGuid().ToString('N'))"
+    $clock = "$(Invoke-DeviceShell "date '+%m-%d %H:%M:%S'; log -t LarpfeedAudit $id")".Trim()
     return [pscustomobject]@{ id = $id; since = "$clock.000" }
 }
 
-# The lines after a marker, in "-v tag" form ("D/morphe: FeedFilter: dropped ..."): Hushfeed's
+# The lines after a marker, in "-v tag" form ("D/morphe: FeedFilter: dropped ..."): Larpfeed's
 # logger names the class in the tag, and a raw read would lose it.
 function Get-LogAfter($Marker, [string[]]$Tags) {
     # The marker's own tag always comes along: without its line there is nowhere to start.
-    $filter = if ($Tags) { '-s ' + ((@($Tags) + 'HushfeedAudit' | Select-Object -Unique | ForEach-Object { "${_}:V" }) -join ' ') } else { '' }
+    $filter = if ($Tags) { '-s ' + ((@($Tags) + 'LarpfeedAudit' | Select-Object -Unique | ForEach-Object { "${_}:V" }) -join ' ') } else { '' }
     $lines = @(Invoke-DeviceShell "logcat -d -v tag -T $(ConvertTo-DeviceQuoted $Marker.since) $filter" | ForEach-Object { "$_".TrimEnd([char]13) })
     $at = -1
     # Only the marker's own line: adbd also logs the shell command that wrote it.
-    $own = "HushfeedAudit\s*: $([regex]::Escape($Marker.id))$"
+    $own = "LarpfeedAudit\s*: $([regex]::Escape($Marker.id))$"
     for ($i = $lines.Count - 1; $i -ge 0; $i--) { if ($lines[$i] -match $own) { $at = $i; break } }
     if ($at -lt 0) { return @() }
     return @($lines | Select-Object -Skip ($at + 1))
@@ -459,7 +459,7 @@ function Test-Pattern([string]$Text, [string]$Pattern) { return [regex]::IsMatch
 # One probe action: its whole answer as one string, the numbered pieces joined back together.
 function Invoke-AuditProbe([string]$Action, $Extras, [int]$WaitMs = 3000, [string]$Until) {
     $marker = Write-Marker
-    $parts = @("am broadcast -a app.hushfeed.verification.PROBE -p $package -e action $(ConvertTo-DeviceQuoted $Action)")
+    $parts = @("am broadcast -a app.larpfeed.verification.PROBE -p $package -e action $(ConvertTo-DeviceQuoted $Action)")
     if ($Extras) {
         foreach ($property in $Extras.PSObject.Properties) {
             $parts += "-e $(ConvertTo-DeviceQuoted $property.Name) $(ConvertTo-DeviceQuoted ([string]$property.Value))"
@@ -480,9 +480,9 @@ function Invoke-AuditProbe([string]$Action, $Extras, [int]$WaitMs = 3000, [strin
     $answer = @()
     do {
         Start-Sleep -Milliseconds 400
-        # "I/HushfeedProbe: text" opens each message; the message's other lines come bare.
-        $answer = @(Get-LogAfter $marker @('HushfeedProbe') |
-            ForEach-Object { "$_" -replace '^[VDIWEF]/HushfeedProbe\s*: ?', '' })
+        # "I/LarpfeedProbe: text" opens each message; the message's other lines come bare.
+        $answer = @(Get-LogAfter $marker @('LarpfeedProbe') |
+            ForEach-Object { "$_" -replace '^[VDIWEF]/LarpfeedProbe\s*: ?', '' })
         $finished = @($answer | Where-Object { "$_" -match $done }).Count -gt 0
         if ($Action -eq 'report' -and $answer.Count -gt $seen) {
             $seen = $answer.Count
@@ -601,13 +601,13 @@ function Restart-TikTok {
     $deadline = [DateTime]::UtcNow.AddSeconds(40)
     do {
         Start-Sleep -Milliseconds 700
-        $ready = @(Get-LogAfter $marker @('HushfeedProbe') | Where-Object { "$_" -match 'HushfeedProbe\s*: ready$' }).Count -gt 0
+        $ready = @(Get-LogAfter $marker @('LarpfeedProbe') | Where-Object { "$_" -match 'LarpfeedProbe\s*: ready$' }).Count -gt 0
     } until ($ready -or [DateTime]::UtcNow -gt $deadline)
     if (-not $ready) { throw 'the probe never came up after the restart (is it installed and signed like TikTok?)' }
     Start-Sleep -Seconds 7
 }
 
-# A tap on the node a fresh uiautomator dump finds. On Hushfeed's settings pages a row below the
+# A tap on the node a fresh uiautomator dump finds. On Larpfeed's settings pages a row below the
 # fold is scrolled to, a few screens at most. Elsewhere nothing scrolls unless the target asks
 # ("scroll": n), since TikTok's lists run into suggested accounts.
 $script:settingsOpen = $false
@@ -627,10 +627,10 @@ function Invoke-DumpTap($Target, [int]$HoldMs = 0) {
 # One dump and one tap (a press held for HoldMs when it is above 0), refusing anything that
 # reaches other people.
 function Invoke-DumpTapOnce($Target, [int]$HoldMs = 0) {
-    Invoke-DeviceShell 'rm -f /sdcard/hushfeed-audit.xml' | Out-Null
-    Invoke-DeviceShell 'uiautomator dump /sdcard/hushfeed-audit.xml' | Out-Null
-    $xml = (Invoke-DeviceShell 'cat /sdcard/hushfeed-audit.xml') -join ''
-    Invoke-DeviceShell 'rm -f /sdcard/hushfeed-audit.xml' | Out-Null
+    Invoke-DeviceShell 'rm -f /sdcard/larpfeed-audit.xml' | Out-Null
+    Invoke-DeviceShell 'uiautomator dump /sdcard/larpfeed-audit.xml' | Out-Null
+    $xml = (Invoke-DeviceShell 'cat /sdcard/larpfeed-audit.xml') -join ''
+    Invoke-DeviceShell 'rm -f /sdcard/larpfeed-audit.xml' | Out-Null
     if ($xml -notlike '*<hierarchy*') { throw 'uiautomator could not dump the screen (a playing video blocks it)' }
     # A label is the text or the description, whichever the row has: TikTok's Compose pages
     # (Settings and privacy) put a row's words in its description and leave its text empty.
@@ -680,7 +680,7 @@ function Open-Surface([string]$Where) {
         if (-not (Test-Pattern $answer '^ok click')) { throw "could not open $Where`: $answer" }
     } elseif ($Where -eq 'settings') {
         $answer = Invoke-AuditProbe 'settings' $null 2500
-        if (-not (Test-Pattern $answer '^ok settings')) { throw "could not open Hushfeed settings: $answer" }
+        if (-not (Test-Pattern $answer '^ok settings')) { throw "could not open Larpfeed settings: $answer" }
     } elseif ($Where -like 'search:*') {
         $keyword = [uri]::EscapeDataString($Where.Substring(7))
         Invoke-DeviceShell "am start -a android.intent.action.VIEW -d $(ConvertTo-DeviceQuoted "$($auditProfile.Scheme)://search?keyword=$keyword") -p $package" | Out-Null
@@ -701,7 +701,7 @@ function Open-Surface([string]$Where) {
 function Save-Shot([string]$Name) {
     $capture = [Guid]::NewGuid().ToString('N')
     $file = "$($Name -replace '[^\w.-]', '_')-$capture.png"
-    $remote = "/sdcard/hushfeed-audit-$capture.png"
+    $remote = "/sdcard/larpfeed-audit-$capture.png"
     $local = Join-Path $OutDir $file
     try {
         Invoke-DeviceShell "screencap -p $remote" | Out-Null
@@ -756,7 +756,7 @@ function Get-TikTokVibrations([string]$Since) {
 $script:recorder = $null
 $script:ffmpegExe = $null
 function Start-ScreenRecord([int]$Seconds) {
-    $script:recordingRemote = "/sdcard/hushfeed-audit-$([Guid]::NewGuid().ToString('N')).mp4"
+    $script:recordingRemote = "/sdcard/larpfeed-audit-$([Guid]::NewGuid().ToString('N')).mp4"
     $start = [Diagnostics.ProcessStartInfo]::new($adbExe)
     $start.Arguments = "-s $Serial shell screenrecord --time-limit $Seconds $script:recordingRemote"
     $start.UseShellExecute = $false
@@ -806,9 +806,9 @@ function Clear-ScreenRecord {
 # opens still jumps from one to the other. screenrecord writes a frame only when the screen
 # changes, so a frame in between is the animation itself.
 function Measure-ScreenChange([string]$Clip) {
-    if (-not ('HushfeedFrameDiff' -as [type])) {
+    if (-not ('LarpfeedFrameDiff' -as [type])) {
         Add-Type -TypeDefinition @'
-public static class HushfeedFrameDiff {
+public static class LarpfeedFrameDiff {
     public static double[] FromLast(byte[] data, int size) {
         int count = data.Length / size;
         double[] distance = new double[count];
@@ -831,7 +831,7 @@ public static class HushfeedFrameDiff {
     $data = [IO.File]::ReadAllBytes($raw)
     Remove-Item -LiteralPath $raw
     if ($data.Length -lt 2 * $width * $height) { throw 'the screen recording has fewer than two frames' }
-    $distance = [HushfeedFrameDiff]::FromLast($data, $width * $height)
+    $distance = [LarpfeedFrameDiff]::FromLast($data, $width * $height)
     $first = $distance[0]
     $between = 0
     $moving = $false
@@ -1028,7 +1028,7 @@ function Invoke-Check($Entry, $Check, [hashtable]$Originals, [ref]$Restarted, $B
                         Start-ScreenRecord $(if ($step.seconds) { [int]$step.seconds } else { 4 })
                     } else {
                         if (-not $script:ffmpegExe) { $script:ffmpegExe = Resolve-AuditFfmpeg }
-                        if (-not $script:ffmpegExe) { throw 'a record step needs ffmpeg: pass -Ffmpeg or set HUSHFEED_FFMPEG' }
+                        if (-not $script:ffmpegExe) { throw 'a record step needs ffmpeg: pass -Ffmpeg or set LARPFEED_FFMPEG' }
                         $clipName = "$("$tag-$index-screen" -replace '[^\w.-]', '_')-$([Guid]::NewGuid().ToString('N')).mp4"
                         Stop-ScreenRecord (Join-Path $OutDir $clipName)
                         $result.evidence += $clipName
@@ -1225,9 +1225,9 @@ try {
         if ($installedApkHash -cne $run.apk.sha256) { throw 'Installed base APK hash differs from -Apk. No current-build device evidence can be collected.' }
         $deviceStarted = $true
         Restart-TikTok
-        # For the whole run: Hushfeed not paused, Log diagnostics on for the log steps, and no
+        # For the whole run: Larpfeed not paused, Log diagnostics on for the log steps, and no
         # error toasts over the screenshots. The phone's own values go back at the end.
-        foreach ($pair in ([ordered]@{ hushfeed_paused = 'false'; morphe_debug = 'true'; morphe_debug_toast_on_error = 'false' }).GetEnumerator()) {
+        foreach ($pair in ([ordered]@{ larpfeed_paused = 'false'; morphe_debug = 'true'; morphe_debug_toast_on_error = 'false' }).GetEnumerator()) {
             $was = Invoke-AuditProbe 'get' ([pscustomobject]@{ key = $pair.Key }) 1200
             if ($was -notmatch "ok get $($pair.Key)=(.*)") { throw "could not read $($pair.Key): $was" }
             $runOriginals[$pair.Key] = $Matches[1].Trim()

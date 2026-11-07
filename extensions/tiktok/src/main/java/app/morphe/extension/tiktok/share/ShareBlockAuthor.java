@@ -1,6 +1,6 @@
 /*
- * Copyright 2026 Hushfeed contributors
- * https://github.com/SysAdminDoc/hushfeed
+ * Copyright 2026 Larpfeed contributors
+ * https://github.com/SysAdminDoc/larpfeed
  */
 package app.morphe.extension.tiktok.share;
 
@@ -39,7 +39,7 @@ import java.util.concurrent.atomic.AtomicBoolean;
 
 /** Native share actions bound to the post and account that opened their sheet (#153). */
 public final class ShareBlockAuthor {
-    static final String KEY = "hushfeed_block_author";
+    static final String KEY = "larpfeed_block_author";
     private static final String POST_PACKAGE = "com.ss.android.ugc.aweme.share.improve.pkg.AwemeSharePackage";
     private static final List<Built> BUILT = new ArrayList<>();
     private static final Map<String, Pending> IN_FLIGHT = new HashMap<>();

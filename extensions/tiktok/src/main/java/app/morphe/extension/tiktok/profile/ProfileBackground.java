@@ -1,6 +1,6 @@
 /*
- * Copyright 2026 Hushfeed contributors
- * https://github.com/SysAdminDoc/hushfeed
+ * Copyright 2026 Larpfeed contributors
+ * https://github.com/SysAdminDoc/larpfeed
  */
 package app.morphe.extension.tiktok.profile;
 
@@ -19,7 +19,7 @@ import app.morphe.extension.tiktok.settings.Settings;
  * background is drawn into, so the editor TikTok already has opens wherever that layout is on.
  * Whether a background saved that way is kept is
  * the server's call: saving goes to TikTok's own commit endpoint, which may refuse an account
- * outside the rollout. With the switch off, and while Hushfeed is paused, the gate runs as TikTok
+ * outside the rollout. With the switch off, and while Larpfeed is paused, the gate runs as TikTok
  * ships it.
  *
  * <p>The gate alone wasn't enough: TikTok's own profile and other profiles are fetched with the

@@ -1,6 +1,6 @@
 /*
- * Copyright 2026 Hushfeed contributors
- * https://github.com/SysAdminDoc/hushfeed
+ * Copyright 2026 Larpfeed contributors
+ * https://github.com/SysAdminDoc/larpfeed
  *
  * Built on icysymmetra/tiktok-patches-for-morphe (GPL-3.0).
  */
@@ -195,7 +195,7 @@ public final class FeedVisibility {
      * The pager a video opened from a profile, a hashtag, a sound or search plays in. It is an
      * activity of its own, holding the same feed cell with the same right column ids (read off
      * the S22 on 47.0.3, 2026-09-28, and named in both builds' manifests). The overlay hides,
-     * Hushfeed's own controls over the video and Mute feed videos follow it there (#47), and so do
+     * Larpfeed's own controls over the video and Mute feed videos follow it there (#47), and so do
      * Hide the status bar and the comment bar's own switch (#50). The tab strip belongs to the
      * main feed and is left as TikTok sets it here.
      */
@@ -253,7 +253,7 @@ public final class FeedVisibility {
      *         selected and in place, hidden by nothing but its own bar, with no detail page or
      *         story over it.
      *
-     * <p>For Hushfeed's own controls over the feed, which go when TikTok's do. {@link #isOnFeed}
+     * <p>For Larpfeed's own controls over the feed, which go when TikTok's do. {@link #isOnFeed}
      * answers yes here, and has to for the hold and the kept caption, so a control that should
      * not sit over a cleared screen asks this as well.
      */
@@ -367,7 +367,7 @@ public final class FeedVisibility {
      *
      * <p>The sheet stays inflated and translated below the screen after it closes, so a shown
      * flag alone is not enough. The root has to remain inside TikTok's own clipped layout.
-     * The title only identifies the sheet: Hushfeed's compact-header setting deliberately makes
+     * The title only identifies the sheet: Larpfeed's compact-header setting deliberately makes
      * that view {@link View#GONE}, and requiring it to be shown put the block button over the
      * comment list and send action. Using both ids still avoids treating an unrelated layout
      * that happens to reuse one obfuscated id as the comment sheet.

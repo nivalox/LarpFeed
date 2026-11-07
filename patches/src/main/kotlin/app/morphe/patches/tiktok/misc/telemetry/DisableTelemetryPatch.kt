@@ -71,7 +71,7 @@ val disableTelemetryPatch = bytecodePatch(
     name = "Disable telemetry",
     description = "Stops TikTok sending usage statistics and crash reports to TikTok and the " +
         "tracking services it uses, so less of what you do in the app leaves your phone. Starts " +
-        "off. Turn it on in Hushfeed settings > Privacy.",
+        "off. Turn it on in Larpfeed settings > Privacy.",
 ) {
     category("Privacy")
     dependsOn(

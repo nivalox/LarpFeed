@@ -1,6 +1,6 @@
 /*
- * Copyright 2026 Hushfeed contributors
- * https://github.com/SysAdminDoc/hushfeed
+ * Copyright 2026 Larpfeed contributors
+ * https://github.com/SysAdminDoc/larpfeed
  */
 package app.morphe.extension.tiktok.font;
 
@@ -39,9 +39,9 @@ import app.morphe.extension.tiktok.settings.Settings;
  */
 public final class WebFont {
     private static final String HOOK_FAMILY = "web font";
-    static final String STYLE_ID = "hushfeed-font";
-    static final String IMPORTED_FAMILY = "Hushfeed imported";
-    static final String PICKED_FAMILY = "Hushfeed picked";
+    static final String STYLE_ID = "larpfeed-font";
+    static final String IMPORTED_FAMILY = "Larpfeed imported";
+    static final String PICKED_FAMILY = "Larpfeed picked";
     static final long MAX_INLINE_BYTES = 2L * 1024 * 1024;
 
     /** Every text element, leaving SVG and icon glyph elements in the page's own font. */
@@ -123,7 +123,7 @@ public final class WebFont {
     }
 
     /**
-     * Puts {@code css} in the page's one Hushfeed style element, adding it the first time, so a
+     * Puts {@code css} in the page's one Larpfeed style element, adding it the first time, so a
      * page told twice still has one.
      */
     static String script(String css) {

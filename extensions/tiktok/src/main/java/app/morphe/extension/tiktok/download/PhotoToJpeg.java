@@ -1,6 +1,6 @@
 /*
- * Copyright 2026 Hushfeed contributors
- * https://github.com/SysAdminDoc/hushfeed
+ * Copyright 2026 Larpfeed contributors
+ * https://github.com/SysAdminDoc/larpfeed
  *
  * Built on icysymmetra/tiktok-patches-for-morphe (GPL-3.0).
  */
@@ -67,7 +67,7 @@ final class PhotoToJpeg {
     }
 
     /**
-     * {@link #convert} whatever Keep photos as TikTok sent them says, for a picture Hushfeed reads
+     * {@link #convert} whatever Keep photos as TikTok sent them says, for a picture Larpfeed reads
      * itself rather than saves, which Samsung's decoder would turn down as a HEIF.
      */
     static String rewrite(Context context, File file, String extension) {

@@ -1,6 +1,6 @@
 /*
- * Copyright 2026 Hushfeed contributors
- * https://github.com/SysAdminDoc/hushfeed
+ * Copyright 2026 Larpfeed contributors
+ * https://github.com/SysAdminDoc/larpfeed
  *
  * Built on icysymmetra/tiktok-patches-for-morphe (GPL-3.0).
  */
@@ -165,7 +165,7 @@ public class CreatorListPreference extends DialogPreference {
                 ViewGroup.LayoutParams.WRAP_CONTENT, 1f));
         // Flat, like the Cancel and Save two rows below it. styleActionButton sets the colour
         // and the weight and leaves the platform background, so this was the only raised button
-        // in any Hushfeed dialog.
+        // in any Larpfeed dialog.
         TextView addButton = new TextView(context);
         addButton.setTag("creator_list_add_button");
         addButton.setText(L10n.t(context, "Add"));

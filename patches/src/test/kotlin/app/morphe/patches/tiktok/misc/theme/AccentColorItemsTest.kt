@@ -159,7 +159,7 @@ class AccentColorItemsTest {
         val literals = mutableSetOf<String>()
         val pill = parse(shape("@color/cx"))
         setBadgeFill(pill, accentRecolor(true, TIKTOK_ACCENT, literals)("#fffe2c55")!!)
-        assertEquals("@color/hushfeed_accent_fe2c55", fillOf(pill))
+        assertEquals("@color/larpfeed_accent_fe2c55", fillOf(pill))
         assertEquals(setOf("#fffe2c55"), literals)
     }
 

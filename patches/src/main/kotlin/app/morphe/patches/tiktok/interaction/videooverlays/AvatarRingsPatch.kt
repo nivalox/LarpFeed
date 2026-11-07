@@ -1,6 +1,6 @@
 /*
- * Copyright 2026 Hushfeed contributors
- * https://github.com/SysAdminDoc/hushfeed
+ * Copyright 2026 Larpfeed contributors
+ * https://github.com/SysAdminDoc/larpfeed
  */
 package app.morphe.patches.tiktok.interaction.videooverlays
 
@@ -87,7 +87,7 @@ val avatarRingsPatch = bytecodePatch(
     description = "Takes the story and LIVE rings off profile pictures, so tapping a picture " +
         "opens the profile instead of a story or LIVE. It can also open a LIVE creator's Story " +
         "from their profile picture or their chat in the Inbox. Starts off. Turn it on in " +
-        "Hushfeed settings > Feed screen.",
+        "Larpfeed settings > Feed screen.",
     default = true,
 ) {
     category("Feed")

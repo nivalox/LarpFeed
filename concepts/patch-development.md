@@ -1,10 +1,10 @@
 # App and patch development map
 
-This guide maps the TikTok app Hushfeed modifies to the code and release checks that make a patch. Its version and patch counts were last synced with the source on 2026-11-05. The generated [patch catalog](../patches-list.json) is the current source of truth for patch names and compatibility.
+This guide maps the TikTok app Larpfeed modifies to the code and release checks that make a patch. Its version and patch counts were last synced with the source on 2026-11-05. The generated [patch catalog](../patches-list.json) is the current source of truth for patch names and compatibility.
 
-## What Hushfeed ships
+## What Larpfeed ships
 
-Hushfeed is a Morphe patch bundle, not a TikTok APK. Morphe Manager takes a TikTok APK chosen by the user, applies the selected patches, and signs the result with the user's existing key. The patch definitions and the runtime code they inject live in separate Gradle modules.
+Larpfeed is a Morphe patch bundle, not a TikTok APK. Morphe Manager takes a TikTok APK chosen by the user, applies the selected patches, and signs the result with the user's existing key. The patch definitions and the runtime code they inject live in separate Gradle modules.
 
 Source snapshot: version 0.81.0, 147 patch entries. Those come from gradle.properties and patches-list.json.
 
@@ -112,11 +112,11 @@ The [patch catalog](../patches-list.json) has the complete names and plain-Engli
 
 The settings patch is defined in patches/src/main/kotlin/app/morphe/patches/tiktok/misc/settings/SettingsPatch.kt. It hooks TikTok's AdPersonalizationActivity and calls TikTokActivityHook, which builds the extension's TikTokPreferenceFragment inside that activity. Preference category classes build the pages and rows.
 
-The hook checks the launch intent. It accepts the Hushfeed settings extra or the `morphe_settings` action, then returns to TikTok's original path for other launches. An activity dump naming `AdPersonalizationActivity` can therefore describe Hushfeed settings rather than TikTok's ad controls. Record the intent and visible screen together. The physical-device pause check in the [runtime report](runtime-results-2026-10-09.md) used this reused activity with `morphe_settings`.
+The hook checks the launch intent. It accepts the Larpfeed settings extra or the `morphe_settings` action, then returns to TikTok's original path for other launches. An activity dump naming `AdPersonalizationActivity` can therefore describe Larpfeed settings rather than TikTok's ad controls. Record the intent and visible screen together. The physical-device pause check in the [runtime report](runtime-results-2026-10-09.md) used this reused activity with `morphe_settings`.
 
 Settings.java declares runtime setting keys, types, defaults, and availability rules. BaseSettings and Setting in extensions/shared/library provide storage and common behavior. SettingsStatus loads settings and exposes the values that bytecode hooks read. A setting key is persisted on the user's device, so keep existing keys stable across updates. A renamed key needs a migration.
 
-An install-time Morphe patch option is different from an in-app setting. For example, AMOLED dark theme has a color option applied while building the patched APK. Advanced downloads depends on the Settings patch and exposes runtime switches in TikTok's Hushfeed settings. The generated catalog lists those dependencies and patch options.
+An install-time Morphe patch option is different from an in-app setting. For example, AMOLED dark theme has a color option applied while building the patched APK. Advanced downloads depends on the Settings patch and exposes runtime switches in TikTok's Larpfeed settings. The generated catalog lists those dependencies and patch options.
 
 The detailed in-app settings pages are separate from Morphe Manager's patch categories. Quiet Index groups these pages on the home screen since 0.70.0; their category classes and persisted setting keys remain the same:
 
@@ -153,7 +153,7 @@ The October 12 refresh keeps Quiet Index’s navigation and gives every native p
 
 The earlier navigation studies remain below as background.
 
-The previous home repeated Feed filter, Privacy and Screen time as shortcuts above their full rows. Quiet Index replaced that stack with a compact status beside the Hushfeed title, search and seven groups. Since October 13 the groups are gone and every page is a row on the home page, because the Hush settings standard allows at most one level below the main screen. Detailed controls remain on their existing pages.
+The previous home repeated Feed filter, Privacy and Screen time as shortcuts above their full rows. Quiet Index replaced that stack with a compact status beside the Larpfeed title, search and seven groups. Since October 13 the groups are gone and every page is a row on the home page, because the Hush settings standard allows at most one level below the main screen. Detailed controls remain on their existing pages.
 
 | Concept | Preview | Navigation tradeoff |
 | --- | --- | --- |
@@ -169,15 +169,15 @@ The previous home repeated Feed filter, Privacy and Screen time as shortcuts abo
 | Conversations | Comments, Inbox |
 | Saving and sharing | Downloads, Share sheet |
 | Privacy and app | Privacy, App, Region, Backup and restore, Feature Gate Lab |
-| Hushfeed | Status card, Pause Hushfeed, Diagnostics, About Hushfeed, Report a problem, Support Hushfeed |
+| Larpfeed | Status card, Pause Larpfeed, Diagnostics, About Larpfeed, Report a problem, Support Larpfeed |
 
-About Hushfeed holds the build details, the pending What's new, attribution and licenses.
+About Larpfeed holds the build details, the pending What's new, attribution and licenses.
 
 The tabbed concept puts Region beside Privacy. Its Tools tab owns App, maintenance and About. The expandable concept combines Playback with Screen time, puts Region beside Privacy, and keeps maintenance under Tools & backup. Those are proposed groupings, not new patch behavior.
 
 ### Native implementation
 
-TikTokPreferenceFragment.createMasterMenu builds the home page. Each heading is a compact SectionHeadingPreference, added only once one of its pages is available from the installed patches, so a small patch selection never shows an empty heading. Every Section gets one compact SettingsMenuPreference row. The rows carry no count of changed settings any more; that badge went with the group pages it was shown on. The Hub enum is down to About Hushfeed, the one page that isn't a section. SettingsHeaderPreference holds the title and compact status, with SettingsSearchEntryPreference beneath it. Every page opens one level from home, and Back returns there. A restart marker written by an older build that names one of the removed groups (`hub:FEED_LAYOUT` and the rest) opens the home page, since forPage no longer knows those names.
+TikTokPreferenceFragment.createMasterMenu builds the home page. Each heading is a compact SectionHeadingPreference, added only once one of its pages is available from the installed patches, so a small patch selection never shows an empty heading. Every Section gets one compact SettingsMenuPreference row. The rows carry no count of changed settings any more; that badge went with the group pages it was shown on. The Hub enum is down to About Larpfeed, the one page that isn't a section. SettingsHeaderPreference holds the title and compact status, with SettingsSearchEntryPreference beneath it. Every page opens one level from home, and Back returns there. A restart marker written by an older build that names one of the removed groups (`hub:FEED_LAYOUT` and the rest) opens the home page, since forPage no longer knows those names.
 
 Search still indexes individual controls and checklist members, including retained aliases for renamed settings. A result opens the existing page and scrolls to the matching row. A Pause result opens the home page scrolled to the Pause row. This is a navigation change. It leaves persisted setting keys, defaults, dependency explanations, backup and undo behavior in their existing owners.
 
@@ -185,7 +185,7 @@ The home uses a black base, 40 dp pink icon tiles and one grouped list. Settings
 
 The mockups use a 480 by 960 logical frame. The native pages keep a slightly denser rhythm, and the Lab uses a compact toolbar so search and filters leave room for the gate list. Action rows retain their actual behavior: Reset and Undo do not gain navigation chevrons. The creator dialog wraps its content on a device; the offscreen capture uses a full-height host.
 
-The compact status has Active, Paused and Restart pending text states. Tapping it scrolls the home page down to the full status card under the Hushfeed heading, which holds the detailed status and recovery actions, with Pause right below it. The Pause description and paused summary say that Hushfeed's switches pause while saved settings and the changes made when patching, like the app's name or icon, stay. They no longer describe Pause as an unpatched app. Mockup switch positions are examples, not captured device settings. No protection score or battery-saving claim is part of the design.
+The compact status has Active, Paused and Restart pending text states. Tapping it scrolls the home page down to the full status card under the Larpfeed heading, which holds the detailed status and recovery actions, with Pause right below it. The Pause description and paused summary say that Larpfeed's switches pause while saved settings and the changes made when patching, like the app's name or icon, stay. They no longer describe Pause as an unpatched app. Mockup switch positions are examples, not captured device settings. No protection score or battery-saving claim is part of the design.
 
 The mockups establish hierarchy and category coverage. They are not evidence of native layout or device acceptance. Use the implementation's rendered screenshots and recorded checks for font scaling, accessibility, interaction and localization. Rendered checks cover both themes, navigation, translated text, twice the text size and right-to-left layout.
 
@@ -196,7 +196,7 @@ The final signed build was exercised on a Galaxy S22 running Android 16 and TikT
 1. Start from the exact patch name in patches-list.json. Read its Kotlin declaration, dependencies, runtime hook, tests, and the matching README entry.
 2. Confirm the behavior against the declared APK. Record the package, version, and signer. Do not use the 38.3.3 factory APK as a bytecode or resource reference.
 3. Put the patch in the closest existing feature package. Use a narrow fingerprint and validate the exact number or shape of matches. PatchContracts.kt provides helpers that fail with a patch-specific message when a match disappears, becomes ambiguous, or changes shape.
-4. Decide whether the control belongs in Manager at patch time or in Hushfeed settings at runtime. For a runtime switch, add its stable key and default in Settings.java, connect it to the category row, and inject a hook that reads the setting. Add translation entries when new setting text is introduced.
+4. Decide whether the control belongs in Manager at patch time or in Larpfeed settings at runtime. For a runtime switch, add its stable key and default in Settings.java, connect it to the category row, and inject a hook that reads the setting. Add translation entries when new setting text is introduced.
 5. Add a patch test for the selected bytecode or resource contract. Add a runtime test beside the Java feature when behavior can be exercised without TikTok's private runtime. Keep APK-dependent tests tied to the external fixture directory.
 6. Regenerate patches-list.json from the built Morphe bundle. Do not hand-edit generated rows.
 7. Run the README's test and bundle sequence. The all-patches verifier invokes the Morphe desktop patcher against each declared fixture. Unit tests alone do not prove that the patcher can apply a patch to TikTok.
@@ -210,7 +210,7 @@ Treat a target update as a new reverse-engineering pass. TikTok can reuse short 
 2. Re-record the content-marker corpus from real videos with tools/verification-probe/record-markers.ps1. Refresh ContentMarkerCorpusTest inputs and the Feature Gate Lab catalog with :patches:generateGateCatalog.
 3. Re-read the target's view tree and dynamic-module owners. Update patches/src/test/resources/view-id-anchors.txt with the owning class and the matching code. Replace stale resource names instead of retaining fallbacks that can resolve to a different view.
 4. Review resource optimizer inventories, language-pack files, and resource IDs against the new APK. Keep the path and digest checks version-specific.
-5. Set HUSHFEED_FIXTURE_DIR to the reviewed APKs, run the patch and runtime tests, then apply the complete patch set with scripts/verify-all-patches.ps1 and the Morphe desktop CLI. Tests do not invoke the patcher, so passing tests alone is not target approval.
+5. Set LARPFEED_FIXTURE_DIR to the reviewed APKs, run the patch and runtime tests, then apply the complete patch set with scripts/verify-all-patches.ps1 and the Morphe desktop CLI. Tests do not invoke the patcher, so passing tests alone is not target approval.
 6. Run the [patch audit](#patch-audit) on a phone with the full catalog applied, fix what fails, and commit the new results file next to the old one. Then update the README target details, changelog, generated catalog, and release facts as one reviewed target move.
 
 ## Verification layers
@@ -226,21 +226,21 @@ Treat a target update as a new reverse-engineering pass. TikTok can reuse short 
 | audit/run-audit.ps1 | Every patch does what its description says on a phone running the full catalog |
 | Device acceptance | The injected runtime hook behaves in the real TikTok UI on the supported version |
 
-The APK fixtures are vendor files outside the repository. Set HUSHFEED_FIXTURE_DIR to their folder. Set HUSHFEED_DESKTOP_JAR to the Morphe desktop CLI jar for the apply-all verification. CONTRIBUTING.md documents the other script inputs and the pre-push checks.
+The APK fixtures are vendor files outside the repository. Set LARPFEED_FIXTURE_DIR to their folder. Set LARPFEED_DESKTOP_JAR to the Morphe desktop CLI jar for the apply-all verification. CONTRIBUTING.md documents the other script inputs and the pre-push checks.
 
-For traffic, background work and battery checks, follow the [runtime observation protocol](runtime-observation.md). It separates actual transfers from API attempts, whole-phone charge from per-app estimates, and paused runtime settings from static APK changes. Its source map identifies the controls that can change the workload. The [October 9 measurements](runtime-results-2026-10-09.md) add a physical-device example on TikTok 47.1.4 with Hushfeed 0.68.0 paused, including capture limits that future checks must handle.
+For traffic, background work and battery checks, follow the [runtime observation protocol](runtime-observation.md). It separates actual transfers from API attempts, whole-phone charge from per-app estimates, and paused runtime settings from static APK changes. Its source map identifies the controls that can change the workload. The [October 9 measurements](runtime-results-2026-10-09.md) add a physical-device example on TikTok 47.1.4 with Larpfeed 0.68.0 paused, including capture limits that future checks must handle.
 
 ## Patch audit
 
-The verifier above proves each patch applies. The audit proves each one still works once TikTok runs. audit/catalog.json has one entry per patch: its settings with their defaults, where it shows, and the checks that prove it. A check is a list of steps the runner carries out in order. Some read the patched APK (an emptied library, a manifest line, a string in the dex). Others drive the phone through the verification probe: flip a Hushfeed setting, open the feed or a search, ask the probe what's on screen and hold the answer to a regex, wait for a log line, or save a screenshot with the exact thing a person should look for. Most checks compare the switch off with the switch on, so a hider that hides nothing fails instead of passing quietly.
+The verifier above proves each patch applies. The audit proves each one still works once TikTok runs. audit/catalog.json has one entry per patch: its settings with their defaults, where it shows, and the checks that prove it. A check is a list of steps the runner carries out in order. Some read the patched APK (an emptied library, a manifest line, a string in the dex). Others drive the phone through the verification probe: flip a Larpfeed setting, open the feed or a search, ask the probe what's on screen and hold the answer to a regex, wait for a log line, or save a screenshot with the exact thing a person should look for. Most checks compare the switch off with the switch on, so a hider that hides nothing fails instead of passing quietly.
 
-Results go to `audit/results/tiktok-<version>.json`, one file per TikTok version, with the APK hash, the Hushfeed commit, the phone's model and Android version (never its serial), and each check's status (pass, fail, review, inconclusive, error or skipped), why it failed and which evidence it left. Inconclusive means a precondition never held, like no video with comments turning up in eight swipes, so it says nothing about the patch. The evidence (screenshots and probe answers) goes to `-OutDir`, a temp folder unless you pass one. The results file names each piece by its file name in that folder and never by a path on your machine, since it gets committed.
+Results go to `audit/results/tiktok-<version>.json`, one file per TikTok version, with the APK hash, the Larpfeed commit, the phone's model and Android version (never its serial), and each check's status (pass, fail, review, inconclusive, error or skipped), why it failed and which evidence it left. Inconclusive means a precondition never held, like no video with comments turning up in eight swipes, so it says nothing about the patch. The evidence (screenshots and probe answers) goes to `-OutDir`, a temp folder unless you pass one. The results file names each piece by its file name in that folder and never by a path on your machine, since it gets committed.
 
 To audit a new TikTok version:
 
 1. Patch the full catalog with scripts/patch-for-device.ps1, signed with the key of the TikTok already installed on the test device. For installation, supply `-Serial`, `-LeaseDir` and `-ChatIdentity`. A local build without `-Serial` needs no lease.
 2. Build and install the probe with tools/verification-probe/build.ps1, signed with the same key. Its installation and uninstall paths require the same lease arguments.
-3. Run `audit/run-audit.ps1 -Apk <patched apk> -BuildReceipt <patched apk>.audit-build.json -Bundle <mpp> -Serial <emulator> -LeaseDir <shared lease folder> -ChatIdentity <task identifier> -OutDir <evidence folder> -Install`. The device builder writes the receipt beside its signed APK. The runner verifies that receipt against the APK, bundle and clean source manifest, then compares the installed base APK hash before starting checks. The Windows device scripts also accept `HUSHFEED_DEVICE_LEASE_DIR` and `HUSHFEED_CHAT_IDENTITY`. They hold an exclusive lease through their device operations and stop if ownership expires or is lost. Existing leases are never reclaimed automatically. `-Only 'Patch name,category:Feed'` reruns a part, and `-NoDevice` runs just the APK checks.
+3. Run `audit/run-audit.ps1 -Apk <patched apk> -BuildReceipt <patched apk>.audit-build.json -Bundle <mpp> -Serial <emulator> -LeaseDir <shared lease folder> -ChatIdentity <task identifier> -OutDir <evidence folder> -Install`. The device builder writes the receipt beside its signed APK. The runner verifies that receipt against the APK, bundle and clean source manifest, then compares the installed base APK hash before starting checks. The Windows device scripts also accept `LARPFEED_DEVICE_LEASE_DIR` and `LARPFEED_CHAT_IDENTITY`. They hold an exclusive lease through their device operations and stop if ownership expires or is lost. Existing leases are never reclaimed automatically. `-Only 'Patch name,category:Feed'` reruns a part, and `-NoDevice` runs just the APK checks.
 4. Run the checks the first run listed as not judged. A check with `buildOptions` (Accent color's `accent-visible` names `Accent color|accentColor=#2D7FF9`) proves nothing on default options, so patch a second APK with `scripts/patch-for-device.ps1 -Option 'Accent color|accentColor=#2D7FF9'` and run it the same way. A build patched with options runs only the checks whose options it has and writes them to `audit/results/tiktok-<version>-options.json`, so each results file comes from one APK.
 5. Look at every screenshot a review check saved, judged against its review text. Write the verdicts as `{"Patch name/check-id": {"status": "pass", "note": "...", "receiptId": "<check receiptId>"}}` and merge them with `-ApplyVerdicts <file> -Results <results file> -OutDir <evidence folder>`. Only undecided review checks accept `pass` or `fail`. The importer checks the definition, execution receipt and actual evidence hashes before changing any results.
 6. Fix each failing patch, add a test for what broke, and rerun that patch with `-Only` until it passes.

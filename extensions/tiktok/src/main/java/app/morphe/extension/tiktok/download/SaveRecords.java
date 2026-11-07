@@ -1,6 +1,6 @@
 /*
- * Copyright 2026 Hushfeed contributors
- * https://github.com/SysAdminDoc/hushfeed
+ * Copyright 2026 Larpfeed contributors
+ * https://github.com/SysAdminDoc/larpfeed
  */
 package app.morphe.extension.tiktok.download;
 
@@ -65,7 +65,7 @@ import java.util.concurrent.TimeUnit;
  * {@link #MAX_RECORDS} the oldest of them go first. This process's own records are never dropped.
  */
 final class SaveRecords {
-    static final String FILE_NAME = "hushfeed-save-records.json";
+    static final String FILE_NAME = "larpfeed-save-records.json";
     static final int MAX_RECORDS = 24;
     static final long MAX_AGE_MS = 7L * 24 * 60 * 60 * 1000;
     /** Slots one record keeps. A photo post holds at most 35; past this a record reads as unsure. */
@@ -102,7 +102,7 @@ final class SaveRecords {
     private static final ThreadLocal<Record> CURRENT = new ThreadLocal<>();
     private static final Random IDS = new Random();
     private static final ExecutorService WRITER = Executors.newSingleThreadExecutor(runnable -> {
-        Thread thread = new Thread(runnable, "Hushfeed-SaveRecords");
+        Thread thread = new Thread(runnable, "Larpfeed-SaveRecords");
         thread.setDaemon(true);
         return thread;
     });

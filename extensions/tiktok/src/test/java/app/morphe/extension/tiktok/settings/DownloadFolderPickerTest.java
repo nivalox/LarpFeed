@@ -155,7 +155,7 @@ public class DownloadFolderPickerTest {
         android.widget.EditText field = firstEditText(root);
         assertNotNull(field);
         assertEquals("Music/Chosen", field.getText().toString());
-        android.widget.TextView error = root.findViewWithTag("hushfeed_field_error");
+        android.widget.TextView error = root.findViewWithTag("larpfeed_field_error");
         assertNotNull("no reason under the box", error);
         assertEquals(android.view.View.VISIBLE, error.getVisibility());
         String reason = null;

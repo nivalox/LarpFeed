@@ -1,6 +1,6 @@
 /*
- * Copyright 2026 Hushfeed contributors
- * https://github.com/SysAdminDoc/hushfeed
+ * Copyright 2026 Larpfeed contributors
+ * https://github.com/SysAdminDoc/larpfeed
  *
  * Built on icysymmetra/tiktok-patches-for-morphe (GPL-3.0).
  */
@@ -56,7 +56,7 @@ internal val authorRowPatch = bytecodePatch {
 val showAuthorRegionPatch = bytecodePatch(
     name = "Show author region",
     description = "Shows the country a video was posted from next to the creator's name. " +
-        "Starts off. Turn it on in Hushfeed settings > Feed screen.",
+        "Starts off. Turn it on in Larpfeed settings > Feed screen.",
 ) {
     category("Feed")
     dependsOn(settingsPatch, sharedExtensionPatch, authorRowPatch)

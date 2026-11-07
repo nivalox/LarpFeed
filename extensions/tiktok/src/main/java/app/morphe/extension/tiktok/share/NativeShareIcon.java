@@ -1,6 +1,6 @@
 /*
- * Copyright 2026 Hushfeed contributors
- * https://github.com/SysAdminDoc/hushfeed
+ * Copyright 2026 Larpfeed contributors
+ * https://github.com/SysAdminDoc/larpfeed
  */
 package app.morphe.extension.tiktok.share;
 
@@ -28,7 +28,7 @@ final class NativeShareIcon {
     }
 
     /**
-     * Hushfeed's glyphs fill 60% of their box, a quarter larger than TikTok's 24dp icon box puts
+     * Larpfeed's glyphs fill 60% of their box, a quarter larger than TikTok's 24dp icon box puts
      * them at the 18dp its icon artwork takes.
      */
     static final float BOX_SCALE = 1.25f;

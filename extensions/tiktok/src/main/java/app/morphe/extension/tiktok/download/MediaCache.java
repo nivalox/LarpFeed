@@ -1,6 +1,6 @@
 /*
- * Copyright 2026 Hushfeed contributors
- * https://github.com/SysAdminDoc/hushfeed
+ * Copyright 2026 Larpfeed contributors
+ * https://github.com/SysAdminDoc/larpfeed
  *
  * Built on icysymmetra/tiktok-patches-for-morphe (GPL-3.0).
  */
@@ -46,13 +46,13 @@ import java.util.concurrent.RejectedExecutionException;
 
 /** Owns temporary media files and the pending publications created by this extension. */
 public final class MediaCache {
-    static final String DIRECTORY_NAME = "hushfeed-media";
+    static final String DIRECTORY_NAME = "larpfeed-media";
     static final long STALE_AFTER_MS = 24L * 60 * 60 * 1000;
     private static final String PENDING_FILE_NAME = "pending-uris.tsv";
     private static final String PENDING_LOCK_FILE_NAME = "pending-uris.lock";
     private static final String PENDING_INTENT_PREFIX = "intent:";
     /** What a row is called between the insert and the publish. */
-    static final String TEMPORARY_NAME_PREFIX = "hushfeed-pending-";
+    static final String TEMPORARY_NAME_PREFIX = "larpfeed-pending-";
     private static final AtomicInteger TEMPORARY_NAMES = new AtomicInteger();
     private static final Object LOCK = new Object();
     private static final AtomicBoolean RECONCILIATION_STARTED = new AtomicBoolean();

@@ -30,7 +30,7 @@ val commentSortControlsPatch = bytecodePatch(
     name = "Comment sort controls",
     description = "Shows TikTok's full comment sort menu on every video, with hot, newest, " +
         "media and creator options, even when your account only got a cut-down version. Starts " +
-        "off. Turn it on in Hushfeed settings > Comments.",
+        "off. Turn it on in Larpfeed settings > Comments.",
 ) {
     category("Comments")
     dependsOn(settingsPatch, sharedExtensionPatch)

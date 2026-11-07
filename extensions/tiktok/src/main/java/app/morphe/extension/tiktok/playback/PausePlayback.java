@@ -1,6 +1,6 @@
 /*
- * Copyright 2026 Hushfeed contributors
- * https://github.com/SysAdminDoc/hushfeed
+ * Copyright 2026 Larpfeed contributors
+ * https://github.com/SysAdminDoc/larpfeed
  *
  * Built on icysymmetra/tiktok-patches-for-morphe (GPL-3.0).
  */
@@ -338,7 +338,7 @@ public final class PausePlayback {
             STARTED.add(activity);
             // The activity that shows the feed. These callbacks come for every activity in the
             // process, and a screen of TikTok's own that covered the feed (messages, a web page,
-            // Hushfeed's settings) pauses on the way back with the feed's player already stopped.
+            // Larpfeed's settings) pauses on the way back with the feed's player already stopped.
             final Class<?> feed = activity.getClass();
             application.registerActivityLifecycleCallbacks(
                     new Application.ActivityLifecycleCallbacks() {
@@ -362,7 +362,7 @@ public final class PausePlayback {
                         }
 
                         // Gone only when the last of TikTok's screens stops. Coming back from
-                        // messages or Hushfeed's settings resumes the feed first and stops the
+                        // messages or Larpfeed's settings resumes the feed first and stops the
                         // other screen after, and taking that stop for leaving froze the hold's
                         // countdown and gated the feed behind a tap nobody had left for.
                         @Override public void onActivityStopped(Activity stopped) {

@@ -1,6 +1,6 @@
 /*
- * Copyright 2026 Hushfeed contributors
- * https://github.com/SysAdminDoc/hushfeed
+ * Copyright 2026 Larpfeed contributors
+ * https://github.com/SysAdminDoc/larpfeed
  */
 package app.morphe.extension.tiktok.download;
 
@@ -324,7 +324,7 @@ public class SavedVideoArchiveTest {
             assertTrue("The save never reached the copy", reachedEnd.await(10, TimeUnit.SECONDS));
             Shadows.shadowOf(Looper.getMainLooper()).idleFor(SaveNotice.SHEET_SETTLE_MS + 1, TimeUnit.MILLISECONDS);
             android.view.ViewGroup row = owner.get().findViewById(android.R.id.content)
-                    .findViewWithTag("hushfeed_save_progress");
+                    .findViewWithTag("larpfeed_save_progress");
             assertNotNull("Automatic must show progress when the switch alone is on", row);
             android.view.ViewGroup body = (android.view.ViewGroup) row.getChildAt(0);
             android.widget.ProgressBar bar = (android.widget.ProgressBar) body.getChildAt(1);
@@ -334,7 +334,7 @@ public class SavedVideoArchiveTest {
             releaseCopy.countDown();
             awaitJobs();
             assertArrayEquals(VIDEO, Files.readAllBytes(new File(root, "alice/123.mp4").toPath()));
-            assertNull(owner.get().findViewById(android.R.id.content).findViewWithTag("hushfeed_save_progress"));
+            assertNull(owner.get().findViewById(android.R.id.content).findViewWithTag("larpfeed_save_progress"));
             assertFalse(RuntimeEnvironment.getApplication().getDatabasePath(SavedVideoArchive.DATABASE_NAME).exists());
         } finally {
             releaseCopy.countDown();
@@ -417,7 +417,7 @@ public class SavedVideoArchiveTest {
             Shadows.shadowOf(Looper.getMainLooper()).idleFor(SaveNotice.SHEET_SETTLE_MS + 1, TimeUnit.MILLISECONDS);
             assertEquals("the row stands for the wait, so there's no toast beside it", 0, ShadowToast.shownToastCount());
             android.view.ViewGroup content = owner.get().findViewById(android.R.id.content);
-            android.view.View row = content.findViewWithTag("hushfeed_save_progress");
+            android.view.View row = content.findViewWithTag("larpfeed_save_progress");
             assertNotNull("a waiting video showed no row", row);
             assertEquals("Waiting to save video", labelOf(row));
 
@@ -429,7 +429,7 @@ public class SavedVideoArchiveTest {
             cancelOf(row).performClick();
             Shadows.shadowOf(Looper.getMainLooper()).idle();
             assertEquals("Save cancelled. Nothing was saved.", ShadowToast.getTextOfLatestToast());
-            assertNull(content.findViewWithTag("hushfeed_save_progress"));
+            assertNull(content.findViewWithTag("larpfeed_save_progress"));
             assertEquals(0, MediaJobScheduler.queuedJobs());
 
             assertTrue("the video was still held after Cancel", VideoDownloads.start(new Post(), owner.get()));
@@ -437,7 +437,7 @@ public class SavedVideoArchiveTest {
             awaitJobs();
             assertEquals("the cancelled save fetched, or the retry didn't", 1, requests.get());
             assertArrayEquals(VIDEO, Files.readAllBytes(new File(root, "alice/123.mp4").toPath()));
-            assertNull(content.findViewWithTag("hushfeed_save_progress"));
+            assertNull(content.findViewWithTag("larpfeed_save_progress"));
         } finally {
             hold.countDown();
             SaveNotice.windowRootsForTests = null;
@@ -524,7 +524,7 @@ public class SavedVideoArchiveTest {
             assertEquals("Too many saves running. Try again soon.",
                     ShadowToast.getTextOfLatestToast());
             assertNull("a refused save left a row", owner.get().findViewById(android.R.id.content)
-                    .findViewWithTag("hushfeed_save_progress"));
+                    .findViewWithTag("larpfeed_save_progress"));
         } finally {
             hold.countDown();
             SaveNotice.windowRootsForTests = null;
@@ -675,7 +675,7 @@ public class SavedVideoArchiveTest {
         }
     }
 
-    /** With only the progress row asked for, a video Hushfeed can't fetch goes back to TikTok. */
+    /** With only the progress row asked for, a video Larpfeed can't fetch goes back to TikTok. */
     @Test public void progressAloneLeavesAnUnavailableVideoToTikTok() {
         Settings.DOWNLOAD_DETAILS.save(false); Settings.CHECK_SAVED_VIDEOS.save(false);
         Settings.DOWNLOAD_PROGRESS.save(true);
@@ -817,7 +817,7 @@ public class SavedVideoArchiveTest {
         public AdvancedDownloadsTest.VideoData getVideo() { return video; }
     }
 
-    /** A post whose video model offers no address Hushfeed can fetch. */
+    /** A post whose video model offers no address Larpfeed can fetch. */
     public static final class BarePost extends DownloadDetailsTest.Post {
         BarePost() { super("alice", "124"); }
         public Object getVideo() { return new Object(); }

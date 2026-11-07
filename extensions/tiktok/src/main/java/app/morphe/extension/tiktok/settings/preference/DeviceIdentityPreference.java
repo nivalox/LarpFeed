@@ -1,6 +1,6 @@
 /*
- * Copyright 2026 Hushfeed contributors
- * https://github.com/SysAdminDoc/hushfeed
+ * Copyright 2026 Larpfeed contributors
+ * https://github.com/SysAdminDoc/larpfeed
  */
 package app.morphe.extension.tiktok.settings.preference;
 
@@ -31,7 +31,7 @@ public final class DeviceIdentityPreference extends Preference
     static final String TITLE = "New device identity";
     static final String SUMMARY = "Off until you tap it. Wipes TikTok's data once, on the next start, and "
             + "gives it a new Android ID and advertising ID, so it sees a phone it hasn't met. You'll be "
-            + "signed out and lose your drafts. Hushfeed's settings stay.";
+            + "signed out and lose your drafts. Larpfeed's settings stay.";
     static final String IN_USE_SUMMARY = "In use: TikTok sees the identity you made here, and it stays the "
             + "same on every start. Tap to make another one, which wipes TikTok's data again.";
     static final String ARMED_SUMMARY = "TikTok starts as a new phone after the restart. Tap again to cancel.";

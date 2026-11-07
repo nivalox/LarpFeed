@@ -1,6 +1,6 @@
 /*
- * Copyright 2026 Hushfeed contributors
- * https://github.com/SysAdminDoc/hushfeed
+ * Copyright 2026 Larpfeed contributors
+ * https://github.com/SysAdminDoc/larpfeed
  *
  * Built on icysymmetra/tiktok-patches-for-morphe (GPL-3.0).
  */
@@ -167,7 +167,7 @@ public class ReleaseNotesTest {
     @Test
     public void theRowNamesTheNewestVersionItShows() {
         // A build with no section of its own shows the releases before it, and the row said
-        // "Changes in Hushfeed" with a version the notes never mention.
+        // "Changes in Larpfeed" with a version the notes never mention.
         String releases = "## 0.60.0 (date)\nOld.\n\n## 0.59.0 (date)\nOlder.\n";
         String shown = ReleaseNotes.text(releases, "0.60.1", "0.59.0");
         assertTrue(shown, shown.contains("Old."));
@@ -224,7 +224,7 @@ public class ReleaseNotesTest {
     public void settingNamesLoseTheirBackticks() {
         String shown = ReleaseNotes.text(
                 "## 0.60.0 (date)\n\n* Turn `Hide series` back on.\n", "0.60.0", null);
-        assertEquals("Hushfeed 0.60.0 (date)\n\n• Turn Hide series back on.", shown);
+        assertEquals("Larpfeed 0.60.0 (date)\n\n• Turn Hide series back on.", shown);
     }
 
     /**
@@ -266,7 +266,7 @@ public class ReleaseNotesTest {
         assertEquals(label, texts.get(0).getText().toString());
         android.widget.TextView body = texts.get(1);
         assertTrue("the notes are missing: " + body.getText(),
-                body.getText().toString().startsWith("Hushfeed 0.68.0"));
+                body.getText().toString().startsWith("Larpfeed 0.68.0"));
         android.text.Spanned notes = (android.text.Spanned) body.getText();
         android.text.style.LocaleSpan[] spans = notes.getSpans(0, notes.length(), android.text.style.LocaleSpan.class);
         assertEquals("the notes are not marked as English for a screen reader", 1, spans.length);
@@ -322,7 +322,7 @@ public class ReleaseNotesTest {
                     .getNextStartedActivity();
             assertNotNull(opened);
             assertEquals(Intent.ACTION_VIEW, opened.getAction());
-            assertEquals("https://github.com/SysAdminDoc/hushfeed/blob/main/CHANGELOG.md", opened.getDataString());
+            assertEquals("https://github.com/SysAdminDoc/larpfeed/blob/main/CHANGELOG.md", opened.getDataString());
             assertTrue(ReleaseNotes.pending(activity, newest));
             assertFalse(rowRemoved.get());
             assertEquals(null, activity.getSharedPreferences(ReleaseNotes.PREFS_NAME, Context.MODE_PRIVATE)
@@ -420,9 +420,9 @@ public class ReleaseNotesTest {
         String german = "## 0.61.0 (date)\n\n* Neuer.\n";
         java.util.List<ReleaseNotes.Section> shown = ReleaseNotes.sections(english, german, "0.61.0", "0.59.0");
         assertEquals(2, shown.size());
-        assertEquals("Hushfeed 0.61.0 (date)\n\n• Neuer.\n", shown.get(0).text);
+        assertEquals("Larpfeed 0.61.0 (date)\n\n• Neuer.\n", shown.get(0).text);
         assertFalse(shown.get(0).english);
-        assertTrue(shown.get(1).text, shown.get(1).text.startsWith("Hushfeed 0.60.0 (date)\n\n• Older."));
+        assertTrue(shown.get(1).text, shown.get(1).text.startsWith("Larpfeed 0.60.0 (date)\n\n• Older."));
         assertTrue(shown.get(1).english);
         // The English text the row and the pending check read doesn't change.
         assertTrue(ReleaseNotes.text(english, "0.61.0", "0.59.0").contains("Newer."));
@@ -452,7 +452,7 @@ public class ReleaseNotesTest {
         java.util.List<TextView> texts = dialogTexts(newest, null, null, null);
         assertEquals("a translated release needs no English label", 1, texts.size());
         android.text.Spanned notes = (android.text.Spanned) texts.get(0).getText();
-        assertTrue(notes.toString(), notes.toString().startsWith("Hushfeed " + newest));
+        assertTrue(notes.toString(), notes.toString().startsWith("Larpfeed " + newest));
         assertFalse("the German phone got the English notes",
                 notes.toString().equals(ReleaseNotes.text(newest, null)));
         android.text.style.LocaleSpan[] spans = notes.getSpans(0, notes.length(), android.text.style.LocaleSpan.class);
@@ -467,14 +467,14 @@ public class ReleaseNotesTest {
         assertEquals("expected the label, then the notes", 2, texts.size());
         assertEquals("Ein Teil dieser Hinweise ist auf Englisch.", texts.get(0).getText().toString());
         android.text.Spanned notes = (android.text.Spanned) texts.get(1).getText();
-        assertTrue(notes.toString().contains("Hushfeed 0.67.0"));
+        assertTrue(notes.toString().contains("Larpfeed 0.67.0"));
         android.text.style.LocaleSpan[] spans = notes.getSpans(0, notes.length(), android.text.style.LocaleSpan.class);
         assertEquals("one run per language", 2, spans.length);
         java.util.Arrays.sort(spans, java.util.Comparator.comparingInt(notes::getSpanStart));
         assertEquals("de", spans[0].getLocale().getLanguage());
         assertEquals(0, notes.getSpanStart(spans[0]));
         assertEquals(java.util.Locale.ENGLISH, spans[1].getLocale());
-        assertEquals(notes.toString().indexOf("Hushfeed 0.67.0"), notes.getSpanStart(spans[1]));
+        assertEquals(notes.toString().indexOf("Larpfeed 0.67.0"), notes.getSpanStart(spans[1]));
         assertEquals(notes.length(), notes.getSpanEnd(spans[1]));
     }
 

@@ -1,17 +1,17 @@
 ## 0.81.0 (2026-11-05)
 
-* Hushfeed now supports TikTok 47.7.2, and only that one. 47.6.3 isn't supported anymore. Grab the 47.7.2 bundle or APK from APKMirror and patch it with the same signing key, so your login and settings carry over.
+* Larpfeed now supports TikTok 47.7.2, and only that one. 47.6.3 isn't supported anymore. Grab the 47.7.2 bundle or APK from APKMirror and patch it with the same signing key, so your login and settings carry over.
 * On the 47.7.2 bundle (the `.apkm`), `Remove creation tools` leaves TikTok's files alone. That bundle doesn't ship the effects libraries it takes out, and emptying the face model by itself would break face effects again. `Block P2P video relay` has nothing to remove there either, since the bundle leaves the relay out. Both still work as before on the APK.
 * With `Save photo posts as a video` on, a photo story saves as one MP4 with its sound, running about as long as it does in TikTok. Before, its save kept the photos and left the sound out (#327).
-* `Keep the next videos in full screen` fixes full screen stopping dead on most pages. TikTok opens it with only the video you were on, so there was nothing to swipe to and it couldn't move on by itself. With the switch on, the videos after it come along. It starts off, and it lives in Hushfeed settings > Playback (#286).
-* `Keep my own watch history` lists the videos you watch on this phone with who posted them and their captions, in Hushfeed settings > Feed filter. `My watch history` searches the list and a tap opens the video again. It starts off and stays on your phone (#172).
-* `Long press on For You opens my watch history` makes that long press show your watch history over the feed instead of opening Hushfeed settings. The list has an `Open Hushfeed settings` button, and TalkBack's action on For You still opens the settings. It starts off, and it sits under `Keep my own watch history` (#172).
+* `Keep the next videos in full screen` fixes full screen stopping dead on most pages. TikTok opens it with only the video you were on, so there was nothing to swipe to and it couldn't move on by itself. With the switch on, the videos after it come along. It starts off, and it lives in Larpfeed settings > Playback (#286).
+* `Keep my own watch history` lists the videos you watch on this phone with who posted them and their captions, in Larpfeed settings > Feed filter. `My watch history` searches the list and a tap opens the video again. It starts off and stays on your phone (#172).
+* `Long press on For You opens my watch history` makes that long press show your watch history over the feed instead of opening Larpfeed settings. The list has an `Open Larpfeed settings` button, and TalkBack's action on For You still opens the settings. It starts off, and it sits under `Keep my own watch history` (#172).
 * A new `Time zone` row under Region lets you type a zone like Europe/Belgrade to use in place of the country's. Daylight saving follows by itself, and leaving it empty keeps the country's zone (#198).
-* Ghost mode has a switch for each thing it holds back now. `Hide story views`, `Hide profile visits` and `Hide typing` sit under it in Hushfeed settings > Privacy, so you can let one of them through and keep the rest hidden. They all start on, which keeps Ghost mode working the way it did.
-* `Hide read receipts` keeps the "seen" mark off the chats you open, so the other person doesn't see that you've read their message. It starts off, and it lives in Hushfeed settings > Inbox. Thanks to @maayan080 (#295).
+* Ghost mode has a switch for each thing it holds back now. `Hide story views`, `Hide profile visits` and `Hide typing` sit under it in Larpfeed settings > Privacy, so you can let one of them through and keep the rest hidden. They all start on, which keeps Ghost mode working the way it did.
+* `Hide read receipts` keeps the "seen" mark off the chats you open, so the other person doesn't see that you've read their message. It starts off, and it lives in Larpfeed settings > Inbox. Thanks to @maayan080 (#295).
 * The settings screen and What's new now come in Vietnamese. Thanks to @hautv404 (#298, #306).
-* `Show inbox filters` in Hushfeed settings > Inbox puts TikTok's Main, Requests, Unread and Starred tabs above your chats on any account. TikTok used to show them to creator accounts only (#331).
-* `Rebuild message search` in Hushfeed settings > Inbox clears TikTok's message search and indexes every message saved on your phone again, so older messages show up in results. It keeps going even after you close search (#331).
+* `Show inbox filters` in Larpfeed settings > Inbox puts TikTok's Main, Requests, Unread and Starred tabs above your chats on any account. TikTok used to show them to creator accounts only (#331).
+* `Rebuild message search` in Larpfeed settings > Inbox clears TikTok's message search and indexes every message saved on your phone again, so older messages show up in results. It keeps going even after you close search (#331).
 * The LIVE record button hides along with everything else when you turn on TikTok's LIVE Clear screen, and it comes back when you turn it off. A recording that's running keeps going. Thanks to @Hiiva (#297).
 * A LIVE recording keeps going while the same LIVE plays in Android's picture-in-picture window, and when you come back to it. Closing the window, leaving or moving to another LIVE stops and saves the file. A recording of the screen still stops when you leave. Thanks to @Hiiva (#324, #337).
 * `Copy bio and IDs` has a `Copy name` button now, so a profile's share sheet copies the display name as well as the username. Buttons that don't fit move down to a second line instead of running off the sheet (#303).
@@ -21,37 +21,37 @@
 * With `Slide to change the hold speed` on, the bubble's padlock shows whether the video is locked, and letting go on a new speed while it's locked locks that speed.
 * `Hide speed messages` leaves out TikTok's message when you pick a speed from the menu, or lock or unlock one with a hold. It starts off, and it's under Playback.
 * `Hide the All button on Following` takes the All button off the end of the story row on Following, and `Hide the Create circle in story rows` takes the Create circle off that row and the Inbox's. The stories stay, and both start off under Feed screen.
-* `Hide like counts on comments` takes the number off the heart on each comment, and `Hide the thumbs down on comments` takes the thumbs down off. The heart still works. Both start off, and they're in Hushfeed settings > Comments.
+* `Hide like counts on comments` takes the number off the heart on each comment, and `Hide the thumbs down on comments` takes the thumbs down off. The heart still works. Both start off, and they're in Larpfeed settings > Comments.
 * `Video text color` and `Backdrop behind video text` under Feed screen color the description, the creator's name and the post date on videos, and can put a see-through band behind them.
 * `Hide the repost chip` under Feed screen takes out the small bar above the progress bar that says someone you follow reposted the video, or asks you to repost it.
-* Hushfeed settings wear TikTok's colors. Its red marks switches and buttons, its cyan marks headings and icons, and every color was checked so text stays easy to read in the dark and the light look. Switches are rounded squares now instead of pills, with the knob sitting inside the track so it stands out from the card in both looks.
-* The main settings page opens on Hushfeed's icon, name and version, centered above the rows. The bar at the top names the page only once that header scrolls away, and it says Search settings while you're typing a search.
+* Larpfeed settings wear TikTok's colors. Its red marks switches and buttons, its cyan marks headings and icons, and every color was checked so text stays easy to read in the dark and the light look. Switches are rounded squares now instead of pills, with the knob sitting inside the track so it stands out from the card in both looks.
+* The main settings page opens on Larpfeed's icon, name and version, centered above the rows. The bar at the top names the page only once that header scrolls away, and it says Search settings while you're typing a search.
 * The main settings page lists its categories as full-width rows. Open one and its settings sit on a single rounded card, split up by small capital headings. Each row starts with an icon, and an arrow at the end marks the rows that open something. Long names wrap onto another line instead of getting cut off or split in the middle of a word, even with large text.
 * Settings dialogs match the settings page now. The panel has rounded corners and a thin outline, and a long title wraps instead of getting cut off. Choices are rounded rows, and the one you picked is tinted. Buttons are outlined and big enough to hit easily. Text boxes get a rounded frame that turns red while you type, and the dialog makes room for the keyboard instead of sliding under it. On the dark theme, the tick in a checked box is easier to see.
 * A row under the search switches the main settings page between categories and one long list with every category open, and it keeps your choice for next time. The restart button looks like a button now, with an arrow and an outline, and it lines up with the search and the cards under it.
 * When your daily budget runs out, the title on the screen that holds the feed moves through the same cyan and red as the settings and the App lock screen.
 * `Long-press Inbox for read receipts` makes a long press on the Inbox tab turn `Hide read receipts` on or off, and a short message says which. A tap on Inbox still opens it. It starts off, and it sits under Feed tab navigation (#333).
 * `Compact long-press menu everywhere` keeps TikTok's small share sheet on a long press, For You included, for people who like it better than the full menu. It beats `Full long-press menu on a creator's videos` and `Full long-press menu in search results` if you turn them all on, and it starts off. It needs `Long press` on TikTok default (#334).
-* `Hide mini dramas`, `Hide Series` and `Hide inserted cards` now also keep the full-screen "Trending free dramas on PineDrama" card from showing up between drama episodes. TikTok asks its server for that card as it plays a series, and Hushfeed makes it skip the ask, so nothing comes back to hide (#286).
+* `Hide mini dramas`, `Hide Series` and `Hide inserted cards` now also keep the full-screen "Trending free dramas on PineDrama" card from showing up between drama episodes. TikTok asks its server for that card as it plays a series, and Larpfeed makes it skip the ask, so nothing comes back to hide (#286).
 * `Hide TikTok Shop` also takes away the "Find" bar some videos show along the bottom, the shopping search for something in the video. Thanks to @OldManJenkins12 (#271).
-* `Hide streak pop-ups` stops the streak alert that slides in over TikTok and the streak message it drops into a chat. `Hide message streaks` still handles the button. It starts off, and it's in Hushfeed settings > Inbox (#331).
-* `Search instead of Home` turns the Home tab into a search button. Its icon and name say Search and a tap opens TikTok's search. TikTok then opens on Inbox, or on Profile when Inbox is hidden, so the feed doesn't start playing the moment you open the app. It starts off, and it's in Hushfeed settings > Feed tabs (#338).
+* `Hide streak pop-ups` stops the streak alert that slides in over TikTok and the streak message it drops into a chat. `Hide message streaks` still handles the button. It starts off, and it's in Larpfeed settings > Inbox (#331).
+* `Search instead of Home` turns the Home tab into a search button. Its icon and name say Search and a tap opens TikTok's search. TikTok then opens on Inbox, or on Profile when Inbox is hidden, so the feed doesn't start playing the moment you open the app. It starts off, and it's in Larpfeed settings > Feed tabs (#338).
 * `Show only the search bar on Discover` keeps the search box on the Discover tab and takes away the hashtags, banners and tabs under it (#338).
 * `Open TikTok on` has a Discover choice for phones whose bottom bar has a Discover tab. On a bar without one, TikTok opens where it normally would (#338).
 * `Sort loaded videos on sound pages` sorts the videos a sound's page has loaded, with the same orders as profile grids. Open a video from there and swiping up follows that order too. It starts off, and other kinds of pages keep TikTok's order (#180).
 * `Hold speed bubble style` picks how the speed shows while you slide during a hold: the pill you know, or a small round dial with a ring that fills as the speed goes up. The dial comes from OmerKurdi79's fork (#248).
 * `Hold speed slide direction` lets the hold speed slide go up and down. Slide up for faster and down for slower, and a slide to the side locks the speed, so a hold near the edge of the screen still reaches every speed. It starts on Sideways and sits under Playback. The idea comes from OmerKurdi79's dev2 build (#248).
 * `Block author button` works inside LIVE rooms too. The button sits under the record button and the Auto tap button, and when the room or the Discover LIVE panel puts something in their spot, all three move down together and never cover each other. A tap blocks the host and closes the room, and the screen you land on offers Unblock for a couple of seconds, like it does in the feed. It hides along with the rest when LIVE Clear screen is on, while you record the room's screen so it isn't in the video, and while the LIVE plays in the picture-in-picture window (#138).
-* `Auto tap in LIVE rooms` adds an Auto tap button to LIVE rooms. Tap it and it taps the stream at a steady pace until you tap it again, leave or swipe to another room, leave TikTok or lock the screen. `Auto tap speed` picks 2, 4, 6 or 8 taps a second. The button sits right under the record button, keeps tapping but stays out of sight while you record the room's screen, and it starts off. It's in Hushfeed settings > Playback (#335).
-* `Offer Audio only in LIVE quality` adds Audio only to a LIVE room's Video quality list when the room sends its sound on its own. Pick it and the room keeps playing the sound without downloading the picture, so you can record a LIVE without paying for the video twice. Record still saves the full video from the stream. With `LIVE recording source` set to the screen, Record asks you to pick a video quality first, since the screen would only show a still picture. It only lasts for that room, and the next LIVE opens at the last picture quality you picked. It starts off, and it lives in Hushfeed settings > Playback. Thanks to @Ahmed-Razo0r (#265).
-* The new `Account cleanup` patch adds `Remove all reposts`, `Remove all likes` and `Clear Favorites` to Hushfeed settings > Privacy. Each one counts down so you can cancel, then takes things off your account one at a time with a short pause between them, and shows how many it removed. `Clear Favorites` also clears the saved videos TikTok shows as unavailable because they were deleted (#332).
-* Hushfeed builds on Morphe patcher 2.2.0 now, so it needs Morphe Manager 2.4.0 or newer, or morphe-desktop 2.0.0 on a computer. Older Managers refuse the bundle.
+* `Auto tap in LIVE rooms` adds an Auto tap button to LIVE rooms. Tap it and it taps the stream at a steady pace until you tap it again, leave or swipe to another room, leave TikTok or lock the screen. `Auto tap speed` picks 2, 4, 6 or 8 taps a second. The button sits right under the record button, keeps tapping but stays out of sight while you record the room's screen, and it starts off. It's in Larpfeed settings > Playback (#335).
+* `Offer Audio only in LIVE quality` adds Audio only to a LIVE room's Video quality list when the room sends its sound on its own. Pick it and the room keeps playing the sound without downloading the picture, so you can record a LIVE without paying for the video twice. Record still saves the full video from the stream. With `LIVE recording source` set to the screen, Record asks you to pick a video quality first, since the screen would only show a still picture. It only lasts for that room, and the next LIVE opens at the last picture quality you picked. It starts off, and it lives in Larpfeed settings > Playback. Thanks to @Ahmed-Razo0r (#265).
+* The new `Account cleanup` patch adds `Remove all reposts`, `Remove all likes` and `Clear Favorites` to Larpfeed settings > Privacy. Each one counts down so you can cancel, then takes things off your account one at a time with a short pause between them, and shows how many it removed. `Clear Favorites` also clears the saved videos TikTok shows as unavailable because they were deleted (#332).
+* Larpfeed builds on Morphe patcher 2.2.0 now, so it needs Morphe Manager 2.4.0 or newer, or morphe-desktop 2.0.0 on a computer. Older Managers refuse the bundle.
 * Turning off `Long-press Profile for Watch history` gives the Profile tab its account switcher back. On some phones holding Profile did nothing at all once the switch was off (#341).
 * Screen recordings of a LIVE no longer stop short with "Recording stopped early". When the picture barely moved, a small frame looked damaged to the step that checks the recording before saving it, so the saved video ended at that frame, often a few seconds in (#37).
 * The sound in a screen recording of a LIVE no longer cuts out early or drifts away from the picture when the phone is busy. Android throws away sound an app doesn't pick up within about a second, and the recorder ran at background priority, so a busy phone kept it waiting longer than that. Now the sound is picked up on its own thread as it arrives, and the recorder runs at normal priority while it records, which also keeps the picture from skipping (#37).
-* For You no longer freezes after a swipe with the first video's sound still playing and the next video stuck on its cover. On some starts TikTok never told the For You page it was on screen, so its videos never started. Now Hushfeed notices a For You feed that's in front but was never shown and shows it to TikTok, the way a tap on Home would. It doesn't depend on `Feed tab navigation`, and a feed that plays normally is left alone.
-* `Hide message streaks` takes the streak button off chats, the share panel, Friends and stories, and the streak reminder off your chat list. Before, it hid nothing, since TikTok no longer asks the spot Hushfeed was answering.
-* Saves work again after one that was cut off while Hushfeed was writing its first record of files still to be published. That half-written record used to count as damaged, and every save after it failed. Now it's thrown away, since nothing was published under it, and the next save goes through.
+* For You no longer freezes after a swipe with the first video's sound still playing and the next video stuck on its cover. On some starts TikTok never told the For You page it was on screen, so its videos never started. Now Larpfeed notices a For You feed that's in front but was never shown and shows it to TikTok, the way a tap on Home would. It doesn't depend on `Feed tab navigation`, and a feed that plays normally is left alone.
+* `Hide message streaks` takes the streak button off chats, the share panel, Friends and stories, and the streak reminder off your chat list. Before, it hid nothing, since TikTok no longer asks the spot Larpfeed was answering.
+* Saves work again after one that was cut off while Larpfeed was writing its first record of files still to be published. That half-written record used to count as damaged, and every save after it failed. Now it's thrown away, since nothing was published under it, and the next save goes through.
 * A save that runs TikTok out of memory while it copies the file ends as a failed save. Before, the error got past the save and took TikTok down with it.
 * With `Send TikTok through a proxy` set up with a password, the relay that signs in for TikTok turns down a site name with a line break or a space in it instead of passing it to the proxy, and it sends an IPv6 address the way a proxy expects it, in square brackets (#304).
 * When Feature Gate Lab can't read TikTok's values, the message on screen no longer carries the error's technical text. That goes to the log, and the screen keeps to what to do next.
@@ -77,12 +77,12 @@
 * `Network proxy` no longer says a working proxy is down because one website behind it failed. It asks the proxy first, and gives a slow proxy a second try. A wrong password gets its own message.
 * `Speed menu choices` and the offline video limit no longer ask you to restart TikTok twice in a row when the settings are in another language.
 * `Network proxy` with a user name and password keeps working when Android won't give TikTok another thread. The connection that didn't get one is dropped and TikTok tries it again. Before, that could close TikTok outright.
-* A Hushfeed dialog that's still open when TikTok closes the screen under it closes along with that screen now. Before, it hung on to the screen after it was gone.
+* A Larpfeed dialog that's still open when TikTok closes the screen under it closes along with that screen now. Before, it hung on to the screen after it was gone.
 * The hold that covers the feed scrolls when it doesn't fit, like at Android's largest text and display sizes or in split screen, so you can always get to the buttons at the bottom. They used to get squeezed off the bottom with no way to reach them, and now the text fades at an edge when there's more past it.
-* Your recent settings searches stay put while Hushfeed is paused. The list used to come up empty, and the next search you sent wiped out the ones before it.
-* Comments in your own language get Hushfeed's comment controls again. Since TikTok 47.5.3 only the comments TikTok offered to translate got them, so on most rows `Thumbs down blocks the commenter` left TikTok's thumbs down alone. Now every row's thumbs down blocks, and `Hide like counts on comments` and `Hide the thumbs down on comments` reach every row, replies included.
-* The README's install steps point at the TikTok build Hushfeed patches now. After v0.80.0 went out they still sent you to 47.5.3, which v0.80.0 doesn't patch.
-* The README's install steps say what to do where Morphe Manager runs as a 32-bit app. There it gives the patcher only 1 GB, which Hushfeed fits in by itself but not with patches from several other sources beside it (#339). The README's patch count also includes `Account cleanup` now.
+* Your recent settings searches stay put while Larpfeed is paused. The list used to come up empty, and the next search you sent wiped out the ones before it.
+* Comments in your own language get Larpfeed's comment controls again. Since TikTok 47.5.3 only the comments TikTok offered to translate got them, so on most rows `Thumbs down blocks the commenter` left TikTok's thumbs down alone. Now every row's thumbs down blocks, and `Hide like counts on comments` and `Hide the thumbs down on comments` reach every row, replies included.
+* The README's install steps point at the TikTok build Larpfeed patches now. After v0.80.0 went out they still sent you to 47.5.3, which v0.80.0 doesn't patch.
+* The README's install steps say what to do where Morphe Manager runs as a 32-bit app. There it gives the patcher only 1 GB, which Larpfeed fits in by itself but not with patches from several other sources beside it (#339). The README's patch count also includes `Account cleanup` now.
 * `Keep the screen's refresh rate` says up front that TikTok doesn't ask for a rate on every phone. Where it doesn't, the switch has nothing to stop.
 * `Keep a streak going` finds a friend you enter by the name your Inbox shows for them, emoji and all, like "Lina 🌸". Until now a name like that was only looked for among group chats, so a one to one streak needed the @username. A group with the same name still wins, and two friends who share a name are left alone (#289).
 * `See-through bottom bar` shows the video behind the tabs again. TikTok 47.6.3 started nudging the video up a little, and since the picture grew from its middle, its bottom edge stopped short and a black strip sat under the tabs on every video.
@@ -92,7 +92,7 @@
 * Editing the release scripts no longer makes the saved patch audit results look out of date. They run after the APK is built, so they don't count as audit inputs anymore.
 * Running a release again after it stopped partway through its first step finishes that step now. It used to find the half-made edits, decide the release was already prepared and skip the commit. A walk that stops early can't be read through the walk before it anymore, and a failed repo description update stops the run instead of passing without a word.
 * What's new keeps a release in English when its translated notes were drafted against a different list than the English one, so no language shows its own, shorter set of changes.
-* When a fingerprint stops matching on a new TikTok build, `NearestMethodsReport` lists the three methods closest to it on each supported build, with the parts each one misses. Name the fingerprint in `HUSHFEED_NEAREST`. Pointing `HUSHFEED_NEAREST_FROM` at an older APK it still matches also scores each method by how much it looks like the one the fingerprint took there.
+* When a fingerprint stops matching on a new TikTok build, `NearestMethodsReport` lists the three methods closest to it on each supported build, with the parts each one misses. Name the fingerprint in `LARPFEED_NEAREST`. Pointing `LARPFEED_NEAREST_FROM` at an older APK it still matches also scores each method by how much it looks like the one the fingerprint took there.
 * Nine more TikTok lookups find their method faster while patching: the follow feed, the sticker rows, the photo slide fit and the profile menu. Each one now names a call, a field it reads, a type check or a cast that the patcher keeps an index of. Every one of them used to take 140 to 630 ms on 47.6.3, and now none is slow enough to show up in `--validate`.
 * Patching 47.6.3 spends about a second less looking for methods. The read receipts and clear display lookups now name a field they read or write. `Use system font` and `AMOLED dark theme` find the web page callbacks in one pass instead of two, and the tab badge dot is looked up inside its count's class rather than across the whole app.
 * Four more lookups find their method faster while patching 47.6.3: the hold gesture's touch listener, the DM sticker preview, the feed's long-press listeners and the Inbox pull refresh. Together they took 550 to 960 ms a run, and none of them is slow enough to show up in `--validate` now. The pull refresh is looked up only in the class that holds the manual refresh.
@@ -103,23 +103,23 @@
 * Four audit checks hold up better after the 47.6.3 run. The filtered count pill check waits until something has actually been filtered, and a quiet session comes out inconclusive instead of failing. Checks that open a video from a profile tap the grid's cover, since the first match was a wrapper that opened nothing. The Settings section check scrolls with slow drags, and a diagnostic report that's still arriving gets up to a minute.
 * The audit's `Automatic video advance` check swipes to a plain video of 3 to 40 seconds before it starts watching. It used to watch whatever came up after the restart, and a photo post, an ad or a video longer than its 45 second window left it inconclusive.
 * The audit's comment keyword filter check waits for a video with more than 100 comments. The 47.6.3 rerun picked one whose only comment was a GIF, so no word on the list had anything to match and the check failed without ever testing the filter.
-* An audit check can now name the patch options it needs. The Accent color check asks for a build patched with Blue and runs only on one, with its results in their own file, since on the default color the patch changes nothing a screenshot can judge. A default build lists it as not judged instead of leaving it in review. Custom launcher icon and Change app name got option checks too, and those read the patched APK without a phone. With the Black on white style the icon's background has to come out white and its note black, and with the name Hush the app and its launcher entry can't still say Hushfeed.
+* An audit check can now name the patch options it needs. The Accent color check asks for a build patched with Blue and runs only on one, with its results in their own file, since on the default color the patch changes nothing a screenshot can judge. A default build lists it as not judged instead of leaving it in review. Custom launcher icon and Change app name got option checks too, and those read the patched APK without a phone. With the Black on white style the icon's background has to come out white and its note black, and with the name Hush the app and its launcher entry can't still say Larpfeed.
 * The patch audit has saved results for TikTok 47.6.3 now, from a full run on a Galaxy S22. 366 of its 381 checks pass and none fail. The other 15 wait on a case the run couldn't set up, like a floating promotion TikTok never served or a video with over 10,000 comments. A second build, patched with the Blue accent, the Black on white icon and the name Hush, passed all three of its option checks.
-* Changelog entries and release notes don't open with a "TikTok:" label anymore. Hushfeed only patches TikTok, so the label repeated itself on every line, and Morphe Manager 2.3.0 shows a one-app source's whole list without it. The release scripts stopped adding it, and What's new reads the same as before.
+* Changelog entries and release notes don't open with a "TikTok:" label anymore. Larpfeed only patches TikTok, so the label repeated itself on every line, and Morphe Manager 2.3.0 shows a one-app source's whole list without it. The release scripts stopped adding it, and What's new reads the same as before.
 
 ## 0.80.0 (2026-11-01)
 
-* PineDrama moved to its own patch set, HushPine. Hushfeed patches TikTok only from here on.
+* PineDrama moved to its own patch set, HushPine. Larpfeed patches TikTok only from here on.
 * TikTok 47.6.3 is the only supported build now. Get it from APKMirror and keep the same signing key so your login and settings carry over.
 * Hide the Clear display controls has a new switch that keeps the progress bar on screen, so you can still see and drag it (#237).
 * Double tap can like or unlike now. A double tap on a video you already liked takes the like back off (#248).
 * Slide left or right while you hold a video to step through your speed menu choices. It's off by default (#248).
 * Liked grids get their own sort, and the sort button on a Liked grid changes only that order (#180).
-* Every Hushfeed title now shows TikTok's cyan and red in a slow moving gradient.
+* Every Larpfeed title now shows TikTok's cyan and red in a slow moving gradient.
 * The Calm feed preset is gone. Its filters are all still in Feed filter, and whatever it turned on stays on.
 * Double tap and Long press can open TikTok's search page, even with the feed search button hidden (#251).
 * A new switch folds the comment search box into a magnifier button at the top left (#254).
-* A new switch takes the Hushfeed row out of TikTok's Settings and privacy. Press and hold For You to open the settings after that (#264).
+* A new switch takes the Larpfeed row out of TikTok's Settings and privacy. Press and hold For You to open the settings after that (#264).
 * An @username typed into someone's bio is a link now. Tap it and that profile opens (#247).
 * The main feed's bottom bar can be a floating glass pill, with a lens that slides across the tabs and new settings for blur, opacity, height and corners (#259).
 * Patches with settings have Morphe options that set their starting values, so a build can come with your switches already on. Thanks to @XEGARE (#256).
@@ -129,14 +129,14 @@
 * Settings search knows everyday names like autoplay, PiP and AI, and finds a choice row by any of its options.
 * Lock the feed at set times locks the feed by itself during the hours you pick, and the lock panel says when it opens again.
 * Save only on Wi-Fi keeps saves off mobile data. A save waits for Wi-Fi for up to 30 minutes, and you can cancel it from Downloads.
-* A new switch turns off Hushfeed's Save media box for chat stickers (#274).
+* A new switch turns off Larpfeed's Save media box for chat stickers (#274).
 * Let other apps play until a video starts keeps another app's music going when you open TikTok or your messages, until a video plays (#283).
 * Keep unsent messages leaves a message someone unsends to you in the chat, with an optional mark. Thanks to @maayan080 (#291).
 * A new switch hides the Service+ row under LIVE previews, and the row no longer carries over from the LIVE before (#94).
 * With Latest first on Following on, Following loads 30 posts at a time, so fewer newer posts turn up after you've scrolled past (#226).
 * In a LIVE room, a long press on the profile card's bio, name or username copies it, and a copy mark copies the handle (#268).
 * Hide TikTok Shop also takes the shop buttons out from under captions (#271).
-* Custom launcher icon can give TikTok's notifications a sharp Hushfeed H in the status bar (#114).
+* Custom launcher icon can give TikTok's notifications a sharp Larpfeed H in the status bar (#114).
 * Sound format has an MP3 choice, so saved sounds play anywhere, on every Android version (#273).
 * A new switch also hides the Back arrow beside the hidden search bar on opened videos (#251).
 * With Block author button on, LIVEs in For You get the block button too (#138).
@@ -148,8 +148,8 @@
 * Show when an account was made adds a Joined date under the @username on other people's profiles.
 * What's new comes in Simplified Chinese now.
 * The Feature Gate Lab has a restart button now, and TikTok opens back on the Lab afterwards.
-* Hushfeed builds on Morphe patcher 2.1.0 now, so it needs Morphe Manager 2.3.0 or newer, or morphe-desktop 1.20.0 on a computer.
-* The patch bundle carries Morphe's bundle signature, so Manager can check that a later download really came from Hushfeed.
+* Larpfeed builds on Morphe patcher 2.1.0 now, so it needs Morphe Manager 2.3.0 or newer, or morphe-desktop 1.20.0 on a computer.
+* The patch bundle carries Morphe's bundle signature, so Manager can check that a later download really came from Larpfeed.
 * A settings search result far down a page now opens right at its row.
 * With See-through bottom bar on, the Swipe up to skip line on suggested account cards sits above the tabs again (#261).
 * The floating tab pill is a little taller, so the Home icon and its name stay inside the highlight, and the progress line no longer rides on it (#259).
@@ -174,7 +174,7 @@
 * Hold a settings search switch to reveal and highlight its control in the main list (#248).
 * Startup checks record which player drew the first frame (#150).
 * Exporting a recovered recording is faster for large files.
-* Recovery Retry keeps the recording's original stop reason, and recovery dialogs follow Hushfeed's theme.
+* Recovery Retry keeps the recording's original stop reason, and recovery dialogs follow Larpfeed's theme.
 * Screen recordings check storage as they run and keep recovery files until the saved copy is verified.
 * The first frames of a screen recording each keep their own timestamp while the sound starts.
 * Screen recordings keep their first video frames while the sound is starting up.
@@ -197,7 +197,7 @@
 * Recording a LIVE's screen no longer films the Record button, and the notification has a Stop button (#265).
 * Sign in without a passkey says what to do when TikTok's 2-step check asks only for a passkey (#102).
 * Remove creation tools now works on APKMirror's split bundle too, because TikTok 47.6.3's bundle carries the editor files again. The Create tab stops working, so leave it out if you make videos (#285).
-* When TikTok refuses a like, Hushfeed shows the reason the first time each session (#269).
+* When TikTok refuses a like, Larpfeed shows the reason the first time each session (#269).
 * Videos you liked or saved stay on your Liked and Favorites grids, even with an ad mark (#269).
 * The Chinese message for a refused follow uses the right word now.
 * The floating tab pill blurs LIVE previews behind it too (#259).
@@ -218,7 +218,7 @@
 
 ## 0.79.0 (2026-10-24)
 
-* On PineDrama, Hushfeed's settings now say to restart PineDrama instead of TikTok (#156).
+* On PineDrama, Larpfeed's settings now say to restart PineDrama instead of TikTok (#156).
 
 * A new Hide spam comments switch hides bot comments that push links, contacts or free followers. Your own comments and the creator's stay (#187).
 
@@ -268,7 +268,7 @@
 
 * The build moves to Gradle 9.8.2.
 
-* The README lists the parts of Hushfeed's settings an add-on bundle can rely on.
+* The README lists the parts of Larpfeed's settings an add-on bundle can rely on.
 
 * What's new keeps only the newest releases and Full changelog has the rest, which makes the extension smaller.
 
@@ -308,7 +308,7 @@
 
 ## 0.78.0 (2026-10-22)
 
-* Hushfeed moves to TikTok 47.5.3, and 47.4.3 is dropped. Patch the 47.5.3 APK with the same signing key and your login and settings stay. PineDrama stays on 47.4.3.
+* Larpfeed moves to TikTok 47.5.3, and 47.4.3 is dropped. Patch the 47.5.3 APK with the same signing key and your login and settings stay. PineDrama stays on 47.4.3.
 
 * Remove unused language packs now works on PineDrama 47.4.3 too.
 
@@ -338,7 +338,7 @@
 
 * With Log diagnostics on, each LIVE comment line names its room with a short code instead of the room id (#110).
 
-* Hushfeed now needs Morphe Manager 2.0.0 or newer, or morphe-desktop 1.19.0 on a computer. Patching takes about half as long.
+* Larpfeed now needs Morphe Manager 2.0.0 or newer, or morphe-desktop 1.19.0 on a computer. Patching takes about half as long.
 
 * A new Hide Balance in the profile menu switch takes Balance out of the menu your profile's top right button opens (#194).
 
@@ -360,7 +360,7 @@
 
 * A new Long-press Profile for Watch history switch opens Watch history when you hold the Profile tab (#199).
 
-* In Simplified Chinese, Profile in Hushfeed's settings now reads 个人主页 instead of "company profile".
+* In Simplified Chinese, Profile in Larpfeed's settings now reads 个人主页 instead of "company profile".
 
 * A new LIVE recording quality choice records LIVEs at the room's quality, the highest or the lowest (#203).
 
@@ -410,7 +410,7 @@
 
 * Use system font and Use an imported font now reach Activity center, Watch history and TikTok's other web pages (#7).
 
-* Hushfeed's downloads work again behind a proxy app running in fake-IP mode, the way Clash, mihomo, sing-box and Xray often run (#145).
+* Larpfeed's downloads work again behind a proxy app running in fake-IP mode, the way Clash, mihomo, sing-box and Xray often run (#145).
 
 * Holding a verified account's profile picture saves it again.
 
@@ -426,11 +426,11 @@
 
 * Account facts shows an account's language again on TikTok 47.4.3, read from the account's own videos.
 
-* Copy the full link for short links stops waiting once you share to another app, so Android no longer says Hushfeed pasted from your clipboard.
+* Copy the full link for short links stops waiting once you share to another app, so Android no longer says Larpfeed pasted from your clipboard.
 
 * With Show the time zone on, a language that has no short name for your zone writes it as GMT-4 instead of GMT-04:00, so the creator's name fits again.
 
-* Hushfeed settings search results show a setting's new value when you change it from a result and come back.
+* Larpfeed settings search results show a setting's new value when you change it from a result and come back.
 
 * The Likes field in Own profile counts is translated now.
 
@@ -448,7 +448,7 @@
 
 ## 0.76.0 (2026-10-18)
 
-* Hushfeed now supports TikTok 47.4.3, and only that one. Patch the 47.4.3 APK from APKMirror. PineDrama stays on 47.1.4.
+* Larpfeed now supports TikTok 47.4.3, and only that one. Patch the 47.4.3 APK from APKMirror. PineDrama stays on 47.1.4.
 
 * Show only mutual friends on the Friends tab goes by who reposted a video again, and the feed filters reach the Reposts list on the Friends tab too.
 
@@ -476,17 +476,17 @@
 
 * New device identity on the Privacy page wipes TikTok's data at the next restart so its servers hand out a new device ID. You'll be signed out, and PineDrama has it too.
 
-* Stopping a backup or export while the file app had it no longer counts as a Hushfeed error, in PineDrama either.
+* Stopping a backup or export while the file app had it no longer counts as a Larpfeed error, in PineDrama either.
 
 * Feature Gate Lab's Import loaded values takes a real export again, and an unpacked .gz file too.
 
-* When Feature Gate Lab turns something down and says why, that's no longer logged as a Hushfeed error.
+* When Feature Gate Lab turns something down and says why, that's no longer logged as a Larpfeed error.
 
 * Remove unused language packs skips a language TikTok doesn't have instead of stopping the whole patch run (#196).
 
 * Report a problem leaves the What went wrong box empty and shows the prompts as a hint (#197, #201).
 
-* Photo posts Hushfeed saves now count for Check for already-saved videos and get the mark from Mark saved videos (#197).
+* Photo posts Larpfeed saves now count for Check for already-saved videos and get the mark from Mark saved videos (#197).
 
 * Photo posts picked on a profile grid are saved as one video when Save photo posts as a video is on (#197).
 
@@ -552,13 +552,13 @@
 
 * A recorded screen layout now lists a popup's views even when the screen behind it is busy (#162).
 
-* Hushfeed settings can now follow TikTok in Simplified Chinese.
+* Larpfeed settings can now follow TikTok in Simplified Chinese.
 
 * Allow screenshots and Circle to Search now also covers popups TikTok opens outside its main window.
 
 * From the next release on, Morphe Manager shows the newest release's whole change list.
 
-* TikTok 47.1.4 with Hushfeed passed Android 17's strict 16 KB page checks.
+* TikTok 47.1.4 with Larpfeed passed Android 17's strict 16 KB page checks.
 
 * The Profile tab opens again on phones where it crashed or came up blank since 0.72.0 (#165, #140).
 
@@ -593,7 +593,7 @@
 
 * New Show translation options in Language settings switch under Comments: TikTok's own Language page shows its translation rows again on accounts that only got App language there (#143).
 
-* Hushfeed also patches PineDrama 47.1.4, TikTok's drama app. 90 of the patches work there, and Morphe Manager only offers those (#156).
+* Larpfeed also patches PineDrama 47.1.4, TikTok's drama app. 90 of the patches work there, and Morphe Manager only offers those (#156).
 
 * The LIVE Record button moves down out of the way when TikTok's Discover panel opens over the room, and goes back when it closes (#37).
 
@@ -669,7 +669,7 @@
 
 * Feature Gate Lab has a new preset from Japan's builds, LIVE chat auto-translate. It turns on the Translate comments option under Share in a LIVE room. It needs the Lab's overrides switch and a TikTok restart, and Undo puts back the value you had (#98).
 
-* Turn on Pick videos to save from profile grids in Hushfeed settings > Downloads and every video in a profile, Liked or Favorites grid gets a circle. Pick up to 50, tap Save, and they're saved one after another with a count and Cancel (#27).
+* Turn on Pick videos to save from profile grids in Larpfeed settings > Downloads and every video in a profile, Liked or Favorites grid gets a circle. Pick up to 50, tap Save, and they're saved one after another with a count and Cancel (#27).
 
 * Pick videos to save from profile grids has a Pick all button. It picks up to 50 of the posts a list has loaded, skipping videos already saved when Check for already-saved videos is on, so a whole list saves in runs that pick up where the last one stopped (#27).
 
@@ -681,7 +681,7 @@
 
 * Added an Android 17 emulator setup note for SDK tools that misread minor API versions.
 
-* Every settings page now sits on the main settings page under a short heading, one tap away. Pause Hushfeed and the full status are near the end, under Hushfeed.
+* Every settings page now sits on the main settings page under a short heading, one tap away. Pause Larpfeed and the full status are near the end, under Larpfeed.
 
 * A new switch under Popups, Hide Check your sources warnings, takes away the Check your sources banner across the top of some videos and the prompt TikTok shows when you share one.
 
@@ -689,15 +689,15 @@
 
 * Quick setups sits under the search field. Quiet, Privacy and Back to defaults each take one tap, say how many settings changed and offer Undo.
 
-* The main settings page ends with Report a problem, which opens a GitHub report with your versions and switches filled in, and Support Hushfeed, which opens Ko-fi.
+* The main settings page ends with Report a problem, which opens a GitHub report with your versions and switches filled in, and Support Larpfeed, which opens Ko-fi.
 
-* Restarting TikTok from the Restart row or the banner brings you back to the Hushfeed settings page you were on.
+* Restarting TikTok from the Restart row or the banner brings you back to the Larpfeed settings page you were on.
 
-* Hushfeed settings has a new look, with a grouped home page and pink icons. Rounded panels and pill switches carry through to Feature Gate Lab and the creator editor. Large text and light mode stay readable.
+* Larpfeed settings has a new look, with a grouped home page and pink icons. Rounded panels and pill switches carry through to Feature Gate Lab and the creator editor. Large text and light mode stay readable.
 
 * Restored the profile-menu coverage check, the high-register hook fixture and the signing test project. The signing fixture also accepts D8 options in any order.
 
-* Press and hold For You at the top of the feed to open Hushfeed settings. A quick tap on it still works as before, and the shortcut keeps working while Hushfeed is paused.
+* Press and hold For You at the top of the feed to open Larpfeed settings. A quick tap on it still works as before, and the shortcut keeps working while Larpfeed is paused.
 
 * Downloads has a new switch under Video download quality, Ask for the quality on each save. With it on, Download lists the qualities the video comes in, with the size TikTok gives for each, and saves the one you pick. Automatic, TikTok's own file, is always first. The quality you set stays as it is for the next save.
 
@@ -719,9 +719,9 @@
 
 * AMOLED dark theme now also turns black the panel that opens when you press and hold a feed video, and Inbox's Activity and New followers pages. They had kept TikTok's dark gray. The cards inside the panel stay gray so they still stand out.
 
-* Network proxy now says which connections skip it. Hushfeed's saves and the short-link lookup behind Copy link connect directly, after their own address checks, and the exported diagnostic report lists every route under Network routes.
+* Network proxy now says which connections skip it. Larpfeed's saves and the short-link lookup behind Copy link connect directly, after their own address checks, and the exported diagnostic report lists every route under Network routes.
 
-* On Android 6 through 8.1, screen readers now announce the page titles, section titles and recovery screen titles in Hushfeed settings as headings, the same as on newer Android.
+* On Android 6 through 8.1, screen readers now announce the page titles, section titles and recovery screen titles in Larpfeed settings as headings, the same as on newer Android.
 
 * Release publishing works under Windows PowerShell 5.1 as well as PowerShell 7. The duplicate-tag check now reads each release on a page under 5.1, where it used to take the whole page for one release, and the publication and script checks pass in both shells.
 
@@ -735,13 +735,13 @@
 
 * Release publishing now uploads and downloads assets through the exact release it checked instead of looking the release up by tag again, and stops when two releases share a tag. Rebuilding a tag that's already published is refused, and the index step compares the receipt with the hosted copy's checksum before copying it in.
 
-* New Show commenter handle and region patch: comments can show each commenter's @username instead of their display name, and the country their account is set to after the comment's time. Each has its own switch in Hushfeed settings > Comments, and both start off. Ported from na-x-ril's onlynazril patches.
+* New Show commenter handle and region patch: comments can show each commenter's @username instead of their display name, and the country their account is set to after the comment's time. Each has its own switch in Larpfeed settings > Comments, and both start off. Ported from na-x-ril's onlynazril patches.
 
 * Use system font can also show TikTok's text in a .ttf or .otf file you import. Turn on Use an imported font in App, pick the file and restart TikTok. If the file is removed or can't be read, the text goes back to what Use system font shows. Ported from na-x-ril's onlynazril patches.
 
 * New Profile background patch: a switch under Profile in App opens TikTok's own profile background editor in Edit profile and shows the backgrounds other profiles have set. TikTok's servers may still refuse to save one for an account TikTok hasn't offered it to. It starts off. Ported from na-x-ril's onlynazril patches.
 
-* Hide CAPTCHA popups is a switch again, in Hushfeed settings > Feed screen, and starts off. It skips the puzzle TikTok raises while you're just browsing. A puzzle right after you like, follow, comment or repost still shows, and so do sign-in, SMS and two-step checks. With Hide the risk control CAPTCHA patched in, that check's browsing puzzles are skipped too. The rule comes from na-x-ril's onlynazril patches.
+* Hide CAPTCHA popups is a switch again, in Larpfeed settings > Feed screen, and starts off. It skips the puzzle TikTok raises while you're just browsing. A puzzle right after you like, follow, comment or repost still shows, and so do sign-in, SMS and two-step checks. With Hide the risk control CAPTCHA patched in, that check's browsing puzzles are skipped too. The rule comes from na-x-ril's onlynazril patches.
 
 * With Block contact list access on, a contacts read that asks for every column now gets back an empty list that still has the contacts columns, so a TikTok screen that looks up a contact card's name doesn't trip over a missing column.
 
@@ -829,7 +829,7 @@
 
 * The patch checker now checks its keep folder before emptying it, and refuses a folder it didn't create.
 
-* With TalkBack on, For You lists an Open Hushfeed settings action, so the press-and-hold shortcut works with a screen reader too.
+* With TalkBack on, For You lists an Open Larpfeed settings action, so the press-and-hold shortcut works with a screen reader too.
 
 * If saving a newly imported font fails or TikTok closes partway, the font you had stays instead of disappearing.
 
@@ -1015,7 +1015,7 @@
 
 * Allow screenshots now covers Circle to Search, floating popups and Compose screens.
 
-* Capture the feed records filter verdicts and hiding rules in a local Download/Hushfeed text file, starting and stopping on tap. Each capture uses fresh video and creator codes, without captions, names, handles or URLs. Read it before sharing.
+* Capture the feed records filter verdicts and hiding rules in a local Download/Larpfeed text file, starting and stopping on tap. Each capture uses fresh video and creator codes, without captions, names, handles or URLs. Read it before sharing.
 
 * Hide the Clear display controls now explains how to pinch to exit (#84).
 
@@ -1207,7 +1207,7 @@
 
 * Settings search now ranks title matches first and recognizes diagnostic logging terms in each settings language.
 
-* HEIF-only photos now have a second JPEG conversion route. If neither decoder works, Hushfeed keeps the original file.
+* HEIF-only photos now have a second JPEG conversion route. If neither decoder works, Larpfeed keeps the original file.
 
 * What's new now translates 0.68.0 and 0.67.1 into all eight settings languages, with an English notice for older releases (#91).
 
@@ -1249,7 +1249,7 @@
 
 * Diagnostic and Lab report saves now use dedicated workers, and repeated taps report the save already running.
 
-* Hushfeed now requires Morphe Manager 1.34.0 or newer with patcher 1.15.1. Release checks use CLI 1.18.1.
+* Larpfeed now requires Morphe Manager 1.34.0 or newer with patcher 1.15.1. Release checks use CLI 1.18.1.
 
 * Builds consistently use Guava 33.7.2 outside the affected security advisory, with verified checksums. Guava isn't shipped in the app or bundle. The source-import check now reads the patch files it checks.
 
@@ -1273,7 +1273,7 @@
 
 * Hide and block-sound buttons now work independently of the block button, require Feed filter and start off (#95).
 
-* Pause keeps an enabled Home long-press settings shortcut so guests can resume Hushfeed. Disabled shortcuts stay off, ordinary taps work as before and TikTok's own long-press action remains (#89).
+* Pause keeps an enabled Home long-press settings shortcut so guests can resume Larpfeed. Disabled shortcuts stay off, ordinary taps work as before and TikTok's own long-press action remains (#89).
 
 * Android 6 now uses shipped language plural forms, with correct English fallback for missing quantities.
 
@@ -1293,7 +1293,7 @@
 
 * Hide search rewards now removes floating coins and banners. Restart after changing it (#21).
 
-* Hushfeed settings now include Azerbaijani and follow TikTok's language (#77).
+* Larpfeed settings now include Azerbaijani and follow TikTok's language (#77).
 
 * Resource optimizers now accept reviewed single-ABI APKs while still rejecting changed files and incomplete library sets (#43).
 
@@ -1339,13 +1339,13 @@
 
 * Hide profile shortcuts lets you choose server-provided names after opening your profile. Nothing starts hidden, and changes need a restart (#49).
 
-* Hushfeed view tools now work in a renamed Clone app copy. Signing in may still be refused, leaving the copy usable only logged out (#59).
+* Larpfeed view tools now work in a renamed Clone app copy. Signing in may still be refused, leaving the copy usable only logged out (#59).
 
 * Remove unused language packs now keeps every language by default. To restore a lost language, repatch with it listed or the patch off (#67).
 
 * Feed tabs now calls Explore Explore or Community so accounts using either label can find it (#62).
 
-* Hushfeed now requires Morphe Manager 1.33.0 or newer with patcher 1.15.0, which finishes patching within a 768 MB memory limit.
+* Larpfeed now requires Morphe Manager 1.33.0 or newer with patcher 1.15.0, which finishes patching within a 768 MB memory limit.
 
 ## 0.66.0 (2026-10-01)
 
@@ -1359,7 +1359,7 @@
 
 * Portuguese zero counts and Russian counts such as 21 now display their actual number with the right plural form.
 
-* Diagnostics now reports feed-mute settings, muted players and audio-focus refusals, including whether Hushfeed is paused (#58).
+* Diagnostics now reports feed-mute settings, muted players and audio-focus refusals, including whether Larpfeed is paused (#58).
 
 * Removed the ineffective friend-send confirmation. Tapping a friend still selects them, and TikTok's Send button sends the message (#58).
 
@@ -1419,7 +1419,7 @@
 
 * Commenter blocks now stay with the account that made them, and taps during Undo can't send duplicate unblocks.
 
-* Hushfeed now requires Manager 1.32.0 or newer with patcher 1.14.1, preserving untouched resource values and translated quote marks.
+* Larpfeed now requires Manager 1.32.0 or newer with patcher 1.14.1, preserving untouched resource values and translated quote marks.
 
 * Feed tab navigation now offers a Home long-press settings shortcut while ordinary Home taps stay unchanged (#45).
 
@@ -1445,7 +1445,7 @@
 
 * Hide TikTok Shop now also hides LIVEs selling products, without requiring every LIVE to be hidden (#46).
 
-* Pause Hushfeed search results now open its settings row instead of crashing TikTok.
+* Pause Larpfeed search results now open its settings row instead of crashing TikTok.
 
 * Settings search now finds dependent rows even while they're disabled and explains which switch enables them.
 
@@ -1551,7 +1551,7 @@
 
 * Lab caller observations now record no-default reads correctly after reads that specify a default.
 
-* LIVE button diagnostics now explains whether Hushfeed, TikTok's tabs or removed tabs decided its visibility (#28).
+* LIVE button diagnostics now explains whether Larpfeed, TikTok's tabs or removed tabs decided its visibility (#28).
 
 * Stay on the video in full screen removes the next-video countdown and automatic advance, while swiping still works.
 
@@ -1583,7 +1583,7 @@
 
 * Every patch now supports TikTok 47.1.3 alongside 47.0.3, including reviewed universal and split APK resources (#33).
 
-* Lab exports now use UTC filenames like other Hushfeed exports.
+* Lab exports now use UTC filenames like other Larpfeed exports.
 
 * Restored count ranges now accept spaces around their numbers.
 

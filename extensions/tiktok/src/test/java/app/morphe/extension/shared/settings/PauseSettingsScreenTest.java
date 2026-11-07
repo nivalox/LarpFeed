@@ -1,6 +1,6 @@
 /*
- * Copyright 2026 Hushfeed contributors
- * https://github.com/SysAdminDoc/hushfeed
+ * Copyright 2026 Larpfeed contributors
+ * https://github.com/SysAdminDoc/larpfeed
  */
 package app.morphe.extension.shared.settings;
 
@@ -40,25 +40,25 @@ import org.robolectric.annotation.Config;
 
 import java.io.File;
 
-/** What the settings and the diagnostic export say while Hushfeed is paused, and the way back. */
+/** What the settings and the diagnostic export say while Larpfeed is paused, and the way back. */
 @RunWith(RobolectricTestRunner.class)
 @Config(sdk = 28)
 public class PauseSettingsScreenTest {
-    private static final String BACK_ON_AT_RESTART = "Hushfeed turns back on when TikTok restarts.";
+    private static final String BACK_ON_AT_RESTART = "Larpfeed turns back on when TikTok restarts.";
     private static final String SWITCH_SUMMARY =
-            "Hushfeed's switches are paused. Your settings stay saved. Changes made when you patched, like the app's name or icon, stay.";
+            "Larpfeed's switches are paused. Your settings stay saved. Changes made when you patched, like the app's name or icon, stay.";
 
     @Rule public final SettingsContextRule settingsContext = new SettingsContextRule();
 
     @After public void runAgain() {
-        HushfeedPause.resetForTests();
+        LarpfeedPause.resetForTests();
         BaseSettings.PAUSED.save(false);
         BaseSettings.SAFE_MODE.save(false);
         AbstractPreferenceFragment.restartPending.clear();
         HookStatus.clear();
     }
 
-    /** The home page, where the status card and Pause Hushfeed sit in the Hushfeed group. */
+    /** The home page, where the status card and Pause Larpfeed sit in the Larpfeed group. */
     private static TikTokPreferenceFragment openHome(Activity activity) {
         Utils.setContext(activity);
         TikTokPreferenceFragment home = new TikTokPreferenceFragment();
@@ -72,12 +72,12 @@ public class PauseSettingsScreenTest {
 
     @Test public void aStartPausedByACrashLoopSaysSoAndOffersTheWayBack() {
         BaseSettings.SAFE_MODE.save(true);
-        HushfeedPause.pauseForTests(HushfeedPause.Reason.CRASH_LOOP);
+        LarpfeedPause.pauseForTests(LarpfeedPause.Reason.CRASH_LOOP);
         try (var owner = Robolectric.buildActivity(SettingsPagesTest.PageActivity.class).setup().visible()) {
             TikTokPreferenceFragment home = openHome(owner.get());
             Preference status = home.getPreferenceScreen().findPreference(SettingsStatusPreference.KEY);
-            assertEquals("Hushfeed is paused", String.valueOf(status.getTitle()));
-            assertEquals("TikTok closed three times within a minute of starting, so Hushfeed paused "
+            assertEquals("Larpfeed is paused", String.valueOf(status.getTitle()));
+            assertEquals("TikTok closed three times within a minute of starting, so Larpfeed paused "
                     + "itself. Your settings stay as they are.", String.valueOf(status.getSummary()));
 
             View card = status.getView(null, null);
@@ -85,8 +85,8 @@ public class PauseSettingsScreenTest {
             assertNotNull("a paused card offered no way back", back);
             assertNull("Diagnostics took the place of the way back",
                     card.findViewWithTag(SettingsStatusPreference.ACTION_TAG));
-            assertEquals("Turn Hushfeed back on", back.getText().toString());
-            assertEquals("Turn Hushfeed back on", String.valueOf(back.getContentDescription()));
+            assertEquals("Turn Larpfeed back on", back.getText().toString());
+            assertEquals("Turn Larpfeed back on", String.valueOf(back.getContentDescription()));
 
             assertTrue(back.performClick());
             assertFalse("safe mode is still on", BaseSettings.SAFE_MODE.savedValue());
@@ -104,10 +104,10 @@ public class PauseSettingsScreenTest {
     }
 
     @Test public void turningBackOnFromTheMarkerFileOwesARestartToo() throws Exception {
-        File marker = HushfeedPause.markerFile(RuntimeEnvironment.getApplication());
+        File marker = LarpfeedPause.markerFile(RuntimeEnvironment.getApplication());
         assertTrue(marker.getParentFile().exists() || marker.getParentFile().mkdirs());
         assertTrue(marker.createNewFile());
-        HushfeedPause.pauseForTests(HushfeedPause.Reason.MARKER_FILE);
+        LarpfeedPause.pauseForTests(LarpfeedPause.Reason.MARKER_FILE);
         try (var owner = Robolectric.buildActivity(SettingsPagesTest.PageActivity.class).setup().visible()) {
             TikTokPreferenceFragment home = openHome(owner.get());
             SettingsStatusPreference status = (SettingsStatusPreference)
@@ -120,7 +120,7 @@ public class PauseSettingsScreenTest {
             assertFalse(marker.exists());
             // No setting changed, but the start the file paused still runs paused.
             assertEquals("the start the file paused owed no restart, or owed more than one",
-                    "[" + HushfeedPause.MARKER_FILE_NAME + "]",
+                    "[" + LarpfeedPause.MARKER_FILE_NAME + "]",
                     String.valueOf(AbstractPreferenceFragment.restartPending));
             assertNotNull("no restart row", home.getPreferenceScreen().findPreference(RestartPendingPreference.KEY));
             assertEquals("Restart TikTok to apply this change", RestartPendingPreference.label(owner.get()));
@@ -134,7 +134,7 @@ public class PauseSettingsScreenTest {
 
     @Test public void turningBackOnFromTheSwitchOwesARestartToo() {
         BaseSettings.PAUSED.save(true);
-        HushfeedPause.pauseForTests(HushfeedPause.Reason.SWITCH);
+        LarpfeedPause.pauseForTests(LarpfeedPause.Reason.SWITCH);
         try (var owner = Robolectric.buildActivity(SettingsPagesTest.PageActivity.class).setup().visible()) {
             TikTokPreferenceFragment home = openHome(owner.get());
             SettingsStatusPreference status = (SettingsStatusPreference)
@@ -162,7 +162,7 @@ public class PauseSettingsScreenTest {
         Class.forName("app.morphe.extension.tiktok.download.StickerGallerySaver");
         HookStatus.bound("sticker saves", "sheet action buttons");
         HookStatus.bound("comments", "jlk");
-        HushfeedPause.pauseForTests(HushfeedPause.Reason.SWITCH);
+        LarpfeedPause.pauseForTests(LarpfeedPause.Reason.SWITCH);
 
         String paused = LogBufferManager.buildExportText();
         String table = paused.substring(paused.indexOf("[HOOK STATUS]"));
@@ -181,7 +181,7 @@ public class PauseSettingsScreenTest {
 
     @Test public void theCardFollowsThePauseSwitchWhilePaused() {
         BaseSettings.PAUSED.save(true);
-        HushfeedPause.pauseForTests(HushfeedPause.Reason.SWITCH);
+        LarpfeedPause.pauseForTests(LarpfeedPause.Reason.SWITCH);
         try (var owner = Robolectric.buildActivity(SettingsPagesTest.PageActivity.class).setup().visible()) {
             TikTokPreferenceFragment home = openHome(owner.get());
             SettingsStatusPreference status = (SettingsStatusPreference)
@@ -212,26 +212,26 @@ public class PauseSettingsScreenTest {
             Utils.setContext(activity);
 
             BaseSettings.PAUSED.save(true);
-            HushfeedPause.pauseForTests(HushfeedPause.Reason.SWITCH);
+            LarpfeedPause.pauseForTests(LarpfeedPause.Reason.SWITCH);
             assertEquals(SWITCH_SUMMARY,
                     String.valueOf(new SettingsStatusPreference(activity, () -> {}).getSummary()));
             BaseSettings.PAUSED.save(false);
-            File marker = HushfeedPause.markerFile(activity);
+            File marker = LarpfeedPause.markerFile(activity);
             assertTrue(marker.getParentFile().exists() || marker.getParentFile().mkdirs());
             assertTrue(marker.createNewFile());
-            HushfeedPause.pauseForTests(HushfeedPause.Reason.MARKER_FILE);
-            assertEquals("A file named hushfeed-safe-mode in TikTok's folder under Android/data paused "
-                    + "Hushfeed. Your settings stay as they are.",
+            LarpfeedPause.pauseForTests(LarpfeedPause.Reason.MARKER_FILE);
+            assertEquals("A file named larpfeed-safe-mode in TikTok's folder under Android/data paused "
+                    + "Larpfeed. Your settings stay as they are.",
                     String.valueOf(new SettingsStatusPreference(activity, () -> {}).getSummary()));
             assertTrue(marker.delete());
 
-            HushfeedPause.pauseForTests(HushfeedPause.Reason.NONE);
+            LarpfeedPause.pauseForTests(LarpfeedPause.Reason.NONE);
             SettingsStatusPreference running = new SettingsStatusPreference(activity, () -> {});
             running.setTurnBackOnAction(() -> {});
-            assertEquals("Hushfeed is active", String.valueOf(running.getTitle()));
+            assertEquals("Larpfeed is active", String.valueOf(running.getTitle()));
             View card = running.getView(null, null);
             assertNotNull(card.findViewWithTag(SettingsStatusPreference.ACTION_TAG));
-            assertNull("a running start offered to turn Hushfeed back on",
+            assertNull("a running start offered to turn Larpfeed back on",
                     card.findViewWithTag(SettingsStatusPreference.TURN_BACK_ON_TAG));
         }
     }
@@ -240,17 +240,17 @@ public class PauseSettingsScreenTest {
         try (var owner = Robolectric.buildActivity(SettingsPagesTest.PageActivity.class).setup().visible()) {
             TikTokPreferenceFragment home = openHome(owner.get());
             Preference row = home.getPreferenceScreen().findPreference(BaseSettings.PAUSED.key);
-            assertTrue("no Pause Hushfeed switch on the home page", row instanceof TogglePreference);
-            assertEquals("Pause Hushfeed", String.valueOf(row.getTitle()));
+            assertTrue("no Pause Larpfeed switch on the home page", row instanceof TogglePreference);
+            assertEquals("Pause Larpfeed", String.valueOf(row.getTitle()));
             assertTrue(String.valueOf(row.getSummary()).contains(
-                    "Pause Hushfeed's switches after TikTok restarts. Your settings stay saved. Changes made when you patched, like the app's name or icon, stay."));
+                    "Pause Larpfeed's switches after TikTok restarts. Your settings stay saved. Changes made when you patched, like the app's name or icon, stay."));
             assertFalse(String.valueOf(row.getSummary()).contains("as if it weren't patched"));
             assertFalse(((TogglePreference) row).isChecked());
         }
     }
 
     @Test public void theCompactHomeStatusFollowsPauseAndRestartState() {
-        HushfeedPause.pauseForTests(HushfeedPause.Reason.NONE);
+        LarpfeedPause.pauseForTests(LarpfeedPause.Reason.NONE);
         AbstractPreferenceFragment.restartPending.clear();
         try (var owner = Robolectric.buildActivity(SettingsPagesTest.PageActivity.class).setup().visible()) {
             Activity activity = owner.get();
@@ -259,17 +259,17 @@ public class PauseSettingsScreenTest {
             activity.getFragmentManager().beginTransaction().replace(android.R.id.content, home).commit();
             activity.getFragmentManager().executePendingTransactions();
             Shadows.shadowOf(Looper.getMainLooper()).idle();
-            TextView status = home.getView().findViewWithTag("hushfeed_compact_status");
+            TextView status = home.getView().findViewWithTag("larpfeed_compact_status");
             assertNotNull(status);
             assertEquals("Active", status.getText().toString());
-            assertEquals("Hushfeed is active", String.valueOf(status.getContentDescription()));
+            assertEquals("Larpfeed is active", String.valueOf(status.getContentDescription()));
 
             BaseSettings.PAUSED.save(true);
-            HushfeedPause.pauseForTests(HushfeedPause.Reason.SWITCH);
+            LarpfeedPause.pauseForTests(LarpfeedPause.Reason.SWITCH);
             AbstractPreferenceFragment.restartPending.clear();
             home.onResume();
             assertEquals("Paused", status.getText().toString());
-            assertEquals("Hushfeed is paused", String.valueOf(status.getContentDescription()));
+            assertEquals("Larpfeed is paused", String.valueOf(status.getContentDescription()));
 
             AbstractPreferenceFragment.restartPending.add(BaseSettings.PAUSED.key);
             home.onResume();
@@ -291,10 +291,10 @@ public class PauseSettingsScreenTest {
         assertEquals("an all-bound running start had something to report", "",
                 LogBufferManager.buildExportText());
 
-        HushfeedPause.pauseForTests(HushfeedPause.Reason.SWITCH);
+        LarpfeedPause.pauseForTests(LarpfeedPause.Reason.SWITCH);
         String paused = LogBufferManager.buildExportText();
         assertTrue("an all-bound paused start said nothing", !paused.isEmpty());
-        assertTrue(paused, paused.contains("hushfeed: paused (switch)"));
+        assertTrue(paused, paused.contains("larpfeed: paused (switch)"));
         String table = paused.substring(paused.indexOf("[HOOK STATUS]"));
         table = table.substring(0, table.indexOf("\n\n") < 0 ? table.length() : table.indexOf("\n\n"));
         int families = 0;

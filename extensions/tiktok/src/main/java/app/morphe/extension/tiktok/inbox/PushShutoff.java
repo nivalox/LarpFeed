@@ -1,6 +1,6 @@
 /*
- * Copyright 2026 Hushfeed contributors
- * https://github.com/SysAdminDoc/hushfeed
+ * Copyright 2026 Larpfeed contributors
+ * https://github.com/SysAdminDoc/larpfeed
  */
 package app.morphe.extension.tiktok.inbox;
 
@@ -24,9 +24,9 @@ import app.morphe.extension.tiktok.settings.SettingsStatus;
  * a media session, which is how media controls, a running upload or a LIVE broadcast are posted.
  * And every wake lock TikTok's code takes is skipped, apart from the {@link #KEPT_TAGS}.
  *
- * <p>None of it outlasts the switch. A switch answers off while Hushfeed is paused, so every call
+ * <p>None of it outlasts the switch. A switch answers off while Larpfeed is paused, so every call
  * then goes through as TikTok made it, and push setup runs again on the first launch after the
- * switch goes off or Hushfeed is paused. What doesn't come back is what arrived while it was on:
+ * switch goes off or Larpfeed is paused. What doesn't come back is what arrived while it was on:
  * a dropped notification is never posted later. TikTok's in-app message connection isn't
  * touched, so messages are there once the app is open.
  */

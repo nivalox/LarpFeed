@@ -71,7 +71,7 @@ import java.util.regex.Pattern;
 import app.morphe.extension.shared.settings.AppLanguage;
 import app.morphe.extension.shared.settings.BaseSettings;
 import app.morphe.extension.shared.settings.BooleanSetting;
-import app.morphe.extension.shared.settings.HushfeedPause;
+import app.morphe.extension.shared.settings.LarpfeedPause;
 import app.morphe.extension.shared.ui.Dim;
 
 public class Utils {
@@ -586,9 +586,9 @@ public class Utils {
         // Must initially set context to check the app language.
         context = stored;
 
-        // Before any hook reads a setting: whether this process runs with Hushfeed paused, and
+        // Before any hook reads a setting: whether this process runs with Larpfeed paused, and
         // the record that lets three crashed starts in a row turn safe mode on.
-        HushfeedPause.onProcessStart(appContext);
+        LarpfeedPause.onProcessStart(appContext);
         // A timed capture keeps the end it was given, or is cleared when that passed while
         // TikTok was closed.
         app.morphe.extension.shared.diagnostics.DebugCapture.load();

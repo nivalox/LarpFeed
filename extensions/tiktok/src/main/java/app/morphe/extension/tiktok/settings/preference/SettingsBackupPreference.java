@@ -1,6 +1,6 @@
 /*
- * Copyright 2026 Hushfeed contributors
- * https://github.com/SysAdminDoc/hushfeed
+ * Copyright 2026 Larpfeed contributors
+ * https://github.com/SysAdminDoc/larpfeed
  *
  * Built on icysymmetra/tiktok-patches-for-morphe (GPL-3.0).
  */
@@ -38,7 +38,7 @@ public final class SettingsBackupPreference extends Preference
     // Cleanup must still run when the export itself never started.
     private static final java.util.concurrent.ExecutorService EXPORT_CLEANUP =
             java.util.concurrent.Executors.newSingleThreadExecutor(task -> {
-                Thread thread = new Thread(task, "Hushfeed-BackupCleanup");
+                Thread thread = new Thread(task, "Larpfeed-BackupCleanup");
                 thread.setDaemon(true);
                 return thread;
             });
@@ -108,7 +108,7 @@ public final class SettingsBackupPreference extends Preference
         int order = screen.getPreferenceCount();
         for (Object[] row : new Object[][]{
                 {EXPORT, "Back up settings",
-                        "Saves your Hushfeed settings and Feature Gate Lab rules to a file."},
+                        "Saves your Larpfeed settings and Feature Gate Lab rules to a file."},
                 {IMPORT, "Restore settings",
                         "Choose a backup file. Your current settings are kept for Undo."},
                 {RESET, "Reset settings",
@@ -152,7 +152,7 @@ public final class SettingsBackupPreference extends Preference
     public static String suggestedExportName() {
         // The diagnostics export stamps in UTC, and a backup made in the same second used to get
         // a name hours away from it because this one used local time.
-        return "hushfeed-settings-"
+        return "larpfeed-settings-"
                 + app.morphe.extension.shared.settings.preference.LogBufferManager.fileTimestamp()
                 + ".json";
     }
@@ -446,7 +446,7 @@ public final class SettingsBackupPreference extends Preference
             switch (restore.getFailure()) {
                 case REJECTED_INPUT:
                     // One sentence per reason. All of these read as the same rejection before,
-                    // so a truncated download and a backup from a newer Hushfeed were
+                    // so a truncated download and a backup from a newer Larpfeed were
                     // indistinguishable to the person holding the file.
                     switch (restore.getReason()) {
                         case SIZE:
@@ -458,19 +458,19 @@ public final class SettingsBackupPreference extends Preference
                             return "That file isn't readable text, so it may have been damaged in "
                                     + "transit. Nothing was altered.";
                         case FORMAT:
-                            return "That isn't a Hushfeed settings backup. Nothing was altered.";
+                            return "That isn't a Larpfeed settings backup. Nothing was altered.";
                         case SCHEMA:
-                            return "That backup was written by a newer Hushfeed than this one. "
+                            return "That backup was written by a newer Larpfeed than this one. "
                                     + "Nothing was altered.";
                         case INCOMPLETE:
                             return "That settings backup is incomplete, so it may have been cut "
                                     + "short. Nothing was altered.";
                         case VALUE:
-                            return "That settings backup holds a value Hushfeed can't read. "
+                            return "That settings backup holds a value Larpfeed can't read. "
                                     + "Nothing was altered.";
                         case RULE_LIST:
                             return "That settings backup contains a feed rule list larger than "
-                                    + "Hushfeed accepts. Nothing was altered.";
+                                    + "Larpfeed accepts. Nothing was altered.";
                         case LAB_RULES:
                             return "That settings backup holds more Feature Gate Lab rules than "
                                     + "the Lab takes. Nothing was altered.";

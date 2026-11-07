@@ -1,6 +1,6 @@
 /*
- * Copyright 2026 Hushfeed contributors
- * https://github.com/SysAdminDoc/hushfeed
+ * Copyright 2026 Larpfeed contributors
+ * https://github.com/SysAdminDoc/larpfeed
  */
 package app.morphe.extension.shared.diagnostics;
 
@@ -22,7 +22,7 @@ import java.util.Set;
 
 /** Immutable APK facts. No setting, log or user-entered option supplies these values. */
 public final class BuildDetails {
-    public static final String ASSET = "hushfeed-build-v1.txt";
+    public static final String ASSET = "larpfeed-build-v1.txt";
     private static final int MAX_BYTES = 4096;
     private static final String[] KEYS = {
             "schema", "bundle_version", "source_commit", "source_clean", "source_start", "source_end",

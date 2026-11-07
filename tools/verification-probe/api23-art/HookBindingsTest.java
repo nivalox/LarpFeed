@@ -1,4 +1,4 @@
-package app.hushfeed.verification.api23;
+package app.larpfeed.verification.api23;
 
 import app.morphe.extension.shared.diagnostics.HookStatus;
 

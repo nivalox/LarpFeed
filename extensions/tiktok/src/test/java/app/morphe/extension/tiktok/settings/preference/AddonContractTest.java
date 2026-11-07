@@ -31,11 +31,11 @@ import org.robolectric.Shadows;
 import org.robolectric.annotation.Config;
 
 /**
- * What add-on bundles patched in beside Hushfeed rely on, as README's "Add-on bundles" section
+ * What add-on bundles patched in beside Larpfeed rely on, as README's "Add-on bundles" section
  * lists it. BDCrusher's tiktok-interaction-addons wraps the settings fragment's createMasterMenu
  * and onResume, puts its row after one of the Your feed page keys, and builds its own page from
  * the public settings members below. Its patch refuses to apply when one of them is gone or no
- * longer public, so a rename here breaks those bundles without a single Hushfeed test noticing.
+ * longer public, so a rename here breaks those bundles without a single Larpfeed test noticing.
  *
  * <p>Every name is a string on purpose: an IDE rename updates direct references in tests too,
  * and this test has to fail on exactly that.
@@ -90,7 +90,7 @@ public class AddonContractTest {
 
         method(publicClass("app.morphe.extension.tiktok.settings.L10n"), true, String.class, "t",
                 Context.class, String.class);
-        method(publicClass("app.morphe.extension.shared.settings.HushfeedPause"), true, boolean.class,
+        method(publicClass("app.morphe.extension.shared.settings.LarpfeedPause"), true, boolean.class,
                 "isPaused");
 
         Class<?> ui = publicClass(PREFERENCE + "SettingsUi");
@@ -137,19 +137,19 @@ public class AddonContractTest {
 
             PreferenceScreen screen = home.getPreferenceScreen();
             List<String> keys = new ArrayList<>();
-            int hushfeedHeading = -1;
+            int larpfeedHeading = -1;
             for (int index = 0; index < screen.getPreferenceCount(); index++) {
                 Preference row = screen.getPreference(index);
                 keys.add(row.getKey());
                 if (row instanceof SectionHeadingPreference && row.getTitle() != null
-                        && L10n.t(activity, "Hushfeed").contentEquals(row.getTitle())) {
-                    hushfeedHeading = index;
+                        && L10n.t(activity, "Larpfeed").contentEquals(row.getTitle())) {
+                    larpfeedHeading = index;
                 }
             }
-            assertTrue("no Hushfeed heading for an add-on to fall back to", hushfeedHeading >= 0);
+            assertTrue("no Larpfeed heading for an add-on to fall back to", larpfeedHeading >= 0);
             for (String key : FEED_PAGE_KEYS) {
                 assertTrue(key + " is gone from the home page: " + keys, keys.contains(key));
-                assertTrue(key + " moved under the Hushfeed heading", keys.indexOf(key) < hushfeedHeading);
+                assertTrue(key + " moved under the Larpfeed heading", keys.indexOf(key) < larpfeedHeading);
             }
         }
     }

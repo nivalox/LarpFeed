@@ -70,7 +70,7 @@ internal data class LanguageInventoryContract(
  * Kveld's original patches changed files as they found them. A renamed, missing, or partially
  * modified group could therefore produce an APK carrying only part of the intended change. This
  * validates the entire group first. A completely empty exact group is accepted so reapplying the
- * Hushfeed patch remains idempotent.
+ * Larpfeed patch remains idempotent.
  */
 internal fun stripVerifiedResources(
     root: File,

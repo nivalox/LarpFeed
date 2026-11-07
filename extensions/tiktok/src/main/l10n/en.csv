@@ -86,7 +86,7 @@ source,target
 %1$s watched video added.,%1$s watched video added.
 %1$s watched videos added.,%1$s watched videos added.
 %1$s were already saved,%1$s were already saved
-%1$s · Hushfeed's list only,%1$s · Hushfeed's list only
+%1$s · Larpfeed's list only,%1$s · Larpfeed's list only
 %1$s · current value only,%1$s · current value only
 %1$s · declared by TikTok,%1$s · declared by TikTok
 "%1$s · declared by TikTok, with a current value","%1$s · declared by TikTok, with a current value"
@@ -137,7 +137,7 @@ A diagnostic report is already being saved,A diagnostic report is already being 
 "A different account is signed in. Switch back to the one you set this up on, or enter who to message again.","A different account is signed in. Switch back to the one you set this up on, or enter who to message again."
 A double tap on a message no longer adds a heart to it. A single tap and a long press work as before.,A double tap on a message no longer adds a heart to it. A single tap and a long press work as before.
 A few seconds,A few seconds
-A file named hushfeed-safe-mode in TikTok's folder under Android/data paused Hushfeed. Your settings stay as they are.,A file named hushfeed-safe-mode in TikTok's folder under Android/data paused Hushfeed. Your settings stay as they are.
+A file named larpfeed-safe-mode in TikTok's folder under Android/data paused Larpfeed. Your settings stay as they are.,A file named larpfeed-safe-mode in TikTok's folder under Android/data paused Larpfeed. Your settings stay as they are.
 A forced value applies to this copy of TikTok whichever account is signed in. It can't get past a check the server makes.,A forced value applies to this copy of TikTok whichever account is signed in. It can't get past a check the server makes.
 "A good place to stop, if you want one.","A good place to stop, if you want one."
 "A green square in the top corner while TikTok has the camera open, and an orange diamond while it records sound. They go when the access ends.","A green square in the top corner while TikTok has the camera open, and an orange diamond while it records sound. They go when the access ends."
@@ -166,7 +166,7 @@ AI chat,AI chat
 AI-generated posts,AI-generated posts
 About,About
 About %1$s of storage at this limit,About %1$s of storage at this limit
-About Hushfeed,About Hushfeed
+About Larpfeed,About Larpfeed
 About overrides,About overrides
 "Above moves the caption and the buttons up a little so the time fits over the right end of the bar. When something else is in the way, the time goes beside the bar.","Above moves the caption and the buttons up a little so the time fits over the right end of the bar. When something else is in the way, the time goes beside the bar."
 Above the bar,Above the bar
@@ -184,8 +184,8 @@ Add a button beside the block control to send feedback about the current video.,
 Add a button that hides the current creator on this phone without blocking them.,Add a button that hides the current creator on this phone without blocking them.
 Add a creator,Add a creator
 "Add a line along the bottom of a sound's cover while its preview plays, with the time played and the preview's length. Tap or drag it to move through the preview.","Add a line along the bottom of a sound's cover while its preview plays, with the time played and the preview's length. Tap or drag it to move through the preview."
-Add a seen-history file saved by Hushfeed to the videos @%1$s has seen. A video in both keeps the newer date.,Add a seen-history file saved by Hushfeed to the videos @%1$s has seen. A video in both keeps the newer date.
-Add a seen-history file saved by Hushfeed to this account's seen videos. A video in both keeps the newer date.,Add a seen-history file saved by Hushfeed to this account's seen videos. A video in both keeps the newer date.
+Add a seen-history file saved by Larpfeed to the videos @%1$s has seen. A video in both keeps the newer date.,Add a seen-history file saved by Larpfeed to the videos @%1$s has seen. A video in both keeps the newer date.
+Add a seen-history file saved by Larpfeed to this account's seen videos. A video in both keeps the newer date.,Add a seen-history file saved by Larpfeed to this account's seen videos. A video in both keeps the newer date.
 Add a separate button that skips videos using the current sound.,Add a separate button that skips videos using the current sound.
 "Add a thin line along the bottom of a video story that you can drag to go back or skip ahead. The time shows while you drag, and a tap on it still moves between stories.","Add a thin line along the bottom of a video story that you can drag to go back or skip ahead. The time shows while you drag, and a tap on it still moves between stories."
 Add apps to Share via,Add apps to Share via
@@ -295,7 +295,7 @@ Back,Back
 Back up settings,Back up settings
 Backdrop behind video text,Backdrop behind video text
 Background play in the long-press menu,Background play in the long-press menu
-"Background play in the long-press menu is on in Hushfeed's Playback settings, so TikTok gets 1 for this key and an override here has no effect until that switch is off.","Background play in the long-press menu is on in Hushfeed's Playback settings, so TikTok gets 1 for this key and an override here has no effect until that switch is off."
+"Background play in the long-press menu is on in Larpfeed's Playback settings, so TikTok gets 1 for this key and an override here has no effect until that switch is off.","Background play in the long-press menu is on in Larpfeed's Playback settings, so TikTok gets 1 for this key and an override here has no effect until that switch is off."
 Backup and restore,Backup and restore
 Bend the video at the edges,Bend the video at the edges
 Beside the bar,Beside the bar
@@ -367,7 +367,7 @@ Captions,Captions
 Capture crash reports locally,Capture crash reports locally
 Capture the feed,Capture the feed
 "Capturing. Find the problem, then come back to stop.","Capturing. Find the problem, then come back to stop."
-Changes in Hushfeed %1$s,Changes in Hushfeed %1$s
+Changes in Larpfeed %1$s,Changes in Larpfeed %1$s
 Changes to %1$s at %2$s,Changes to %1$s at %2$s
 Check for already-saved videos,Check for already-saved videos
 Check the brackets and quotes in this JSON,Check the brackets and quotes in this JSON
@@ -445,7 +445,7 @@ Copy build details,Copy build details
 Copy comments without username,Copy comments without username
 Copy name,Copy name
 Copy only the comment text when using TikTok's copy comment action.,Copy only the comment text when using TikTok's copy comment action.
-Copy or save which patches and options this Hushfeed was built with.,Copy or save which patches and options this Hushfeed was built with.
+Copy or save which patches and options this Larpfeed was built with.,Copy or save which patches and options this Larpfeed was built with.
 Copy quick report,Copy quick report
 Copy report,Copy report
 Copy the full link for short links,Copy the full link for short links
@@ -599,7 +599,7 @@ Drag up or down along the left or right edge of a video to change what that edge
 Drama and Series,Drama and Series
 "Draw a larger handle and a slightly thicker line on the progress bar, so it's easier to see where you are.","Draw a larger handle and a slightly thicker line on the progress bar, so it's easier to see where you are."
 "Draw the main feed's floating pill as glass, lighter and more see-through, with a bright rim along its top edge. Needs Floating bottom bar.","Draw the main feed's floating pill as glass, lighter and more see-through, with a bright rim along its top edge. Needs Floating bottom bar."
-Each area shows how many of the things Hushfeed looks for were found in this TikTok and how many are missing.,Each area shows how many of the things Hushfeed looks for were found in this TikTok and how many are missing.
+Each area shows how many of the things Larpfeed looks for were found in this TikTok and how many are missing.,Each area shows how many of the things Larpfeed looks for were found in this TikTok and how many are missing.
 Earlier this session,Earlier this session
 Easier comment likes,Easier comment likes
 Edge strip width,Edge strip width
@@ -703,7 +703,7 @@ Forget the %1$s videos @%2$s has seen.,Forget the %1$s videos @%2$s has seen.
 Forget the seen video.,Forget the seen video.
 Forget the video @%2$s has seen.,Forget the video @%2$s has seen.
 Forget what has been counted today and end any hold. The budgets themselves are left alone.,Forget what has been counted today and end any hold. The budgets themselves are left alone.
-"Forget which videos Hushfeed saved here, so the already-saved check starts over. The saved files and your settings stay. Turning the check off doesn't erase this record.","Forget which videos Hushfeed saved here, so the already-saved check starts over. The saved files and your settings stay. Turning the check off doesn't erase this record."
+"Forget which videos Larpfeed saved here, so the already-saved check starts over. The saved files and your settings stay. Turning the check off doesn't erase this record.","Forget which videos Larpfeed saved here, so the already-saved check starts over. The saved files and your settings stay. Turning the check off doesn't erase this record."
 Forgetting saved videos,Forgetting saved videos
 Forgotten. Tap to put them back.,Forgotten. Tap to put them back.
 Found %1$s in your chats.,Found %1$s in your chats.
@@ -772,7 +772,7 @@ Hide Thoughts on profiles,Hide Thoughts on profiles
 Hide TikTok Shop,Hide TikTok Shop
 Hide TikTok Shop in search,Hide TikTok Shop in search
 "Hide TikTok Shop posts from the feed, and the shop buttons under captions.","Hide TikTok Shop posts from the feed, and the shop buttons under captions."
-"Hide TikTok's ""Search: ..."" banner above the comment count. This doesn't hide the comments or Hushfeed's comment-search box.","Hide TikTok's ""Search: ..."" banner above the comment count. This doesn't hide the comments or Hushfeed's comment-search box."
+"Hide TikTok's ""Search: ..."" banner above the comment count. This doesn't hide the comments or Larpfeed's comment-search box.","Hide TikTok's ""Search: ..."" banner above the comment count. This doesn't hide the comments or Larpfeed's comment-search box."
 Hide TikTok's Auto scroll button,Hide TikTok's Auto scroll button
 Hide TikTok's short drama episodes and the cards that promote them.,Hide TikTok's short drama episodes and the cards that promote them.
 Hide TikTok's wind-down screens,Hide TikTok's wind-down screens
@@ -864,7 +864,7 @@ Hide the Create circle in story rows,Hide the Create circle in story rows
 Hide the Footnotes banner TikTok shows on a video that has a note attached. The video and its comments stay as they are.,Hide the Footnotes banner TikTok shows on a video that has a note attached. The video and its comments stay as they are.
 Hide the Full screen button,Hide the Full screen button
 Hide the Full screen button over videos. Playback and automatic rotation keep working as before.,Hide the Full screen button over videos. Playback and automatic rotation keep working as before.
-Hide the Hushfeed row,Hide the Hushfeed row
+Hide the Larpfeed row,Hide the Larpfeed row
 Hide the Inbox search button,Hide the Inbox search button
 Hide the LIVE bubble,Hide the LIVE bubble
 Hide the LIVE button,Hide the LIVE button
@@ -983,18 +983,18 @@ How much the video behind the glass pill on the main feed is blurred.,How much t
 How round the main feed's floating pill and its glass lens are. Fully round gives them half circle ends.,How round the main feed's floating pill and its glass lens are. Fully round gives them half circle ends.
 How tall the main feed's floating pill is inside the bar. Compact leaves more of the video showing around it. The tabs keep their size and their taps.,How tall the main feed's floating pill is inside the bar. Compact leaves more of the video showing around it. The tabs keep their size and their taps.
 "How wide each edge strip is, as a percent of the screen width.","How wide each edge strip is, as a percent of the screen width."
-Hushfeed,Hushfeed
-Hushfeed blocked TikTok's reports here. It hasn't confirmed that you stay off viewer lists.,Hushfeed blocked TikTok's reports here. It hasn't confirmed that you stay off viewer lists.
-Hushfeed can't read the creator pattern %1$s,Hushfeed can't read the creator pattern %1$s
-Hushfeed is active,Hushfeed is active
-Hushfeed is paused,Hushfeed is paused
-Hushfeed is paused. Ghost mode isn't active.,Hushfeed is paused. Ghost mode isn't active.
-Hushfeed turns back on when TikTok restarts.,Hushfeed turns back on when TikTok restarts.
-"Hushfeed's downloader doesn't fill this in, so it's kept as typed: %1$s","Hushfeed's downloader doesn't fill this in, so it's kept as typed: %1$s"
-Hushfeed's downloader: %1$s,Hushfeed's downloader: %1$s
-"Hushfeed's switches are paused. Your settings stay saved. Changes made when you patched, like the app's name or icon, stay.","Hushfeed's switches are paused. Your settings stay saved. Changes made when you patched, like the app's name or icon, stay."
+Larpfeed,Larpfeed
+Larpfeed blocked TikTok's reports here. It hasn't confirmed that you stay off viewer lists.,Larpfeed blocked TikTok's reports here. It hasn't confirmed that you stay off viewer lists.
+Larpfeed can't read the creator pattern %1$s,Larpfeed can't read the creator pattern %1$s
+Larpfeed is active,Larpfeed is active
+Larpfeed is paused,Larpfeed is paused
+Larpfeed is paused. Ghost mode isn't active.,Larpfeed is paused. Ghost mode isn't active.
+Larpfeed turns back on when TikTok restarts.,Larpfeed turns back on when TikTok restarts.
+"Larpfeed's downloader doesn't fill this in, so it's kept as typed: %1$s","Larpfeed's downloader doesn't fill this in, so it's kept as typed: %1$s"
+Larpfeed's downloader: %1$s,Larpfeed's downloader: %1$s
+"Larpfeed's switches are paused. Your settings stay saved. Changes made when you patched, like the app's name or icon, stay.","Larpfeed's switches are paused. Your settings stay saved. Changes made when you patched, like the app's name or icon, stay."
 "If that name is taken, Android adds a number to the new file.","If that name is taken, Android adds a number to the new file."
-"If that name is taken, Hushfeed adds a number to the new file.","If that name is taken, Hushfeed adds a number to the new file."
+"If that name is taken, Larpfeed adds a number to the new file.","If that name is taken, Larpfeed adds a number to the new file."
 "If the video blinks as you swipe with See-through bottom bar on, this draws it inside TikTok instead of on a layer of its own. It can use a little more battery. Needs See-through bottom bar.","If the video blinks as you swipe with See-through bottom bar on, this draws it inside TikTok instead of on a layer of its own. It can use a little more battery. Needs See-through bottom bar."
 Import a font file,Import a font file
 Import finished,Import finished
@@ -1038,7 +1038,7 @@ Keep offline videos out of the feed,Keep offline videos out of the feed
 Keep offline videos until you delete them,Keep offline videos until you delete them
 Keep photos as TikTok sent them,Keep photos as TikTok sent them
 Keep playing in the background,Keep playing in the background
-"Keep playing in the background is on in Hushfeed's Playback settings, so TikTok gets 2 for this key and an override here has no effect until that switch is off.","Keep playing in the background is on in Hushfeed's Playback settings, so TikTok gets 2 for this key and an override here has no effect until that switch is off."
+"Keep playing in the background is on in Larpfeed's Playback settings, so TikTok gets 2 for this key and an override here has no effect until that switch is off.","Keep playing in the background is on in Larpfeed's Playback settings, so TikTok gets 2 for this key and an override here has no effect until that switch is off."
 Keep the Favorites tab,Keep the Favorites tab
 Keep the For You feed on your real SIM,Keep the For You feed on your real SIM
 Keep the LIVE quality after TikTok restarts,Keep the LIVE quality after TikTok restarts
@@ -1164,7 +1164,7 @@ Logging until %1$s. Tap to stop now.,Logging until %1$s. Tap to stop now.
 Long press,Long press
 Long press on For You opens my watch history,Long press on For You opens my watch history
 Long press on Profile opens my watch history,Long press on Profile opens my watch history
-Long-press Home for Hushfeed settings,Long-press Home for Hushfeed settings
+Long-press Home for Larpfeed settings,Long-press Home for Larpfeed settings
 Long-press Inbox for read receipts,Long-press Inbox for read receipts
 Long-press Profile for Watch history,Long-press Profile for Watch history
 "Long-press a bio to copy it. A profile's share sheet gets buttons that copy its username and user ID, and a video's share sheet one that copies the video ID. On a LIVE profile card, long-press the name, username or bio to copy it, or tap the copy mark by the username.","Long-press a bio to copy it. A profile's share sheet gets buttons that copy its username and user ID, and a video's share sheet one that copies the video ID. On a LIVE profile card, long-press the name, username or bio to copy it, or tap the copy mark by the username."
@@ -1299,7 +1299,7 @@ None of these gates takes a true or false value,None of these gates takes a true
 None recorded,None recorded
 Normal,Normal
 "Not a handle or id, so ignored: %1$s","Not a handle or id, so ignored: %1$s"
-"Not a part Hushfeed fills in, so it's kept as typed: %1$s","Not a part Hushfeed fills in, so it's kept as typed: %1$s"
+"Not a part Larpfeed fills in, so it's kept as typed: %1$s","Not a part Larpfeed fills in, so it's kept as typed: %1$s"
 Not available on this TikTok version,Not available on this TikTok version
 Not blocked,Not blocked
 Not interested in this video,Not interested in this video
@@ -1327,7 +1327,7 @@ Notices from this project and the ones it's built on,Notices from this project a
 OK,OK
 Off,Off
 "Off forces the value to false, on forces it to true. Reset lets TikTok decide again.","Off forces the value to false, on forces it to true. Reset lets TikTok decide again."
-"Off until you tap it. Wipes TikTok's data once, on the next start, and gives it a new Android ID and advertising ID, so it sees a phone it hasn't met. You'll be signed out and lose your drafts. Hushfeed's settings stay.","Off until you tap it. Wipes TikTok's data once, on the next start, and gives it a new Android ID and advertising ID, so it sees a phone it hasn't met. You'll be signed out and lose your drafts. Hushfeed's settings stay."
+"Off until you tap it. Wipes TikTok's data once, on the next start, and gives it a new Android ID and advertising ID, so it sees a phone it hasn't met. You'll be signed out and lose your drafts. Larpfeed's settings stay.","Off until you tap it. Wipes TikTok's data once, on the next start, and gives it a new Android ID and advertising ID, so it sees a phone it hasn't met. You'll be signed out and lose your drafts. Larpfeed's settings stay."
 "Off, only its button closes it.","Off, only its button closes it."
 Off. TikTok can report views and typing.,Off. TikTok can report views and typing.
 Offer Audio only in LIVE quality,Offer Audio only in LIVE quality
@@ -1344,7 +1344,7 @@ On or off,On or off
 "On the main feed, a light tick each time the glass lens passes a tab, as it slides after a tap or under your finger. Needs Glass lens on the current tab.","On the main feed, a light tick each time the glass lens passes a tab, as it slides after a tap or under your finger. Needs Glass lens on the current tab."
 "On the main feed, a raised bubble of glass sits behind the tab you're on and slides to the next tab you pick. Needs Liquid glass look.","On the main feed, a raised bubble of glass sits behind the tab you're on and slides to the next tab you pick. Needs Liquid glass look."
 "On the main feed, slide a finger along the glass pill and the lens follows it. Let go and that tab opens. Taps and long presses work as before. Needs Glass lens on the current tab.","On the main feed, slide a finger along the glass pill and the lens follows it. Let go and that tab opens. Taps and long presses work as before. Needs Glass lens on the current tab."
-On. Hushfeed hasn't seen TikTok send any reports since it started.,On. Hushfeed hasn't seen TikTok send any reports since it started.
+On. Larpfeed hasn't seen TikTok send any reports since it started.,On. Larpfeed hasn't seen TikTok send any reports since it started.
 "Once today's budget runs out, the hold stays and can't be dismissed. The budget settings are locked until the day starts over. Turn this off any time before the budget runs out.","Once today's budget runs out, the hold stays and can't be dismissed. The budget settings are locked until the day starts over. Turn this off any time before the budget runs out."
 One area was checked and everything it needs is here.,One area was checked and everything it needs is here.
 One at a time,One at a time
@@ -1365,7 +1365,7 @@ Only tabs TikTok has loaded on this device are shown here. This doesn't force un
 Only the first %1$s characters of the sample were checked.,Only the first %1$s characters of the sample were checked.
 Only these caption languages,Only these caption languages
 Open,Open
-Open Hushfeed settings,Open Hushfeed settings
+Open Larpfeed settings,Open Larpfeed settings
 Open TikTok on,Open TikTok on
 "Open a share sheet once, then return here to choose its actions.","Open a share sheet once, then return here to choose its actions."
 Open and close TikTok's screens without their slide. Swipes inside a screen still follow your finger.,Open and close TikTok's screens without their slide. Swipes inside a screen still follow your finger.
@@ -1380,8 +1380,8 @@ Open the comments at full height,Open the comments at full height
 Open the feed anyway,Open the feed anyway
 "Open the feed anyway, %1$d left today","Open the feed anyway, %1$d left today"
 "Open the feed anyway, the last time today","Open the feed anyway, the last time today"
-Open the feed once so Hushfeed can see which bottom tabs TikTok loaded.,Open the feed once so Hushfeed can see which bottom tabs TikTok loaded.
-Open the feed once so Hushfeed can see which tabs TikTok loaded.,Open the feed once so Hushfeed can see which tabs TikTok loaded.
+Open the feed once so Larpfeed can see which bottom tabs TikTok loaded.,Open the feed once so Larpfeed can see which bottom tabs TikTok loaded.
+Open the feed once so Larpfeed can see which tabs TikTok loaded.,Open the feed once so Larpfeed can see which tabs TikTok loaded.
 Open the profile again and try once more,Open the profile again and try once more
 Open the search page,Open the search page
 Open the story again and try once more,Open the story again and try once more
@@ -1420,8 +1420,8 @@ Own profile counts,Own profile counts
 Paid partnerships,Paid partnerships
 Pass TikTok's install checks,Pass TikTok's install checks
 Pause,Pause
-Pause Hushfeed,Pause Hushfeed
-"Pause Hushfeed's switches after TikTok restarts. Your settings stay saved. Changes made when you patched, like the app's name or icon, stay.","Pause Hushfeed's switches after TikTok restarts. Your settings stay saved. Changes made when you patched, like the app's name or icon, stay."
+Pause Larpfeed,Pause Larpfeed
+"Pause Larpfeed's switches after TikTok restarts. Your settings stay saved. Changes made when you patched, like the app's name or icon, stay.","Pause Larpfeed's switches after TikTok restarts. Your settings stay saved. Changes made when you patched, like the app's name or icon, stay."
 Pause the video while comments are open,Pause the video while comments are open
 Paused,Paused
 Pauses the video behind the comment sheet while you read. It plays on from the same spot when the sheet closes.,Pauses the video behind the comment sheet while you read. It plays on from the same spot when the sheet closes.
@@ -1520,7 +1520,7 @@ Put the comment search away,Put the comment search away
 "Puts a band of color behind the description, the author's name and the post date, so they stay readable on bright videos.","Puts a band of color behind the description, the author's name and the post date, so they stay readable on bright videos."
 "Puts a circle on each video in a profile, Liked or Favorites grid. Pick up to %1$s, then tap Save to save them one after another, with a count and Cancel.","Puts a circle on each video in a profile, Liked or Favorites grid. Pick up to %1$s, then tap Save to save them one after another, with a count and Cancel."
 "Puts a save button in the sheet a story's Share button opens. It saves the story you're watching, and holding a story still pauses it.","Puts a save button in the sheet a story's Share button opens. It saves the story you're watching, and holding a story still pauses it."
-"Puts a ✓ by videos and photo posts you saved with Hushfeed, on profile grids and next to the time in the feed. Works only while Check for already-saved videos is on.","Puts a ✓ by videos and photo posts you saved with Hushfeed, on profile grids and next to the time in the feed. Works only while Check for already-saved videos is on."
+"Puts a ✓ by videos and photo posts you saved with Larpfeed, on profile grids and next to the time in the feed. Works only while Check for already-saved videos is on.","Puts a ✓ by videos and photo posts you saved with Larpfeed, on profile grids and next to the time in the feed. Works only while Check for already-saved videos is on."
 "Puts your time zone after the time to the second, like EDT.","Puts your time zone after the time to the second, like EDT."
 Putting seen videos back,Putting seen videos back
 Putting the saved videos back,Putting the saved videos back
@@ -1580,7 +1580,7 @@ Removes every video from Favorites one after another.,Removes every video from F
 Removing all likes in %1$d,Removing all likes in %1$d
 Removing all reposts in %1$d,Removing all reposts in %1$d
 Removing the kept messages,Removing the kept messages
-"Reopen Hushfeed settings, then choose the file","Reopen Hushfeed settings, then choose the file"
+"Reopen Larpfeed settings, then choose the file","Reopen Larpfeed settings, then choose the file"
 Replace values when TikTok asks for them,Replace values when TikTok asks for them
 Replay a story from the start when it ends instead of moving to the next one. Tap or swipe to move on.,Replay a story from the start when it ends instead of moving to the next one. Tap or swipe to move on.
 Replay in the background,Replay in the background
@@ -1699,7 +1699,7 @@ Saved the photos as a video in %1$s,Saved the photos as a video in %1$s
 "Saved to %1$s, but without sound","Saved to %1$s, but without sound"
 Saved videos forgotten. The files are still there.,Saved videos forgotten. The files are still there.
 Saved videos put back,Saved videos put back
-"Saved videos show the @username and the first line of the caption in the bottom left corner. The phone encodes the whole video again to do it, so saving takes longer. Applies to saves made by Hushfeed.","Saved videos show the @username and the first line of the caption in the bottom left corner. The phone encodes the whole video again to do it, so saving takes longer. Applies to saves made by Hushfeed."
+"Saved videos show the @username and the first line of the caption in the bottom left corner. The phone encodes the whole video again to do it, so saving takes longer. Applies to saves made by Larpfeed.","Saved videos show the @username and the first line of the caption in the bottom left corner. The phone encodes the whole video again to do it, so saving takes longer. Applies to saves made by Larpfeed."
 "Saved, but a later save may make a second copy","Saved, but a later save may make a second copy"
 "Saved, override off","Saved, override off"
 Saved. Restart TikTok to apply this.,Saved. Restart TikTok to apply this.
@@ -1707,10 +1707,10 @@ Saves TikTok's latest crash report on this phone so it can go in the diagnostic 
 Saves at once,Saves at once
 Saves right now,Saves right now
 "Saves subtitle (SRT) files with the video. They go to Movies on Android 11 and newer, Download on Android 10, and your video folder on older versions. On Android 11 and newer with Save details on, the video moves to Download or Documents and the subtitles stay in Movies.","Saves subtitle (SRT) files with the video. They go to Movies on Android 11 and newer, Download on Android 10, and your video folder on older versions. On Android 11 and newer with Save details on, the video moves to Download or Documents and the subtitles stay in Movies."
-"Saves the caption, creator, link and post date in a text file next to the video, or one file for a photo post's original photos. On Android 10 and later, they go in Download or Documents under the same folder name. Applies to saves made by Hushfeed.","Saves the caption, creator, link and post date in a text file next to the video, or one file for a photo post's original photos. On Android 10 and later, they go in Download or Documents under the same folder name. Applies to saves made by Hushfeed."
+"Saves the caption, creator, link and post date in a text file next to the video, or one file for a photo post's original photos. On Android 10 and later, they go in Download or Documents under the same folder name. Applies to saves made by Larpfeed.","Saves the caption, creator, link and post date in a text file next to the video, or one file for a photo post's original photos. On Android 10 and later, they go in Download or Documents under the same folder name. Applies to saves made by Larpfeed."
 Saves the details file in JSON format instead of plain text. Useful if another tool will read it.,Saves the details file in JSON format instead of plain text. Useful if another tool will read it.
 "Saves wait for Wi-Fi or another network that isn't metered, for up to 30 minutes, and stop if you leave it. Saving a frame still works anywhere.","Saves wait for Wi-Fi or another network that isn't metered, for up to 30 minutes, and stop if you leave it. Saving a frame still works anywhere."
-Saves your Hushfeed settings and Feature Gate Lab rules to a file.,Saves your Hushfeed settings and Feature Gate Lab rules to a file.
+Saves your Larpfeed settings and Feature Gate Lab rules to a file.,Saves your Larpfeed settings and Feature Gate Lab rules to a file.
 Saving,Saving
 Saving %1$s of %2$s,Saving %1$s of %2$s
 Saving %1$s of %2$s: %3$s,Saving %1$s of %2$s: %3$s
@@ -1775,7 +1775,7 @@ Send it now,Send it now
 Send links to another app,Send links to another app
 Sending feedback,Sending feedback
 Sending the message,Sending the message
-"Sends TikTok's feed, search, comments and other app traffic through the proxy below. Videos and LIVE streams still connect directly. Saves and short-link lookups from Hushfeed also connect directly, after their own address checks. Other apps aren't affected.","Sends TikTok's feed, search, comments and other app traffic through the proxy below. Videos and LIVE streams still connect directly. Saves and short-link lookups from Hushfeed also connect directly, after their own address checks. Other apps aren't affected."
+"Sends TikTok's feed, search, comments and other app traffic through the proxy below. Videos and LIVE streams still connect directly. Saves and short-link lookups from Larpfeed also connect directly, after their own address checks. Other apps aren't affected.","Sends TikTok's feed, search, comments and other app traffic through the proxy below. Videos and LIVE streams still connect directly. Saves and short-link lookups from Larpfeed also connect directly, after their own address checks. Other apps aren't affected."
 "Sends one message a day to each person below at the time below, so your streaks keep going on days you don't open TikTok.","Sends one message a day to each person below at the time below, so your streaks keep going on days you don't open TikTok."
 Sends today's message right away. The daily one then waits for tomorrow.,Sends today's message right away. The daily one then waits for tomorrow.
 Sent to %1$d/%2$d chats. The rest still need a message.,Sent to %1$d/%2$d chats. The rest still need a message.
@@ -2020,7 +2020,7 @@ Stops TikTok telling people you've read their messages. Your own unread badges s
 "Stops websites you open from inside TikTok from reaching back into the app. TikTok's own pages, such as Activity center, Watch history, shop checkout and CAPTCHA, keep working.","Stops websites you open from inside TikTok from reaching back into the app. TikTok's own pages, such as Activity center, Watch history, shop checkout and CAPTCHA, keep working."
 Storage almost full. Recording saved to %1$s,Storage almost full. Recording saved to %1$s
 Store TikTok thinks it came from,Store TikTok thinks it came from
-"Stores the caption, creator, post date and link inside the video file, where media players can read them. Applies to saves made by Hushfeed.","Stores the caption, creator, post date and link inside the video file, where media players can read them. Applies to saves made by Hushfeed."
+"Stores the caption, creator, post date and link inside the video file, where media players can read them. Applies to saves made by Larpfeed.","Stores the caption, creator, post date and link inside the video file, where media players can read them. Applies to saves made by Larpfeed."
 Stories,Stories
 Story,Story
 Story position,Story position
@@ -2034,7 +2034,7 @@ Subscriber-only posts,Subscriber-only posts
 Subtitle language,Subtitle language
 Subtitles,Subtitles
 Subtitles: %1$s,Subtitles: %1$s
-Support Hushfeed,Support Hushfeed
+Support Larpfeed,Support Larpfeed
 Swap the website in shared links,Swap the website in shared links
 Swipe for brightness and volume,Swipe for brightness and volume
 Swipe left,Swipe left
@@ -2042,7 +2042,7 @@ Swiping a message sideways no longer starts a reply to it. Taps and long presses
 "Swiping right on the For You feed no longer opens TikTok's side menu, with Your orders, TikTok Minis and more.","Swiping right on the For You feed no longer opens TikTok's side menu, with Your orders, TikTok Minis and more."
 System,System
 Tag saved videos with their details,Tag saved videos with their details
-"Take Hushfeed out of TikTok's Settings and privacy. To open these settings, press and hold For You at the top of the feed, or Home if Long-press Home for Hushfeed settings is on.","Take Hushfeed out of TikTok's Settings and privacy. To open these settings, press and hold For You at the top of the feed, or Home if Long-press Home for Hushfeed settings is on."
+"Take Larpfeed out of TikTok's Settings and privacy. To open these settings, press and hold For You at the top of the feed, or Home if Long-press Home for Larpfeed settings is on.","Take Larpfeed out of TikTok's Settings and privacy. To open these settings, press and hold For You at the top of the feed, or Home if Long-press Home for Larpfeed settings is on."
 "Take the Add comment bar off videos you open from a profile, a hashtag, a sound or search, so the video fills the screen down to the bottom. The comment button on the right still opens comments.","Take the Add comment bar off videos you open from a profile, a hashtag, a sound or search, so the video fills the screen down to the bottom. The comment button on the right still opens comments."
 Take the pulsing LIVE ring off profile pictures on the feed and in comments. Tapping the picture of a creator who's live opens their profile instead of the LIVE.,Take the pulsing LIVE ring off profile pictures on the feed and in comments. Tapping the picture of a creator who's live opens their profile instead of the LIVE.
 "Take the story ring off profile pictures on the feed, in comments and on profiles. Tapping a picture opens the profile instead of the story.","Take the story ring off profile pictures on the feed, in comments and on profiles. Tapping a picture opens the profile instead of the story."
@@ -2061,19 +2061,19 @@ Tap the feed Follow button twice within %1$d seconds.,Tap the feed Follow button
 Tap the like heart twice within %1$d seconds. Removing a like stays immediate.,Tap the like heart twice within %1$d seconds. Removing a like stays immediate.
 Tap to start the feed,Tap to start the feed
 "Tap to start, then scroll until the feed problem shows up and come back here to save it. The file has no captions or names, and videos and creators appear only as short codes. Read it before you share it.","Tap to start, then scroll until the feed problem shows up and come back here to save it. The file has no captions or names, and videos and creators appear only as short codes. Read it before you share it."
-"Tap, then go to the screen with what you want hidden. After %1$d seconds Hushfeed records how that screen is built, without any of its text, for the diagnostic report.","Tap, then go to the screen with what you want hidden. After %1$d seconds Hushfeed records how that screen is built, without any of its text, for the diagnostic report."
+"Tap, then go to the screen with what you want hidden. After %1$d seconds Larpfeed records how that screen is built, without any of its text, for the diagnostic report.","Tap, then go to the screen with what you want hidden. After %1$d seconds Larpfeed records how that screen is built, without any of its text, for the diagnostic report."
 Tapping a sticker someone sent you in a chat opens a box with Save media. Turn this off to skip it.,Tapping a sticker someone sent you in a chat opens a box with Save media. Turn this off to skip it.
 Tapping more under a video opens its comments with the whole caption at the top instead of spreading the caption over the video. A tap on the caption itself does the same. Photo posts keep TikTok's own page for this.,Tapping more under a video opens its comments with the whole caption at the top instead of spreading the caption over the video. A tap on the caption itself does the same. Photo posts keep TikTok's own page for this.
 Technical details,Technical details
 "Technical details, %1$s","Technical details, %1$s"
 Text sticker words,Text sticker words
 That JSON file doesn't contain the supported TikTok watch history.,That JSON file doesn't contain the supported TikTok watch history.
-That backup was written by a newer Hushfeed than this one. Nothing was altered.,That backup was written by a newer Hushfeed than this one. Nothing was altered.
+That backup was written by a newer Larpfeed than this one. Nothing was altered.,That backup was written by a newer Larpfeed than this one. Nothing was altered.
 That creator is already in the list,That creator is already in the list
 "That creator pattern could stall the feed, so it wasn't added: %1$s","That creator pattern could stall the feed, so it wasn't added: %1$s"
 "That creator pattern is too long, so it wasn't added: %1$s","That creator pattern is too long, so it wasn't added: %1$s"
 That file has more than %1$s watch-history entries.,That file has more than %1$s watch-history entries.
-That file is larger than %1$s MB. Choose a seen-history file saved by Hushfeed.,That file is larger than %1$s MB. Choose a seen-history file saved by Hushfeed.
+That file is larger than %1$s MB. Choose a seen-history file saved by Larpfeed.,That file is larger than %1$s MB. Choose a seen-history file saved by Larpfeed.
 That file is larger than %1$s MB. Choose a smaller font file.,That file is larger than %1$s MB. Choose a smaller font file.
 That file is larger than %1$s MB. Choose a smaller watch-history export.,That file is larger than %1$s MB. Choose a smaller watch-history export.
 That file is too large to be a settings backup. Nothing was altered.,That file is too large to be a settings backup. Nothing was altered.
@@ -2081,14 +2081,14 @@ That file isn't a font Android can use. Choose a .ttf or .otf file.,That file is
 "That file isn't a loaded-values export, or it's larger than the Lab accepts","That file isn't a loaded-values export, or it's larger than the Lab accepts"
 "That file isn't readable text, so it may have been damaged in transit. Nothing was altered.","That file isn't readable text, so it may have been damaged in transit. Nothing was altered."
 That file lists more than %1$s videos. Nothing was restored.,That file lists more than %1$s videos. Nothing was restored.
-"That file was saved by a newer Hushfeed. Update Hushfeed, then try again.","That file was saved by a newer Hushfeed. Update Hushfeed, then try again."
+"That file was saved by a newer Larpfeed. Update Larpfeed, then try again.","That file was saved by a newer Larpfeed. Update Larpfeed, then try again."
 "That folder name has a character Android doesn't allow. Use letters, numbers, spaces or dashes.","That folder name has a character Android doesn't allow. Use letters, numbers, spaces or dashes."
 That is %1$d minutes today,That is %1$d minutes today
 That is %1$d videos today,That is %1$d videos today
 That is one minute today,That is one minute today
 That is one video today,That is one video today
-That isn't a Hushfeed settings backup. Nothing was altered.,That isn't a Hushfeed settings backup. Nothing was altered.
-"That isn't a seen-history file saved by Hushfeed. For TikTok's own data export, use Import watch history.","That isn't a seen-history file saved by Hushfeed. For TikTok's own data export, use Import watch history."
+That isn't a Larpfeed settings backup. Nothing was altered.,That isn't a Larpfeed settings backup. Nothing was altered.
+"That isn't a seen-history file saved by Larpfeed. For TikTok's own data export, use Import watch history.","That isn't a seen-history file saved by Larpfeed. For TikTok's own data export, use Import watch history."
 "That isn't an app name. Try something like com.example.downloader, or leave the box empty to keep saving in TikTok.","That isn't an app name. Try something like com.example.downloader, or leave the box empty to keep saving in TikTok."
 That list has too many entries. Keep it to %1$s or fewer.,That list has too many entries. Keep it to %1$s or fewer.
 That list is too large. Keep it to %1$s KB or less.,That list is too large. Keep it to %1$s KB or less.
@@ -2096,13 +2096,13 @@ That loosens the budget. It waits until %1$s.,That loosens the budget. It waits 
 That loosens the lock. It waits until %1$s.,That loosens the lock. It waits until %1$s.
 That preset isn't recognized. Choose another.,That preset isn't recognized. Choose another.
 That seen-history file is damaged or was edited. Nothing was restored.,That seen-history file is damaged or was edited. Nothing was restored.
-That settings backup contains a feed rule list larger than Hushfeed accepts. Nothing was altered.,That settings backup contains a feed rule list larger than Hushfeed accepts. Nothing was altered.
-That settings backup holds a value Hushfeed can't read. Nothing was altered.,That settings backup holds a value Hushfeed can't read. Nothing was altered.
+That settings backup contains a feed rule list larger than Larpfeed accepts. Nothing was altered.,That settings backup contains a feed rule list larger than Larpfeed accepts. Nothing was altered.
+That settings backup holds a value Larpfeed can't read. Nothing was altered.,That settings backup holds a value Larpfeed can't read. Nothing was altered.
 That settings backup holds more Feature Gate Lab rules than the Lab takes. Nothing was altered.,That settings backup holds more Feature Gate Lab rules than the Lab takes. Nothing was altered.
 That settings backup is damaged or only partly downloaded. Nothing was altered.,That settings backup is damaged or only partly downloaded. Nothing was altered.
 "That settings backup is incomplete, so it may have been cut short. Nothing was altered.","That settings backup is incomplete, so it may have been cut short. Nothing was altered."
 That settings change didn't go through. Nothing was altered.,That settings change didn't go through. Nothing was altered.
-That sticker is in a format Hushfeed can't read,That sticker is in a format Hushfeed can't read
+That sticker is in a format Larpfeed can't read,That sticker is in a format Larpfeed can't read
 That watch-history file is damaged. Nothing was imported.,That watch-history file is damaged. Nothing was imported.
 The Activity row of likes and comments on your posts leaves the Inbox. Notifications about them still arrive.,The Activity row of likes and comments on your posts leaves the Inbox. Notifications about them still arrive.
 The Archive row leaves the Inbox. Archived chats are kept.,The Archive row leaves the Inbox. Archived chats are kept.
@@ -2114,7 +2114,7 @@ The Lab couldn't open. Go back and open it again.,The Lab couldn't open. Go back
 The Message requests row leaves the Inbox. Requests keep arriving and wait there until you turn this off.,The Message requests row leaves the Inbox. Requests keep arriving and wait there until you turn this off.
 The New followers row leaves the top of the Inbox. The accounts still follow you.,The New followers row leaves the top of the Inbox. The accounts still follow you.
 The Tako assistant's conversation leaves the Inbox list. The Tako bubble on the feed has its own switch under Feed tabs.,The Tako assistant's conversation leaves the Inbox list. The Tako bubble on the feed has its own switch under Feed tabs.
-"The Translate comments button in a LIVE room also needs a Japanese SIM. Turn on Override SIM details in Hushfeed settings > Region, set SIM country preset to Japan, NTT DOCOMO (44010), then restart TikTok.","The Translate comments button in a LIVE room also needs a Japanese SIM. Turn on Override SIM details in Hushfeed settings > Region, set SIM country preset to Japan, NTT DOCOMO (44010), then restart TikTok."
+"The Translate comments button in a LIVE room also needs a Japanese SIM. Turn on Override SIM details in Larpfeed settings > Region, set SIM country preset to Japan, NTT DOCOMO (44010), then restart TikTok.","The Translate comments button in a LIVE room also needs a Japanese SIM. Turn on Override SIM details in Larpfeed settings > Region, set SIM country preset to Japan, NTT DOCOMO (44010), then restart TikTok."
 The accounts TikTok suggests you follow no longer take up rows in the Inbox.,The accounts TikTok suggests you follow no longer take up rows in the Inbox.
 The activity status control leaves the Inbox header. Whether others see you as active is unchanged.,The activity status control leaves the Inbox header. Whether others see you as active is unchanged.
 "The add people icon leaves the Inbox header. Only the shortcut goes, so friend suggestions elsewhere are unchanged.","The add people icon leaves the Inbox header. Only the shortcut goes, so friend suggestions elsewhere are unchanged."
@@ -2138,7 +2138,7 @@ The feed is open again,The feed is open again
 The feed stops when this video ends.,The feed stops when this video ends.
 "The feed waits for one tap before it starts playing again when you come back to the app. Messages, profiles and search are still one tap away.","The feed waits for one tap before it starts playing again when you come back to the app. Messages, profiles and search are still one tap away."
 "The file app still has the last file. Try again once it lets go, or restart TikTok.","The file app still has the last file. Try again once it lets go, or restart TikTok."
-The file hushfeed-safe-mode couldn't be removed. Delete it from TikTok's folder under Android/data to turn Hushfeed back on.,The file hushfeed-safe-mode couldn't be removed. Delete it from TikTok's folder under Android/data to turn Hushfeed back on.
+The file larpfeed-safe-mode couldn't be removed. Delete it from TikTok's folder under Android/data to turn Larpfeed back on.,The file larpfeed-safe-mode couldn't be removed. Delete it from TikTok's folder under Android/data to turn Larpfeed back on.
 The frame couldn't be read. Try again.,The frame couldn't be read. Try again.
 The frame couldn't be saved. Try again.,The frame couldn't be saved. Try again.
 "The glass pill's edges bend the blurred video behind them, like the rim of real glass, and its colors come through a little richer. Needs Blur the video behind the bar and Android 13 and up.","The glass pill's edges bend the blurred video behind them, like the rim of real glass, and its colors come through a little richer. Needs Blur the video behind the bar and Android 13 and up."
@@ -2203,7 +2203,7 @@ This configuration has no fields that can be copied and changed safely on this b
 This file has no loaded values in it,This file has no loaded values in it
 This file isn't a loaded-values export,This file isn't a loaded-values export
 This gate type isn't supported,This gate type isn't supported
-"This key isn't in Hushfeed's list, so its type can't be checked. Reset the override.","This key isn't in Hushfeed's list, so its type can't be checked. Reset the override."
+"This key isn't in Larpfeed's list, so its type can't be checked. Reset the override.","This key isn't in Larpfeed's list, so its type can't be checked. Reset the override."
 "This key touches account safety. Forcing it can change login, region, payment or security checks.","This key touches account safety. Forcing it can change login, region, payment or security checks."
 "This line opens a rule and doesn't finish it: %1$s. Write two phrases as ""a"" & ""b"" for both, or ""a"" !& ""b"" for the first without the second.","This line opens a rule and doesn't finish it: %1$s. Write two phrases as ""a"" & ""b"" for both, or ""a"" !& ""b"" for the first without the second."
 This list is too long to preview here. Saving still follows the usual limit.,This list is too long to preview here. Saving still follows the usual limit.
@@ -2229,7 +2229,7 @@ TikTok account facts,TikTok account facts
 TikTok can't lock without a phone screen lock,TikTok can't lock without a phone screen lock
 "TikTok checks how it was signed and installed. This answers those checks the way the Play Store version would. Try it if follows or likes undo themselves after a refresh. It may not help, since TikTok has other checks.","TikTok checks how it was signed and installed. This answers those checks the way the Play Store version would. Try it if follows or likes undo themselves after a refresh. It may not help, since TikTok has other checks."
 TikTok closed during these saves,TikTok closed during these saves
-"TikTok closed three times within a minute of starting, so Hushfeed paused itself. Your settings stay as they are.","TikTok closed three times within a minute of starting, so Hushfeed paused itself. Your settings stay as they are."
+"TikTok closed three times within a minute of starting, so Larpfeed paused itself. Your settings stay as they are.","TikTok closed three times within a minute of starting, so Larpfeed paused itself. Your settings stay as they are."
 TikTok closed. What was recorded is saved to %1$s,TikTok closed. What was recorded is saved to %1$s
 TikTok closes at %1$s,TikTok closes at %1$s
 TikTok default,TikTok default
@@ -2311,7 +2311,7 @@ Try a different word or clear the search.,Try a different word or clear the sear
 Try a different word or clear the search. Switches from patches you didn't tick in Morphe Manager aren't listed.,Try a different word or clear the search. Switches from patches you didn't tick in Morphe Manager aren't listed.
 "Try again, or go back to TikTok.","Try again, or go back to TikTok."
 Turn Clear display on or off,Turn Clear display on or off
-Turn Hushfeed back on,Turn Hushfeed back on
+Turn Larpfeed back on,Turn Larpfeed back on
 Turn off double tap to react,Turn off double tap to react
 Turn off haptics,Turn off haptics
 Turn off push notifications,Turn off push notifications
@@ -2420,7 +2420,7 @@ Views range,Views range
 Visual search,Visual search
 Volume,Volume
 Wait a day to loosen the budget,Wait a day to loosen the budget
-"Wait a day to loosen the budget is on, so Hushfeed stays on","Wait a day to loosen the budget is on, so Hushfeed stays on"
+"Wait a day to loosen the budget is on, so Larpfeed stays on","Wait a day to loosen the budget is on, so Larpfeed stays on"
 Wait before hiding the controls.,Wait before hiding the controls.
 Wait for loading to finish,Wait for loading to finish
 Waiting for Wi-Fi,Waiting for Wi-Fi
@@ -2436,7 +2436,7 @@ What TikTok gets,What TikTok gets
 What gets sent each day.,What gets sent each day.
 What the message says.,What the message says.
 What's new,What's new
-"When Copy link gives a short vt.tiktok.com or vm.tiktok.com link, Hushfeed opens it once in the background to find the full video link and copies that instead. TikTok sees that visit, and it connects directly even when a proxy is on. Links you send to another app go out as they were.","When Copy link gives a short vt.tiktok.com or vm.tiktok.com link, Hushfeed opens it once in the background to find the full video link and copies that instead. TikTok sees that visit, and it connects directly even when a proxy is on. Links you send to another app go out as they were."
+"When Copy link gives a short vt.tiktok.com or vm.tiktok.com link, Larpfeed opens it once in the background to find the full video link and copies that instead. TikTok sees that visit, and it connects directly even when a proxy is on. Links you send to another app go out as they were.","When Copy link gives a short vt.tiktok.com or vm.tiktok.com link, Larpfeed opens it once in the background to find the full video link and copies that instead. TikTok sees that visit, and it connects directly even when a proxy is on. Links you send to another app go out as they were."
 "When TikTok is in dark mode, the list of collections you get by holding the Favorites button is dark too instead of white.","When TikTok is in dark mode, the list of collections you get by holding the Favorites button is dark too instead of white."
 "When TikTok requests this key, return the selected value below","When TikTok requests this key, return the selected value below"
 "When TikTok starts and decides the phone's language changed, it forgets the language you picked in its settings and follows the phone. With this on, your pick stays. Counts from TikTok's next start.","When TikTok starts and decides the phone's language changed, it forgets the language you picked in its settings and follows the phone. With this on, your pick stays. Counts from TikTok's next start."
@@ -2451,7 +2451,7 @@ When to send,When to send
 "When you open TikTok from its icon, the first video in the feed waits for one tap before it plays. A link, a notification or a shortcut opens as usual.","When you open TikTok from its icon, the first video in the feed waits for one tap before it plays. A link, a notification or a shortcut opens as usual."
 Where the time goes,Where the time goes
 "While Clear display is on, also hide the progress bar, the close button and the pause and speed buttons at the bottom. You can still drag along the bottom edge to move through the video. To leave Clear display, press and hold the video and tap Restore display, or pinch the screen.","While Clear display is on, also hide the progress bar, the close button and the pause and speed buttons at the bottom. You can still drag along the bottom edge to move through the video. To leave Clear display, press and hold the video and tap Restore display, or pinch the screen."
-"While diagnostic logging is on, a message names the part of Hushfeed that failed. Off keeps failures in the report only.","While diagnostic logging is on, a message names the part of Hushfeed that failed. Off keeps failures in the report only."
+"While diagnostic logging is on, a message names the part of Larpfeed that failed. Off keeps failures in the report only.","While diagnostic logging is on, a message names the part of Larpfeed that failed. Off keeps failures in the report only."
 "While you hold a video, slide left or right to step through the speed menu's speeds, and a bubble shows the one you're on. Your next hold starts there. Letting go goes back to normal. A pull-down lock keeps the speed you slid to. On a locked video, letting go locks the new speed.","While you hold a video, slide left or right to step through the speed menu's speeds, and a bubble shows the one you're on. Your next hold starts there. Letting go goes back to normal. A pull-down lock keeps the speed you slid to. On a locked video, letting go locks the new speed."
 White,White
 Who to message,Who to message
@@ -2495,13 +2495,13 @@ Your filters hid everything TikTok just sent. Most were %1$s.,Your filters hid e
 "Your operator's numeric code, like 310260.","Your operator's numeric code, like 310260."
 Your seen history changed before the import finished. Choose the file again.,Your seen history changed before the import finished. Choose the file again.
 Your settings,Your settings
-"Zero means no limit. Counts the videos Hushfeed advanced past for you, not the ones you swiped yourself, and starts again when the feed is rebuilt or you change this number.","Zero means no limit. Counts the videos Hushfeed advanced past for you, not the ones you swiped yourself, and starts again when the feed is rebuilt or you change this number."
+"Zero means no limit. Counts the videos Larpfeed advanced past for you, not the ones you swiped yourself, and starts again when the feed is rebuilt or you change this number.","Zero means no limit. Counts the videos Larpfeed advanced past for you, not the ones you swiped yourself, and starts again when the feed is rebuilt or you change this number."
 "Zero means the way out of the hold is always there. Any other number is how many times a day it works. Once they're used up, the hold stays until the day starts over. Ignored while the budget is locked, which removes the way out.","Zero means the way out of the hold is always there. Any other number is how many times a day it works. Once they're used up, the hold stays until the day starts over. Ignored while the budget is locked, which removes the way out."
 "Zero shows the notice and leaves the feed alone. Anything else covers the feed for that many minutes once a budget is reached. Messages, profiles and search keep working, and nothing in the feed is thrown away.","Zero shows the notice and leaves the feed alone. Anything else covers the feed for that many minutes once a budget is reached. Messages, profiles and search keep working, and nothing in the feed is thrown away."
 "Zero switches this off. A short reminder after that many minutes of watching, and again after the same again. Time on messages, a profile or search doesn't count, and nothing is shown while the feed is on hold.","Zero switches this off. A short reminder after that many minutes of watching, and again after the same again. Time on messages, a profile or search doesn't count, and nothing is shown while the feed is on hold."
 "Zero switches this off. After that many minutes with no touch on the screen, the video stops and TikTok goes to the background, for when you fall asleep watching. Any touch starts the wait over.","Zero switches this off. After that many minutes with no touch on the screen, the video stops and TikTok goes to the background, for when you fall asleep watching. Any touch starts the wait over."
 "Zero switches this off. Count the minutes the player spends running in the feed. Time on messages, a profile or search doesn't count.","Zero switches this off. Count the minutes the player spends running in the feed. Time on messages, a profile or search doesn't count."
-"Zero switches this off. Counts every video that comes up in the feed and tells you when you reach the limit. Separate from the auto-advance session limit under Playback, which counts only videos Hushfeed moved past for you.","Zero switches this off. Counts every video that comes up in the feed and tells you when you reach the limit. Separate from the auto-advance session limit under Playback, which counts only videos Hushfeed moved past for you."
+"Zero switches this off. Counts every video that comes up in the feed and tells you when you reach the limit. Separate from the auto-advance session limit under Playback, which counts only videos Larpfeed moved past for you.","Zero switches this off. Counts every video that comes up in the feed and tells you when you reach the limit. Separate from the auto-advance session limit under Playback, which counts only videos Larpfeed moved past for you."
 autoplay auto play,autoplay auto play
 collapsed,collapsed
 debug debugging logs logging,debug debugging logs logging

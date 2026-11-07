@@ -192,20 +192,20 @@ class CustomLauncherIconTest {
     }
 
     @Test
-    fun `the notification icon keeps TikTok's note unless Hushfeed's H is picked`() {
+    fun `the notification icon keeps TikTok's note unless Larpfeed's H is picked`() {
         val option = customLauncherIconPatch.options["notificationIcon"]
         assertEquals(NotificationIcon.TIKTOK.key, option.default)
         assertFalse("older saved options have no value for it", option.required)
         assertEquals(NotificationIcon.TIKTOK, notificationIcon(null))
         assertEquals(NotificationIcon.TIKTOK, notificationIcon(" "))
-        assertEquals(NotificationIcon.HUSHFEED, notificationIcon("hushfeed"))
-        assertEquals(NotificationIcon.HUSHFEED, notificationIcon("Hushfeed's H"))
+        assertEquals(NotificationIcon.LARPFEED, notificationIcon("larpfeed"))
+        assertEquals(NotificationIcon.LARPFEED, notificationIcon("Larpfeed's H"))
         assertThrows(PatchException::class.java) { notificationIcon("purple") }
     }
 
     @Test
-    fun `Hushfeed's H is one white shape inside a status bar icon's middle`() {
-        val vector = parse(HUSHFEED_STATUS_ICON).documentElement
+    fun `Larpfeed's H is one white shape inside a status bar icon's middle`() {
+        val vector = parse(LARPFEED_STATUS_ICON).documentElement
         assertEquals("vector", vector.tagName)
         assertEquals("24dp", vector.getAttribute("android:width"))
         assertEquals("24", vector.getAttribute("android:viewportWidth"))

@@ -1,6 +1,6 @@
 /*
- * Copyright 2026 Hushfeed contributors
- * https://github.com/SysAdminDoc/hushfeed
+ * Copyright 2026 Larpfeed contributors
+ * https://github.com/SysAdminDoc/larpfeed
  *
  * Built on icysymmetra/tiktok-patches-for-morphe (GPL-3.0).
  */
@@ -67,7 +67,7 @@ val inboxFilterPatch = bytecodePatch(
         "and the stories row, plus call buttons and suggested replies in chats. Each has its own " +
         "switch. Also offers search in loaded Activity notifications and TikTok's Main, Requests, " +
         "Unread and Starred tabs on any account, and a way to rebuild message search. Starts off. " +
-        "Turn it on in Hushfeed settings > Inbox.",
+        "Turn it on in Larpfeed settings > Inbox.",
 ) {
     category("Inbox")
     dependsOn(settingsPatch, sharedExtensionPatch)

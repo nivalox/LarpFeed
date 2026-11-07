@@ -1,6 +1,6 @@
 /*
- * Copyright 2026 Hushfeed contributors
- * https://github.com/SysAdminDoc/hushfeed
+ * Copyright 2026 Larpfeed contributors
+ * https://github.com/SysAdminDoc/larpfeed
  */
 package app.morphe.extension.tiktok.share;
 
@@ -91,7 +91,7 @@ public final class ShortLinkExpander {
     static final Resolver NETWORK = LinkResolver::finalUrl;
     /** Where a short link is opened. Tests open it in place. Refuses when no thread starts. */
     static Executor opener = task -> {
-        if (!Utils.runOnOwnThread("Hushfeed short link", task)) throw new RejectedExecutionException("no thread");
+        if (!Utils.runOnOwnThread("Larpfeed short link", task)) throw new RejectedExecutionException("no thread");
     };
     /** How many opened short links are remembered, with where they led. */
     static final int REMEMBERED = 16;
@@ -264,7 +264,7 @@ public final class ShortLinkExpander {
     /**
      * True for a listener whose wait has ended, which is then taken off the clipboard it was put
      * on without reading the clip. Each listener does this itself because Utils' context, and the
-     * clipboard manager it gives, can change between waits (a new MainActivity with Hushfeed's
+     * clipboard manager it gives, can change between waits (a new MainActivity with Larpfeed's
      * language set), and a manager only takes off listeners it was given.
      */
     private static boolean ended(ClipboardManager clipboard, String copied,

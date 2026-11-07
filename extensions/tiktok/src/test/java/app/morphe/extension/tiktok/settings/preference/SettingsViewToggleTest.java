@@ -1,6 +1,6 @@
 /*
- * Copyright 2026 Hushfeed contributors
- * https://github.com/SysAdminDoc/hushfeed
+ * Copyright 2026 Larpfeed contributors
+ * https://github.com/SysAdminDoc/larpfeed
  */
 package app.morphe.extension.tiktok.settings.preference;
 
@@ -29,7 +29,7 @@ import android.widget.ListView;
 import android.widget.TextView;
 
 import app.morphe.extension.shared.Utils;
-import app.morphe.extension.shared.settings.HushfeedPause;
+import app.morphe.extension.shared.settings.LarpfeedPause;
 import app.morphe.extension.shared.settings.preference.AbstractPreferenceFragment;
 import app.morphe.extension.tiktok.SettingsContextRule;
 import app.morphe.extension.tiktok.settings.Settings;
@@ -96,7 +96,7 @@ public class SettingsViewToggleTest {
 
     @After public void restore() throws Exception {
         if (owner != null) owner.close();
-        Method reset = HushfeedPause.class.getDeclaredMethod("resetForTests");
+        Method reset = LarpfeedPause.class.getDeclaredMethod("resetForTests");
         reset.setAccessible(true);
         reset.invoke(null);
         Settings.SETTINGS_AS_LIST.resetToDefault();
@@ -260,9 +260,9 @@ public class SettingsViewToggleTest {
 
     @Test public void theListViewComesBackOnTheNextOpenEvenWhilePaused() throws Exception {
         Settings.SETTINGS_AS_LIST.save(true);
-        Method pause = HushfeedPause.class.getDeclaredMethod("pauseForTests", HushfeedPause.Reason.class);
+        Method pause = LarpfeedPause.class.getDeclaredMethod("pauseForTests", LarpfeedPause.Reason.class);
         pause.setAccessible(true);
-        pause.invoke(null, HushfeedPause.Reason.SWITCH);
+        pause.invoke(null, LarpfeedPause.Reason.SWITCH);
         openHome();
         assertEquals("Show settings by category",
                 String.valueOf(keyed(SettingsViewTogglePreference.KEY).getTitle()));

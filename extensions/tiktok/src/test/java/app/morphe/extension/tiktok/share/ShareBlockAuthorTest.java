@@ -1,6 +1,6 @@
 /*
- * Copyright 2026 Hushfeed contributors
- * https://github.com/SysAdminDoc/hushfeed
+ * Copyright 2026 Larpfeed contributors
+ * https://github.com/SysAdminDoc/larpfeed
  */
 package app.morphe.extension.tiktok.share;
 
@@ -166,7 +166,7 @@ public class ShareBlockAuthorTest {
         assertEquals(1, constructed);
         assertEquals("Block this creator", ShareBlockAuthor.label(finished.get(2)));
         assertTrue(ShareActionCatalog.entries(ShareSurface.VIDEO).stream().anyMatch(entry ->
-                entry.key.equals("hushfeed block author") && entry.label.equals("Block this creator")));
+                entry.key.equals("larpfeed block author") && entry.label.equals("Block this creator")));
     }
 
     @Test public void blocksThePackageAuthorAndUndoKeepsThatIdentityWithoutAdvancingTheFeed() {

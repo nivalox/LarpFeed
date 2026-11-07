@@ -387,7 +387,7 @@ public class LiveControlsTest {
      * #94: the For You LIVE preview's Service+ row showed under the next LIVE's name. A row still
      * showing as it's bound to a LIVE without a Service+ item is hidden first; a row TikTok has
      * hidden, or a LIVE that has its own Service+ item, is left to TikTok, and so is everything
-     * while Hushfeed is paused.
+     * while Larpfeed is paused.
      */
     @Test public void aServicePlusRowLeftFromTheLastLiveIsHidden() {
         Row showing = new Row(true);

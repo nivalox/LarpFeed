@@ -1,6 +1,6 @@
 /*
- * Copyright 2026 Hushfeed contributors
- * https://github.com/SysAdminDoc/hushfeed
+ * Copyright 2026 Larpfeed contributors
+ * https://github.com/SysAdminDoc/larpfeed
  *
  * Built on icysymmetra/tiktok-patches-for-morphe (GPL-3.0).
  */
@@ -92,7 +92,7 @@ val keepUnsentMessagesPatch = bytecodePatch(
     name = "Keep unsent messages",
     description = "Keeps a message in your chat when the other person unsends it, instead of " +
         "removing it, and can mark it as unsent. A button removes the kept messages. Messages you " +
-        "unsend yourself are still removed. Starts off. Turn it on in Hushfeed settings > Inbox.",
+        "unsend yourself are still removed. Starts off. Turn it on in Larpfeed settings > Inbox.",
 ) {
     category("Inbox")
     dependsOn(settingsPatch, sharedExtensionPatch)

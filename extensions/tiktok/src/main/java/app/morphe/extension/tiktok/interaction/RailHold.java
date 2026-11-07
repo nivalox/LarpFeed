@@ -1,6 +1,6 @@
 /*
- * Copyright 2026 Hushfeed contributors
- * https://github.com/SysAdminDoc/hushfeed
+ * Copyright 2026 Larpfeed contributors
+ * https://github.com/SysAdminDoc/larpfeed
  */
 package app.morphe.extension.tiktok.interaction;
 
@@ -29,7 +29,7 @@ import app.morphe.extension.tiktok.settings.Settings;
  * Share's by wrapping the listeners TikTok sets.
  *
  * <p>Only a press the hold check let through skips the menu, and only while TikTok still means to
- * hold it. The check turns a press down before it asks the buttons when Hushfeed has the edge for
+ * hold it. The check turns a press down before it asks the buttons when Larpfeed has the edge for
  * a seek or the long press for an action of its own, and when TikTok won't speed up at all. TikTok
  * drops a hold it hasn't started yet when the finger moves off the spot or a second finger lands,
  * and ends every press on release, and each of those forgets the pass. The menu then opens as it

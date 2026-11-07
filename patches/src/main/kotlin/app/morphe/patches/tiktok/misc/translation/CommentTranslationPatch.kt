@@ -166,7 +166,7 @@ private fun ClassDef.holdsResultsAndTask(): Boolean {
 val commentTranslationPatch = bytecodePatch(
     name = "Translate comments",
     description = "Translates comments as they load, using TikTok's own translator, so you " +
-        "don't have to tap Translate on each one. Starts off. Turn it on in Hushfeed settings > " +
+        "don't have to tap Translate on each one. Starts off. Turn it on in Larpfeed settings > " +
         "Comments, where more rows list languages TikTok's automatic translation should leave alone, " +
         "keep videos in the language they were made in, pick the language translations come out in, " +
         "and add TikTok's translate button beside the comment count.",

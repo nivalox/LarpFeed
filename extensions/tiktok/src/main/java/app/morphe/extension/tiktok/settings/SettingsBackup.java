@@ -1,6 +1,6 @@
 /*
- * Copyright 2026 Hushfeed contributors
- * https://github.com/SysAdminDoc/hushfeed
+ * Copyright 2026 Larpfeed contributors
+ * https://github.com/SysAdminDoc/larpfeed
  *
  * Built on icysymmetra/tiktok-patches-for-morphe (GPL-3.0).
  */
@@ -39,7 +39,7 @@ import org.json.JSONObject;
 public final class SettingsBackup {
     public static final int MAX_BYTES = 2 * 1024 * 1024;
     /** The format tag written today, and the one backups made before the rename carry. */
-    public static final String FORMAT = "hushfeed-settings";
+    public static final String FORMAT = "larpfeed-settings";
     /** The newest backup shape this build reads; a file declaring more is refused, absent means 1. */
     static final int SCHEMA = 1;
     public static final String LEGACY_FORMAT = "metra-settings";
@@ -55,7 +55,7 @@ public final class SettingsBackup {
      * Why a backup was refused.
      *
      * <p>Every one of these used to reach the user as "The settings backup was rejected", so a
-     * truncated download, a file from a newer Hushfeed and a perfectly good backup all read the
+     * truncated download, a file from a newer Larpfeed and a perfectly good backup all read the
      * same and there was nothing to act on.
      */
     public enum Reason {
@@ -600,7 +600,7 @@ public final class SettingsBackup {
     }
 
     private static AtomicFile currentUndoFile(Context context) {
-        return new AtomicFile(new File(context.getFilesDir(), "hushfeed-settings-undo.json"));
+        return new AtomicFile(new File(context.getFilesDir(), "larpfeed-settings-undo.json"));
     }
 
     private static AtomicFile legacyUndoFile(Context context) {
@@ -636,7 +636,7 @@ public final class SettingsBackup {
         }
         String format = root.optString("format");
         if (!(FORMAT.equals(format) || LEGACY_FORMAT.equals(format))) {
-            throw new RejectedBackup(Reason.FORMAT, "Not a Hushfeed settings backup");
+            throw new RejectedBackup(Reason.FORMAT, "Not a Larpfeed settings backup");
         }
         // Absent is the first schema: a file written before the key existed still reads. Newer
         // is refused by both numbers, since applying a shape this build never saw field by field

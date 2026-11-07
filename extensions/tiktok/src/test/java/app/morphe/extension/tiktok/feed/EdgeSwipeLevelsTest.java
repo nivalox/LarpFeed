@@ -636,7 +636,7 @@ public class EdgeSwipeLevelsTest {
     }
 
     @Test
-    public void brightnessGoesBackWhileHushfeedIsPaused() {
+    public void brightnessGoesBackWhileLarpfeedIsPaused() {
         dragBrightness();
         setPaused(true);
         EdgeSwipeLevels.sync(activity);
@@ -646,7 +646,7 @@ public class EdgeSwipeLevelsTest {
         Below below = new Below();
         send(gesture, below, MotionEvent.ACTION_DOWN, 5f, 600f);
         send(gesture, below, MotionEvent.ACTION_MOVE, 5f, 300f);
-        assertFalse("paused Hushfeed takes nothing", gesture.taken());
+        assertFalse("paused Larpfeed takes nothing", gesture.taken());
     }
 
     @Test

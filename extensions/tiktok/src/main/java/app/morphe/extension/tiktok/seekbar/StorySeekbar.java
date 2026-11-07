@@ -1,6 +1,6 @@
 /*
- * Copyright 2026 Hushfeed contributors
- * https://github.com/SysAdminDoc/hushfeed
+ * Copyright 2026 Larpfeed contributors
+ * https://github.com/SysAdminDoc/larpfeed
  */
 package app.morphe.extension.tiktok.seekbar;
 
@@ -42,7 +42,7 @@ import app.morphe.extension.tiktok.settings.Settings;
  * it. It only goes ahead while the cell still shows the story the line was built for, that
  * controller's last tick was for it, and the controller's current id says the same.
  *
- * <p>Off, or with Hushfeed paused (every switch then answers off), the hooks only remember which
+ * <p>Off, or with Larpfeed paused (every switch then answers off), the hooks only remember which
  * view and story each cell has, and the next tick takes out any line already there.
  */
 @SuppressWarnings("unused")

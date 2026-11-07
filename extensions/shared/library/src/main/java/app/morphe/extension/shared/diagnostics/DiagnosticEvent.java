@@ -29,7 +29,7 @@ public final class DiagnosticEvent {
     };
 
     /**
-     * An instant in the one form every Hushfeed report writes, ISO 8601 in UTC with
+     * An instant in the one form every Larpfeed report writes, ISO 8601 in UTC with
      * milliseconds, from this thread's formatter. The log, the report header and the crash
      * capture each built their own formatter for it on every call.
      */

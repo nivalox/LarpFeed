@@ -1,6 +1,6 @@
 /*
- * Copyright 2026 Hushfeed contributors
- * https://github.com/SysAdminDoc/hushfeed
+ * Copyright 2026 Larpfeed contributors
+ * https://github.com/SysAdminDoc/larpfeed
  */
 package app.morphe.patches.tiktok.interaction.gesture
 
@@ -81,7 +81,7 @@ internal object MainPagerTouchFingerprint : Fingerprint(
 val swipeLeftPatch = bytecodePatch(
     name = "Swipe-left controls",
     description = "Lets a left swipe on a video open its comments or do nothing, instead of " +
-        "opening the creator's profile. Starts off. Pick an action in Hushfeed settings > Feed " +
+        "opening the creator's profile. Starts off. Pick an action in Larpfeed settings > Feed " +
         "screen.",
 ) {
     category("Interaction")

@@ -63,7 +63,7 @@ public class SettingsHeadingFitTest {
                     View.MeasureSpec.makeMeasureSpec(SettingsUi.dp(activity, 800), View.MeasureSpec.EXACTLY));
             root.layout(0, 0, root.getMeasuredWidth(), root.getMeasuredHeight());
 
-            TextView view = header.findViewWithTag("hushfeed_page_title");
+            TextView view = header.findViewWithTag("larpfeed_page_title");
             assertNotNull(view);
             String where = title + " at " + hostDp + "dp";
             assertEquals(where + " lost text", title, view.getText().toString());

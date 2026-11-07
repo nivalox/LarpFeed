@@ -26,7 +26,7 @@ Puts a save button in the sheet a story's Share button opens. It saves the story
 Save a story from its share sheet	Hikayeyi paylaşım menüsünden kaydet
 Save cover	Kapağı kaydet
 Save cover button in the share sheet	Paylaşım menüsünde Kapağı kaydet düğmesi
-Saved videos show the @username and the first line of the caption in the bottom left corner. The phone encodes the whole video again to do it, so saving takes longer. Applies to saves made by Hushfeed.	Kaydedilen videolarda sol alt köşede @kullanıcı adı ve açıklamanın ilk satırı görünür. Bunun için telefon videonun tamamını yeniden kodlar, bu yüzden kaydetmek daha uzun sürer. Hushfeed'in yaptığı kayıtlar için geçerlidir.
+Saved videos show the @username and the first line of the caption in the bottom left corner. The phone encodes the whole video again to do it, so saving takes longer. Applies to saves made by Larpfeed.	Kaydedilen videolarda sol alt köşede @kullanıcı adı ve açıklamanın ilk satırı görünür. Bunun için telefon videonun tamamını yeniden kodlar, bu yüzden kaydetmek daha uzun sürer. Larpfeed'in yaptığı kayıtlar için geçerlidir.
 Sound format	Ses biçimi
 Speed up this video, double tap again to undo	Bu videoyu hızlandır, geri almak için tekrar çift dokun
 Only a watermarked copy existed. Saved to %1$s	Yalnızca filigranlı kopya vardı. Kaydedildi: %1$s
@@ -43,7 +43,7 @@ Writing the caption on the video: %1$s	Açıklama videonun üzerine yazılıyor:
 Your TikTok account changed. Choose the file again for this account.	TikTok hesabınız değişti. Bu hesap için dosyayı yeniden seçin.
 Reading watch history	İzleme geçmişi okunuyor
 Importing watch history	İzleme geçmişi içe aktarılıyor
-Reopen Hushfeed settings, then choose the file	Hushfeed ayarlarını yeniden açıp dosyayı seçin
+Reopen Larpfeed settings, then choose the file	Larpfeed ayarlarını yeniden açıp dosyayı seçin
 Couldn't start the import. Try again in a moment.	İçe aktarma başlatılamadı. Biraz sonra yeniden deneyin.
 Your seen history changed before the import finished. Choose the file again.	İçe aktarma bitmeden izleme geçmişiniz değişti. Dosyayı yeniden seçin.
 Couldn't import watch history. Your saved history is unchanged.	İzleme geçmişi içe aktarılamadı. Kayıtlı geçmişiniz değişmedi.
@@ -96,7 +96,7 @@ Turned off %1$d overrides. Check them for TikTok %2$s.	%1$d geçersiz kılma kap
 %1$s videos left	%1$s video kaldı
 %1$s videos were recorded before each account kept its own list. They hide nothing until you add them here.	%1$s video, her hesap kendi listesini tutmadan önce kaydedildi. Onları buraya ekleyene kadar hiçbir şeyi gizlemezler.
 %1$s was rejected. %2$s	%1$s reddedildi. %2$s
-%1$s · Hushfeed's list only	%1$s · yalnızca Hushfeed listesinde
+%1$s · Larpfeed's list only	%1$s · yalnızca Larpfeed listesinde
 %1$s · current value only	%1$s · yalnızca geçerli değer
 %1$s · declared by TikTok	%1$s · TikTok tarafından tanımlı
 %1$s · declared by TikTok, with a current value	%1$s · TikTok tarafından tanımlı, geçerli değeri var
@@ -177,7 +177,7 @@ Stickers can't be saved to the folder in that file, so your sticker folder was k
 Stop TikTok's speed tests	TikTok'un hız testlerini durdur
 Skipped a creator pattern that could stall: %1$s	Takılabilecek üretici kalıbı atlandı: %1$s
 That creator pattern could stall the feed, so it wasn't added: %1$s	Bu içerik üreticisi kalıbı akışı kilitleyebileceği için eklenmedi: %1$s
-This key isn't in Hushfeed's list, so its type can't be checked. Reset the override.	Bu anahtar Hushfeed listesinde yok, bu yüzden türü denetlenemiyor. Geçersiz kılmayı sıfırla.
+This key isn't in Larpfeed's list, so its type can't be checked. Reset the override.	Bu anahtar Larpfeed listesinde yok, bu yüzden türü denetlenemiyor. Geçersiz kılmayı sıfırla.
 This key touches account safety. Forcing it can change login, region, payment or security checks.	Bu anahtar hesap güvenliğine dokunur. Zorlamak giriş, bölge, ödeme veya güvenlik denetimlerini değiştirebilir.
 Activity	Etkinlik
 Activity center (PIA)	Etkinlik merkezi (PIA)
@@ -295,7 +295,7 @@ Clear all Lab data (overrides, switch, recordings)	Tüm Lab verilerini temizle (
 Clear all suggested accounts	Önerilen tüm hesapları temizle
 Clears the recent events, saved crash reports, a recorded screen layout and the Hook status results above.	Son olayları, kayıtlı çökme raporlarını, kaydedilmiş bir ekran düzenini ve yukarıdaki Hook status sonuçlarını temizler.
 Record a screen's layout	Bir ekranın düzenini kaydet
-Tap, then go to the screen with what you want hidden. After %1$d seconds Hushfeed records how that screen is built, without any of its text, for the diagnostic report.	Dokun, sonra gizlemek istediğin şeyin olduğu ekrana git. %1$d saniye sonra Hushfeed o ekranın nasıl kurulduğunu, metnini almadan, tanılama raporu için kaydeder.
+Tap, then go to the screen with what you want hidden. After %1$d seconds Larpfeed records how that screen is built, without any of its text, for the diagnostic report.	Dokun, sonra gizlemek istediğin şeyin olduğu ekrana git. %1$d saniye sonra Larpfeed o ekranın nasıl kurulduğunu, metnini almadan, tanılama raporu için kaydeder.
 TikTok sometimes tests your phone's speed in a background process that can use a lot of memory. This stops that test from starting. One already running ends when TikTok restarts.	TikTok bazen telefonunun hızını çok bellek kullanabilen bir arka plan işleminde test eder. Bu, testin başlamasını engeller. Zaten çalışan bir test, TikTok yeniden başlayınca biter.
 Waiting to record. Go to the screen you want recorded.	Kayıt bekleniyor. Kaydedilmesini istediğin ekrana git.
 A screen's layout is recorded. Export the diagnostic report to send it, or tap to record another.	Bir ekran düzeni kaydedildi. Göndermek için tanılama raporunu dışa aktar ya da başka birini kaydetmek için dokun.
@@ -421,7 +421,7 @@ Diagnostic report copied to the clipboard	Tanılama raporu panoya kopyalandı
 Diagnostics	Tanılama
 Disable	Devre dışı bırak
 Stop analytics and tracking	Analitiği ve izlemeyi durdur
-Long-press Home for Hushfeed settings	Hushfeed ayarları için Ana Sayfa'ya basılı tut
+Long-press Home for Larpfeed settings	Larpfeed ayarları için Ana Sayfa'ya basılı tut
 Press and hold the Home tab to open these settings. A tap on Home works as before.	Bu ayarları açmak için Ana Sayfa sekmesine basılı tut. Ana Sayfa'ya dokunmak eskisi gibi çalışır.
 Search instead of Home	Ana Sayfa yerine Arama
 The Home tab becomes a search button. Its icon and name say Search, and a tap opens TikTok's search instead of For You. TikTok starts on Inbox, or on Profile when Inbox is hidden, so the feed doesn't play when you open it.	Ana Sayfa sekmesi bir arama düğmesine dönüşür. Simgesi ve adı Arama olur ve dokunmak Sana Özel yerine TikTok aramasını açar. TikTok Gelen Kutusu'nda, Gelen Kutusu gizliyse Profil'de açılır, böylece açtığında akış oynamaz.
@@ -449,7 +449,7 @@ Drag to move, release to place	Taşımak için sürükle, yerleştirmek için b�
 Drama and Series	Drama ve Seri
 Shows TikTok's text in your phone's font instead of TikTok Sans. Icons and gift animations keep their own fonts. Restart TikTok to see the change.	TikTok'un yazısını TikTok Sans yerine telefonunun yazı tipiyle gösterir. Simgeler ve hediye animasyonları kendi yazı tiplerini korur. Değişikliği görmek için TikTok'u yeniden başlat.
 Hide the notification saying somebody new followed you before it reaches the drawer. Every other notification is left alone, and the follower still appears in the Inbox.	Birinin seni takip etmeye başladığını söyleyen bildirimi bildirim paneline ulaşmadan gizle. Diğer tüm bildirimlere dokunulmaz ve takipçi yine Gelen Kutusu'nda görünür.
-Each area shows how many of the things Hushfeed looks for were found in this TikTok and how many are missing.	Her alan, Hushfeed'in aradığı şeylerden kaçının bu TikTok'ta bulunduğunu ve kaçının eksik olduğunu gösterir.
+Each area shows how many of the things Larpfeed looks for were found in this TikTok and how many are missing.	Her alan, Larpfeed'in aradığı şeylerden kaçının bu TikTok'ta bulunduğunu ve kaçının eksik olduğunu gösterir.
 Easier comment likes	Daha kolay yorum beğenme
 Empty	Boş
 Empty the menu that opens when you press and hold TikTok's icon on the home screen. Turning this off asks TikTok to build them again. Tapping the icon still opens the app, and a shortcut you pinned yourself stays where you put it.	Ana ekranda TikTok simgesine basılı tuttuğunda açılan menüyü boşalt. Bunu kapatırsan TikTok'tan kısayolları yeniden oluşturması istenir. Simgeye dokunmak yine uygulamayı açar ve kendi sabitlediğin bir kısayol koyduğun yerde kalır.
@@ -550,7 +550,7 @@ Hide Series	Serileri gizle
 Hide TikTok Shop	TikTok Shop'u gizle
 Hide TikTok Shop posts from the feed, and the shop buttons under captions.	TikTok Shop gönderilerini akıştan, mağaza düğmelerini de açıklamaların altından gizle.
 Shop order updates and coupon messages no longer take up rows in the Inbox. Your orders are unchanged.	Mağaza sipariş güncellemeleri ve kupon mesajları artık Gelen Kutusu'nda satır kaplamaz. Siparişlerin değişmez.
-Hide TikTok's "Search: ..." banner above the comment count. This doesn't hide the comments or Hushfeed's comment-search box.	Yorum sayısının üzerindeki TikTok'un "Ara: ..." bandını gizle. Bu, yorumları veya Hushfeed'in yorum arama kutusunu gizlemez.
+Hide TikTok's "Search: ..." banner above the comment count. This doesn't hide the comments or Larpfeed's comment-search box.	Yorum sayısının üzerindeki TikTok'un "Ara: ..." bandını gizle. Bu, yorumları veya Larpfeed'in yorum arama kutusunu gizlemez.
 Hide the quick emoji row and automatic sticker suggestions that appear while you type. The emoji and sticker buttons still work.	Yazarken görünen hızlı emoji satırını ve otomatik çıkartma önerilerini gizle. Emoji ve çıkartma düğmeleri çalışmaya devam eder.
 Hide activity	Etkinliği gizle
 Hide activity status	Etkinlik durumunu gizle
@@ -683,9 +683,9 @@ Hold the feed after the budget	Bütçe dolunca akışı beklet
 Home	Ana Sayfa
 Hook status	Kanca durumu
 How far each edge press moves the video.	Kenara her basışın videoyu ne kadar sardığı.
-Hushfeed can't read the creator pattern %1$s	Hushfeed %1$s üretici kalıbını okuyamıyor
+Larpfeed can't read the creator pattern %1$s	Larpfeed %1$s üretici kalıbını okuyamıyor
 Hid a CAPTCHA. Stuck? Turn off Hide CAPTCHA popups.	Gizlendi. Sorun varsa kapat: CAPTCHA pencerelerini gizle.
-Hushfeed is active	Hushfeed etkin
+Larpfeed is active	Larpfeed etkin
 Shows the Duet and Stitch options even when the creator turned them off. TikTok may still refuse to accept the result.	İçerik üreticisi kapatmış olsa bile Düet ve Stitch seçeneklerini gösterir. TikTok sonucu yine de kabul etmeyebilir.
 Shows Add to Story in the share sheet and on stories even when the creator turned off content reuse. TikTok may still refuse to post it.	İçerik üreticisi içeriğin yeniden kullanılmasını kapatmış olsa bile paylaşım menüsünde ve hikâyelerde Hikâyeye Ekle seçeneğini gösterir. TikTok paylaşımı yine de reddedebilir.
 Import finished	İçe aktarma tamamlandı
@@ -863,8 +863,8 @@ Open profile and story website links in your system browser instead of TikTok's 
 Open the feed anyway	Akışı yine de aç
 Open the feed anyway, %1$d left today	Akışı yine de aç, bugün %1$d hak kaldı
 Open the feed anyway, the last time today	Akışı yine de aç, bugün son kez
-Open the feed once so Hushfeed can see which bottom tabs TikTok loaded.	Hushfeed'in TikTok'un hangi alt sekmeleri yüklediğini görebilmesi için akışı bir kez aç.
-Open the feed once so Hushfeed can see which tabs TikTok loaded.	Hushfeed'in TikTok'un hangi sekmeleri yüklediğini görebilmesi için akışı bir kez aç.
+Open the feed once so Larpfeed can see which bottom tabs TikTok loaded.	Larpfeed'in TikTok'un hangi alt sekmeleri yüklediğini görebilmesi için akışı bir kez aç.
+Open the feed once so Larpfeed can see which tabs TikTok loaded.	Larpfeed'in TikTok'un hangi sekmeleri yüklediğini görebilmesi için akışı bir kez aç.
 Open the profile again and try once more	Profili yeniden aç ve bir kez daha dene
 Open the story again and try once more	Hikayeyi yeniden aç ve bir kez daha dene
 Open TikTok on	TikTok'u şu sayfada aç
@@ -986,7 +986,7 @@ Saved photos, covers, story photos and stickers that don't move are the exact fi
 Save field values	Alan değerlerini kaydet
 Save full report	Raporun tamamını kaydet
 Save media	Medyayı kaydet
-Saves your Hushfeed settings and Feature Gate Lab rules to a file.	Hushfeed ayarlarını ve Feature Gate Lab kurallarını bir dosyaya kaydeder.
+Saves your Larpfeed settings and Feature Gate Lab rules to a file.	Larpfeed ayarlarını ve Feature Gate Lab kurallarını bir dosyaya kaydeder.
 Save subtitles beside videos	Altyazıları videoların yanına kaydet
 Saves TikTok's latest crash report on this phone so it can go in the diagnostic report.	TikTok'un son çökme raporunu bu telefona kaydeder, böylece tanılama raporuna eklenebilir.
 Save the original sound	Orijinal sesi kaydet
@@ -1162,7 +1162,7 @@ Tap the like heart twice within %1$d seconds. Removing a like stays immediate.	B
 Tap to start the feed	Akışı başlatmak için dokun
 Technical details	Teknik ayrıntılar
 Technical details, %1$s	Teknik ayrıntılar, %1$s
-That backup was written by a newer Hushfeed than this one. Nothing was altered.	Bu yedek, bundan daha yeni bir Hushfeed sürümüyle yazılmış. Hiçbir şey değiştirilmedi.
+That backup was written by a newer Larpfeed than this one. Nothing was altered.	Bu yedek, bundan daha yeni bir Larpfeed sürümüyle yazılmış. Hiçbir şey değiştirilmedi.
 That creator is already in the list	Bu içerik üreticisi zaten listede
 Skipped a creator pattern that's too long: %1$s	Çok uzun üretici kalıbı atlandı: %1$s
 That creator pattern is too long, so it wasn't added: %1$s	Bu içerik üreticisi kalıbı çok uzun olduğu için eklenmedi: %1$s
@@ -1172,20 +1172,20 @@ That file is too large to be a settings backup. Nothing was altered.	Bu dosya bi
 That folder name has a character Android doesn't allow. Use letters, numbers, spaces or dashes.	Bu klasör adında Android'in izin vermediği bir karakter var. Harf, rakam, boşluk veya kısa çizgi kullan.
 That is %1$d minutes today	Bugün %1$d dakika etti
 That is %1$d videos today	Bugün %1$d video etti
-That isn't a Hushfeed settings backup. Nothing was altered.	Bu bir Hushfeed ayar yedeği değil. Hiçbir şey değiştirilmedi.
+That isn't a Larpfeed settings backup. Nothing was altered.	Bu bir Larpfeed ayar yedeği değil. Hiçbir şey değiştirilmedi.
 That isn't an app name. Try something like com.example.downloader, or leave the box empty to keep saving in TikTok.	Bu bir uygulama adı değil. com.example.downloader gibi bir şey dene ya da TikTok'a kaydetmeye devam etmek için kutuyu boş bırak.
 That is one minute today	Bugün bir dakika etti
 That is one video today	Bugün bir video etti
 That list has too many entries. Keep it to %1$s or fewer.	Bu listede çok fazla giriş var. %1$s veya daha az olsun.
 That list is too large. Keep it to %1$s KB or less.	Bu liste çok büyük. %1$s KB veya daha küçük olsun.
 That preset isn't recognized. Choose another.	Bu hazır ayar tanınmıyor. Başka birini seç.
-That settings backup contains a feed rule list larger than Hushfeed accepts. Nothing was altered.	Bu ayar yedeği, Hushfeed'in kabul ettiğinden büyük bir akış kuralı listesi içeriyor. Hiçbir şey değiştirilmedi.
-That settings backup holds a value Hushfeed can't read. Nothing was altered.	Bu ayar yedeğinde Hushfeed'in okuyamadığı bir değer var. Hiçbir şey değiştirilmedi.
+That settings backup contains a feed rule list larger than Larpfeed accepts. Nothing was altered.	Bu ayar yedeği, Larpfeed'in kabul ettiğinden büyük bir akış kuralı listesi içeriyor. Hiçbir şey değiştirilmedi.
+That settings backup holds a value Larpfeed can't read. Nothing was altered.	Bu ayar yedeğinde Larpfeed'in okuyamadığı bir değer var. Hiçbir şey değiştirilmedi.
 That settings backup holds more Feature Gate Lab rules than the Lab takes. Nothing was altered.	Bu ayar yedeğinde Lab'in aldığından fazla Feature Gate Lab kuralı var. Hiçbir şey değiştirilmedi.
 That settings backup is damaged or only partly downloaded. Nothing was altered.	Bu ayar yedeği hasarlı ya da yalnızca bir kısmı indirilmiş. Hiçbir şey değiştirilmedi.
 That settings backup is incomplete, so it may have been cut short. Nothing was altered.	Bu ayar yedeği eksik, yarıda kesilmiş olabilir. Hiçbir şey değiştirilmedi.
 That settings change didn't go through. Nothing was altered.	Bu ayar değişikliği uygulanamadı. Hiçbir şey değiştirilmedi.
-That sticker is in a format Hushfeed can't read	Bu çıkartma Hushfeed'in okuyamadığı bir biçimde
+That sticker is in a format Larpfeed can't read	Bu çıkartma Larpfeed'in okuyamadığı bir biçimde
 The Lab can't check this. TikTok gets it exactly as typed.	Lab bunu denetleyemiyor. TikTok bunu tam yazıldığı gibi alır.
 The Lab couldn't open. Go back and open it again.	Lab açılamadı. Geri dön ve yeniden aç.
 %2$s rules, but the limit is %1$s. Nothing changed.	%2$s kural olurdu, sınır %1$s. Hiçbir şey değişmedi.
@@ -1268,7 +1268,7 @@ Turns off at %1$s	%1$s saatinde kapanır
 That loosens the budget. It waits until %1$s.	Bu bütçeyi gevşetir. %1$s saatine kadar bekler.
 That loosens the lock. It waits until %1$s.	Bu kilidi gevşetir. %1$s saatine kadar bekler.
 Today can't start over while Wait a day to loosen the budget is on. The day starts over at %1$s.	Bütçeyi gevşetmek için bir gün bekle açıkken bugün baştan başlatılamaz. Gün %1$s saatinde yeniden başlar.
-Wait a day to loosen the budget is on, so Hushfeed stays on	Bütçeyi gevşetmek için bir gün bekle açık, bu yüzden Hushfeed açık kalıyor
+Wait a day to loosen the budget is on, so Larpfeed stays on	Bütçeyi gevşetmek için bir gün bekle açık, bu yüzden Larpfeed açık kalıyor
 Today has moved on, so there's nothing to put back	Bugün ilerledi, bu yüzden geri konacak bir şey yok
 Today is back where it was	Bugün eski haline döndü
 Today started over. Tap again to put the counts back.	Bugün baştan başladı. Sayıları geri koymak için yeniden dokun.
@@ -1341,7 +1341,7 @@ WebP, exactly as TikTok sent it	WebP, tam TikTok'un gönderdiği haliyle
 What TikTok gets	TikTok'un aldığı
 When TikTok requests this key, return the selected value below	TikTok bu anahtarı istediğinde aşağıda seçilen değeri döndür
 When a video ends in full screen, stay on it instead of moving to the next one. Swiping still moves on.	Tam ekranda bir video bittiğinde bir sonrakine geçmek yerine onda kalır. Kaydırmak yine ilerletir.
-While diagnostic logging is on, a message names the part of Hushfeed that failed. Off keeps failures in the report only.	Tanılama günlüğü açıkken bir mesaj, Hushfeed'in hata veren bölümünün adını söyler. Kapalıyken hatalar yalnızca raporda kalır.
+While diagnostic logging is on, a message names the part of Larpfeed that failed. Off keeps failures in the report only.	Tanılama günlüğü açıkken bir mesaj, Larpfeed'in hata veren bölümünün adını söyler. Kapalıyken hatalar yalnızca raporda kalır.
 Window width needed to enable the layout. Restart TikTok to apply this.	Düzeni etkinleştirmek için gereken pencere genişliği. Bunu uygulamak için TikTok'u yeniden başlat.
 Words, countries and languages	Kelimeler, ülkeler ve diller
 Write the video's sound beside it, in the format picked under Sound format. Android 10 and later file audio separately, so it lands in Music under the same folder name as your videos.	Videonun sesini, Ses biçimi altında seçilen biçimde videonun yanına yaz. Android 10 ve sonrası ses dosyalarını ayrı tutar, bu yüzden dosya Music altında, videolarınla aynı adlı klasöre gider.
@@ -1353,10 +1353,10 @@ Your filters hid everything TikTok sent, %1$d times in a row. Most were %2$s.	Fi
 Your operator's name, like T-Mobile.	Operatörünün adı, örneğin T-Mobile.
 Your operator's numeric code, like 310260.	Operatörünün sayısal kodu, örneğin 310260.
 Zero means the way out of the hold is always there. Any other number is how many times a day it works. Once they're used up, the hold stays until the day starts over. Ignored while the budget is locked, which removes the way out.	Sıfır, bekletmeden çıkış yolunun her zaman olduğu anlamına gelir. Başka bir sayı, bunun günde kaç kez işe yaradığıdır. Bittiğinde bekletme, gün yeniden başlayana kadar kalır. Bütçe kilitliyken yok sayılır, çünkü kilit çıkış yolunu kaldırır.
-Zero means no limit. Counts the videos Hushfeed advanced past for you, not the ones you swiped yourself, and starts again when the feed is rebuilt or you change this number.	Sıfır, sınır yok demektir. Kendi kaydırdıklarını değil, Hushfeed'in senin için geçtiği videoları sayar ve akış yeniden oluşturulduğunda ya da bu sayıyı değiştirdiğinde baştan başlar.
+Zero means no limit. Counts the videos Larpfeed advanced past for you, not the ones you swiped yourself, and starts again when the feed is rebuilt or you change this number.	Sıfır, sınır yok demektir. Kendi kaydırdıklarını değil, Larpfeed'in senin için geçtiği videoları sayar ve akış yeniden oluşturulduğunda ya da bu sayıyı değiştirdiğinde baştan başlar.
 Zero shows the notice and leaves the feed alone. Anything else covers the feed for that many minutes once a budget is reached. Messages, profiles and search keep working, and nothing in the feed is thrown away.	Sıfır, bildirimi gösterir ve akışa dokunmaz. Başka bir değer, bir bütçeye ulaşıldığında akışın üstünü o kadar dakika boyunca örter. Mesajlar, profiller ve arama çalışmaya devam eder ve akıştaki hiçbir şey atılmaz.
 Zero switches this off. A short reminder after that many minutes of watching, and again after the same again. Time on messages, a profile or search doesn't count, and nothing is shown while the feed is on hold.	Sıfır bunu kapatır. O kadar dakika izledikten sonra kısa bir hatırlatma gelir, aynı süre geçince bir tane daha. Mesajlarda, bir profilde veya aramada geçen süre sayılmaz ve akış bekletmedeyken hiçbir şey gösterilmez.
-Zero switches this off. Counts every video that comes up in the feed and tells you when you reach the limit. Separate from the auto-advance session limit under Playback, which counts only videos Hushfeed moved past for you.	Sıfır bunu kapatır. Akışta çıkan her videoyu sayar ve sınıra ulaştığında sana haber verir. Oynatma altındaki otomatik ilerleme oturum sınırından ayrıdır; o yalnızca Hushfeed'in senin yerine geçtiği videoları sayar.
+Zero switches this off. Counts every video that comes up in the feed and tells you when you reach the limit. Separate from the auto-advance session limit under Playback, which counts only videos Larpfeed moved past for you.	Sıfır bunu kapatır. Akışta çıkan her videoyu sayar ve sınıra ulaştığında sana haber verir. Oynatma altındaki otomatik ilerleme oturum sınırından ayrıdır; o yalnızca Larpfeed'in senin yerine geçtiği videoları sayar.
 Zero switches this off. Count the minutes the player spends running in the feed. Time on messages, a profile or search doesn't count.	Sıfır bunu kapatır. Oynatıcının akışta çalışarak geçirdiği dakikaları say. Mesajlarda, bir profilde veya aramada geçen süre sayılmaz.
 collapsed	daraltıldı
 expanded	genişletildi
@@ -1391,15 +1391,15 @@ this creator	bu içerik üreticisi
 TikTok refused the follow with code %1$s	TikTok takibi %1$s koduyla reddetti
 Follow refused, code %1$s. Maybe a hidden CAPTCHA.	Takip reddedildi, kod %1$s. Gizli CAPTCHA olabilir.
 Follow refused (%1$s). Maybe a hidden CAPTCHA.	Takip reddedildi (%1$s). Gizli CAPTCHA olabilir.
-Hushfeed is paused	Hushfeed duraklatıldı
-Hushfeed's switches are paused. Your settings stay saved. Changes made when you patched, like the app's name or icon, stay.	Hushfeed'in anahtarları duraklatıldı. Ayarların kayıtlı kalır. Yamalarken yapılan değişiklikler, uygulamanın adı ya da simgesi gibi, kalır.
-TikTok closed three times within a minute of starting, so Hushfeed paused itself. Your settings stay as they are.	TikTok açıldıktan sonraki bir dakika içinde üç kez kapandı, bu yüzden Hushfeed kendini duraklattı. Ayarların olduğu gibi kalır.
-A file named hushfeed-safe-mode in TikTok's folder under Android/data paused Hushfeed. Your settings stay as they are.	Android/data altındaki TikTok klasöründe bulunan hushfeed-safe-mode adlı bir dosya Hushfeed'i duraklattı. Ayarların olduğu gibi kalır.
-Turn Hushfeed back on	Hushfeed'i yeniden aç
-Pause Hushfeed	Hushfeed'i duraklat
-Pause Hushfeed's switches after TikTok restarts. Your settings stay saved. Changes made when you patched, like the app's name or icon, stay.	TikTok'u yeniden başlattıktan sonra Hushfeed'in anahtarlarını duraklat. Ayarların kayıtlı kalır. Yamalarken yapılan değişiklikler, uygulamanın adı ya da simgesi gibi, kalır.
-Hushfeed turns back on when TikTok restarts.	Hushfeed, TikTok yeniden başladığında tekrar açılır.
-The file hushfeed-safe-mode couldn't be removed. Delete it from TikTok's folder under Android/data to turn Hushfeed back on.	hushfeed-safe-mode dosyası kaldırılamadı. Hushfeed'i yeniden açmak için onu Android/data altındaki TikTok klasöründen sil.
+Larpfeed is paused	Larpfeed duraklatıldı
+Larpfeed's switches are paused. Your settings stay saved. Changes made when you patched, like the app's name or icon, stay.	Larpfeed'in anahtarları duraklatıldı. Ayarların kayıtlı kalır. Yamalarken yapılan değişiklikler, uygulamanın adı ya da simgesi gibi, kalır.
+TikTok closed three times within a minute of starting, so Larpfeed paused itself. Your settings stay as they are.	TikTok açıldıktan sonraki bir dakika içinde üç kez kapandı, bu yüzden Larpfeed kendini duraklattı. Ayarların olduğu gibi kalır.
+A file named larpfeed-safe-mode in TikTok's folder under Android/data paused Larpfeed. Your settings stay as they are.	Android/data altındaki TikTok klasöründe bulunan larpfeed-safe-mode adlı bir dosya Larpfeed'i duraklattı. Ayarların olduğu gibi kalır.
+Turn Larpfeed back on	Larpfeed'i yeniden aç
+Pause Larpfeed	Larpfeed'i duraklat
+Pause Larpfeed's switches after TikTok restarts. Your settings stay saved. Changes made when you patched, like the app's name or icon, stay.	TikTok'u yeniden başlattıktan sonra Larpfeed'in anahtarlarını duraklat. Ayarların kayıtlı kalır. Yamalarken yapılan değişiklikler, uygulamanın adı ya da simgesi gibi, kalır.
+Larpfeed turns back on when TikTok restarts.	Larpfeed, TikTok yeniden başladığında tekrar açılır.
+The file larpfeed-safe-mode couldn't be removed. Delete it from TikTok's folder under Android/data to turn Larpfeed back on.	larpfeed-safe-mode dosyası kaldırılamadı. Larpfeed'i yeniden açmak için onu Android/data altındaki TikTok klasöründen sil.
 Hide TikTok Shop in search	Aramada TikTok Shop'u gizle
 Hide the Products block and product cards in search results.	Arama sonuçlarındaki Ürünler bölümünü ve ürün kartlarını gizle.
 Hide TikTok's Auto scroll button	TikTok'un Otomatik kaydırma düğmesini gizle
@@ -1468,7 +1468,7 @@ Allow storage for TikTok to save the clip	Klibi kaydetmek için TikTok'a depolam
 This original sound isn't on YouTube Music	Bu orijinal ses YouTube Music'te yok
 Not a handle or id, so ignored: %1$s	Hesap adı veya kimlik değil, bu yüzden yok sayıldı: %1$s
 What's new	Yenilikler
-Changes in Hushfeed %1$s	Hushfeed %1$s sürümündeki değişiklikler
+Changes in Larpfeed %1$s	Larpfeed %1$s sürümündeki değişiklikler
 Reviewed presets	Doğrulanmış hazır ayarlar
 Show See translation	Çeviriyi gör seçeneğini göster
 Reviewed for TikTok %1$s	TikTok %1$s için doğrulandı
@@ -1483,12 +1483,12 @@ Preset doesn't match the gates. Nothing changed.	Hazır ayar kapılarla eşleşm
 About overrides	Geçersiz kılmalar hakkında
 Use {creator}, {date} and {video_id} to build the name. Start with {creator}/ to put each creator in a folder. The file ending is added for you.	Adı oluşturmak için {creator}, {date} ve {video_id} kullan. Her içerik üreticisini ayrı klasöre koymak için {creator}/ ile başla. Dosya uzantısı otomatik eklenir.
 Save details beside the video	Ayrıntıları videonun yanına kaydet
-Saves the caption, creator, link and post date in a text file next to the video, or one file for a photo post's original photos. On Android 10 and later, they go in Download or Documents under the same folder name. Applies to saves made by Hushfeed.	Açıklamayı, içerik üreticisini, bağlantıyı ve paylaşım tarihini videonun yanında bir metin dosyasına, fotoğraf gönderisinin orijinal fotoğrafları için ise tek bir dosyaya kaydeder. Android 10 ve üzerinde bunlar aynı klasör adıyla Download veya Documents içine gider. Hushfeed'in yaptığı kayıtlar için geçerlidir.
+Saves the caption, creator, link and post date in a text file next to the video, or one file for a photo post's original photos. On Android 10 and later, they go in Download or Documents under the same folder name. Applies to saves made by Larpfeed.	Açıklamayı, içerik üreticisini, bağlantıyı ve paylaşım tarihini videonun yanında bir metin dosyasına, fotoğraf gönderisinin orijinal fotoğrafları için ise tek bir dosyaya kaydeder. Android 10 ve üzerinde bunlar aynı klasör adıyla Download veya Documents içine gider. Larpfeed'in yaptığı kayıtlar için geçerlidir.
 Couldn't write the details file. Save the post again.	Ayrıntı dosyası yazılamadı. Gönderiyi yeniden kaydet.
 Check for already-saved videos	Önceden kaydedilen videoları kontrol et
 Forget saved videos	Kaydedilen videoları unut
 Undo forgetting saved videos	Kaydedilen videoları unutmayı geri al
-Forget which videos Hushfeed saved here, so the already-saved check starts over. The saved files and your settings stay. Turning the check off doesn't erase this record.	Hushfeed'in burada hangi videoları kaydettiğini unutur, böylece zaten kaydedilmiş kontrolü baştan başlar. Kaydedilen dosyalar ve ayarların kalır. Kontrolü kapatmak bu kaydı silmez.
+Forget which videos Larpfeed saved here, so the already-saved check starts over. The saved files and your settings stay. Turning the check off doesn't erase this record.	Larpfeed'in burada hangi videoları kaydettiğini unutur, böylece zaten kaydedilmiş kontrolü baştan başlar. Kaydedilen dosyalar ve ayarların kalır. Kontrolü kapatmak bu kaydı silmez.
 Forgetting saved videos	Kaydedilen videolar unutuluyor
 Putting the saved videos back	Kaydedilen videolar geri getiriliyor
 Forgotten. Tap to put them back.	Unutuldu. Geri getirmek için dokun.
@@ -1519,10 +1519,10 @@ Saving video: %1$s	Video kaydediliyor: %1$s
 Saving %1$s of %2$s: %3$s	%1$s / %2$s kaydediliyor: %3$s
 Couldn't save the change. Try again.	Değişiklik kaydedilemedi. Tekrar dene.
 Off. TikTok can report views and typing.	Kapalı. TikTok görüntülemeleri ve yazıyor durumunu bildirebilir.
-Hushfeed is paused. Ghost mode isn't active.	Hushfeed duraklatıldı. Hayalet modu etkin değil.
+Larpfeed is paused. Ghost mode isn't active.	Larpfeed duraklatıldı. Hayalet modu etkin değil.
 Problem detected. Story views may still be reported. Check Ghost mode diagnostics. The warning stays until TikTok restarts.	Sorun algılandı. Hikâye görüntülemeleri yine de bildirilebilir. Hayalet modu tanılamasına bak. Uyarı, TikTok yeniden başlatılana kadar kalır.
-Hushfeed blocked TikTok's reports here. It hasn't confirmed that you stay off viewer lists.	Hushfeed burada TikTok'un raporlarını engelledi. İzleyici listelerinde görünmediğini henüz doğrulamadı.
-On. Hushfeed hasn't seen TikTok send any reports since it started.	Açık. Hushfeed, TikTok başladığından beri onun herhangi bir rapor gönderdiğini görmedi.
+Larpfeed blocked TikTok's reports here. It hasn't confirmed that you stay off viewer lists.	Larpfeed burada TikTok'un raporlarını engelledi. İzleyici listelerinde görünmediğini henüz doğrulamadı.
+On. Larpfeed hasn't seen TikTok send any reports since it started.	Açık. Larpfeed, TikTok başladığından beri onun herhangi bir rapor gönderdiğini görmedi.
 Ghost mode diagnostics	Hayalet modu tanılaması
 The partial file couldn't be removed. Delete it from the folder you chose.	Eksik dosya kaldırılamadı. Seçtiğin klasörden sil.
 The backup didn't start and its partial file couldn't be removed. Delete it from the folder you chose.	Yedekleme başlamadı ve eksik dosyası kaldırılamadı. Seçtiğin klasörden sil.
@@ -1534,7 +1534,7 @@ Keep playing in the background	Arka planda oynatmaya devam et
 The video you're watching keeps playing to its end after you leave TikTok or turn the screen off, with TikTok's own media notification to pause it. TikTok's background play switch stays on while this is on. Restart TikTok to apply this.	İzlediğin video, TikTok'tan çıktıktan veya ekranı kapattıktan sonra da sonuna kadar oynamaya devam eder ve TikTok'un kendi medya bildiriminden duraklatılabilir. Bu açıkken TikTok'un arka planda oynatma anahtarı da açık kalır. Bunu uygulamak için TikTok'u yeniden başlat.
 Replay in the background	Arka planda yeniden oynat
 When a video ends while TikTok plays in the background, it starts over instead of waiting for you to press Play in the notification. A call or another app's sound still pauses it.	TikTok arka planda oynarken bir video bittiğinde, bildirimdeki Oynat'a basmanı beklemek yerine baştan başlar. Bir arama veya başka bir uygulamanın sesi onu yine duraklatır.
-Keep playing in the background is on in Hushfeed's Playback settings, so TikTok gets 2 for this key and an override here has no effect until that switch is off.	Hushfeed'in Oynatma ayarlarında Arka planda oynatmaya devam et açık, bu yüzden TikTok bu anahtar için 2 alır ve buradaki bir geçersiz kılma o anahtar kapanana kadar etkisizdir.
+Keep playing in the background is on in Larpfeed's Playback settings, so TikTok gets 2 for this key and an override here has no effect until that switch is off.	Larpfeed'in Oynatma ayarlarında Arka planda oynatmaya devam et açık, bu yüzden TikTok bu anahtar için 2 alır ve buradaki bir geçersiz kılma o anahtar kapanana kadar etkisizdir.
 2, from Keep playing in the background	2, Arka planda oynatmaya devam et ayarından
 Let the last video finish	Son videonun bitmesine izin ver
 When the budget runs out, the video on screen plays to its end before the hold starts, and you can't swipe to another video meanwhile. If the fade already dimmed the feed, the hold starts right away. Needs a hold. It waits %1$d minutes at most.	Bütçe bittiğinde ekrandaki video, bekletme başlamadan önce sonuna kadar oynar ve bu sırada başka bir videoya kaydıramazsın. Karartma akışı zaten karartmışsa bekletme hemen başlar. Bir bekletme gerekir. En fazla %1$d dakika bekler.
@@ -1595,7 +1595,7 @@ Hide the Clear display controls leaves the progress bar in sight, so you can sti
 While Clear display is on, also hide the progress bar, the close button and the pause and speed buttons at the bottom. You can still drag along the bottom edge to move through the video. To leave Clear display, press and hold the video and tap Restore display, or pinch the screen.	Temiz ekran açıkken alttaki ilerleme çubuğunu, kapatma düğmesini, duraklatma ve hız düğmelerini de gizle. Videoda ileri geri gitmek için yine de alt kenar boyunca sürükleyebilirsin. Temiz ekrandan çıkmak için videoya basılı tut ve Ekranı geri yükle'ye dokun. Ekranda iki parmağını birbirine yaklaştırarak da çıkabilirsin.
 Take the Add comment bar off videos you open from a profile, a hashtag, a sound or search, so the video fills the screen down to the bottom. The comment button on the right still opens comments.	Bir profilden, hashtag'den, sesten veya aramadan açtığın videolardaki yorum yazma çubuğunu kaldır, böylece video ekranı en alta kadar doldurur. Sağdaki yorum düğmesi yorumları açmaya devam eder.
 Build details	Derleme ayrıntıları
-Copy or save which patches and options this Hushfeed was built with.	Bu Hushfeed'in hangi yamalar ve seçeneklerle oluşturulduğunu kopyala veya kaydet.
+Copy or save which patches and options this Larpfeed was built with.	Bu Larpfeed'in hangi yamalar ve seçeneklerle oluşturulduğunu kopyala veya kaydet.
 Copy build details	Derleme ayrıntılarını kopyala
 Save build details	Derleme ayrıntılarını kaydet
 Build details copied to the clipboard	Derleme ayrıntıları panoya kopyalandı
@@ -1796,7 +1796,7 @@ Logging until %1$s. Tap to stop now.	%1$s saatine kadar kaydediliyor. Şimdi dur
 Logging diagnostics until %1$s	Tanılama %1$s saatine kadar kaydediliyor
 Timed logging stopped	Süreli kayıt durduruldu
 Preview with a made-up post:	Uydurma bir gönderiyle önizleme:
-Hushfeed's downloader: %1$s	Hushfeed indiricisi: %1$s
+Larpfeed's downloader: %1$s	Larpfeed indiricisi: %1$s
 TikTok's downloader: %1$s	TikTok indiricisi: %1$s
 Sound: %1$s	Ses: %1$s
 Details: %1$s	Ayrıntılar: %1$s
@@ -1804,15 +1804,15 @@ Subtitles: %1$s	Altyazılar: %1$s
 Stickers: %1$s	Çıkartmalar: %1$s
 Live photo clips: %1$s	Canlı fotoğraf klipleri: %1$s
 TikTok's own name	TikTok'un kendi adı
-Not a part Hushfeed fills in, so it's kept as typed: %1$s	Hushfeed'in doldurduğu bir parça değil, bu yüzden yazdığın gibi kalır: %1$s
-Hushfeed's downloader doesn't fill this in, so it's kept as typed: %1$s	Hushfeed'in indiricisi bunu doldurmaz, bu yüzden yazdığın gibi kalır: %1$s
+Not a part Larpfeed fills in, so it's kept as typed: %1$s	Larpfeed'in doldurduğu bir parça değil, bu yüzden yazdığın gibi kalır: %1$s
+Larpfeed's downloader doesn't fill this in, so it's kept as typed: %1$s	Larpfeed'in indiricisi bunu doldurmaz, bu yüzden yazdığın gibi kalır: %1$s
 If that name is taken, Android adds a number to the new file.	Bu ad alınmışsa Android yeni dosyaya bir sayı ekler.
-If that name is taken, Hushfeed adds a number to the new file.	Bu ad alınmışsa Hushfeed yeni dosyaya bir sayı ekler.
+If that name is taken, Larpfeed adds a number to the new file.	Bu ad alınmışsa Larpfeed yeni dosyaya bir sayı ekler.
 Don't start the first video	İlk videoyu başlatma
 When you open TikTok from its icon, the first video in the feed waits for one tap before it plays. A link, a notification or a shortcut opens as usual.	TikTok'u simgesinden açtığında akıştaki ilk video oynamadan önce bir dokunuş bekler. Bağlantı, bildirim veya kısayol her zamanki gibi açılır.
 Network proxy	Ağ proxy'si
 Send TikTok through a proxy	TikTok'u bir proxy üzerinden gönder
-Sends TikTok's feed, search, comments and other app traffic through the proxy below. Videos and LIVE streams still connect directly. Saves and short-link lookups from Hushfeed also connect directly, after their own address checks. Other apps aren't affected.	TikTok'un akışını, aramasını, yorumlarını ve diğer uygulama trafiğini aşağıdaki proxy üzerinden gönderir. Videolar ve LIVE yayınları yine doğrudan bağlanır. Hushfeed'in kaydetme işlemleri ve kısa bağlantı sorguları da kendi adres denetimlerinden sonra doğrudan bağlanır. Diğer uygulamalar etkilenmez.
+Sends TikTok's feed, search, comments and other app traffic through the proxy below. Videos and LIVE streams still connect directly. Saves and short-link lookups from Larpfeed also connect directly, after their own address checks. Other apps aren't affected.	TikTok'un akışını, aramasını, yorumlarını ve diğer uygulama trafiğini aşağıdaki proxy üzerinden gönderir. Videolar ve LIVE yayınları yine doğrudan bağlanır. Larpfeed'in kaydetme işlemleri ve kısa bağlantı sorguları da kendi adres denetimlerinden sonra doğrudan bağlanır. Diğer uygulamalar etkilenmez.
 Proxy type	Proxy türü
 HTTP	HTTP
 SOCKS5	SOCKS5
@@ -1850,8 +1850,8 @@ Save seen history to a file	Görülen videoları bir dosyaya kaydet
 Restore seen history from a file	Görülen videoları bir dosyadan geri yükle
 Save the videos @%1$s has seen, and when, to a JSON file. Anyone who opens the file can see that viewing history.	@%1$s hesabının gördüğü videoları ve ne zaman görüldüklerini bir JSON dosyasına kaydet. Dosyayı açan herkes bu izleme geçmişini görebilir.
 Save this account's seen videos, and when they were watched, to a JSON file. Anyone who opens the file can see that viewing history.	Bu hesabın gördüğü videoları ve ne zaman görüldüklerini bir JSON dosyasına kaydet. Dosyayı açan herkes bu izleme geçmişini görebilir.
-Add a seen-history file saved by Hushfeed to the videos @%1$s has seen. A video in both keeps the newer date.	Hushfeed'in kaydettiği bir geçmiş dosyasını @%1$s hesabının gördüğü videolara ekle. İkisinde de olan bir video daha yeni tarihi korur.
-Add a seen-history file saved by Hushfeed to this account's seen videos. A video in both keeps the newer date.	Hushfeed'in kaydettiği bir geçmiş dosyasını bu hesabın gördüğü videolara ekle. İkisinde de olan bir video daha yeni tarihi korur.
+Add a seen-history file saved by Larpfeed to the videos @%1$s has seen. A video in both keeps the newer date.	Larpfeed'in kaydettiği bir geçmiş dosyasını @%1$s hesabının gördüğü videolara ekle. İkisinde de olan bir video daha yeni tarihi korur.
+Add a seen-history file saved by Larpfeed to this account's seen videos. A video in both keeps the newer date.	Larpfeed'in kaydettiği bir geçmiş dosyasını bu hesabın gördüğü videolara ekle. İkisinde de olan bir video daha yeni tarihi korur.
 Sign in to TikTok before saving or restoring seen history.	Görülen videoları kaydetmeden veya geri yüklemeden önce TikTok'a giriş yapın.
 Saving seen history	Görülen videolar kaydediliyor
 Reading the seen-history file	Geçmiş dosyası okunuyor
@@ -1875,10 +1875,10 @@ Added %1$s seen videos.	%1$s görülen video eklendi.
 %1$s older seen video was dropped to keep the newest %2$s.	En yeni %2$s video korunsun diye %1$s eski görülen video silindi.
 %1$s older seen videos were dropped to keep the newest %2$s.	En yeni %2$s video korunsun diye %1$s eski görülen video silindi.
 Couldn't restore seen history. Your saved history is unchanged.	Görülen videolar geri yüklenemedi. Kayıtlı geçmişiniz değişmedi.
-That file is larger than %1$s MB. Choose a seen-history file saved by Hushfeed.	Bu dosya %1$s MB'tan büyük. Hushfeed'in kaydettiği bir geçmiş dosyası seçin.
+That file is larger than %1$s MB. Choose a seen-history file saved by Larpfeed.	Bu dosya %1$s MB'tan büyük. Larpfeed'in kaydettiği bir geçmiş dosyası seçin.
 That file lists more than %1$s videos. Nothing was restored.	Bu dosyada %1$s videodan fazlası var. Hiçbir şey geri yüklenmedi.
-That isn't a seen-history file saved by Hushfeed. For TikTok's own data export, use Import watch history.	Bu, Hushfeed'in kaydettiği bir geçmiş dosyası değil. TikTok'un kendi veri dışa aktarımı için İzleme geçmişini içe aktar'ı kullanın.
-That file was saved by a newer Hushfeed. Update Hushfeed, then try again.	Bu dosya Hushfeed'in daha yeni bir sürümüyle kaydedilmiş. Hushfeed'i güncelleyip tekrar deneyin.
+That isn't a seen-history file saved by Larpfeed. For TikTok's own data export, use Import watch history.	Bu, Larpfeed'in kaydettiği bir geçmiş dosyası değil. TikTok'un kendi veri dışa aktarımı için İzleme geçmişini içe aktar'ı kullanın.
+That file was saved by a newer Larpfeed. Update Larpfeed, then try again.	Bu dosya Larpfeed'in daha yeni bir sürümüyle kaydedilmiş. Larpfeed'i güncelleyip tekrar deneyin.
 That seen-history file is damaged or was edited. Nothing was restored.	Bu geçmiş dosyası bozuk ya da düzenlenmiş. Hiçbir şey geri yüklenmedi.
 Turn off haptics	Dokunsal titreşimi kapat
 Stop the short vibrations TikTok plays on its own taps and gestures. Your keyboard and your phone's own haptics stay as they are.	TikTok'un kendi dokunuşlarında ve hareketlerinde çaldığı kısa titreşimleri durdurur. Klavyen ve telefonunun kendi dokunsal titreşimleri olduğu gibi kalır.
@@ -1910,7 +1910,7 @@ Turns off TikTok's notification service, so nothing it sends reaches your notifi
 Save details as JSON	Ayrıntıları JSON olarak kaydet
 Saves the details file in JSON format instead of plain text. Useful if another tool will read it.	Ayrıntı dosyasını düz metin yerine JSON biçiminde kaydeder. Başka bir araç okuyacaksa işe yarar.
 Tag saved videos with their details	Kaydedilen videolara ayrıntılarını etiket olarak yaz
-Stores the caption, creator, post date and link inside the video file, where media players can read them. Applies to saves made by Hushfeed.	Açıklamayı, içerik üreticisini, paylaşım tarihini ve bağlantıyı videonun dosyasının içine yazar; medya oynatıcılar bunları okuyabilir. Hushfeed'in yaptığı kayıtlar için geçerlidir.
+Stores the caption, creator, post date and link inside the video file, where media players can read them. Applies to saves made by Larpfeed.	Açıklamayı, içerik üreticisini, paylaşım tarihini ve bağlantıyı videonun dosyasının içine yazar; medya oynatıcılar bunları okuyabilir. Larpfeed'in yaptığı kayıtlar için geçerlidir.
 Save the video's cover	Videonun kapağını kaydet
 Save the cover as well	Kapağı da kaydet
 Save the video's cover picture at the largest size TikTok has, each time you tap Download. It goes to your photo folder, named after the video.	İndir'e her dokunduğunda videonun kapak resmini TikTok'taki en büyük boyutta kaydet. Fotoğraf klasörüne, videonun adıyla gider.
@@ -1953,10 +1953,10 @@ Liked videos	Beğenilen videolar
 Public	Herkese açık
 Copy	Kopyala
 Copy the full link for short links	Kısa bağlantılarda tam bağlantıyı kopyala
-When Copy link gives a short vt.tiktok.com or vm.tiktok.com link, Hushfeed opens it once in the background to find the full video link and copies that instead. TikTok sees that visit, and it connects directly even when a proxy is on. Links you send to another app go out as they were.	Bağlantıyı kopyala kısa bir vt.tiktok.com veya vm.tiktok.com bağlantısı verdiğinde, Hushfeed onu arka planda bir kez açıp videonun tam bağlantısını bulur ve onu kopyalar. TikTok bu ziyareti görür ve bir proxy açık olsa bile doğrudan bağlanır. Başka bir uygulamaya gönderdiğin bağlantılar olduğu gibi gider.
+When Copy link gives a short vt.tiktok.com or vm.tiktok.com link, Larpfeed opens it once in the background to find the full video link and copies that instead. TikTok sees that visit, and it connects directly even when a proxy is on. Links you send to another app go out as they were.	Bağlantıyı kopyala kısa bir vt.tiktok.com veya vm.tiktok.com bağlantısı verdiğinde, Larpfeed onu arka planda bir kez açıp videonun tam bağlantısını bulur ve onu kopyalar. TikTok bu ziyareti görür ve bir proxy açık olsa bile doğrudan bağlanır. Başka bir uygulamaya gönderdiğin bağlantılar olduğu gibi gider.
 Full link copied	Tam bağlantı kopyalandı
 Mark saved videos	Kaydedilen videoları işaretle
-Puts a ✓ by videos and photo posts you saved with Hushfeed, on profile grids and next to the time in the feed. Works only while Check for already-saved videos is on.	Hushfeed ile kaydettiğin videolara ve fotoğraf gönderilerine profil ızgaralarında ve akışta saatin yanında ✓ koyar. Yalnızca “Önceden kaydedilen videoları kontrol et” açıkken çalışır.
+Puts a ✓ by videos and photo posts you saved with Larpfeed, on profile grids and next to the time in the feed. Works only while Check for already-saved videos is on.	Larpfeed ile kaydettiğin videolara ve fotoğraf gönderilerine profil ızgaralarında ve akışta saatin yanında ✓ koyar. Yalnızca “Önceden kaydedilen videoları kontrol et” açıkken çalışır.
 Also replaces the saved region and country code TikTok sends with every request. Signing in still sends your real region. Your IP address and your account's own rules still apply.	TikTok'un her istekle gönderdiği kayıtlı bölgeyi ve ülke kodunu da değiştirir. Giriş yaparken gerçek bölgen yine gönderilir. IP adresin ve hesabının kendi kuralları geçerli olmaya devam eder.
 Turn off double tap to react	Tepki için çift dokunmayı kapat
 A double tap on a message no longer adds a heart to it. A single tap and a long press work as before.	Bir mesaja çift dokunmak artık ona kalp eklemiyor. Tek dokunma ve uzun basma eskisi gibi çalışır.
@@ -1993,7 +1993,7 @@ Hide the Thoughts bubble TikTok shows above a profile picture, and the prompt to
 Turn on Thoughts	Thoughts'u aç
 Show Thoughts on profiles and in your inbox, and the prompt to share one, for accounts TikTok hasn't turned them on for. TikTok's servers may still refuse to post one. Restart TikTok to apply this.	TikTok'un Thoughts'u açmadığı hesaplarda Thoughts'u profillerde ve Gelen Kutusu'nda, bir tane paylaşma önerisiyle birlikte göster. TikTok'un sunucuları yine de paylaşımı reddedebilir. Bunu uygulamak için TikTok'u yeniden başlat.
 
-About Hushfeed	Hushfeed hakkında
+About Larpfeed	Larpfeed hakkında
 Version, changes and licenses	Sürüm, değişiklikler ve lisanslar
 Active	Etkin
 Paused	Duraklatıldı
@@ -2122,7 +2122,7 @@ About	Hakkında
 Your settings	Ayarların
 Report a problem	Sorun bildir
 Opens a GitHub report with your versions and settings filled in. Add what happened.	Sürümlerin ve ayarların önceden doldurulmuş bir GitHub raporu açar. Ne olduğunu ekle.
-Support Hushfeed	Hushfeed'i destekle
+Support Larpfeed	Larpfeed'i destekle
 No app on this phone opens web links	Bu telefonda web bağlantılarını açan uygulama yok
 # context: toast after a long press hides the Quick setups card from the settings home page; the page name is the one holding the row that brings it back
 # context: row on the Backup and restore page; shows or hides the Quick setups card on the settings home page
@@ -2132,16 +2132,16 @@ Your feed	Akışın
 Saving and sharing	Kaydetme ve paylaşım
 # context: a heading on the settings home page, over Privacy, App, Region, Backup and restore and Feature Gate Lab
 Privacy and app	Gizlilik ve uygulama
-# context: a heading on the settings home page, over Hushfeed's status, Pause, Diagnostics, About, Report a problem and Support; the app's name, usually kept as is
-Hushfeed	Hushfeed
-Open Hushfeed settings	Hushfeed ayarlarını aç
+# context: a heading on the settings home page, over Larpfeed's status, Pause, Diagnostics, About, Report a problem and Support; the app's name, usually kept as is
+Larpfeed	Larpfeed
+Open Larpfeed settings	Larpfeed ayarlarını aç
 Several photos in one comment	Bir yorumda birden fazla fotoğraf
 Scrolling comments on videos	Videoların üzerinde kayan yorumlar
 See-through bottom bar	Şeffaf alt çubuk
 Let the video reach the bottom of the screen on the main feed and show the tabs over it with no bar behind them.	Ana akışta videonun ekranın altına kadar uzanmasını sağlar ve sekmeleri arkalarında çubuk olmadan videonun üzerinde gösterir.
 LIVE chat auto-translate	LIVE sohbetini otomatik çevir
 
-The Translate comments button in a LIVE room also needs a Japanese SIM. Turn on Override SIM details in Hushfeed settings > Region, set SIM country preset to Japan, NTT DOCOMO (44010), then restart TikTok.	Bir LIVE odasındaki Yorumları çevir düğmesi için ayrıca Japon SIM gerekir. Hushfeed ayarları > Bölge içinde SIM bilgilerini geçersiz kıl seçeneğini aç, SIM ülke hazır ayarı olarak Japan, NTT DOCOMO (44010) seç, sonra TikTok'u yeniden başlat.
+The Translate comments button in a LIVE room also needs a Japanese SIM. Turn on Override SIM details in Larpfeed settings > Region, set SIM country preset to Japan, NTT DOCOMO (44010), then restart TikTok.	Bir LIVE odasındaki Yorumları çevir düğmesi için ayrıca Japon SIM gerekir. Larpfeed ayarları > Bölge içinde SIM bilgilerini geçersiz kıl seçeneğini aç, SIM ülke hazır ayarı olarak Japan, NTT DOCOMO (44010) seç, sonra TikTok'u yeniden başlat.
 Comments only scroll on videos TikTok has turned them on for, so most videos stay the same.	Yorumlar yalnızca TikTok'un bunu açtığı videoların üzerinde kayar, bu yüzden çoğu video aynı kalır.
 
 Pick videos to save from profile grids	Profil ızgaralarından kaydedilecek videoları seç
@@ -2328,8 +2328,8 @@ Open setting location	Ayarın konumunu aç
 Expanded	Genişletilmiş
 Collapsed	Daraltılmış
 This setting isn't available. Search for another setting.	Bu ayar kullanılamıyor. Başka bir ayar arayın.
-Hide the Hushfeed row	Hushfeed satırını gizle
-Take Hushfeed out of TikTok's Settings and privacy. To open these settings, press and hold For You at the top of the feed, or Home if Long-press Home for Hushfeed settings is on.	Hushfeed'i TikTok'un Ayarlar ve gizlilik listesinden çıkarır. Bu ayarları açmak için akışın üstündeki Senin İçin'e basılı tut, ya da Hushfeed ayarları için Ana Sayfa'ya basılı tut açıksa Ana Sayfa'ya.
+Hide the Larpfeed row	Larpfeed satırını gizle
+Take Larpfeed out of TikTok's Settings and privacy. To open these settings, press and hold For You at the top of the feed, or Home if Long-press Home for Larpfeed settings is on.	Larpfeed'i TikTok'un Ayarlar ve gizlilik listesinden çıkarır. Bu ayarları açmak için akışın üstündeki Senin İçin'e basılı tut, ya da Larpfeed ayarları için Ana Sayfa'ya basılı tut açıksa Ana Sayfa'ya.
 Open the search page	Arama sayfasını aç
 Search didn't open. Restart TikTok and try again.	Arama açılmadı. TikTok'u yeniden başlatıp dene.
 Fold the search into a button	Aramayı bir düğmeye katla
@@ -2387,9 +2387,9 @@ Couldn't make the sticker. Try again.	Çıkartma oluşturulamadı. Yeniden dene.
 Couldn't read that photo. Try another one.	Bu fotoğraf okunamadı. Başka birini dene.
 This account can't make stickers	Bu hesap çıkartma oluşturamaz
 Sticker added to Saved	Çıkartma kaydedilenlere eklendi
-# context: the comment sticker panel. Recently used is a heading Hushfeed adds above Saved, over the last stickers you sent. TikTok's own label for it isn't in the APK, so this is the usual phone wording
+# context: the comment sticker panel. Recently used is a heading Larpfeed adds above Saved, over the last stickers you sent. TikTok's own label for it isn't in the APK, so this is the usual phone wording
 Recently used	Son kullanılanlar
-# context: A video's share sheet. Make sticker is a button Hushfeed adds after Save cover, and it turns the video's cover into one of your saved comment stickers. Keep it about as short as Save cover, since share sheet labels get two short lines under the icon
+# context: A video's share sheet. Make sticker is a button Larpfeed adds after Save cover, and it turns the video's cover into one of your saved comment stickers. Keep it about as short as Save cover, since share sheet labels get two short lines under the icon
 Make sticker	Çıkartma oluştur
 TikTok refused the like: %1$s	TikTok beğeniyi reddetti: %1$s
 TikTok refused the like with code %1$s	TikTok beğeniyi %1$s koduyla reddetti
@@ -2399,7 +2399,7 @@ Copy name	Adı kopyala
 Background play in the long-press menu	Uzun basma menüsünde arka planda oynatma
 Adds TikTok's own background play row to the long-press menu, so you pick it for one video and other videos stop as usual. Has no effect while Keep playing in the background is on. Restart TikTok to apply this.	TikTok'un kendi arka planda oynatma satırını uzun basma menüsüne ekler, böylece onu tek bir video için seçersiniz ve diğer videolar her zamanki gibi durur. Arka planda oynatmaya devam et açıkken etkisi yoktur. Uygulamak için TikTok'u yeniden başlatın.
 1, from Background play in the long-press menu	1, Uzun basma menüsünde arka planda oynatma ayarından
-Background play in the long-press menu is on in Hushfeed's Playback settings, so TikTok gets 1 for this key and an override here has no effect until that switch is off.	Hushfeed'in Oynatma ayarlarında Uzun basma menüsünde arka planda oynatma açık, bu yüzden TikTok bu anahtar için 1 alır ve buradaki bir geçersiz kılma o anahtar kapanana kadar etkisizdir.
+Background play in the long-press menu is on in Larpfeed's Playback settings, so TikTok gets 1 for this key and an override here has no effect until that switch is off.	Larpfeed'in Oynatma ayarlarında Uzun basma menüsünde arka planda oynatma açık, bu yüzden TikTok bu anahtar için 1 alır ve buradaki bir geçersiz kılma o anahtar kapanana kadar etkisizdir.
 Keep LIVEs from these creators	Bu içerik üreticilerinin CANLI yayınlarını tut
 With Hide LIVE videos on, these creators' LIVEs stay when TikTok sends them. Separate handles or user IDs with commas.	CANLI videolarını gizle açıkken bu içerik üreticilerinin CANLI yayınları TikTok gönderdiğinde kalır. Kullanıcı adlarını veya kullanıcı kimliklerini virgülle ayırın.
 Optional. Leave empty for a proxy without a password. TikTok signs in through a small relay on this phone, which other apps here could reach while TikTok is open.	İsteğe bağlı. Parolasız bir proxy için boş bırakın. TikTok bu telefondaki küçük bir aktarıcı üzerinden oturum açar, TikTok açıkken buradaki diğer uygulamalar da ona erişebilir.
@@ -2450,7 +2450,7 @@ Watch history cleared	İzleme geçmişi temizlendi
 Couldn't open that video. Try again.	Bu video açılamadı. Tekrar dene.
 Keep the next videos in full screen	Sonraki videoları tam ekranda tut
 Full screen opens with just your video on most pages, so there's nothing to swipe to. This brings the videos after it along.	Çoğu sayfada tam ekran yalnızca videonuzu açar, yani kaydıracak bir şey olmaz. Bu, sonraki videoları da getirir.
-Off until you tap it. Wipes TikTok's data once, on the next start, and gives it a new Android ID and advertising ID, so it sees a phone it hasn't met. You'll be signed out and lose your drafts. Hushfeed's settings stay.	Dokunana kadar kapalı. Bir sonraki açılışta TikTok verilerini bir kez siler ve ona yeni bir Android kimliği ile reklam kimliği verir, böylece tanımadığı bir telefon görür. Oturumunuz kapanır ve taslaklarınızı kaybedersiniz. Hushfeed ayarları kalır.
+Off until you tap it. Wipes TikTok's data once, on the next start, and gives it a new Android ID and advertising ID, so it sees a phone it hasn't met. You'll be signed out and lose your drafts. Larpfeed's settings stay.	Dokunana kadar kapalı. Bir sonraki açılışta TikTok verilerini bir kez siler ve ona yeni bir Android kimliği ile reklam kimliği verir, böylece tanımadığı bir telefon görür. Oturumunuz kapanır ve taslaklarınızı kaybedersiniz. Larpfeed ayarları kalır.
 In use: TikTok sees the identity you made here, and it stays the same on every start. Tap to make another one, which wipes TikTok's data again.	Kullanımda: TikTok burada oluşturduğunuz kimliği görür ve bu kimlik her açılışta aynı kalır. Başka bir tane oluşturmak için dokunun, bu TikTok verilerini yeniden siler.
 Couldn't finish wiping TikTok's data. Tap to try again.	TikTok verileri tamamen silinemedi. Yeniden denemek için dokunun.
 Use this phone's own IDs	Bu telefonun kendi kimliklerini kullan

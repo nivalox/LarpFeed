@@ -5,7 +5,7 @@
     "versionCode": "2147483647"
   },
   "apk": {
-    "file": "hushfeed-0.80.0-signed.apk",
+    "file": "larpfeed-0.80.0-signed.apk",
     "sha256": "ca9c75870e1fd408b1e9bd64aacbd730614b6b99c055198a1d249e31a1a5a246"
   },
   "runner": {
@@ -1888,11 +1888,11 @@
             "failures": []
           },
           "receiptId": "d99c1fbdd4ad19c75b958bae467d388572724b941d80207c4d612da4bc5fffe4",
-          "verdictNote": "TikTok 47.6.3, Hushfeed 0.80.0 main ae68b0ad5, S22: comment sheet band measures #000000 at 93% and the dark Inbox list #000000 at 85%, not TikTok's dark gray; with TikTok set to Light the Inbox list is #FFFFFF at 86%.",
+          "verdictNote": "TikTok 47.6.3, Larpfeed 0.80.0 main ae68b0ad5, S22: comment sheet band measures #000000 at 93% and the dark Inbox list #000000 at 85%, not TikTok's dark gray; with TikTok set to Light the Inbox list is #FFFFFF at 86%.",
           "verdict": {
             "receiptId": "d99c1fbdd4ad19c75b958bae467d388572724b941d80207c4d612da4bc5fffe4",
             "status": "pass",
-            "note": "TikTok 47.6.3, Hushfeed 0.80.0 main ae68b0ad5, S22: comment sheet band measures #000000 at 93% and the dark Inbox list #000000 at 85%, not TikTok's dark gray; with TikTok set to Light the Inbox list is #FFFFFF at 86%."
+            "note": "TikTok 47.6.3, Larpfeed 0.80.0 main ae68b0ad5, S22: comment sheet band measures #000000 at 93% and the dark Inbox list #000000 at 85%, not TikTok's dark gray; with TikTok set to Light the Inbox list is #FFFFFF at 86%."
           }
         }
       ]
@@ -8486,11 +8486,11 @@
             "failures": []
           },
           "receiptId": "b399972cdf1991533e8b033132503424d5657ca19141598728993b0925c09077",
-          "verdictNote": "TikTok 47.6.3, Hushfeed 0.80.0 main ae68b0ad5, S22: after the cold start the probe reads installed=true locked=true and the screen is black under the status bar, no feed visible. The system credential prompt is a secure window that screencap draws black, and it sits over Hushfeed's cover.",
+          "verdictNote": "TikTok 47.6.3, Larpfeed 0.80.0 main ae68b0ad5, S22: after the cold start the probe reads installed=true locked=true and the screen is black under the status bar, no feed visible. The system credential prompt is a secure window that screencap draws black, and it sits over Larpfeed's cover.",
           "verdict": {
             "receiptId": "b399972cdf1991533e8b033132503424d5657ca19141598728993b0925c09077",
             "status": "pass",
-            "note": "TikTok 47.6.3, Hushfeed 0.80.0 main ae68b0ad5, S22: after the cold start the probe reads installed=true locked=true and the screen is black under the status bar, no feed visible. The system credential prompt is a secure window that screencap draws black, and it sits over Hushfeed's cover."
+            "note": "TikTok 47.6.3, Larpfeed 0.80.0 main ae68b0ad5, S22: after the cold start the probe reads installed=true locked=true and the screen is black under the status bar, no feed visible. The system credential prompt is a secure window that screencap draws black, and it sits over Larpfeed's cover."
           }
         },
         {
@@ -14181,7 +14181,7 @@
       "checks": [
         {
           "id": "live-bubble",
-          "what": "The LIVE bubble's check starts with Hushfeed's hook: with Hide the LIVE bubble on the hook answers true (skip the bubble) and logs 'Block popups: skipped the LIVE bubble', with it off it answers false. TikTok only runs that check when its server sends a bubble, so the check calls the hook directly.",
+          "what": "The LIVE bubble's check starts with Larpfeed's hook: with Hide the LIVE bubble on the hook answers true (skip the bubble) and logs 'Block popups: skipped the LIVE bubble', with it off it answers false. TikTok only runs that check when its server sends a bubble, so the check calls the hook directly.",
           "auto": true,
           "status": "pass",
           "failures": [],
@@ -17461,7 +17461,7 @@
       "checks": [
         {
           "id": "manifest-label",
-          "what": "The application label and every launcher entry carry the chosen name (default Hushfeed) instead of TikTok.",
+          "what": "The application label and every launcher entry carry the chosen name (default Larpfeed) instead of TikTok.",
           "auto": true,
           "status": "pass",
           "failures": [],
@@ -17869,7 +17869,7 @@
           "review": [
             {
               "shot": "Change_app_name-home-label-app-info-label-d7b2f8be383f4ba1b3c6d7afcede8f4a.png",
-              "criteria": "App info page: the title under the icon is the patch option's name (default Hushfeed), not TikTok. Nothing on the page is tapped."
+              "criteria": "App info page: the title under the icon is the patch option's name (default Larpfeed), not TikTok. Nothing on the page is tapped."
             }
           ],
           "definitionHash": "138bf098433ef890ade2eacb03bc14877bda79bd074c38fa697bbb061647acad",
@@ -18256,7 +18256,7 @@
             "review": [
               {
                 "shot": "Change_app_name-home-label-app-info-label-d7b2f8be383f4ba1b3c6d7afcede8f4a.png",
-                "criteria": "App info page: the title under the icon is the patch option's name (default Hushfeed), not TikTok. Nothing on the page is tapped."
+                "criteria": "App info page: the title under the icon is the patch option's name (default Larpfeed), not TikTok. Nothing on the page is tapped."
               }
             ],
             "auto": false,
@@ -18264,11 +18264,11 @@
             "failures": []
           },
           "receiptId": "f26b4fee5ac19bd41e0f9eedbe015662e13f764ba98dd2ddf0556d38faafb20b",
-          "verdictNote": "TikTok 47.6.3, Hushfeed 0.80.0 main ae68b0ad5, S22: Android's App info page titles the app Hushfeed (the option's default), not TikTok. Nothing on the page was tapped.",
+          "verdictNote": "TikTok 47.6.3, Larpfeed 0.80.0 main ae68b0ad5, S22: Android's App info page titles the app Larpfeed (the option's default), not TikTok. Nothing on the page was tapped.",
           "verdict": {
             "receiptId": "f26b4fee5ac19bd41e0f9eedbe015662e13f764ba98dd2ddf0556d38faafb20b",
             "status": "pass",
-            "note": "TikTok 47.6.3, Hushfeed 0.80.0 main ae68b0ad5, S22: Android's App info page titles the app Hushfeed (the option's default), not TikTok. Nothing on the page was tapped."
+            "note": "TikTok 47.6.3, Larpfeed 0.80.0 main ae68b0ad5, S22: Android's App info page titles the app Larpfeed (the option's default), not TikTok. Nothing on the page was tapped."
           }
         }
       ]
@@ -22020,11 +22020,11 @@
             "failures": []
           },
           "receiptId": "682b356d73ee91faba9a131c139cdec59aa9c2ecdab223dd2d67080bd0d4578c",
-          "verdictNote": "TikTok 47.6.3, Hushfeed 0.80.0 main 8a626029d, S22, rerun with ecfccc717: the comment sheet on a 10-comment video shows a Search these comments box right under the comment count and above the first comment. Nothing was typed.",
+          "verdictNote": "TikTok 47.6.3, Larpfeed 0.80.0 main 8a626029d, S22, rerun with ecfccc717: the comment sheet on a 10-comment video shows a Search these comments box right under the comment count and above the first comment. Nothing was typed.",
           "verdict": {
             "receiptId": "682b356d73ee91faba9a131c139cdec59aa9c2ecdab223dd2d67080bd0d4578c",
             "status": "pass",
-            "note": "TikTok 47.6.3, Hushfeed 0.80.0 main 8a626029d, S22, rerun with ecfccc717: the comment sheet on a 10-comment video shows a Search these comments box right under the comment count and above the first comment. Nothing was typed."
+            "note": "TikTok 47.6.3, Larpfeed 0.80.0 main 8a626029d, S22, rerun with ecfccc717: the comment sheet on a 10-comment video shows a Search these comments box right under the comment count and above the first comment. Nothing was typed."
           }
         },
         {
@@ -26566,11 +26566,11 @@
             "failures": []
           },
           "receiptId": "dc837bf5b9a095c417ed644ae3de7ae1ac505d17796870d21f57f99a5912ea19",
-          "verdictNote": "TikTok 47.6.3, Hushfeed 0.80.0 main ae68b0ad5, S22: the build ran with no options, so the icon style is the default TikTok colors, which keeps the note as it is; App info shows TikTok's red and cyan note on its dark tile, as that style should.",
+          "verdictNote": "TikTok 47.6.3, Larpfeed 0.80.0 main ae68b0ad5, S22: the build ran with no options, so the icon style is the default TikTok colors, which keeps the note as it is; App info shows TikTok's red and cyan note on its dark tile, as that style should.",
           "verdict": {
             "receiptId": "dc837bf5b9a095c417ed644ae3de7ae1ac505d17796870d21f57f99a5912ea19",
             "status": "pass",
-            "note": "TikTok 47.6.3, Hushfeed 0.80.0 main ae68b0ad5, S22: the build ran with no options, so the icon style is the default TikTok colors, which keeps the note as it is; App info shows TikTok's red and cyan note on its dark tile, as that style should."
+            "note": "TikTok 47.6.3, Larpfeed 0.80.0 main ae68b0ad5, S22: the build ran with no options, so the icon style is the default TikTok colors, which keeps the note as it is; App info shows TikTok's red and cyan note on its dark tile, as that style should."
           }
         }
       ]
@@ -38412,11 +38412,11 @@
             "failures": []
           },
           "receiptId": "4e7a50f9f0dae3002f3e826b6e21921864f76d79e9728f1d0a2c096f391c681d",
-          "verdictNote": "TikTok 47.6.3, Hushfeed 0.80.0 main ae68b0ad5, S22: with the comment box focused and the keyboard up, the tool row under the box reads image, sticker, @ and a microphone (TikTok's own, apart from the keyboard's mic key). Nothing was tapped or recorded.",
+          "verdictNote": "TikTok 47.6.3, Larpfeed 0.80.0 main ae68b0ad5, S22: with the comment box focused and the keyboard up, the tool row under the box reads image, sticker, @ and a microphone (TikTok's own, apart from the keyboard's mic key). Nothing was tapped or recorded.",
           "verdict": {
             "receiptId": "4e7a50f9f0dae3002f3e826b6e21921864f76d79e9728f1d0a2c096f391c681d",
             "status": "pass",
-            "note": "TikTok 47.6.3, Hushfeed 0.80.0 main ae68b0ad5, S22: with the comment box focused and the keyboard up, the tool row under the box reads image, sticker, @ and a microphone (TikTok's own, apart from the keyboard's mic key). Nothing was tapped or recorded."
+            "note": "TikTok 47.6.3, Larpfeed 0.80.0 main ae68b0ad5, S22: with the comment box focused and the keyboard up, the tool row under the box reads image, sticker, @ and a microphone (TikTok's own, apart from the keyboard's mic key). Nothing was tapped or recorded."
           }
         },
         {
@@ -39658,11 +39658,11 @@
             "failures": []
           },
           "receiptId": "5d4cc96d4b271a6f38a3dfa29579a610f453fb75b8cc8ab13428d513db12deb6",
-          "verdictNote": "TikTok 47.6.3, Hushfeed 0.80.0 main ae68b0ad5, S22: with the switch off the Activity page stops after a few rows at a View all button; with it on the same page runs on past those rows (older posts, likes, invites, profile views) and no View all button shows.",
+          "verdictNote": "TikTok 47.6.3, Larpfeed 0.80.0 main ae68b0ad5, S22: with the switch off the Activity page stops after a few rows at a View all button; with it on the same page runs on past those rows (older posts, likes, invites, profile views) and no View all button shows.",
           "verdict": {
             "receiptId": "5d4cc96d4b271a6f38a3dfa29579a610f453fb75b8cc8ab13428d513db12deb6",
             "status": "pass",
-            "note": "TikTok 47.6.3, Hushfeed 0.80.0 main ae68b0ad5, S22: with the switch off the Activity page stops after a few rows at a View all button; with it on the same page runs on past those rows (older posts, likes, invites, profile views) and no View all button shows."
+            "note": "TikTok 47.6.3, Larpfeed 0.80.0 main ae68b0ad5, S22: with the switch off the Activity page stops after a few rows at a View all button; with it on the same page runs on past those rows (older posts, likes, invites, profile views) and no View all button shows."
           }
         }
       ]
@@ -40081,7 +40081,7 @@
         },
         {
           "id": "gate-forced",
-          "what": "A stored override changes what TikTok reads: with favorite_reverse forced to 1 and Keep the Favorites tab on, opening the share sheet reads the gate as 1, which Hushfeed's answer records ('refused favorite_reverse').",
+          "what": "A stored override changes what TikTok reads: with favorite_reverse forced to 1 and Keep the Favorites tab on, opening the share sheet reads the gate as 1, which Larpfeed's answer records ('refused favorite_reverse').",
           "auto": true,
           "status": "pass",
           "failures": [],
@@ -44238,11 +44238,11 @@
             "failures": []
           },
           "receiptId": "2a3f21d3f84e9759d81dccc6e3aed4a91e30438a682a14fd2410b2d766db6316",
-          "verdictNote": "TikTok 47.6.3, Hushfeed 0.80.0 main ae68b0ad5, S22: the probe read sessionRemoved 1 before the shot, and a \"1 filtered out\" pill sits under the top tabs.",
+          "verdictNote": "TikTok 47.6.3, Larpfeed 0.80.0 main ae68b0ad5, S22: the probe read sessionRemoved 1 before the shot, and a \"1 filtered out\" pill sits under the top tabs.",
           "verdict": {
             "receiptId": "2a3f21d3f84e9759d81dccc6e3aed4a91e30438a682a14fd2410b2d766db6316",
             "status": "pass",
-            "note": "TikTok 47.6.3, Hushfeed 0.80.0 main ae68b0ad5, S22: the probe read sessionRemoved 1 before the shot, and a \"1 filtered out\" pill sits under the top tabs."
+            "note": "TikTok 47.6.3, Larpfeed 0.80.0 main ae68b0ad5, S22: the probe read sessionRemoved 1 before the shot, and a \"1 filtered out\" pill sits under the top tabs."
           }
         },
         {
@@ -57263,11 +57263,11 @@
             "failures": []
           },
           "receiptId": "fdd9d05f86c0f4c123d6c54b116d6e58ec2cb65fd613f2cf19ac3b47b2011d27",
-          "verdictNote": "TikTok 47.6.3, Hushfeed 0.80.0 main ae68b0ad5, S22: switch on, the focused box has no emoji strip above it and keeps its image, sticker, @ and mic buttons; switch off, TikTok's six-emoji quick-reaction strip sits above the same box. Nothing was sent.",
+          "verdictNote": "TikTok 47.6.3, Larpfeed 0.80.0 main ae68b0ad5, S22: switch on, the focused box has no emoji strip above it and keeps its image, sticker, @ and mic buttons; switch off, TikTok's six-emoji quick-reaction strip sits above the same box. Nothing was sent.",
           "verdict": {
             "receiptId": "fdd9d05f86c0f4c123d6c54b116d6e58ec2cb65fd613f2cf19ac3b47b2011d27",
             "status": "pass",
-            "note": "TikTok 47.6.3, Hushfeed 0.80.0 main ae68b0ad5, S22: switch on, the focused box has no emoji strip above it and keeps its image, sticker, @ and mic buttons; switch off, TikTok's six-emoji quick-reaction strip sits above the same box. Nothing was sent."
+            "note": "TikTok 47.6.3, Larpfeed 0.80.0 main ae68b0ad5, S22: switch on, the focused box has no emoji strip above it and keeps its image, sticker, @ and mic buttons; switch off, TikTok's six-emoji quick-reaction strip sits above the same box. Nothing was sent."
           }
         }
       ]
@@ -58111,11 +58111,11 @@
             "failures": []
           },
           "receiptId": "6c9e4d2b10549e1db57dabecb55437b9648fb42d6534c8ef2024df54e30c6544",
-          "verdictNote": "TikTok 47.6.3, Hushfeed 0.80.0 main ae68b0ad5, S22: switch off, the LIVE button sits top left of For You; switch on, the top row shows only the tabs and the search icon.",
+          "verdictNote": "TikTok 47.6.3, Larpfeed 0.80.0 main ae68b0ad5, S22: switch off, the LIVE button sits top left of For You; switch on, the top row shows only the tabs and the search icon.",
           "verdict": {
             "receiptId": "6c9e4d2b10549e1db57dabecb55437b9648fb42d6534c8ef2024df54e30c6544",
             "status": "pass",
-            "note": "TikTok 47.6.3, Hushfeed 0.80.0 main ae68b0ad5, S22: switch off, the LIVE button sits top left of For You; switch on, the top row shows only the tabs and the search icon."
+            "note": "TikTok 47.6.3, Larpfeed 0.80.0 main ae68b0ad5, S22: switch off, the LIVE button sits top left of For You; switch on, the top row shows only the tabs and the search icon."
           }
         },
         {
@@ -60149,11 +60149,11 @@
             "failures": []
           },
           "receiptId": "05b4823562ea107177ae3dd2344369f0730e87a366a45263fa5cb973b580d104",
-          "verdictNote": "TikTok 47.6.3, Hushfeed 0.80.0 main ae68b0ad5, S22: switch on, the creator avatar on the right column has no red plus badge, while the same session's switch-off shots show it on every avatar; follow-plus-gone's probe read the plus present 3, shown 0.",
+          "verdictNote": "TikTok 47.6.3, Larpfeed 0.80.0 main ae68b0ad5, S22: switch on, the creator avatar on the right column has no red plus badge, while the same session's switch-off shots show it on every avatar; follow-plus-gone's probe read the plus present 3, shown 0.",
           "verdict": {
             "receiptId": "05b4823562ea107177ae3dd2344369f0730e87a366a45263fa5cb973b580d104",
             "status": "pass",
-            "note": "TikTok 47.6.3, Hushfeed 0.80.0 main ae68b0ad5, S22: switch on, the creator avatar on the right column has no red plus badge, while the same session's switch-off shots show it on every avatar; follow-plus-gone's probe read the plus present 3, shown 0."
+            "note": "TikTok 47.6.3, Larpfeed 0.80.0 main ae68b0ad5, S22: switch on, the creator avatar on the right column has no red plus badge, while the same session's switch-off shots show it on every avatar; follow-plus-gone's probe read the plus present 3, shown 0."
           }
         }
       ]
@@ -62187,11 +62187,11 @@
             "failures": []
           },
           "receiptId": "005ddf77c53ce74cdd8b54ff7057be9a59a47c460265802a2ea5a9bf91384bf7",
-          "verdictNote": "TikTok 47.6.3, Hushfeed 0.80.0 main ae68b0ad5, S22: switch on, the For You top row ends at the For You tab with no magnifier on the right, where the switch-off probe found the search icon at the top right corner.",
+          "verdictNote": "TikTok 47.6.3, Larpfeed 0.80.0 main ae68b0ad5, S22: switch on, the For You top row ends at the For You tab with no magnifier on the right, where the switch-off probe found the search icon at the top right corner.",
           "verdict": {
             "receiptId": "005ddf77c53ce74cdd8b54ff7057be9a59a47c460265802a2ea5a9bf91384bf7",
             "status": "pass",
-            "note": "TikTok 47.6.3, Hushfeed 0.80.0 main ae68b0ad5, S22: switch on, the For You top row ends at the For You tab with no magnifier on the right, where the switch-off probe found the search icon at the top right corner."
+            "note": "TikTok 47.6.3, Larpfeed 0.80.0 main ae68b0ad5, S22: switch on, the For You top row ends at the For You tab with no magnifier on the right, where the switch-off probe found the search icon at the top right corner."
           }
         }
       ]
@@ -63445,11 +63445,11 @@
             "failures": []
           },
           "receiptId": "f2f7f2c83282659d837f58291af023a4c4eaf5db64207721a6947d39f7b8b019",
-          "verdictNote": "TikTok 47.6.3, Hushfeed 0.80.0 main ae68b0ad5, S22: switch off, the own-profile header shows the red gift box right of the edit pencil; switch on, the pencil stands alone with no gap where the gift box was.",
+          "verdictNote": "TikTok 47.6.3, Larpfeed 0.80.0 main ae68b0ad5, S22: switch off, the own-profile header shows the red gift box right of the edit pencil; switch on, the pencil stands alone with no gap where the gift box was.",
           "verdict": {
             "receiptId": "f2f7f2c83282659d837f58291af023a4c4eaf5db64207721a6947d39f7b8b019",
             "status": "pass",
-            "note": "TikTok 47.6.3, Hushfeed 0.80.0 main ae68b0ad5, S22: switch off, the own-profile header shows the red gift box right of the edit pencil; switch on, the pencil stands alone with no gap where the gift box was."
+            "note": "TikTok 47.6.3, Larpfeed 0.80.0 main ae68b0ad5, S22: switch off, the own-profile header shows the red gift box right of the edit pencil; switch on, the pencil stands alone with no gap where the gift box was."
           }
         }
       ]
@@ -65521,11 +65521,11 @@
             "failures": []
           },
           "receiptId": "6e5b9c3641c013f446c51f4825dd9f08ce1299f5a6bb25869b300e368d657116",
-          "verdictNote": "TikTok 47.6.3, Hushfeed 0.80.0 main ae68b0ad5, S22: with Hide conversations on, both chat rows (Lyzzie Joy Official, user68543836322) leave the Inbox and the system rows (Activity, TikTok Shop, System notifications, TikTok Tako) stay. The Say hi to row that stays is a suggested account with no messages, which Hide suggested accounts governs by design. The account has no Message requests row, so that half shows nothing either way.",
+          "verdictNote": "TikTok 47.6.3, Larpfeed 0.80.0 main ae68b0ad5, S22: with Hide conversations on, both chat rows (Lyzzie Joy Official, user68543836322) leave the Inbox and the system rows (Activity, TikTok Shop, System notifications, TikTok Tako) stay. The Say hi to row that stays is a suggested account with no messages, which Hide suggested accounts governs by design. The account has no Message requests row, so that half shows nothing either way.",
           "verdict": {
             "receiptId": "6e5b9c3641c013f446c51f4825dd9f08ce1299f5a6bb25869b300e368d657116",
             "status": "pass",
-            "note": "TikTok 47.6.3, Hushfeed 0.80.0 main ae68b0ad5, S22: with Hide conversations on, both chat rows (Lyzzie Joy Official, user68543836322) leave the Inbox and the system rows (Activity, TikTok Shop, System notifications, TikTok Tako) stay. The Say hi to row that stays is a suggested account with no messages, which Hide suggested accounts governs by design. The account has no Message requests row, so that half shows nothing either way."
+            "note": "TikTok 47.6.3, Larpfeed 0.80.0 main ae68b0ad5, S22: with Hide conversations on, both chat rows (Lyzzie Joy Official, user68543836322) leave the Inbox and the system rows (Activity, TikTok Shop, System notifications, TikTok Tako) stay. The Say hi to row that stays is a suggested account with no messages, which Hide suggested accounts governs by design. The account has no Message requests row, so that half shows nothing either way."
           }
         },
         {
@@ -68829,11 +68829,11 @@
             "failures": []
           },
           "receiptId": "700015604612099e60a4c97b1fc2c9a3a40f95037c95db215cdfe0c78d1a81d1",
-          "verdictNote": "TikTok 47.6.3, Hushfeed 0.80.0 main ae68b0ad5, S22: the search box shows the plain Search placeholder and only the five history rows; no suggested words or You may like list.",
+          "verdictNote": "TikTok 47.6.3, Larpfeed 0.80.0 main ae68b0ad5, S22: the search box shows the plain Search placeholder and only the five history rows; no suggested words or You may like list.",
           "verdict": {
             "receiptId": "700015604612099e60a4c97b1fc2c9a3a40f95037c95db215cdfe0c78d1a81d1",
             "status": "pass",
-            "note": "TikTok 47.6.3, Hushfeed 0.80.0 main ae68b0ad5, S22: the search box shows the plain Search placeholder and only the five history rows; no suggested words or You may like list."
+            "note": "TikTok 47.6.3, Larpfeed 0.80.0 main ae68b0ad5, S22: the search box shows the plain Search placeholder and only the five history rows; no suggested words or You may like list."
           }
         },
         {
@@ -70093,11 +70093,11 @@
             "failures": []
           },
           "receiptId": "ab25827408fe37da279270629771593a406ad9bc1ed634155b874850091a409b",
-          "verdictNote": "TikTok 47.6.3, Hushfeed 0.80.0 main ae68b0ad5, S22: with the switch off the Friends tab lists People you may know accounts with Remove and Follow (under a Facebook friends access dialog nobody tapped); after the restart with it on the tab keeps only the Facebook friends Find and Invite friends entries, no suggestion cards and no gap.",
+          "verdictNote": "TikTok 47.6.3, Larpfeed 0.80.0 main ae68b0ad5, S22: with the switch off the Friends tab lists People you may know accounts with Remove and Follow (under a Facebook friends access dialog nobody tapped); after the restart with it on the tab keeps only the Facebook friends Find and Invite friends entries, no suggestion cards and no gap.",
           "verdict": {
             "receiptId": "ab25827408fe37da279270629771593a406ad9bc1ed634155b874850091a409b",
             "status": "pass",
-            "note": "TikTok 47.6.3, Hushfeed 0.80.0 main ae68b0ad5, S22: with the switch off the Friends tab lists People you may know accounts with Remove and Follow (under a Facebook friends access dialog nobody tapped); after the restart with it on the tab keeps only the Facebook friends Find and Invite friends entries, no suggestion cards and no gap."
+            "note": "TikTok 47.6.3, Larpfeed 0.80.0 main ae68b0ad5, S22: with the switch off the Friends tab lists People you may know accounts with Remove and Follow (under a Facebook friends access dialog nobody tapped); after the restart with it on the tab keeps only the Facebook friends Find and Invite friends entries, no suggestion cards and no gap."
           }
         },
         {
@@ -74619,11 +74619,11 @@
             "failures": []
           },
           "receiptId": "5dda8b57b5a2547fa9788bb8aa2101b4831d350140d8bbb406f2f7d72be9b801",
-          "verdictNote": "TikTok 47.6.3, Hushfeed 0.80.0 main ae68b0ad5, S22: only the avatar and the heart are left on the right; the like count 6,215 (g9h, y 2171-2195) ends above video_seek_bar (y 2195-2274) and the 0:09 / 0:43 time, no overlap.",
+          "verdictNote": "TikTok 47.6.3, Larpfeed 0.80.0 main ae68b0ad5, S22: only the avatar and the heart are left on the right; the like count 6,215 (g9h, y 2171-2195) ends above video_seek_bar (y 2195-2274) and the 0:09 / 0:43 time, no overlap.",
           "verdict": {
             "receiptId": "5dda8b57b5a2547fa9788bb8aa2101b4831d350140d8bbb406f2f7d72be9b801",
             "status": "pass",
-            "note": "TikTok 47.6.3, Hushfeed 0.80.0 main ae68b0ad5, S22: only the avatar and the heart are left on the right; the like count 6,215 (g9h, y 2171-2195) ends above video_seek_bar (y 2195-2274) and the 0:09 / 0:43 time, no overlap."
+            "note": "TikTok 47.6.3, Larpfeed 0.80.0 main ae68b0ad5, S22: only the avatar and the heart are left on the right; the like count 6,215 (g9h, y 2171-2195) ends above video_seek_bar (y 2195-2274) and the 0:09 / 0:43 time, no overlap."
           }
         },
         {
@@ -87720,11 +87720,11 @@
             "failures": []
           },
           "receiptId": "fdb5c77382c73b9ff1a957839c351e7179322dc461e125d529a535f505400433",
-          "verdictNote": "TikTok 47.6.3, Hushfeed 0.80.0 main ae68b0ad5, S22: the Bio editor's counter reads 21/160 with the switch off and 21/10000 with it on, same bio text both times; Save stayed unpressed and Back left the editor.",
+          "verdictNote": "TikTok 47.6.3, Larpfeed 0.80.0 main ae68b0ad5, S22: the Bio editor's counter reads 21/160 with the switch off and 21/10000 with it on, same bio text both times; Save stayed unpressed and Back left the editor.",
           "verdict": {
             "receiptId": "fdb5c77382c73b9ff1a957839c351e7179322dc461e125d529a535f505400433",
             "status": "pass",
-            "note": "TikTok 47.6.3, Hushfeed 0.80.0 main ae68b0ad5, S22: the Bio editor's counter reads 21/160 with the switch off and 21/10000 with it on, same bio text both times; Save stayed unpressed and Back left the editor."
+            "note": "TikTok 47.6.3, Larpfeed 0.80.0 main ae68b0ad5, S22: the Bio editor's counter reads 21/160 with the switch off and 21/10000 with it on, same bio text both times; Save stayed unpressed and Back left the editor."
           }
         }
       ]
@@ -93821,7 +93821,7 @@
       "checks": [
         {
           "id": "proxy-dialed",
-          "what": "With the proxy on and pointed at a closed port on the phone itself, the start-up reachability probe fails and Hushfeed says so (info line 'Network proxy: the ... didn't answer'); nothing leaves the phone.",
+          "what": "With the proxy on and pointed at a closed port on the phone itself, the start-up reachability probe fails and Larpfeed says so (info line 'Network proxy: the ... didn't answer'); nothing leaves the phone.",
           "auto": true,
           "status": "pass",
           "failures": [],
@@ -110806,11 +110806,11 @@
             "failures": []
           },
           "receiptId": "cf1a29c7dda876bf150819d9a14c584948bcb59be7d2fa906173e8d0eafc29d3",
-          "verdictNote": "TikTok 47.6.3, Hushfeed 0.80.0 main ae68b0ad5, S22: switches off, a creator with a story (storyStatus 1/1) has the cyan story ring with its white gap around the rail avatar; switches on, the story creator in front (stored 1, getter 0) shows a plain avatar with no ring or gap.",
+          "verdictNote": "TikTok 47.6.3, Larpfeed 0.80.0 main ae68b0ad5, S22: switches off, a creator with a story (storyStatus 1/1) has the cyan story ring with its white gap around the rail avatar; switches on, the story creator in front (stored 1, getter 0) shows a plain avatar with no ring or gap.",
           "verdict": {
             "receiptId": "cf1a29c7dda876bf150819d9a14c584948bcb59be7d2fa906173e8d0eafc29d3",
             "status": "pass",
-            "note": "TikTok 47.6.3, Hushfeed 0.80.0 main ae68b0ad5, S22: switches off, a creator with a story (storyStatus 1/1) has the cyan story ring with its white gap around the rail avatar; switches on, the story creator in front (stored 1, getter 0) shows a plain avatar with no ring or gap."
+            "note": "TikTok 47.6.3, Larpfeed 0.80.0 main ae68b0ad5, S22: switches off, a creator with a story (storyStatus 1/1) has the cyan story ring with its white gap around the rail avatar; switches on, the story creator in front (stored 1, getter 0) shows a plain avatar with no ring or gap."
           }
         }
       ]
@@ -121301,7 +121301,7 @@
       "checks": [
         {
           "id": "home-page",
-          "what": "Hushfeed's settings open and the home page lists the section rows the installed patches ask for (Feed filter, Feed tabs, Downloads, Inbox, Diagnostics) and the Backup and restore and About rows.",
+          "what": "Larpfeed's settings open and the home page lists the section rows the installed patches ask for (Feed filter, Feed tabs, Downloads, Inbox, Diagnostics) and the Backup and restore and About rows.",
           "auto": true,
           "status": "pass",
           "failures": [],
@@ -122513,7 +122513,7 @@
         },
         {
           "id": "home-long-press",
-          "what": "Holding the Home tab opens Hushfeed's settings (home_tab_opens_settings, on by default), and the Hushfeed row in TikTok's Settings and privacy opens them too.",
+          "what": "Holding the Home tab opens Larpfeed's settings (home_tab_opens_settings, on by default), and the Larpfeed row in TikTok's Settings and privacy opens them too.",
           "auto": true,
           "status": "pass",
           "failures": [],
@@ -127876,11 +127876,11 @@
             "failures": []
           },
           "receiptId": "d53f2c97d88da620318e0492431fe392073ebcfd1f394d2764bf68077f0c40ba",
-          "verdictNote": "TikTok 47.6.3, Hushfeed 0.80.0 main ae68b0ad5, S22: every visible row names its commenter as @handle (@lilemobunnie, @space_cow_boy_06, @runitup._king, @xqvc0_0) and each time line reads 09-16 · AQ, the seeded country, on the rows whose account carried none.",
+          "verdictNote": "TikTok 47.6.3, Larpfeed 0.80.0 main ae68b0ad5, S22: every visible row names its commenter as @handle (@lilemobunnie, @space_cow_boy_06, @runitup._king, @xqvc0_0) and each time line reads 09-16 · AQ, the seeded country, on the rows whose account carried none.",
           "verdict": {
             "receiptId": "d53f2c97d88da620318e0492431fe392073ebcfd1f394d2764bf68077f0c40ba",
             "status": "pass",
-            "note": "TikTok 47.6.3, Hushfeed 0.80.0 main ae68b0ad5, S22: every visible row names its commenter as @handle (@lilemobunnie, @space_cow_boy_06, @runitup._king, @xqvc0_0) and each time line reads 09-16 · AQ, the seeded country, on the rows whose account carried none."
+            "note": "TikTok 47.6.3, Larpfeed 0.80.0 main ae68b0ad5, S22: every visible row names its commenter as @handle (@lilemobunnie, @space_cow_boy_06, @runitup._king, @xqvc0_0) and each time line reads 09-16 · AQ, the seeded country, on the rows whose account carried none."
           }
         },
         {
@@ -144548,11 +144548,11 @@
             "failures": []
           },
           "receiptId": "86b4ec9e6897e58290ee517c2d1d81ae727c55cb3edc2a595cb4dffc3b705e36",
-          "verdictNote": "TikTok 47.6.3, Hushfeed 0.80.0 main ae68b0ad5, S22: switch on, the cats results show still covers; switch off, the first tile moved to a new frame and shows its speaker icon, so it played on its own.",
+          "verdictNote": "TikTok 47.6.3, Larpfeed 0.80.0 main ae68b0ad5, S22: switch on, the cats results show still covers; switch off, the first tile moved to a new frame and shows its speaker icon, so it played on its own.",
           "verdict": {
             "receiptId": "86b4ec9e6897e58290ee517c2d1d81ae727c55cb3edc2a595cb4dffc3b705e36",
             "status": "pass",
-            "note": "TikTok 47.6.3, Hushfeed 0.80.0 main ae68b0ad5, S22: switch on, the cats results show still covers; switch off, the first tile moved to a new frame and shows its speaker icon, so it played on its own."
+            "note": "TikTok 47.6.3, Larpfeed 0.80.0 main ae68b0ad5, S22: switch on, the cats results show still covers; switch off, the first tile moved to a new frame and shows its speaker icon, so it played on its own."
           }
         },
         {
@@ -154306,7 +154306,7 @@
         },
         {
           "id": "slide-gone",
-          "what": "Hushfeed's row on TikTok's Settings and privacy is tapped while the screen is filmed: with the switch off the clip passes through a run of frames between the two screens (the slide), with it on it jumps straight to Hushfeed's page.",
+          "what": "Larpfeed's row on TikTok's Settings and privacy is tapped while the screen is filmed: with the switch off the clip passes through a run of frames between the two screens (the slide), with it on it jumps straight to Larpfeed's page.",
           "auto": true,
           "status": "pass",
           "failures": [],

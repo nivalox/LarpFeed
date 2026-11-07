@@ -193,7 +193,7 @@ public class FeedMuteTest {
         PausedProcess.set(true);
         try {
             assertEquals(List.of("Mute feed videos: on",
-                    "Hushfeed is paused, so the feed plays with its sound",
+                    "Larpfeed is paused, so the feed plays with its sound",
                     "Mute button on the feed: shown",
                     "Other apps play until a video starts: off",
                     "Feed players muted since TikTok started: 0", "Audio focus requests turned down: 0"),

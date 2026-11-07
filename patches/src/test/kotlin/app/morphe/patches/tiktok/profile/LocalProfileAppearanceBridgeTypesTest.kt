@@ -1,6 +1,6 @@
 /*
- * Copyright 2026 Hushfeed contributors
- * https://github.com/SysAdminDoc/hushfeed
+ * Copyright 2026 Larpfeed contributors
+ * https://github.com/SysAdminDoc/larpfeed
  */
 package app.morphe.patches.tiktok.profile
 
@@ -60,7 +60,7 @@ class LocalProfileAppearanceBridgeTypesTest {
     }
 
     @Test fun `the 0 74 0 begin bridge is what the phone rejected`() {
-        // hushfeedBeginNicknameBind as 0.72.0 to 0.74.0 built it: the holders walked through v0, so
+        // larpfeedBeginNicknameBind as 0.72.0 to 0.74.0 built it: the holders walked through v0, so
         // :identity_ready met v0 as ProfileCommonInfo, UserProfileInfo and String, which is Object.
         val shipped = MutableMethod(ImmutableMethod(NAVBAR_NICKNAME_OWNER, APPEARANCE_BEGIN, emptyList(), "V",
             AccessFlags.PRIVATE.value or AccessFlags.SYNTHETIC.value, null, null,
@@ -87,7 +87,7 @@ class LocalProfileAppearanceBridgeTypesTest {
     }
 
     @Test fun `a merged return is caught the way a merged argument is`() {
-        val merged = MutableMethod(ImmutableMethod(NICKNAME_REPAINT, "hushfeedExample", emptyList(), STRING,
+        val merged = MutableMethod(ImmutableMethod(NICKNAME_REPAINT, "larpfeedExample", emptyList(), STRING,
             AccessFlags.PRIVATE.value or AccessFlags.SYNTHETIC.value, null, null,
             ImmutableMethodImplementation(2, emptyList(), null, null))).apply {
             addInstructionsWithLabels(0, """
@@ -104,7 +104,7 @@ class LocalProfileAppearanceBridgeTypesTest {
             """)
         }
         assertEquals(1, BridgeTypeFlow.check(merged).size)
-        val fixed = MutableMethod(ImmutableMethod(NICKNAME_REPAINT, "hushfeedExample", emptyList(), STRING,
+        val fixed = MutableMethod(ImmutableMethod(NICKNAME_REPAINT, "larpfeedExample", emptyList(), STRING,
             AccessFlags.PRIVATE.value or AccessFlags.SYNTHETIC.value, null, null,
             ImmutableMethodImplementation(3, emptyList(), null, null))).apply {
             addInstructionsWithLabels(0, """

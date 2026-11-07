@@ -57,7 +57,7 @@ public class FeedOverlayControlsTest {
 
     /**
      * The Footnotes banner's gate is closed only by its own switch, is left to TikTok while
-     * Hushfeed is paused, and says it ran so the build report can tell a bound hook from a
+     * Larpfeed is paused, and says it ran so the build report can tell a bound hook from a
      * missing one.
      */
     @Test public void theFootnotesGateIsClosedOnlyByItsOwnSwitchAndHonoursPause() {
@@ -74,7 +74,7 @@ public class FeedOverlayControlsTest {
             assertFalse("the Footnotes switch closed the Report gate",
                     FeedOverlayControls.shouldHideReportButton());
             PausedProcess.set(true);
-            assertFalse("a paused Hushfeed still closed the gate", FeedOverlayControls.shouldHideFootnotes());
+            assertFalse("a paused Larpfeed still closed the gate", FeedOverlayControls.shouldHideFootnotes());
             PausedProcess.set(false);
             assertTrue(String.join(" ", HookStatus.report()).contains("footnote banner"));
         } finally {
@@ -101,7 +101,7 @@ public class FeedOverlayControlsTest {
             assertFalse(FeedOverlayControls.skylightShown(true));
             assertFalse(FeedOverlayControls.skylightShown(false));
             PausedProcess.set(true);
-            assertTrue("a paused Hushfeed still folded the row", FeedOverlayControls.skylightShown(true));
+            assertTrue("a paused Larpfeed still folded the row", FeedOverlayControls.skylightShown(true));
             PausedProcess.set(false);
             assertTrue(String.join(" ", HookStatus.report()).contains("following live row"));
         } finally {
@@ -127,7 +127,7 @@ public class FeedOverlayControlsTest {
             assertFalse(FeedOverlayControls.interestButtonsShown(1));
             assertFalse("another component turned into the button group", FeedOverlayControls.interestButtonsShown(0));
             PausedProcess.set(true);
-            assertTrue("a paused Hushfeed still dropped the buttons", FeedOverlayControls.interestButtonsShown(1));
+            assertTrue("a paused Larpfeed still dropped the buttons", FeedOverlayControls.interestButtonsShown(1));
             PausedProcess.set(false);
             assertTrue(String.join(" ", HookStatus.report()).contains("interest buttons"));
         } finally {
@@ -150,7 +150,7 @@ public class FeedOverlayControlsTest {
             assertFalse(FeedOverlayControls.repostChipShown(1));
             assertFalse("a video with no chip got one", FeedOverlayControls.repostChipShown(0));
             PausedProcess.set(true);
-            assertTrue("a paused Hushfeed still dropped the chip", FeedOverlayControls.repostChipShown(1));
+            assertTrue("a paused Larpfeed still dropped the chip", FeedOverlayControls.repostChipShown(1));
             PausedProcess.set(false);
             assertTrue(String.join(" ", HookStatus.report()).contains("repost chip"));
         } finally {
@@ -170,7 +170,7 @@ public class FeedOverlayControlsTest {
             assertEquals("TikTok taking the bar down still does", View.GONE, FeedOverlayControls.repostBarVisibility(View.GONE));
             assertEquals(View.INVISIBLE, FeedOverlayControls.repostBarVisibility(View.INVISIBLE));
             PausedProcess.set(true);
-            assertEquals("a paused Hushfeed still kept the bar off", View.VISIBLE, FeedOverlayControls.repostBarVisibility(View.VISIBLE));
+            assertEquals("a paused Larpfeed still kept the bar off", View.VISIBLE, FeedOverlayControls.repostBarVisibility(View.VISIBLE));
         } finally {
             PausedProcess.set(false);
             HookStatus.clear();

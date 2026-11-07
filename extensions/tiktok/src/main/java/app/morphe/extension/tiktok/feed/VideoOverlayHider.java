@@ -1,6 +1,6 @@
 /*
- * Copyright 2026 Hushfeed contributors
- * https://github.com/SysAdminDoc/hushfeed
+ * Copyright 2026 Larpfeed contributors
+ * https://github.com/SysAdminDoc/larpfeed
  *
  * Built on icysymmetra/tiktok-patches-for-morphe (GPL-3.0).
  */
@@ -30,7 +30,7 @@ import app.morphe.extension.shared.Logger;
 import app.morphe.extension.shared.ResourceIdCache;
 import app.morphe.extension.shared.Utils;
 import app.morphe.extension.shared.settings.BaseSettings;
-import app.morphe.extension.shared.settings.HushfeedPause;
+import app.morphe.extension.shared.settings.LarpfeedPause;
 import app.morphe.extension.tiktok.blockauthor.FeedVisibility;
 import app.morphe.extension.tiktok.cleardisplay.RememberClearDisplayPatch;
 import app.morphe.extension.tiktok.navigation.FrontWindow;
@@ -604,7 +604,7 @@ public final class VideoOverlayHider {
                 return;
             }
             // Swipe for brightness and volume wraps the window once, and gives the brightness
-            // back on this pass when its switch goes off or Hushfeed is paused.
+            // back on this pass when its switch goes off or Larpfeed is paused.
             EdgeSwipeLevels.sync(activity);
             // The names above the feed follow their own switch on the strip TikTok's tab filter
             // hides; this pass is the one thing that runs on every layout, so it carries the ask.
@@ -640,12 +640,12 @@ public final class VideoOverlayHider {
             // a swipe and that clear the incoming video would show its buttons, caption, music,
             // the tabs and (with the controls hidden) TikTok's ordinary progress bar (#84).
             // Carried over, they stay away across the swipe.
-            boolean carry = !HushfeedPause.isPaused() && RememberClearDisplayPatch.isCarryingClear();
-            boolean clearLive = !HushfeedPause.isPaused()
+            boolean carry = !LarpfeedPause.isPaused() && RememberClearDisplayPatch.isCarryingClear();
+            boolean clearLive = !LarpfeedPause.isPaused()
                     && (RememberClearDisplayPatch.isClearDisplayNow() || carry);
             // The fade belongs to the overlay patch: a value saved before a repatch without it
             // does nothing, and Pause answers the stock look.
-            boolean overlaysOn = !HushfeedPause.isPaused() && SettingsStatus.videoOverlaysEnabled;
+            boolean overlaysOn = !LarpfeedPause.isPaused() && SettingsStatus.videoOverlaysEnabled;
             int chosenFade = overlaysOn ? Math.max(0, Math.min(100, Settings.FADE_CONTROLS_OPACITY.get())) : 100;
             // With the fade set, Clear display keeps the controls it covers in sight at that
             // level instead of taking them away, and lets taps through them (#84). Across a
@@ -677,7 +677,7 @@ public final class VideoOverlayHider {
             boolean anchor = clearLive && !fadedClear;
             // Asked for here and confirmed after the walk by TikTok's own bar being on screen,
             // which it shows only in Clear display; see gateClearControls.
-            boolean clearControls = !HushfeedPause.isPaused() && Settings.HIDE_CLEAR_DISPLAY_CONTROLS.get();
+            boolean clearControls = !LarpfeedPause.isPaused() && Settings.HIDE_CLEAR_DISPLAY_CONTROLS.get();
             boolean statusBar = Settings.HIDE_STATUS_BAR.get();
             // The main feed's video goes up under a see-through status bar: the spacer TikTok keeps
             // for the bar above each video goes, as it does with the bar hidden, which wins (#145).
@@ -721,7 +721,7 @@ public final class VideoOverlayHider {
             // video's caption already moves with its own bar (see alignBarRows), so none there.
             int roomAbove = detailPager ? 0 : SeekbarTime.roomAbove();
             // The Following tab's LIVE row (#262) is the main feed's; an opened video has none.
-            boolean skylight = Settings.HIDE_FOLLOWING_LIVE_ROW.get() && !detailPager && !HushfeedPause.isPaused();
+            boolean skylight = Settings.HIDE_FOLLOWING_LIVE_ROW.get() && !detailPager && !LarpfeedPause.isPaused();
             if (caption || music || actionBar || surveys || tabStrip || carry || detailCommentBar || anchor
                     || skylight
                     || clearControls || detailSearchBox
@@ -2535,7 +2535,7 @@ public final class VideoOverlayHider {
      * <p>The layout listener runs this class on every layout of the window, and an opened video
      * lays out many times while it settles. Each pass resolved every candidate name again and
      * compared every view in the window with every candidate, which on the S22 was the larger part
-     * of the main-thread time Hushfeed added to opening a video from search (#344).
+     * of the main-thread time Larpfeed added to opening a video from search (#344).
      */
     static final class CandidateIds {
         final String packageName;
@@ -2871,7 +2871,7 @@ public final class VideoOverlayHider {
      * in. Asked on every finger down, so it reads the live state rather than the last pass's.
      */
     static boolean tapsGoThroughNow() {
-        if (HushfeedPause.isPaused() || !SettingsStatus.videoOverlaysEnabled) return false;
+        if (LarpfeedPause.isPaused() || !SettingsStatus.videoOverlaysEnabled) return false;
         if (!Settings.FADE_IN_CLEAR_DISPLAY.get()) return false;
         int level = Settings.FADE_CONTROLS_OPACITY.get();
         return level > 0 && level < 100 && (RememberClearDisplayPatch.isClearDisplayNow()

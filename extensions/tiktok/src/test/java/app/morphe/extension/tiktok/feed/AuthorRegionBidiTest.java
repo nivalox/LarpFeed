@@ -428,7 +428,7 @@ public class AuthorRegionBidiTest {
                     .append(rateBounds.left).append('\t').append(rateBounds.right).append('\n');
             AuthorRegion.restore();
         }
-        String folder=System.getProperty("hushfeed.bidi.output");
+        String folder=System.getProperty("larpfeed.bidi.output");
         if(folder!=null) try(FileOutputStream stream=new FileOutputStream(new File(folder,"native-layout-evidence.tsv"))) {
             stream.write(evidence.toString().getBytes(StandardCharsets.UTF_8));
         }
@@ -515,7 +515,7 @@ public class AuthorRegionBidiTest {
         method.invoke(null);
     }
     private static void capture(TextView name,String label) throws Exception {
-        String folder=System.getProperty("hushfeed.bidi.output");
+        String folder=System.getProperty("larpfeed.bidi.output");
         if(folder==null) return;
         File output=new File(folder,label);
         output.getParentFile().mkdirs();

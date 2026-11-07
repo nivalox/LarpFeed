@@ -1,6 +1,6 @@
 /*
- * Copyright 2026 Hushfeed contributors
- * https://github.com/SysAdminDoc/hushfeed
+ * Copyright 2026 Larpfeed contributors
+ * https://github.com/SysAdminDoc/larpfeed
  */
 package app.morphe.patches.tiktok.interaction.looping
 
@@ -39,7 +39,7 @@ val fullScreenHoldPatch = bytecodePatch(
     name = "Stay on the video in full screen",
     description = "When a video ends in TikTok's full screen view, it stays on that video " +
         "instead of moving to the next one. Swiping still moves on. Starts off. Turn it on in " +
-        "Hushfeed settings > Playback.",
+        "Larpfeed settings > Playback.",
     default = true,
 ) {
     category("Playback")

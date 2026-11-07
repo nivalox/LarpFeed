@@ -276,7 +276,7 @@ public final class SettingsUi {
     public static final @ColorInt int DARK_OK = 0xFF6BCB77;
     public static final @ColorInt int LIGHT_OK = 0xFF1D7A37;
     /**
-     * The home status card while Hushfeed is running, in the dark theme: the surface warmed
+     * The home status card while Larpfeed is running, in the dark theme: the surface warmed
      * toward the accent, with a border between the two. The light theme keeps the plain card.
      */
     public static final @ColorInt int DARK_STATUS_SURFACE = 0xFF1D1119;
@@ -1015,7 +1015,7 @@ public final class SettingsUi {
 
     /**
      * Marks a title in a hand-built dialog as a heading for accessibility services, and puts it
-     * in the moving cyan and red every Hushfeed title wears.
+     * in the moving cyan and red every Larpfeed title wears.
      */
     public static void markDialogHeading(TextView title) {
         markHeading(title);
@@ -1913,7 +1913,7 @@ public final class SettingsUi {
         int fieldIndex = parent.indexOfChild(field);
         if (fieldIndex < 0) return null;
         TextView error = text(field.getContext(), "", 13, error(), Typeface.NORMAL);
-        error.setTag("hushfeed_field_error");
+        error.setTag("larpfeed_field_error");
         error.setVisibility(View.GONE);
         error.setPaddingRelative(0, dp(field.getContext(), 4), 0, 0);
         error.setAccessibilityLiveRegion(View.ACCESSIBILITY_LIVE_REGION_ASSERTIVE);

@@ -1,6 +1,6 @@
 /*
- * Copyright 2026 Hushfeed contributors
- * https://github.com/SysAdminDoc/hushfeed
+ * Copyright 2026 Larpfeed contributors
+ * https://github.com/SysAdminDoc/larpfeed
  *
  * Built on icysymmetra/tiktok-patches-for-morphe (GPL-3.0).
  */
@@ -16,7 +16,7 @@ import org.json.JSONObject;
 
 /** Defaults supplied by native Morphe patch options; never writes user preferences. */
 final class PatchDefaults {
-    private static final String ASSET = "hushfeed-defaults-v1.json";
+    private static final String ASSET = "larpfeed-defaults-v1.json";
     private static JSONObject defaults;
 
     private PatchDefaults() {}

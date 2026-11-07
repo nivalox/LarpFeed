@@ -154,7 +154,7 @@ public class CommentExportTest {
         assertEquals("=HYPERLINK(\"x\")", whole.getJSONArray("comments").getJSONObject(0).getString("text"));
         JSONObject cut = new JSONObject(CommentExport.toJson(rows, "2026-10-07T00:00:00Z", true));
         assertEquals(true, cut.getBoolean("truncated"));
-        assertTrue(cut.getString("note"), cut.getString("note").contains("more comments loaded than Hushfeed keeps"));
+        assertTrue(cut.getString("note"), cut.getString("note").contains("more comments loaded than Larpfeed keeps"));
     }
 
     @Test public void csvFileLeadsWithAByteOrderMarkAndJsonDoesNot() throws Exception {
@@ -376,7 +376,7 @@ public class CommentExportTest {
     }
 
     private static void answer(Activity activity, int requestCode, DocumentExportProvider provider) {
-        android.app.Fragment request = activity.getFragmentManager().findFragmentByTag("hushfeed_comment_export");
+        android.app.Fragment request = activity.getFragmentManager().findFragmentByTag("larpfeed_comment_export");
         assertNotNull("the picker's fragment is missing", request);
         request.onActivityResult(requestCode, Activity.RESULT_OK, new Intent().setData(provider.uri));
     }
@@ -393,11 +393,11 @@ public class CommentExportTest {
     }
 
     private static String bannerText(Activity activity) {
-        View label = activity.findViewById(android.R.id.content).findViewWithTag("hushfeed_settings_action_message");
+        View label = activity.findViewById(android.R.id.content).findViewWithTag("larpfeed_settings_action_message");
         return label instanceof TextView ? ((TextView) label).getText().toString() : null;
     }
 
     private static View bannerAction(Activity activity) {
-        return activity.findViewById(android.R.id.content).findViewWithTag("hushfeed_settings_action_button");
+        return activity.findViewById(android.R.id.content).findViewWithTag("larpfeed_settings_action_button");
     }
 }

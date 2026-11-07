@@ -444,7 +444,7 @@ public final class TakoAiFilter {
      * Tako" and an "Ask Tako" box. The caption handler asks one gate before it hands the tap to
      * that panel, and on a no it expands the caption in place, the same path a video with nothing
      * to search takes. This is the gate's answer on its way to that branch: with the switch on the
-     * panel is never asked for; with it off, or while Hushfeed is paused, TikTok's answer stands.
+     * panel is never asked for; with it off, or while Larpfeed is paused, TikTok's answer stands.
      */
     public static boolean allowCaptionSearchPanel(boolean tikTok) {
         HookStatus.bound(HOOK_FAMILY, CAPTION_PANEL_ASKED);
@@ -462,7 +462,7 @@ public final class TakoAiFilter {
      * {@link #allowCaptionSearchPanel}) it led nowhere. TikTok's helper decides that from a flag
      * that says the video has smart search info; this is that flag on its way in. With the switch
      * on it says no, which gives the caption the layout of a video without Tako content: "more"
-     * only where the text is cut, and an expand in place. With it off, or while Hushfeed is
+     * only where the text is cut, and an expand in place. With it off, or while Larpfeed is
      * paused, the flag is TikTok's own.
      */
     public static boolean allowSmartSearchCaption(boolean hasSmartSearchInfo) {

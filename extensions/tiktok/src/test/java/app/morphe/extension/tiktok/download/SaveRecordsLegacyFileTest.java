@@ -1,6 +1,6 @@
 /*
- * Copyright 2026 Hushfeed contributors
- * https://github.com/SysAdminDoc/hushfeed
+ * Copyright 2026 Larpfeed contributors
+ * https://github.com/SysAdminDoc/larpfeed
  */
 package app.morphe.extension.tiktok.download;
 
@@ -44,7 +44,7 @@ import java.util.concurrent.TimeUnit;
 @RunWith(RobolectricTestRunner.class)
 @Config(manifest = Config.NONE, sdk = {23, 28}, qualifiers = "en")
 public class SaveRecordsLegacyFileTest {
-    private static final String FOLDER = "Pictures/Hushfeed";
+    private static final String FOLDER = "Pictures/Larpfeed";
     private static final byte[] PICTURE = "a whole picture".getBytes(StandardCharsets.UTF_8);
 
     private Context context;

@@ -1,6 +1,6 @@
 /*
- * Copyright 2026 Hushfeed contributors
- * https://github.com/SysAdminDoc/hushfeed
+ * Copyright 2026 Larpfeed contributors
+ * https://github.com/SysAdminDoc/larpfeed
  */
 package app.morphe.extension.tiktok.comment;
 
@@ -73,7 +73,7 @@ public class StickerCreatorTest {
         assertEquals("Make a sticker from a photo", pill.getContentDescription().toString());
     }
 
-    @Test public void aPageWithNoGridOrAPausedHushfeedGetsNone() {
+    @Test public void aPageWithNoGridOrAPausedLarpfeedGetsNone() {
         FrameLayout empty = new FrameLayout(context());
         StickerCreator.onFavouritesPage(empty);
         assertNull(empty.findViewWithTag(StickerCreator.PILL_TAG));

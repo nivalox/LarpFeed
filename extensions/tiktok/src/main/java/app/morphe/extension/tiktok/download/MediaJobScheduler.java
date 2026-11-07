@@ -1,6 +1,6 @@
 /*
- * Copyright 2026 Hushfeed contributors
- * https://github.com/SysAdminDoc/hushfeed
+ * Copyright 2026 Larpfeed contributors
+ * https://github.com/SysAdminDoc/larpfeed
  *
  * Built on icysymmetra/tiktok-patches-for-morphe (GPL-3.0).
  */
@@ -33,7 +33,7 @@ final class MediaJobScheduler {
     static final int MAX_QUEUED_JOBS = 8;
 
     private static final ThreadFactory THREAD_FACTORY = runnable -> {
-        Thread thread = new Thread(runnable, "Hushfeed-MediaJob");
+        Thread thread = new Thread(runnable, "Larpfeed-MediaJob");
         thread.setDaemon(true);
         return thread;
     };

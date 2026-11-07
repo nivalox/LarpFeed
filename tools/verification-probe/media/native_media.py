@@ -155,7 +155,7 @@ def prepare(output: Path, ffmpeg: str, ffprobe: str) -> dict:
         temp.rename(final)
         owned.append(final)
         return {"token": token, "manifestSha256": digest(final, 32768), "inputFiles": list(INPUTS),
-                "fixtures": str(output), "deviceSubdirectory": "hushfeed-native-media/" + token,
+                "fixtures": str(output), "deviceSubdirectory": "larpfeed-native-media/" + token,
                 "nativeExecuted": False}
     except BaseException:
         for path in reversed(owned):

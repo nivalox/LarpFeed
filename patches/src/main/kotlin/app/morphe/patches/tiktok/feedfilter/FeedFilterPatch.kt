@@ -76,7 +76,7 @@ val feedFilterPatch = bytecodePatch(
     name = "Feed filter",
     description = "Hides ads in the feed, and lets you hide other things you don't want to " +
         "see, like LIVEs, Shop posts, AI videos or videos with words, creators or sounds you " +
-        "pick. Hiding ads is on by default. Everything else starts off in Hushfeed settings > " +
+        "pick. Hiding ads is on by default. Everything else starts off in Larpfeed settings > " +
         "Feed filter.",
     default = true,
 ) {

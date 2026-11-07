@@ -1,6 +1,6 @@
 /*
- * Copyright 2026 Hushfeed contributors
- * https://github.com/SysAdminDoc/hushfeed
+ * Copyright 2026 Larpfeed contributors
+ * https://github.com/SysAdminDoc/larpfeed
  */
 package app.morphe.patches.tiktok.interaction.feedmute
 
@@ -67,7 +67,7 @@ internal class FeedMuteMembers(
 )
 
 /** The name of the give-up the patch adds to the player session when R8 inlined TikTok's own. */
-internal const val SESSION_ABANDON = "hushfeedAbandonFocus"
+internal const val SESSION_ABANDON = "larpfeedAbandonFocus"
 private const val HANDLER_THREAD = "Landroid/os/HandlerThread;"
 private const val LOOPER = "Landroid/os/Looper;"
 private const val HANDLER = "Landroid/os/Handler;"
@@ -338,7 +338,7 @@ val feedMutePatch = bytecodePatch(
     name = "Mute feed videos",
     description = "Mutes feed videos without changing your phone's volume, so music from " +
         "another app keeps playing. You can also add a mute button on videos, or keep the sound " +
-        "and let other apps play until a video starts and after you leave it. Starts off. Turn it on in Hushfeed " +
+        "and let other apps play until a video starts and after you leave it. Starts off. Turn it on in Larpfeed " +
         "settings > Playback.",
 ) {
     category("Playback")

@@ -54,9 +54,9 @@ public class AuditedSurfacesTest {
     public static class Host extends android.preference.PreferenceActivity {}
 
     private static final String OPEN_THE_FEED_FOR_TABS =
-            "Open the feed once so Hushfeed can see which tabs TikTok loaded.";
+            "Open the feed once so Larpfeed can see which tabs TikTok loaded.";
     private static final String OPEN_THE_FEED_FOR_BOTTOM_TABS =
-            "Open the feed once so Hushfeed can see which bottom tabs TikTok loaded.";
+            "Open the feed once so Larpfeed can see which bottom tabs TikTok loaded.";
 
     @After public void reset() {
         Settings.SHARE_ACTION_CATALOG.save("");

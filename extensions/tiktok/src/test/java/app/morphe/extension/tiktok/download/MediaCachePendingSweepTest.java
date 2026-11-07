@@ -1,6 +1,6 @@
 /*
- * Copyright 2026 Hushfeed contributors
- * https://github.com/SysAdminDoc/hushfeed
+ * Copyright 2026 Larpfeed contributors
+ * https://github.com/SysAdminDoc/larpfeed
  */
 package app.morphe.extension.tiktok.download;
 
@@ -47,7 +47,7 @@ import java.util.List;
 @Config(manifest = Config.NONE, sdk = {29, 30})
 public class MediaCachePendingSweepTest {
     private static final Uri COLLECTION = MediaStore.Images.Media.getContentUri(MediaStore.VOLUME_EXTERNAL_PRIMARY);
-    private static final String FOLDER = "Pictures/Hushfeed";
+    private static final String FOLDER = "Pictures/Larpfeed";
 
     private Context context;
 
@@ -64,7 +64,7 @@ public class MediaCachePendingSweepTest {
     }
 
     @Test public void aDayOldPendingRowGoesWithItsEntry() throws Exception {
-        HidingMediaProvider.add(7L, "hushfeed-pending-1-1.jpg", 1);
+        HidingMediaProvider.add(7L, "larpfeed-pending-1-1.jpg", 1);
         writeStale(ContentUris.withAppendedId(COLLECTION, 7L).toString());
 
         MediaCache.reconcile(context);
@@ -74,8 +74,8 @@ public class MediaCachePendingSweepTest {
     }
 
     @Test public void aDayOldPendingRowUnderAnInterruptedInsertGoesWithItsToken() throws Exception {
-        HidingMediaProvider.add(7L, "hushfeed-pending-1-1.jpg", 1);
-        writeStale(token("hushfeed-pending-1-1.jpg"));
+        HidingMediaProvider.add(7L, "larpfeed-pending-1-1.jpg", 1);
+        writeStale(token("larpfeed-pending-1-1.jpg"));
 
         MediaCache.reconcile(context);
 

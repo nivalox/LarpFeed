@@ -1,6 +1,6 @@
 /*
- * Copyright 2026 Hushfeed contributors
- * https://github.com/SysAdminDoc/hushfeed
+ * Copyright 2026 Larpfeed contributors
+ * https://github.com/SysAdminDoc/larpfeed
  */
 package app.morphe.patches.tiktok.misc.camerabrightness
 
@@ -189,7 +189,7 @@ internal fun MutableMethod.keepFlashBrightness(patch: String) {
 val cameraBrightnessPatch = bytecodePatch(
     name = "Keep the screen's brightness in the camera",
     description = "Stops TikTok from turning your screen brighter while you film, edit or " +
-        "post a video. Starts off. Turn it on in Hushfeed settings > App.",
+        "post a video. Starts off. Turn it on in Larpfeed settings > App.",
 ) {
     category("Interface")
     dependsOn(settingsPatch, sharedExtensionPatch)

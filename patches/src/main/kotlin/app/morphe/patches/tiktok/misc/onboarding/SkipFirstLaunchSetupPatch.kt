@@ -1,6 +1,6 @@
 /*
- * Copyright 2026 Hushfeed contributors
- * https://github.com/SysAdminDoc/hushfeed
+ * Copyright 2026 Larpfeed contributors
+ * https://github.com/SysAdminDoc/larpfeed
  */
 package app.morphe.patches.tiktok.misc.onboarding
 
@@ -78,13 +78,13 @@ internal fun MutableMethod.skipSetupSteps(step: String) {
             move-result-object v0
             invoke-static { v0 }, $FIRST_LAUNCH_SETUP_EXTENSION->skipStep(Ljava/lang/String;)Z
             move-result v0
-            if-eqz v0, :hushfeed_setup_step_shows
+            if-eqz v0, :larpfeed_setup_step_shows
             new-instance v0, Lkotlin/Pair;
             const-string v1, "local_rule"
             sget-object v2, Ljava/lang/Boolean;->FALSE:Ljava/lang/Boolean;
             invoke-direct { v0, v1, v2 }, Lkotlin/Pair;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
             return-object v0
-            :hushfeed_setup_step_shows
+            :larpfeed_setup_step_shows
             nop
         """,
     )
@@ -99,7 +99,7 @@ val skipFirstLaunchSetupPatch = bytecodePatch(
     name = "Skip first-launch setup",
     description = "Skips TikTok's setup screens on a fresh install, like the interest picker " +
         "and the swipe tutorial. Sign-in and age screens still show. Its switch is on once " +
-        "picked, since setup runs before you can reach settings. Turn it off in Hushfeed settings " +
+        "picked, since setup runs before you can reach settings. Turn it off in Larpfeed settings " +
         "> App.",
     default = false,
 ) {

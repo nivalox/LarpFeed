@@ -90,7 +90,7 @@ public class InboxRowShapesTest {
     }
 
     @Test public void theClearAllRowFollowsTheHostHeaderRatherThanTheThemeFlag() throws Exception {
-        // This row is drawn on TikTok's own sheet. The theme flag is a cached value the Hushfeed
+        // This row is drawn on TikTok's own sheet. The theme flag is a cached value the Larpfeed
         // settings screen sets, so away from that screen it answers for the system theme rather
         // than for TikTok's, which put a dark crimson on a dark sheet at about 3.3:1.
         android.content.Context context = RuntimeEnvironment.getApplication();

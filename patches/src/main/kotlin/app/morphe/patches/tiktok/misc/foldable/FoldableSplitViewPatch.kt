@@ -1,6 +1,6 @@
 /*
- * Copyright 2026 Hushfeed contributors
- * https://github.com/SysAdminDoc/hushfeed
+ * Copyright 2026 Larpfeed contributors
+ * https://github.com/SysAdminDoc/larpfeed
  *
  * Built on icysymmetra/tiktok-patches-for-morphe (GPL-3.0).
  */
@@ -144,7 +144,7 @@ internal fun MutableMethod.handConfigurationChangesToSplitView() = addInstructio
 val foldableSplitViewPatch = bytecodePatch(
     name = "Foldable split comment view",
     description = "On a folding phone or tablet, shows comments beside the video instead of " +
-        "over it when the screen is wide enough. Starts off. Turn it on in Hushfeed settings > " +
+        "over it when the screen is wide enough. Starts off. Turn it on in Larpfeed settings > " +
         "App.",
 ) {
     category("Comments")

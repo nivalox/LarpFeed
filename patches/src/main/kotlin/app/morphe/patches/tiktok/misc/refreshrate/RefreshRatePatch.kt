@@ -1,6 +1,6 @@
 /*
- * Copyright 2026 Hushfeed contributors
- * https://github.com/SysAdminDoc/hushfeed
+ * Copyright 2026 Larpfeed contributors
+ * https://github.com/SysAdminDoc/larpfeed
  *
  * Built on icysymmetra/tiktok-patches-for-morphe (GPL-3.0).
  */
@@ -57,7 +57,7 @@ val refreshRatePatch = bytecodePatch(
     name = "Keep the screen's refresh rate",
     description = "Stops TikTok slowing your screen down to the video's frame rate, so " +
         "scrolling stays smooth on 90 or 120 Hz phones. TikTok doesn't ask on every phone, " +
-        "and where it doesn't, this changes nothing. Starts off. Turn it on in Hushfeed " +
+        "and where it doesn't, this changes nothing. Starts off. Turn it on in Larpfeed " +
         "settings > App.",
 ) {
     category("Playback")

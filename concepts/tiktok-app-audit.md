@@ -1,15 +1,15 @@
-# TikTok app audit for Hushfeed patch work
+# TikTok app audit for Larpfeed patch work
 
-This audit records what an unpatched factory install showed during onboarding and a later signed-in check, what the original 47.1.4 manifest declares, what Hushfeed's supported-build source proves about delivery and tracking paths, and where future patch work could improve control or diagnostics. It is a working reference for maintainers. It does not claim that every screen or server behavior was observed.
+This audit records what an unpatched factory install showed during onboarding and a later signed-in check, what the original 47.1.4 manifest declares, what Larpfeed's supported-build source proves about delivery and tracking paths, and where future patch work could improve control or diagnostics. It is a working reference for maintainers. It does not claim that every screen or server behavior was observed.
 
-Reviewed on 2026-10-09 against Hushfeed 0.70.0 source. The supported target in this checkout is global TikTok 47.1.4, version code 2024701040. The clean factory APK used for the first-run check was TikTok 38.3.3, version code 2023803030. The older APK was installed into a separate emulator data image and was not patched. It is useful for onboarding observations only, not for checking patch anchors.
+Reviewed on 2026-10-09 against Larpfeed 0.70.0 source. The supported target in this checkout is global TikTok 47.1.4, version code 2024701040. The clean factory APK used for the first-run check was TikTok 38.3.3, version code 2023803030. The older APK was installed into a separate emulator data image and was not patched. It is useful for onboarding observations only, not for checking patch anchors.
 
 | Build | Verified identity |
 | --- | --- |
 | Clean factory app | Package com.zhiliaoapp.musically, version 38.3.3, code 2023803030, min SDK 21, target SDK 34, 429,047,484 bytes |
 | Factory APK digest | SHA-256 AB8D9394D87CA046BDA8F49031791CFAF75588A0830B5D54766E1BCF8CCDD6BC |
 | APK signer | SHA-256 9041803e91bcb814b4b4399fb5c85a91640b755e5e8ba76813814bf4cf2ab5ba, matching the signer recorded for the supported target |
-| Supported Hushfeed target | Global TikTok 47.1.4, version code 2024701040 |
+| Supported Larpfeed target | Global TikTok 47.1.4, version code 2024701040 |
 
 ## Evidence and limits
 
@@ -17,15 +17,15 @@ Reviewed on 2026-10-09 against Hushfeed 0.70.0 source. The supported target in t
 | --- | --- |
 | **Observed** | Captured directly in the isolated, unpatched TikTok 38.3.3 install, including onboarding and a user-authorized signed-in session |
 | **APK confirmed** | Read from the original signed 47.1.4 fixture, without executing it |
-| **Source confirmed** | Implemented or described in the current Hushfeed source for the declared 47.1.4 target |
+| **Source confirmed** | Implemented or described in the current Larpfeed source for the declared 47.1.4 target |
 | **TikTok published** | Described in a first-party TikTok policy, help page, or business resource |
 | **Needs a live check** | The code or policy gives a strong lead, but a current signed-in target session is needed to confirm delivery or presentation |
 
 The clean install first stopped at the birthday gate. The account holder later completed sign-in on the visible emulator. The signed-in pass inspected the For You feed, Profile, Settings and privacy, Ads, the ad-topic page, Content preferences, Privacy, account suggestions, and contact and Facebook sync controls. One in-feed ad appeared in a short feed sample. No ad action was opened, no like, follow, comment, or share was made, no preference was changed, and no synced data was removed. We did not capture or decode network traffic. One account session cannot establish ad frequency or explain why TikTok selected that ad. Account credentials, identifiers, feed content, inferred topic values, and personal preference values are intentionally omitted.
 
-The first-run observations are version-specific. TikTok's UI and server responses change independently of Hushfeed's patch source. Recheck the app after each supported-target move.
+The first-run observations are version-specific. TikTok's UI and server responses change independently of Larpfeed's patch source. Recheck the app after each supported-target move.
 
-The [network and power measurement protocol](runtime-observation.md) documents how to collect physical-device evidence and interpret it against the patch source. It includes traffic-counter checks, destination metadata, background execution and quiet battery intervals. The later [physical-device results](runtime-results-2026-10-09.md) contain actual network and power observations from TikTok 47.1.4 with Hushfeed 0.68.0 paused. That remains a modified APK and is separate from the factory 38.3.3 observations here.
+The [network and power measurement protocol](runtime-observation.md) documents how to collect physical-device evidence and interpret it against the patch source. It includes traffic-counter checks, destination metadata, background execution and quiet battery intervals. The later [physical-device results](runtime-results-2026-10-09.md) contain actual network and power observations from TikTok 47.1.4 with Larpfeed 0.68.0 paused. That remains a modified APK and is separate from the factory 38.3.3 observations here.
 
 ## First-run flow
 
@@ -64,7 +64,7 @@ This static pass covers the original declared-target TikTok 47.1.4 APK, package 
 
 The signer receipt contains 150 warning lines. There are 146 warnings about protection of `META-INF` JAR entries, including licenses, library version metadata and service descriptors. Four lines concern Java native access in the verification tool. Scheme verification succeeded despite those warnings. It doesn't establish that the artifact is warning-free or generally safe.
 
-This fixture wasn't run for the measurements. The measured installed TikTok 47.1.4 artifact contains Hushfeed 0.68.0 with Pause enabled. The factory UI observation used a separate, unpatched 38.3.3 artifact. Keep those three identities attached to their evidence.
+This fixture wasn't run for the measurements. The measured installed TikTok 47.1.4 artifact contains Larpfeed 0.68.0 with Pause enabled. The factory UI observation used a separate, unpatched 38.3.3 artifact. Keep those three identities attached to their evidence.
 
 ### Components and permission guards
 
@@ -108,18 +108,18 @@ The [sanitized manifest dataset](assets/tiktok-47.1.4/manifest-observations.v1.j
 
 ## How ad delivery appears to work
 
-TikTok's business documentation describes auction ads as real-time bidding. Advertisers supply a bid strategy, creative, audience settings, and campaign structure. TikTok says its system dynamically optimizes delivery. This is a campaign-side description. It does not disclose a universal consumer feed cadence, so Hushfeed should not rely on a fixed rule such as one ad after every fixed number of videos. See [About Auction Ads](https://ads.tiktok.com/resources/help/article/about-auction-ads?lang=en), last updated April 2025.
+TikTok's business documentation describes auction ads as real-time bidding. Advertisers supply a bid strategy, creative, audience settings, and campaign structure. TikTok says its system dynamically optimizes delivery. This is a campaign-side description. It does not disclose a universal consumer feed cadence, so Larpfeed should not rely on a fixed rule such as one ad after every fixed number of videos. See [About Auction Ads](https://ads.tiktok.com/resources/help/article/about-auction-ads?lang=en), last updated April 2025.
 
-At the app level, the key patching fact is that ads are not one kind of row. Hushfeed's 47.1.4 integration follows TikTok model objects, feed callbacks, preloads, and insertion components. Some items arrive inside an ordinary video list. Others arrive through a separate request or are spliced into a player after list filtering has finished.
+At the app level, the key patching fact is that ads are not one kind of row. Larpfeed's 47.1.4 integration follows TikTok model objects, feed callbacks, preloads, and insertion components. Some items arrive inside an ordinary video list. Others arrive through a separate request or are spliced into a player after list filtering has finished.
 
-| Surface or route | What the source shows | Hushfeed hook or setting | What to verify on the next target |
+| Surface or route | What the source shows | Larpfeed hook or setting | What to verify on the next target |
 | --- | --- | --- | --- |
 | For You video list | Ad material can be an Aweme with ordinary ad flags, soft-ad flags, a raw-ad object, or creator content marked as a pseudo ad | Feed filter checks the model and disclosure data before TikTok renders the list | Confirm the response and rendering callback still carry the same signals |
 | Following feed | Its own presenter, list getter, and post-processing callbacks can refill a list after the first filter pass | Feed filter applies early and late passes to the Follow feed. On 47.1.4 the early pass never fires for the tab, so the late pass (the list getter) runs every feed rule except Hide seen videos and the For You padding rule | Test each callback with a normal list, an all-filtered list, and a hydrated list |
 | Friends tab | Its legacy and V3 feeds use different response objects and list fields. Neither is a `FeedItemList` | Separate hooks filter `friendFeedData` and `friendsV3Feeds` with the active content filters | Exercise both response shapes. Check LIVE Shop cards separately from video ads |
 | Creator profile pager | TikTok has a separate profile-page ad request at /tiktok/v1/ad/profile_page/. Its answer can contain items inserted between a creator's videos | Remove feed ads can refuse the profile ad request before it is sent. A separate response filter handles profile detail ad events | Confirm the request gate and response event still cover the same profile route |
 | Mid-roll replacement | A player component can replace the video already in the pager with an ad after list filters have run | A dedicated hook refuses the splice when Remove feed ads is on. The original video stays in place | Keep this hook separate from list tests. A feed list can look clean while this route remains active |
-| Cold-start TopView | The feed response includes a preloadAds list that is handed to a splash ad service before the normal feed filter runs | Hushfeed empties this list at the read point, before the service handoff, and records the route even when the list is empty | Exercise a response with and without preloads. Verify the normal no-ad startup path still runs |
+| Cold-start TopView | The feed response includes a preloadAds list that is handed to a splash ad service before the normal feed filter runs | Larpfeed empties this list at the read point, before the service handoff, and records the route even when the list is empty | Exercise a response with and without preloads. Verify the normal no-ad startup path still runs |
 | Search Lynx cards | Some search cards are built from server patches and bypass the result list other search filters see | Search card bind hooks inspect the card schema. Existing setting hides mini-drama cards | Re-read both Top results binders and the regular Lynx card binder after a version move |
 | TikTok Shop | Shop posts and product cards are separate from ordinary paid-video signals | Separate switches hide Shop feed posts, Shop search blocks, and some LIVE shopping | Verify each surface independently. Hiding a product card should not hide a normal video unless the user chose that policy |
 | Lemon8 install card | The For You card uses a card-insert response with card type 9 and may carry none of the usual ad flags | Remove feed ads filters the card and can skip its insert request | Keep the card type contract version-specific and inspect server changes |
@@ -137,10 +137,10 @@ flowchart LR
     B --> D[Preload or ad-only request]
     B --> E[Commercial creator post]
     B --> F[Later player or comment insertion]
-    C --> G[Hushfeed list filters]
-    D --> H[Hushfeed request or preload hook]
+    C --> G[Larpfeed list filters]
+    D --> H[Larpfeed request or preload hook]
     E --> G
-    F --> I[Hushfeed component or constructor hook]
+    F --> I[Larpfeed component or constructor hook]
     G --> J[Visible TikTok surface]
     H --> J
     I --> J
@@ -152,9 +152,9 @@ This shows the patch boundaries, not a packet trace. TikTok's delivery decision 
 
 The main feed filter looks for TikTok's ad flag, soft-ad flag, and raw ad object. It also checks promotional music, pseudo-ad data on creator posts, the Lemon8 card type, local alliance disclosures, serialized creator commission text, and paid-partnership markers. A single check for isAd would miss meaningful commercial content.
 
-The distinction between a paid partnership and an ordinary celebration matters in comments too. Hushfeed records where the surprise object was built and preserves TikTok's own first-comment celebration. A broad class-name or animation-name block would be easier to write and would also remove the legitimate celebration.
+The distinction between a paid partnership and an ordinary celebration matters in comments too. Larpfeed records where the surprise object was built and preserves TikTok's own first-comment celebration. A broad class-name or animation-name block would be easier to write and would also remove the legitimate celebration.
 
-Hushfeed's Remove feed ads setting defaults on when the Feed filter patch is installed. Hide paid partnerships and Hide promotional music have their own switches, so a reader can turn the broad ad filter off and keep only those narrower rules. Shop in the feed and Shop in search are independent switches.
+Larpfeed's Remove feed ads setting defaults on when the Feed filter patch is installed. Hide paid partnerships and Hide promotional music have their own switches, so a reader can turn the broad ad filter off and keep only those narrower rules. Shop in the feed and Shop in search are independent switches.
 
 Filtering a response is not the same as preventing its delivery. The profile-page gate and Lemon8 request skip act before those requests. TopView is removed when its response field is read, and a mid-roll is refused at the later insertion point. Most ordinary feed filtering occurs after TikTok has received the feed response. Hiding an ad can therefore leave ad-request, delivery, or measurement traffic intact.
 
@@ -164,18 +164,18 @@ The repository's issue history helps identify routes that were easy to miss. The
 
 | Report | What maintainers can take from it |
 | --- | --- |
-| [#162, native auction ads bypass feed filtering](https://github.com/icysymmetra/tiktok-patches-for-morphe/issues/162) | The discussion traces an ad that passed a downstream check because its raw-ad payload and server flags were handled separately from the ordinary ad predicate. A later profile-feed retest found that working list-filter logic still needed the shared `FeedItemList.getItems()` integration. Later v46.2.3/dev.11 reports described no ads during extended For You and profile scrolling, with a slight media-loading delay. Current Hushfeed source has the shared list hook plus distinct profile and Friends paths. Keep all three in the fixture and measure loading delay when changing the filter. |
+| [#162, native auction ads bypass feed filtering](https://github.com/icysymmetra/tiktok-patches-for-morphe/issues/162) | The discussion traces an ad that passed a downstream check because its raw-ad payload and server flags were handled separately from the ordinary ad predicate. A later profile-feed retest found that working list-filter logic still needed the shared `FeedItemList.getItems()` integration. Later v46.2.3/dev.11 reports described no ads during extended For You and profile scrolling, with a slight media-loading delay. Current Larpfeed source has the shared list hook plus distinct profile and Friends paths. Keep all three in the fixture and measure loading delay when changing the filter. |
 | [#133, ads in Friends](https://github.com/icysymmetra/tiktok-patches-for-morphe/issues/133) | Friends has its own feed. A reporter later saw no ads on TikTok 46.2.3 with dev.11, but also noted that LIVE Shop cards remained. Verify the Friends legacy and V3 response hooks independently, then apply Shop-specific policy to LIVE commerce cards. |
 | [#122, ads while browsing profiles](https://github.com/icysymmetra/tiktok-patches-for-morphe/issues/122) | The comments contain profile-feed reports across several development builds, with different results among users. This supports treating the profile endpoint, profile video list, and profile detail viewer as separate routes. A clean For You feed is not enough to call ad coverage complete. |
 | [#50, sponsored cards in Search Top](https://github.com/icysymmetra/tiktok-patches-for-morphe/issues/50) | A later comment describes a native product-grid ad in Search > Top that did not pass through the normal `FeedItemList` filter. The reporter said it was removed on 46.2.3/dev.10. Keep Top mixed-grid and Lynx-card fixtures separate from video-list fixtures on each target move. |
 | [#178, hotel-price cards](https://github.com/icysymmetra/tiktok-patches-for-morphe/issues/178) | The report describes a rare For You placement that compares hotel prices instead of showing a video or image. The thread does not yet include a feed-debugger capture taken while it is onscreen. [Roadmap_Blocked.md](../Roadmap_Blocked.md) tracks the missing schema evidence. Do not guess its model from its appearance. |
 | [#130, paid partnerships](https://github.com/icysymmetra/tiktok-patches-for-morphe/issues/130) | Some readers consider creator-declared partnerships ads even when TikTok does not mark the post as a standard auction ad. Keep the separate partnership control and test it independently from raw-ad filtering. |
-| [#109, profile-view tracking](https://github.com/icysymmetra/tiktok-patches-for-morphe/issues/109) | Hushfeed's Ghost mode blocks its outgoing profile-view report call. The incoming profile-view list is a separate path. Preserve that distinction and verify both directions on the supported build. |
-| [#51, Disable Telemetry](https://github.com/icysymmetra/tiktok-patches-for-morphe/issues/51) | The request named AppLog, AppsFlyer, location uploads, Firebase, and crash reporting. Hushfeed now guards named calls in those families, but this does not make the setting a general API or SDK traffic blocker. Keep the setting description and diagnostics explicit about the covered calls. |
+| [#109, profile-view tracking](https://github.com/icysymmetra/tiktok-patches-for-morphe/issues/109) | Larpfeed's Ghost mode blocks its outgoing profile-view report call. The incoming profile-view list is a separate path. Preserve that distinction and verify both directions on the supported build. |
+| [#51, Disable Telemetry](https://github.com/icysymmetra/tiktok-patches-for-morphe/issues/51) | The request named AppLog, AppsFlyer, location uploads, Firebase, and crash reporting. Larpfeed now guards named calls in those families, but this does not make the setting a general API or SDK traffic blocker. Keep the setting description and diagnostics explicit about the covered calls. |
 
 The exact open-issue count and comments change over time. Read each linked report before using it as acceptance evidence, and record the TikTok build, patch build, surface, response path, and observed result in any follow-up.
 
-Three upstream pull requests were also open when this audit was written: [#166, raw ad and preload handling](https://github.com/icysymmetra/tiktok-patches-for-morphe/pull/166), [#170, story-view reporting](https://github.com/icysymmetra/tiktok-patches-for-morphe/pull/170), and [#171, profile-view reporting](https://github.com/icysymmetra/tiktok-patches-for-morphe/pull/171). Hushfeed's current source already has related work in `FeedItemsFilter` and Ghost mode. Compare the actual code, tests, and supported TikTok fingerprints before treating an upstream proposal as missing or copying it into this repo.
+Three upstream pull requests were also open when this audit was written: [#166, raw ad and preload handling](https://github.com/icysymmetra/tiktok-patches-for-morphe/pull/166), [#170, story-view reporting](https://github.com/icysymmetra/tiktok-patches-for-morphe/pull/170), and [#171, profile-view reporting](https://github.com/icysymmetra/tiktok-patches-for-morphe/pull/171). Larpfeed's current source already has related work in `FeedItemsFilter` and Ghost mode. Compare the actual code, tests, and supported TikTok fingerprints before treating an upstream proposal as missing or copying it into this repo.
 
 ## Tracking and data surfaces
 
@@ -185,7 +185,7 @@ The policy also describes audio and visual analysis of uploaded content, includi
 
 The APK permission list and the policy describe different evidence. The manifest shows declared Android access. The current policy describes TikTok's stated platform practices. Neither establishes what requests the older 38.3.3 binary made during this audit.
 
-The policy also says TikTok may receive information from a third-party login provider if a person chooses Facebook, Instagram, or Google sign-in, and may share activity with a connected third-party service depending on the chosen feature and permissions. Using a social login can therefore add another information-sharing path. Complete any such login in the visible app. Hushfeed does not need account credentials in source, logs, or a public audit.
+The policy also says TikTok may receive information from a third-party login provider if a person chooses Facebook, Instagram, or Google sign-in, and may share activity with a connected third-party service depending on the chosen feature and permissions. Using a social login can therefore add another information-sharing path. Complete any such login in the visible app. Larpfeed does not need account credentials in source, logs, or a public audit.
 
 TikTok's [off-TikTok data help page](https://support.tiktok.com/en/account-and-privacy/personalized-ads-and-data/control-your-off-tiktok-data) describes controls for disconnecting advertisers and clearing off-TikTok activity. TikTok's policy says its Ads setting can opt a person out of targeted ads based on personal information from nonaffiliated apps and websites. That changes one source used for ad personalization. It does not remove all ads or stop TikTok's use of activity on TikTok. TikTok's [recommendation explainer](https://support.tiktok.com/en/using-tiktok/exploring-videos/how-tiktok-recommends-content) separately describes how interactions such as viewing, liking, sharing, and following feed personalized surfaces.
 
@@ -195,9 +195,9 @@ TikTok's business material describes using app and website event signals for ad 
 
 The 38.3.3 package requested both Google Play advertising-ID access and Android's advertising-ID and attribution service permissions. It also requested install-referrer access. These declarations are a reason to include advertising identifiers and install attribution in a static review. They do not identify which SDK used each permission or prove a call was made.
 
-### Hushfeed privacy controls and their scope
+### Larpfeed privacy controls and their scope
 
-| Hushfeed item | What the code does | Patch selection and setting start | Important limit |
+| Larpfeed item | What the code does | Patch selection and setting start | Important limit |
 | --- | --- | --- | --- |
 | Disable telemetry | Guards named AppLog events and flushes, AppsFlyer events, Firebase screen-name reporting, Npth crash reporting, and optional location-upload calls | Manager selects the patch by default. Its runtime switch starts off | This is a hook set, not a full network firewall. It does not suppress core content APIs or guarantee that every analytics or ad event is covered |
 | Stop saving search history | Skips new local search-history writes | Patch is selected by default. Its runtime switch starts off | It leaves old entries alone and does not stop the search query from being sent to TikTok |
@@ -215,11 +215,11 @@ The 38.3.3 package requested both Google Play advertising-ID access and Android'
 
 The source lives under [privacy patches](../patches/src/main/kotlin/app/morphe/patches/tiktok/privacy/) and [runtime privacy hooks](../extensions/tiktok/src/main/java/app/morphe/extension/tiktok/privacy/). Ghost mode is implemented in [GhostModePatch.kt](../patches/src/main/kotlin/app/morphe/patches/tiktok/interaction/ghostmode/GhostModePatch.kt) and [GhostMode.java](../extensions/tiktok/src/main/java/app/morphe/extension/tiktok/ghostmode/GhostMode.java). In-app titles and descriptions live in [PrivacyPreferenceCategory.java](../extensions/tiktok/src/main/java/app/morphe/extension/tiktok/settings/preference/categories/PrivacyPreferenceCategory.java), with stable values and defaults in [Settings.java](../extensions/tiktok/src/main/java/app/morphe/extension/tiktok/settings/Settings.java).
 
-### Other Hushfeed customization areas
+### Other Larpfeed customization areas
 
 Ad and privacy work sits inside a wider set of user controls. The generated catalog has 131 patch entries in this source snapshot. The [patch development map](patch-development.md) records the full category counts and settings pages.
 
-| Area | Examples already present in Hushfeed | Likely annoyance it addresses |
+| Area | Examples already present in Larpfeed | Likely annoyance it addresses |
 | --- | --- | --- |
 | Feed | Hide selected posts, creators, sounds, keywords, LIVE sessions, Shop posts, stories, photos, or already-seen videos | Repeated topics, sales content, and feed batches that miss the reader's interests |
 | Playback | Speed controls, automatic advance, keep-screen-on behavior, and more seek controls | Extra taps and interrupted viewing |

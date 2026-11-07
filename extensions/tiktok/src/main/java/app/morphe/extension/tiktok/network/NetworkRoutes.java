@@ -1,6 +1,6 @@
 /*
- * Copyright 2026 Hushfeed contributors
- * https://github.com/SysAdminDoc/hushfeed
+ * Copyright 2026 Larpfeed contributors
+ * https://github.com/SysAdminDoc/larpfeed
  */
 package app.morphe.extension.tiktok.network;
 
@@ -16,7 +16,7 @@ import java.util.List;
  *
  * <p>Four routes behave differently and a reader can't tell them apart from outside: TikTok's
  * own API stack and the JVM's default proxy selector follow the proxy, the native player opens
- * its own sockets, and Hushfeed's saves and short-link lookups deliberately connect direct to an
+ * its own sockets, and Larpfeed's saves and short-link lookups deliberately connect direct to an
  * address they checked first. The proxy's host, port and sign-in are never written here.
  */
 public final class NetworkRoutes implements LogBufferManager.ReportSection {
@@ -47,7 +47,7 @@ public final class NetworkRoutes implements LogBufferManager.ReportSection {
                 + (type == null ? "direct" : "through the proxy")
                 + " (TikTok's own network stack and the JVM's default proxy selector)");
         lines.add("tiktok_native_player: direct (videos and LIVE streams open their own sockets)");
-        lines.add("hushfeed_saves: direct, to a checked public address, TLS to the original host,"
+        lines.add("larpfeed_saves: direct, to a checked public address, TLS to the original host,"
                 + " never the proxy selector");
         lines.add("short_link_expansion: direct, same checks, "
                 + (Settings.EXPAND_SHORT_SHARE_LINKS.get() ? "switch on" : "switch off"));

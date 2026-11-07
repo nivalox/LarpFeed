@@ -1,6 +1,6 @@
 /*
- * Copyright 2026 Hushfeed contributors
- * https://github.com/SysAdminDoc/hushfeed
+ * Copyright 2026 Larpfeed contributors
+ * https://github.com/SysAdminDoc/larpfeed
  *
  * Built on icysymmetra/tiktok-patches-for-morphe (GPL-3.0).
  */
@@ -113,7 +113,7 @@ public final class LocalWatchHistoryPreference extends Preference {
                 .setPositiveButton(L10n.t(context, "Close"), (target, which) -> target.dismiss())
                 .setNeutralButton(L10n.t(context, "Clear"), null);
         if (overFeed) {
-            builder.setNegativeButton(L10n.t(context, "Open Hushfeed settings"), (target, which) -> {
+            builder.setNegativeButton(L10n.t(context, "Open Larpfeed settings"), (target, which) -> {
                 target.dismiss();
                 TikTokActivityHook.openSettings();
             });

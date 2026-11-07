@@ -23,13 +23,13 @@ import org.robolectric.RobolectricTestRunner;
 import org.robolectric.annotation.Config;
 
 /**
- * Hushfeed's seen-history file: what Save writes reads back whole, and a file Restore can't trust
+ * Larpfeed's seen-history file: what Save writes reads back whole, and a file Restore can't trust
  * is refused for a reason the row can name, before anything changes.
  */
 @RunWith(RobolectricTestRunner.class)
 @Config(sdk = 28)
 public class SeenHistoryFileTest {
-    private static final String HEADER = "{\"format\":\"hushfeed-seen-history\",\"schema\":1,\"exported_at\":1759800000000,";
+    private static final String HEADER = "{\"format\":\"larpfeed-seen-history\",\"schema\":1,\"exported_at\":1759800000000,";
     private static final String KNOWN_ID = "7420104946231577888";
 
     @Test public void whatSaveWritesReadsBackWithEveryVideoAndItsTime() throws Exception {
@@ -129,7 +129,7 @@ public class SeenHistoryFileTest {
 
     @Test public void fieldsMayComeInAnyOrderAndALeadingByteOrderMarkIsFine() throws Exception {
         SeenHistoryFile.Contents contents = read("﻿{\"videos\":[{\"id\":\"7\",\"seen\":9}],"
-                + "\"exported_at\":10,\"schema\":1,\"format\":\"hushfeed-seen-history\"}");
+                + "\"exported_at\":10,\"schema\":1,\"format\":\"larpfeed-seen-history\"}");
         assertEquals(java.util.Collections.singletonMap("7", 9L), contents.videos);
     }
 
@@ -166,10 +166,10 @@ public class SeenHistoryFileTest {
         assertEquals(SeenHistoryFile.Reason.UNSUPPORTED, rejection(new byte[]{'{', (byte) 0xC3, '(', '}'}));
     }
 
-    @Test public void aFileFromANewerHushfeedIsNamedAsNewerWhateverItsRowsLookLike() throws Exception {
-        assertEquals(SeenHistoryFile.Reason.NEWER, rejection("{\"format\":\"hushfeed-seen-history\",\"schema\":2,"
+    @Test public void aFileFromANewerLarpfeedIsNamedAsNewerWhateverItsRowsLookLike() throws Exception {
+        assertEquals(SeenHistoryFile.Reason.NEWER, rejection("{\"format\":\"larpfeed-seen-history\",\"schema\":2,"
                 + "\"accounts\":{\"main\":{\"videos\":[[\"1\",{\"at\":[1,2]}]]}}}"));
-        assertEquals(SeenHistoryFile.Reason.NEWER, rejection("{\"schema\":7,\"format\":\"hushfeed-seen-history\"}"));
+        assertEquals(SeenHistoryFile.Reason.NEWER, rejection("{\"schema\":7,\"format\":\"larpfeed-seen-history\"}"));
     }
 
     @Test public void aDamagedOrEditedFileIsRefused() throws Exception {
@@ -198,16 +198,16 @@ public class SeenHistoryFileTest {
         assertEquals("a row that isn't an object", SeenHistoryFile.Reason.DAMAGED,
                 rejection(HEADER + "\"videos\":[[\"1\",1]]}"));
         assertEquals("no export time", SeenHistoryFile.Reason.DAMAGED,
-                rejection("{\"format\":\"hushfeed-seen-history\",\"schema\":1,\"videos\":[]}"));
+                rejection("{\"format\":\"larpfeed-seen-history\",\"schema\":1,\"videos\":[]}"));
         assertEquals("no schema", SeenHistoryFile.Reason.DAMAGED,
-                rejection("{\"format\":\"hushfeed-seen-history\",\"exported_at\":1,\"videos\":[]}"));
+                rejection("{\"format\":\"larpfeed-seen-history\",\"exported_at\":1,\"videos\":[]}"));
         assertEquals("no list", SeenHistoryFile.Reason.DAMAGED,
-                rejection("{\"format\":\"hushfeed-seen-history\",\"schema\":1,\"exported_at\":1}"));
+                rejection("{\"format\":\"larpfeed-seen-history\",\"schema\":1,\"exported_at\":1}"));
         assertEquals("a repeated field", SeenHistoryFile.Reason.DAMAGED,
-                rejection("{\"format\":\"hushfeed-seen-history\",\"schema\":1,\"schema\":1,\"exported_at\":1,\"videos\":[]}"));
+                rejection("{\"format\":\"larpfeed-seen-history\",\"schema\":1,\"schema\":1,\"exported_at\":1,\"videos\":[]}"));
         assertEquals("something after the file", SeenHistoryFile.Reason.DAMAGED,
                 rejection(HEADER + "\"videos\":[]}{}"));
-        StringBuilder deep = new StringBuilder("{\"format\":\"hushfeed-seen-history\",\"schema\":1,\"x\":");
+        StringBuilder deep = new StringBuilder("{\"format\":\"larpfeed-seen-history\",\"schema\":1,\"x\":");
         for (int index = 0; index < SeenHistoryFile.MAX_DEPTH; index++) deep.append('[');
         for (int index = 0; index < SeenHistoryFile.MAX_DEPTH; index++) deep.append(']');
         deep.append('}');

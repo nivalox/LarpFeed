@@ -2,7 +2,7 @@
  * Copyright 2026 HushGram contributors
  * https://github.com/SysAdminDoc/HushGram
  *
- * Modified for hushfeed (TikTok), 2026.
+ * Modified for larpfeed (TikTok), 2026.
  */
 package app.morphe.extension.tiktok.settings.preference;
 
@@ -39,7 +39,7 @@ import org.robolectric.android.controller.ActivityController;
 import org.robolectric.annotation.Config;
 
 /**
- * The main page shows Hushfeed's name once: the header's while it's on the screen, and the bar's
+ * The main page shows Larpfeed's name once: the header's while it's on the screen, and the bar's
  * otherwise. A search names itself in the bar either way, and the bar stays put above the rows.
  */
 @RunWith(RobolectricTestRunner.class)
@@ -97,11 +97,11 @@ public class SettingsTitleBarTest {
     }
 
     private LinearLayout bar() {
-        return page.getView().findViewWithTag("hushfeed_page_header");
+        return page.getView().findViewWithTag("larpfeed_page_header");
     }
 
     private TextView barTitle() {
-        return page.getView().findViewWithTag("hushfeed_page_title");
+        return page.getView().findViewWithTag("larpfeed_page_title");
     }
 
     private ListView list() {
@@ -136,7 +136,7 @@ public class SettingsTitleBarTest {
     private int namesShown() {
         int count = 0;
         TextView title = barTitle();
-        if (title.isShown() && "Hushfeed".contentEquals(title.getText())) count++;
+        if (title.isShown() && "Larpfeed".contentEquals(title.getText())) count++;
         View name = list().findViewWithTag(SettingsHeader.NAME);
         if (name != null && name.isShown() && name.getLocalVisibleRect(new Rect())) count++;
         return count;
@@ -158,11 +158,11 @@ public class SettingsTitleBarTest {
         assertNotNull("the header's name is on the page", name);
         assertTrue(name.isShown());
         assertEquals("the bar leaves the name to the header", View.INVISIBLE, barTitle().getVisibility());
-        assertEquals("the bar keeps the page's name for when it shows", "Hushfeed", barTitle().getText().toString());
+        assertEquals("the bar keeps the page's name for when it shows", "Larpfeed", barTitle().getText().toString());
         assertEquals(1, namesShown());
-        LinearLayout toolbar = page.getView().findViewWithTag("hushfeed_toolbar");
+        LinearLayout toolbar = page.getView().findViewWithTag("larpfeed_toolbar");
         assertTrue("Back stays in the bar", toolbar.getChildAt(0).isShown());
-        assertTrue("the status stays in the bar", page.getView().findViewWithTag("hushfeed_compact_status").isShown());
+        assertTrue("the status stays in the bar", page.getView().findViewWithTag("larpfeed_compact_status").isShown());
     }
 
     @Test @Config(qualifiers = "w320dp-h480dp-notnight-mdpi")
@@ -175,7 +175,7 @@ public class SettingsTitleBarTest {
 
     @Test public void theBarIsPinnedAboveTheRowsAndNotOneOfThem() {
         openHome();
-        assertNull("the bar scrolls with the rows", list().findViewWithTag("hushfeed_page_title"));
+        assertNull("the bar scrolls with the rows", list().findViewWithTag("larpfeed_page_title"));
         assertTrue("the bar isn't above the rows", barTop() + bar().getHeight() <= rowsTop());
         int top = barTop(), height = bar().getHeight();
         scrollBy(list().getHeight());
@@ -195,7 +195,7 @@ public class SettingsTitleBarTest {
         scrollBy(list().getHeight());
         assertTrue("the header row has scrolled off", list().getFirstVisiblePosition() > 0);
         assertEquals(View.VISIBLE, barTitle().getVisibility());
-        assertEquals("Hushfeed", barTitle().getText().toString());
+        assertEquals("Larpfeed", barTitle().getText().toString());
         assertEquals(1, namesShown());
         scrollToTop();
         assertEquals(View.INVISIBLE, barTitle().getVisibility());
@@ -220,7 +220,7 @@ public class SettingsTitleBarTest {
         assertEquals("the page is named once after a search", 1, namesShown());
         scrollToTop();
         assertEquals("back at the top the header has the name", View.INVISIBLE, barTitle().getVisibility());
-        assertEquals("Hushfeed", barTitle().getText().toString());
+        assertEquals("Larpfeed", barTitle().getText().toString());
         assertEquals(1, namesShown());
         assertEquals(height, bar().getHeight());
     }
@@ -233,7 +233,7 @@ public class SettingsTitleBarTest {
         assertNotNull(page);
         layoutPage();
         View root = page.getView();
-        assertEquals(1, count(root, "hushfeed_page_header"));
+        assertEquals(1, count(root, "larpfeed_page_header"));
         assertEquals(View.INVISIBLE, barTitle().getVisibility());
         assertEquals(1, namesShown());
     }

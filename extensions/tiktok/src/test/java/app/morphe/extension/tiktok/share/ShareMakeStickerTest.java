@@ -1,6 +1,6 @@
 /*
- * Copyright 2026 Hushfeed contributors
- * https://github.com/SysAdminDoc/hushfeed
+ * Copyright 2026 Larpfeed contributors
+ * https://github.com/SysAdminDoc/larpfeed
  */
 package app.morphe.extension.tiktok.share;
 
@@ -94,7 +94,7 @@ public class ShareMakeStickerTest {
         assertEquals(1, constructed);
         assertEquals("Make sticker", OwnedShareActions.label(finished.get(2)));
         assertTrue(ShareActionCatalog.entries(ShareSurface.VIDEO).stream().anyMatch(entry ->
-                entry.key.equals("hushfeed make sticker") && entry.label.equals("Make sticker")));
+                entry.key.equals("larpfeed make sticker") && entry.label.equals("Make sticker")));
     }
 
     @Test public void withSaveCoverOnItFollowsSaveCover() {

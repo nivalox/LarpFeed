@@ -1,6 +1,6 @@
 /*
- * Copyright 2026 Hushfeed contributors
- * https://github.com/SysAdminDoc/hushfeed
+ * Copyright 2026 Larpfeed contributors
+ * https://github.com/SysAdminDoc/larpfeed
  */
 package app.morphe.extension.tiktok.feed;
 
@@ -142,7 +142,7 @@ public class FeedScreenCoverageTest {
         // The picture at the top of a creator's profile, which none of the three windows draws (#233).
         put("open_story_over_live", NONE, NONE, NONE);
 
-        // Buttons on videos: Hushfeed's own overlay, attached to whichever feed window is in
+        // Buttons on videos: Larpfeed's own overlay, attached to whichever feed window is in
         // front, main or detail. It isn't drawn in a LIVE room.
         for (String button : new String[]{"block_author_button", "local_hide_button",
                 "block_sound_button", "not_interested_button", "feed_mute_button", "download_button"}) {
@@ -231,7 +231,7 @@ public class FeedScreenCoverageTest {
         put("caption_font_weight", YES, UNCHECKED, NONE);
         put("caption_bottom_offset", YES, UNCHECKED, NONE);
         put("caption_landscape_offset", YES, UNCHECKED, NONE);
-        // The kept line Hushfeed draws itself, beside keep_captions_clear_display.
+        // The kept line Larpfeed draws itself, beside keep_captions_clear_display.
         put("caption_clear_display_offset", YES, UNCHECKED, NONE);
         // One answer every caption control asks, wherever the video plays (#217).
         put("keep_captions_available", YES, YES, NONE);

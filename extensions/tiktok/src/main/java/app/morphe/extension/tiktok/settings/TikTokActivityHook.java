@@ -36,12 +36,12 @@ public class TikTokActivityHook {
     private static final String SETTINGS_SECTION_EXTRA = "morphe_settings_section";
     /** The row the opened page scrolls to and flashes; the fragment reads the same name. */
     private static final String SETTINGS_TARGET_KEY_EXTRA = "morphe_settings_target_key";
-    private static final String SETTINGS_ROOT_TAG = "hushfeed_settings_root";
+    private static final String SETTINGS_ROOT_TAG = "larpfeed_settings_root";
     /** The page a restart left ({@link SettingsReturn}), opened over the home page. */
-    private static final String SETTINGS_PAGE_EXTRA = "hushfeed_settings_page";
+    private static final String SETTINGS_PAGE_EXTRA = "larpfeed_settings_page";
 
     /**
-     * Whether Settings and privacy lists the Hushfeed row (#264). The patch asks each time the
+     * Whether Settings and privacy lists the Larpfeed row (#264). The patch asks each time the
      * list is built, so the switch applies the next time that screen opens.
      */
     public static boolean showSettingsRow() {
@@ -54,7 +54,7 @@ public class TikTokActivityHook {
     }
 
     /**
-     * Puts the Hushfeed row first in Settings and privacy unless {@link #showSettingsRow()} says
+     * Puts the Larpfeed row first in Settings and privacy unless {@link #showSettingsRow()} says
      * no. The patch calls this rather than branching inside TikTok's list builder: that branch
      * made ART's JIT crash (SIGSEGV in HScheduler::Schedule) compiling the builder once the
      * switch was on, and TikTok then offered its "Restore your experience" safe mode.
@@ -155,7 +155,7 @@ public class TikTokActivityHook {
         // Lab has registered a dispatcher callback since API 33; this screen had not, so it
         // would have lost Back the day that attribute goes. The hook below stays as the path
         // for everything older.
-        new SystemBackHandler("HushfeedSettingsBackCallback")
+        new SystemBackHandler("LarpfeedSettingsBackCallback")
                 .registerUntilDetached(base, settingsSurface, () -> handleBackPressed(base));
 
         return true;

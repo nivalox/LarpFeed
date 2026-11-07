@@ -1,6 +1,6 @@
 /*
- * Copyright 2026 Hushfeed contributors
- * https://github.com/SysAdminDoc/hushfeed
+ * Copyright 2026 Larpfeed contributors
+ * https://github.com/SysAdminDoc/larpfeed
  */
 package app.morphe.patches.tiktok.misc.translation
 
@@ -209,7 +209,7 @@ internal fun Method.checkToggleStateWrite(stateRead: Method) {
 /**
  * The write tells the extension what the toggle is being set to and where from, right after
  * TikTok reads the toggle to compare with and before it stores the new state. That is how the
- * extension knows which toggle Hushfeed's button turned on, and when the reader turned comment
+ * extension knows which toggle Larpfeed's button turned on, and when the reader turned comment
  * translation off.
  */
 internal fun MutableMethod.reportToggleWrite(stateRead: Method) {
@@ -254,12 +254,12 @@ internal fun MutableMethod.sendToggleStateThroughExtension() {
  * enabled read is answered rather than the AB value under it, because it also turns the feature
  * off for accounts in TikTok's reverse translation rollout (the test account is one), and setting
  * that rollout's value would change See translation on captions too. The style answer is the
- * second condition on top. With the switch off, and while Hushfeed is paused, both read
+ * second condition on top. With the switch off, and while Larpfeed is paused, both read
  * TikTok's own values.
  *
  * <p>The toggle is TikTok's too, and it stays where TikTok stores it when the switch goes off.
  * A toggle left on would keep TikTok translating comments with no button left to turn it off, so
- * the read goes through the extension, which answers off for a toggle Hushfeed's button turned
+ * the read goes through the extension, which answers off for a toggle Larpfeed's button turned
  * on once the switch is off. The toggle is also the one switch for comment translation across the
  * app (#282), and the extension's answer to the read can change with a write, so the write is
  * reported after TikTok's own comparison read: a change still refreshes the comment list. Fails

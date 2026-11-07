@@ -1,6 +1,6 @@
 /*
- * Copyright 2026 Hushfeed contributors
- * https://github.com/SysAdminDoc/hushfeed
+ * Copyright 2026 Larpfeed contributors
+ * https://github.com/SysAdminDoc/larpfeed
  *
  * The comment half of onlynazril-patches' TikTok handle patch (GPL-3.0),
  * https://github.com/na-x-ril/onlynazril-patches, hooked at the comment cell instead of
@@ -93,7 +93,7 @@ val commenterDetailsPatch = bytecodePatch(
     name = "Show commenter handle and region",
     description = "Shows a commenter's @username in place of their display name and the country " +
         "their account is set to after the comment's time. It can also give each commenter's name " +
-        "a color of its own. Each starts off. Turn them on in Hushfeed settings > Comments.",
+        "a color of its own. Each starts off. Turn them on in Larpfeed settings > Comments.",
 ) {
     category("Comments")
     dependsOn(settingsPatch, sharedExtensionPatch)

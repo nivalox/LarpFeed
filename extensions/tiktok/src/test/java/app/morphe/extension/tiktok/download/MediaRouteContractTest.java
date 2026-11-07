@@ -33,7 +33,7 @@ import org.robolectric.annotation.Config;
 import org.robolectric.util.ReflectionHelpers;
 
 /**
- * The route contract behind the proxy settings: Hushfeed's saves and its short-link lookups
+ * The route contract behind the proxy settings: Larpfeed's saves and its short-link lookups
  * open direct, never through the JVM's proxy selector, and keep their address, redirect and TLS
  * checks. With a proxy installed the selector would otherwise choose the peer after the check.
  */

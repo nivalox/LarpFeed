@@ -1,6 +1,6 @@
 /*
- * Copyright 2026 Hushfeed contributors
- * https://github.com/SysAdminDoc/hushfeed
+ * Copyright 2026 Larpfeed contributors
+ * https://github.com/SysAdminDoc/larpfeed
  */
 package app.morphe.extension.tiktok.misc;
 
@@ -45,7 +45,7 @@ import app.morphe.extension.shared.settings.Setting;
  * manifest declares for a provider authority or a permission, whatever Clone app made of it.
  *
  * <p>Only the one write of the running package into {@code package} comes to {@link #putPackage}.
- * A build that kept TikTok's package name, a paused Hushfeed and a call before Hushfeed has a
+ * A build that kept TikTok's package name, a paused Larpfeed and a call before Larpfeed has a
  * context (when the pause hasn't been decided yet) all answer what TikTok would have.
  */
 @SuppressWarnings("unused")
@@ -123,7 +123,7 @@ public final class BesideStoreApp {
     /**
      * The package that counts as this app's own where TikTok's code names the store package: a
      * renamed copy's own name, as the store app gets its own. {@code storePackage} comes back
-     * unchanged for any other name, and whenever Hushfeed is paused or has no context yet.
+     * unchanged for any other name, and whenever Larpfeed is paused or has no context yet.
      */
     @Nullable
     static String ownPackage(@Nullable String storePackage) {
@@ -147,7 +147,7 @@ public final class BesideStoreApp {
      * as the store app did, so Android sends its own lookups to the store app beside it, which
      * doesn't export the provider, or to nothing. This answers the declared name when the
      * manifest holds one of Clone app's two renames of {@code name}, and {@code name} itself when
-     * it holds {@code name} as it is, holds neither, or when this is the store app, Hushfeed is
+     * it holds {@code name} as it is, holds neither, or when this is the store app, Larpfeed is
      * paused or has no context yet.
      */
     @Nullable

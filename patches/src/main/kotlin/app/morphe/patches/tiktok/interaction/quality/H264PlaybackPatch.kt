@@ -1,6 +1,6 @@
 /*
- * Copyright 2026 Hushfeed contributors
- * https://github.com/SysAdminDoc/hushfeed
+ * Copyright 2026 Larpfeed contributors
+ * https://github.com/SysAdminDoc/larpfeed
  */
 package app.morphe.patches.tiktok.interaction.quality
 
@@ -76,7 +76,7 @@ val h264PlaybackPatch = bytecodePatch(
     name = "Prefer H.264 playback",
     description = "Plays videos in an older format your phone decodes more easily, which can " +
         "help older phones play smoothly and run cooler. Videos without it play as before. Starts " +
-        "off. Turn it on in Hushfeed settings > Playback.",
+        "off. Turn it on in Larpfeed settings > Playback.",
     default = true,
 ) {
     category("Playback")

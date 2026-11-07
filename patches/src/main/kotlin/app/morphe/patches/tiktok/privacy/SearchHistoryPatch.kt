@@ -1,6 +1,6 @@
 /*
- * Copyright 2026 Hushfeed contributors
- * https://github.com/SysAdminDoc/hushfeed
+ * Copyright 2026 Larpfeed contributors
+ * https://github.com/SysAdminDoc/larpfeed
  */
 package app.morphe.patches.tiktok.privacy
 
@@ -94,7 +94,7 @@ val searchHistoryPatch = bytecodePatch(
     name = "Stop saving search history",
     description = "Stops TikTok saving your new searches on your phone. Older searches stay " +
         "until you delete them, and TikTok's servers may keep their own record. Starts off. Turn " +
-        "it on in Hushfeed settings > Privacy.",
+        "it on in Larpfeed settings > Privacy.",
 ) {
     category("Privacy")
     dependsOn(settingsPatch, sharedExtensionPatch)

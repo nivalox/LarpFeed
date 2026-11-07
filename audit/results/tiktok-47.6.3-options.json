@@ -5,7 +5,7 @@
     "versionCode": "2147483647"
   },
   "apk": {
-    "file": "hushfeed-0.80.0-signed.apk",
+    "file": "larpfeed-0.80.0-signed.apk",
     "sha256": "ff31a0e1bb7f7b7a69ff7cdf25253f315d36c0f70927a3090a67e7db1cacbce9"
   },
   "runner": {
@@ -655,11 +655,11 @@
             "failures": []
           },
           "receiptId": "87fecb1d834d0f3a571658ed2de259caab1269ec4d141ca2f2b2583e05f572ad",
-          "verdictNote": "TikTok 47.6.3, Hushfeed 0.80.0 main 8a626029d patched with Accent color Blue, S22: own profile Upload button samples #2D7FF9 (99.4% of its fill), the follow plus under a feed avatar #2D7FF9, the Inbox unread badge #2D7FF9. No primary button or red text in either shot is TikTok red. The only #FE2C55 left is the trophy icon on an NFL 2026 event anchor, an icon rather than a button. The review text says the follow plus and the Inbox badge stay red; on this build both are Blue.",
+          "verdictNote": "TikTok 47.6.3, Larpfeed 0.80.0 main 8a626029d patched with Accent color Blue, S22: own profile Upload button samples #2D7FF9 (99.4% of its fill), the follow plus under a feed avatar #2D7FF9, the Inbox unread badge #2D7FF9. No primary button or red text in either shot is TikTok red. The only #FE2C55 left is the trophy icon on an NFL 2026 event anchor, an icon rather than a button. The review text says the follow plus and the Inbox badge stay red; on this build both are Blue.",
           "verdict": {
             "receiptId": "87fecb1d834d0f3a571658ed2de259caab1269ec4d141ca2f2b2583e05f572ad",
             "status": "pass",
-            "note": "TikTok 47.6.3, Hushfeed 0.80.0 main 8a626029d patched with Accent color Blue, S22: own profile Upload button samples #2D7FF9 (99.4% of its fill), the follow plus under a feed avatar #2D7FF9, the Inbox unread badge #2D7FF9. No primary button or red text in either shot is TikTok red. The only #FE2C55 left is the trophy icon on an NFL 2026 event anchor, an icon rather than a button. The review text says the follow plus and the Inbox badge stay red; on this build both are Blue."
+            "note": "TikTok 47.6.3, Larpfeed 0.80.0 main 8a626029d patched with Accent color Blue, S22: own profile Upload button samples #2D7FF9 (99.4% of its fill), the follow plus under a feed avatar #2D7FF9, the Inbox unread badge #2D7FF9. No primary button or red text in either shot is TikTok red. The only #FE2C55 left is the trophy icon on an NFL 2026 event anchor, an icon rather than a button. The review text says the follow plus and the Inbox badge stay red; on this build both are Blue."
           }
         }
       ]
@@ -674,7 +674,7 @@
       "checks": [
         {
           "id": "manifest-label-option",
-          "what": "On a build patched with the app name Hush, the application label and the launcher entry say Hush, not the default Hushfeed.",
+          "what": "On a build patched with the app name Hush, the application label and the launcher entry say Hush, not the default Larpfeed.",
           "auto": true,
           "status": "pass",
           "failures": [],

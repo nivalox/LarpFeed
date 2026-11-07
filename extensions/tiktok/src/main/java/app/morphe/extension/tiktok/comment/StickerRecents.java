@@ -1,13 +1,13 @@
 /*
- * Copyright 2026 Hushfeed contributors
- * https://github.com/SysAdminDoc/hushfeed
+ * Copyright 2026 Larpfeed contributors
+ * https://github.com/SysAdminDoc/larpfeed
  */
 package app.morphe.extension.tiktok.comment;
 
 import android.content.Context;
 import android.content.SharedPreferences;
 import app.morphe.extension.shared.Utils;
-import app.morphe.extension.shared.settings.HushfeedPause;
+import app.morphe.extension.shared.settings.LarpfeedPause;
 import app.morphe.extension.tiktok.SignedInUser;
 import app.morphe.extension.tiktok.settings.L10n;
 import java.lang.reflect.Method;
@@ -29,7 +29,7 @@ import org.json.JSONObject;
  *
  * <p>The app keeps that list in memory only, and its sticker store empties it the first time the
  * store is used in each process, since it takes the account it finds as a new one. So every
- * restart, the ones Hushfeed's settings ask for included, leaves the list empty. The patch hands
+ * restart, the ones Larpfeed's settings ask for included, leaves the list empty. The patch hands
  * {@link #save} each new list as a sticker goes on it, and {@link #restore} the list's flow
  * right after the store empties it, which puts back what this account had.
  *
@@ -39,7 +39,7 @@ import org.json.JSONObject;
  */
 @SuppressWarnings("unused")
 public final class StickerRecents {
-    public static final String PREFS_NAME = "hushfeed_sticker_recents";
+    public static final String PREFS_NAME = "larpfeed_sticker_recents";
     static final String VERSION_KEY = "app_version";
     /** More than the store ever holds (12, or the server's page size when that's larger). */
     static final int MOST = 50;
@@ -80,7 +80,7 @@ public final class StickerRecents {
     public static void addRow(Object page, Object rows) {
         int added = 0;
         try {
-            if (HushfeedPause.isPaused() || !(rows instanceof List)) return;
+            if (LarpfeedPause.isPaused() || !(rows instanceof List)) return;
             @SuppressWarnings("unchecked")
             List<Object> list = (List<Object>) rows;
             added = prepend(list, recentStickers(page), BRIDGES, L10n.t("Recently used"));
@@ -145,7 +145,7 @@ public final class StickerRecents {
     /** Called with the row's new list each time a sticker goes on it. Never throws. */
     public static void save(Object list) {
         try {
-            if (HushfeedPause.isPaused() || !(list instanceof List) || !Utils.isMainProcess()) return;
+            if (LarpfeedPause.isPaused() || !(list instanceof List) || !Utils.isMainProcess()) return;
             Context context = Utils.getContext();
             String self = SignedInUser.id();
             Codec found = codec();
@@ -160,7 +160,7 @@ public final class StickerRecents {
     /** Called with the row's flow right after the store empties it for the signed-in account. Never throws. */
     public static void restore(Object flow) {
         try {
-            if (HushfeedPause.isPaused() || flow == null) return;
+            if (LarpfeedPause.isPaused() || flow == null) return;
             Context context = Utils.getContext();
             String self = SignedInUser.id();
             Codec found = codec();

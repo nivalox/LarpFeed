@@ -133,7 +133,7 @@ public abstract class Setting<T> {
 
     /**
      * The preferences file every setting is saved to. A constant, so code that runs before
-     * Hushfeed has a context can name the file without loading this class.
+     * Larpfeed has a context can name the file without loading this class.
      */
     public static final String PREFERENCES_NAME = "morphe_prefs";
 
@@ -200,15 +200,15 @@ public abstract class Setting<T> {
     protected volatile T value;
 
     /**
-     * Pause Hushfeed, decided once when the process starts (see {@link HushfeedPause}). While it
+     * Pause Larpfeed, decided once when the process starts (see {@link LarpfeedPause}). While it
      * is on, every setting that changes TikTok answers the value that leaves TikTok as it ships.
      */
     private static volatile boolean pausedForProcess;
 
-    /** Hushfeed's own state rather than a change to TikTok: it keeps its value while paused. */
+    /** Larpfeed's own state rather than a change to TikTok: it keeps its value while paused. */
     private volatile boolean keptWhenPaused;
 
-    /** Whether this process runs with Hushfeed paused. */
+    /** Whether this process runs with Larpfeed paused. */
     public static boolean isPaused() {
         return pausedForProcess;
     }
@@ -218,8 +218,8 @@ public abstract class Setting<T> {
     }
 
     /**
-     * Marks settings that hold Hushfeed's own state (a remembered position, an observed list, a
-     * counter, a diagnostics option) so they keep answering their value while Hushfeed is paused.
+     * Marks settings that hold Larpfeed's own state (a remembered position, an observed list, a
+     * counter, a diagnostics option) so they keep answering their value while Larpfeed is paused.
      * Every other setting answers {@link #pausedValue()} then.
      */
     public static void keepWhenPaused(Setting<?>... settings) {
@@ -458,7 +458,7 @@ public abstract class Setting<T> {
     }
 
     /**
-     * What the setting says now, which is what every hook reads. While Hushfeed is paused, a
+     * What the setting says now, which is what every hook reads. While Larpfeed is paused, a
      * setting that changes TikTok answers {@link #pausedValue()}; the saved value is untouched.
      */
     @NonNull

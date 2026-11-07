@@ -87,7 +87,7 @@ public class GateReportExportTest {
         try (var saturation = app.morphe.extension.shared.BackgroundPoolSaturation.fill()) {
             GateReportExport.save(context, "{\"gates\":[]}");
             String said = awaitToast("Report saved to ");
-            assertTrue(said, said.startsWith("Report saved to Download/Hushfeed/hushfeed-gate-report-"));
+            assertTrue(said, said.startsWith("Report saved to Download/Larpfeed/larpfeed-gate-report-"));
         }
         assertTrue(media.published);
         assertEquals("{\"gates\":[]}", new String(Files.readAllBytes(media.file.toPath()), StandardCharsets.UTF_8));
@@ -134,18 +134,18 @@ public class GateReportExportTest {
                 + ShadowToast.getTextOfLatestToast());
     }
 
-    @Test public void theSavedNameReadsAsADateInAHushfeedFolder() throws Exception {
+    @Test public void theSavedNameReadsAsADateInALarpfeedFolder() throws Exception {
         // Two reports a second apart get names a reader can tell apart, the way the settings
         // backup is named, and the folder is the one a file manager shows.
         Context context = RuntimeEnvironment.getApplication();
         Utils.setContext(context);
         assertTrue(GateReportExport.fileName(), GateReportExport.fileName()
-                .matches("hushfeed-gate-report-\\d{8}-\\d{6}\\.json"));
-        assertEquals("Download/Hushfeed", GateReportExport.FOLDER);
+                .matches("larpfeed-gate-report-\\d{8}-\\d{6}\\.json"));
+        assertEquals("Download/Larpfeed", GateReportExport.FOLDER);
         File first = new File(GateReportExport.write(context, "{\"gates\":[]}"));
         File second = new File(GateReportExport.write(context, "{\"gates\":[]}"));
         try {
-            assertTrue(first.getName(), first.getName().startsWith("hushfeed-gate-report-"));
+            assertTrue(first.getName(), first.getName().startsWith("larpfeed-gate-report-"));
             assertNotEquals("two reports in one second overwrote each other", first, second);
         } finally {
             assertTrue(first.delete());

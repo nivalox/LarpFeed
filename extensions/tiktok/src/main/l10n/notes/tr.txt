@@ -4,17 +4,17 @@
 
 ## 0.80.0 (2026-11-01)
 
-* PineDrama kendi yama setine, HushPine'a taşındı. Hushfeed artık yalnızca TikTok'a yama uyguluyor.
+* PineDrama kendi yama setine, HushPine'a taşındı. Larpfeed artık yalnızca TikTok'a yama uyguluyor.
 * Artık desteklenen tek derleme TikTok 47.6.3. APKMirror'dan indirin ve girişiniz ile ayarlarınız korunsun diye aynı imzalama anahtarını kullanın.
 * Temiz ekran kontrollerini gizle için yeni bir anahtar var. İlerleme çubuğunu ekranda tutuyor, böylece onu hâlâ görüp sürükleyebilirsin (#237).
 * Çift dokunma artık beğenebiliyor ve beğeniyi geri alabiliyor. Zaten beğendiğin bir videoya çift dokunmak beğeniyi kaldırır (#248).
 * Bir videoyu basılı tutarken sola veya sağa kaydırarak Hız menüsü seçeneklerin arasında geçiş yap. Varsayılan olarak kapalı (#248).
 * Beğenilenler ızgaralarının kendi sıralaması var, ve bir Beğenilenler ızgarasındaki sıralama düğmesi yalnızca o sırayı değiştirir (#180).
-* Her Hushfeed başlığı artık TikTok'un camgöbeği ve kırmızısını yavaş hareket eden bir geçişle gösteriyor.
+* Her Larpfeed başlığı artık TikTok'un camgöbeği ve kırmızısını yavaş hareket eden bir geçişle gösteriyor.
 * Sakin akış ön ayarı kalktı. Filtrelerinin hepsi hâlâ Akış filtresinde duruyor ve açtığı her şey açık kalıyor.
 * Çift dokunma ve Uzun basma, akıştaki arama düğmesi gizliyken bile TikTok'un arama sayfasını açabilir (#251).
 * Yeni bir anahtar, yorum arama kutusunu sol üstteki bir büyüteç düğmesine katlıyor (#254).
-* Yeni bir anahtar, Hushfeed satırını TikTok'un Ayarlar ve gizlilik bölümünden kaldırıyor. Bundan sonra ayarları açmak için Senin İçin'e basılı tut (#264).
+* Yeni bir anahtar, Larpfeed satırını TikTok'un Ayarlar ve gizlilik bölümünden kaldırıyor. Bundan sonra ayarları açmak için Senin İçin'e basılı tut (#264).
 * Birinin biyografisine yazılan bir @kullanıcıadı artık bağlantı. Dokunursan o profil açılır (#247).
 * Ana akışın alt çubuğu, sekmelerin üzerinde kayan bir mercek ve bulanıklık, saydamlık, yükseklik ve köşeler için yeni ayarlarla yüzen cam bir hap olabilir (#259).
 * Ayarları olan yamaların başlangıç değerleri için Morphe seçenekleri var, böylece bir derleme anahtarların daha önceden açık olarak gelebilir. Teşekkürler @XEGARE (#256).
@@ -24,14 +24,14 @@
 * Ayar araması autoplay, PiP ve AI gibi günlük adları tanıyor ve bir seçim satırını seçeneklerinden herhangi biriyle buluyor.
 * Akışı belirli saatlerde kilitle, seçtiğin saatlerde akışı kendiliğinden kilitliyor ve kilit paneli ne zaman yeniden açılacağını söylüyor.
 * Yalnızca Wi-Fi'da kaydet, kayıtları mobil veriden uzak tutuyor. Bir kayıt Wi-Fi için en fazla 30 dakika bekler ve İndirmeler'den iptal edebilirsin.
-* Yeni bir anahtar, sohbet çıkartmaları için Hushfeed'in Medyayı kaydet kutusunu kapatır (#274).
+* Yeni bir anahtar, sohbet çıkartmaları için Larpfeed'in Medyayı kaydet kutusunu kapatır (#274).
 * Bir video başlayana kadar diğer uygulamalar çalmaya devam etsin, TikTok'u veya mesajlarını açtığında başka bir uygulamanın müziğini bir video oynayana kadar sürdürür (#283).
 * Geri alınan mesajları koru, birinin sana geri aldığı mesajı isteğe bağlı bir işaretle sohbette bırakır. @maayan080'e teşekkürler (#291).
 * Yeni bir anahtar LIVE önizlemelerinin altındaki Service+ satırını gizler ve satır artık önceki LIVE'dan kalmaz (#94).
 * Takip Edilenler'de en yeniler önce açıkken Takip Edilenler bir seferde 30 gönderi yükler, böylece eskileri geçtikten sonra daha az yeni gönderi çıkar (#226).
 * Bir LIVE odasında profil kartındaki biyografiye, isme veya kullanıcı adına uzun basmak onu kopyalar, bir kopyalama işareti de kullanıcı adını kopyalar (#268).
 * TikTok Shop'u gizle, açıklamaların altındaki mağaza düğmelerini de kaldırır (#271).
-* Özel başlatıcı simgesi, TikTok bildirimlerine durum çubuğunda keskin bir Hushfeed H harfi verebilir (#114).
+* Özel başlatıcı simgesi, TikTok bildirimlerine durum çubuğunda keskin bir Larpfeed H harfi verebilir (#114).
 * Ses biçimi artık MP3 seçeneği de sunuyor, böylece kaydedilen sesler her yerde ve her Android sürümünde çalar (#273).
 * Yeni bir anahtar, açılan videolarda gizlenen arama çubuğunun yanındaki Geri okunu da gizler (#251).
 * Yazarı engelle düğmesi açıkken Sana Özel'deki LIVE'lar da engelleme düğmesi alır (#138).
@@ -43,8 +43,8 @@
 * Hesabın ne zaman açıldığını göster, başkalarının profilinde @kullanıcı adının altına katılma tarihini ekler.
 * Yenilikler artık Basitleştirilmiş Çince olarak da geliyor.
 * Feature Gate Lab'de artık yeniden başlatma düğmesi var ve TikTok sonrasında yine Lab'de açılır.
-* Hushfeed artık Morphe patcher 2.1.0 üzerine kurulu, bu yüzden Morphe Manager 2.3.0 veya daha yenisi, bilgisayarda da morphe-desktop 1.20.0 gerekiyor.
-* Yama paketi Morphe'nin paket imzasını taşıyor, böylece Manager sonraki bir indirmenin gerçekten Hushfeed'den geldiğini kontrol edebilir.
+* Larpfeed artık Morphe patcher 2.1.0 üzerine kurulu, bu yüzden Morphe Manager 2.3.0 veya daha yenisi, bilgisayarda da morphe-desktop 1.20.0 gerekiyor.
+* Yama paketi Morphe'nin paket imzasını taşıyor, böylece Manager sonraki bir indirmenin gerçekten Larpfeed'den geldiğini kontrol edebilir.
 * Bir sayfanın çok aşağısındaki ayar arama sonucu artık doğrudan kendi satırında açılıyor.
 * Şeffaf alt çubuk açıkken, önerilen hesap kartlarındaki Atlamak için yukarı kaydır satırı yine sekmelerin üstünde duruyor (#261).
 * Yüzen sekme hapı biraz daha yüksek, böylece Ana sayfa simgesi ve adı vurgunun içinde kalıyor ve ilerleme çizgisi artık üstüne binmiyor (#259).
@@ -69,7 +69,7 @@
 * Ana listede kontrolünü göstermek ve vurgulamak için ayar aramasındaki bir anahtara basılı tut (#248).
 * Başlangıç kontrolleri ilk kareyi hangi oynatıcının çizdiğini kaydediyor (#150).
 * Kurtarılan bir kaydı dışa aktarmak büyük dosyalarda daha hızlı.
-* Kurtarmada Yeniden dene, kaydın özgün durma nedenini koruyor ve kurtarma pencereleri Hushfeed'in temasını izliyor.
+* Kurtarmada Yeniden dene, kaydın özgün durma nedenini koruyor ve kurtarma pencereleri Larpfeed'in temasını izliyor.
 * Ekran kayıtları çalışırken depolamayı kontrol ediyor ve kaydedilen kopya doğrulanana kadar kurtarma dosyalarını tutuyor.
 * Bir ekran kaydının ilk kareleri, ses başlarken her biri kendi zaman damgasını koruyor.
 * Ekran kayıtları, ses başlarken ilk video karelerini koruyor.
@@ -92,7 +92,7 @@
 * Bir LIVE'ın ekranını kaydetmek artık Kaydet düğmesini görüntüye almıyor ve bildirimde bir Durdur düğmesi var (#265).
 * Geçiş anahtarı olmadan giriş yap, TikTok'un 2 adımlı doğrulaması yalnızca geçiş anahtarı istediğinde ne yapacağını söyler (#102).
 * Oluşturma araçlarını kaldır artık APKMirror'ın bölünmüş paketinde de çalışıyor, çünkü TikTok 47.6.3 paketinde düzenleyici dosyaları yeniden var. Oluştur sekmesi çalışmayı bırakır, video yapıyorsan bu yamayı seçme (#285).
-* TikTok bir beğeniyi reddettiğinde Hushfeed her oturumda ilk seferinde nedenini gösterir (#269).
+* TikTok bir beğeniyi reddettiğinde Larpfeed her oturumda ilk seferinde nedenini gösterir (#269).
 * Beğendiğin ya da kaydettiğin videolar reklam işareti taşısa bile Beğenilenler ve Favoriler ızgaralarında kalır (#269).
 * Reddedilen takip için Çince mesaj artık doğru kelimeyi kullanıyor.
 * Yüzen sekme hapı arkasındaki LIVE önizlemelerini de bulanıklaştırır (#259).
@@ -113,7 +113,7 @@
 
 ## 0.79.0 (2026-10-24)
 
-* PineDrama'da Hushfeed ayarları artık TikTok yerine PineDrama'yı yeniden başlatmanı söylüyor (#156).
+* PineDrama'da Larpfeed ayarları artık TikTok yerine PineDrama'yı yeniden başlatmanı söylüyor (#156).
 
 * Yeni Spam yorumları gizle anahtarı, bağlantı, iletişim bilgisi ya da ücretsiz takipçi sunan bot yorumlarını gizler. Kendi yorumların ve üreticinin yorumları kalır (#187).
 
@@ -163,7 +163,7 @@
 
 * Derleme artık Gradle 9.8.2 kullanıyor.
 
-* README, bir ek paketin güvenebileceği Hushfeed ayar bölümlerini listeliyor.
+* README, bir ek paketin güvenebileceği Larpfeed ayar bölümlerini listeliyor.
 
 * Yenilikler artık yalnızca en yeni sürümleri tutuyor, gerisi Full changelog içinde, bu da eklentiyi küçültüyor.
 
@@ -203,7 +203,7 @@
 
 ## 0.78.0 (2026-10-22)
 
-* Hushfeed TikTok 47.5.3'e geçiyor, 47.4.3 bırakılıyor. 47.5.3 APK'sını aynı imza anahtarıyla yamalarsan girişin ve ayarların kalır. PineDrama 47.4.3'te kalıyor.
+* Larpfeed TikTok 47.5.3'e geçiyor, 47.4.3 bırakılıyor. 47.5.3 APK'sını aynı imza anahtarıyla yamalarsan girişin ve ayarların kalır. PineDrama 47.4.3'te kalıyor.
 
 * Remove unused language packs artık PineDrama 47.4.3'te de çalışıyor.
 
@@ -233,7 +233,7 @@
 
 * Tanılamayı günlüğe kaydet açıkken her LIVE yorum satırı odayı oda kimliği yerine kısa bir kodla belirtiyor (#110).
 
-* Hushfeed artık Morphe Manager 2.0.0 ya da daha yenisini, bilgisayarda ise morphe-desktop 1.19.0 istiyor. Yamalama yaklaşık yarı sürede bitiyor.
+* Larpfeed artık Morphe Manager 2.0.0 ya da daha yenisini, bilgisayarda ise morphe-desktop 1.19.0 istiyor. Yamalama yaklaşık yarı sürede bitiyor.
 
 * Yeni Profil menüsünde Bakiye'yi gizle anahtarı Bakiye'yi profilinin sağ üstündeki düğmenin açtığı menüden çıkarıyor (#194).
 
@@ -255,7 +255,7 @@
 
 * Yeni İzleme geçmişi için Profil'e basılı tut anahtarı Profil sekmesini basılı tuttuğunda İzleme geçmişini açıyor (#199).
 
-* Basitleştirilmiş Çince'de Hushfeed ayarlarındaki Profil artık "şirket profili" yerine 个人主页 olarak görünüyor.
+* Basitleştirilmiş Çince'de Larpfeed ayarlarındaki Profil artık "şirket profili" yerine 个人主页 olarak görünüyor.
 
 * Yeni LIVE kayıt kalitesi seçeneği LIVE'ları odanın kalitesinde, en yüksek ya da en düşük kalitede kaydediyor (#203).
 
@@ -305,7 +305,7 @@
 
 * Sistem yazı tipini kullan ve İçe aktarılan yazı tipini kullan artık Etkinlik merkezi, İzleme geçmişi ve TikTok'un diğer web sayfalarında da geçerli (#7).
 
-* Hushfeed'in indirmeleri, Clash, mihomo, sing-box ve Xray'in sık çalıştığı gibi fake-IP modundaki bir proxy uygulamasının arkasında yeniden çalışıyor (#145).
+* Larpfeed'in indirmeleri, Clash, mihomo, sing-box ve Xray'in sık çalıştığı gibi fake-IP modundaki bir proxy uygulamasının arkasında yeniden çalışıyor (#145).
 
 * Doğrulanmış bir hesabın profil fotoğrafına basılı tutmak onu yeniden kaydediyor.
 
@@ -321,11 +321,11 @@
 
 * Hesap bilgileri TikTok 47.4.3'te bir hesabın dilini yeniden gösteriyor, dili hesabın kendi videolarından okuyor.
 
-* Kısa bağlantılarda tam bağlantıyı kopyala başka bir uygulamayla paylaştığınız anda beklemeyi bırakıyor, böylece Android artık Hushfeed'in panodan yapıştırdığını söylemiyor.
+* Kısa bağlantılarda tam bağlantıyı kopyala başka bir uygulamayla paylaştığınız anda beklemeyi bırakıyor, böylece Android artık Larpfeed'in panodan yapıştırdığını söylemiyor.
 
 * Saat dilimini göster açıkken, diliminiz için kısa adı olmayan bir dil onu GMT-04:00 yerine GMT-4 olarak yazıyor, böylece yayıncının adı yeniden sığıyor.
 
-* Hushfeed ayarlarındaki arama sonuçları, bir ayarı sonuçtan değiştirip geri döndüğünüzde yeni değerini gösteriyor.
+* Larpfeed ayarlarındaki arama sonuçları, bir ayarı sonuçtan değiştirip geri döndüğünüzde yeni değerini gösteriyor.
 
 * Kendi profil sayılarınız içindeki Beğeniler alanı artık çevrildi.
 
@@ -343,7 +343,7 @@
 
 ## 0.76.0 (2026-10-18)
 
-* Hushfeed artık TikTok 47.4.3'ü destekliyor, yalnızca bu sürümü. APKMirror'dan 47.4.3 APK'sını yamala. PineDrama 47.1.4'te kalıyor.
+* Larpfeed artık TikTok 47.4.3'ü destekliyor, yalnızca bu sürümü. APKMirror'dan 47.4.3 APK'sını yamala. PineDrama 47.1.4'te kalıyor.
 
 * Arkadaşlar sekmesinde yalnızca karşılıklı arkadaşları göster yeniden videoyu kimin yeniden paylaştığına bakıyor, akış filtreleri de artık Arkadaşlar sekmesindeki yeniden paylaşımlar listesine ulaşıyor.
 
@@ -371,17 +371,17 @@
 
 * Gizlilik sayfasındaki Yeni cihaz kimliği, sunucuların yeni bir cihaz kimliği vermesi için bir sonraki yeniden başlatmada TikTok'un verilerini siler. Oturumun kapanır, PineDrama'da da bu satır var.
 
-* Dosya uygulaması elindeyken durdurulan bir yedekleme veya dışa aktarma artık Hushfeed hatası sayılmıyor, PineDrama'da da.
+* Dosya uygulaması elindeyken durdurulan bir yedekleme veya dışa aktarma artık Larpfeed hatası sayılmıyor, PineDrama'da da.
 
 * Feature Gate Lab'in Yüklenen değerleri içe aktar özelliği yeniden gerçek bir dışa aktarmayı kabul ediyor, açılmış bir .gz dosyasını da.
 
-* Feature Gate Lab bir şeyi reddedip nedenini söylediğinde, bu artık Hushfeed hatası olarak kaydedilmiyor.
+* Feature Gate Lab bir şeyi reddedip nedenini söylediğinde, bu artık Larpfeed hatası olarak kaydedilmiyor.
 
 * Kullanılmayan dil paketlerini kaldır, TikTok'ta olmayan bir dili tüm yama işlemini durdurmak yerine atlıyor (#196).
 
 * Sorun bildir, ne ters gitti kutusunu boş bırakıyor ve soruları ipucu olarak gösteriyor (#197, #201).
 
-* Hushfeed'in kaydettiği fotoğraf gönderileri artık Önceden kaydedilen videoları kontrol et için sayılıyor ve Kaydedilen videoları işaretle işaretini alıyor (#197).
+* Larpfeed'in kaydettiği fotoğraf gönderileri artık Önceden kaydedilen videoları kontrol et için sayılıyor ve Kaydedilen videoları işaretle işaretini alıyor (#197).
 
 * Profil ızgarasında seçilen fotoğraf gönderileri, Fotoğraf gönderilerini video olarak kaydet açıkken tek bir video olarak kaydediliyor (#197).
 
@@ -447,13 +447,13 @@
 
 * Kaydedilen ekran düzeni artık arkasındaki ekran çok kalabalık olsa da bir açılır pencerenin görünümlerini listeliyor (#162).
 
-* Hushfeed ayarları artık TikTok'u Basitleştirilmiş Çince ile de takip edebiliyor.
+* Larpfeed ayarları artık TikTok'u Basitleştirilmiş Çince ile de takip edebiliyor.
 
 * Ekran görüntüsüne ve Circle to Search'e izin ver artık TikTok'un ana penceresi dışında açtığı açılır pencereleri de kapsıyor.
 
 * Bir sonraki sürümden itibaren Morphe Manager en yeni sürümün tüm değişiklik listesini gösteriyor.
 
-* Hushfeed ile TikTok 47.1.4, Android 17'nin katı 16 KB sayfa kontrollerini geçti.
+* Larpfeed ile TikTok 47.1.4, Android 17'nin katı 16 KB sayfa kontrollerini geçti.
 
 * Profil sekmesi, 0.72.0'dan beri çöktüğü ya da boş açıldığı telefonlarda yeniden açılıyor (#165, #140).
 
@@ -488,7 +488,7 @@
 
 * Yorumlar bölümünde yeni Dil ayarlarında çeviri seçeneklerini göster anahtarı: TikTok'un kendi Dil sayfası, orada yalnızca Uygulama dilini gören hesaplarda çeviri satırlarını yeniden gösterir (#143).
 
-* Hushfeed artık TikTok'un dizi uygulaması PineDrama 47.1.4'ü de yamalıyor. Orada 90 yama çalışıyor ve Morphe Manager yalnızca bunları sunuyor (#156).
+* Larpfeed artık TikTok'un dizi uygulaması PineDrama 47.1.4'ü de yamalıyor. Orada 90 yama çalışıyor ve Morphe Manager yalnızca bunları sunuyor (#156).
 
 * TikTok'un Keşfet paneli odanın üstünde açılınca LIVE Kaydet düğmesi aşağı kayar, panel kapanınca yerine döner (#37).
 
@@ -564,7 +564,7 @@
 
 * Feature Gate Lab'da yeni bir hazır ayar var: LIVE sohbetini otomatik çevir. Bir LIVE odasında Paylaş altındaki Yorumları çevir seçeneğini açar (#98).
 
-* Hushfeed ayarları > İndirilenler bölümünde Profil ızgaralarından kaydedilecek videoları seç'i aç, profil, Beğenilenler veya Favoriler ızgarasındaki her videoda bir daire çıkar. En fazla 50 tane seç, Kaydet'e dokun. Hepsi sayaç ve İptal ile sırayla kaydedilir (#27).
+* Larpfeed ayarları > İndirilenler bölümünde Profil ızgaralarından kaydedilecek videoları seç'i aç, profil, Beğenilenler veya Favoriler ızgarasındaki her videoda bir daire çıkar. En fazla 50 tane seç, Kaydet'e dokun. Hepsi sayaç ve İptal ile sırayla kaydedilir (#27).
 
 * Profil ızgaralarından kaydedilecek videoları seç'e Tümünü seç düğmesi geldi. Bir listenin yüklediği gönderilerden en fazla 50 tanesini seçer, Önceden kaydedilen videoları kontrol et açıksa kaydedilmiş videoları atlar. Böylece bütün bir liste, her biri öncekinin kaldığı yerden devam eden turlarla kaydedilir (#27).
 
@@ -576,7 +576,7 @@
 
 * API alt sürümlerini yanlış okuyan SDK araçları için Android 17 emülatör kurulum notu eklendi.
 
-* Her ayar sayfası artık ana ayarlar sayfasında kısa bir başlığın altında, tek dokunuş uzakta. Hushfeed'i duraklat ve ayrıntılı durum, sona yakın Hushfeed başlığının altında.
+* Her ayar sayfası artık ana ayarlar sayfasında kısa bir başlığın altında, tek dokunuş uzakta. Larpfeed'i duraklat ve ayrıntılı durum, sona yakın Larpfeed başlığının altında.
 
 * Açılır pencereler altındaki yeni Kaynaklarını kontrol et uyarılarını gizle anahtarı, bazı videoların üst kısmındaki Kaynaklarını kontrol et bandını ve böyle bir videoyu paylaşırken TikTok'un gösterdiği uyarıyı kaldırır.
 
@@ -584,15 +584,15 @@
 
 * Arama alanının altında Hızlı kurulumlar var. Sakin, Gizlilik ve Varsayılana dön tek dokunuşla uygulanır, kaç ayarın değiştiğini söyler ve Geri al sunar.
 
-* Ana ayarlar sayfası artık Sorun bildir ve Hushfeed'i destekle satırlarıyla bitiyor. İlki sürümlerin ve anahtarların doldurulmuş bir GitHub raporu açar, ikincisi Ko-fi'yi açar.
+* Ana ayarlar sayfası artık Sorun bildir ve Larpfeed'i destekle satırlarıyla bitiyor. İlki sürümlerin ve anahtarların doldurulmuş bir GitHub raporu açar, ikincisi Ko-fi'yi açar.
 
-* TikTok'u yeniden başlatma satırından ya da bildirimden yeniden başlatmak seni bulunduğun Hushfeed ayarlar sayfasına geri getirir.
+* TikTok'u yeniden başlatma satırından ya da bildirimden yeniden başlatmak seni bulunduğun Larpfeed ayarlar sayfasına geri getirir.
 
-* Hushfeed ayarları yenilendi. Ana sayfadaki bağlantılar tek grupta toplandı ve pembe simgeler eklendi. Yuvarlatılmış paneller ve oval anahtarlar Feature Gate Lab ile gizlenen içerik üreticilerini düzenleme ekranında da var. Büyük yazı ve açık tema okunaklı kalıyor.
+* Larpfeed ayarları yenilendi. Ana sayfadaki bağlantılar tek grupta toplandı ve pembe simgeler eklendi. Yuvarlatılmış paneller ve oval anahtarlar Feature Gate Lab ile gizlenen içerik üreticilerini düzenleme ekranında da var. Büyük yazı ve açık tema okunaklı kalıyor.
 
 * Profil menüsü kapsam kontrolü, yüksek numaralı yazmaçlarla çalışan test ve imzalama test projesi düzeltildi. İmzalama testi artık D8 seçeneklerini herhangi bir sırayla kabul ediyor.
 
-* Akışın üstündeki Senin İçin'e uzun basmak Hushfeed ayarlarını açar. Kısa bir dokunuş eskisi gibi çalışır ve kısayol Hushfeed duraklatıldığında da çalışır.
+* Akışın üstündeki Senin İçin'e uzun basmak Larpfeed ayarlarını açar. Kısa bir dokunuş eskisi gibi çalışır ve kısayol Larpfeed duraklatıldığında da çalışır.
 
 * İndirilenler'de Video indirme kalitesi'nin altında yeni bir anahtar var: Her kaydetmede kaliteyi sor. Açıkken İndir, videonun sunulduğu kaliteleri TikTok'un her biri için verdiği boyutla listeler ve seçtiğinizi kaydeder. Otomatik, yani TikTok'un kendi dosyası, her zaman ilk sıradadır. Ayarladığınız kalite bir sonraki kayıt için olduğu gibi kalır.
 
@@ -614,9 +614,9 @@
 
 * AMOLED dark theme artık akıştaki bir videoya basılı tuttuğunuzda açılan paneli ve Gelen Kutusu'ndaki Etkinlik ile Yeni takipçiler sayfalarını da siyah yapıyor. Bunlar TikTok'un koyu grisinde kalıyordu. Paneldeki kartlar öne çıkmaya devam etsin diye gri kalıyor.
 
-* Network proxy artık hangi bağlantıların onu atladığını söylüyor. Hushfeed'in kaydetmeleri ve Bağlantıyı kopyala'nın kısa bağlantı çözümlemesi kendi adres kontrollerinden sonra doğrudan bağlanıyor, dışa aktarılan tanılama raporu da her yolu Network routes altında listeliyor.
+* Network proxy artık hangi bağlantıların onu atladığını söylüyor. Larpfeed'in kaydetmeleri ve Bağlantıyı kopyala'nın kısa bağlantı çözümlemesi kendi adres kontrollerinden sonra doğrudan bağlanıyor, dışa aktarılan tanılama raporu da her yolu Network routes altında listeliyor.
 
-* Android 6 ile 8.1 arasında ekran okuyucular artık Hushfeed ayarlarındaki sayfa, bölüm ve kurtarma ekranı başlıklarını daha yeni Android sürümlerinde olduğu gibi başlık olarak okuyor.
+* Android 6 ile 8.1 arasında ekran okuyucular artık Larpfeed ayarlarındaki sayfa, bölüm ve kurtarma ekranı başlıklarını daha yeni Android sürümlerinde olduğu gibi başlık olarak okuyor.
 
 * Sürüm yayımlama artık PowerShell 7'nin yanı sıra Windows PowerShell 5.1'de de çalışıyor. Yinelenen etiket denetimi 5.1'de artık bir sayfadaki her sürümü ayrı okuyor, eskiden tüm sayfayı tek sürüm sayıyordu, ve yayımlama ile betik denetimleri iki kabukta da geçiyor.
 
@@ -630,13 +630,13 @@
 
 * Sürüm yayımlama artık dosyaları etiketle yeniden aramak yerine doğruladığı sürümün kendisi üzerinden yüklüyor ve indiriyor, iki sürüm aynı etiketi paylaştığında da duruyor. Zaten yayımlanmış bir etiketi yeniden derlemek reddediliyor ve dizin adımı makbuzu içeri kopyalamadan önce yayımlanan kopyanın sağlama toplamıyla karşılaştırıyor.
 
-* Yeni Show commenter handle and region yaması: yorumlar, yorum yazanın görünen adı yerine @kullanıcıadını ve yorumun zamanından sonra hesabında ayarlı ülkeyi gösterebilir. Her birinin Hushfeed ayarları > Yorumlar bölümünde kendi anahtarı var ve ikisi de başta kapalı. na-x-ril'in onlynazril yamalarından alındı.
+* Yeni Show commenter handle and region yaması: yorumlar, yorum yazanın görünen adı yerine @kullanıcıadını ve yorumun zamanından sonra hesabında ayarlı ülkeyi gösterebilir. Her birinin Larpfeed ayarları > Yorumlar bölümünde kendi anahtarı var ve ikisi de başta kapalı. na-x-ril'in onlynazril yamalarından alındı.
 
 * Sistem yazı tipini kullan artık TikTok metnini içe aktardığınız bir .ttf veya .otf dosyasıyla da gösterebilir. Uygulama bölümünde İçe aktarılan yazı tipini kullan'ı açın, dosyayı seçin ve TikTok'u yeniden başlatın. Dosya silinir veya okunamazsa metin, Sistem yazı tipini kullan'ın gösterdiğine döner. na-x-ril'in onlynazril yamalarından alındı.
 
 * Yeni Profile background yaması: Uygulama içinde Profil altındaki bir anahtar, TikTok'un kendi profil arka planı düzenleyicisini Profili düzenle bölümünde açar ve diğer profillerin ayarladığı arka planları gösterir. TikTok bu özelliği hesabınıza sunmadıysa TikTok sunucuları kaydetmeyi yine de reddedebilir. Kapalı başlar. na-x-ril'in onlynazril yamalarından alındı.
 
-* CAPTCHA pencerelerini gizle yeniden bir anahtar oldu, Hushfeed ayarları > Akış ekranı altında, ve kapalı başlar. TikTok'un sen sadece gezinirken gösterdiği bulmacayı atlar. Beğeni, takip, yorum ya da yeniden paylaşımdan hemen sonra gelen bulmaca yine gösterilir, giriş, SMS ve iki adımlı doğrulamalar da öyle. Hide the risk control CAPTCHA yamasıyla o kontrolün gezinirken çıkan bulmacaları da atlanır. Kural, na-x-ril'in onlynazril yamalarından geliyor.
+* CAPTCHA pencerelerini gizle yeniden bir anahtar oldu, Larpfeed ayarları > Akış ekranı altında, ve kapalı başlar. TikTok'un sen sadece gezinirken gösterdiği bulmacayı atlar. Beğeni, takip, yorum ya da yeniden paylaşımdan hemen sonra gelen bulmaca yine gösterilir, giriş, SMS ve iki adımlı doğrulamalar da öyle. Hide the risk control CAPTCHA yamasıyla o kontrolün gezinirken çıkan bulmacaları da atlanır. Kural, na-x-ril'in onlynazril yamalarından geliyor.
 
 * Kişi listesine erişimi engelle açıkken tüm sütunları isteyen bir kişi okuması artık kişi sütunlarını yine de taşıyan boş bir liste alıyor. Böylece bir kişi kartının adını arayan TikTok ekranı eksik bir sütuna takılmıyor.
 
@@ -724,7 +724,7 @@
 
 * Yama denetleyicisi artık saklama klasörünü boşaltmadan önce denetliyor ve kendi oluşturmadığı bir klasörü reddediyor.
 
-* TalkBack açıkken Senin İçin, Hushfeed ayarlarını aç eylemini sunuyor. Böylece uzun basma kısayolu ekran okuyucuyla da çalışıyor.
+* TalkBack açıkken Senin İçin, Larpfeed ayarlarını aç eylemini sunuyor. Böylece uzun basma kısayolu ekran okuyucuyla da çalışıyor.
 
 * Yeni içe aktarılan yazı tipi kaydedilemezse veya TikTok yarıda kapanırsa, önceki yazı tipi kaybolmak yerine yerinde kalıyor.
 
@@ -910,7 +910,7 @@
 
 * Ekran görüntülerine izin ver artık Daire içine alarak ara, yüzen pencereler ve Compose ekranlarını kapsıyor.
 
-* Akışı kaydet, filtre kararlarını ve gizleme kurallarını yerel Download/Hushfeed metin dosyasına kaydediyor, dokunarak başlayıp duruyor. Her kayıt, açıklama, ad, kullanıcı adı veya URL içermeden yeni video ve üretici kodları kullanıyor. Paylaşmadan önce oku.
+* Akışı kaydet, filtre kararlarını ve gizleme kurallarını yerel Download/Larpfeed metin dosyasına kaydediyor, dokunarak başlayıp duruyor. Her kayıt, açıklama, ad, kullanıcı adı veya URL içermeden yeni video ve üretici kodları kullanıyor. Paylaşmadan önce oku.
 
 * Temiz ekran kontrollerini gizle artık kıstırarak nasıl çıkılacağını açıklıyor (#84).
 
@@ -1102,7 +1102,7 @@
 
 * Ayar araması artık başlık eşleşmelerini öne çıkarıyor, her ayar dilinde tanılama günlüğü terimlerini tanıyor.
 
-* Yalnızca HEIF olan fotoğrafların artık ikinci JPEG dönüşüm yolu var. İki çözücü de çalışmazsa Hushfeed orijinal dosyayı koruyor.
+* Yalnızca HEIF olan fotoğrafların artık ikinci JPEG dönüşüm yolu var. İki çözücü de çalışmazsa Larpfeed orijinal dosyayı koruyor.
 
 * Yenilikler artık 0.68.0 ve 0.67.1'i sekiz ayar dilinin tamamına çeviriyor, eski sürümler için İngilizce bildirim gösteriyor (#91).
 
@@ -1144,7 +1144,7 @@
 
 * Tanılama ve Lab raporları artık ayrılmış arka plan işleriyle kaydediliyor, tekrarlanan dokunuşlar zaten süren kaydı bildiriyor.
 
-* Hushfeed artık patcher 1.15.1 içeren Morphe Manager 1.34.0 veya yenisini gerektiriyor. Sürüm denetimleri CLI 1.18.1 kullanıyor.
+* Larpfeed artık patcher 1.15.1 içeren Morphe Manager 1.34.0 veya yenisini gerektiriyor. Sürüm denetimleri CLI 1.18.1 kullanıyor.
 
 * Derlemeler güvenlik duyurusundan etkilenmeyen Guava 33.7.2'yi doğrulanmış sağlama toplamlarıyla tutarlı kullanıyor. Guava uygulama veya yama paketine dahil edilmiyor. Kaynak içe aktarma denetimi artık denetlediği yama dosyalarını okuyor.
 
@@ -1168,7 +1168,7 @@
 
 * Gizle ve sesi engelle düğmeleri artık engelle düğmesinden bağımsız çalışıyor, Akış filtresi gerektiriyor ve kapalı başlıyor (#95).
 
-* Duraklat, misafirlerin Hushfeed'i sürdürmesi için açık Ana Sayfa uzun basma ayar kısayolunu koruyor. Kapalı kısayollar kapalı kalıyor, normal dokunuşlar eskisi gibi çalışıyor, TikTok'un kendi uzun basma eylemi korunuyor (#89).
+* Duraklat, misafirlerin Larpfeed'i sürdürmesi için açık Ana Sayfa uzun basma ayar kısayolunu koruyor. Kapalı kısayollar kapalı kalıyor, normal dokunuşlar eskisi gibi çalışıyor, TikTok'un kendi uzun basma eylemi korunuyor (#89).
 
 * Android 6 artık paketlenen dil çoğul biçimlerini kullanıyor, eksik miktarlar için doğru İngilizce yedeğine dönüyor.
 

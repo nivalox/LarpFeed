@@ -1,6 +1,6 @@
 /*
- * Copyright 2026 Hushfeed contributors
- * https://github.com/SysAdminDoc/hushfeed
+ * Copyright 2026 Larpfeed contributors
+ * https://github.com/SysAdminDoc/larpfeed
  *
  * Built on icysymmetra/tiktok-patches-for-morphe (GPL-3.0).
  * Follows BlueDragon4251/tiktok-patches-for-morphe.
@@ -38,7 +38,7 @@ val hideSeenVideosPatch = bytecodePatch(
     name = "Hide already seen videos",
     description = "Remembers the videos you've watched and hides them when the feed sends " +
         "them again, so you only see new ones. It can also keep a watch history you can search " +
-        "and reopen videos from. Both stay on your phone. Starts off. Turn them on in Hushfeed " +
+        "and reopen videos from. Both stay on your phone. Starts off. Turn them on in Larpfeed " +
         "settings > Feed filter.",
 ) {
     category("Feed")

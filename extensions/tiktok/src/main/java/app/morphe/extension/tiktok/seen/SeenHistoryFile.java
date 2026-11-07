@@ -1,6 +1,6 @@
 /*
- * Copyright 2026 Hushfeed contributors
- * https://github.com/SysAdminDoc/hushfeed
+ * Copyright 2026 Larpfeed contributors
+ * https://github.com/SysAdminDoc/larpfeed
  */
 package app.morphe.extension.tiktok.seen;
 
@@ -24,11 +24,11 @@ import java.util.Set;
 import java.util.regex.Pattern;
 
 /**
- * Hushfeed's own seen-history file: one account's seen videos and when each was last seen,
+ * Larpfeed's own seen-history file: one account's seen videos and when each was last seen,
  * written by Save seen history and read back by Restore seen history.
  *
  * <pre>
- * {"format":"hushfeed-seen-history","schema":1,"exported_at":1759800000000,"videos":[
+ * {"format":"larpfeed-seen-history","schema":1,"exported_at":1759800000000,"videos":[
  * {"id":"7420104946231577888","seen":1759790000000},
  * {"id":"7420104946231577001","seen":1759780000000}
  * ]}
@@ -40,12 +40,12 @@ import java.util.regex.Pattern;
  * this leaves alone.
  *
  * <p>A file is read whole and checked before anything changes: its size, its nesting, its row
- * count, every id and every time. The header is read first, so a file from a newer Hushfeed is
+ * count, every id and every time. The header is read first, so a file from a newer Larpfeed is
  * named as one even when its rows have a shape this version doesn't know. Rejections never carry
  * the file's values, so an id can't reach a log through one.
  */
 public final class SeenHistoryFile {
-    public static final String FORMAT = "hushfeed-seen-history";
+    public static final String FORMAT = "larpfeed-seen-history";
     public static final int SCHEMA = 1;
     /** About twice what a full history of {@link #MAX_ROWS} rows takes. */
     public static final int MAX_BYTES = 1024 * 1024;

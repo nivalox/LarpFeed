@@ -1,6 +1,6 @@
 /*
- * Copyright 2026 Hushfeed contributors
- * https://github.com/SysAdminDoc/hushfeed
+ * Copyright 2026 Larpfeed contributors
+ * https://github.com/SysAdminDoc/larpfeed
  */
 package app.morphe.patches.tiktok.privacy
 
@@ -23,7 +23,7 @@ val resourceBatteryGovernorPatch = bytecodePatch(
     name = "Resource and battery governor",
     description = "Stops TikTok reading your phone's motion sensors, which it can use to " +
         "identify your phone, and stops a background speed test that can use a lot of memory. " +
-        "Starts off. Turn it on in Hushfeed settings > Privacy.",
+        "Starts off. Turn it on in Larpfeed settings > Privacy.",
 ) {
     category("Privacy")
     dependsOn(settingsPatch, sharedExtensionPatch)

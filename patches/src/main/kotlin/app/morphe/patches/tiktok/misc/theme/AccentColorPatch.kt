@@ -1,6 +1,6 @@
 /*
- * Copyright 2026 Hushfeed contributors
- * https://github.com/SysAdminDoc/hushfeed
+ * Copyright 2026 Larpfeed contributors
+ * https://github.com/SysAdminDoc/larpfeed
  */
 package app.morphe.patches.tiktok.misc.theme
 
@@ -381,7 +381,7 @@ internal fun splitRedPalette(png: ByteArray): Pair<ByteArray, ByteArray>? {
 internal fun wallpaperIconLayers(name: String): Pair<String, String> =
     "${WALLPAPER_ICON_PREFIX}${name}_white" to "${WALLPAPER_ICON_PREFIX}${name}_tint"
 
-internal const val WALLPAPER_ICON_PREFIX = "hushfeed_wallpaper_"
+internal const val WALLPAPER_ICON_PREFIX = "larpfeed_wallpaper_"
 
 /**
  * The drawable that takes [name]'s place with the wallpaper choice: its white layer, and over it
@@ -466,7 +466,7 @@ internal fun accentRecolor(wallpaper: Boolean, target: String, literals: Mutable
 internal const val WALLPAPER_COLORS_FILE = "colors.xml"
 
 /** What every color the wallpaper choice adds is named from. */
-internal const val WALLPAPER_COLOR_PREFIX = "hushfeed_accent_"
+internal const val WALLPAPER_COLOR_PREFIX = "larpfeed_accent_"
 
 /**
  * Android's system accent ramp as (tone, step) pairs: `system_accent1_<step>` has a tone (the L*
@@ -535,7 +535,7 @@ internal fun wallpaperColorPaths(res: File, prefix: String = WALLPAPER_COLOR_PRE
 internal val LYNX_TEXT_REDS = listOf("#FF576F", "#E10543")
 
 /** What the color each Lynx red becomes is named from. The extension looks these names up. */
-internal const val LYNX_COLOR_PREFIX = "hushfeed_lynx_"
+internal const val LYNX_COLOR_PREFIX = "larpfeed_lynx_"
 
 internal fun lynxColorName(literal: String): String =
     LYNX_COLOR_PREFIX + String.format(Locale.ROOT, "%06x", literalRgb(literal) ?: throw IllegalArgumentException("not a color literal: $literal"))

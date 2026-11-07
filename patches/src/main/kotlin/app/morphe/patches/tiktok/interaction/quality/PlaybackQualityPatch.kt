@@ -1,6 +1,6 @@
 /*
- * Copyright 2026 Hushfeed contributors
- * https://github.com/SysAdminDoc/hushfeed
+ * Copyright 2026 Larpfeed contributors
+ * https://github.com/SysAdminDoc/larpfeed
  *
  * Built on icysymmetra/tiktok-patches-for-morphe (GPL-3.0).
  */
@@ -30,7 +30,7 @@ private class QualityGetter(owner: String, getter: String, result: String) : Fin
 val playbackQualityPatch = bytecodePatch(
     name = "Playback quality",
     description = "Lets you choose the video quality, like highest, lowest or 720p, and set a " +
-        "lower quality for mobile data to use less data. Starts off. Pick a quality in Hushfeed " +
+        "lower quality for mobile data to use less data. Starts off. Pick a quality in Larpfeed " +
         "settings > Playback.",
 ) {
     category("Playback")

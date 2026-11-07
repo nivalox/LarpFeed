@@ -202,7 +202,7 @@ public class AppLockTest {
     }
 
     /** Pause is a file any file manager can make, so it can't be the way past the lock. */
-    @Test public void pausedHushfeedStillLocks() {
+    @Test public void pausedLarpfeedStillLocks() {
         PausedProcess.set(true);
         try (ActivityController<Screen> screen = Robolectric.buildActivity(Screen.class).setup()) {
             idleFor(AppLock.ASK_DELAY_MS + 50);

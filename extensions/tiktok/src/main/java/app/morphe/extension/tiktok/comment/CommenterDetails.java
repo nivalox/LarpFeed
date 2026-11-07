@@ -1,6 +1,6 @@
 /*
- * Copyright 2026 Hushfeed contributors
- * https://github.com/SysAdminDoc/hushfeed
+ * Copyright 2026 Larpfeed contributors
+ * https://github.com/SysAdminDoc/larpfeed
  *
  * The comment half of onlynazril-patches' TikTok handle patch (GPL-3.0),
  * https://github.com/na-x-ril/onlynazril-patches, hooked at the comment cell.

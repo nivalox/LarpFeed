@@ -26,7 +26,7 @@ class AppCompatibilitiesMatchFixturesTest {
         val buildScript = File("build.gradle.kts").takeIf { it.isFile }
             ?: File("patches/build.gradle.kts")
         assertTrue("patches build script is missing", buildScript.isFile)
-        val description = Regex("""description = "(Hushfeed patches for TikTok[^"]+)"""")
+        val description = Regex("""description = "(Larpfeed patches for TikTok[^"]+)"""")
             .find(buildScript.readText())?.groupValues?.get(1)
         BundleVerifier.requireTargetDescription(description)
     }

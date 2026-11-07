@@ -1,6 +1,6 @@
 /*
- * Copyright 2026 Hushfeed contributors
- * https://github.com/SysAdminDoc/hushfeed
+ * Copyright 2026 Larpfeed contributors
+ * https://github.com/SysAdminDoc/larpfeed
  */
 package app.morphe.extension.tiktok.download;
 
@@ -36,7 +36,7 @@ import java.util.List;
  *
  * <p>Read from the view TikTok's player draws into: the largest TextureView or SurfaceView showing,
  * and the next one down when that one has no frame. Not a screenshot: the caption, the buttons and
- * Hushfeed's own overlays are other views and stay out of it. A TextureView hands its last frame
+ * Larpfeed's own overlays are other views and stay out of it. A TextureView hands its last frame
  * back on the main thread. A SurfaceView's frame sits in a buffer only the compositor draws, and
  * PixelCopy, Android 7 and newer, is the way to read it back. When the player draws into a layer of
  * its own under the SurfaceView instead, as 47.5.3 does on the S22 ({@link PlayerLayers}), that

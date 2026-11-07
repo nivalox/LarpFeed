@@ -47,7 +47,7 @@ import app.morphe.extension.shared.diagnostics.DiagnosticEvent;
 import app.morphe.extension.shared.diagnostics.DiagnosticRedactor;
 import app.morphe.extension.shared.diagnostics.BuildDetails;
 import app.morphe.extension.shared.settings.BaseSettings;
-import app.morphe.extension.shared.settings.HushfeedPause;
+import app.morphe.extension.shared.settings.LarpfeedPause;
 
 /** Bounded structured event storage and latest sanitized crash storage. */
 public final class LogBufferManager {
@@ -356,7 +356,7 @@ public final class LogBufferManager {
         // Paused, every family below that reads a setting is bound but takes TikTok's own path,
         // and a reader of the table has to be told so or it reads as a healthy build that does
         // nothing. A family that reads no setting keeps working and is left unmarked.
-        boolean paused = HushfeedPause.isPaused();
+        boolean paused = LarpfeedPause.isPaused();
         StringBuilder hooks = new StringBuilder();
         if (includeAll || selected.contains(
                 app.morphe.extension.shared.diagnostics.DiagnosticCategory.PATCH_ERRORS.value)) {
@@ -389,8 +389,8 @@ public final class LogBufferManager {
                 .append(' ').append(Utils.getAppVersionName()).append('\n')
                 .append("morphe: ").append(Utils.getPatchesReleaseVersion()).append('\n');
         if (paused) {
-            report.append("hushfeed: paused (")
-                    .append(HushfeedPause.reason().name().toLowerCase(java.util.Locale.ROOT))
+            report.append("larpfeed: paused (")
+                    .append(LarpfeedPause.reason().name().toLowerCase(java.util.Locale.ROOT))
                     .append("), every hook a setting controls takes TikTok's own path\n");
         }
 
@@ -784,7 +784,7 @@ public final class LogBufferManager {
         return DiagnosticEvent.utc(System.currentTimeMillis());
     }
 
-    /** The stamp every Hushfeed export is named with. UTC, so two exports sort together. */
+    /** The stamp every Larpfeed export is named with. UTC, so two exports sort together. */
     public static String fileTimestamp() {
         SimpleDateFormat format = new SimpleDateFormat("yyyyMMdd-HHmmss", Locale.US);
         format.setTimeZone(TimeZone.getTimeZone("UTC"));

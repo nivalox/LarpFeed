@@ -1,6 +1,6 @@
 /*
- * Copyright 2026 Hushfeed contributors
- * https://github.com/SysAdminDoc/hushfeed
+ * Copyright 2026 Larpfeed contributors
+ * https://github.com/SysAdminDoc/larpfeed
  *
  * Built on icysymmetra/tiktok-patches-for-morphe (GPL-3.0).
  * Follows eduardo3677-ai/tiktok-patches-for-morphe.
@@ -139,7 +139,7 @@ val ghostModePatch = bytecodePatch(
     description = "Stops TikTok telling people you viewed their story or profile, or that " +
         "you're typing. What TikTok already recorded stays. Each of the three has its own switch " +
         "under it, and a separate one hides your online status. Starts off. Turn it on in " +
-        "Hushfeed settings > Privacy.",
+        "Larpfeed settings > Privacy.",
 ) {
     category("Privacy")
     dependsOn(settingsPatch, sharedExtensionPatch)

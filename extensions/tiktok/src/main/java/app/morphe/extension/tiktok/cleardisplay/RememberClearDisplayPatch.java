@@ -91,7 +91,7 @@ public final class RememberClearDisplayPatch {
      * TikTok's own clear mode is the user's in-TikTok choice, and what TikTok does with it on
      * such an item is TikTok's business.
      */
-    private static volatile boolean hushfeedCleared;
+    private static volatile boolean larpfeedCleared;
     /**
      * Whether the automatic path cleared the last video and nothing has asked for the controls
      * since. It outlives the swipe to the next video, whose own clear lands only after it
@@ -264,7 +264,7 @@ public final class RememberClearDisplayPatch {
             applied = false;
             manuallyChanged = false;
             setCarrying(false);
-            if (clearNow && hushfeedCleared) emit(event, false);
+            if (clearNow && larpfeedCleared) emit(event, false);
             return;
         }
         // The production condition holds only a weak reference to the current controller.
@@ -385,7 +385,7 @@ public final class RememberClearDisplayPatch {
         }
         window.clear();
         clearNow = false;
-        hushfeedCleared = false;
+        larpfeedCleared = false;
         automaticHidden = false;
         carrying = false;
         currentController.clear();
@@ -509,7 +509,7 @@ public final class RememberClearDisplayPatch {
             // Withdrawing our auxiliary hiding is safe even if TikTok already exited and
             // skipped its native no-op. That is not an acknowledgment of a native transition.
             if (accepted || !clear) {
-                hushfeedCleared = clear;
+                larpfeedCleared = clear;
                 automaticHidden = false;
             }
             return accepted;
@@ -541,7 +541,7 @@ public final class RememberClearDisplayPatch {
         // Before TikTok handles it, ours included: what the faded Clear display keeps (#84).
         if ((Boolean) clear) VideoOverlayHider.beforeClearDisplay(event);
         Logger.printDebug(() -> "Clear display event: type " + type + ", clear " + clear
-                + (event == nativeEvent ? ", posted by Hushfeed" : ""));
+                + (event == nativeEvent ? ", posted by Larpfeed" : ""));
         if (event == nativeEvent) return;
         if ((Boolean) clear) endPageHold();
         if (clearNow != (Boolean) clear) {
@@ -549,7 +549,7 @@ public final class RememberClearDisplayPatch {
             MAIN.post(VideoOverlayHider::refresh);
         }
         // TikTok's own change: from here the state is the user's, not this patch's.
-        hushfeedCleared = false;
+        larpfeedCleared = false;
         // TikTok's own change: the state is TikTok's or the user's from here.
         automaticHidden = false;
         setCarrying(false);

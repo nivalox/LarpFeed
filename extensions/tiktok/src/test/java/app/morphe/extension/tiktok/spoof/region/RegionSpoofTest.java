@@ -541,7 +541,7 @@ public class RegionSpoofTest {
         assertEquals("Europe/Belgrade", tz.value);
     }
 
-    @Test public void aTypedZoneDoesNothingWhileMatchLocaleIsOffOrHushfeedPauses() {
+    @Test public void aTypedZoneDoesNothingWhileMatchLocaleIsOffOrLarpfeedPauses() {
         TimeZone.setDefault(TimeZone.getTimeZone(PHONE_ZONE));
         Settings.SIM_SPOOF_TIME_ZONE.save("Asia/Tokyo");
         Settings.REGION_SPOOF.save(false);
@@ -554,7 +554,7 @@ public class RegionSpoofTest {
         assertEquals(PHONE_ZONE, TimeZone.getDefault().getID());
     }
 
-    @Test public void theZoneGoesBackToThePhonesWhenTheSettingGoesOffOrHushfeedPauses() {
+    @Test public void theZoneGoesBackToThePhonesWhenTheSettingGoesOffOrLarpfeedPauses() {
         for (Runnable off : new Runnable[]{
                 () -> Settings.REGION_SPOOF.save(false),
                 () -> Settings.SIM_SPOOF.save(false),

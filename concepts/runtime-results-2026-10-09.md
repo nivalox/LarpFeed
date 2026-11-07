@@ -1,8 +1,8 @@
 # TikTok runtime observation, October 9, 2026
 
-This observation used TikTok 47.1.4 with Hushfeed 0.68.0 installed on Android 16. `Pause Hushfeed` was enabled and verified after restarting the app. The correct baseline label is **patched APK, runtime paused**. Static APK changes can survive Pause, and their full installed inventory has not been established.
+This observation used TikTok 47.1.4 with Larpfeed 0.68.0 installed on Android 16. `Pause Larpfeed` was enabled and verified after restarting the app. The correct baseline label is **patched APK, runtime paused**. Static APK changes can survive Pause, and their full installed inventory has not been established.
 
-The source review covers Hushfeed 0.70.0. Its controls explain possible mechanisms to investigate, but these measurements do not validate that version. They also don't compare an authentic factory APK with an enabled Hushfeed build.
+The source review covers Larpfeed 0.70.0. Its controls explain possible mechanisms to investigate, but these measurements do not validate that version. They also don't compare an authentic factory APK with an enabled Larpfeed build.
 
 ## Installed build and comparison limits
 
@@ -14,15 +14,15 @@ The source review covers Hushfeed 0.70.0. Its controls explain possible mechanis
 | TikTok version | 47.1.4, target SDK 36 |
 | Installed version code | 2147483647, the applied update-offer override |
 | Original target code recorded in build metadata | 2024701040 |
-| Hushfeed bundle recorded in the APK | 0.68.0 |
-| Source recorded in the APK | [05edd439483d8e3bd331905b82aee7317ba5e754](https://github.com/SysAdminDoc/HushFeed/tree/05edd439483d8e3bd331905b82aee7317ba5e754), clean source |
+| Larpfeed bundle recorded in the APK | 0.68.0 |
+| Source recorded in the APK | [05edd439483d8e3bd331905b82aee7317ba5e754](https://github.com/SysAdminDoc/LarpFeed/tree/05edd439483d8e3bd331905b82aee7317ba5e754), clean source |
 | Patcher recorded in the APK | 1.15.1 |
 | Effective runtime state | Pause enabled and confirmed after a setup restart |
 | Logging | Persistent diagnostics and timed logging off |
 | Route outside packet capture | Wi-Fi, with a wireless ADB connection retained |
 | Power during accepted intervals | Physically unplugged, battery service reporting discharging |
 
-The APK's `assets/hushfeed-build-v1.txt` records AMOLED black, retained language packs and native locales, and stripped `tool_p2p_relay`, `tool_core_assets`, `tool_creation` and `tool_live_extras` groups. Those removals and the version-code change remain while runtime controls are paused. This metadata isn't a complete patch-selection manifest. Don't fill its gaps from the current default patch list or a settings backup.
+The APK's `assets/larpfeed-build-v1.txt` records AMOLED black, retained language packs and native locales, and stripped `tool_p2p_relay`, `tool_core_assets`, `tool_creation` and `tool_live_extras` groups. Those removals and the version-code change remain while runtime controls are paused. This metadata isn't a complete patch-selection manifest. Don't fill its gaps from the current default patch list or a settings backup.
 
 The installed 0.68.0 build also predates changes in the reviewed 0.70.0 source. Selected motion, contact, location, clipboard, installed-app and search-history controls had different defaults in 0.68.0. Its early device-access guards could refuse access before the extension context existed, while the current guards let that early call continue. A paused cold start therefore isn't proof of original startup behavior. Later profiling-asset removal and LIVE or player fixes must not be credited to this older APK.
 
@@ -34,7 +34,7 @@ The [original 47.1.4 manifest review](tiktok-app-audit.md#original-4714-manifest
 
 ## Current-build settings UI
 
-A read-only settings pass at 22:57 to 22:59 UTC followed the measurements. It used the same modified TikTok 47.1.4 installation with Hushfeed 0.68.0 paused. Fresh UI hierarchy captures showed these routes.
+A read-only settings pass at 22:57 to 22:59 UTC followed the measurements. It used the same modified TikTok 47.1.4 installation with Larpfeed 0.68.0 paused. Fresh UI hierarchy captures showed these routes.
 
 | Screen | Visible headings or routes |
 |---|---|
@@ -44,7 +44,7 @@ A read-only settings pass at 22:57 to 22:59 UTC followed the measurements. It us
 
 The two targeted-ad rows describe ads outside TikTok and ads shown inside TikTok. The six content-preference rows and the listed ad controls were observed without opening their action pages or changing them. Account preference values and counts are omitted. The account was preserved, and raw screenshots and UI captures remain private.
 
-TikTok's native Ads route opened `AdPersonalizationActivity`, the same activity reused by Hushfeed settings. The native route carried TikTok's ads-page intent data, while the Hushfeed route used the `morphe_settings` action. Record the visible screen and launch intent together, as described in the [settings implementation notes](patch-development.md#how-the-in-app-settings-connect). An earlier direct shell launch was denied because the activity wasn't exported. Opening it through TikTok's own settings route worked.
+TikTok's native Ads route opened `AdPersonalizationActivity`, the same activity reused by Larpfeed settings. The native route carried TikTok's ads-page intent data, while the Larpfeed route used the `morphe_settings` action. Record the visible screen and launch intent together, as described in the [settings implementation notes](patch-development.md#how-the-in-app-settings-connect). An earlier direct shell launch was denied because the activity wasn't exported. Opening it through TikTok's own settings route worked.
 
 ## Conditions and timing
 
@@ -152,7 +152,7 @@ This is an observation of a paused 0.68.0 installation. No causal drain reductio
 
 ### Quiet collection with mixed screen activity
 
-The installed APK was TikTok 47.1.4 with Hushfeed 0.68.0. Runtime Pause remained enabled after the verified restart. The source review covers Hushfeed 0.70.0, so these measurements describe the installed build. They aren't a stock-build comparison.
+The installed APK was TikTok 47.1.4 with Larpfeed 0.68.0. Runtime Pause remained enabled after the verified restart. The source review covers Larpfeed 0.70.0, so these measurements describe the installed build. They aren't a stock-build comparison.
 
 The runner issued no device commands or capture during its 1,800.006615-second quiet interval. Wireless debugging stayed connected. The battery charge counter fell from 3,724,000 to 3,679,900 microampere-hours, a whole-phone decrease of **44.1 mAh**. Both readings showed 75%, discharging status and all external-power flags off. Temperature fell from 86.36°F to 83.12°F, while voltage changed from 4.093 V to 4.083 V.
 
@@ -239,7 +239,7 @@ The whole file and foreground slice contain 34 cleartext DNS questions across 17
 
 Visible SNI includes `log-dr16-normal-useast5.tiktokv.us` and `log-dr16-normal-useast8.tiktokv.us`, alongside API, frontier and media-style names. These names identify advertised destinations. They do not reveal HTTP paths, posted fields or payload purpose. A log-style name or the presence of `appsflyersdk.com` alone cannot establish an advertising request, a particular tracking event, or a failed privacy control. Runtime Pause remained the baseline for this observation.
 
-AppsFlyer's [SDK integration guide](https://dev.appsflyer.com/hc/docs/sdk-integration) describes app attribution as a purpose of its SDK. Hushfeed's [telemetry patch](../patches/src/main/kotlin/app/morphe/patches/tiktok/misc/telemetry/DisableTelemetryPatch.kt#L101) guards named AppsFlyer initialization and event paths. Together, that source and the observed SDK-family destination make this a useful lead for a controlled tracking check. They still don't identify the encrypted event or show whether a privacy switch would block it. The request-count feature covers TikTok's Retrofit path and excludes third-party SDK clients, so its count is not a substitute for this capture.
+AppsFlyer's [SDK integration guide](https://dev.appsflyer.com/hc/docs/sdk-integration) describes app attribution as a purpose of its SDK. Larpfeed's [telemetry patch](../patches/src/main/kotlin/app/morphe/patches/tiktok/misc/telemetry/DisableTelemetryPatch.kt#L101) guards named AppsFlyer initialization and event paths. Together, that source and the observed SDK-family destination make this a useful lead for a controlled tracking check. They still don't identify the encrypted event or show whether a privacy switch would block it. The request-count feature covers TikTok's Retrofit path and excludes third-party SDK clients, so its count is not a substitute for this capture.
 
 
 The background slice contains 118 packets but no new DNS question or visible TLS hostname. Four directional TCP streams lack an observed SYN and don't begin with an initial TLS handshake in that slice. Existing encrypted connections can continue without another DNS lookup or ClientHello. Background destinations therefore remain unclassified by this slice's DNS/SNI evidence. Shared IP addresses are not used to assign them a domain.
@@ -260,7 +260,7 @@ This capture establishes visible destination metadata and measured packet activi
 
 The accepted samples establish that the observed installation transfers data, uses CPU and registers an ambient-light listener during a foreground feed session. The wider background counters still increase after Home, while the light listener has been released. Neither counter set identifies a payload as an ad, telemetry or a watch-history report.
 
-No matched enabled-versus-paused comparison was made. There is no measured battery benefit for an individual switch, no official 47.1.4 factory baseline, and no runtime acceptance result for Hushfeed 0.70.0. Keep those checks open. A different video, cached media, display mode or server response can change the workload without a patch change.
+No matched enabled-versus-paused comparison was made. There is no measured battery benefit for an individual switch, no official 47.1.4 factory baseline, and no runtime acceptance result for Larpfeed 0.70.0. Keep those checks open. A different video, cached media, display mode or server response can change the workload without a patch change.
 
 ## Patch opportunities and follow-up checks
 
@@ -280,4 +280,4 @@ The [measurement protocol](runtime-observation.md) maps these hypotheses to curr
 
 ## Device restoration
 
-After measurement, Pause was turned off and TikTok was restarted. The status page confirmed Hushfeed 0.68.0 active on TikTok 47.1.4. The original adaptive-brightness mode, screen timeout and power settings were verified. The capture service had stopped, and owned temporary capture files were copied and hash-checked before removal from the phone. The temporary wireless ADB listener was closed after switching back to USB mode. Accounts, app data and signing keys were preserved.
+After measurement, Pause was turned off and TikTok was restarted. The status page confirmed Larpfeed 0.68.0 active on TikTok 47.1.4. The original adaptive-brightness mode, screen timeout and power settings were verified. The capture service had stopped, and owned temporary capture files were copied and hash-checked before removal from the phone. The temporary wireless ADB listener was closed after switching back to USB mode. Accounts, app data and signing keys were preserved.

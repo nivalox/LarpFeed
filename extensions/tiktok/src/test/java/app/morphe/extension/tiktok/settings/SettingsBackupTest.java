@@ -201,7 +201,7 @@ public class SettingsBackupTest {
             SettingsOperationJournal.failCommittedDeletesForTests(false);
         }
         assertTrue("no journal was left behind, so this checks nothing",
-                new java.io.File(Utils.getContext().getFilesDir(), "hushfeed-settings-operation.json").isFile());
+                new java.io.File(Utils.getContext().getFilesDir(), "larpfeed-settings-operation.json").isFile());
 
         SettingsOperationJournal.acquire(Utils.getContext()).complete();
 
@@ -225,7 +225,7 @@ public class SettingsBackupTest {
             SettingsOperationJournal.failCommittedDeletesForTests(false);
         }
         assertTrue("no journal was left behind, so this checks nothing",
-                new java.io.File(Utils.getContext().getFilesDir(), "hushfeed-settings-operation.json").isFile());
+                new java.io.File(Utils.getContext().getFilesDir(), "larpfeed-settings-operation.json").isFile());
 
         SettingsOperationJournal.acquire(Utils.getContext()).complete();
 
@@ -424,7 +424,7 @@ public class SettingsBackupTest {
                 assertEquals(key, SettingsBackup.Reason.RULE_LIST,
                         reasonFor(backup.toString()));
                 assertEquals("That settings backup contains a feed rule list larger than "
-                                + "Hushfeed accepts. Nothing was altered.",
+                                + "Larpfeed accepts. Nothing was altered.",
                         sentenceFor(backup.toString()));
                 assertEquals("a rejected " + key + " value changed storage",
                         baseline, SettingsBackup.create(false));
@@ -618,11 +618,11 @@ public class SettingsBackupTest {
 
         assertEquals(SettingsBackup.Reason.DAMAGED, reasonFor(half));
 
-        // Its own sentence, not the one a photograph or a newer Hushfeed's backup gets.
+        // Its own sentence, not the one a photograph or a newer Larpfeed's backup gets.
         String damaged = sentenceFor(half);
         String wrongFormat = sentenceFor(
                 new JSONObject(SettingsBackup.create(false)).put("format", "something-else").toString());
-        String unknown = sentenceFor("{\"format\":\"hushfeed-settings\"}");
+        String unknown = sentenceFor("{\"format\":\"larpfeed-settings\"}");
         assertNotEquals("a cut-off download reads the same as a file that is not a backup",
                 wrongFormat, damaged);
         assertNotEquals("a cut-off download still reads as the unexplained rejection",
@@ -1212,8 +1212,8 @@ public class SettingsBackupTest {
         JSONObject root = new JSONObject(SettingsBackup.create(false));
         root.getJSONObject("settings").put("comment_translation_excluded_languages", "es");
         root.getJSONArray("setting_keys").put("comment_translation_excluded_languages");
-        root.getJSONObject("settings").put("hushfeed_hide_quick_setups", true);
-        root.getJSONArray("setting_keys").put("hushfeed_hide_quick_setups");
+        root.getJSONObject("settings").put("larpfeed_hide_quick_setups", true);
+        root.getJSONArray("setting_keys").put("larpfeed_hide_quick_setups");
         Settings.MAX_VIDEO_SECONDS.save(0);
 
         SettingsBackup.restore(Utils.getContext(), root.toString(), true);
@@ -1222,13 +1222,13 @@ public class SettingsBackupTest {
         assertEquals(2, SettingsBackup.settingsSkipped(root.toString()));
         assertEquals(0, SettingsBackup.settingsNotInFile(root.toString()));
         assertFalse(Setting.preferences.preferences.contains("comment_translation_excluded_languages"));
-        assertNull(Setting.getSettingFromPath("hushfeed_hide_quick_setups"));
-        assertFalse(Setting.preferences.preferences.contains("hushfeed_hide_quick_setups"));
-        assertFalse(SettingsBackup.create(false).contains("hushfeed_hide_quick_setups"));
+        assertNull(Setting.getSettingFromPath("larpfeed_hide_quick_setups"));
+        assertFalse(Setting.preferences.preferences.contains("larpfeed_hide_quick_setups"));
+        assertFalse(SettingsBackup.create(false).contains("larpfeed_hide_quick_setups"));
 
         SettingsBackup.undo(Utils.getContext());
         assertEquals(0, (int) Settings.MAX_VIDEO_SECONDS.get());
-        assertFalse(Setting.preferences.preferences.contains("hushfeed_hide_quick_setups"));
+        assertFalse(Setting.preferences.preferences.contains("larpfeed_hide_quick_setups"));
     }
 
     @Test public void skippedKeysAndMissingCurrentSettingsStaySeparateAcrossHostsAndUndo() throws Exception {
@@ -1363,7 +1363,7 @@ public class SettingsBackupTest {
             Uri uri = provider.uri;
             fragment.onActivityResult(7311, android.app.Activity.RESULT_OK, new Intent().setData(uri));
             waitFor("Settings backup saved");
-            assertEquals("hushfeed-settings", new JSONObject(new String(java.nio.file.Files.readAllBytes(
+            assertEquals("larpfeed-settings", new JSONObject(new String(java.nio.file.Files.readAllBytes(
                     provider.file.toPath()), StandardCharsets.UTF_8)).getString("format"));
             Settings.MAX_VIDEO_SECONDS.save(73);
             fragment.onActivityResult(7312, android.app.Activity.RESULT_OK, new Intent().setData(uri));
@@ -1395,7 +1395,7 @@ public class SettingsBackupTest {
             Utils.setContext(activity);
             Settings.MAX_VIDEO_SECONDS.save(73);
             File undoFile = new File(activity.getApplicationContext().getFilesDir(),
-                    "hushfeed-settings-undo.json");
+                    "larpfeed-settings-undo.json");
             assertTrue("fixture needs no Undo copy", !undoFile.exists() || undoFile.delete());
 
             var fragment = new TikTokPreferenceFragment();
@@ -1458,7 +1458,7 @@ public class SettingsBackupTest {
             Settings.MAX_VIDEO_SECONDS.save(73);
             String undoCopy = fromUnknownBuild(new JSONObject(SettingsBackup.create(false))).toString();
             File undoFile = new File(activity.getApplicationContext().getFilesDir(),
-                    "hushfeed-settings-undo.json");
+                    "larpfeed-settings-undo.json");
             try (FileOutputStream output = new FileOutputStream(undoFile)) {
                 output.write(undoCopy.getBytes(StandardCharsets.UTF_8));
             }
@@ -1522,15 +1522,15 @@ public class SettingsBackupTest {
             Utils.awaitBackgroundTasksForTests();
             Shadows.shadowOf(Looper.getMainLooper()).idle();
 
-            View banner = activity.getWindow().getDecorView().findViewWithTag("hushfeed_settings_action_banner");
+            View banner = activity.getWindow().getDecorView().findViewWithTag("larpfeed_settings_action_banner");
             assertNotNull("the outcome didn't reach the settings banner", banner);
-            TextView message = banner.findViewWithTag("hushfeed_settings_action_message");
+            TextView message = banner.findViewWithTag("larpfeed_settings_action_message");
             assertEquals("1 setting wasn't in that file and was left as it is. "
                     + "2 settings in that file can't be restored here and were skipped. "
                     + "Stickers can't be saved to the folder in that file, so your sticker folder was kept. "
                     + "Settings restored. Restart TikTok to apply all changes.", String.valueOf(message.getText()));
             assertEquals(stickerBefore, Settings.DOWNLOAD_STICKER_PATH.get());
-            assertNotNull("a restore offers the restart", banner.findViewWithTag("hushfeed_settings_action_button"));
+            assertNotNull("a restore offers the restart", banner.findViewWithTag("larpfeed_settings_action_button"));
             assertEquals("the outcome went to a toast as well", 0, ShadowToast.shownToastCount());
         }
     }
@@ -1576,7 +1576,7 @@ public class SettingsBackupTest {
         String name = app.morphe.extension.tiktok.settings.preference.SettingsBackupPreference
                 .suggestedExportName();
         assertTrue("the picker would show " + name,
-                name.matches("hushfeed-settings-\\d{8}-\\d{6}\\.json"));
+                name.matches("larpfeed-settings-\\d{8}-\\d{6}\\.json"));
     }
 
     /**
@@ -1695,7 +1695,7 @@ public class SettingsBackupTest {
             var activity = owner.get();
             Utils.setContext(activity);
             var fragment = attachBackupPage(activity);
-            byte[] older = "{\"format\":\"hushfeed-settings\",\"older\":true}".getBytes(StandardCharsets.UTF_8);
+            byte[] older = "{\"format\":\"larpfeed-settings\",\"older\":true}".getBytes(StandardCharsets.UTF_8);
             var provider = app.morphe.extension.tiktok.DocumentExportProvider.register(activity).contents(older);
             storedByAnOlderBuild(Settings.LOCAL_HIDDEN_CREATORS, ruleEntries(FeedRuleLimits.MAX_ENTRIES + 1));
             ShadowToast.reset();
@@ -1745,7 +1745,7 @@ public class SettingsBackupTest {
             Shadows.shadowOf(Looper.getMainLooper()).idle();
             assertTrue(provider.exists);
             assertEquals(0, provider.deleteCalls);
-            assertEquals("hushfeed-settings", new JSONObject(new String(java.nio.file.Files.readAllBytes(
+            assertEquals("larpfeed-settings", new JSONObject(new String(java.nio.file.Files.readAllBytes(
                     provider.file.toPath()), StandardCharsets.UTF_8)).getString("format"));
             Preference undo = fragment.findPreference("settings_backup_7314");
             assertFalse("an export must not create a settings Undo", undo.isEnabled());

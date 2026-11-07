@@ -1,6 +1,6 @@
 /*
- * Copyright 2026 Hushfeed contributors
- * https://github.com/SysAdminDoc/hushfeed
+ * Copyright 2026 Larpfeed contributors
+ * https://github.com/SysAdminDoc/larpfeed
  *
  * Built on icysymmetra/tiktok-patches-for-morphe (GPL-3.0).
  */
@@ -32,9 +32,9 @@ import java.util.regex.Pattern;
 /** Shows published changes locally and remembers the last version the reader dismissed. */
 public final class ReleaseNotes {
     static final String KEY = "action_release_notes";
-    public static final String PREFS_NAME = "hushfeed_release_notes";
+    public static final String PREFS_NAME = "larpfeed_release_notes";
     private static final String DISMISSED = "dismissed_version";
-    private static final String CHANGELOG_URL = "https://github.com/SysAdminDoc/hushfeed/blob/main/CHANGELOG.md";
+    private static final String CHANGELOG_URL = "https://github.com/SysAdminDoc/larpfeed/blob/main/CHANGELOG.md";
     private static final Pattern VERSION = Pattern.compile("^(\\d+)\\.(\\d+)\\.(\\d+)(\\S*)");
     private static final Pattern HEADING = Pattern.compile("(?m)^## (\\d+\\.\\d+\\.\\d+) ");
 
@@ -123,7 +123,7 @@ public final class ReleaseNotes {
      */
     private static String format(String section) {
         return section
-                .replaceAll("(?m)^## ", "Hushfeed ")
+                .replaceAll("(?m)^## ", "Larpfeed ")
                 .replaceAll("(?m)^\\* ", "• ")
                 .replace("**", "")
                 .replace("`", "");
@@ -278,7 +278,7 @@ public final class ReleaseNotes {
         return heading.find() ? heading.group(1) : null;
     }
 
-    private static final Pattern SHOWN_HEADING = Pattern.compile("(?m)^Hushfeed (\\d+\\.\\d+\\.\\d+) ");
+    private static final Pattern SHOWN_HEADING = Pattern.compile("(?m)^Larpfeed (\\d+\\.\\d+\\.\\d+) ");
 
     private static int compare(BigInteger[] left, BigInteger[] right) {
         for (int index = 0; index < left.length; index++) {

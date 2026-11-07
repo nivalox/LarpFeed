@@ -190,7 +190,7 @@ public class PhotoConversionTest {
                 assertFalse(job.waiting());
                 assertNull(MediaJobScheduler.job("photos " + post.getAid()));
                 assertFalse(photoIds().contains(post.getAid()));
-                assertNull(root.findViewWithTag("hushfeed_save_progress"));
+                assertNull(root.findViewWithTag("larpfeed_save_progress"));
                 assertEquals("Save cancelled. Nothing was saved.", ShadowToast.getTextOfLatestToast());
             }
         } finally {
@@ -229,7 +229,7 @@ public class PhotoConversionTest {
                 Shadows.shadowOf(Looper.getMainLooper()).idleFor(SaveNotice.SHEET_SETTLE_MS + 1, TimeUnit.MILLISECONDS);
                 assertFalse(photoIds().contains(post.getAid()));
                 assertNull(MediaJobScheduler.job("photos " + post.getAid()));
-                assertNull("Refused jobs must not leave a progress row", root.findViewWithTag("hushfeed_save_progress"));
+                assertNull("Refused jobs must not leave a progress row", root.findViewWithTag("larpfeed_save_progress"));
                 assertEquals("Too many saves running. Try again soon.",
                         ShadowToast.getTextOfLatestToast());
             }

@@ -633,7 +633,7 @@
   "source": [
    "patches/src/main/kotlin/app/morphe/patches/tiktok/interaction/antirecording/AllowScreenCapturePatch.kt",
    "extensions/tiktok/src/main/java/app/morphe/extension/tiktok/capture/ScreenCapture.java",
-   "tools/verification-probe/src/app/hushfeed/verification/SecurePopupProbe.java"
+   "tools/verification-probe/src/app/larpfeed/verification/SecurePopupProbe.java"
   ],
   "settings": [
    {
@@ -1611,7 +1611,7 @@
   "checks": [
    {
     "id": "live-bubble",
-    "what": "The LIVE bubble's check starts with Hushfeed's hook: with Hide the LIVE bubble on the hook answers true (skip the bubble) and logs 'Block popups: skipped the LIVE bubble', with it off it answers false. TikTok only runs that check when its server sends a bubble, so the check calls the hook directly.",
+    "what": "The LIVE bubble's check starts with Larpfeed's hook: with Hide the LIVE bubble on the hook answers true (skip the bubble) and logs 'Block popups: skipped the LIVE bubble', with it off it answers false. TikTok only runs that check when its server sends a bubble, so the check calls the hook directly.",
     "steps": [
      {
       "set": {
@@ -1942,11 +1942,11 @@
   "checks": [
    {
     "id": "manifest-label",
-    "what": "The application label and every launcher entry carry the chosen name (default Hushfeed) instead of TikTok.",
+    "what": "The application label and every launcher entry carry the chosen name (default Larpfeed) instead of TikTok.",
     "steps": [
      {
       "apk": "manifest",
-      "expect": "android:label\\(0x01010001\\)=\\\"Hushfeed\\\""
+      "expect": "android:label\\(0x01010001\\)=\\\"Larpfeed\\\""
      },
      {
       "probe": "report",
@@ -1957,7 +1957,7 @@
    },
    {
     "id": "manifest-label-option",
-    "what": "On a build patched with the app name Hush, the application label and the launcher entry say Hush, not the default Hushfeed.",
+    "what": "On a build patched with the app name Hush, the application label and the launcher entry say Hush, not the default Larpfeed.",
     "buildOptions": [
      "Change app name|appName=Hush"
     ],
@@ -1965,7 +1965,7 @@
      {
       "apk": "manifest",
       "expect": "android:label\\(0x01010001\\)=\\\"Hush\\\"",
-      "expectNot": "android:label\\(0x01010001\\)=\\\"Hushfeed\\\""
+      "expectNot": "android:label\\(0x01010001\\)=\\\"Larpfeed\\\""
      }
     ],
     "auto": true
@@ -1982,7 +1982,7 @@
      },
      {
       "shot": "app-info-label",
-      "review": "App info page: the title under the icon is the patch option's name (default Hushfeed), not TikTok. Nothing on the page is tapped."
+      "review": "App info page: the title under the icon is the patch option's name (default Larpfeed), not TikTok. Nothing on the page is tapped."
      },
      {
       "back": true
@@ -1991,7 +1991,7 @@
     "auto": false
    }
   ],
-  "notes": "The expected name is the patch option the build was made with (appName, default Hushfeed, 50 characters at most): manifest-label reads the default on a plain build, and manifest-label-option names Hush in buildOptions, so it runs only on a build patched with it (scripts/patch-for-device.ps1 -Option 'Change app name|appName=Hush'), into tiktok-<version>-options.json. The manifest check runs against the patched APK with aapt2, no device. 'Inside the app it still says TikTok' is by design: only android:label changes."
+  "notes": "The expected name is the patch option the build was made with (appName, default Larpfeed, 50 characters at most): manifest-label reads the default on a plain build, and manifest-label-option names Hush in buildOptions, so it runs only on a build patched with it (scripts/patch-for-device.ps1 -Option 'Change app name|appName=Hush'), into tiktok-<version>-options.json. The manifest check runs against the patched APK with aapt2, no device. 'Inside the app it still says TikTok' is by design: only android:label changes."
  },
  {
   "name": "Comment publish diagnostics",
@@ -2233,7 +2233,7 @@
     "auto": true
    }
   ],
-  "notes": "Known 47.1.4 limit (learned.md, 2026-09-23): the S22 test account is already served the full sort sheet with the switch off, so forcing style 2 changes nothing visible there. The log line proves the hook ran; the cut-down-to-full conversion needs an account TikTok serves the cut-down row to (Roadmap_Blocked.md 'Comment sort full-sheet proof'). The style is read through a Kotlin lazy, so every phase restarts before it opens comments. Hushfeed's own compact_comment_header hides the sort glyph, which is why the review check turns it off."
+  "notes": "Known 47.1.4 limit (learned.md, 2026-09-23): the S22 test account is already served the full sort sheet with the switch off, so forcing style 2 changes nothing visible there. The log line proves the hook ran; the cut-down-to-full conversion needs an account TikTok serves the cut-down row to (Roadmap_Blocked.md 'Comment sort full-sheet proof'). The style is read through a Kotlin lazy, so every phase restarts before it opens comments. Larpfeed's own compact_comment_header hides the sort glyph, which is why the review check turns it off."
  },
  {
   "name": "Open the comments at full height",
@@ -3080,7 +3080,7 @@
     "auto": false
    }
   ],
-  "notes": "Options: iconStyle tiktok (default), black, white-on-black, black-on-white, material-you (hushfeed_launcher_background and hushfeed_launcher_glyph colors: white on black in values, system_neutral2_700 on system_accent1_100 in values-v31, system_accent1_100 on system_neutral1_800 in values-night-v31); iconBackground an optional #RRGGBB that replaces any style's background, picture included; iconPicture an optional 432-1024 pixel square PNG (then no themed icon). The monochrome check only proves the themed layer exists. icon-style-option names Black on white in buildOptions, so it runs only on a build patched with it (scripts/patch-for-device.ps1 -Option 'Custom launcher icon|iconStyle=black-on-white'), and reads the inline vectors the style draws into the background and foreground layers: every path white behind, the note black in front. Themed icons need Android 13+ and the launcher's themed-icons switch on (Samsung One UI has it under Wallpaper and style). The App info page shows the full-color icon; the themed (wallpaper-tinted) look only shows on the home screen with the launcher's themed icons on, and the monochrome layer check covers what it draws."
+  "notes": "Options: iconStyle tiktok (default), black, white-on-black, black-on-white, material-you (larpfeed_launcher_background and larpfeed_launcher_glyph colors: white on black in values, system_neutral2_700 on system_accent1_100 in values-v31, system_accent1_100 on system_neutral1_800 in values-night-v31); iconBackground an optional #RRGGBB that replaces any style's background, picture included; iconPicture an optional 432-1024 pixel square PNG (then no themed icon). The monochrome check only proves the themed layer exists. icon-style-option names Black on white in buildOptions, so it runs only on a build patched with it (scripts/patch-for-device.ps1 -Option 'Custom launcher icon|iconStyle=black-on-white'), and reads the inline vectors the style draws into the background and foreground layers: every path white behind, the note black in front. Themed icons need Android 13+ and the launcher's themed-icons switch on (Samsung One UI has it under Wallpaper and style). The App info page shows the full-color icon; the themed (wallpaper-tinted) look only shows on the home screen with the launcher's themed icons on, and the monochrome layer check covers what it draws."
  },
  {
   "name": "Custom offline videos limit",
@@ -4460,7 +4460,7 @@
    },
    {
     "id": "gate-forced",
-    "what": "A stored override changes what TikTok reads: with favorite_reverse forced to 1 and Keep the Favorites tab on, opening the share sheet reads the gate as 1, which Hushfeed's answer records ('refused favorite_reverse').",
+    "what": "A stored override changes what TikTok reads: with favorite_reverse forced to 1 and Keep the Favorites tab on, opening the share sheet reads the gate as 1, which Larpfeed's answer records ('refused favorite_reverse').",
     "steps": [
      {
       "set": {
@@ -5244,7 +5244,7 @@
     "auto": true
    }
   ],
-  "notes": "The baseline is not asserted: whether a photo, verified, AI-labelled or LIVE item would have appeared in ten swipes is up to the For You feed, so a pass can be vacuous. Read the [FEED FILTER] lines in the export (probe report) for 'removed' counts to see the filter did work. The ads check is the most reliable because ads are served in nearly every session; if no ad is served in eight videos it is vacuous too. Keyword, creator, sound, region, language, view/like/comment/share ranges and Creator exceptions use text and numbers the probe does not expose per video, so they are not exercised; the unit tests in extensions/tiktok/src/test cover the rules. The settings rows are on Hushfeed settings > Feed filter. The restart is needed after changing a restart-flagged switch (remove_ads, hide_image, hide_ai_generated, hide_verified, hide_live). Maximum video length is soft by design: when everything one response sent would go, the video closest to the limit stays (the setting's summary says so), and 47.1.4's For You responses are often a single video, so a long one can still play. The length check reads the filter's own removals from the log (Log diagnostics on) instead of the durations on screen (2026-10-16)."
+  "notes": "The baseline is not asserted: whether a photo, verified, AI-labelled or LIVE item would have appeared in ten swipes is up to the For You feed, so a pass can be vacuous. Read the [FEED FILTER] lines in the export (probe report) for 'removed' counts to see the filter did work. The ads check is the most reliable because ads are served in nearly every session; if no ad is served in eight videos it is vacuous too. Keyword, creator, sound, region, language, view/like/comment/share ranges and Creator exceptions use text and numbers the probe does not expose per video, so they are not exercised; the unit tests in extensions/tiktok/src/test cover the rules. The settings rows are on Larpfeed settings > Feed filter. The restart is needed after changing a restart-flagged switch (remove_ads, hide_image, hide_ai_generated, hide_verified, hide_live). Maximum video length is soft by design: when everything one response sent would go, the video closest to the limit stays (the setting's summary says so), and 47.1.4's For You responses are often a single video, so a long one can still play. The length check reads the filter's own removals from the log (Log diagnostics on) instead of the durations on screen (2026-10-16)."
  },
  {
   "name": "Feed tab navigation",
@@ -5290,7 +5290,7 @@
     "key": "home_tab_opens_settings",
     "default": true,
     "type": "bool",
-    "row": "Long-press Home for Hushfeed settings"
+    "row": "Long-press Home for Larpfeed settings"
    },
    {
     "key": "inbox_tab_flips_read_receipts",
@@ -9818,7 +9818,7 @@
     "auto": true
    }
   ],
-  "notes": "Issue #156. TikTok's full sticker panel is the on-demand df_im_bootfinish module, which a patched install can't download, so patched TikTok shows its basic panel, whose Saved page has no Recently used row. The patch puts up to four of the store's newest stickers and a Recently used heading above Saved each time the page builds its rows (StickerRecents.addRow). TikTok also keeps that list in memory only and empties it the first time its sticker store is used in each process and on every account result, so the row is blank after every restart. The patch hands each new list to StickerRecents.save as a sticker goes on it (one list per account in hushfeed_sticker_recents, tied to the app version) and puts this account's list back right after the reset. The natural check is on a signed-in account: send a sticker in a comment, reopen the sticker panel and it's first under Recently used, then force-stop and reopen TikTok and it's still there. A sticker whose image links have all expired is left out."
+  "notes": "Issue #156. TikTok's full sticker panel is the on-demand df_im_bootfinish module, which a patched install can't download, so patched TikTok shows its basic panel, whose Saved page has no Recently used row. The patch puts up to four of the store's newest stickers and a Recently used heading above Saved each time the page builds its rows (StickerRecents.addRow). TikTok also keeps that list in memory only and empties it the first time its sticker store is used in each process and on every account result, so the row is blank after every restart. The patch hands each new list to StickerRecents.save as a sticker goes on it (one list per account in larpfeed_sticker_recents, tied to the app version) and puts this account's list back right after the reset. The natural check is on a signed-in account: send a sticker in a comment, reopen the sticker panel and it's first under Recently used, then force-stop and reopen TikTok and it's still there. A sticker whose image links have all expired is left out."
  },
  {
   "name": "Keep the Favorites tab",
@@ -10597,7 +10597,7 @@
      },
      {
       "tap": {
-       "text": "^(Hushfeed test account|\\+ Add bio)$"
+       "text": "^(Larpfeed test account|\\+ Add bio)$"
       }
      },
      {
@@ -10637,7 +10637,7 @@
      },
      {
       "tap": {
-       "text": "^(Hushfeed test account|\\+ Add bio)$"
+       "text": "^(Larpfeed test account|\\+ Add bio)$"
       }
      },
      {
@@ -11282,7 +11282,7 @@
   "checks": [
    {
     "id": "proxy-dialed",
-    "what": "With the proxy on and pointed at a closed port on the phone itself, the start-up reachability probe fails and Hushfeed says so (info line 'Network proxy: the ... didn't answer'); nothing leaves the phone.",
+    "what": "With the proxy on and pointed at a closed port on the phone itself, the start-up reachability probe fails and Larpfeed says so (info line 'Network proxy: the ... didn't answer'); nothing leaves the phone.",
     "steps": [
      {
       "set": {
@@ -11334,7 +11334,7 @@
     "auto": true
    }
   ],
-  "notes": "127.0.0.1 port 9 is the discard port and refuses connections, so TikTok will not load its feed while the check runs; the final step switches the proxy off and restarts. No traffic goes to a third party. The 'answered' case needs a real proxy and is owed by whoever owns one: debug line 'Network proxy: the HTTP proxy ... answered' with the switch on. Videos, LIVE and Hushfeed's own downloads bypass the proxy by design."
+  "notes": "127.0.0.1 port 9 is the discard port and refuses connections, so TikTok will not load its feed while the check runs; the final step switches the proxy off and restarts. No traffic goes to a third party. The 'answered' case needs a real proxy and is owed by whoever owns one: debug line 'Network proxy: the HTTP proxy ... answered' with the switch on. Videos, LIVE and Larpfeed's own downloads bypass the proxy by design."
  },
  {
   "name": "Network request report",
@@ -13664,14 +13664,14 @@
     "key": "home_tab_opens_settings",
     "default": true,
     "type": "bool",
-    "row": "Long-press Home for Hushfeed settings"
+    "row": "Long-press Home for Larpfeed settings"
    }
   ],
   "surface": "settings",
   "checks": [
    {
     "id": "home-page",
-    "what": "Hushfeed's settings open and the home page lists the section rows the installed patches ask for (Feed filter, Feed tabs, Downloads, Inbox, Diagnostics) and the Backup and restore and About rows.",
+    "what": "Larpfeed's settings open and the home page lists the section rows the installed patches ask for (Feed filter, Feed tabs, Downloads, Inbox, Diagnostics) and the Backup and restore and About rows.",
     "steps": [
      {
       "open": "settings"
@@ -13759,7 +13759,7 @@
    },
    {
     "id": "home-long-press",
-    "what": "Holding the Home tab opens Hushfeed's settings (home_tab_opens_settings, on by default), and the Hushfeed row in TikTok's Settings and privacy opens them too.",
+    "what": "Holding the Home tab opens Larpfeed's settings (home_tab_opens_settings, on by default), and the Larpfeed row in TikTok's Settings and privacy opens them too.",
     "steps": [
      {
       "set": {
@@ -13786,7 +13786,7 @@
      {
       "probe": "findtext",
       "extras": {
-       "text": "(?i)^hushfeed$",
+       "text": "(?i)^larpfeed$",
        "match": "regex"
       },
       "expect": "ok findtext found"
@@ -13815,7 +13815,7 @@
      },
      {
       "tap": {
-       "label": "^Hushfeed$"
+       "label": "^Larpfeed$"
       }
      },
      {
@@ -13824,7 +13824,7 @@
      {
       "probe": "findtext",
       "extras": {
-       "text": "(?i)^hushfeed$",
+       "text": "(?i)^larpfeed$",
        "match": "regex"
       },
       "expect": "ok findtext found"
@@ -13842,7 +13842,7 @@
     "auto": true
    }
   ],
-  "notes": "The probe's settings action starts the same activity the row does, so the first three checks prove the page, its sections and the registration; the two entry points a person uses (the row inside Settings and privacy and the Home long press) need the real gesture. Section rows show only when their patches' status flags are set (Section.isAvailable in TikTokPreferenceFragment.java), which makes the home page a second applied-patch proof. Labels are English. 'Hide new followers' is an Inbox row title near the top of that page. Settings and privacy is a Compose screen on 47.1.4 (SettingContainerActivity), which the probe's findtext can't see into, so the check taps the Hushfeed row through the dump and reads Hushfeed's own page (2026-10-16). Settings and privacy is a Compose page whose rows carry their words in the content description with an empty text, so its rows are tapped by label, which matches either (2026-10-16)."
+  "notes": "The probe's settings action starts the same activity the row does, so the first three checks prove the page, its sections and the registration; the two entry points a person uses (the row inside Settings and privacy and the Home long press) need the real gesture. Section rows show only when their patches' status flags are set (Section.isAvailable in TikTokPreferenceFragment.java), which makes the home page a second applied-patch proof. Labels are English. 'Hide new followers' is an Inbox row title near the top of that page. Settings and privacy is a Compose screen on 47.1.4 (SettingContainerActivity), which the probe's findtext can't see into, so the check taps the Larpfeed row through the dump and reads Larpfeed's own page (2026-10-16). Settings and privacy is a Compose page whose rows carry their words in the content description with an empty text, so its rows are tapped by label, which matches either (2026-10-16)."
  },
  {
   "name": "Share sheet tools",
@@ -14938,7 +14938,7 @@
     "auto": true
    }
   ],
-  "notes": "Needs the audit account to follow at least one account that does not follow it back (the labels are drawn from followStatus 1 and followerStatus != 1 on each list cell, FollowStatus.listLabel); if the list has none, the first check fails for want of data, not a bad patch. The runner's own tap step refuses any target that starts with \"Following\" (run-audit.ps1 $outwardWords: on someone else's profile that button unfollows), so the stat is opened with the probe findtext click instead. That is safe only on the account's own profile, which is why the steps first require the \"Profile menu\" button (present only there; 47.1.4's own profile has a pencil icon and no \"Edit profile\" button, seen 2026-10-16) and stop if it is missing. Nothing in the list is tapped. The label is a TextView of ours tagged hushfeed_follow_status, so findtext sees it. The profile-header labels \"Follows you\" and \"Doesn't follow you back\" on another creator's profile need a creator who follows or does not follow back, and are not exercised."
+  "notes": "Needs the audit account to follow at least one account that does not follow it back (the labels are drawn from followStatus 1 and followerStatus != 1 on each list cell, FollowStatus.listLabel); if the list has none, the first check fails for want of data, not a bad patch. The runner's own tap step refuses any target that starts with \"Following\" (run-audit.ps1 $outwardWords: on someone else's profile that button unfollows), so the stat is opened with the probe findtext click instead. That is safe only on the account's own profile, which is why the steps first require the \"Profile menu\" button (present only there; 47.1.4's own profile has a pencil icon and no \"Edit profile\" button, seen 2026-10-16) and stop if it is missing. Nothing in the list is tapped. The label is a TextView of ours tagged larpfeed_follow_status, so findtext sees it. The profile-header labels \"Follows you\" and \"Doesn't follow you back\" on another creator's profile need a creator who follows or does not follow back, and are not exercised."
  },
  {
   "name": "Show the progress bar",
@@ -15973,7 +15973,7 @@
       }
      },
      {
-      "open": "search:hushfeed audit"
+      "open": "search:larpfeed audit"
      },
      {
       "wait": 4000
@@ -17012,7 +17012,7 @@
    },
    {
     "id": "slide-gone",
-    "what": "Hushfeed's row on TikTok's Settings and privacy is tapped while the screen is filmed: with the switch off the clip passes through a run of frames between the two screens (the slide), with it on it jumps straight to Hushfeed's page.",
+    "what": "Larpfeed's row on TikTok's Settings and privacy is tapped while the screen is filmed: with the switch off the clip passes through a run of frames between the two screens (the slide), with it on it jumps straight to Larpfeed's page.",
     "steps": [
      {
       "animations": "on"
@@ -17050,7 +17050,7 @@
      },
      {
       "tap": {
-       "label": "^Hushfeed$"
+       "label": "^Larpfeed$"
       }
      },
      {
@@ -17097,7 +17097,7 @@
      },
      {
       "tap": {
-       "label": "^Hushfeed$"
+       "label": "^Larpfeed$"
       }
      },
      {
@@ -17114,7 +17114,7 @@
     "auto": true
    }
   ],
-  "notes": "There is no log line or state to read, since Android plays the slide, not TikTok's views. slide-gone films it instead: the runner's record step (screenrecord, then ffmpeg shrinks each frame to 54x116 grey) measures each frame against the last and counts the ones part way between the first screen and the last. A synthetic 0.3 s slide counted 14, a jump 0; the check wants 6 or more with the switch off (else inconclusive) and 3 or fewer with it on. The filmed step is the tap on Hushfeed's row in Settings and privacy, one screen of TikTok's opening another, which is the case the patch covers; the probe's settings action starts the page from the application context as a new task instead, and that launch faded the same way with the switch on and off (17 and 18 frames in between, 2026-10-16), so it isn't filmed. The setting is read each time a screen is created or paused, so no restart is needed. Swipes inside one screen follow the finger and are not touched. A phone with its animation scales at 0 (the S22's baseline) slides nothing, so the check turns them on first with an animations step and the runner puts the phone's values back afterwards; with them at 0 the switch-off half found no frames in between (2026-10-16)."
+  "notes": "There is no log line or state to read, since Android plays the slide, not TikTok's views. slide-gone films it instead: the runner's record step (screenrecord, then ffmpeg shrinks each frame to 54x116 grey) measures each frame against the last and counts the ones part way between the first screen and the last. A synthetic 0.3 s slide counted 14, a jump 0; the check wants 6 or more with the switch off (else inconclusive) and 3 or fewer with it on. The filmed step is the tap on Larpfeed's row in Settings and privacy, one screen of TikTok's opening another, which is the case the patch covers; the probe's settings action starts the page from the application context as a new task instead, and that launch faded the same way with the switch on and off (17 and 18 frames in between, 2026-10-16), so it isn't filmed. The setting is read each time a screen is created or paused, so no restart is needed. Swipes inside one screen follow the finger and are not touched. A phone with its animation scales at 0 (the S22's baseline) slides nothing, so the check turns them on first with an animations step and the runner puts the phone's values back afterwards; with them at 0 the switch-off half found no frames in between (2026-10-16)."
  },
  {
   "name": "Use non-personalized search",

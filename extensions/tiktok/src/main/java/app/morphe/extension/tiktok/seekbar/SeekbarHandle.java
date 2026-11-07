@@ -1,6 +1,6 @@
 /*
- * Copyright 2026 Hushfeed contributors
- * https://github.com/SysAdminDoc/hushfeed
+ * Copyright 2026 Larpfeed contributors
+ * https://github.com/SysAdminDoc/larpfeed
  */
 package app.morphe.extension.tiktok.seekbar;
 
@@ -21,7 +21,7 @@ import app.morphe.extension.tiktok.settings.Settings;
  * their way in, so the bar draws itself bigger and nothing replaces it.
  *
  * <p>Only rest and pause change, and only upward, so the drag style keeps TikTok's look and the
- * handle never shrinks under a finger. Turned off, or with Hushfeed paused, every value goes
+ * handle never shrinks under a finger. Turned off, or with Larpfeed paused, every value goes
  * through as TikTok wrote it; the next restyle (the next video, a pause or a drag) puts TikTok's
  * own sizes back.
  */

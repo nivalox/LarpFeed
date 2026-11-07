@@ -1,4 +1,4 @@
-# The probe answers in logcat under HushfeedProbe. The phones are shared, so the buffer is never
+# The probe answers in logcat under LarpfeedProbe. The phones are shared, so the buffer is never
 # cleared: a unique marker line under the same tag starts each broadcast's answer, and only the
 # lines after its last copy are read.
 #
@@ -29,12 +29,12 @@ function Invoke-ProbeAction {
         [string]$Adb = 'adb'
     )
     $target = Get-VerificationProbeProfile
-    $marker = "hushfeed-probe-$([guid]::NewGuid().ToString('N'))"
+    $marker = "larpfeed-probe-$([guid]::NewGuid().ToString('N'))"
     Assert-DeviceLease -Lease $Lease -Serial $Serial
     & $Adb -s $Serial shell log -t $target.LogTag $marker
     if ($LASTEXITCODE -ne 0) { throw "Could not mark logcat on $Serial before the $Action probe action." }
     Assert-DeviceLease -Lease $Lease -Serial $Serial
-    & $Adb -s $Serial shell am broadcast -a app.hushfeed.verification.PROBE -p $target.Package `
+    & $Adb -s $Serial shell am broadcast -a app.larpfeed.verification.PROBE -p $target.Package `
         -e action $Action @Extras | Out-Null
     Start-Sleep -Milliseconds $WaitMs
     Assert-DeviceLease -Lease $Lease -Serial $Serial

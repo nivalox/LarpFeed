@@ -58,7 +58,7 @@ import java.util.List;
 /**
  * Network proxy: what the settings accept, the rule TTNet's engine builder gets, the selector the
  * JVM gets, the relay both use to sign in, the start-up check, and that it all stays out of the way
- * while the switch is off, while Hushfeed is paused, before the extension has a context and on a
+ * while the switch is off, while Larpfeed is paused, before the extension has a context and on a
  * bundle without the patch. The user name and password never appear in anything this writes.
  */
 @RunWith(RobolectricTestRunner.class)
@@ -343,7 +343,7 @@ public class NetworkProxyTest {
         assertTrue(joined.contains("proxy: on, SOCKS5"));
         assertTrue(joined.contains("tiktok_api_and_java_connections: through the proxy"));
         assertTrue(joined.contains("tiktok_native_player: direct"));
-        assertTrue(joined.contains("hushfeed_saves: direct, to a checked public address"));
+        assertTrue(joined.contains("larpfeed_saves: direct, to a checked public address"));
         assertTrue(joined.contains("never the proxy selector"));
         assertTrue(joined.contains("short_link_expansion: direct, same checks, switch off"));
         assertTrue(joined.contains("proxy_sign_in: through a relay on this phone"));

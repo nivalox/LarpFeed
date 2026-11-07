@@ -170,7 +170,7 @@ function Resolve-DesktopCli {
     .SYNOPSIS
         The Morphe desktop CLI jar, or $null, or a throw when the caller cannot do without it.
     .DESCRIPTION
-        One search order for both callers: -Explicit, HUSHFEED_DESKTOP_JAR, HUSHFEED_WORKDIR,
+        One search order for both callers: -Explicit, LARPFEED_DESKTOP_JAR, LARPFEED_WORKDIR,
         then the repository's own build/morphe-tools. Newest by write time rather than by name,
         because the jar ships under its version and sorting those as text puts 1.9.0 above
         1.15.0. -Required turns "nothing found" into a throw naming what to set, which is what
@@ -184,11 +184,11 @@ function Resolve-DesktopCli {
     } elseif ($Explicit) {
         # Named and not there: say so rather than quietly searching somewhere else.
         throw "No Morphe desktop CLI at the path given: $Explicit"
-    } elseif ($env:HUSHFEED_DESKTOP_JAR -and
-            (Test-Path -LiteralPath $env:HUSHFEED_DESKTOP_JAR -PathType Leaf)) {
-        $found = [System.IO.Path]::GetFullPath($env:HUSHFEED_DESKTOP_JAR)
+    } elseif ($env:LARPFEED_DESKTOP_JAR -and
+            (Test-Path -LiteralPath $env:LARPFEED_DESKTOP_JAR -PathType Leaf)) {
+        $found = [System.IO.Path]::GetFullPath($env:LARPFEED_DESKTOP_JAR)
     } else {
-        $directories = @($env:HUSHFEED_WORKDIR)
+        $directories = @($env:LARPFEED_WORKDIR)
         if ($Root) { $directories += (Join-Path $Root 'build/morphe-tools') }
         foreach ($directory in $directories) {
             if (-not $directory -or -not (Test-Path -LiteralPath $directory -PathType Container)) { continue }
@@ -200,8 +200,8 @@ function Resolve-DesktopCli {
     }
 
     if (-not $found -and $Required) {
-        throw ('No Morphe desktop CLI. Pass -DesktopJar, or set HUSHFEED_DESKTOP_JAR or ' +
-            'HUSHFEED_WORKDIR, or put the jar in build/morphe-tools.')
+        throw ('No Morphe desktop CLI. Pass -DesktopJar, or set LARPFEED_DESKTOP_JAR or ' +
+            'LARPFEED_WORKDIR, or put the jar in build/morphe-tools.')
     }
     return $found
 }

@@ -1,6 +1,6 @@
 /*
- * Copyright 2026 Hushfeed contributors
- * https://github.com/SysAdminDoc/hushfeed
+ * Copyright 2026 Larpfeed contributors
+ * https://github.com/SysAdminDoc/larpfeed
  */
 package app.morphe.patches.tiktok.misc.proxy
 
@@ -122,9 +122,9 @@ internal fun proxyInstallIndex(method: Method): Int {
 val networkProxyPatch = bytecodePatch(
     name = "Network proxy",
     description = "Sends TikTok's feed, search and comments through a proxy server you set " +
-        "up. Videos and LIVEs still load directly, and so do Hushfeed's own saves and short-link " +
+        "up. Videos and LIVEs still load directly, and so do Larpfeed's own saves and short-link " +
         "lookups. HTTP and SOCKS5 both work, with or without a password. Other apps aren't " +
-        "affected. Starts off. Turn it on in Hushfeed settings > " +
+        "affected. Starts off. Turn it on in Larpfeed settings > " +
         "Region, then restart TikTok.",
 ) {
     category("Settings")

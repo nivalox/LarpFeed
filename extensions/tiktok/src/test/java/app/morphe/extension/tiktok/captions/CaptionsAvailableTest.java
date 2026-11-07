@@ -1,6 +1,6 @@
 /*
- * Copyright 2026 Hushfeed contributors
- * https://github.com/SysAdminDoc/hushfeed
+ * Copyright 2026 Larpfeed contributors
+ * https://github.com/SysAdminDoc/larpfeed
  */
 package app.morphe.extension.tiktok.captions;
 
@@ -100,7 +100,7 @@ public class CaptionsAvailableTest {
     }
 
     @Test
-    public void aPausedHushfeedLeavesTikTokAlone() {
+    public void aPausedLarpfeedLeavesTikTokAlone() {
         Settings.KEEP_CAPTIONS_AVAILABLE.save(true);
         PausedProcess.set(true);
         assertEquals(0, CaptionsAvailable.captionsRow(0));

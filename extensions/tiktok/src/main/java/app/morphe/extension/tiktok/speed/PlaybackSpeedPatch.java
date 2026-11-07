@@ -433,7 +433,7 @@ public final class PlaybackSpeedPatch {
 
     /**
      * The speed the row under Speed picks for the hold gesture, or NaN when TikTok's own stands:
-     * Hushfeed paused, or a value the player would refuse.
+     * Larpfeed paused, or a value the player would refuse.
      */
     static float chosenHoldSpeed() {
         if (Setting.isPaused()) return Float.NaN;

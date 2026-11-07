@@ -1,6 +1,6 @@
 /*
- * Copyright 2026 Hushfeed contributors
- * https://github.com/SysAdminDoc/hushfeed
+ * Copyright 2026 Larpfeed contributors
+ * https://github.com/SysAdminDoc/larpfeed
  */
 package app.morphe.patches.tiktok.profile
 
@@ -33,7 +33,7 @@ private const val TEXT_VIEW = "Landroid/widget/TextView;"
 private const val STRING = "Ljava/lang/String;"
 private const val TEXT = "Ljava/lang/CharSequence;"
 private const val NUMBER = "Ljava/lang/Number;"
-private const val BRIDGE = "hushfeedLocalProfileCount"
+private const val BRIDGE = "larpfeedLocalProfileCount"
 private const val COUNTS = "Local profile counts"
 
 internal enum class ProfileCountMetric(val component: String, val protocol: String, val sites: Int) {

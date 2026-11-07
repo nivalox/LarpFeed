@@ -1,6 +1,6 @@
 /*
- * Copyright 2026 Hushfeed contributors
- * https://github.com/SysAdminDoc/hushfeed
+ * Copyright 2026 Larpfeed contributors
+ * https://github.com/SysAdminDoc/larpfeed
  *
  * Built on icysymmetra/tiktok-patches-for-morphe (GPL-3.0).
  */
@@ -47,7 +47,7 @@ import org.robolectric.annotation.Config;
 @Config(manifest = Config.NONE, sdk = 29)
 public class MediaCacheRecoveryTest {
     private static final Uri COLLECTION = Uri.parse("content://media/external_primary/downloads");
-    private static final String FOLDER = "Download/Hushfeed";
+    private static final String FOLDER = "Download/Larpfeed";
 
     private Context context;
 
@@ -94,10 +94,10 @@ public class MediaCacheRecoveryTest {
         // A token from before the folder was recorded cannot scope itself, so it takes every
         // folder. A pending row is visible only to the app that owns it from API 29, so there is
         // nobody else's here to delete.
-        FakeMediaProvider.add(1L, "video.mp4", 1, "Download/Hushfeed");
-        FakeMediaProvider.add(2L, "video.mp4", 1, "Movies/Hushfeed");
-        FakeMediaProvider.add(3L, "video.mp4", 0, "Download/Hushfeed");
-        FakeMediaProvider.add(4L, "other.mp4", 1, "Download/Hushfeed");
+        FakeMediaProvider.add(1L, "video.mp4", 1, "Download/Larpfeed");
+        FakeMediaProvider.add(2L, "video.mp4", 1, "Movies/Larpfeed");
+        FakeMediaProvider.add(3L, "video.mp4", 0, "Download/Larpfeed");
+        FakeMediaProvider.add(4L, "other.mp4", 1, "Download/Larpfeed");
 
         reconcileStale(legacyToken("video.mp4"));
 
@@ -107,8 +107,8 @@ public class MediaCacheRecoveryTest {
 
     @Test
     public void aTokenThatNamesAFolderLeavesTheOtherFoldersAlone() throws Exception {
-        FakeMediaProvider.add(1L, "video.mp4", 1, "Download/Hushfeed/");
-        FakeMediaProvider.add(2L, "video.mp4", 1, "Movies/Hushfeed/");
+        FakeMediaProvider.add(1L, "video.mp4", 1, "Download/Larpfeed/");
+        FakeMediaProvider.add(2L, "video.mp4", 1, "Movies/Larpfeed/");
 
         reconcileStaleToken("video.mp4", FOLDER);
 
@@ -221,7 +221,7 @@ public class MediaCacheRecoveryTest {
      * The reader gets the name they asked for, not the placeholder the row went in under.
      *
      * <p>This is the half of the placeholder that can reach a person: a publish that forgets to
-     * put the name back leaves a file in the gallery called hushfeed-pending-1a2b3c.mp4.
+     * put the name back leaves a file in the gallery called larpfeed-pending-1a2b3c.mp4.
      */
     @Test
     public void thePublishedFileCarriesTheNameTheReaderAskedFor() throws Exception {
@@ -229,7 +229,7 @@ public class MediaCacheRecoveryTest {
         Files.write(source.toPath(), "video".getBytes(StandardCharsets.UTF_8));
 
         String saved = MediaFileWriter.publish(
-                context, source, "video.mp4", "video/mp4", "Download/Hushfeed", true);
+                context, source, "video.mp4", "video/mp4", "Download/Larpfeed", true);
 
         assertEquals("video.mp4", saved);
         assertEquals("video.mp4", FakeMediaProvider.nameOf(100L));
@@ -244,12 +244,12 @@ public class MediaCacheRecoveryTest {
      */
     @Test
     public void aNameAlreadyTakenIsReportedAsWhatItBecame() throws Exception {
-        FakeMediaProvider.add(1L, "video.mp4", 0, "Download/Hushfeed/");
+        FakeMediaProvider.add(1L, "video.mp4", 0, "Download/Larpfeed/");
         File source = new File(context.getCacheDir(), "source.mp4");
         Files.write(source.toPath(), "video".getBytes(StandardCharsets.UTF_8));
 
         String saved = MediaFileWriter.publish(
-                context, source, "video.mp4", "video/mp4", "Download/Hushfeed", true);
+                context, source, "video.mp4", "video/mp4", "Download/Larpfeed", true);
 
         assertEquals("video (1).mp4", saved);
     }

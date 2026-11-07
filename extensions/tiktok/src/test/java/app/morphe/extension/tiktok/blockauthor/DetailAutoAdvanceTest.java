@@ -86,7 +86,7 @@ public class DetailAutoAdvanceTest {
         Settings.AUTO_ADVANCE.save(true);
         PausedProcess.set(true);
         ended("clip");
-        assertEquals("Pause Hushfeed still moved the pager", 0, pager.advances);
+        assertEquals("Pause Larpfeed still moved the pager", 0, pager.advances);
     }
 
     @Test public void anEndFromAnotherVideoMovesNothing() {

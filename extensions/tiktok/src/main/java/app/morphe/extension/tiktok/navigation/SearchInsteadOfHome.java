@@ -1,6 +1,6 @@
 /*
- * Copyright 2026 Hushfeed contributors
- * https://github.com/SysAdminDoc/hushfeed
+ * Copyright 2026 Larpfeed contributors
+ * https://github.com/SysAdminDoc/larpfeed
  */
 package app.morphe.extension.tiktok.navigation;
 
@@ -54,7 +54,7 @@ import app.morphe.extension.tiktok.settings.SettingsStatus;
  * ({@link StartPage#coldStartTag}).
  *
  * <p>The tap is taken on the tab's release. The press itself still reaches TikTok's view, so the
- * long press that opens Hushfeed's settings keeps working, and a release after a long press is
+ * long press that opens Larpfeed's settings keeps working, and a release after a long press is
  * left to end the press as before. A screen reader's double tap is a click action rather than a
  * touch, so the tab's accessibility delegate answers it too.
  *
@@ -182,7 +182,7 @@ public final class SearchInsteadOfHome {
     /** Whether the press was a long one that a long press listener has already answered. */
     private static boolean heldDown(View view, MotionEvent event) {
         if (longPressAt >= event.getDownTime()) return true;
-        // TikTok's own long press, on a build that gives Home one, which Hushfeed leaves alone.
+        // TikTok's own long press, on a build that gives Home one, which Larpfeed leaves alone.
         return view.isLongClickable() && !HomeTabSettingsShortcut.holds(view)
                 && event.getEventTime() - event.getDownTime() >= ViewConfiguration.getLongPressTimeout();
     }

@@ -1,6 +1,6 @@
 /*
- * Copyright 2026 Hushfeed contributors
- * https://github.com/SysAdminDoc/hushfeed
+ * Copyright 2026 Larpfeed contributors
+ * https://github.com/SysAdminDoc/larpfeed
  */
 package app.morphe.patches.tiktok.interaction.haptics
 
@@ -59,7 +59,7 @@ internal val LONG_CLICKS = mapOf(
 val turnOffHapticsPatch = bytecodePatch(
     name = "Turn off haptics",
     description = "Stops the little vibrations TikTok makes when you tap or hold things. Your " +
-        "keyboard and your phone's own vibrations stay. Starts off. Turn it on in Hushfeed " +
+        "keyboard and your phone's own vibrations stay. Starts off. Turn it on in Larpfeed " +
         "settings > App.",
 ) {
     category("Interaction")

@@ -1,6 +1,6 @@
 /*
- * Copyright 2026 Hushfeed contributors
- * https://github.com/SysAdminDoc/hushfeed
+ * Copyright 2026 Larpfeed contributors
+ * https://github.com/SysAdminDoc/larpfeed
  */
 package app.morphe.patches.tiktok.interaction.transitions
 
@@ -53,7 +53,7 @@ val turnOffScreenTransitionsPatch = bytecodePatch(
     name = "Turn off screen transitions",
     description = "Opens and closes TikTok's screens without the sliding animation, so moving " +
         "around feels quicker. Swipes still follow your finger. Starts off. Turn it on in " +
-        "Hushfeed settings > App.",
+        "Larpfeed settings > App.",
 ) {
     category("Interface")
     dependsOn(settingsPatch, sharedExtensionPatch)

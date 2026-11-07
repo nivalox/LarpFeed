@@ -1,6 +1,6 @@
 /*
- * Copyright 2026 Hushfeed contributors
- * https://github.com/SysAdminDoc/hushfeed
+ * Copyright 2026 Larpfeed contributors
+ * https://github.com/SysAdminDoc/larpfeed
  */
 package app.morphe.extension.tiktok.inbox;
 
@@ -22,11 +22,11 @@ import app.morphe.extension.tiktok.SignedInUser;
  * database that holds the chats is encrypted with a key kept in the Android keystore, so it
  * can't be read from here. TikTok does hand each chat to {@code Conversation.setCoreInfo} when
  * it loads the chat into memory, and the patch calls {@link #seen} from there. The id and the
- * name of every group that goes by are kept, per account, in a small file of Hushfeed's own.
+ * name of every group that goes by are kept, per account, in a small file of Larpfeed's own.
  * A group that was never loaded since this was installed turns up once the Inbox has been open.
  */
 public final class GroupChats {
-    public static final String PREFS_NAME = "hushfeed_group_chats";
+    public static final String PREFS_NAME = "larpfeed_group_chats";
     private static final char SEPARATOR = '\t';
 
     /** What was last written for each account and name, so an unchanged group costs no disk write. */

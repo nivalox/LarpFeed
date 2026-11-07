@@ -59,7 +59,7 @@ public class UndoRowTest {
                 .getDeclaredMethod("failureMessage", int.class, Exception.class);
         message.setAccessible(true);
 
-        Exception missing = new java.io.FileNotFoundException("hushfeed-settings-undo.json");
+        Exception missing = new java.io.FileNotFoundException("larpfeed-settings-undo.json");
         assertTrue("an empty undo reads as a breakage",
                 "Nothing to undo yet.".equals(message.invoke(null, UNDO, missing)));
         // A reset that really failed still says so, as a reset rather than a restore.
@@ -117,6 +117,6 @@ public class UndoRowTest {
     }
 
     private File undoFile() {
-        return new File(Utils.getContext().getFilesDir(), "hushfeed-settings-undo.json");
+        return new File(Utils.getContext().getFilesDir(), "larpfeed-settings-undo.json");
     }
 }

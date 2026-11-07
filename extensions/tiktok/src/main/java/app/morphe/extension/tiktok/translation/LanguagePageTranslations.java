@@ -1,6 +1,6 @@
 /*
- * Copyright 2026 Hushfeed contributors
- * https://github.com/SysAdminDoc/hushfeed
+ * Copyright 2026 Larpfeed contributors
+ * https://github.com/SysAdminDoc/larpfeed
  */
 package app.morphe.extension.tiktok.translation;
 
@@ -16,7 +16,7 @@ import app.morphe.extension.tiktok.settings.Settings;
  * heading, Always translate, Translate into and Don't translate) only when two App AB values allow
  * it: {@code feed_translation_reverse} must not be 1 and {@code pure_feed_reverse} must be 0. The
  * server sets those per account, so a logged-out phone can get the rows and the same phone loses
- * them once an account that is in either experiment signs in. Nothing Hushfeed hooks decides it.
+ * them once an account that is in either experiment signs in. Nothing Larpfeed hooks decides it.
  * The patch sends both answers through {@link #hidden} as the page reads them.
  *
  * <p>{@code feed_translation_reverse} at 1 also takes translation off the videos: See translation
@@ -24,7 +24,7 @@ import app.morphe.extension.tiktok.settings.Settings;
  * give up. TikTok reads it once per process and keeps the answer, so the patch sends that one read
  * through {@link #feedReverse} and the switch needs a restart for the videos. {@code
  * pure_feed_reverse} gates much more than translation and stays TikTok's everywhere but the
- * Language page. With the switch off, and while Hushfeed is paused, TikTok's answers stand.
+ * Language page. With the switch off, and while Larpfeed is paused, TikTok's answers stand.
  */
 @SuppressWarnings("unused")
 public final class LanguagePageTranslations {

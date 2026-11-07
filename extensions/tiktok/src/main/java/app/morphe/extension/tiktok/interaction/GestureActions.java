@@ -1,6 +1,6 @@
 /*
- * Copyright 2026 Hushfeed contributors
- * https://github.com/SysAdminDoc/hushfeed
+ * Copyright 2026 Larpfeed contributors
+ * https://github.com/SysAdminDoc/larpfeed
  *
  * Built on icysymmetra/tiktok-patches-for-morphe (GPL-3.0).
  */
@@ -129,7 +129,7 @@ public final class GestureActions {
     private static boolean answeredTap;
 
     /**
-     * The last double tap Hushfeed took: the down time of the event it was handed and when it ran,
+     * The last double tap Larpfeed took: the down time of the event it was handed and when it ran,
      * on the uptime clock touch events use. Android's gesture detector still times a long press
      * from a double tap's second touch, and so do TikTok's own timers, so a finger left down a
      * moment too long also got TikTok's long press, and its share panel opened over the comments
@@ -148,7 +148,7 @@ public final class GestureActions {
 
     /**
      * Whether a long press whose touch went down at {@code downTime} is the second touch of a
-     * double tap Hushfeed took. The detector hands the tap either touch's down, and either went
+     * double tap Larpfeed took. The detector hands the tap either touch's down, and either went
      * down before the tap ran, so a touch that went down in between is the second one. A new
      * touch goes down after.
      */
@@ -219,7 +219,7 @@ public final class GestureActions {
      * <p>Not by the playing video's id. That follows the player's progress, which names the new
      * video only once it starts playing, so right after a swipe it still named the one before and
      * the press went to that video's button: its comments opened, its "restricted" message showed,
-     * or with no button bound to it Hushfeed's toast did (#63). The id now only breaks a tie.
+     * or with no button bound to it Larpfeed's toast did (#63). The id now only breaks a tie.
      */
     static void openOnScreenComments() {
         String playing = Reflect.string(CurrentVideoAuthor.getAweme(), "getAid", "aid");
@@ -237,7 +237,7 @@ public final class GestureActions {
         return !takesLongPress(Settings.LONG_PRESS_ACTION.get());
     }
 
-    /** Whether this Long press choice gives the press to an action of Hushfeed's, not TikTok's. */
+    /** Whether this Long press choice gives the press to an action of Larpfeed's, not TikTok's. */
     public static boolean takesLongPress(String action) {
         return "nothing".equals(action) || "comments".equals(action) || "like".equals(action)
                 || "like_toggle".equals(action) || "original_sound".equals(action) || "copy_link".equals(action)
@@ -304,7 +304,7 @@ public final class GestureActions {
 
     /**
      * Whether Only on the sides of the video hands a press in this third back to TikTok: the
-     * switch is on, the Long press choice is one Hushfeed takes, and the press is in the middle.
+     * switch is on, the Long press choice is one Larpfeed takes, and the press is in the middle.
      * A press with no known position keeps today's behavior and runs the choice.
      */
     private static boolean leavesPressToTikTok(int side) {
@@ -315,7 +315,7 @@ public final class GestureActions {
     /**
      * Runs before TikTok's own long press handling. Returning true swallows the gesture,
      * which is what keeps the 2x hold and the quick share sheet from also firing. A double tap
-     * Hushfeed took keeps its second touch: the press is swallowed and nothing else runs.
+     * Larpfeed took keeps its second touch: the press is swallowed and nothing else runs.
      */
     public static boolean onLongPress(MotionEvent event) {
         if (event == null ? isTakenDoubleTap() : isTakenDoubleTap(event.getDownTime())) return true;
@@ -345,7 +345,7 @@ public final class GestureActions {
 
     /**
      * What a gesture set to {@code action} does, for Double tap and Long press alike. True when
-     * the gesture was Hushfeed's; false leaves it to TikTok, which is what its own choice asks for
+     * the gesture was Larpfeed's; false leaves it to TikTok, which is what its own choice asks for
      * and what a value this build doesn't know gets, as a backup from a newer build can carry.
      */
     static boolean runAction(String action) {

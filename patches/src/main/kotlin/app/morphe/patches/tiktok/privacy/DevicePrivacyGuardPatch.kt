@@ -1,6 +1,6 @@
 /*
- * Copyright 2026 Hushfeed contributors
- * https://github.com/SysAdminDoc/hushfeed
+ * Copyright 2026 Larpfeed contributors
+ * https://github.com/SysAdminDoc/larpfeed
  */
 package app.morphe.patches.tiktok.privacy
 
@@ -198,7 +198,7 @@ val devicePrivacyGuardPatch = bytecodePatch(
     description = "Stops TikTok reading what you copied and gives it a blank advertising ID. " +
         "Can also hide a VPN connection and root status with details about root tools, " +
         "and give TikTok a new device identity. " +
-        "Each switch starts off in Hushfeed settings > Privacy. Changing Hide root needs a restart.",
+        "Each switch starts off in Larpfeed settings > Privacy. Changing Hide root needs a restart.",
 ) {
     category("Privacy")
     dependsOn(settingsPatch, sharedExtensionPatch)

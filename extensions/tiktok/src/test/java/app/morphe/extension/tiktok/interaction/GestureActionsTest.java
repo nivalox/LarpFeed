@@ -300,7 +300,7 @@ public class GestureActionsTest {
             for (String value : entryValues(screen, "double_tap_action")) {
                 Settings.DOUBLE_TAP_ACTION.save(value);
                 assertEquals(value, !"default".equals(value), GestureActions.onDoubleTap());
-                assertEquals(value + " is Hushfeed's on one gesture and TikTok's on the other",
+                assertEquals(value + " is Larpfeed's on one gesture and TikTok's on the other",
                         GestureActions.takesLongPress(value), !"default".equals(value));
                 org.robolectric.Shadows.shadowOf(android.os.Looper.getMainLooper()).idle();
             }
@@ -437,7 +437,7 @@ public class GestureActionsTest {
 
     /**
      * #63: a finger left down on a double tap's second touch got TikTok's long press as well, and
-     * its share panel opened over the comments the tap had opened. A tap Hushfeed takes keeps its
+     * its share panel opened over the comments the tap had opened. A tap Larpfeed takes keeps its
      * touch, on the detector's long press and the native timer's alike.
      */
     @Test public void aTakenDoubleTapKeepsItsSecondTouchFromTheLongPress() {
@@ -518,7 +518,7 @@ public class GestureActionsTest {
             assertEquals("every value needs a label to pick it by",
                     choice.getEntryValues().length, choice.getEntries().length);
             assertEquals(L10n.t("Like the video"), String.valueOf(choice.getEntries()[2]));
-            assertTrue("a like is Hushfeed's press, not TikTok's hold", GestureActions.takesLongPress("like"));
+            assertTrue("a like is Larpfeed's press, not TikTok's hold", GestureActions.takesLongPress("like"));
             // The edge seek rides on the same patch, so its two controls come with it.
             assertNotNull(screen.findPreference("edge_seek"));
             assertNotNull(screen.findPreference("edge_seek_seconds"));
@@ -571,7 +571,7 @@ public class GestureActionsTest {
     }
 
     /**
-     * Save the frame is Hushfeed's press, so TikTok's hold doesn't start under it, and it goes to
+     * Save the frame is Larpfeed's press, so TikTok's hold doesn't start under it, and it goes to
      * the frame saver, which says so when the screen holds no video to read.
      */
     @Test public void longPressSaveFrameTakesThePressAndSaysWhenThereIsNoVideo() {
@@ -596,7 +596,7 @@ public class GestureActionsTest {
         }
     }
 
-    /** Save the cover is Hushfeed's press too, and says so when the post on screen has no cover. */
+    /** Save the cover is Larpfeed's press too, and says so when the post on screen has no cover. */
     @Test public void longPressSaveCoverTakesThePressAndSaysWhenThereIsNoCover() {
         try (var controller = Robolectric.buildActivity(android.app.Activity.class).setup().visible()) {
             var activity = controller.get();

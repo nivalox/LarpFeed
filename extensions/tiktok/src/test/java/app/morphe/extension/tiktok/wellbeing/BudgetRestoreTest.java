@@ -43,7 +43,7 @@ public class BudgetRestoreTest {
         SessionBudget.awaitWritesForTests();
         for (Setting<?> setting : Setting.allLoadedSettings()) setting.resetToDefault();
         FeatureGateLabStore.resetAllLabData();
-        new AtomicFile(new File(Utils.getContext().getFilesDir(), "hushfeed-settings-operation.json")).delete();
+        new AtomicFile(new File(Utils.getContext().getFilesDir(), "larpfeed-settings-operation.json")).delete();
         SettingsOperationJournal.consumeRecoveryNotice();
         now.set(at(2026, Calendar.SEPTEMBER, 7, 21, 0));
         SessionBudget.setClockForTests(now::get);
@@ -224,7 +224,7 @@ public class BudgetRestoreTest {
             SettingsOperationJournal.failCommittedDeletesForTests(false);
         }
         assertTrue("no journal was left behind, so this checks nothing",
-                new File(Utils.getContext().getFilesDir(), "hushfeed-settings-operation.json").isFile());
+                new File(Utils.getContext().getFilesDir(), "larpfeed-settings-operation.json").isFile());
 
         // What the next change, or the next start, does first.
         SettingsOperationJournal.acquire(Utils.getContext()).complete();

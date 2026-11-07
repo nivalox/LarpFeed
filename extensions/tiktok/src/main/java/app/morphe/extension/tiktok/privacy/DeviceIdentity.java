@@ -1,6 +1,6 @@
 /*
- * Copyright 2026 Hushfeed contributors
- * https://github.com/SysAdminDoc/hushfeed
+ * Copyright 2026 Larpfeed contributors
+ * https://github.com/SysAdminDoc/larpfeed
  */
 package app.morphe.extension.tiktok.privacy;
 
@@ -42,16 +42,16 @@ import app.morphe.extension.shared.settings.preference.LogBufferManager;
  * <p>The row arms it, and the wipe runs at the next start, first thing in the application's
  * attachBaseContext, before TikTok has opened any of the two dozen files that hold its device id.
  * TikTok's other processes are ended first, and one that starts during the wipe ends itself before
- * TikTok's code runs, so none of them reads an old id or writes one back. Hushfeed's own
+ * TikTok's code runs, so none of them reads an old id or writes one back. Larpfeed's own
  * files stay: its settings, its save records, its seen-video history and anything else named for
  * it.
  *
- * <p>The identity lives in its own preferences file, out of Hushfeed's settings, so an exported
+ * <p>The identity lives in its own preferences file, out of Larpfeed's settings, so an exported
  * backup never carries it to another phone and a settings reset never drops it.
  */
 public final class DeviceIdentity {
     /** Kept through TikTok's launch-crash cleanup, which would hand TikTok the phone's own ids. */
-    public static final String PREFERENCES = "hushfeed_device_identity";
+    public static final String PREFERENCES = "larpfeed_device_identity";
     static final String ARMED_KEY = "armed";
     static final String ANDROID_ID_KEY = "android_id";
     static final String ADVERTISING_ID_KEY = "advertising_id";
@@ -62,7 +62,7 @@ public final class DeviceIdentity {
     static final String LAST_WIPE_KEY = "last_wipe";
     static final String GAVE_UP_KEY = "gave_up";
     /** In TikTok's data folder for as long as a wipe runs, under a name the wipe keeps. */
-    static final String WIPING_MARKER = "hushfeed_identity_wiping";
+    static final String WIPING_MARKER = "larpfeed_identity_wiping";
     /**
      * How many starts an armed wipe gets. It stays armed until it has finished, so that a start
      * that dies halfway finishes on the next one. Without a limit a step that fails every time
@@ -71,12 +71,12 @@ public final class DeviceIdentity {
     static final int MOST_TRIES = 3;
 
     /**
-     * The prefixes Hushfeed's own files, preferences and databases go by, which the wipe keeps.
-     * The seen-video history's database is the one not named for Hushfeed.
+     * The prefixes Larpfeed's own files, preferences and databases go by, which the wipe keeps.
+     * The seen-video history's database is the one not named for Larpfeed.
      */
     private static final String[] KEPT_PREFIXES =
-            {"morphe", "hushfeed", "metra", "feature-gate-lab", "seen_videos"};
-    /** The directories of TikTok's data that may hold a Hushfeed file next to TikTok's own. */
+            {"morphe", "larpfeed", "metra", "feature-gate-lab", "seen_videos"};
+    /** The directories of TikTok's data that may hold a Larpfeed file next to TikTok's own. */
     private static final String[] SHARED_DIRECTORIES =
             {"shared_prefs", "files", "cache", "no_backup", "databases"};
     /** Left alone: the native library link Android owns, and compiled code that holds no data. */
@@ -128,7 +128,7 @@ public final class DeviceIdentity {
     /**
      * Runs first in the host application's attachBaseContext, in every process: wipes TikTok's
      * data for a new identity when one is armed and this is the main process, then keeps the
-     * identity at hand for the reads that follow, which come before Hushfeed's settings exist.
+     * identity at hand for the reads that follow, which come before Larpfeed's settings exist.
      */
     public static void start(Context base) {
         try {
@@ -353,9 +353,9 @@ public final class DeviceIdentity {
     }
 
     /**
-     * Deletes what [root] holds, Hushfeed's own entries aside: everything in it except the native
-     * library link and compiled code, and in the five directories Hushfeed shares with TikTok,
-     * everything not named for Hushfeed. Links are removed, never followed. Returns the number of
+     * Deletes what [root] holds, Larpfeed's own entries aside: everything in it except the native
+     * library link and compiled code, and in the five directories Larpfeed shares with TikTok,
+     * everything not named for Larpfeed. Links are removed, never followed. Returns the number of
      * files removed.
      */
     static int wipe(File root) {

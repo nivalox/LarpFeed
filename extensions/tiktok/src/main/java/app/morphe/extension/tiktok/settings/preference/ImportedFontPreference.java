@@ -1,6 +1,6 @@
 /*
- * Copyright 2026 Hushfeed contributors
- * https://github.com/SysAdminDoc/hushfeed
+ * Copyright 2026 Larpfeed contributors
+ * https://github.com/SysAdminDoc/larpfeed
  */
 package app.morphe.extension.tiktok.settings.preference;
 
@@ -42,7 +42,7 @@ public final class ImportedFontPreference extends Preference {
     static final String PICK_KEY = "action_import_font";
     static final String REMOVE_KEY = "action_remove_imported_font";
     /** What the restart row counts for a font file changed while the switch is on. */
-    static final String RESTART_KEY = "hushfeed_imported_font_file";
+    static final String RESTART_KEY = "larpfeed_imported_font_file";
 
     private static final AtomicBoolean BUSY = new AtomicBoolean();
     private static final CopyOnWriteArrayList<WeakReference<ImportedFontPreference>> ROWS =

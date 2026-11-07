@@ -818,7 +818,7 @@ public class AutomaticClearDisplayTest {
     }
 
     /**
-     * A clear display the user chose is theirs, even where it isn't remembered: while Hushfeed
+     * A clear display the user chose is theirs, even where it isn't remembered: while Larpfeed
      * is paused TikTok's own clear mode is not saved, and switching nothing on or off must not
      * bring the controls back over it.
      */

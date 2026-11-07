@@ -6,7 +6,7 @@
     Runs from .git/hooks/pre-push (scripts/install-hooks.ps1 writes it). Reads git's ref lines on
     stdin and refuses a push whose new commits name an AI tool as author, committer or co-author,
     or whose added lines carry a device serial or a home folder path. Builds and tests belong to
-    the work and to scripts/release/release.ps1, not to a push. Set HUSHFEED_SKIP_PRE_PUSH=1 to
+    the work and to scripts/release/release.ps1, not to a push. Set LARPFEED_SKIP_PRE_PUSH=1 to
     push anyway.
 #>
 param(
@@ -15,7 +15,7 @@ param(
 )
 
 $ErrorActionPreference = 'Stop'
-if ($env:HUSHFEED_SKIP_PRE_PUSH -eq '1') { exit 0 }
+if ($env:LARPFEED_SKIP_PRE_PUSH -eq '1') { exit 0 }
 
 $noObject = '0' * 40
 $aiAddress = '(?i)(noreply@anthropic|@anthropic\.com|copilot@|codex@|noreply@openai|@openai\.com)'
@@ -46,7 +46,7 @@ foreach ($line in ([Console]::In.ReadToEnd() -split "`r?`n")) {
 
 if ($problems.Count) {
     $problems | ForEach-Object { [Console]::Error.WriteLine($_) }
-    [Console]::Error.WriteLine('Fix those commits, or push with HUSHFEED_SKIP_PRE_PUSH=1 if a line is a false match.')
+    [Console]::Error.WriteLine('Fix those commits, or push with LARPFEED_SKIP_PRE_PUSH=1 if a line is a false match.')
     exit 1
 }
 exit 0

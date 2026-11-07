@@ -165,7 +165,7 @@ public class SettingsUiTest {
     }
 
     @Test
-    public void dropdownControlsCarryTheHushfeedFrameAndPopupSurface() {
+    public void dropdownControlsCarryTheLarpfeedFrameAndPopupSurface() {
         Activity activity = Robolectric.buildActivity(DialogActivity.class).setup().get();
         Utils.setContext(activity);
         android.widget.Spinner spinner = new android.widget.Spinner(
@@ -177,7 +177,7 @@ public class SettingsUiTest {
         assertTrue("the value control is shorter than a 48dp touch target",
                 spinner.getMinimumHeight() >= SettingsUi.dp(activity, 48));
         assertNotNull("the value popup kept the host background", spinner.getPopupBackground());
-        assertTrue("the value popup is not a Hushfeed surface",
+        assertTrue("the value popup is not a Larpfeed surface",
                 spinner.getPopupBackground() instanceof android.graphics.drawable.GradientDrawable);
     }
 

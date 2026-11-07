@@ -4,17 +4,17 @@
 
 ## 0.80.0 (2026-11-01)
 
-* O PineDrama foi para um conjunto de patches próprio, o HushPine. A partir de agora o Hushfeed só faz patch no TikTok.
+* O PineDrama foi para um conjunto de patches próprio, o HushPine. A partir de agora o Larpfeed só faz patch no TikTok.
 * O TikTok 47.6.3 agora é a única versão suportada. Baixe do APKMirror e mantenha a mesma chave de assinatura para preservar seu login e suas configurações.
 * Esconder os controles da Tela limpa ganhou uma chave nova que mantém a barra de progresso na tela, para você continuar vendo e arrastando ela (#237).
 * O toque duplo agora pode curtir e descurtir. Um toque duplo num vídeo que você já curtiu tira a curtida (#248).
 * Deslize para a esquerda ou para a direita enquanto segura um vídeo para passar pelas suas Opções do menu de velocidade. Vem desligado (#248).
 * As grades de Curtidos ganharam uma ordenação própria, e o botão de ordenar de uma grade de Curtidos muda só essa ordem (#180).
-* Todo título do Hushfeed agora mostra o ciano e o vermelho do TikTok num degradê que se move devagar.
+* Todo título do Larpfeed agora mostra o ciano e o vermelho do TikTok num degradê que se move devagar.
 * O preset Feed tranquilo saiu. Todos os filtros dele continuam no Filtro do feed, e o que ele tinha ligado continua ligado.
 * Toque duplo e Toque longo podem abrir a página de pesquisa do TikTok, mesmo com o botão de pesquisa do feed escondido (#251).
 * Uma chave nova recolhe a caixa de pesquisa dos comentários num botão de lupa no canto superior esquerdo (#254).
-* Uma chave nova tira a linha do Hushfeed de Configurações e privacidade do TikTok. Depois disso, mantenha Para você pressionado para abrir as configurações (#264).
+* Uma chave nova tira a linha do Larpfeed de Configurações e privacidade do TikTok. Depois disso, mantenha Para você pressionado para abrir as configurações (#264).
 * Um @usuário escrito na bio de alguém agora é um link. Toque nele e o perfil abre (#247).
 * A barra inferior do feed principal pode ser uma pílula de vidro flutuante, com uma lente que desliza entre as abas e novas configurações de desfoque, opacidade, altura e cantos (#259).
 * Os patches com configurações têm opções do Morphe para os valores iniciais, então um build pode vir com as suas chaves já ligadas. Obrigado a @XEGARE (#256).
@@ -24,14 +24,14 @@
 * A pesquisa das configurações conhece nomes do dia a dia, como autoplay, PiP e AI, e acha uma linha de escolha por qualquer uma das opções.
 * Bloquear o feed em horários definidos bloqueia o feed sozinho nas horas que você escolher, e o painel de bloqueio diz quando ele abre de novo.
 * Salvar só no Wi-Fi mantém os salvamentos longe dos dados móveis. Um salvamento espera o Wi-Fi por até 30 minutos, e você pode cancelar em Downloads.
-* Uma nova chave desliga a janela Salvar a mídia do Hushfeed para stickers do chat (#274).
+* Uma nova chave desliga a janela Salvar a mídia do Larpfeed para stickers do chat (#274).
 * Deixar outros apps tocarem até um vídeo começar mantém a música de outro app tocando quando você abre o TikTok ou suas mensagens, até um vídeo tocar (#283).
 * Manter mensagens retiradas deixa no chat uma mensagem que alguém retirou para você, com uma marca opcional. Obrigado a @maayan080 (#291).
 * Uma nova chave esconde a linha Service+ sob as prévias de LIVE, e a linha não fica mais presa da LIVE anterior (#94).
 * Com Mais recentes primeiro em Seguindo ligado, Seguindo carrega 30 posts por vez, então aparecem menos posts novos depois que você já passou dos antigos (#226).
 * Numa sala LIVE, tocar e segurar na bio, no nome ou no nome de usuário do cartão de perfil copia o texto, e uma marca de cópia copia o nome de usuário (#268).
 * Esconder o TikTok Shop também tira os botões da loja de baixo das legendas (#271).
-* Ícone personalizado do aplicativo pode dar às notificações do TikTok um H do Hushfeed nítido na barra de status (#114).
+* Ícone personalizado do aplicativo pode dar às notificações do TikTok um H do Larpfeed nítido na barra de status (#114).
 * Formato do som tem a opção MP3, então os sons salvos tocam em qualquer lugar, em todas as versões do Android (#273).
 * Uma nova chave também esconde a seta Voltar ao lado da barra de busca escondida nos vídeos abertos (#251).
 * Com o Botão de bloquear autor ligado, as LIVEs em Para Você também ganham o botão de bloquear (#138).
@@ -43,8 +43,8 @@
 * Mostrar quando a conta foi criada coloca uma data de entrada sob o @nome de usuário no perfil de outras pessoas.
 * Novidades agora vem também em chinês simplificado.
 * O Laboratório de gates agora tem um botão de reiniciar, e o TikTok abre de volta no Laboratório depois.
-* O Hushfeed agora é feito sobre o Morphe patcher 2.1.0, então precisa do Morphe Manager 2.3.0 ou mais recente, ou do morphe-desktop 1.20.0 num computador.
-* O pacote de patches leva a assinatura de pacote do Morphe, então o Manager pode conferir se um download posterior veio mesmo do Hushfeed.
+* O Larpfeed agora é feito sobre o Morphe patcher 2.1.0, então precisa do Morphe Manager 2.3.0 ou mais recente, ou do morphe-desktop 1.20.0 num computador.
+* O pacote de patches leva a assinatura de pacote do Morphe, então o Manager pode conferir se um download posterior veio mesmo do Larpfeed.
 * Um resultado da pesquisa das configurações lá embaixo numa página agora abre direto na sua linha.
 * Com Barra inferior transparente ligada, a linha Deslize para cima para pular nos cartões de contas sugeridas fica acima das abas de novo (#261).
 * A pílula flutuante das abas ficou um pouco mais alta, então o ícone Início e o nome dele ficam dentro do destaque, e a linha de progresso não fica mais em cima dela (#259).
@@ -69,7 +69,7 @@
 * Mantenha pressionada uma chave na pesquisa das configurações para revelar e destacar o controle dela na lista principal (#248).
 * As verificações de inicialização registram qual player desenhou o primeiro quadro (#150).
 * Exportar uma gravação recuperada ficou mais rápido para arquivos grandes.
-* Tentar de novo na recuperação mantém o motivo original da parada da gravação, e as janelas de recuperação seguem o tema do Hushfeed.
+* Tentar de novo na recuperação mantém o motivo original da parada da gravação, e as janelas de recuperação seguem o tema do Larpfeed.
 * As gravações de tela verificam o armazenamento enquanto rodam e guardam os arquivos de recuperação até a cópia salva ser verificada.
 * Os primeiros quadros de uma gravação de tela mantêm cada um o seu próprio carimbo de tempo enquanto o som começa.
 * As gravações de tela mantêm os primeiros quadros de vídeo enquanto o som está começando.
@@ -92,7 +92,7 @@
 * Gravar a tela de uma LIVE não filma mais o botão Gravar, e a notificação tem um botão Parar (#265).
 * Entrar sem chave de acesso diz o que fazer quando a verificação em duas etapas do TikTok pede só uma chave de acesso (#102).
 * Remover ferramentas de criação agora também age no pacote dividido do APKMirror, porque o do TikTok 47.6.3 voltou a trazer os arquivos do editor. A aba Criar para de funcionar, então deixe esse patch de fora se você faz vídeos (#285).
-* Quando o TikTok recusa uma curtida, o Hushfeed mostra o motivo na primeira vez de cada sessão (#269).
+* Quando o TikTok recusa uma curtida, o Larpfeed mostra o motivo na primeira vez de cada sessão (#269).
 * Vídeos que você curtiu ou salvou continuam nas grades de Curtidos e Favoritos, mesmo com marca de anúncio (#269).
 * A mensagem em chinês para um seguir recusado usa a palavra certa agora.
 * A pílula de abas flutuante também desfoca as prévias de LIVE atrás dela (#259).
@@ -113,7 +113,7 @@
 
 ## 0.79.0 (2026-10-24)
 
-* No PineDrama, as configurações do Hushfeed agora pedem para reiniciar o PineDrama em vez do TikTok (#156).
+* No PineDrama, as configurações do Larpfeed agora pedem para reiniciar o PineDrama em vez do TikTok (#156).
 
 * A nova chave Esconder comentários de spam esconde comentários de bots que oferecem links, contatos ou seguidores grátis. Seus comentários e os do criador continuam (#187).
 
@@ -163,7 +163,7 @@
 
 * O build passa para o Gradle 9.8.2.
 
-* O README lista as partes das configurações do Hushfeed em que um bundle complementar pode confiar.
+* O README lista as partes das configurações do Larpfeed em que um bundle complementar pode confiar.
 
 * Novidades guarda só as versões mais recentes e o Full changelog tem o resto, então a extensão fica menor.
 
@@ -203,7 +203,7 @@
 
 ## 0.78.0 (2026-10-22)
 
-* O Hushfeed passa para o TikTok 47.5.3 e o 47.4.3 sai. Aplique os patches no APK do 47.5.3 com a mesma chave de assinatura e seu login e suas configurações ficam. O PineDrama continua no 47.4.3.
+* O Larpfeed passa para o TikTok 47.5.3 e o 47.4.3 sai. Aplique os patches no APK do 47.5.3 com a mesma chave de assinatura e seu login e suas configurações ficam. O PineDrama continua no 47.4.3.
 
 * O Remove unused language packs agora também funciona no PineDrama 47.4.3.
 
@@ -233,7 +233,7 @@
 
 * Com Registrar diagnósticos ligado, cada linha de comentário de LIVE identifica sua sala com um código curto em vez do id da sala (#110).
 
-* O Hushfeed agora exige o Morphe Manager 2.0.0 ou mais novo, ou o morphe-desktop 1.19.0 no computador. Aplicar os patches leva cerca de metade do tempo.
+* O Larpfeed agora exige o Morphe Manager 2.0.0 ou mais novo, ou o morphe-desktop 1.19.0 no computador. Aplicar os patches leva cerca de metade do tempo.
 
 * A nova chave Esconder Saldo no menu do perfil tira o Saldo do menu que o botão do canto superior direito do seu perfil abre (#194).
 
@@ -255,7 +255,7 @@
 
 * A nova chave Toque e segure Perfil para abrir o histórico de exibição abre o histórico de exibição quando você segura a aba Perfil (#199).
 
-* Em chinês simplificado, Perfil nas configurações do Hushfeed agora aparece como 个人主页 em vez de "perfil da empresa".
+* Em chinês simplificado, Perfil nas configurações do Larpfeed agora aparece como 个人主页 em vez de "perfil da empresa".
 
 * A nova opção Qualidade da gravação de LIVE grava as LIVEs na qualidade da sala, a mais alta ou a mais baixa (#203).
 
@@ -305,7 +305,7 @@
 
 * Usar a fonte do sistema e Usar uma fonte importada agora chegam à Central de atividades, ao Histórico de exibição e às outras páginas web do TikTok (#7).
 
-* Os downloads do Hushfeed voltam a funcionar atrás de um app de proxy em modo fake-IP, como Clash, mihomo, sing-box e Xray costumam rodar (#145).
+* Os downloads do Larpfeed voltam a funcionar atrás de um app de proxy em modo fake-IP, como Clash, mihomo, sing-box e Xray costumam rodar (#145).
 
 * Segurar a foto de perfil de uma conta verificada volta a salvá-la.
 
@@ -321,11 +321,11 @@
 
 * Dados da conta volta a mostrar o idioma de uma conta no TikTok 47.4.3, lido dos próprios vídeos da conta.
 
-* Copiar o link completo nos links curtos para de esperar assim que você compartilha com outro app, então o Android não avisa mais que o Hushfeed colou da área de transferência.
+* Copiar o link completo nos links curtos para de esperar assim que você compartilha com outro app, então o Android não avisa mais que o Larpfeed colou da área de transferência.
 
 * Com Mostrar o fuso horário ligado, um idioma sem nome curto para o seu fuso o escreve como GMT-4 em vez de GMT-04:00, então o nome do criador volta a caber.
 
-* Os resultados da busca nas configurações do Hushfeed mostram o novo valor de uma configuração quando você a muda a partir de um resultado e volta.
+* Os resultados da busca nas configurações do Larpfeed mostram o novo valor de uma configuração quando você a muda a partir de um resultado e volta.
 
 * O campo Curtidas em Contagens do seu perfil agora está traduzido.
 
@@ -343,7 +343,7 @@
 
 ## 0.76.0 (2026-10-18)
 
-* O Hushfeed agora é compatível com o TikTok 47.4.3, e só com essa versão. Aplique o patch no APK 47.4.3 do APKMirror. O PineDrama continua no 47.1.4.
+* O Larpfeed agora é compatível com o TikTok 47.4.3, e só com essa versão. Aplique o patch no APK 47.4.3 do APKMirror. O PineDrama continua no 47.1.4.
 
 * Mostrar só amigos mútuos na aba Amigos volta a olhar quem repostou um vídeo, e os filtros do feed também chegam à lista de reposts da aba Amigos.
 
@@ -371,17 +371,17 @@
 
 * Nova identidade do dispositivo, na página Privacidade, apaga os dados do TikTok no próximo reinício para os servidores darem um novo ID de dispositivo. Você vai sair da conta, e o PineDrama também tem essa opção.
 
-* Parar um backup ou uma exportação enquanto o app de arquivos estava com ele não conta mais como erro do Hushfeed, no PineDrama também.
+* Parar um backup ou uma exportação enquanto o app de arquivos estava com ele não conta mais como erro do Larpfeed, no PineDrama também.
 
 * Importar os valores carregados do Laboratório de gates volta a aceitar uma exportação de verdade, e também um arquivo .gz já descompactado.
 
-* Quando o Laboratório de gates recusa algo e explica por quê, isso não é mais registrado como erro do Hushfeed.
+* Quando o Laboratório de gates recusa algo e explica por quê, isso não é mais registrado como erro do Larpfeed.
 
 * Remover pacotes de idioma não usados pula um idioma que o TikTok não tem em vez de parar o patch inteiro (#196).
 
 * Relatar um problema deixa vazia a caixa do que deu errado e mostra as perguntas como dica (#197, #201).
 
-* Publicações de fotos que o Hushfeed salva agora contam para Verificar vídeos já salvos e ganham a marca de Marcar vídeos salvos (#197).
+* Publicações de fotos que o Larpfeed salva agora contam para Verificar vídeos já salvos e ganham a marca de Marcar vídeos salvos (#197).
 
 * Publicações de fotos escolhidas na grade de um perfil são salvas como um vídeo só quando Salvar publicações de fotos como vídeo está ligado (#197).
 
@@ -447,13 +447,13 @@
 
 * Um layout de tela gravado agora lista as views de um pop-up mesmo quando a tela atrás está muito cheia (#162).
 
-* As configurações do Hushfeed agora podem seguir o TikTok em chinês simplificado.
+* As configurações do Larpfeed agora podem seguir o TikTok em chinês simplificado.
 
 * Permitir capturas de tela e Círculo para pesquisar agora também vale para os pop-ups que o TikTok abre fora da janela principal.
 
 * A partir da próxima versão, o Morphe Manager mostra a lista completa de mudanças da versão mais recente.
 
-* O TikTok 47.1.4 com Hushfeed passou nas verificações rígidas de páginas de 16 KB do Android 17.
+* O TikTok 47.1.4 com Larpfeed passou nas verificações rígidas de páginas de 16 KB do Android 17.
 
 * A aba Perfil volta a abrir nos celulares em que ela fechava ou ficava em branco desde a 0.72.0 (#165, #140).
 
@@ -488,7 +488,7 @@
 
 * Novo botão Mostrar opções de tradução nas configurações de idioma em Comentários: a própria página Idioma do TikTok volta a mostrar as linhas de tradução nas contas que ali só viam Idioma do app (#143).
 
-* O Hushfeed agora também aplica patches no PineDrama 47.1.4, o app de séries do TikTok. 90 patches funcionam nele, e o Morphe Manager só oferece esses (#156).
+* O Larpfeed agora também aplica patches no PineDrama 47.1.4, o app de séries do TikTok. 90 patches funcionam nele, e o Morphe Manager só oferece esses (#156).
 
 * O botão Gravar da LIVE desce para sair do caminho quando o painel Descobrir do TikTok abre sobre a sala, e volta quando ele fecha (#37).
 
@@ -564,7 +564,7 @@
 
 * O Feature Gate Lab tem uma nova predefinição, Tradução automática do chat da LIVE. Ela liga a opção Traduzir comentários que fica em Compartilhar numa sala de LIVE (#98).
 
-* Ligue Escolher vídeos para salvar nas grades de perfil em Configurações do Hushfeed > Downloads e cada vídeo de uma grade de perfil, Curtidos ou Favoritos ganha um círculo. Escolha até 50, toque em Salvar e eles são salvos um após o outro, com uma contagem e Cancelar (#27).
+* Ligue Escolher vídeos para salvar nas grades de perfil em Configurações do Larpfeed > Downloads e cada vídeo de uma grade de perfil, Curtidos ou Favoritos ganha um círculo. Escolha até 50, toque em Salvar e eles são salvos um após o outro, com uma contagem e Cancelar (#27).
 
 * Escolher vídeos para salvar nas grades de perfil ganhou um botão Escolher todos. Ele escolhe até 50 das publicações que uma lista carregou e, com Verificar vídeos já salvos ligado, pula os que você já salvou. Assim uma lista inteira é salva em rodadas, cada uma continuando de onde a anterior parou (#27).
 
@@ -576,7 +576,7 @@
 
 * Adicionada uma nota de configuração do emulador do Android 17 para ferramentas do SDK que leem errado as versões menores da API.
 
-* Todas as páginas de configurações agora ficam na página principal de configurações, sob um título curto, a um toque. Pausar o Hushfeed e o status completo ficam perto do fim, sob Hushfeed.
+* Todas as páginas de configurações agora ficam na página principal de configurações, sob um título curto, a um toque. Pausar o Larpfeed e o status completo ficam perto do fim, sob Larpfeed.
 
 * Um novo botão em Pop-ups, Ocultar avisos de Verifique suas fontes, tira o banner Verifique suas fontes do topo de alguns vídeos e o aviso que o TikTok mostra quando você compartilha um.
 
@@ -584,15 +584,15 @@
 
 * As Configurações rápidas ficam abaixo do campo de busca. Tranquilo, Privacidade e Restaurar padrões levam um toque, dizem quantas configurações mudaram e oferecem Desfazer.
 
-* A página principal das configurações termina com Relatar um problema, que abre um relatório no GitHub com suas versões e chaves já preenchidas, e Apoie o Hushfeed, que abre o Ko-fi.
+* A página principal das configurações termina com Relatar um problema, que abre um relatório no GitHub com suas versões e chaves já preenchidas, e Apoie o Larpfeed, que abre o Ko-fi.
 
-* Reiniciar o TikTok pela linha de reinício ou pelo aviso traz você de volta à página de configurações do Hushfeed em que estava.
+* Reiniciar o TikTok pela linha de reinício ou pelo aviso traz você de volta à página de configurações do Larpfeed em que estava.
 
-* As configurações do Hushfeed estão de cara nova, com os atalhos da página inicial no mesmo grupo e ícones rosa. Os painéis arredondados e os botões de ativação em formato de pílula também chegam ao Feature Gate Lab e ao editor de criadores ocultos. O texto grande e o modo claro continuam legíveis.
+* As configurações do Larpfeed estão de cara nova, com os atalhos da página inicial no mesmo grupo e ícones rosa. Os painéis arredondados e os botões de ativação em formato de pílula também chegam ao Feature Gate Lab e ao editor de criadores ocultos. O texto grande e o modo claro continuam legíveis.
 
 * Voltaram a funcionar a verificação de cobertura do menu do perfil, o caso de teste com registradores altos e o projeto de teste de assinatura. O teste de assinatura também aceita as opções do D8 em qualquer ordem.
 
-* Toque e segure Para você no topo do feed para abrir as configurações do Hushfeed. Um toque rápido continua funcionando como antes, e o atalho funciona mesmo com o Hushfeed pausado.
+* Toque e segure Para você no topo do feed para abrir as configurações do Larpfeed. Um toque rápido continua funcionando como antes, e o atalho funciona mesmo com o Larpfeed pausado.
 
 * Downloads tem um novo botão abaixo de Qualidade de download do vídeo: Perguntar a qualidade a cada download. Com ele ligado, Baixar lista as qualidades em que o vídeo está disponível, com o tamanho que o TikTok informa para cada uma, e salva a que você escolher. Automático, o arquivo do próprio TikTok, vem sempre primeiro. A qualidade que você definiu continua igual para o próximo download.
 
@@ -614,9 +614,9 @@
 
 * AMOLED dark theme agora também deixa preto o painel que abre quando você mantém um vídeo do feed pressionado, e as páginas Atividade e Novos seguidores da Caixa de entrada. Eles continuavam no cinza-escuro do TikTok. Os cartões dentro do painel continuam cinza para se destacarem.
 
-* Network proxy agora informa quais conexões não passam por ele. Os downloads do Hushfeed e a consulta de links curtos do Copiar link se conectam direto, depois das próprias verificações de endereço, e o relatório de diagnóstico exportado lista cada rota em Network routes.
+* Network proxy agora informa quais conexões não passam por ele. Os downloads do Larpfeed e a consulta de links curtos do Copiar link se conectam direto, depois das próprias verificações de endereço, e o relatório de diagnóstico exportado lista cada rota em Network routes.
 
-* No Android 6 ao 8.1, os leitores de tela agora anunciam como títulos os nomes das páginas, das seções e da tela de recuperação nas configurações do Hushfeed, como já acontecia no Android mais novo.
+* No Android 6 ao 8.1, os leitores de tela agora anunciam como títulos os nomes das páginas, das seções e da tela de recuperação nas configurações do Larpfeed, como já acontecia no Android mais novo.
 
 * A publicação de versões funciona no Windows PowerShell 5.1 além do PowerShell 7. A verificação de tags duplicadas agora lê cada versão de uma página no 5.1, onde antes tratava a página inteira como uma versão só, e as verificações de publicação e de scripts passam nos dois shells.
 
@@ -630,13 +630,13 @@
 
 * A publicação de versões agora envia e baixa os arquivos pela mesma versão que verificou, em vez de procurá-la de novo pela tag, e para quando duas versões têm a mesma tag. Recompilar uma tag já publicada é recusado, e a etapa do índice compara o recibo com o checksum da cópia publicada antes de copiá-lo.
 
-* Novo patch Show commenter handle and region: os comentários podem mostrar o @usuário de quem comenta no lugar do nome de exibição, e o país definido na conta depois do horário do comentário. Cada um tem sua própria chave em Configurações do Hushfeed > Comentários, e os dois começam desligados. Trazido dos patches onlynazril de na-x-ril.
+* Novo patch Show commenter handle and region: os comentários podem mostrar o @usuário de quem comenta no lugar do nome de exibição, e o país definido na conta depois do horário do comentário. Cada um tem sua própria chave em Configurações do Larpfeed > Comentários, e os dois começam desligados. Trazido dos patches onlynazril de na-x-ril.
 
 * Usar a fonte do sistema agora também pode mostrar o texto do TikTok com um arquivo .ttf ou .otf que você importar. Ative Usar uma fonte importada em Aplicativo, escolha o arquivo e reinicie o TikTok. Se o arquivo for removido ou não puder ser lido, o texto volta ao que Usar a fonte do sistema mostra. Trazido dos patches onlynazril de na-x-ril.
 
 * Novo patch Profile background: uma chave em Aplicativo, na seção Perfil, abre o editor de fundo do perfil do próprio TikTok em Editar perfil e mostra os fundos que outros perfis definiram. Os servidores do TikTok ainda podem se recusar a salvar um fundo para uma conta à qual o TikTok não ofereceu o recurso. Começa desativado. Trazido dos patches onlynazril de na-x-ril.
 
-* Esconder as janelas de CAPTCHA voltou a ser um botão, em Configurações do Hushfeed > Tela do feed, e começa desligado. Ele pula o quebra-cabeça que o TikTok mostra enquanto você só está navegando. Um quebra-cabeça logo depois de curtir, seguir, comentar ou republicar continua aparecendo, assim como as verificações de login, SMS e em duas etapas. Com o patch Hide the risk control CAPTCHA, os quebra-cabeças dessa verificação durante a navegação também são pulados. A regra vem dos patches onlynazril de na-x-ril.
+* Esconder as janelas de CAPTCHA voltou a ser um botão, em Configurações do Larpfeed > Tela do feed, e começa desligado. Ele pula o quebra-cabeça que o TikTok mostra enquanto você só está navegando. Um quebra-cabeça logo depois de curtir, seguir, comentar ou republicar continua aparecendo, assim como as verificações de login, SMS e em duas etapas. Com o patch Hide the risk control CAPTCHA, os quebra-cabeças dessa verificação durante a navegação também são pulados. A regra vem dos patches onlynazril de na-x-ril.
 
 * Com Bloquear o acesso à lista de contatos ligado, uma leitura de contatos que pede todas as colunas agora recebe uma lista vazia que ainda tem as colunas de contatos, então uma tela do TikTok que procura o nome de um cartão de contato não tropeça numa coluna que falta.
 
@@ -724,7 +724,7 @@
 
 * O verificador de patches agora confere a pasta de retenção antes de esvaziá-la e recusa uma pasta que ele não criou.
 
-* Com o TalkBack ativado, Para você oferece a ação Abrir as configurações do Hushfeed, então o atalho de tocar e segurar também funciona com um leitor de tela.
+* Com o TalkBack ativado, Para você oferece a ação Abrir as configurações do Larpfeed, então o atalho de tocar e segurar também funciona com um leitor de tela.
 
 * Se salvar uma nova fonte importada falhar ou o TikTok fechar no meio, a fonte que você tinha continua lá em vez de sumir.
 
@@ -910,7 +910,7 @@
 
 * Permitir capturas de tela agora cobre Circule para pesquisar, janelas flutuantes e telas Compose.
 
-* Capturar o feed registra decisões dos filtros e regras de ocultação em um arquivo de texto local em Download/Hushfeed, começando e parando ao tocar. Cada captura usa novos códigos para vídeos e criadores, sem legendas, nomes, usuários ou URLs. Leia antes de compartilhar.
+* Capturar o feed registra decisões dos filtros e regras de ocultação em um arquivo de texto local em Download/Larpfeed, começando e parando ao tocar. Cada captura usa novos códigos para vídeos e criadores, sem legendas, nomes, usuários ou URLs. Leia antes de compartilhar.
 
 * Ocultar os controles da tela limpa agora explica como sair com uma pinça (#84).
 
@@ -1102,7 +1102,7 @@
 
 * A busca das configurações agora prioriza correspondências nos títulos e reconhece termos de registro de diagnóstico em cada idioma das configurações.
 
-* Fotos disponíveis só em HEIF agora têm uma segunda opção de conversão para JPEG. Se nenhum decodificador funcionar, o Hushfeed preserva o arquivo original.
+* Fotos disponíveis só em HEIF agora têm uma segunda opção de conversão para JPEG. Se nenhum decodificador funcionar, o Larpfeed preserva o arquivo original.
 
 * Novidades agora traduz 0.68.0 e 0.67.1 nos oito idiomas das configurações, com um aviso em inglês nas versões mais antigas (#91).
 
@@ -1144,7 +1144,7 @@
 
 * Relatórios de diagnóstico e do Lab agora são salvos em tarefas próprias de segundo plano, e toques repetidos avisam que já há um salvamento em andamento.
 
-* Hushfeed agora exige Morphe Manager 1.34.0 ou mais recente com patcher 1.15.1. As verificações de lançamento usam CLI 1.18.1.
+* Larpfeed agora exige Morphe Manager 1.34.0 ou mais recente com patcher 1.15.1. As verificações de lançamento usam CLI 1.18.1.
 
 * As compilações usam Guava 33.7.2, não afetado pelo alerta de segurança, de forma consistente e com somas de verificação conferidas. Guava não é incluído no aplicativo nem no pacote. A verificação de importações do código agora lê os arquivos de patches que verifica.
 
@@ -1168,7 +1168,7 @@
 
 * Os botões de ocultar e bloquear som agora funcionam independentemente do botão de bloquear, exigem Filtro do feed e vêm desligados (#95).
 
-* Pausar mantém o atalho de configurações ao segurar Início se estiver ligado, permitindo que convidados retomem o Hushfeed. Atalhos desligados continuam desligados, toques comuns funcionam como antes e a ação de toque longo do próprio TikTok permanece (#89).
+* Pausar mantém o atalho de configurações ao segurar Início se estiver ligado, permitindo que convidados retomem o Larpfeed. Atalhos desligados continuam desligados, toques comuns funcionam como antes e a ação de toque longo do próprio TikTok permanece (#89).
 
 * Android 6 agora usa as formas plurais dos idiomas incluídos, com alternativa correta em inglês para quantidades ausentes.
 

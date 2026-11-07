@@ -1,6 +1,6 @@
 /*
- * Copyright 2026 Hushfeed contributors
- * https://github.com/SysAdminDoc/hushfeed
+ * Copyright 2026 Larpfeed contributors
+ * https://github.com/SysAdminDoc/larpfeed
  */
 package app.morphe.patches.tiktok.interaction.sharesheet
 
@@ -85,7 +85,7 @@ private fun FieldReference.smali() = "$definingClass->$name:$type"
 
 /**
  * Copy the link with one press on Share. The press asks the extension first, with the cell's own
- * item, before TikTok's method-id push, so a press Hushfeed takes leaves TikTok's bookkeeping as
+ * item, before TikTok's method-id push, so a press Larpfeed takes leaves TikTok's bookkeeping as
  * it was. Each view the assem listens to also gets the screen reader label.
  */
 context(_: BytecodePatchContext)

@@ -1,6 +1,6 @@
 /*
- * Copyright 2026 Hushfeed contributors
- * https://github.com/SysAdminDoc/hushfeed
+ * Copyright 2026 Larpfeed contributors
+ * https://github.com/SysAdminDoc/larpfeed
  */
 package app.morphe.extension.tiktok.wellbeing;
 
@@ -25,7 +25,7 @@ import java.util.concurrent.atomic.AtomicLong;
 
 /**
  * Pausing takes the screen-time budget off with everything else, so a hold that was running
- * covers nothing while Hushfeed is paused and is still there when it comes back.
+ * covers nothing while Larpfeed is paused and is still there when it comes back.
  */
 @RunWith(RobolectricTestRunner.class)
 @Config(sdk = 28)
@@ -66,7 +66,7 @@ public class PauseLiftsTheHoldTest {
         assertEquals(0L, SessionBudget.lockRemainingMs());
 
         PausedProcess.set(false);
-        assertTrue("the hold did not come back with Hushfeed", SessionBudget.isLocked());
+        assertTrue("the hold did not come back with Larpfeed", SessionBudget.isLocked());
         assertTrue(SessionBudget.lockRemainingMs() > 0);
     }
 
@@ -86,7 +86,7 @@ public class PauseLiftsTheHoldTest {
         assertEquals("a paused video change rewrote the budget record", record, Settings.SESSION_BUDGET_STATE.savedValue());
 
         PausedProcess.set(false);
-        assertTrue("the hold was gone when Hushfeed came back", SessionBudget.isLocked());
+        assertTrue("the hold was gone when Larpfeed came back", SessionBudget.isLocked());
         assertFalse("the notice came back for a budget already spent", SessionBudget.claimNotice());
     }
 

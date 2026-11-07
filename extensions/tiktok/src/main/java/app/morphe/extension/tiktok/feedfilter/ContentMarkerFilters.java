@@ -1,6 +1,6 @@
 /*
- * Copyright 2026 Hushfeed contributors
- * https://github.com/SysAdminDoc/hushfeed
+ * Copyright 2026 Larpfeed contributors
+ * https://github.com/SysAdminDoc/larpfeed
  *
  * Built on icysymmetra/tiktok-patches-for-morphe (GPL-3.0).
  */
@@ -201,7 +201,7 @@ public final class ContentMarkerFilters {
 
     /**
      * TikTok 47.0.3 builds the visible Paid partnership label from AwemeCommerceStruct.
-     * Earlier Hushfeed releases only read its generic isCommerce flag, which stays false on
+     * Earlier Larpfeed releases only read its generic isCommerce flag, which stays false on
      * branded posts and let the label through. The struct itself also exists on ordinary posts,
      * so each accepted signal must be non-default.
      */

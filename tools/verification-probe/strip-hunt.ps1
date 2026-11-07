@@ -13,7 +13,7 @@
     says. The tally at the end says how often each key came up; an anchor also carries TikTok's
     type number for it.
 
-    The probe reads a video's lists as the app holds them, after Hushfeed's own switches took their
+    The probe reads a video's lists as the app holds them, after Larpfeed's own switches took their
     kinds out, so a banner a switch removes (the search banner under Hide bottom search bar, for
     one) never shows up here. The export's CaptionStrip and BottomBanner lines count every kind
     before any switch acts, so read the probe's report action after a hunt as well.
@@ -23,7 +23,7 @@
     people's videos, and work/ never goes into git.
 
     The phones are shared, so the hunt takes the device lease (scripts/device-lease.ps1) on
-    HUSHFEED_DEVICE_SERIAL before its first command, checks it before every one, and releases it
+    LARPFEED_DEVICE_SERIAL before its first command, checks it before every one, and releases it
     at the end. It refuses to start while another task holds that phone.
 
 .EXAMPLE
@@ -38,8 +38,8 @@ param(
     [string]$Swipe = '540,1750,540,650',
     [int]$SettleMs = 2000,
     [switch]$Shots,
-    [string]$LeaseDir = $env:HUSHFEED_DEVICE_LEASE_DIR,
-    [string]$ChatIdentity = $env:HUSHFEED_CHAT_IDENTITY,
+    [string]$LeaseDir = $env:LARPFEED_DEVICE_LEASE_DIR,
+    [string]$ChatIdentity = $env:LARPFEED_CHAT_IDENTITY,
     [ValidateRange(1, 30)][int]$LeaseMinutes = 30
 )
 
@@ -47,10 +47,10 @@ $ErrorActionPreference = 'Stop'
 $root = Split-Path -Parent (Split-Path -Parent $PSScriptRoot)
 . (Join-Path $root 'scripts/device-lease.ps1')
 . (Join-Path $PSScriptRoot 'probe-log.ps1')
-$serial = $env:HUSHFEED_DEVICE_SERIAL
-if (-not $serial) { throw 'Set HUSHFEED_DEVICE_SERIAL to the serial of the test phone this machine may drive.' }
-if (-not $LeaseDir) { throw 'The hunt requires -LeaseDir or HUSHFEED_DEVICE_LEASE_DIR for the shared device pool.' }
-if (-not $ChatIdentity) { throw 'The hunt requires -ChatIdentity or HUSHFEED_CHAT_IDENTITY.' }
+$serial = $env:LARPFEED_DEVICE_SERIAL
+if (-not $serial) { throw 'Set LARPFEED_DEVICE_SERIAL to the serial of the test phone this machine may drive.' }
+if (-not $LeaseDir) { throw 'The hunt requires -LeaseDir or LARPFEED_DEVICE_LEASE_DIR for the shared device pool.' }
+if (-not $ChatIdentity) { throw 'The hunt requires -ChatIdentity or LARPFEED_CHAT_IDENTITY.' }
 $swipePoints = @($Swipe -split ',' | ForEach-Object { [int]$_.Trim() })
 if ($swipePoints.Count -ne 4) { throw "-Swipe needs four numbers, x1,y1,x2,y2: $Swipe" }
 $shotDir = Join-Path $root 'work/strip-hunt'
@@ -70,8 +70,8 @@ function Invoke-Phone([Parameter(ValueFromRemainingArguments = $true)][string[]]
     }
     $script = '/mnt/' + $Matches[1].ToLowerInvariant() + '/' + $Matches[2]
     # phone.sh rereads the lease before each adb call it makes.
-    & wsl.exe env "PHONE_SERIAL=$serial" "HUSHFEED_DEVICE_SERIAL=$serial" PHONE_SCALE=1 `
-        "HUSHFEED_LEASE_FILE=$($deviceLease.Path)" "HUSHFEED_LEASE_TOKEN=$($deviceLease.OwnershipToken)" `
+    & wsl.exe env "PHONE_SERIAL=$serial" "LARPFEED_DEVICE_SERIAL=$serial" PHONE_SCALE=1 `
+        "LARPFEED_LEASE_FILE=$($deviceLease.Path)" "LARPFEED_LEASE_TOKEN=$($deviceLease.OwnershipToken)" `
         bash $script @Arguments
     if ($LASTEXITCODE -ne 0) { throw "Guarded phone input failed: $($Arguments -join ' ')" }
 }
@@ -86,7 +86,7 @@ function Get-Keys {
     return $anchors + $banners
 }
 
-$deviceLease = New-DeviceLease -LeaseDir $LeaseDir -Serial $serial -Project 'hushfeed' `
+$deviceLease = New-DeviceLease -LeaseDir $LeaseDir -Serial $serial -Project 'larpfeed' `
     -ChatIdentity $ChatIdentity -Purpose 'verification probe strip hunt' -LeaseMinutes $LeaseMinutes
 try {
     Assert-TikTok
@@ -102,12 +102,12 @@ try {
             if ($Shots -and $key -notlike 'anchor anchor_poi/*') {
                 $picture = Join-Path $shotDir (($key -replace '[^a-z0-9_]', '-') + '.png')
                 Assert-DeviceLease -Lease $deviceLease -Serial $serial
-                & adb -s $serial shell screencap -p /sdcard/hushfeed-strip-hunt.png
+                & adb -s $serial shell screencap -p /sdcard/larpfeed-strip-hunt.png
                 Assert-DeviceLease -Lease $deviceLease -Serial $serial
-                & adb -s $serial pull /sdcard/hushfeed-strip-hunt.png $picture 2>&1 | Out-Null
+                & adb -s $serial pull /sdcard/larpfeed-strip-hunt.png $picture 2>&1 | Out-Null
                 if ($LASTEXITCODE -ne 0) { throw "Could not pull the screenshot for $key" }
                 Assert-DeviceLease -Lease $deviceLease -Serial $serial
-                & adb -s $serial shell rm /sdcard/hushfeed-strip-hunt.png
+                & adb -s $serial shell rm /sdcard/larpfeed-strip-hunt.png
             }
         }
         if ($round -lt $Rounds) {

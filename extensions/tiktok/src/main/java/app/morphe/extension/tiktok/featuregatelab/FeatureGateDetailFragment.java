@@ -241,8 +241,8 @@ public final class FeatureGateDetailFragment extends Fragment {
         if (menuDecides || BackgroundPlay.decidesGate(entry.key)) {
             View decided = FeatureGateLabUi.notice(context,
                     menuDecides
-                            ? L10n.t(context, "Background play in the long-press menu is on in Hushfeed's Playback settings, so TikTok gets 1 for this key and an override here has no effect until that switch is off.")
-                            : L10n.t(context, "Keep playing in the background is on in Hushfeed's Playback settings, so TikTok gets 2 for this key and an override here has no effect until that switch is off."),
+                            ? L10n.t(context, "Background play in the long-press menu is on in Larpfeed's Playback settings, so TikTok gets 1 for this key and an override here has no effect until that switch is off.")
+                            : L10n.t(context, "Keep playing in the background is on in Larpfeed's Playback settings, so TikTok gets 2 for this key and an override here has no effect until that switch is off."),
                     SettingsUi.attentionColor());
             LinearLayout.LayoutParams params = FeatureGateLabUi.matchWrap();
             int noticeMargin = FeatureGateLabUi.dp(context, SettingsUi.NOTICE_MARGIN);

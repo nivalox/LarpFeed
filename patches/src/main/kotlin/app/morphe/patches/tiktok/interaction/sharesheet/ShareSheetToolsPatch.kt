@@ -1,6 +1,6 @@
 /*
- * Copyright 2026 Hushfeed contributors
- * https://github.com/SysAdminDoc/hushfeed
+ * Copyright 2026 Larpfeed contributors
+ * https://github.com/SysAdminDoc/larpfeed
  *
  * Built on icysymmetra/tiktok-patches-for-morphe (GPL-3.0).
  */
@@ -22,7 +22,7 @@ val shareSheetToolsPatch = bytecodePatch(
     name = "Share sheet tools",
     description = "Lets you hide people, apps and buttons you don't use from the share sheet, " +
         "add apps you do use, and copy a video's link with one press on Share. Starts off. " +
-        "Turn it on in Hushfeed settings > Share sheet.",
+        "Turn it on in Larpfeed settings > Share sheet.",
 ) {
     category("Interaction")
     dependsOn(settingsPatch, sharedExtensionPatch, ownedShareActionsPatch)

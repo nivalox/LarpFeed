@@ -282,34 +282,34 @@ public class SettingsSearchQueryTest {
 
     @Test public void theAboutRowIsFoundByItsNameAndByWhatItSays() throws Exception {
         // The row sits on the master menu, which the index never walked, and had no key besides,
-        // so "hushfeed" and "version" both answered "No matching settings" on a phone whose
+        // so "larpfeed" and "version" both answered "No matching settings" on a phone whose
         // About row showed the version. The summary is what carries it, so the summary is the
         // half that has to match.
         TikTokPreferenceFragment search = attachSearch();
 
         assertTrue("the About row is not indexed by its name",
-                search(search, "hushfeed").contains("Hushfeed"));
+                search(search, "larpfeed").contains("Larpfeed"));
         assertTrue("the About row's summary is not searched",
-                search(search, "github").contains("Hushfeed"));
+                search(search, "github").contains("Larpfeed"));
     }
 
     /**
-     * Build details sat on About Hushfeed outside every walked category, so "build" found nothing
+     * Build details sat on About Larpfeed outside every walked category, so "build" found nothing
      * and the empty state blamed unticked patches. The hand-indexed rows also all said they were
      * in "Settings", which is no page a reader can find.
      */
     @Test public void handIndexedRowsAreFoundAndNameTheirPage() throws Exception {
         TikTokPreferenceFragment search = attachSearch();
         assertTrue("Build details is not indexed", search(search, "build details").contains("Build details"));
-        assertEquals("About Hushfeed", category(search, "Build details"));
-        assertEquals("About Hushfeed", category(search, "Hushfeed"));
+        assertEquals("About Larpfeed", category(search, "Build details"));
+        assertEquals("About Larpfeed", category(search, "Larpfeed"));
         // Pause sits on the home page, so its line names the heading it's under there.
-        assertEquals("Hushfeed", category(search, "Pause Hushfeed"));
+        assertEquals("Larpfeed", category(search, "Pause Larpfeed"));
     }
 
     /**
      * A hand-indexed About row has no section to open, so opening it fell through to the master
-     * menu. It lands on About Hushfeed with the row as the target.
+     * menu. It lands on About Larpfeed with the row as the target.
      */
     @Test public void openingFoundBuildDetailsExpandsAboutOnTheSameMainList() throws Exception {
         TikTokPreferenceFragment search = attachSearch();
@@ -337,14 +337,14 @@ public class SettingsSearchQueryTest {
         assertVisible(search, "action_build_details");
     }
 
-    /** What's new leaves About Hushfeed once its notes are read, and its result goes with it. */
+    /** What's new leaves About Larpfeed once its notes are read, and its result goes with it. */
     @Test public void whatsNewIsNotFoundWhenThereIsNothingNew() throws Exception {
         // Unpatched, the release version is empty, so nothing is pending.
         TikTokPreferenceFragment search = attachSearch();
         assertFalse(search(search, "release notes").contains("What's new"));
     }
 
-    /** While its notes are unread, What's new is found under About Hushfeed and opens there. */
+    /** While its notes are unread, What's new is found under About Larpfeed and opens there. */
     @Test public void whatsNewIsFoundWhileItsNotesAreUnread() throws Exception {
         // A release with its own bundled notes. With nothing dismissed yet, only the installed
         // release's section counts as unread, so a version with no section would find nothing.
@@ -357,7 +357,7 @@ public class SettingsSearchQueryTest {
             TikTokPreferenceFragment search = attachSearch();
             assertTrue("What's new is not indexed while pending",
                     search(search, "release notes").contains("What's new"));
-            assertEquals("About Hushfeed", category(search, "What's new"));
+            assertEquals("About Larpfeed", category(search, "What's new"));
 
             Preference result = null;
             PreferenceScreen screen = search.getPreferenceScreen();

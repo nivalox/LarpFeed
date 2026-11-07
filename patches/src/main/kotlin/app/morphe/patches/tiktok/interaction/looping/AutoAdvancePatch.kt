@@ -1,6 +1,6 @@
 /*
- * Copyright 2026 Hushfeed contributors
- * https://github.com/SysAdminDoc/hushfeed
+ * Copyright 2026 Larpfeed contributors
+ * https://github.com/SysAdminDoc/larpfeed
  *
  * Built on icysymmetra/tiktok-patches-for-morphe (GPL-3.0).
  */
@@ -376,7 +376,7 @@ val autoAdvancePatch = bytecodePatch(
     name = "Automatic video advance",
     description = "Moves on to the next video by itself when one ends, so you can watch " +
         "hands-free. It can also turn on TikTok's auto scroll in search results. Starts off. Turn " +
-        "it on in Hushfeed settings > Playback.",
+        "it on in Larpfeed settings > Playback.",
 ) {
     category("Playback")
     dependsOn(settingsPatch, sharedExtensionPatch)

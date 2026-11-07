@@ -1,6 +1,6 @@
 /*
- * Copyright 2026 Hushfeed contributors
- * https://github.com/SysAdminDoc/hushfeed
+ * Copyright 2026 Larpfeed contributors
+ * https://github.com/SysAdminDoc/larpfeed
  */
 package app.morphe.extension.tiktok.wellbeing;
 
@@ -61,7 +61,7 @@ public final class SessionBudget {
      */
     private static final ExecutorService WRITER =
             Executors.newSingleThreadExecutor(runnable -> {
-                Thread thread = new Thread(runnable, "hushfeed-session-budget");
+                Thread thread = new Thread(runnable, "larpfeed-session-budget");
                 thread.setDaemon(true);
                 return thread;
             });
@@ -292,7 +292,7 @@ public final class SessionBudget {
     public static boolean claimNotice() {
         // Asked on every video change. Paused, both budgets read zero through get(), which looked
         // like a raised budget and wiped a running hold out of the record. The budget is off with
-        // everything else, and the record waits for Hushfeed to come back, as lockRemainingMs has it.
+        // everything else, and the record waits for Larpfeed to come back, as lockRemainingMs has it.
         if (Setting.isPaused()) return false;
         synchronized (LOCK) {
             load();
@@ -371,7 +371,7 @@ public final class SessionBudget {
 
     /**
      * How much of the hold is left, or zero when there is none. Paused, the budget is off with
-     * everything else: the hold stays in the record for when Hushfeed comes back, and answers
+     * everything else: the hold stays in the record for when Larpfeed comes back, and answers
      * zero meanwhile, which is also what {@link #isLocked()} goes by.
      */
     public static long lockRemainingMs() {

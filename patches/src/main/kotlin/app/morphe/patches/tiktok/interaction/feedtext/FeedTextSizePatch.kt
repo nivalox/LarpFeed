@@ -1,6 +1,6 @@
 /*
- * Copyright 2026 Hushfeed contributors
- * https://github.com/SysAdminDoc/hushfeed
+ * Copyright 2026 Larpfeed contributors
+ * https://github.com/SysAdminDoc/larpfeed
  */
 package app.morphe.patches.tiktok.interaction.feedtext
 
@@ -154,7 +154,7 @@ val feedTextSizePatch = bytecodePatch(
     name = "Feed text sizes",
     description = "Lets you make video descriptions, creator names and post dates bigger or smaller, " +
         "or give them a color and a backdrop, so they're easier to read. Starts off. " +
-        "Pick them in Hushfeed settings > Feed screen.",
+        "Pick them in Larpfeed settings > Feed screen.",
 ) {
     category("Interface")
     compatibleWith(*AppCompatibilities.tiktok())

@@ -1,6 +1,6 @@
 /*
- * Copyright 2026 Hushfeed contributors
- * https://github.com/SysAdminDoc/hushfeed
+ * Copyright 2026 Larpfeed contributors
+ * https://github.com/SysAdminDoc/larpfeed
  *
  * Built on icysymmetra/tiktok-patches-for-morphe (GPL-3.0).
  */
@@ -59,7 +59,7 @@ public final class RegionSpoof {
      * with the phone's zone. The switch happens as the host application attaches its context,
      * before TikTok builds a formatter, and the zone it replaced is the phone's, kept for the
      * things that run on the phone's clock (phoneTimeZone()) and put back when the setting goes
-     * off or Hushfeed is paused.
+     * off or Larpfeed is paused.
      *
      * Android puts the system's zone back as the default when the phone's zone changes, so each
      * answer the hook gives checks the default is still the preset's and sets it again if not.
@@ -592,7 +592,7 @@ public final class RegionSpoof {
         return now != null && now.id.equals(current.getID()) ? (TimeZone) now.phone.clone() : current;
     }
 
-    /** The format, set to the phone's own zone, for a time Hushfeed shows against the phone's clock. */
+    /** The format, set to the phone's own zone, for a time Larpfeed shows against the phone's clock. */
     public static DateFormat phoneClock(DateFormat format) {
         format.setTimeZone(phoneTimeZone());
         return format;
@@ -600,7 +600,7 @@ public final class RegionSpoof {
 
     /**
      * The typed zone, or the preset country's without one, while Match locale and timezone is on
-     * and Hushfeed isn't paused, else null.
+     * and Larpfeed isn't paused, else null.
      */
     @Nullable
     private static TimeZone presetZone() {

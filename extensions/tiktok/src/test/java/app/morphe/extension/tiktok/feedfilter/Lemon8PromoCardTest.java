@@ -1,6 +1,6 @@
 /*
- * Copyright 2026 Hushfeed contributors
- * https://github.com/SysAdminDoc/hushfeed
+ * Copyright 2026 Larpfeed contributors
+ * https://github.com/SysAdminDoc/larpfeed
  */
 package app.morphe.extension.tiktok.feedfilter;
 
@@ -119,7 +119,7 @@ public class Lemon8PromoCardTest {
         assertFalse(CardFilters.shouldSkipLemon8PromoRequest());
     }
 
-    @Test public void pausedHushfeedKeepsTheCard() {
+    @Test public void pausedLarpfeedKeepsTheCard() {
         Settings.REMOVE_ADS.save(true);
         assertTrue(CardFilters.shouldSkipLemon8PromoRequest());
         PausedProcess.set(true);

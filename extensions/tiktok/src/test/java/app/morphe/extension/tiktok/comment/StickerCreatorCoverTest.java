@@ -1,6 +1,6 @@
 /*
- * Copyright 2026 Hushfeed contributors
- * https://github.com/SysAdminDoc/hushfeed
+ * Copyright 2026 Larpfeed contributors
+ * https://github.com/SysAdminDoc/larpfeed
  */
 package app.morphe.extension.tiktok.comment;
 
@@ -75,7 +75,7 @@ public class StickerCreatorCoverTest {
         StickerCreator.fromCover(context(), new Object());
         awaitToast("Couldn't make the sticker. Try again.");
         assertFalse("the downloaded cover", targets.get(0).exists());
-        String[] left = context().getCacheDir().list((folder, name) -> name.startsWith("hushfeed-sticker"));
+        String[] left = context().getCacheDir().list((folder, name) -> name.startsWith("larpfeed-sticker"));
         assertNotNull(left);
         assertEquals("no cover or prepared PNG is left in the cache", 0, left.length);
     }

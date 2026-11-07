@@ -41,7 +41,7 @@ import org.robolectric.shadows.ShadowAlertDialog;
 import org.robolectric.shadows.ShadowLooper;
 
 /**
- * A long press on For You at the top of the feed opens Hushfeed's settings. The settings patch hands
+ * A long press on For You at the top of the feed opens Larpfeed's settings. The settings patch hands
  * every top tab TikTok binds to {@link ForYouTabSettingsShortcut#onTopTab} with its tag. These build
  * the tab the way TikTok 47.1.4 does: a clickable LinearLayout that takes its tap in performClick,
  * with no listener of its own.
@@ -125,13 +125,13 @@ public class ForYouTabSettingsShortcutTest {
 
     private static void assertOpenedSettings() {
         Intent opened = nextStarted();
-        assertNotNull("a long press on For You didn't open Hushfeed settings", opened);
+        assertNotNull("a long press on For You didn't open Larpfeed settings", opened);
         assertEquals("morphe_settings", opened.getAction());
         assertNull("it opened settings somewhere other than their home page",
                 opened.getStringExtra("morphe_settings_section"));
     }
 
-    @Test public void aLongPressOnForYouOpensHushfeedSettings() {
+    @Test public void aLongPressOnForYouOpensLarpfeedSettings() {
         TopTab tab = tab();
         ForYouTabSettingsShortcut.onTopTab(tab, FOR_YOU);
 
@@ -269,13 +269,13 @@ public class ForYouTabSettingsShortcutTest {
         assertNotNull("the bind after TikTok's delegate didn't bring the action back", openAction(info));
         assertEquals("TikTok's later delegate was lost", "For You, selected", String.valueOf(info.getContentDescription()));
         long offered = info.getActionList().stream()
-                .filter(action -> "Open Hushfeed settings".equals(String.valueOf(action.getLabel()))).count();
+                .filter(action -> "Open Larpfeed settings".equals(String.valueOf(action.getLabel()))).count();
         assertEquals("binding again stacked the action", 1, offered);
     }
 
     private static AccessibilityNodeInfo.AccessibilityAction openAction(AccessibilityNodeInfo info) {
         for (AccessibilityNodeInfo.AccessibilityAction action : info.getActionList()) {
-            if ("Open Hushfeed settings".equals(String.valueOf(action.getLabel()))) return action;
+            if ("Open Larpfeed settings".equals(String.valueOf(action.getLabel()))) return action;
         }
         return null;
     }
@@ -330,7 +330,7 @@ public class ForYouTabSettingsShortcutTest {
 
         Button toSettings = history.getButton(AlertDialog.BUTTON_NEGATIVE);
         assertNotNull("the watch history over the feed has no way to the settings", toSettings);
-        assertEquals("Open Hushfeed settings", String.valueOf(toSettings.getText()));
+        assertEquals("Open Larpfeed settings", String.valueOf(toSettings.getText()));
         assertTrue(toSettings.performClick());
         ShadowLooper.idleMainLooper();
 

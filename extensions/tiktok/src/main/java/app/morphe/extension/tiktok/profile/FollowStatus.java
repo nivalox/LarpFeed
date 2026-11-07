@@ -1,6 +1,6 @@
 /*
- * Copyright 2026 Hushfeed contributors
- * https://github.com/SysAdminDoc/hushfeed
+ * Copyright 2026 Larpfeed contributors
+ * https://github.com/SysAdminDoc/larpfeed
  */
 package app.morphe.extension.tiktok.profile;
 
@@ -57,7 +57,7 @@ public final class FollowStatus {
     static final String NOT_FOLLOWING_BACK = "Doesn't follow you back";
     static final String JOINED = "Joined %s";
     /** Marks the label views this class adds, so a rebind finds and reuses them. */
-    static final String LABEL_TAG = "hushfeed_follow_status";
+    static final String LABEL_TAG = "larpfeed_follow_status";
     private static final int MAX_CLIMB = 4;
     private static final String USER_CLASS = "com.ss.android.ugc.aweme.profile.model.User";
 

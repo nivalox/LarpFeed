@@ -1,6 +1,6 @@
 /*
- * Copyright 2026 Hushfeed contributors
- * https://github.com/SysAdminDoc/hushfeed
+ * Copyright 2026 Larpfeed contributors
+ * https://github.com/SysAdminDoc/larpfeed
  */
 package app.morphe.extension.tiktok.cleardisplay;
 
@@ -11,14 +11,14 @@ import java.util.Map;
 import java.util.WeakHashMap;
 
 import app.morphe.extension.shared.Logger;
-import app.morphe.extension.shared.settings.HushfeedPause;
+import app.morphe.extension.shared.settings.LarpfeedPause;
 
 /**
  * The Following stories bubble at the top of the feed, brought back after clear display.
  *
  * <p>TikTok's bubble hides itself when clear display starts and, as clear display ends, only
  * puts back the expanded row it collapsed. The bubble stays gone until TikTok rebuilds the feed
- * (seen with Hushfeed paused on 47.1.3, 2026-10-05). The patch tells this class what the bubble
+ * (seen with Larpfeed paused on 47.1.3, 2026-10-05). The patch tells this class what the bubble
  * looked like just before TikTok hid it, and asks it at the end whether TikTok should show it
  * again through its own show call.
  */
@@ -48,7 +48,7 @@ public final class FollowingStoriesBubble {
     public static boolean showAgain(View bubble, List<?> items) {
         try {
             Boolean wasShowing = bubble == null ? null : SHOWING_AT_CLEAR.remove(bubble);
-            if (wasShowing == null || !wasShowing || HushfeedPause.isPaused()) return false;
+            if (wasShowing == null || !wasShowing || LarpfeedPause.isPaused()) return false;
             if (bubble.getVisibility() == View.VISIBLE) return false;
             boolean show = items != null && !items.isEmpty();
             if (show) Logger.printDebug(() -> "[FollowingStoriesBubble] shown again after clear display");

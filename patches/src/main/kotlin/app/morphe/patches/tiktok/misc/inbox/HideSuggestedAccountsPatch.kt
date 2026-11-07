@@ -1,6 +1,6 @@
 /*
- * Copyright 2026 Hushfeed contributors
- * https://github.com/SysAdminDoc/hushfeed
+ * Copyright 2026 Larpfeed contributors
+ * https://github.com/SysAdminDoc/larpfeed
  *
  * Built on icysymmetra/tiktok-patches-for-morphe (GPL-3.0).
  * Follows hxreborn/hxreborn-tiktok-patches (GPL-3.0).
@@ -39,7 +39,7 @@ val hideSuggestedAccountsPatch = bytecodePatch(
     name = "Hide suggested accounts",
     description = "Hides TikTok's People you may like suggestions in the Inbox, on profiles, " +
         "on the Friends tab and in the feed. It uses the same switch as Hide inbox items. Starts " +
-        "off. Turn it on in Hushfeed settings > Inbox.",
+        "off. Turn it on in Larpfeed settings > Inbox.",
 ) {
     category("Inbox")
     dependsOn(settingsPatch, sharedExtensionPatch)

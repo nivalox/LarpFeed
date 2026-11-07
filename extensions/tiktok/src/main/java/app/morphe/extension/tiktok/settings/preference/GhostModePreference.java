@@ -1,6 +1,6 @@
 /*
- * Copyright 2026 Hushfeed contributors
- * https://github.com/SysAdminDoc/hushfeed
+ * Copyright 2026 Larpfeed contributors
+ * https://github.com/SysAdminDoc/larpfeed
  */
 package app.morphe.extension.tiktok.settings.preference;
 
@@ -28,17 +28,17 @@ public final class GhostModePreference extends TogglePreference {
                 text = "Off. TikTok can report views and typing.";
                 break;
             case PAUSED:
-                text = "Hushfeed is paused. Ghost mode isn't active.";
+                text = "Larpfeed is paused. Ghost mode isn't active.";
                 break;
             case PROBLEM:
                 text = "Problem detected. Story views may still be reported. Check Ghost mode diagnostics. The warning stays until TikTok restarts.";
                 break;
             case BLOCKED:
-                text = "Hushfeed blocked TikTok's reports here. It hasn't confirmed that you "
+                text = "Larpfeed blocked TikTok's reports here. It hasn't confirmed that you "
                         + "stay off viewer lists.";
                 break;
             default:
-                text = "On. Hushfeed hasn't seen TikTok send any reports since it started.";
+                text = "On. Larpfeed hasn't seen TikTok send any reports since it started.";
                 break;
         }
         return L10n.t(getContext(), text);

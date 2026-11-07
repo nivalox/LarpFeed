@@ -1,6 +1,6 @@
 /*
- * Copyright 2026 Hushfeed contributors
- * https://github.com/SysAdminDoc/hushfeed
+ * Copyright 2026 Larpfeed contributors
+ * https://github.com/SysAdminDoc/larpfeed
  */
 package app.morphe.extension.tiktok.wellbeing;
 
@@ -66,7 +66,7 @@ public class PauseRefusesALockedDayTest {
 
     private static Preference pauseRow(android.app.Activity activity) {
         Utils.setContext(activity);
-        // Pause Hushfeed is on the home page, in the Hushfeed group.
+        // Pause Larpfeed is on the home page, in the Larpfeed group.
         TikTokPreferenceFragment home = new TikTokPreferenceFragment();
         activity.getFragmentManager().beginTransaction()
                 .replace(android.R.id.content, home).commit();
@@ -105,7 +105,7 @@ public class PauseRefusesALockedDayTest {
             assertFalse("Pause took the budget off while loosening it has to wait",
                     row.getOnPreferenceChangeListener().onPreferenceChange(row, Boolean.TRUE));
             Shadows.shadowOf(Looper.getMainLooper()).idle();
-            assertEquals("Wait a day to loosen the budget is on, so Hushfeed stays on",
+            assertEquals("Wait a day to loosen the budget is on, so Larpfeed stays on",
                     ShadowToast.getTextOfLatestToast());
             assertTrue("turning Pause off is never refused",
                     row.getOnPreferenceChangeListener().onPreferenceChange(row, Boolean.FALSE));

@@ -1,6 +1,6 @@
 /*
- * Copyright 2026 Hushfeed contributors
- * https://github.com/SysAdminDoc/hushfeed
+ * Copyright 2026 Larpfeed contributors
+ * https://github.com/SysAdminDoc/larpfeed
  *
  * Built on icysymmetra/tiktok-patches-for-morphe (GPL-3.0).
  */
@@ -240,7 +240,7 @@ public final class CommentExport {
         root.put("truncated", truncated);
         root.put("note", "Comments and replies the sheet had loaded when this was exported. "
                 + "Reply threads that weren't opened aren't included."
-                + (truncated ? " The sheet had more comments loaded than Hushfeed keeps, so the "
+                + (truncated ? " The sheet had more comments loaded than Larpfeed keeps, so the "
                         + "later ones aren't in this file either." : ""));
         JSONArray comments = new JSONArray();
         for (Row row : rows) {
@@ -291,7 +291,7 @@ public final class CommentExport {
 
     // ---- the picker and the write -------------------------------------------------------
 
-    private static final String FRAGMENT_TAG = "hushfeed_comment_export";
+    private static final String FRAGMENT_TAG = "larpfeed_comment_export";
     private static final int REQUEST = 0x4345;
 
     /** What the tap saw, held for the picker's answer. Main thread only. */

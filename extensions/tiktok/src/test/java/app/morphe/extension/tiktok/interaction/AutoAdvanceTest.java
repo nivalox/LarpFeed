@@ -303,7 +303,7 @@ public class AutoAdvanceTest {
     }
 
     @Test public void tikToksOwnScrollStopsOnASharedVideoPlayingAloneToo() {
-        // Started from the panel action, or by search on its own: not Hushfeed's, and the
+        // Started from the panel action, or by search on its own: not Larpfeed's, and the
         // pager's touch guard doesn't stop a move the app makes itself.
         SettingsStatus.blockAuthorEnabled = true;
         SettingsStatus.feedNavigationEnabled = true;
@@ -328,7 +328,7 @@ public class AutoAdvanceTest {
             control.update(state::get, start, stop);
             assertEquals("a stopped scroll was stopped again", 1, stops.get());
 
-            // With Hushfeed's own Auto-advance off, TikTok's still doesn't move on from it.
+            // With Larpfeed's own Auto-advance off, TikTok's still doesn't move on from it.
             Settings.AUTO_ADVANCE.save(false);
             state.set(State.AUTO_SCROLL_STATE_PAUSE);
             control.update(state::get, start, stop);
@@ -337,7 +337,7 @@ public class AutoAdvanceTest {
             app.morphe.extension.shared.settings.PausedProcess.set(true);
             state.set(State.AUTO_SCROLL_STATE_START);
             control.update(state::get, start, stop);
-            assertEquals("paused, Hushfeed still stopped TikTok's scroll", 2, stops.get());
+            assertEquals("paused, Larpfeed still stopped TikTok's scroll", 2, stops.get());
         } finally {
             app.morphe.extension.shared.settings.PausedProcess.set(false);
             Settings.SHARED_VIDEO_ALONE.resetToDefault();
@@ -548,7 +548,7 @@ public class AutoAdvanceTest {
         assertEquals(0, fresh.completedCount);
     }
 
-    @Test public void nativeOnlyCompletionsDoNotConsumeTheHushfeedLimit() {
+    @Test public void nativeOnlyCompletionsDoNotConsumeTheLarpfeedLimit() {
         Settings.AUTO_ADVANCE_LIMIT.save(1);
         FeedView feed = new FeedView();
         var control = new AutoAdvance.Control(feed.indicator);

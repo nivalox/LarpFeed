@@ -258,7 +258,7 @@ public class BudgetWaitSettingsTest {
 
     private static void assertSaveFailureIsVisible(AlertDialog dialog) {
         android.widget.TextView error = dialog.getWindow().getDecorView()
-                .findViewWithTag("hushfeed_field_error");
+                .findViewWithTag("larpfeed_field_error");
         assertNotNull("the failed save has no explanation", error);
         assertEquals(android.view.View.VISIBLE, error.getVisibility());
         assertTrue(error.getText().toString(), error.getText().toString().contains("Couldn't save"));

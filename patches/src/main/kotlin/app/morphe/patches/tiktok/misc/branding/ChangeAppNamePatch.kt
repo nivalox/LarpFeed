@@ -1,6 +1,6 @@
 /*
- * Copyright 2026 Hushfeed contributors
- * https://github.com/SysAdminDoc/hushfeed
+ * Copyright 2026 Larpfeed contributors
+ * https://github.com/SysAdminDoc/larpfeed
  */
 package app.morphe.patches.tiktok.misc.branding
 
@@ -33,7 +33,7 @@ val changeAppNamePatch = resourcePatch(
     dependsOn(buildDetailsPatch)
     val appName by stringOption(
         key = "appName",
-        default = "Hushfeed",
+        default = "Larpfeed",
         title = "App name",
         description = "The name shown under the app icon, up to $MAX_APP_NAME characters.",
         required = true,

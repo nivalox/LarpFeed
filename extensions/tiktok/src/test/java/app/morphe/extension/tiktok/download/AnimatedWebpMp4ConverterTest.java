@@ -114,7 +114,7 @@ public class AnimatedWebpMp4ConverterTest {
         builder.frame(0, 0, 16382, 16382, 40, false, false, RED);
         byte[] webp = builder.build();
 
-        java.io.File output = java.io.File.createTempFile("hushfeed-sticker", ".mp4");
+        java.io.File output = java.io.File.createTempFile("larpfeed-sticker", ".mp4");
         output.deleteOnExit();
         // Robolectric closes its path-owned stream only from nativeStop, not release.
         // This rejection happens before start, so own the descriptor as the MediaStore caller

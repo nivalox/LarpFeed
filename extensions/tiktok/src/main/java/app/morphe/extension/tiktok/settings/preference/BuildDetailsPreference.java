@@ -1,6 +1,6 @@
 /*
- * Copyright 2026 Hushfeed contributors
- * https://github.com/SysAdminDoc/hushfeed
+ * Copyright 2026 Larpfeed contributors
+ * https://github.com/SysAdminDoc/larpfeed
  */
 package app.morphe.extension.tiktok.settings.preference;
 
@@ -24,7 +24,7 @@ public final class BuildDetailsPreference extends Preference implements Immediat
 
     /** The row's key and summary, shared with the settings search's entry for it. */
     static final String KEY = "action_build_details";
-    static final String SUMMARY = "Copy or save which patches and options this Hushfeed was built with.";
+    static final String SUMMARY = "Copy or save which patches and options this Larpfeed was built with.";
 
     public BuildDetailsPreference(Context context) {
         super(context);

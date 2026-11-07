@@ -45,7 +45,7 @@ class SourceNoticeTest {
         assertEquals(
             "these patch sources ship with no word of where they came from. A file derived from " +
                 "another project needs a Forked from: URL, and one written here needs the " +
-                "Hushfeed notice. If you are moving a file, its old notice moves with it: $bare",
+                "Larpfeed notice. If you are moving a file, its old notice moves with it: $bare",
             emptyList<String>(),
             bare,
         )

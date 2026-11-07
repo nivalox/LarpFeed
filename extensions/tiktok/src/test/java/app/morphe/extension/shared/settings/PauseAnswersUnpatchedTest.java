@@ -1,6 +1,6 @@
 /*
- * Copyright 2026 Hushfeed contributors
- * https://github.com/SysAdminDoc/hushfeed
+ * Copyright 2026 Larpfeed contributors
+ * https://github.com/SysAdminDoc/larpfeed
  */
 package app.morphe.extension.shared.settings;
 
@@ -57,16 +57,16 @@ import java.util.TreeSet;
 public class PauseAnswersUnpatchedTest {
     @Rule public final SettingsContextRule settingsContext = new SettingsContextRule();
 
-    /** Hushfeed's own state, which keeps its value while paused. Everything else is paused. */
+    /** Larpfeed's own state, which keeps its value while paused. Everything else is paused. */
     private static final Set<String> KEPT = new TreeSet<>(Arrays.asList(
             "morphe_debug", "morphe_debug_log_filters", "morphe_capture_java_crashes",
             "morphe_debug_stacktrace", "morphe_debug_toast_on_error",
             "morphe_check_environment_warnings_issued", "morphe_language", "morphe_show_menu_icons",
             "morphe_last_time_app_was_launched", "morphe_experimental_app_target_confirmed",
-            "hushfeed_paused", "hushfeed_safe_mode",
+            "larpfeed_paused", "larpfeed_safe_mode",
             // A timed diagnostic capture logs while paused, like the switch it stands beside.
-            "hushfeed_debug_capture",
-            // Guests need their saved settings entry to resume Hushfeed after closing settings.
+            "larpfeed_debug_capture",
+            // Guests need their saved settings entry to resume Larpfeed after closing settings.
             "home_tab_opens_settings", "app_lock", "app_lock_timeout",
             "launcher_shortcuts_removed", "feed_navigation_observed_tabs",
             "bottom_navigation_observed_tabs", "down_path", "download_paths_migrated",
@@ -75,7 +75,7 @@ public class PauseAnswersUnpatchedTest {
             "not_interested_button_position", "feed_mute_button_position",
             "download_button_position", "share_action_catalog",
             "diagnostic_report_salt",
-            // Which translate toggle Hushfeed's button turned on, so a pause can answer it off.
+            // Which translate toggle Larpfeed's button turned on, so a pause can answer it off.
             "comment_translate_button_turned_on",
             // The profile shortcuts TikTok has sent, recorded for the checklist like share actions.
             "profile_shortcut_catalog",
@@ -153,7 +153,7 @@ public class PauseAnswersUnpatchedTest {
         }
     }
 
-    @Test public void onlyHushfeedsOwnStateKeepsItsValue() throws Exception {
+    @Test public void onlyLarpfeedsOwnStateKeepsItsValue() throws Exception {
         Set<String> kept = new TreeSet<>();
         for (Setting<?> setting : everySetting()) if (setting.isKeptWhenPaused()) kept.add(setting.key);
         assertEquals(KEPT, kept);
@@ -223,7 +223,7 @@ public class PauseAnswersUnpatchedTest {
         Settings.FEED_NAVIGATION_OBSERVED_TABS.save("HOT");
         Settings.FEED_NAVIGATION_BLOCK_NEW_TABS.save(true);
 
-        // Paused, TikTok keeps every tab it sends, and a tab Hushfeed has no name for is judged
+        // Paused, TikTok keeps every tab it sends, and a tab Larpfeed has no name for is judged
         // by the reader's own choices: blocked here, so the list stays as it was. Read through
         // get(), the block would answer off and the list would answer the default, and the
         // default plus the new tab would be written over the reader's one.
@@ -255,7 +255,7 @@ public class PauseAnswersUnpatchedTest {
         Settings.BOTTOM_NAVIGATION_BLOCK_NEW_TABS.save(true);
 
         // The bottom row has its own observer with the same trap as the top one: read through
-        // get(), the block answers off and the list answers the default, and a tab Hushfeed has
+        // get(), the block answers off and the list answers the default, and a tab Larpfeed has
         // no name for is written over the reader's list with every default tab beside it.
         Setting.setPausedForProcess(true);
         List<Tab> tabs = Arrays.asList(new Tab("home"), new Tab("brand_new"));

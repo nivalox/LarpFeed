@@ -1,6 +1,6 @@
 /*
- * Copyright 2026 Hushfeed contributors
- * https://github.com/SysAdminDoc/hushfeed
+ * Copyright 2026 Larpfeed contributors
+ * https://github.com/SysAdminDoc/larpfeed
  *
  * Built on icysymmetra/tiktok-patches-for-morphe (GPL-3.0).
  */
@@ -93,7 +93,7 @@ val duetStitchPatch = bytecodePatch(
     description = "Shows the Duet and Stitch buttons on videos whose creator turned them off, " +
         "so you can still make one, and Add to Story in the share sheet and on stories when the " +
         "creator turned off content reuse. TikTok may still refuse some videos or the upload. Starts " +
-        "off. Turn it on in Hushfeed settings > Share sheet.",
+        "off. Turn it on in Larpfeed settings > Share sheet.",
 ) {
     category("Downloads")
     dependsOn(settingsPatch, sharedExtensionPatch)

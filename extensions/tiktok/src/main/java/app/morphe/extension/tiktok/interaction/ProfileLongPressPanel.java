@@ -1,6 +1,6 @@
 /*
- * Copyright 2026 Hushfeed contributors
- * https://github.com/SysAdminDoc/hushfeed
+ * Copyright 2026 Larpfeed contributors
+ * https://github.com/SysAdminDoc/larpfeed
  */
 package app.morphe.extension.tiktok.interaction;
 
@@ -49,7 +49,7 @@ public final class ProfileLongPressPanel {
             if (scene != null && LOGGED.add(scene)) {
                 Logger.printDebug(() -> "Long-press panel page: " + scene);
             }
-            // With a Long press action of Hushfeed's the menu never opens, and the page's Share
+            // With a Long press action of Larpfeed's the menu never opens, and the page's Share
             // button sheet, which reads the same config, is left as TikTok draws it.
             if (!SettingsStatus.longPressEnabled
                     || GestureActions.takesLongPress(Settings.LONG_PRESS_ACTION.get())) {

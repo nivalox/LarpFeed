@@ -1,6 +1,6 @@
 /*
- * Copyright 2026 Hushfeed contributors
- * https://github.com/SysAdminDoc/hushfeed
+ * Copyright 2026 Larpfeed contributors
+ * https://github.com/SysAdminDoc/larpfeed
  *
  * Built on icysymmetra/tiktok-patches-for-morphe (GPL-3.0).
  */
@@ -57,7 +57,7 @@ public final class PlaybackPreferenceCategory extends ConditionalPreferenceCateg
                             + "screen-time holds stop it. Restart TikTok to apply this.",
                     Settings.AUTO_ADVANCE));
             addPreference(new NumberInputPreference(context, "Auto-advance session limit",
-                    "Zero means no limit. Counts the videos Hushfeed advanced past for you, "
+                    "Zero means no limit. Counts the videos Larpfeed advanced past for you, "
                             + "not the ones you swiped yourself, and starts again when the feed "
                             + "is rebuilt or you change this number.",
                     Settings.AUTO_ADVANCE_LIMIT, "%1$s video", "%1$s videos").zeroMeansOff());

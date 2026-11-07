@@ -167,7 +167,7 @@ public class Settings extends BaseSettings {
     /** The Share to sheet TikTok opens a few seconds after its own downloader saves a video. */
     public static final BooleanSetting SKIP_POST_DOWNLOAD_SHARE_SHEET =
             new BooleanSetting("skip_post_download_share_sheet", FALSE);
-    /** How many of Hushfeed's saves run at once, "1" to "3"; the rest wait in line (#27). */
+    /** How many of Larpfeed's saves run at once, "1" to "3"; the rest wait in line (#27). */
     public static final StringSetting DOWNLOAD_SAVES_AT_ONCE = new StringSetting("download_saves_at_once", "3");
     /** Network saves wait for an unmetered network and stop when it turns metered; local saves still run. */
     public static final BooleanSetting DOWNLOAD_UNMETERED_ONLY = new BooleanSetting("download_unmetered_only", FALSE);
@@ -185,7 +185,7 @@ public class Settings extends BaseSettings {
             "mark_saved_videos", FALSE, false, Setting.parent(CHECK_SAVED_VIDEOS));
     public static final StringSetting EXTERNAL_DOWNLOADER_PACKAGE =
             new StringSetting("external_downloader_package", "");
-    /** The only package whose documented intent extras Hushfeed knows how to request. */
+    /** The only package whose documented intent extras Larpfeed knows how to request. */
     public static final String YTDLNIS_PACKAGE_NAME = "com.deniscerri.ytdl";
     private static final Setting.Availability YTDLNIS_ONLY = new Setting.Availability() {
         @Override
@@ -203,7 +203,7 @@ public class Settings extends BaseSettings {
     public static final BooleanSetting YTDLNIS_BACKGROUND = new BooleanSetting(
             "ytdlnis_background", FALSE, false, YTDLNIS_ONLY);
     public static final StringSetting DOWNLOAD_STICKER_FORMAT = new StringSetting("download_sticker_format", "mp4");
-    /** Hushfeed's own Save media box after a received chat sticker's tap (#274). */
+    /** Larpfeed's own Save media box after a received chat sticker's tap (#274). */
     public static final BooleanSetting DM_STICKER_SAVE_BOX = new BooleanSetting("dm_sticker_save_box", TRUE);
     public static final BooleanSetting SAVE_PROFILE_PICTURE = new BooleanSetting("save_profile_picture", FALSE);
     public static final BooleanSetting SAVE_STORY = new BooleanSetting("save_story", FALSE);
@@ -237,7 +237,7 @@ public class Settings extends BaseSettings {
     /**
      * The Long press choice runs only on the left and right thirds of the video, so a press in the
      * middle still opens TikTok's own menu (#136). It means something only while the choice is one
-     * Hushfeed takes.
+     * Larpfeed takes.
      */
     public static final BooleanSetting LONG_PRESS_SIDES_ONLY =
             new BooleanSetting("long_press_sides_only", FALSE, new Setting.Availability() {
@@ -360,7 +360,7 @@ public class Settings extends BaseSettings {
     public static final BooleanSetting HIDE_LAUNCHER_SHORTCUTS =
             new BooleanSetting("hide_launcher_shortcuts", FALSE);
     /**
-     * Leaves the Hushfeed row out of Settings and privacy (#264). Long pressing For You or Home
+     * Leaves the Larpfeed row out of Settings and privacy (#264). Long pressing For You or Home
      * still opens the page, and Pause brings the row back, since a paused setting reads stock.
      */
     public static final BooleanSetting HIDE_SETTINGS_ROW =
@@ -572,7 +572,7 @@ public class Settings extends BaseSettings {
     public static final StringSetting BOTTOM_TAB_NAME_SHOP = new StringSetting("bottom_tab_name_shop", "");
     public static final BooleanSetting KEEP_FOR_YOU_ON_TAB_TAP = new BooleanSetting("keep_for_you_on_tab_tap", FALSE);
     public static final BooleanSetting KEEP_FOR_YOU_ON_PULL_DOWN = new BooleanSetting("keep_for_you_on_pull_down", FALSE);
-    /** A long press on the Home tab opens Hushfeed's settings (#45). TikTok gives that press nothing of its own. */
+    /** A long press on the Home tab opens Larpfeed's settings (#45). TikTok gives that press nothing of its own. */
     public static final BooleanSetting HOME_TAB_OPENS_SETTINGS = new BooleanSetting("home_tab_opens_settings", TRUE);
     /**
      * The Home tab turns into a search button (#338): its icon and name read Search, a tap opens
@@ -608,7 +608,7 @@ public class Settings extends BaseSettings {
      */
     public static final BooleanSetting COMMENT_TRANSLATE_BUTTON = new BooleanSetting("comment_translate_button", FALSE);
     /**
-     * Whether the toggle behind that button was last turned on by the button Hushfeed showed. No
+     * Whether the toggle behind that button was last turned on by the button Larpfeed showed. No
      * row of its own: it is how turning the switch off knows to answer that toggle off, rather
      * than one TikTok turned on itself. Kept out of import and export for the same reason as
      * {@link #LAUNCHER_SHORTCUTS_REMOVED}: the toggle it describes lives in TikTok's storage on
@@ -896,7 +896,7 @@ public class Settings extends BaseSettings {
             "idle_leave_minutes", 0).withRange(0, 240);
     /**
      * A daily budget for the feed, off at zero. The two counts are independent of
-     * {@link #AUTO_ADVANCE_LIMIT}, which only ever counted videos Hushfeed itself advanced past.
+     * {@link #AUTO_ADVANCE_LIMIT}, which only ever counted videos Larpfeed itself advanced past.
      */
     public static final IntegerSetting SESSION_BUDGET_VIDEOS = new IntegerSetting(
             "session_budget_videos", 0).withRange(0, 2000);
@@ -996,7 +996,7 @@ public class Settings extends BaseSettings {
     public static final BooleanSetting NOT_INTERESTED_BUTTON = new BooleanSetting("not_interested_button", FALSE);
     /**
      * Mute feed videos. Whether the feed is muted right now is the phone's state, like the volume,
-     * so a backup doesn't carry it; paused, Hushfeed plays the feed with sound as TikTok would.
+     * so a backup doesn't carry it; paused, Larpfeed plays the feed with sound as TikTok would.
      */
     public static final BooleanSetting FEED_MUTED = new BooleanSetting("feed_muted", FALSE, false, false);
     public static final BooleanSetting FEED_MUTE_BUTTON = new BooleanSetting("feed_mute_button", FALSE);
@@ -1053,7 +1053,7 @@ public class Settings extends BaseSettings {
      * Lets the video draw down behind TikTok's bottom tab bar and takes the bar's own background
      * away, so the tabs sit over the picture (#145). VideoOverlayHider collapses the spacer under
      * each video and swaps the bar's background for a clear one, and puts both back when this goes
-     * off or Hushfeed is paused.
+     * off or Larpfeed is paused.
      */
     public static final BooleanSetting SEE_THROUGH_BOTTOM_BAR = new BooleanSetting("see_through_bottom_bar", FALSE);
     /**
@@ -1142,7 +1142,7 @@ public class Settings extends BaseSettings {
      * Lets the main feed's video draw up under the status bar, with the clock over it (#145).
      * VideoOverlayHider collapses the spacer TikTok keeps above each video for the bar and
      * SeeThroughStatusBar clears the bar's color while the feed is in front; both go back when
-     * this goes off or Hushfeed is paused. Read on each layout.
+     * this goes off or Larpfeed is paused. Read on each layout.
      */
     public static final BooleanSetting SEE_THROUGH_STATUS_BAR = new BooleanSetting("see_through_status_bar", FALSE);
     /**
@@ -1614,8 +1614,8 @@ public class Settings extends BaseSettings {
     );
 
     static {
-        // Hushfeed's own state: remembered positions and choices, lists it observed, counters.
-        // They keep their values while Hushfeed is paused; every other setting answers its
+        // Larpfeed's own state: remembered positions and choices, lists it observed, counters.
+        // They keep their values while Larpfeed is paused; every other setting answers its
         // unpatched value then (Setting#get).
         Setting.keepWhenPaused(LAUNCHER_SHORTCUTS_REMOVED, FEED_NAVIGATION_OBSERVED_TABS,
                 BOTTOM_NAVIGATION_OBSERVED_TABS, DOWNLOAD_PATH, DOWNLOAD_PATHS_MIGRATED,
@@ -1630,14 +1630,14 @@ public class Settings extends BaseSettings {
                 // nothing and holds nothing, but its record still has to name the right day.
                 SESSION_BUDGET_RESET_HOUR);
         // Guests cannot use Profile to reach settings. Keep their chosen Home shortcut so
-        // they can reopen settings and resume Hushfeed after leaving the Pause screen.
+        // they can reopen settings and resume Larpfeed after leaving the Pause screen.
         Setting.keepWhenPaused(HOME_TAB_OPENS_SETTINGS);
         // A lock that Pause turned off would open to anyone who can make the safe-mode file,
         // which any file manager can. The lock stays what the owner set.
         Setting.keepWhenPaused(APP_LOCK, APP_LOCK_TIMEOUT);
         // Downloads rewrite TikTok's own save folder and file name with no switch in front, so
         // pausing cannot give TikTok its own back. They keep the reader's choice instead of
-        // falling back to Hushfeed's defaults. The README lists them as not paused.
+        // falling back to Larpfeed's defaults. The README lists them as not paused.
         Setting.keepWhenPaused(DOWNLOAD_VIDEO_PATH, DOWNLOAD_PHOTO_PATH, DOWNLOAD_STICKER_PATH,
                 DOWNLOAD_STICKER_FORMAT, DOWNLOAD_VIDEO_FILENAME_TEMPLATE, DOWNLOAD_PHOTO_FILENAME_TEMPLATE,
                 DOWNLOAD_COMMENT_MEDIA_FILENAME_TEMPLATE);

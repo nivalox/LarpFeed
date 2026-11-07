@@ -126,7 +126,7 @@ public class ShareTargetsTest {
         shadowOf(context.getPackageManager()).addIntentFilterForActivity(share, filter);
     }
 
-    /** The row as the patched sheet builds it: Hushfeed's filter on the model, the picked apps on the finished row. */
+    /** The row as the patched sheet builds it: Larpfeed's filter on the model, the picked apps on the finished row. */
     private static List<?> sheet(List<?> row) {
         return ShareTargets.withPicked(ShareModelFilter.channels(row));
     }
@@ -143,13 +143,13 @@ public class ShareTargetsTest {
 
         List<?> added = sheet(row);
 
-        assertEquals(Arrays.asList("whatsapp", "hushfeed_app_" + TELEGRAM, "hushfeed_app_" + SIGNAL, "more"), keys(added));
+        assertEquals(Arrays.asList("whatsapp", "larpfeed_app_" + TELEGRAM, "larpfeed_app_" + SIGNAL, "more"), keys(added));
         ShareChannelInfo telegram = ((Channel) added.get(1)).info;
         assertEquals(TELEGRAM, telegram.packageName);
         assertEquals("Telegram", telegram.labelName);
         assertNotNull("a no-target component sends to the package", telegram.targetComponentInfo);
-        assertNotNull(icons.get("hushfeed_app_" + TELEGRAM));
-        assertNotNull(icons.get("hushfeed_app_" + TELEGRAM + ShareTargets.SQUARE_ICON_SUFFIX));
+        assertNotNull(icons.get("larpfeed_app_" + TELEGRAM));
+        assertNotNull(icons.get("larpfeed_app_" + TELEGRAM + ShareTargets.SQUARE_ICON_SUFFIX));
         assertEquals("TikTok's own list is left as it was", 2, row.size());
     }
 
@@ -164,7 +164,7 @@ public class ShareTargetsTest {
         List<?> row = Collections.singletonList(new Channel("sms", null, null));
         Settings.SHARE_ADDED_APPS.save(SIGNAL);
 
-        assertEquals(Arrays.asList("sms", "hushfeed_app_" + SIGNAL), keys(sheet(row)));
+        assertEquals(Arrays.asList("sms", "larpfeed_app_" + SIGNAL), keys(sheet(row)));
     }
 
     @Test public void aHiddenRowStaysEmpty() {
@@ -179,7 +179,7 @@ public class ShareTargetsTest {
         Settings.SHARE_HIDDEN_ITEMS.save("sms");
         Settings.SHARE_ADDED_APPS.save(TELEGRAM);
 
-        assertEquals(Arrays.asList("hushfeed_app_" + TELEGRAM, "more"), keys(sheet(row)));
+        assertEquals(Arrays.asList("larpfeed_app_" + TELEGRAM, "more"), keys(sheet(row)));
     }
 
     @Test public void unpatchedNothingIsAdded() {
@@ -201,11 +201,11 @@ public class ShareTargetsTest {
 
         List<?> added = sheet(Collections.singletonList(new Channel("more", null, null)));
 
-        assertEquals(Arrays.asList("hushfeed_app_" + TELEGRAM, "more"), keys(added));
+        assertEquals(Arrays.asList("larpfeed_app_" + TELEGRAM, "more"), keys(added));
     }
 
     @Test public void anAddedChannelSharesTheLinkAndTikToksOwnAreLeftToTikTok() {
-        assertEquals(ShareTargets.LINK_SHARE_MODE, ShareTargets.shareModeOf("hushfeed_app_" + TELEGRAM));
+        assertEquals(ShareTargets.LINK_SHARE_MODE, ShareTargets.shareModeOf("larpfeed_app_" + TELEGRAM));
         assertEquals(ShareTargets.NOT_OURS, ShareTargets.shareModeOf("whatsapp"));
         assertEquals(ShareTargets.NOT_OURS, ShareTargets.shareModeOf("more"));
         assertEquals(ShareTargets.NOT_OURS, ShareTargets.shareModeOf(null));

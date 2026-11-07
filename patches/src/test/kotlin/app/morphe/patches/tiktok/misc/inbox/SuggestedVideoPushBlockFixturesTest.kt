@@ -62,7 +62,7 @@ class SuggestedVideoPushBlockFixturesTest {
     }
 
     @Test
-    fun `only NotificationManager's two notify calls are taken, and Hushfeed's own code is left alone`() {
+    fun `only NotificationManager's two notify calls are taken, and Larpfeed's own code is left alone`() {
         val notifying = method("LX/Poster;", """
             invoke-virtual {v0, v1, v2, v3}, Landroid/app/NotificationManager;->notify(Ljava/lang/String;ILandroid/app/Notification;)V
             invoke-virtual {v0, v2, v3}, Landroid/app/NotificationManager;->notify(ILandroid/app/Notification;)V

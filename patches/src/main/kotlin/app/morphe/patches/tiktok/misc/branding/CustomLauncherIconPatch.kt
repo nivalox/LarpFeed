@@ -1,6 +1,6 @@
 /*
- * Copyright 2026 Hushfeed contributors
- * https://github.com/SysAdminDoc/hushfeed
+ * Copyright 2026 Larpfeed contributors
+ * https://github.com/SysAdminDoc/larpfeed
  */
 package app.morphe.patches.tiktok.misc.branding
 
@@ -35,7 +35,7 @@ private const val MONOCHROME = "monochrome"
 internal const val GLYPH_FILL = "#ffffffff"
 
 /** The drawable a supplied picture is added as. */
-internal const val PICTURE_NAME = "hushfeed_launcher_picture"
+internal const val PICTURE_NAME = "larpfeed_launcher_picture"
 
 /** An adaptive icon's layer is 108dp, which is 432 pixels on the densest (xxxhdpi) screens. */
 internal const val MIN_PICTURE_SIDE = 432
@@ -48,8 +48,8 @@ private const val MAX_PICTURE_MEGABYTES = 8
 private val PNG_SIGNATURE = byteArrayOf(0x89.toByte(), 0x50, 0x4e, 0x47, 0x0d, 0x0a, 0x1a, 0x0a)
 
 /** The colors the Material You style draws with, which [MATERIAL_YOU_COLORS] fills in. */
-internal const val ICON_BACKGROUND_COLOR = "hushfeed_launcher_background"
-internal const val ICON_GLYPH_COLOR = "hushfeed_launcher_glyph"
+internal const val ICON_BACKGROUND_COLOR = "larpfeed_launcher_background"
+internal const val ICON_GLYPH_COLOR = "larpfeed_launcher_glyph"
 
 /**
  * The looks this patch offers. Each one only rewrites the adaptive icon, so it shows on Android 8
@@ -84,14 +84,14 @@ internal const val STATUS_ICON = "status_icon_l"
 /** What the status bar shows for TikTok's notifications (Discussion #114). */
 internal enum class NotificationIcon(val key: String, val label: String) {
     TIKTOK("tiktok", "TikTok's note"),
-    HUSHFEED("hushfeed", "Hushfeed's H"),
+    LARPFEED("larpfeed", "Larpfeed's H"),
 }
 
 /**
- * Hushfeed's H as a status bar icon, white on clear inside the 20dp middle a status bar icon
+ * Larpfeed's H as a status bar icon, white on clear inside the 20dp middle a status bar icon
  * keeps to. Android draws only the shape, in the status bar's own color, so it's one path.
  */
-internal const val HUSHFEED_STATUS_ICON =
+internal const val LARPFEED_STATUS_ICON =
     "<vector xmlns:android=\"http://schemas.android.com/apk/res/android\"\n" +
         "    android:width=\"24dp\" android:height=\"24dp\"\n" +
         "    android:viewportWidth=\"24\" android:viewportHeight=\"24\">\n" +
@@ -104,7 +104,7 @@ val customLauncherIconPatch = resourcePatch(
     name = "Custom launcher icon",
     description = "Gives TikTok's home screen icon a themed version that takes your " +
         "wallpaper's color on Android 13 and up. The options can also make it black, plain, " +
-        "Material You, any background color or your own picture, and put Hushfeed's H in the " +
+        "Material You, any background color or your own picture, and put Larpfeed's H in the " +
         "status bar. Only patching again without it puts the old icons back.",
     default = false,
 ) {
@@ -148,7 +148,7 @@ val customLauncherIconPatch = resourcePatch(
         values = NotificationIcon.entries.associate { it.label to it.key },
         title = "Notification icon",
         description = "The small icon TikTok's notifications show in the status bar. TikTok's " +
-            "note keeps it as it is. Hushfeed's H swaps it for a sharp H on every screen.",
+            "note keeps it as it is. Larpfeed's H swaps it for a sharp H on every screen.",
         required = false,
     )
 
@@ -205,11 +205,11 @@ val customLauncherIconPatch = resourcePatch(
                 restyleAdaptiveIcon(icon, layer, chosen, pictureReference, background)
             }
         }
-        if (statusIcon == NotificationIcon.HUSHFEED) {
+        if (statusIcon == NotificationIcon.LARPFEED) {
             // An anydpi file wins over TikTok's xhdpi picture on every screen, and the picture
             // itself stays byte for byte, so only a configuration is added.
             res.resolve("drawable-anydpi/$STATUS_ICON.xml").apply { parentFile.mkdirs() }
-                .writeText(HUSHFEED_STATUS_ICON, Charsets.UTF_8)
+                .writeText(LARPFEED_STATUS_ICON, Charsets.UTF_8)
         }
         BuildDetails.applied(get(BUILD_DETAILS_ASSET), "customLauncherIcon")
     }

@@ -98,10 +98,10 @@ function New-ApkSigningSession {
     }
     $variables = [Environment]::GetEnvironmentVariables([EnvironmentVariableTarget]::Process)
     if ($BoundParameters.ContainsKey('KeystorePassword')) { $storePassword = [string]$BoundParameters['KeystorePassword'] }
-    elseif ($variables.Contains('HUSHFEED_SIDELOAD_KEYSTORE_PASSWORD')) { $storePassword = [string]$variables['HUSHFEED_SIDELOAD_KEYSTORE_PASSWORD'] }
+    elseif ($variables.Contains('LARPFEED_SIDELOAD_KEYSTORE_PASSWORD')) { $storePassword = [string]$variables['LARPFEED_SIDELOAD_KEYSTORE_PASSWORD'] }
     else { $storePassword = 'sideload' }
     if ($BoundParameters.ContainsKey('KeyPassword')) { $entryPassword = [string]$BoundParameters['KeyPassword'] }
-    elseif ($variables.Contains('HUSHFEED_SIDELOAD_KEY_PASSWORD')) { $entryPassword = [string]$variables['HUSHFEED_SIDELOAD_KEY_PASSWORD'] }
+    elseif ($variables.Contains('LARPFEED_SIDELOAD_KEY_PASSWORD')) { $entryPassword = [string]$variables['LARPFEED_SIDELOAD_KEY_PASSWORD'] }
     else { $entryPassword = $storePassword }
     $tools = Resolve-ApkSigningTools -Root $Root -Sdk $Sdk -KeystoreType $KeystoreType
     $session = [pscustomobject]@{
@@ -133,7 +133,7 @@ function New-ApkSigningSession {
             @{ Value = $entryPassword; Property = 'EntryPasswordSpec' }
         )) {
             if ($entry.Value.Length -eq 0) { continue }
-            $name = 'HUSHFEED_SIGNING_' + [Guid]::NewGuid().ToString('N')
+            $name = 'LARPFEED_SIGNING_' + [Guid]::NewGuid().ToString('N')
             $session.Environment[$name] = [Environment]::GetEnvironmentVariable($name, [EnvironmentVariableTarget]::Process)
             [Environment]::SetEnvironmentVariable($name, $entry.Value, [EnvironmentVariableTarget]::Process)
             $session.($entry.Property) = "env:$name"

@@ -1,6 +1,6 @@
 /*
- * Copyright 2026 Hushfeed contributors
- * https://github.com/SysAdminDoc/hushfeed
+ * Copyright 2026 Larpfeed contributors
+ * https://github.com/SysAdminDoc/larpfeed
  */
 package app.morphe.patches.tiktok.privacy
 
@@ -48,7 +48,7 @@ internal const val REMOVE_UNAVAILABLE_PATH = "/aweme/v1/aweme/collect/removeinva
 @Suppress("unused")
 val accountCleanupPatch = bytecodePatch(
     name = "Account cleanup",
-    description = "Adds Remove all reposts, Remove all likes and Clear Favorites to Hushfeed " +
+    description = "Adds Remove all reposts, Remove all likes and Clear Favorites to Larpfeed " +
         "settings > Privacy. Each one takes items off your account one at a time through TikTok's " +
         "own requests, with a pause between them, and stops on the first error.",
 ) {

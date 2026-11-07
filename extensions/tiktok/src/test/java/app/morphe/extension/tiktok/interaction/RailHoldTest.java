@@ -198,7 +198,7 @@ public class RailHoldTest {
     @Test public void theSwitchesGreyOutWhereTikToksHoldCantStart() {
         assertTrue(Settings.RAIL_HOLD_COMMENT.isAvailable());
         Settings.LONG_PRESS_ACTION.save("comments");
-        assertFalse("the long press is Hushfeed's", Settings.RAIL_HOLD_COMMENT.isAvailable());
+        assertFalse("the long press is Larpfeed's", Settings.RAIL_HOLD_COMMENT.isAvailable());
         assertFalse(Settings.RAIL_HOLD_SHARE.isAvailable());
         assertFalse(Settings.RAIL_HOLD_FAVORITES.isAvailable());
         Settings.LONG_PRESS_ACTION.save("default");

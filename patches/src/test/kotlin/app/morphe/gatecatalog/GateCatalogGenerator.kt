@@ -35,7 +35,7 @@ import java.util.zip.ZipInputStream
  * Rebuilds the Feature Gate Lab's offline catalogs from each TikTok build the bundle declares.
  *
  * `./gradlew :patches:generateGateCatalog` reads the declared builds' APKs from the fixture
- * folder (`HUSHFEED_FIXTURE_DIR`; `-Papk=<a.apk>;<b.apk>` names them instead) and writes the
+ * folder (`LARPFEED_FIXTURE_DIR`; `-Papk=<a.apk>;<b.apk>` names them instead) and writes the
  * `Generated*Catalog.java` files and `GeneratedGateCatalogBuilds.java` under the extension's
  * featuregatelab package. Each file stores the rows every build has once and each build's other
  * rows beside them, since two builds share nearly every row: on 47.0.3 and 47.1.3 all but a few
@@ -745,7 +745,7 @@ object GateCatalogGenerator {
         error("${apk.name} has no manifest element")
     }
 
-    private const val HEADER = "/*\n * Copyright 2026 Hushfeed contributors\n * https://github.com/SysAdminDoc/hushfeed\n *\n" +
+    private const val HEADER = "/*\n * Copyright 2026 Larpfeed contributors\n * https://github.com/SysAdminDoc/larpfeed\n *\n" +
         " * Built on icysymmetra/tiktok-patches-for-morphe (GPL-3.0).\n */\n" +
         "package app.morphe.extension.tiktok.featuregatelab;\n\n"
 

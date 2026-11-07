@@ -66,7 +66,7 @@ private data class OpenDebugTargets(
  *
  * TikTok 47.0.3 can already include that singleton in the support group. Removing it first avoids
  * duplicate Compose keys, which otherwise leave the later, natively sorted row on screen. With
- * Hide the Hushfeed row on (#264) the extension leaves it out, so it shows nowhere in the list.
+ * Hide the Larpfeed row on (#264) the extension leaves it out, so it shows nowhere in the list.
  * The insert stays branch-free: an if-eqz here crashed ART's JIT compiling this method.
  */
 internal fun settingsRowMoveToFrontInstructions(
@@ -349,9 +349,9 @@ private fun BytecodePatchContext.settingsIconResourceId(): Int {
 @Suppress("unused")
 val settingsPatch = bytecodePatch(
     name = "Settings",
-    description = "Adds the Hushfeed settings page to TikTok, at the top of Settings and " +
+    description = "Adds the Larpfeed settings page to TikTok, at the top of Settings and " +
         "privacy. Pressing and holding For You at the top of the feed opens it too. That's where " +
-        "you turn Hushfeed's features on and off. Works as soon as you patch it in, with no switch.",
+        "you turn Larpfeed's features on and off. Works as soon as you patch it in, with no switch.",
     default = true,
 ) {
     category("Settings")
@@ -362,7 +362,7 @@ val settingsPatch = bytecodePatch(
     execute {
         // First, before any other write: TikTok's own crash recovery would delete what this
         // screen saves.
-        keepHushfeedPreferenceFiles(
+        keepLarpfeedPreferenceFiles(
             LaunchCrashKeepListFingerprint.method,
             LaunchCrashKeepListFingerprint.classDef.methods,
         )
@@ -614,7 +614,7 @@ val settingsPatch = bytecodePatch(
         val moveResultIndex = getStringInvokeIndex + 1
         val titleStringRegister = compose.getInstruction<OneRegisterInstruction>(moveResultIndex).registerA
 
-        composeMutable.addInstruction(moveResultIndex + 1, "const-string v$titleStringRegister, \"Hushfeed\"")
+        composeMutable.addInstruction(moveResultIndex + 1, "const-string v$titleStringRegister, \"Larpfeed\"")
 
         OpenDebugCellVmDefaultStateFingerprint.methodOrNull?.let { defaultState ->
             defaultState.implementationOrPatchException("Settings")

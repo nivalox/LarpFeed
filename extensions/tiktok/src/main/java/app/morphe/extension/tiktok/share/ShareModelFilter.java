@@ -1,6 +1,6 @@
 /*
- * Copyright 2026 Hushfeed contributors
- * https://github.com/SysAdminDoc/hushfeed
+ * Copyright 2026 Larpfeed contributors
+ * https://github.com/SysAdminDoc/larpfeed
  *
  * Built on icysymmetra/tiktok-patches-for-morphe (GPL-3.0).
  */
@@ -72,7 +72,7 @@ public final class ShareModelFilter {
         return resolveHidden(hiddenSetting(surface).get(), Settings.SHARE_HIDDEN_ITEMS.get());
     }
 
-    /** The same, from the saved lists: the settings row shows these even while Hushfeed is paused. */
+    /** The same, from the saved lists: the settings row shows these even while Larpfeed is paused. */
     public static String savedHiddenItems(ShareSurface surface) {
         return resolveHidden(hiddenSetting(surface).savedValue(), Settings.SHARE_HIDDEN_ITEMS.savedValue());
     }

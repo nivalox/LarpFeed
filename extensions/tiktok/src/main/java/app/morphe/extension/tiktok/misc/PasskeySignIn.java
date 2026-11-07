@@ -1,6 +1,6 @@
 /*
- * Copyright 2026 Hushfeed contributors
- * https://github.com/SysAdminDoc/hushfeed
+ * Copyright 2026 Larpfeed contributors
+ * https://github.com/SysAdminDoc/larpfeed
  */
 package app.morphe.extension.tiktok.misc;
 
@@ -17,7 +17,7 @@ import app.morphe.extension.tiktok.settings.SettingsStatus;
  * The hook is TikTok's check of whether this phone can use passkeys at all. With the switch on
  * it answers no, which is what TikTok hears on a phone without a recent Google Play services,
  * and its sign-in screens take the routes they already have for such a phone. With it off,
- * and while Hushfeed is paused, the check runs as TikTok ships it.
+ * and while Larpfeed is paused, the check runs as TikTok ships it.
  *
  * <p>TikTok's saved-account list asks once, when its service is built, and that may be before
  * the settings context exists, so a read then comes from the saved file.

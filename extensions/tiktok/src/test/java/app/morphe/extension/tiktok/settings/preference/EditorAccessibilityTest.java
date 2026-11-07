@@ -1,6 +1,6 @@
 /*
- * Copyright 2026 Hushfeed contributors
- * https://github.com/SysAdminDoc/hushfeed
+ * Copyright 2026 Larpfeed contributors
+ * https://github.com/SysAdminDoc/larpfeed
  *
  * Built on icysymmetra/tiktok-patches-for-morphe (GPL-3.0).
  */
@@ -45,7 +45,7 @@ public class EditorAccessibilityTest {
     @Before public void seedValues() {
         Settings.BLOCKED_CAPTION_WORDS.save("spoiler");
         Settings.MAX_VIDEO_SECONDS.save(42);
-        Settings.DOWNLOAD_VIDEO_PATH.save("Movies/Hushfeed");
+        Settings.DOWNLOAD_VIDEO_PATH.save("Movies/Larpfeed");
     }
 
     @After public void resetValues() {
@@ -97,7 +97,7 @@ public class EditorAccessibilityTest {
                     DownloadDestination.Kind.VIDEO
             );
             assertEditor(destination.onCreateDialogView(), "Video destination",
-                    "Movies/Hushfeed", InputType.TYPE_CLASS_TEXT);
+                    "Movies/Larpfeed", InputType.TYPE_CLASS_TEXT);
         }
     }
 

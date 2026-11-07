@@ -1,6 +1,6 @@
 /*
- * Copyright 2026 Hushfeed contributors
- * https://github.com/SysAdminDoc/hushfeed
+ * Copyright 2026 Larpfeed contributors
+ * https://github.com/SysAdminDoc/larpfeed
  */
 package app.morphe.extension.tiktok.speed;
 
@@ -51,7 +51,7 @@ import java.util.TreeSet;
  * by arming TikTok's own lock just before its release reads the state.
  *
  * <p>There is one bubble at most. A new hold, letting go, the video on screen changing, the window
- * losing focus (a pause, a dialog, the notification shade), Hushfeed Pause and the switch going off
+ * losing focus (a pause, a dialog, the notification shade), Larpfeed Pause and the switch going off
  * each take it down, and a recreated activity drops it with its old views.
  *
  * <p>{@link Settings#HOLD_SPEED_HUD_STYLE} picks how the bubble looks: {@link #PILL}, the wide

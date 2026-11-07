@@ -1,6 +1,6 @@
 /*
- * Copyright 2026 Hushfeed contributors
- * https://github.com/SysAdminDoc/hushfeed
+ * Copyright 2026 Larpfeed contributors
+ * https://github.com/SysAdminDoc/larpfeed
  */
 package app.morphe.extension.tiktok.comment;
 
@@ -13,7 +13,7 @@ import app.morphe.extension.tiktok.settings.Settings;
  *
  * <p>The hook is TikTok's own gate for building the voice comment entry points, the lazily read
  * {@code audio_comment_publish} value. With the switch on it answers yes; with it off, and while
- * Hushfeed is paused, TikTok reads its own value as it ships.
+ * Larpfeed is paused, TikTok reads its own value as it ships.
  */
 @SuppressWarnings("unused")
 public final class VoiceComments {

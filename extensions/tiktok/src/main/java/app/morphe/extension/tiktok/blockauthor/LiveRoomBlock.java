@@ -1,6 +1,6 @@
 /*
- * Copyright 2026 Hushfeed contributors
- * https://github.com/SysAdminDoc/hushfeed
+ * Copyright 2026 Larpfeed contributors
+ * https://github.com/SysAdminDoc/larpfeed
  */
 package app.morphe.extension.tiktok.blockauthor;
 
@@ -70,7 +70,7 @@ public final class LiveRoomBlock {
     private static VideoAuthor pendingUndo;
     private static int undoGeneration;
 
-    /** True while the switch is on and Hushfeed isn't paused. */
+    /** True while the switch is on and Larpfeed isn't paused. */
     static boolean enabled() {
         return Settings.BLOCK_AUTHOR_BUTTON.get() && !Setting.isPaused();
     }

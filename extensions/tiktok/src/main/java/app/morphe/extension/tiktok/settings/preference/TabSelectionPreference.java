@@ -100,7 +100,7 @@ public class TabSelectionPreference extends Preference {
         Set<String> selected = parseEnabledKeys(value);
         List<OptionRow> observedOptions = getObservedOptions();
         if (nothingSeenYet()) {
-            setSummary(bottomTabs ? "Open the feed once so Hushfeed can see which bottom tabs TikTok loaded." : "Open the feed once so Hushfeed can see which tabs TikTok loaded.");
+            setSummary(bottomTabs ? "Open the feed once so Larpfeed can see which bottom tabs TikTok loaded." : "Open the feed once so Larpfeed can see which tabs TikTok loaded.");
             return;
         }
 
@@ -179,8 +179,8 @@ public class TabSelectionPreference extends Preference {
         if (empty) {
             TextView emptyState = new TextView(context);
             emptyState.setText(L10n.t(context, bottomTabs
-                    ? "Open the feed once so Hushfeed can see which bottom tabs TikTok loaded."
-                    : "Open the feed once so Hushfeed can see which tabs TikTok loaded."));
+                    ? "Open the feed once so Larpfeed can see which bottom tabs TikTok loaded."
+                    : "Open the feed once so Larpfeed can see which tabs TikTok loaded."));
             emptyState.setTextColor(SettingsUi.textSecondary());
             emptyState.setTextSize(SettingsUi.TEXT_BODY_SMALL);
             emptyState.setGravity(Gravity.CENTER);

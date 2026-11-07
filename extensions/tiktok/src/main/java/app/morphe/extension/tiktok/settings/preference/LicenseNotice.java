@@ -1,6 +1,6 @@
 /*
- * Copyright 2026 Hushfeed contributors
- * https://github.com/SysAdminDoc/hushfeed
+ * Copyright 2026 Larpfeed contributors
+ * https://github.com/SysAdminDoc/larpfeed
  *
  * Built on icysymmetra/tiktok-patches-for-morphe (GPL-3.0).
  */
@@ -22,11 +22,11 @@ public final class LicenseNotice {
 
     /** Where the full licence text lives, for the button beside the notice. */
     public static final String LICENSE_URL =
-            "https://github.com/SysAdminDoc/hushfeed/blob/main/LICENSE";
+            "https://github.com/SysAdminDoc/larpfeed/blob/main/LICENSE";
 
     /** The NOTICE file, verbatim. */
     public static final String TEXT =
-            "Hushfeed NOTICE\n" +
+            "Larpfeed NOTICE\n" +
             "===============\n" +
             "\n" +
             "This file contains Section 7 notices of the GNU General Public License v3 as\n" +
@@ -35,7 +35,7 @@ public final class LicenseNotice {
             "the full licence text, see the LICENSE file or:\n" +
             "https://www.gnu.org/licenses/gpl-3.0.html\n" +
             "\n" +
-            "Hushfeed is built on icysymmetra/tiktok-patches-for-morphe, which is built on\n" +
+            "Larpfeed is built on icysymmetra/tiktok-patches-for-morphe, which is built on\n" +
             "Morphe, which hard forked ReVanced. A few build files, among them the list of\n" +
             "supported TikTok builds and the patch list generator, reached\n" +
             "tiktok-patches-for-morphe from De-Vanced, which is licensed under the GNU\n" +
@@ -44,7 +44,7 @@ public final class LicenseNotice {
             "to the person using the software, so it is also reachable in the app itself,\n" +
             "under Settings, About, Licenses.\n" +
             "\n" +
-            "  Hushfeed                https://github.com/SysAdminDoc/hushfeed\n" +
+            "  Larpfeed                https://github.com/SysAdminDoc/larpfeed\n" +
             "  tiktok-patches-for-morphe  https://github.com/icysymmetra/tiktok-patches-for-morphe\n" +
             "  De-Vanced               https://github.com/RookieEnough/De-Vanced\n" +
             "  morphe-patches          https://github.com/MorpheApp/morphe-patches\n" +
@@ -52,7 +52,7 @@ public final class LicenseNotice {
             "  ReVanced                https://gitlab.com/ReVanced/revanced-patches\n" +
             "\n" +
             "\n" +
-            "Hushfeed: Project Name Restriction\n" +
+            "Larpfeed: Project Name Restriction\n" +
             "----------------------------------\n" +
             "\n" +
             "This license does not grant permission to use the name \"Morphe\", or any name, logo, or branding that is confusingly similar, as the name or primary identifying mark of any modified version, fork, or derivative work.\n" +
@@ -176,7 +176,7 @@ public final class LicenseNotice {
             "\n" +
             "The MP3 choice under Sound format uses jump3r 1.0.5, a Java port of the LAME MP3\n" +
             "encoder, unmodified and carried as its own library inside the extension. You can\n" +
-            "replace it with your own build of that library. Hushfeed's own code stays under the\n" +
+            "replace it with your own build of that library. Larpfeed's own code stays under the\n" +
             "GPLv3, which the LGPL allows.\n" +
             "\n" +
             "\n" +

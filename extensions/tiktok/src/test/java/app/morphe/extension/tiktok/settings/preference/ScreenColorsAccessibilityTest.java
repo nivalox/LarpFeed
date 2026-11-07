@@ -2,7 +2,7 @@
  * Copyright 2026 HushGram contributors
  * https://github.com/SysAdminDoc/HushGram
  *
- * Modified for hushfeed (TikTok), 2026.
+ * Modified for larpfeed (TikTok), 2026.
  */
 package app.morphe.extension.tiktok.settings.preference;
 

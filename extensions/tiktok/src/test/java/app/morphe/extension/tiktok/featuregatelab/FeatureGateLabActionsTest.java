@@ -885,12 +885,12 @@ public class FeatureGateLabActionsTest {
     }
 
     private static String bannerText(Activity activity) {
-        View label = activity.findViewById(android.R.id.content).findViewWithTag("hushfeed_settings_action_message");
+        View label = activity.findViewById(android.R.id.content).findViewWithTag("larpfeed_settings_action_message");
         return label instanceof TextView ? ((TextView) label).getText().toString() : null;
     }
 
     private static View bannerAction(Activity activity) {
-        return activity.findViewById(android.R.id.content).findViewWithTag("hushfeed_settings_action_button");
+        return activity.findViewById(android.R.id.content).findViewWithTag("larpfeed_settings_action_button");
     }
 
     /** The banner once the Lab's file worker has returned and what it posted has run. */

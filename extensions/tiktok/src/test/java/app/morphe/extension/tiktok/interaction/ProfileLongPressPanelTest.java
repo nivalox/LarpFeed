@@ -1,6 +1,6 @@
 /*
- * Copyright 2026 Hushfeed contributors
- * https://github.com/SysAdminDoc/hushfeed
+ * Copyright 2026 Larpfeed contributors
+ * https://github.com/SysAdminDoc/larpfeed
  */
 package app.morphe.extension.tiktok.interaction;
 
@@ -50,7 +50,7 @@ public class ProfileLongPressPanelTest {
         assertNull(ProfileLongPressPanel.scene(null));
     }
 
-    @Test public void aLongPressActionOfHushfeedsLeavesTheProfileAlone() {
+    @Test public void aLongPressActionOfLarpfeedsLeavesTheProfileAlone() {
         Settings.LONG_PRESS_FULL_MENU_ON_PROFILES.save(true);
         Settings.LONG_PRESS_ACTION.save("copy_link");
         assertEquals("others_homepage", ProfileLongPressPanel.scene("others_homepage"));

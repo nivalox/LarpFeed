@@ -1,6 +1,6 @@
 /*
- * Copyright 2026 Hushfeed contributors
- * https://github.com/SysAdminDoc/hushfeed
+ * Copyright 2026 Larpfeed contributors
+ * https://github.com/SysAdminDoc/larpfeed
  *
  * Built on icysymmetra/tiktok-patches-for-morphe (GPL-3.0).
  */
@@ -136,7 +136,7 @@ private val MOVES = setOf(Opcode.MOVE, Opcode.MOVE_FROM16, Opcode.MOVE_16)
 val hideCommentEggsPatch = bytecodePatch(
     name = "Hide comment popup ads",
     description = "Stops the brand animation that pops up over the comments when someone " +
-        "types a word or emoji an advertiser paid for. Starts off. Turn it on in Hushfeed " +
+        "types a word or emoji an advertiser paid for. Starts off. Turn it on in Larpfeed " +
         "settings > Comments.",
 ) {
     category("Comments")

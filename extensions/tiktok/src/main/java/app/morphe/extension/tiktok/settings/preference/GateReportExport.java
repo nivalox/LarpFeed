@@ -1,6 +1,6 @@
 /*
- * Copyright 2026 Hushfeed contributors
- * https://github.com/SysAdminDoc/hushfeed
+ * Copyright 2026 Larpfeed contributors
+ * https://github.com/SysAdminDoc/larpfeed
  *
  * Built on icysymmetra/tiktok-patches-for-morphe (GPL-3.0).
  */
@@ -55,7 +55,7 @@ final class GateReportExport {
             Utils.showToastShort(L10n.t("The last report is still being saved"));
             return;
         }
-        boolean started = Utils.runOnOwnThread("Hushfeed-gate-report", () -> {
+        boolean started = Utils.runOnOwnThread("Larpfeed-gate-report", () -> {
             try {
                 Utils.showToastLong(L10n.f("Report saved to %1$s", write(app, report)));
             } catch (IOException | RuntimeException error) {
@@ -74,7 +74,7 @@ final class GateReportExport {
     }
 
     /** The folder under Download the report lands in, spelt the way a file manager shows it. */
-    static final String FOLDER = "Download/Hushfeed";
+    static final String FOLDER = "Download/Larpfeed";
 
     /**
      * A name two reports a second apart can be told apart by, the way the settings backup and the
@@ -82,7 +82,7 @@ final class GateReportExport {
      * read a date off.
      */
     static String fileName() {
-        return "hushfeed-gate-report-" + LogBufferManager.fileTimestamp() + ".json";
+        return "larpfeed-gate-report-" + LogBufferManager.fileTimestamp() + ".json";
     }
 
     static String write(Context context, String report) throws IOException {
@@ -90,7 +90,7 @@ final class GateReportExport {
     }
 
     /**
-     * Writes {@code report} as {@code name} in the Hushfeed folder under Download, or in the app's
+     * Writes {@code report} as {@code name} in the Larpfeed folder under Download, or in the app's
      * own Documents folder before Android 10, and says where it went. The feed capture saves
      * through here too, so both files land in the same place.
      */

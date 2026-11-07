@@ -1,6 +1,6 @@
 /*
- * Copyright 2026 Hushfeed contributors
- * https://github.com/SysAdminDoc/hushfeed
+ * Copyright 2026 Larpfeed contributors
+ * https://github.com/SysAdminDoc/larpfeed
  */
 package app.morphe.extension.tiktok.settings.preference;
 
@@ -48,8 +48,8 @@ public final class SeenHistoryFilePreference extends Preference {
     static final int REQUEST_RESTORE = 7332;
     static final String SAVE_KEY = "action_save_seen_history_file";
     static final String RESTORE_KEY = "action_restore_seen_history_file";
-    private static final String REQUEST_STATE = "hushfeed_seen_file_request";
-    private static final String ACCOUNT_STATE = "hushfeed_seen_file_account";
+    private static final String REQUEST_STATE = "larpfeed_seen_file_request";
+    private static final String ACCOUNT_STATE = "larpfeed_seen_file_account";
     private static final DocumentOperation.Kind KIND = DocumentOperation.Kind.SEEN_HISTORY_FILE;
     private static final String SIGN_IN = "Sign in to TikTok before saving or restoring seen history.";
     private static final String ACCOUNT_CHANGED =
@@ -110,7 +110,7 @@ public final class SeenHistoryFilePreference extends Preference {
 
     /** The stamp the other exports take, and nothing that names the account. */
     static String suggestedName() {
-        return "hushfeed-seen-history-"
+        return "larpfeed-seen-history-"
                 + app.morphe.extension.shared.settings.preference.LogBufferManager.fileTimestamp()
                 + ".json";
     }
@@ -345,15 +345,15 @@ public final class SeenHistoryFilePreference extends Preference {
         NumberFormat numbers = NumberFormat.getInstance();
         switch (((SeenHistoryFile.Rejected) failure).reason) {
             case TOO_LARGE: return L10n.f(context,
-                    "That file is larger than %1$s MB. Choose a seen-history file saved by Hushfeed.",
+                    "That file is larger than %1$s MB. Choose a seen-history file saved by Larpfeed.",
                     numbers.format(SeenHistoryFile.MAX_BYTES / (1024 * 1024)));
             case TOO_MANY: return L10n.f(context,
                     "That file lists more than %1$s videos. Nothing was restored.",
                     numbers.format(SeenHistoryFile.MAX_ROWS));
             case UNSUPPORTED: return L10n.t(context,
-                    "That isn't a seen-history file saved by Hushfeed. For TikTok's own data export, use Import watch history.");
+                    "That isn't a seen-history file saved by Larpfeed. For TikTok's own data export, use Import watch history.");
             case NEWER: return L10n.t(context,
-                    "That file was saved by a newer Hushfeed. Update Hushfeed, then try again.");
+                    "That file was saved by a newer Larpfeed. Update Larpfeed, then try again.");
             case DAMAGED: return L10n.t(context,
                     "That seen-history file is damaged or was edited. Nothing was restored.");
             default: return L10n.t(context, "Couldn't read that file. Choose it again.");
@@ -387,7 +387,7 @@ public final class SeenHistoryFilePreference extends Preference {
     private static void discardUnwritten(Context window, Uri uri) {
         Context context = window == null ? Utils.getContext() : window.getApplicationContext();
         ContentResolver resolver = context == null ? null : context.getContentResolver();
-        Utils.runOnOwnThread("Hushfeed-SeenHistoryCleanup",
+        Utils.runOnOwnThread("Larpfeed-SeenHistoryCleanup",
                 () -> DocumentOperation.removeUnsaved(resolver, uri, false));
     }
 
@@ -464,9 +464,9 @@ public final class SeenHistoryFilePreference extends Preference {
                             + "JSON file. Anyone who opens the file can see that viewing history.");
         }
         return handle != null
-                ? L10n.f(context, "Add a seen-history file saved by Hushfeed to the videos @%1$s has seen. "
+                ? L10n.f(context, "Add a seen-history file saved by Larpfeed to the videos @%1$s has seen. "
                         + "A video in both keeps the newer date.", handle)
-                : L10n.t(context, "Add a seen-history file saved by Hushfeed to this account's seen videos. "
+                : L10n.t(context, "Add a seen-history file saved by Larpfeed to this account's seen videos. "
                         + "A video in both keeps the newer date.");
     }
 

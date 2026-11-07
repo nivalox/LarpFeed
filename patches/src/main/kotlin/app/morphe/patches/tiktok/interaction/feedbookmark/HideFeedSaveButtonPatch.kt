@@ -1,6 +1,6 @@
 /*
- * Copyright 2026 Hushfeed contributors
- * https://github.com/SysAdminDoc/hushfeed
+ * Copyright 2026 Larpfeed contributors
+ * https://github.com/SysAdminDoc/larpfeed
  *
  * Built on icysymmetra/tiktok-patches-for-morphe (GPL-3.0).
  */
@@ -45,7 +45,7 @@ private object FeedFavoriteStateFingerprint : Fingerprint(
 val hideFeedSaveButtonPatch = bytecodePatch(
     name = "Hide feed save button",
     description = "Removes the save button from the right side of the feed, for a cleaner " +
-        "screen. Starts off. Turn it on in Hushfeed settings > Feed screen.",
+        "screen. Starts off. Turn it on in Larpfeed settings > Feed screen.",
     default = true,
 ) {
     category("Feed")

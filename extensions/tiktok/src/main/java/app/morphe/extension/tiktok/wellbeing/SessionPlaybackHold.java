@@ -1,6 +1,6 @@
 /*
- * Copyright 2026 Hushfeed contributors
- * https://github.com/SysAdminDoc/hushfeed
+ * Copyright 2026 Larpfeed contributors
+ * https://github.com/SysAdminDoc/larpfeed
  */
 package app.morphe.extension.tiktok.wellbeing;
 
@@ -392,7 +392,7 @@ public final class SessionPlaybackHold {
 
     /**
      * A debug log line for the device check, with the uptime it happened at. With {@code route}
-     * it also names the first frames outside Hushfeed, read inside the message so the stack is
+     * it also names the first frames outside Larpfeed, read inside the message so the stack is
      * only walked with Log diagnostics on.
      */
     private static void log(String what, boolean route) {
@@ -404,7 +404,7 @@ public final class SessionPlaybackHold {
         log(what, false);
     }
 
-    /** The first few frames outside Hushfeed, so a debug log names the route a play came by. */
+    /** The first few frames outside Larpfeed, so a debug log names the route a play came by. */
     private static String caller() {
         StringBuilder route = new StringBuilder(" from");
         int shown = 0;

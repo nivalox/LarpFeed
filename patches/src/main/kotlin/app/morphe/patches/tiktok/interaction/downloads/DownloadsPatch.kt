@@ -159,7 +159,7 @@ val downloadsPatch = bytecodePatch(
     name = "Downloads",
     description = "Saves videos and photos without TikTok's watermark, even when the creator " +
         "turned downloads off. You can also choose the folders and file names. On by default. " +
-        "Turn it off in Hushfeed settings > Downloads.",
+        "Turn it off in Larpfeed settings > Downloads.",
     default = true,
 ) {
     category("Downloads")

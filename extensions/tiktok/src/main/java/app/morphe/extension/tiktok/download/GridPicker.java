@@ -1,6 +1,6 @@
 /*
- * Copyright 2026 Hushfeed contributors
- * https://github.com/SysAdminDoc/hushfeed
+ * Copyright 2026 Larpfeed contributors
+ * https://github.com/SysAdminDoc/larpfeed
  */
 package app.morphe.extension.tiktok.download;
 
@@ -57,17 +57,17 @@ import java.util.WeakHashMap;
  * has loaded (see {@link #pickAll}), so a whole Liked, Favorites or Reposts list saves in runs of
  * {@link #MAX_PICKED}, each one picking up where the last stopped. TikTok's own tap and long press on a cell are
  * never replaced: the circle and the cover are views of ours laid over the cell, and they go
- * (GONE, then removed on the next bind) when the switch is off or Hushfeed is paused.
+ * (GONE, then removed on the next bind) when the switch is off or Larpfeed is paused.
  *
  * <p>Main thread only: binds and taps both arrive there.
  */
 public final class GridPicker {
     /** The most posts one run takes, so a long grid can't queue an unbounded save. */
     public static final int MAX_PICKED = 50;
-    static final String CIRCLE_TAG = "hushfeed_grid_pick";
-    static final String COVER_TAG = "hushfeed_grid_pick_cover";
-    static final String BAR_TAG = "hushfeed_grid_pick_bar";
-    static final String LAYER_TAG = "hushfeed_grid_pick_layer";
+    static final String CIRCLE_TAG = "larpfeed_grid_pick";
+    static final String COVER_TAG = "larpfeed_grid_pick_cover";
+    static final String BAR_TAG = "larpfeed_grid_pick_bar";
+    static final String LAYER_TAG = "larpfeed_grid_pick_layer";
     private static final int CIRCLE_DP = 24;
     private static final int TARGET_DP = 48;
 

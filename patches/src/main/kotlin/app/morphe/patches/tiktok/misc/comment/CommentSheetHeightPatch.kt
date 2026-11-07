@@ -1,6 +1,6 @@
 /*
- * Copyright 2026 Hushfeed contributors
- * https://github.com/SysAdminDoc/hushfeed
+ * Copyright 2026 Larpfeed contributors
+ * https://github.com/SysAdminDoc/larpfeed
  */
 package app.morphe.patches.tiktok.misc.comment
 
@@ -150,7 +150,7 @@ internal fun sheetModeCall(height: Method): MethodReference =
 val commentSheetHeightPatch = bytecodePatch(
     name = "Open the comments at full height",
     description = "Opens the comment sheet at the full height of the screen instead of part " +
-        "way up. Starts off. Turn it on in Hushfeed settings > Comments.",
+        "way up. Starts off. Turn it on in Larpfeed settings > Comments.",
 ) {
     category("Comments")
     dependsOn(settingsPatch, sharedExtensionPatch)

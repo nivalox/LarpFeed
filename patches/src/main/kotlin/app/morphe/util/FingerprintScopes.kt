@@ -1,6 +1,6 @@
 /*
- * Copyright 2026 Hushfeed contributors
- * https://github.com/SysAdminDoc/hushfeed
+ * Copyright 2026 Larpfeed contributors
+ * https://github.com/SysAdminDoc/larpfeed
  */
 package app.morphe.util
 
@@ -19,7 +19,7 @@ import app.morphe.patcher.patch.BytecodePatchContext
  * of the callers of any one method, so the scan that follows still reads each instruction and
  * finds what it found before, over a few hundred classes instead of every class of the app (#54).
  * Each lookup also walks the class list once, so this takes types, not type and name pairs,
- * which cost the browser guard about eighty lookups. Hushfeed's own injected calls go to the
+ * which cost the browser guard about eighty lookups. Larpfeed's own injected calls go to the
  * extension, so a class that calls one of these only after an earlier patch ran is not a case
  * this has to cover.
  */

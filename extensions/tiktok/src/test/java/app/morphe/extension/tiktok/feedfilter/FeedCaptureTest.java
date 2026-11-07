@@ -217,9 +217,9 @@ public class FeedCaptureTest {
         String text = recording.text();
 
         String[] lines = text.split("\n");
-        assertEquals("Hushfeed feed capture", lines[0]);
+        assertEquals("Larpfeed feed capture", lines[0]);
         assertTrue(lines[1], lines[1].startsWith("Read this file before you share it. "));
-        assertTrue(text, lines[2].startsWith("Hushfeed: "));
+        assertTrue(text, lines[2].startsWith("Larpfeed: "));
         assertTrue(text, lines[3].startsWith("TikTok: "));
         assertTrue(text, lines[4].startsWith("Android API: "));
         assertTrue(text, lines[5].matches("Started: \\d{4}-\\d{2}-\\d{2} \\d{2}:\\d{2}:\\d{2} UTC"));

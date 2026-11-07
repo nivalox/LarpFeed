@@ -36,14 +36,14 @@
     scripts/verify-injected-registers.ps1 -PatchedApk C:\work\patched.apk
 
 .EXAMPLE
-    scripts/verify-injected-registers.ps1 -FromDevice -Serial $env:HUSHFEED_DEVICE_SERIAL
+    scripts/verify-injected-registers.ps1 -FromDevice -Serial $env:LARPFEED_DEVICE_SERIAL
 
-    The clean APK defaults to the 47.7.2 vendor build in the folder HUSHFEED_FIXTURE_DIR names.
+    The clean APK defaults to the 47.7.2 vendor build in the folder LARPFEED_FIXTURE_DIR names.
 
     The phones are shared, so the pull and the device verifier each run under the device lease
     (scripts/device-lease.ps1) on -Serial, taken right before and released right after, and the
     script refuses the device half while another task holds that phone. Pass -LeaseDir and
-    -ChatIdentity, or set HUSHFEED_DEVICE_LEASE_DIR and HUSHFEED_CHAT_IDENTITY. A caller that
+    -ChatIdentity, or set LARPFEED_DEVICE_LEASE_DIR and LARPFEED_CHAT_IDENTITY. A caller that
     already holds the lease on -Serial passes it as -Lease instead (walk-app.ps1 does, so the
     phone stays with the release between the walk and the verifier), and it stays held.
 #>
@@ -57,8 +57,8 @@ param(
     [string]$ReportPath,
     [string]$Java,
     [string]$DesktopJar,
-    [string]$LeaseDir = $env:HUSHFEED_DEVICE_LEASE_DIR,
-    [string]$ChatIdentity = $env:HUSHFEED_CHAT_IDENTITY,
+    [string]$LeaseDir = $env:LARPFEED_DEVICE_LEASE_DIR,
+    [string]$ChatIdentity = $env:LARPFEED_CHAT_IDENTITY,
     [ValidateRange(1, 30)][int]$LeaseMinutes = 30,
     [object]$Lease
 )
@@ -72,34 +72,34 @@ $CleanApkSha256 = '6852b0ced20274018403dfdc30fb9fac3e168b5be733603cfd9c0d634d8a1
 . (Join-Path $PSScriptRoot 'injected-register-device.ps1')
 $Java = Resolve-Java -Explicit $Java
 
-if (-not $DesktopJar) { $DesktopJar = $env:HUSHFEED_DESKTOP_JAR }
+if (-not $DesktopJar) { $DesktopJar = $env:LARPFEED_DESKTOP_JAR }
 if (-not $DesktopJar -or -not (Test-Path -LiteralPath $DesktopJar -PathType Leaf)) {
     # dexlib2 comes from the desktop CLI. Without it the comparison cannot run at all, and
     # saying so beats a stack trace about a missing class.
-    throw 'No Morphe desktop CLI. Pass -DesktopJar or set HUSHFEED_DESKTOP_JAR.'
+    throw 'No Morphe desktop CLI. Pass -DesktopJar or set LARPFEED_DESKTOP_JAR.'
 }
 
 function Resolve-Adb {
     param([string]$Explicit)
     if ($Explicit) { return $Explicit }
-    if ($env:HUSHFEED_ADB) { return $env:HUSHFEED_ADB }
+    if ($env:LARPFEED_ADB) { return $env:LARPFEED_ADB }
     $onPath = Get-Command adb -ErrorAction SilentlyContinue
     if ($onPath) { return $onPath.Source }
     $winget = Join-Path $env:LOCALAPPDATA 'Microsoft\WinGet\Packages'
     $found = Get-ChildItem $winget -Recurse -Filter 'adb.exe' -ErrorAction SilentlyContinue |
         Select-Object -First 1
     if ($found) { return $found.FullName }
-    throw 'No adb found. Pass -Adb or set HUSHFEED_ADB.'
+    throw 'No adb found. Pass -Adb or set LARPFEED_ADB.'
 }
 
-if (-not $CleanApk -and $env:HUSHFEED_FIXTURE_DIR) {
-    $fixture = Get-ChildItem -LiteralPath $env:HUSHFEED_FIXTURE_DIR -Filter '*47.7.2*.apk' -File -ErrorAction SilentlyContinue |
+if (-not $CleanApk -and $env:LARPFEED_FIXTURE_DIR) {
+    $fixture = Get-ChildItem -LiteralPath $env:LARPFEED_FIXTURE_DIR -Filter '*47.7.2*.apk' -File -ErrorAction SilentlyContinue |
         Select-Object -First 1
     if ($fixture) { $CleanApk = $fixture.FullName }
 }
 if (-not $CleanApk -or -not (Test-Path -LiteralPath $CleanApk -PathType Leaf)) {
     throw ('No clean APK. Pass -CleanApk with the vendor build this bundle targets, or set ' +
-        'HUSHFEED_FIXTURE_DIR to the folder that holds it.')
+        'LARPFEED_FIXTURE_DIR to the folder that holds it.')
 }
 # The clean side has to be the vendor build, not the largest file in a folder that also holds
 # patched output and newer builds: two patched files differ from each other, both halves
@@ -109,7 +109,7 @@ if ($cleanHash -ne $CleanApkSha256) {
     throw "The clean APK at $CleanApk hashes to $cleanHash, not the vendor 47.7.2 build ($CleanApkSha256)."
 }
 
-$work = Join-Path ([System.IO.Path]::GetTempPath()) ("hushfeed-regs-" + [guid]::NewGuid().ToString('N').Substring(0, 8))
+$work = Join-Path ([System.IO.Path]::GetTempPath()) ("larpfeed-regs-" + [guid]::NewGuid().ToString('N').Substring(0, 8))
 New-Item -ItemType Directory -Force -Path $work | Out-Null
 # The report stays where the caller can read it after the run: at -ReportPath when one is given,
 # and otherwise in the working directory, which is kept whenever the run failed or stopped short,
@@ -127,8 +127,8 @@ $adbPath = $null
 if ($FromDevice -or $Serial) {
     # Checked here so a missing setting fails now, not after the minutes-long dex comparison.
     if ($Lease) { Assert-DeviceLease -Lease $Lease -Serial $Serial }
-    elseif (-not $LeaseDir) { throw 'Device checks require -LeaseDir or HUSHFEED_DEVICE_LEASE_DIR for the shared device pool.' }
-    elseif (-not $ChatIdentity) { throw 'Device checks require -ChatIdentity or HUSHFEED_CHAT_IDENTITY.' }
+    elseif (-not $LeaseDir) { throw 'Device checks require -LeaseDir or LARPFEED_DEVICE_LEASE_DIR for the shared device pool.' }
+    elseif (-not $ChatIdentity) { throw 'Device checks require -ChatIdentity or LARPFEED_CHAT_IDENTITY.' }
     $adbPath = Resolve-Adb -Explicit $Adb
 }
 
@@ -136,7 +136,7 @@ if ($FromDevice) {
     if (-not $Serial) { throw '-FromDevice needs -Serial so it cannot pull from somebody else''s phone.' }
     # Released right after the pull, so the dex comparison doesn't hold the phone for minutes.
     $deviceLease = if ($Lease) { $Lease } else {
-        New-DeviceLease -LeaseDir $LeaseDir -Serial $Serial -Project 'hushfeed' `
+        New-DeviceLease -LeaseDir $LeaseDir -Serial $Serial -Project 'larpfeed' `
             -ChatIdentity $ChatIdentity -Purpose 'injected-register check pull' -LeaseMinutes $LeaseMinutes
     }
     try {
@@ -186,7 +186,7 @@ if ($Serial) {
         Update-DeviceLease -Lease $Lease -LeaseMinutes $LeaseMinutes
         $deviceLease = $Lease
     } else {
-        $deviceLease = New-DeviceLease -LeaseDir $LeaseDir -Serial $Serial -Project 'hushfeed' `
+        $deviceLease = New-DeviceLease -LeaseDir $LeaseDir -Serial $Serial -Project 'larpfeed' `
             -ChatIdentity $ChatIdentity -Purpose 'injected-register device verifier' -LeaseMinutes $LeaseMinutes
     }
     try {

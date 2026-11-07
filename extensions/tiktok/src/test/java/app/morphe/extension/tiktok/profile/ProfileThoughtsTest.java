@@ -66,7 +66,7 @@ public class ProfileThoughtsTest {
     }
 
     /**
-     * Turn on Thoughts (#186): TikTok can ask its Thoughts gates before Hushfeed's settings have a
+     * Turn on Thoughts (#186): TikTok can ask its Thoughts gates before Larpfeed's settings have a
      * context, and then the saved switch is read from the preferences file under the same key.
      */
     @Test public void theThoughtsSwitchIsReadBeforeTheSettingsContextToo() {

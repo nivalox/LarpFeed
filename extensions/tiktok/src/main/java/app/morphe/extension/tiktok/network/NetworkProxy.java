@@ -1,6 +1,6 @@
 /*
- * Copyright 2026 Hushfeed contributors
- * https://github.com/SysAdminDoc/hushfeed
+ * Copyright 2026 Larpfeed contributors
+ * https://github.com/SysAdminDoc/larpfeed
  */
 package app.morphe.extension.tiktok.network;
 
@@ -54,7 +54,7 @@ import java.util.regex.Pattern;
  * </ul>
  *
  * <p>Videos and LIVE streams don't go through either: TikTok's media loader and player are
- * native code that open their own sockets. Hushfeed's own saves and short-link lookups skip the
+ * native code that open their own sockets. Larpfeed's own saves and short-link lookups skip the
  * selector on purpose too: they open with {@code Proxy.NO_PROXY} so a proxy can't pick the peer
  * after the address was checked (see {@code PinnedMediaConnection}). {@link NetworkRoutes} lists
  * all four routes in the exported report. Neither route can sign in to a proxy by itself, so with
@@ -91,7 +91,7 @@ public final class NetworkProxy {
     /** How often a failed connection can have the proxy checked, since they come in bursts. */
     static final long CONFIRM_AFTER_MS = 30_000L;
 
-    private static final Executor OWN_THREAD = task -> Utils.runOnOwnThread("Hushfeed proxy check", task);
+    private static final Executor OWN_THREAD = task -> Utils.runOnOwnThread("Larpfeed proxy check", task);
 
     /** Where a check runs: a thread of its own, since it waits on the network. Tests run it in place. */
     static Executor checker = OWN_THREAD;
@@ -252,7 +252,7 @@ public final class NetworkProxy {
 
     /**
      * The proxy the settings turn on, or null. Off while the patch isn't in the bundle, before
-     * the extension has a context (Settings isn't loaded that early), while Hushfeed is paused
+     * the extension has a context (Settings isn't loaded that early), while Larpfeed is paused
      * (the switch answers off then), while the switch is off and while the host or port is empty.
      */
     @Nullable

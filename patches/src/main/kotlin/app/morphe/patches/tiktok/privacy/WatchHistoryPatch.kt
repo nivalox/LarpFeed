@@ -1,6 +1,6 @@
 /*
- * Copyright 2026 Hushfeed contributors
- * https://github.com/SysAdminDoc/hushfeed
+ * Copyright 2026 Larpfeed contributors
+ * https://github.com/SysAdminDoc/larpfeed
  */
 package app.morphe.patches.tiktok.privacy
 
@@ -80,7 +80,7 @@ val watchHistoryPatch = bytecodePatch(
     name = "Stop recording watch history",
     description = "Stops TikTok adding the videos you watch to your Watch history. The catch: " +
         "your views stop counting, and For You learns less about what you like. Starts off. Turn " +
-        "it on in Hushfeed settings > Privacy.",
+        "it on in Larpfeed settings > Privacy.",
 ) {
     category("Privacy")
     dependsOn(settingsPatch, sharedExtensionPatch)

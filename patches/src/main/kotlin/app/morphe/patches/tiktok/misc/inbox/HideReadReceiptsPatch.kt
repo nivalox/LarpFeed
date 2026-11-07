@@ -1,6 +1,6 @@
 /*
- * Copyright 2026 Hushfeed contributors
- * https://github.com/SysAdminDoc/hushfeed
+ * Copyright 2026 Larpfeed contributors
+ * https://github.com/SysAdminDoc/larpfeed
  *
  * Built on icysymmetra/tiktok-patches-for-morphe (GPL-3.0).
  */
@@ -58,7 +58,7 @@ internal object ChatRequestSendWithHeadersFingerprint : Fingerprint(
 val hideReadReceiptsPatch = bytecodePatch(
     name = "Hide read receipts",
     description = "Stops TikTok telling people you've read their messages. Your own unread badges still " +
-        "clear as usual. Starts off. Turn it on in Hushfeed settings > Inbox.",
+        "clear as usual. Starts off. Turn it on in Larpfeed settings > Inbox.",
 ) {
     category("Inbox")
     dependsOn(settingsPatch, sharedExtensionPatch)

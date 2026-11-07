@@ -121,7 +121,7 @@ final class GlassBarHaptics {
 
     private static synchronized Handler handler() {
         if (handler == null) {
-            HandlerThread thread = new HandlerThread("hushfeed-glass-haptics");
+            HandlerThread thread = new HandlerThread("larpfeed-glass-haptics");
             thread.start();
             handler = new Handler(thread.getLooper());
         }

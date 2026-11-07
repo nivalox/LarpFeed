@@ -70,7 +70,7 @@ final class GlassLens {
         }
         try {
             if (shader == null) shader = new RuntimeShader(SHADER);
-            if (node == null) node = new RenderNode("hushfeed-glass-lens");
+            if (node == null) node = new RenderNode("larpfeed-glass-lens");
             shader.setFloatUniform("box", box.left, box.top, box.right, box.bottom);
             shader.setFloatUniform("radius", Math.max(0f, radius));
             shader.setFloatUniform("centre", CENTRE_MAGNIFY);

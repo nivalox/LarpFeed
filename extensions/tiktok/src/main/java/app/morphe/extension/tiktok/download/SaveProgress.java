@@ -1,6 +1,6 @@
 /*
- * Copyright 2026 Hushfeed contributors
- * https://github.com/SysAdminDoc/hushfeed
+ * Copyright 2026 Larpfeed contributors
+ * https://github.com/SysAdminDoc/larpfeed
  */
 package app.morphe.extension.tiktok.download;
 
@@ -413,7 +413,7 @@ final class SaveProgress {
                 banner.setPadding(SettingsUi.dp(activity, 16), SettingsUi.dp(activity, 12),
                         SettingsUi.dp(activity, 16), SettingsUi.dp(activity, 12));
                 banner.setBackground(SettingsUi.overlayBanner(activity));
-                banner.setTag("hushfeed_save_progress");
+                banner.setTag("larpfeed_save_progress");
 
                 shownWaiting = !started;
                 TextView label = new TextView(activity);
@@ -565,11 +565,11 @@ final class SaveProgress {
             box = new LinearLayout(activity);
             box.setOrientation(LinearLayout.HORIZONTAL);
             box.setGravity(Gravity.CENTER_VERTICAL);
-            box.setTag("hushfeed_save_waiting_row");
+            box.setTag("larpfeed_save_waiting_row");
             box.setPadding(SettingsUi.dp(activity, 16), 0, SettingsUi.dp(activity, 16), 0);
             box.setBackground(SettingsUi.overlayBanner(activity));
             line = new TextView(activity);
-            line.setTag("hushfeed_save_waiting");
+            line.setTag("larpfeed_save_waiting");
             line.setTextColor(SettingsUi.OVERLAY_TEXT);
             line.setTextSize(TypedValue.COMPLEX_UNIT_SP, SettingsUi.TEXT_BODY_SMALL);
             line.setPadding(0, SettingsUi.dp(activity, 8), 0, SettingsUi.dp(activity, 8));

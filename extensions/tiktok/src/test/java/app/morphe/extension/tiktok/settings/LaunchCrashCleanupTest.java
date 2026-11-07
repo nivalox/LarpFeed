@@ -1,6 +1,6 @@
 /*
- * Copyright 2026 Hushfeed contributors
- * https://github.com/SysAdminDoc/hushfeed
+ * Copyright 2026 Larpfeed contributors
+ * https://github.com/SysAdminDoc/larpfeed
  */
 package app.morphe.extension.tiktok.settings;
 
@@ -37,7 +37,7 @@ import java.util.regex.Pattern;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
-/** Hushfeed's preferences files on the keep-list of TikTok's launch-crash cleanup. */
+/** Larpfeed's preferences files on the keep-list of TikTok's launch-crash cleanup. */
 @RunWith(RobolectricTestRunner.class)
 @Config(sdk = 28)
 public class LaunchCrashCleanupTest {
@@ -60,18 +60,18 @@ public class LaunchCrashCleanupTest {
             "(?:getSharedPreferences|new SharedPrefCategory|getDefaultSharedPreferences"
                     + "|getPreferences|setSharedPreferencesName)\\s*\\(");
 
-    @Test public void tiktoksListKeepsItsOrderAndGainsHushfeedsFiles() {
-        String[] kept = LaunchCrashCleanup.keepHushfeedFiles(TIKTOK_KEEPS.clone());
+    @Test public void tiktoksListKeepsItsOrderAndGainsLarpfeedsFiles() {
+        String[] kept = LaunchCrashCleanup.keepLarpfeedFiles(TIKTOK_KEEPS.clone());
         assertArrayEquals("TikTok's own names moved or went", TIKTOK_KEEPS,
                 Arrays.copyOf(kept, TIKTOK_KEEPS.length));
         assertEquals(Arrays.asList("morphe_prefs", "morphe_feature_gate_lab",
-                        "hushfeed_release_notes", "hushfeed_device_identity", "hushfeed_group_chats",
-                        "hushfeed_sticker_recents"),
+                        "larpfeed_release_notes", "larpfeed_device_identity", "larpfeed_group_chats",
+                        "larpfeed_sticker_recents"),
                 Arrays.asList(kept).subList(TIKTOK_KEEPS.length, kept.length));
-        assertArrayEquals(LaunchCrashCleanup.HUSHFEED_FILES, LaunchCrashCleanup.keepHushfeedFiles(null));
+        assertArrayEquals(LaunchCrashCleanup.LARPFEED_FILES, LaunchCrashCleanup.keepLarpfeedFiles(null));
     }
 
-    @Test public void everyPreferencesFileHushfeedOpensIsKept() throws Exception {
+    @Test public void everyPreferencesFileLarpfeedOpensIsKept() throws Exception {
         // The first argument of every opening call: a kept constant, or the one field that a
         // kept constant is handed to. Anything else is a file TikTok's cleanup would delete.
         Map<String, List<String>> expected = new TreeMap<>();
@@ -90,10 +90,10 @@ public class LaunchCrashCleanupTest {
         expected.put("shared/settings/preference/AbstractPreferenceFragment.java", Arrays.asList("Setting.preferences.name"));
         expected.put("shared/settings/preference/SharedPrefCategory.java", Arrays.asList("name"));
         assertEquals("a call opens preferences that TikTok's launch-crash cleanup would delete; "
-                        + "add the file's name to LaunchCrashCleanup.HUSHFEED_FILES and the call to this list",
+                        + "add the file's name to LaunchCrashCleanup.LARPFEED_FILES and the call to this list",
                 expected, openersByName());
 
-        List<String> kept = Arrays.asList(LaunchCrashCleanup.HUSHFEED_FILES);
+        List<String> kept = Arrays.asList(LaunchCrashCleanup.LARPFEED_FILES);
         assertTrue(kept.contains(Setting.preferences.name));
         assertTrue(kept.contains(constant(JavaCrashCapture.class, "PREFS_NAME")));
         assertTrue(kept.contains(FeatureGateLabStore.PREFS_NAME));

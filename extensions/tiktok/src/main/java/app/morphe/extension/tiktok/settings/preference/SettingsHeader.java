@@ -2,7 +2,7 @@
  * Copyright 2026 HushGram contributors
  * https://github.com/SysAdminDoc/HushGram
  *
- * Modified for hushfeed (TikTok), 2026.
+ * Modified for larpfeed (TikTok), 2026.
  */
 package app.morphe.extension.tiktok.settings.preference;
 
@@ -23,21 +23,21 @@ import app.morphe.extension.shared.diagnostics.BuildDetails;
 import app.morphe.extension.tiktok.settings.L10n;
 
 /**
- * The top of the main page: Hushfeed's icon, its name in TikTok's cyan and red and the version
+ * The top of the main page: Larpfeed's icon, its name in TikTok's cyan and red and the version
  * line, centred over the rows. Nothing on it can be tapped. The bar above the list leaves the name
  * off while this one shows it.
  */
 @SuppressWarnings("deprecation")
 public final class SettingsHeader extends Preference {
-    static final String KEY = "hushfeed_settings_header";
+    static final String KEY = "larpfeed_settings_header";
     /** Tags of its parts, for the tests. */
-    static final String ICON = "hushfeed-header-icon";
-    static final String NAME = "hushfeed-header-name";
-    static final String VERSION = "hushfeed-header-version";
-    /** The resource patch that gives TikTok Hushfeed's launcher icon. */
+    static final String ICON = "larpfeed-header-icon";
+    static final String NAME = "larpfeed-header-name";
+    static final String VERSION = "larpfeed-header-version";
+    /** The resource patch that gives TikTok Larpfeed's launcher icon. */
     static final String LAUNCHER_ICON_PATCH = "customLauncherIcon";
     /** The product name, which reads the same in every language and is not translated. */
-    private static final String NAME_TEXT = "Hushfeed";
+    private static final String NAME_TEXT = "Larpfeed";
 
     SettingsHeader(Context context) {
         super(context);
@@ -114,7 +114,7 @@ public final class SettingsHeader extends Preference {
 
     /**
      * The app's own launcher icon when this build has the launcher icon patch, which makes it
-     * Hushfeed's, or the patched mark in the heading colour.
+     * Larpfeed's, or the patched mark in the heading colour.
      */
     static Drawable icon(Context context, ScreenColors colors, String metadata) {
         if (BuildDetails.resourcePatchApplied(metadata, LAUNCHER_ICON_PATCH)) {

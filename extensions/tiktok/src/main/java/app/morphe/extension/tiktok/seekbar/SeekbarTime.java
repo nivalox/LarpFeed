@@ -1,6 +1,6 @@
 /*
- * Copyright 2026 Hushfeed contributors
- * https://github.com/SysAdminDoc/hushfeed
+ * Copyright 2026 Larpfeed contributors
+ * https://github.com/SysAdminDoc/larpfeed
  */
 package app.morphe.extension.tiktok.seekbar;
 
@@ -33,7 +33,7 @@ import app.morphe.extension.tiktok.settings.Settings;
  * <p>The bar is a row holding one frame with the seek bar in it. The time is a second child at
  * the end of that row ({@link SeekbarTimeLabel}), so it can never sit over the caption or the
  * buttons on the right, and it goes wherever the row goes: Clear display fades the row, and the
- * label follows the seek bar inside it. Ads and LIVE get no time. Turned off, or with Hushfeed
+ * label follows the seek bar inside it. Ads and LIVE get no time. Turned off, or with Larpfeed
  * paused (every switch then answers off), the label comes out and the row is put back as it was.
  *
  * <p>Two choices sit beside the time (#173). {@link Settings#SEEKBAR_TIME_PLACEMENT} moves the

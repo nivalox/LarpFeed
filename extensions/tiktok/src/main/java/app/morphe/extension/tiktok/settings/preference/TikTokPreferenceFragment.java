@@ -37,7 +37,7 @@ import java.util.List;
 
 import app.morphe.extension.shared.Utils;
 import app.morphe.extension.shared.settings.BaseSettings;
-import app.morphe.extension.shared.settings.HushfeedPause;
+import app.morphe.extension.shared.settings.LarpfeedPause;
 import app.morphe.extension.shared.settings.Setting;
 import app.morphe.extension.shared.settings.preference.AbstractPreferenceFragment;
 import app.morphe.extension.tiktok.blockauthor.BlockAuthorOverlay;
@@ -68,7 +68,7 @@ import app.morphe.extension.tiktok.wellbeing.SessionLockOverlay;
 @SuppressWarnings("deprecation")
 public class TikTokPreferenceFragment extends AbstractPreferenceFragment {
     private static final String FEATURE_GATE_LAB_KEY = "action_feature_gate_lab";
-    private static final String PAUSE_SUMMARY = "Pause Hushfeed's switches after TikTok restarts. Your settings stay saved. Changes made when you patched, like the app's name or icon, stay.";
+    private static final String PAUSE_SUMMARY = "Pause Larpfeed's switches after TikTok restarts. Your settings stay saved. Changes made when you patched, like the app's name or icon, stay.";
     /** A switch from a patch left unticked in the Manager is on no page and in no index, and
      *  nothing else on the screen says so (#29 looked for Fill without its patch). */
     private static final String NO_MATCHES_SUMMARY = "Try a different word or clear the search. "
@@ -86,14 +86,14 @@ public class TikTokPreferenceFragment extends AbstractPreferenceFragment {
      * to it, quietly: unlike a search result's target it isn't flashed and changes nothing else.
      */
     private static final String ARG_RETURN_ROW = "morphe_settings_return_row";
-    /** Between the page and the row in a return marker: "home#hushfeed_paused". */
+    /** Between the page and the row in a return marker: "home#larpfeed_paused". */
     private static final char ROW_MARK = '#';
     /** The page names a restart's return marker carries ({@link #pageKey}). */
     public static final String PAGE_HOME = "home";
     /** The Feature Gate Lab, which the settings screen opens over home after a restart from it. */
     public static final String PAGE_LAB = "lab";
     static final String REPORT_PROBLEM_KEY = "action_report_problem";
-    static final String SUPPORT_KEY = "action_support_hushfeed";
+    static final String SUPPORT_KEY = "action_support_larpfeed";
     static final String SUPPORT_URL = "https://ko-fi.com/X8K126YVER";
     static final String PAGE_SEARCH = "search";
     private static final String PAGE_HUB = "hub:";
@@ -221,7 +221,7 @@ public class TikTokPreferenceFragment extends AbstractPreferenceFragment {
      * are gone, and a restart marker naming one of those opens the home page.
      */
     private enum Hub {
-        ABOUT("About Hushfeed", "Version, changes and licenses");
+        ABOUT("About Larpfeed", "Version, changes and licenses");
 
         final String title;
         final String description;
@@ -319,7 +319,7 @@ public class TikTokPreferenceFragment extends AbstractPreferenceFragment {
             ImportSeenVideoHistoryPreference.pickFile(activeFragment);
         } else {
             SettingsActionBanner.showNotice(Utils.getContext(), L10n.t(
-                    "Reopen Hushfeed settings, then choose the file"));
+                    "Reopen Larpfeed settings, then choose the file"));
         }
     }
 
@@ -329,13 +329,13 @@ public class TikTokPreferenceFragment extends AbstractPreferenceFragment {
             ImportedFontPreference.pickFile(activeFragment);
         } else {
             SettingsActionBanner.showNotice(Utils.getContext(), L10n.t(
-                    "Reopen Hushfeed settings, then choose the file"));
+                    "Reopen Larpfeed settings, then choose the file"));
         }
     }
 
     /**
      * Owes a restart for a file the next start reads rather than a setting, the way turning
-     * Hushfeed back on owes one for its marker file, and says so on the page open now.
+     * Larpfeed back on owes one for its marker file, and says so on the page open now.
      */
     static void noteFileRestartPending(String key) {
         AbstractPreferenceFragment.restartPending.add(key);
@@ -356,7 +356,7 @@ public class TikTokPreferenceFragment extends AbstractPreferenceFragment {
             SeenHistoryFilePreference.pickFile(activeFragment, request);
         } else {
             SettingsActionBanner.showNotice(Utils.getContext(), L10n.t(
-                    "Reopen Hushfeed settings, then choose the file"));
+                    "Reopen Larpfeed settings, then choose the file"));
         }
     }
 
@@ -838,7 +838,7 @@ public class TikTokPreferenceFragment extends AbstractPreferenceFragment {
     }
 
     /**
-     * The bar's title: Search settings while a search is typed, else Hushfeed, left off while the
+     * The bar's title: Search settings while a search is typed, else Larpfeed, left off while the
      * header's own name is on screen.
      */
     private void showTitle() {
@@ -1416,12 +1416,12 @@ public class TikTokPreferenceFragment extends AbstractPreferenceFragment {
             indexRows(results, category, section, categoryTitle);
             scratch.removePreference(category);
         }
-        // The rows below sit on the home page and the About Hushfeed page, outside the section
+        // The rows below sit on the home page and the About Larpfeed page, outside the section
         // categories walked above, so each is indexed by hand. Their category line names where
         // a reader finds them, the home heading or the page; it said "Settings" for all of
         // them, which is no page.
-        String homeTitle = "Hushfeed";
-        String hushfeed = L10n.t(context, "Hushfeed");
+        String homeTitle = "Larpfeed";
+        String larpfeed = L10n.t(context, "Larpfeed");
         String about = L10n.t(context, Hub.ABOUT.title);
         // Without an explicit entry, the Lab's title and summary returned zero results on a
         // patched phone even though the row was visible.
@@ -1436,24 +1436,24 @@ public class TikTokPreferenceFragment extends AbstractPreferenceFragment {
                     "override gates"
             ));
         }
-        // Pause Hushfeed is what a reader asking whether a problem is Hushfeed's searches for.
+        // Pause Larpfeed is what a reader asking whether a problem is Larpfeed's searches for.
         results.add(new SearchResult(
                 null,
                 BaseSettings.PAUSED.key,
-                L10n.t(context, "Pause Hushfeed"),
+                L10n.t(context, "Pause Larpfeed"),
                 L10n.t(context, PAUSE_SUMMARY),
-                hushfeed
+                larpfeed
         ));
         // Its summary carries the bundle version, which is what a reporter searches for.
         results.add(new SearchResult(
                 null,
                 MorpheTikTokAboutPreference.KEY,
-                "Hushfeed",
+                "Larpfeed",
                 MorpheTikTokAboutPreference.currentSummary(context).toString(),
                 about
         ));
         // Searching "build" or "patches" found nothing, and the empty state then blamed patches
-        // left unticked in Morphe Manager, while the row that lists them sat on About Hushfeed.
+        // left unticked in Morphe Manager, while the row that lists them sat on About Larpfeed.
         results.add(new SearchResult(
                 null,
                 BuildDetailsPreference.KEY,
@@ -1462,14 +1462,14 @@ public class TikTokPreferenceFragment extends AbstractPreferenceFragment {
                 about,
                 "version"
         ));
-        // What's new is on About Hushfeed only until its notes are read, and so is its result.
+        // What's new is on About Larpfeed only until its notes are read, and so is its result.
         String releaseVersion = releaseVersion();
         if (ReleaseNotes.pending(context, releaseVersion)) {
             results.add(new SearchResult(
                     null,
                     ReleaseNotes.KEY,
                     L10n.t(context, "What's new"),
-                    L10n.f(context, "Changes in Hushfeed %1$s", ReleaseNotes.rowVersion(context, releaseVersion)),
+                    L10n.f(context, "Changes in Larpfeed %1$s", ReleaseNotes.rowVersion(context, releaseVersion)),
                     about,
                     "release notes changelog"
             ));
@@ -1757,11 +1757,11 @@ public class TikTokPreferenceFragment extends AbstractPreferenceFragment {
         }
         if (FeatureGateLabRuntime.isInstalled()) addFeatureGateLab(screen);
 
-        screen.addPreference(SectionHeadingPreference.compact(context, "Hushfeed"));
-        // Detailed state and recovery, with Turn Hushfeed back on while paused.
+        screen.addPreference(SectionHeadingPreference.compact(context, "Larpfeed"));
+        // Detailed state and recovery, with Turn Larpfeed back on while paused.
         SettingsStatusPreference status = new SettingsStatusPreference(context,
                 Section.DIAGNOSTICS.isAvailable() ? () -> openSection(Section.DIAGNOSTICS) : null);
-        status.setTurnBackOnAction(this::turnHushfeedBackOn);
+        status.setTurnBackOnAction(this::turnLarpfeedBackOn);
         screen.addPreference(status);
         screen.addPreference(pauseRow(context));
         if (Section.DIAGNOSTICS.isAvailable()) addMenu(screen, Section.DIAGNOSTICS);
@@ -1826,7 +1826,7 @@ public class TikTokPreferenceFragment extends AbstractPreferenceFragment {
 
     /** The last row of the home page: the Ko-fi page, under its title alone. */
     private void addSupport(PreferenceScreen screen) {
-        SettingsMenuPreference row = new SettingsMenuPreference(getActivity(), "Support Hushfeed",
+        SettingsMenuPreference row = new SettingsMenuPreference(getActivity(), "Support Larpfeed",
                 "", SettingsMenuPreference.Icon.SUPPORT, preference -> {
                     openWebPage(getActivity(), SUPPORT_URL);
                     return true;
@@ -2011,7 +2011,7 @@ public class TikTokPreferenceFragment extends AbstractPreferenceFragment {
         String releaseVersion = releaseVersion();
         if (!ReleaseNotes.pending(context, releaseVersion)) return;
         SettingsMenuPreference notes = new SettingsMenuPreference(context, "What's new",
-                L10n.f(context, "Changes in Hushfeed %1$s", ReleaseNotes.rowVersion(context, releaseVersion)),
+                L10n.f(context, "Changes in Larpfeed %1$s", ReleaseNotes.rowVersion(context, releaseVersion)),
                 SettingsMenuPreference.Icon.NEWS, preference -> {
                     ReleaseNotes.show(context, releaseVersion, () -> screen.removePreference(preference));
                     return true;
@@ -2023,13 +2023,13 @@ public class TikTokPreferenceFragment extends AbstractPreferenceFragment {
     }
 
     /**
-     * Pause Hushfeed. It takes the screen-time budget off with everything else, so a locked
+     * Pause Larpfeed. It takes the screen-time budget off with everything else, so a locked
      * day refuses it the same way it refuses every budget setting, and so does Wait a day to
      * loosen the budget, the way it refuses Start today over: paused from the next start, the
      * budget would be gone without waiting for anything.
      */
     private TogglePreference pauseRow(Context context) {
-        TogglePreference pause = new TogglePreference(context, "Pause Hushfeed", PAUSE_SUMMARY,
+        TogglePreference pause = new TogglePreference(context, "Pause Larpfeed", PAUSE_SUMMARY,
                 BaseSettings.PAUSED);
         mark(pause, SettingsIcons.PAUSE);
         pause.setOnPreferenceChangeListener((preference, value) -> {
@@ -2042,7 +2042,7 @@ public class TikTokPreferenceFragment extends AbstractPreferenceFragment {
             }
             if (Settings.SESSION_BUDGET_WAIT_TO_LOOSEN.savedValue()) {
                 SettingsActionBanner.showNotice(context, L10n.t(context,
-                        "Wait a day to loosen the budget is on, so Hushfeed stays on"));
+                        "Wait a day to loosen the budget is on, so Larpfeed stays on"));
                 return false;
             }
             return true;
@@ -2051,7 +2051,7 @@ public class TikTokPreferenceFragment extends AbstractPreferenceFragment {
     }
 
     /** The paused status card's action: safe mode, the switch and the marker file all go. */
-    private void turnHushfeedBackOn() {
+    private void turnLarpfeedBackOn() {
         Context context = getActivity();
         if (context == null) return;
         boolean pausedBefore = BaseSettings.PAUSED.savedValue();
@@ -2062,23 +2062,23 @@ public class TikTokPreferenceFragment extends AbstractPreferenceFragment {
         // switch as never having changed and the restart it owes would go unsaid.
         noteRestartPending(BaseSettings.PAUSED, pausedBefore);
         noteRestartPending(BaseSettings.SAFE_MODE, safeModeBefore);
-        boolean markerGone = HushfeedPause.turnBackOn(context);
+        boolean markerGone = LarpfeedPause.turnBackOn(context);
         Preference row = findPreference(BaseSettings.PAUSED.key);
         if (row instanceof TogglePreference) ((TogglePreference) row).setChecked(false);
         noteRestartPending(BaseSettings.PAUSED, pausedBefore);
         noteRestartPending(BaseSettings.SAFE_MODE, safeModeBefore);
-        if (markerGone && HushfeedPause.reason() == HushfeedPause.Reason.MARKER_FILE) {
+        if (markerGone && LarpfeedPause.reason() == LarpfeedPause.Reason.MARKER_FILE) {
             // The file is no setting, but the start it paused owes a restart all the same.
-            AbstractPreferenceFragment.restartPending.add(HushfeedPause.MARKER_FILE_NAME);
+            AbstractPreferenceFragment.restartPending.add(LarpfeedPause.MARKER_FILE_NAME);
             refreshRestartPending();
         }
         refreshStatusCard();
         if (markerGone) {
             SettingsActionBanner.showRestart(context,
-                    L10n.t(context, "Hushfeed turns back on when TikTok restarts."));
+                    L10n.t(context, "Larpfeed turns back on when TikTok restarts."));
         } else {
             SettingsActionBanner.showNotice(context, L10n.t(context,
-                    "The file hushfeed-safe-mode couldn't be removed. Delete it from TikTok's folder under Android/data to turn Hushfeed back on."));
+                    "The file larpfeed-safe-mode couldn't be removed. Delete it from TikTok's folder under Android/data to turn Larpfeed back on."));
         }
     }
 

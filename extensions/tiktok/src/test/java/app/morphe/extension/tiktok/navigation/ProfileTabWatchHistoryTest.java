@@ -199,7 +199,7 @@ public class ProfileTabWatchHistoryTest {
 
         Settings.PROFILE_TAB_OPENS_WATCH_HISTORY.save(false);
         layoutPass();
-        // Not read back as Hushfeed's, so it stays, and a declined press ends as a tap.
+        // Not read back as Larpfeed's, so it stays, and a declined press ends as a tap.
         assertFalse("switched off, the hold still opened Watch history", profile.performLongClick());
         assertNull(nextStarted());
         assertTrue(profile.performClick());
@@ -325,7 +325,7 @@ public class ProfileTabWatchHistoryTest {
         assertNull(nextStarted());
     }
 
-    /** TikTok's account-switcher long press: it posts the tab tag, and its handler asks Hushfeed first. */
+    /** TikTok's account-switcher long press: it posts the tab tag, and its handler asks Larpfeed first. */
     private static View.OnLongClickListener switcher(AtomicInteger sheets) {
         return view -> {
             if (!ProfileTabWatchHistory.takesSwitcherPress(ProfileTabWatchHistory.PROFILE_TAG)) {

@@ -1,6 +1,6 @@
 /*
- * Copyright 2026 Hushfeed contributors
- * https://github.com/SysAdminDoc/hushfeed
+ * Copyright 2026 Larpfeed contributors
+ * https://github.com/SysAdminDoc/larpfeed
  *
  * Built on icysymmetra/tiktok-patches-for-morphe (GPL-3.0).
  */
@@ -317,7 +317,7 @@ public final class CommentSearch {
      * Whether the sheet this box is going into is dark.
      *
      * <p>Read from the context the sheet itself was built with, not from the shared dark mode
-     * flag: that flag is only ever written when Hushfeed's own settings screen opens, so in a
+     * flag: that flag is only ever written when Larpfeed's own settings screen opens, so in a
      * session that never opened it the answer comes from the system configuration instead,
      * which does not carry the night mode TikTok applied to itself. A white card in a black
      * comment sheet is the visible version of that.

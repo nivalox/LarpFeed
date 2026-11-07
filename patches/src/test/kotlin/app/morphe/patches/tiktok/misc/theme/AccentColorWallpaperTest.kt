@@ -38,8 +38,8 @@ class AccentColorWallpaperTest {
         assertEquals("a see-through red still counts as found", setOf("ah8", "ah9", "ahb", "aya", "aj0"), changed)
         assertEquals(
             listOf(
-                "@color/hushfeed_accent_fe2c55", "#99fe2c55", "#21fe2c55", "#ffff4c3a", "#ffffffff",
-                "@color/hushfeed_accent_b50030", "?attr/ah8", "@color/hushfeed_accent_fe2c55",
+                "@color/larpfeed_accent_fe2c55", "#99fe2c55", "#21fe2c55", "#ffff4c3a", "#ffffffff",
+                "@color/larpfeed_accent_b50030", "?attr/ah8", "@color/larpfeed_accent_fe2c55",
             ),
             values(styles),
         )
@@ -87,7 +87,7 @@ class AccentColorWallpaperTest {
     fun `opaque means six digits or eight starting with ff`() {
         for (opaque in listOf("#fe2c55", "#FFFE2C55", "#fffe2c55", " #fffe2c55 ")) assertTrue(opaque, isOpaqueLiteral(opaque))
         for (see in listOf("#99fe2c55", "#00fe2c55", "#f0fe2c55")) assertFalse(see, isOpaqueLiteral(see))
-        assertEquals("@color/hushfeed_accent_fe2c55", wallpaperReference("#FFFE2C55"))
+        assertEquals("@color/larpfeed_accent_fe2c55", wallpaperReference("#FFFE2C55"))
         assertEquals(null, wallpaperReference("#99fe2c55"))
     }
 
@@ -97,11 +97,11 @@ class AccentColorWallpaperTest {
 
         val below = colors(parse(plain))
         val above = colors(parse(system))
-        assertEquals("one color per red, the see-through one left out", listOf("hushfeed_accent_b50030", "hushfeed_accent_fe2c55", "hushfeed_accent_ff576f"), below.keys.toList())
+        assertEquals("one color per red, the see-through one left out", listOf("larpfeed_accent_b50030", "larpfeed_accent_fe2c55", "larpfeed_accent_ff576f"), below.keys.toList())
         assertEquals(below.keys, above.keys)
-        assertEquals("#ffb50030", below.getValue("hushfeed_accent_b50030"))
-        assertEquals("@android:color/system_accent1_500", above.getValue("hushfeed_accent_fe2c55"))
-        assertEquals("@android:color/system_accent1_${wallpaperStep("#ffb50030")}", above.getValue("hushfeed_accent_b50030"))
+        assertEquals("#ffb50030", below.getValue("larpfeed_accent_b50030"))
+        assertEquals("@android:color/system_accent1_500", above.getValue("larpfeed_accent_fe2c55"))
+        assertEquals("@android:color/system_accent1_${wallpaperStep("#ffb50030")}", above.getValue("larpfeed_accent_b50030"))
         assertTrue(above.values.all { it.matches(Regex("@android:color/system_accent1_(10|50|100|200|300|400|500|600|700|800|900)")) })
     }
 
@@ -116,7 +116,7 @@ class AccentColorWallpaperTest {
             plain.writeText("<resources>\n    <color name=\"white\">#ffffffff</color>\n</resources>\n")
             writeWallpaperColors(plain to system, listOf("#fffe2c55"))
             val joined = plain.readText()
-            assertTrue("the entry went in beside the APK's own: $joined", joined.contains("<color name=\"white\">#ffffffff</color>\n    <color name=\"hushfeed_accent_fe2c55\">#fffe2c55</color>\n</resources>"))
+            assertTrue("the entry went in beside the APK's own: $joined", joined.contains("<color name=\"white\">#ffffffff</color>\n    <color name=\"larpfeed_accent_fe2c55\">#fffe2c55</color>\n</resources>"))
             assertEquals("one closing tag", 1, Regex("</resources>").findAll(joined).count())
             assertTrue(system.readText().contains("system_accent1_500"))
             assertTrue("a new file for v31 is a whole document", system.readText().startsWith("<?xml"))

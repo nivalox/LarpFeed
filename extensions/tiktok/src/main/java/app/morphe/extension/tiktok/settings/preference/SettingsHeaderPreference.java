@@ -19,13 +19,13 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
-import app.morphe.extension.shared.settings.HushfeedPause;
+import app.morphe.extension.shared.settings.LarpfeedPause;
 import app.morphe.extension.shared.settings.preference.AbstractPreferenceFragment;
 
 @SuppressWarnings("deprecation")
 public final class SettingsHeaderPreference extends Preference {
     /** The product name, which reads the same in every language and is not translated. */
-    private static final String BRAND_MARK = "Hushfeed";
+    private static final String BRAND_MARK = "Larpfeed";
 
     private enum Kind {
         MASTER,
@@ -95,11 +95,11 @@ public final class SettingsHeaderPreference extends Preference {
     private View createMasterHeader() {
         Context context = getContext();
         LinearLayout header = createHeader(context, heading, backAction, true);
-        LinearLayout toolbar = header.findViewWithTag("hushfeed_toolbar");
-        titleView = header.findViewWithTag("hushfeed_page_title");
+        LinearLayout toolbar = header.findViewWithTag("larpfeed_toolbar");
+        titleView = header.findViewWithTag("larpfeed_page_title");
         statusView = SettingsUi.text(context, "", SettingsUi.TEXT_CAPTION,
                 SettingsUi.textSecondary(), 0);
-        statusView.setTag("hushfeed_compact_status");
+        statusView.setTag("larpfeed_compact_status");
         statusView.setGravity(Gravity.CENTER_VERTICAL | Gravity.END);
         statusView.setMinimumHeight(SettingsUi.dp(context, 48));
         statusView.setMinimumWidth(SettingsUi.dp(context, 48));
@@ -137,7 +137,7 @@ public final class SettingsHeaderPreference extends Preference {
     public void refreshStatus() {
         if (statusView == null) return;
         boolean pending = !AbstractPreferenceFragment.restartPending.isEmpty();
-        boolean paused = HushfeedPause.isPaused();
+        boolean paused = LarpfeedPause.isPaused();
         String label = L10n.t(getContext(), pending ? "Restart pending" : paused ? "Paused" : "Active");
         statusView.setText(label);
         statusView.setTextColor(pending ? SettingsUi.accent() : SettingsUi.textSecondary());
@@ -149,7 +149,7 @@ public final class SettingsHeaderPreference extends Preference {
         statusView.setCompoundDrawablesRelative(dot, null, null, null);
         statusView.setCompoundDrawablePadding(SettingsUi.dp(getContext(), 6));
         String description = pending ? label
-                : L10n.t(getContext(), paused ? "Hushfeed is paused" : "Hushfeed is active");
+                : L10n.t(getContext(), paused ? "Larpfeed is paused" : "Larpfeed is active");
         // The press scrolls this page down to the status card, so there's no other page to name.
         statusView.setContentDescription(description);
     }
@@ -158,8 +158,8 @@ public final class SettingsHeaderPreference extends Preference {
     protected void onBindView(View view) {
         super.onBindView(view);
         if (kind == Kind.MASTER) {
-            statusView = view.findViewWithTag("hushfeed_compact_status");
-            titleView = view.findViewWithTag("hushfeed_page_title");
+            statusView = view.findViewWithTag("larpfeed_compact_status");
+            titleView = view.findViewWithTag("larpfeed_page_title");
             refreshStatus();
         }
     }
@@ -188,12 +188,12 @@ public final class SettingsHeaderPreference extends Preference {
 
     private static LinearLayout createHeader(Context context, String title, Runnable onBack, boolean compact) {
         LinearLayout header = new LinearLayout(context);
-        header.setTag("hushfeed_page_header");
+        header.setTag("larpfeed_page_header");
         header.setOrientation(LinearLayout.VERTICAL);
         header.setPaddingRelative(0, SettingsUi.dp(context, 4), 0, SettingsUi.dp(context, 4));
         header.setBackgroundColor(SettingsUi.background());
         LinearLayout toolbar = new LinearLayout(context);
-        toolbar.setTag("hushfeed_toolbar");
+        toolbar.setTag("larpfeed_toolbar");
         toolbar.setGravity(Gravity.CENTER_VERTICAL);
         toolbar.setPaddingRelative(0, 0, SettingsUi.dp(context, 16), 0);
         ImageView back = new ImageView(context);
@@ -209,7 +209,7 @@ public final class SettingsHeaderPreference extends Preference {
         toolbar.addView(back, new LinearLayout.LayoutParams(SettingsUi.dp(context, 48), SettingsUi.dp(context, 48)));
         TextView heading = SettingsUi.text(context, title, headingSizeSp(context, title),
                 SettingsUi.textPrimary(), 1);
-        heading.setTag("hushfeed_page_title");
+        heading.setTag("larpfeed_page_title");
         heading.setGravity(Gravity.START | Gravity.CENTER_VERTICAL);
         heading.setHyphenationFrequency(android.text.Layout.HYPHENATION_FREQUENCY_NONE);
         SettingsUi.markHeading(heading);

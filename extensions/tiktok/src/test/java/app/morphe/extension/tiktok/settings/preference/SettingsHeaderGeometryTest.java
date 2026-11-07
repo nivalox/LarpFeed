@@ -92,8 +92,8 @@ public class SettingsHeaderGeometryTest {
                     View.MeasureSpec.makeMeasureSpec(SettingsUi.dp(activity, 800), View.MeasureSpec.EXACTLY));
             root.layout(0, 0, root.getMeasuredWidth(), root.getMeasuredHeight());
 
-            TextView brand = textViewWithText(header, "Hushfeed");
-            TextView status = header.findViewWithTag("hushfeed_compact_status");
+            TextView brand = textViewWithText(header, "Larpfeed");
+            TextView status = header.findViewWithTag("larpfeed_compact_status");
             assertNotNull(brand);
             assertNotNull(status);
             assertEquals("the fixture did not render the longer German pending state",
@@ -161,18 +161,18 @@ public class SettingsHeaderGeometryTest {
                     View.MeasureSpec.makeMeasureSpec(SettingsUi.dp(activity, 800), View.MeasureSpec.EXACTLY));
             root.layout(0, 0, root.getMeasuredWidth(), root.getMeasuredHeight());
 
-            TextView title = header.findViewWithTag("hushfeed_page_title");
-            assertEquals("Hushfeed", title.getText().toString());
+            TextView title = header.findViewWithTag("larpfeed_page_title");
+            assertEquals("Larpfeed", title.getText().toString());
             assertEquals("the compact title wraps on a standard phone", 1, title.getLineCount());
             float expectedSp = activity.getResources().getConfiguration().fontScale > 1.3f ? 20f : 22f;
             assertEquals("the home title lost its display size or large-text cap",
                     android.util.TypedValue.applyDimension(android.util.TypedValue.COMPLEX_UNIT_SP,
                             expectedSp, activity.getResources().getDisplayMetrics()),
                     title.getTextSize(), 0.01f);
-            TextView subtitle = header.findViewWithTag("hushfeed_home_subtitle");
+            TextView subtitle = header.findViewWithTag("larpfeed_home_subtitle");
             org.junit.Assert.assertNull("the removed introduction returned", subtitle);
-            ViewGroup toolbar = header.findViewWithTag("hushfeed_toolbar");
-            View status = header.findViewWithTag("hushfeed_compact_status");
+            ViewGroup toolbar = header.findViewWithTag("larpfeed_toolbar");
+            View status = header.findViewWithTag("larpfeed_compact_status");
             int target = SettingsUi.dp(activity, 48);
             for (View control : new View[]{toolbar.getChildAt(0), status}) {
                 Rect visible = new Rect();
@@ -211,7 +211,7 @@ public class SettingsHeaderGeometryTest {
 
             assertEquals("the fixture is not laid out in the direction it names",
                     direction, header.getLayoutDirection());
-            ViewGroup toolbar = header.findViewWithTag("hushfeed_toolbar");
+            ViewGroup toolbar = header.findViewWithTag("larpfeed_toolbar");
             assertNotNull(toolbar);
             View back = toolbar.getChildAt(0);
             int target = SettingsUi.dp(activity, 48);
@@ -238,7 +238,7 @@ public class SettingsHeaderGeometryTest {
                     bounds.width() >= target && bounds.height() >= target);
 
             // The circular Back control and display title share the same inset.
-            View title = header.findViewWithTag("hushfeed_page_title");
+            View title = header.findViewWithTag("larpfeed_page_title");
             int inset = 0;
             if (direction == View.LAYOUT_DIRECTION_RTL) {
                 assertEquals("the Back control left the header's start edge",

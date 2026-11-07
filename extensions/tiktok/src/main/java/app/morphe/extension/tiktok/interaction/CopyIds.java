@@ -1,6 +1,6 @@
 /*
- * Copyright 2026 Hushfeed contributors
- * https://github.com/SysAdminDoc/hushfeed
+ * Copyright 2026 Larpfeed contributors
+ * https://github.com/SysAdminDoc/larpfeed
  */
 package app.morphe.extension.tiktok.interaction;
 
@@ -64,7 +64,7 @@ public final class CopyIds {
     static final String COPY_USER_ID = "Copy user ID";
     static final String COPY_VIDEO_ID = "Copy video ID";
     /** Marks the button row this class adds, so a reattached panel reuses it. */
-    static final String ROW_TAG = "hushfeed_copy_ids";
+    static final String ROW_TAG = "larpfeed_copy_ids";
 
     /** The signature each bio view was last bound with. Main thread only. */
     private static final Map<View, String> BIOS = new WeakHashMap<>();

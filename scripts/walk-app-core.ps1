@@ -12,7 +12,7 @@ $WalkPackage = 'com.zhiliaoapp.musically'
 
 # Labels the walk never taps, by text or content description, in every language a walk phone
 # runs. Each one acts on a real account or another person (a follow, a like, a message, a post,
-# a block) or changes Hushfeed's settings in one tap (a quick setup or preset). A walk only
+# a block) or changes Larpfeed's settings in one tap (a quick setup or preset). A walk only
 # opens screens and sheets and leaves them with Back, so nothing it needs to touch can match.
 $WalkDeniedLabel = '(?i)^\W*(follow|follow back|unfollow|message|send|post|repost|like|add friends?|add (a )?person|add people|invite|confirm|block|report|delete|remove|log ?out|switch account|download|save|duet|stitch|go live|subscribe|buy|shop now|install|claim|back to defaults|use "|' +
     'segui|segui anche tu|smetti di seguire|messaggio|invia|pubblica|ripubblica|metti mi piace|mi piace|aggiungi amic[oi]|aggiungi person[ae]|invita|conferma|blocca|segnala|elimina|rimuovi|esci|cambia account|scarica|salva|duetto|vai in live|iscriviti|acquista|installa|riscatta|ripristina predefiniti|usa ")\b'
@@ -20,7 +20,7 @@ $WalkDeniedLabel = '(?i)^\W*(follow|follow back|unfollow|message|send|post|repos
 # TikTok's labels the walk looks for, as regexes over every language a walk phone runs. TikTok
 # takes its language from its own settings, over the phone's and Android's per-app locale, so a
 # phone set to another language needs its words added here (the S22 runs English, Login2
-# Italian). Hushfeed's own titles come from its translation tables instead (Get-WalkTitleLabel).
+# Italian). Larpfeed's own titles come from its translation tables instead (Get-WalkTitleLabel).
 $WalkLabels = @{
     Home = '^Home$'
     Friends = '^(Friends|Amici)$'
@@ -69,7 +69,7 @@ function Get-WalkPlannedScreens {
     .SYNOPSIS
         Every screen a PASS walk of this profile reaches, in walk order.
     #>
-    param([Parameter(Mandatory = $true)][hashtable]$AppProfile, [Parameter(Mandatory = $true)][string[]]$HushfeedPages)
+    param([Parameter(Mandatory = $true)][hashtable]$AppProfile, [Parameter(Mandatory = $true)][string[]]$LarpfeedPages)
     $screens = [Collections.Generic.List[string]]::new()
     $screens.Add('launch'); $screens.Add("feed: $($AppProfile.MainFeedName)")
     $screens.Add('sheet: comments'); $screens.Add('sheet: share')
@@ -79,12 +79,12 @@ function Get-WalkPlannedScreens {
         $screens.Add("tab: $tab")
         if ($tab -eq 'Inbox' -and $AppProfile.Activity) { $screens.Add('inbox: Activity') }
     }
-    $screens.Add('settings: Hushfeed'); $screens.Add('settings: Search settings')
-    foreach ($page in $HushfeedPages) { $screens.Add("settings: $page") }
+    $screens.Add('settings: Larpfeed'); $screens.Add('settings: Search settings')
+    foreach ($page in $LarpfeedPages) { $screens.Add("settings: $page") }
     $screens.ToArray()
 }
 
-function Get-HushfeedTranslations {
+function Get-LarpfeedTranslations {
     <#
     .SYNOPSIS
         Every translation of each English settings string, read from the extension's
@@ -107,7 +107,7 @@ function Get-HushfeedTranslations {
 function Get-WalkTitleLabel {
     <#
     .SYNOPSIS
-        A regex matching a Hushfeed title exactly, case included (so "Privacy" isn't a "PRIVACY"
+        A regex matching a Larpfeed title exactly, case included (so "Privacy" isn't a "PRIVACY"
         section header), in English or any of its translations.
     #>
     param([Parameter(Mandatory = $true)][string]$English, [hashtable]$Translations = @{})
@@ -159,9 +159,9 @@ function Test-WalkTapAllowed {
         Whether a walk may tap this node: false for anything labeled like a follow, like, message
         or post, whatever the walk was looking for.
     .DESCRIPTION
-        -Title is a Get-WalkTitleLabel regex. A Hushfeed page row (id "title") whose text is that
+        -Title is a Get-WalkTitleLabel regex. A Larpfeed page row (id "title") whose text is that
         title exactly may be tapped even when a word on the list spells it, like Italian's
-        "Download" for the Downloads page: it only opens Hushfeed's own page.
+        "Download" for the Downloads page: it only opens Larpfeed's own page.
     #>
     param([Parameter(Mandatory = $true)]$Node, [string]$Title)
     if ($Title -and $Node.Id -ceq 'title' -and $Node.Text -match $Title) { return $true }
@@ -186,7 +186,7 @@ function Get-WalkCrashes {
         A Java crash is "FATAL EXCEPTION" with "Process: <package>" on one of the next lines. A
         native crash is libc's "Fatal signal" or debuggerd's ">>> <package> <<<" for the same pid,
         which count once. ActivityManager's "ANR in <package>" is an ANR. A process that dies
-        because the walk force-stopped it or Hushfeed restarted it logs none of these.
+        because the walk force-stopped it or Larpfeed restarted it logs none of these.
     #>
     param([AllowEmptyCollection()][string[]]$Lines = @(), [string]$Package = $WalkPackage)
     $seen = @{}

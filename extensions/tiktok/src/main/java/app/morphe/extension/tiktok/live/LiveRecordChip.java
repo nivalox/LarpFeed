@@ -1,6 +1,6 @@
 /*
- * Copyright 2026 Hushfeed contributors
- * https://github.com/SysAdminDoc/hushfeed
+ * Copyright 2026 Larpfeed contributors
+ * https://github.com/SysAdminDoc/larpfeed
  */
 package app.morphe.extension.tiktok.live;
 
@@ -85,7 +85,7 @@ public final class LiveRecordChip {
     private static boolean recordingWasPinned;
     private static long pipReturnUntil;
 
-    /** True while the switch is on and Hushfeed isn't paused. */
+    /** True while the switch is on and Larpfeed isn't paused. */
     public static boolean enabled() {
         return SettingsStatus.liveControlsEnabled && Settings.RECORD_LIVE.get() && !Setting.isPaused();
     }
@@ -247,7 +247,7 @@ public final class LiveRecordChip {
     }
 
     /**
-     * Hushfeed's own buttons over a LIVE room stack top to bottom in this order: the Record chip,
+     * Larpfeed's own buttons over a LIVE room stack top to bottom in this order: the Record chip,
      * Auto tap, then the block button.
      */
     public static final int STACK_RECORD = 1;
@@ -268,7 +268,7 @@ public final class LiveRecordChip {
     }
 
     /**
-     * Marks {@code view} as the Hushfeed button at {@code rank} in the room's stack, sitting at
+     * Marks {@code view} as the Larpfeed button at {@code rank} in the room's stack, sitting at
      * {@code wantedTop} unless something to tap is there, and {@code gap} below whatever it moves under.
      */
     public static void markStacked(View view, int rank, int wantedTop, int gap) {
@@ -281,7 +281,7 @@ public final class LiveRecordChip {
     }
 
     /**
-     * Puts every stacked Hushfeed button in {@code content} in its place in one pass, top of the
+     * Puts every stacked Larpfeed button in {@code content} in its place in one pass, top of the
      * stack first: each below the room's own tap targets and below where the shown buttons above it
      * are going, not where they were last drawn. When each button moved on its own tick against the
      * others' last drawn spots, a room opening or the Discover panel sliding in moved them all at
@@ -409,7 +409,7 @@ public final class LiveRecordChip {
     }
 
     /**
-     * Whether a recording of the room's screen is under way, so every Hushfeed button over the
+     * Whether a recording of the room's screen is under way, so every Larpfeed button over the
      * room stays out of it (#265). Main thread only.
      */
     public static boolean filmingScreen() {

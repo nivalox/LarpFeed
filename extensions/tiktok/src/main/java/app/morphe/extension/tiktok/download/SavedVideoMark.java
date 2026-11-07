@@ -1,6 +1,6 @@
 /*
- * Copyright 2026 Hushfeed contributors
- * https://github.com/SysAdminDoc/hushfeed
+ * Copyright 2026 Larpfeed contributors
+ * https://github.com/SysAdminDoc/larpfeed
  */
 package app.morphe.extension.tiktok.download;
 
@@ -11,7 +11,7 @@ import app.morphe.extension.tiktok.settings.Settings;
 import app.morphe.extension.tiktok.settings.SettingsStatus;
 
 /**
- * The check mark a profile grid cell puts before its view count when its video is one Hushfeed
+ * The check mark a profile grid cell puts before its view count when its video is one Larpfeed
  * saved here ("✓ 12.3K"), and a feed video's creator row before its time ("✓ 2d ago").
  *
  * <p>Saved means in {@link SavedVideoArchive}'s record, which Check for already-saved videos

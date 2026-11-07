@@ -142,7 +142,7 @@ public class FeatureGateLabRestartRowTest {
      */
     @Test public void aRestartFromTheLabReopensTheLabOverTheHomePage() throws Exception {
         Intent intent = new Intent().setAction("morphe_settings").putExtra("morphe", true)
-                .putExtra("hushfeed_settings_page", TikTokPreferenceFragment.PAGE_LAB);
+                .putExtra("larpfeed_settings_page", TikTokPreferenceFragment.PAGE_LAB);
         try (var owner = Robolectric.buildActivity(SettingsActivity.class, intent).setup().visible()) {
             SettingsActivity activity = owner.get();
             settle();

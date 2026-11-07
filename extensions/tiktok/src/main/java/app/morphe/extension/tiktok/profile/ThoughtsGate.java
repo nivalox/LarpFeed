@@ -1,6 +1,6 @@
 /*
- * Copyright 2026 Hushfeed contributors
- * https://github.com/SysAdminDoc/hushfeed
+ * Copyright 2026 Larpfeed contributors
+ * https://github.com/SysAdminDoc/larpfeed
  */
 package app.morphe.extension.tiktok.profile;
 
@@ -15,7 +15,7 @@ import app.morphe.extension.tiktok.settings.Settings;
  * AB values it reads lazily: {@code story_note_enable_consumption} for the bubble above a profile
  * picture and the Thoughts row in the inbox, and {@code story_note_enable_publish} for the prompt
  * to share one. The patch hooks both getters. With the switch on they answer yes; with it off, and
- * while Hushfeed is paused, TikTok reads its own values. Whether a Thought posts is still up to
+ * while Larpfeed is paused, TikTok reads its own values. Whether a Thought posts is still up to
  * TikTok's servers.
  */
 @SuppressWarnings("unused")

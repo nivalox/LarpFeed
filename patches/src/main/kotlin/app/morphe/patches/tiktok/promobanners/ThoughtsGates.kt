@@ -1,6 +1,6 @@
 /*
- * Copyright 2026 Hushfeed contributors
- * https://github.com/SysAdminDoc/hushfeed
+ * Copyright 2026 Larpfeed contributors
+ * https://github.com/SysAdminDoc/larpfeed
  */
 package app.morphe.patches.tiktok.promobanners
 
@@ -57,7 +57,7 @@ internal fun resolveThoughtsGates(): ThoughtsGates {
 }
 
 /**
- * With the switch on both gates answer yes, and with it off, or while Hushfeed is paused, TikTok
+ * With the switch on both gates answer yes, and with it off, or while Larpfeed is paused, TikTok
  * reads its own values. Whether a Thought written this way posts is still up to TikTok's servers.
  */
 context(patchContext: BytecodePatchContext)

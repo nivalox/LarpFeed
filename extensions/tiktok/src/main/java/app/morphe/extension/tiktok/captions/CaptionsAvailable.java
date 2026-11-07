@@ -1,6 +1,6 @@
 /*
- * Copyright 2026 Hushfeed contributors
- * https://github.com/SysAdminDoc/hushfeed
+ * Copyright 2026 Larpfeed contributors
+ * https://github.com/SysAdminDoc/larpfeed
  */
 package app.morphe.extension.tiktok.captions;
 
@@ -19,7 +19,7 @@ import app.morphe.extension.tiktok.settings.Settings;
  * row draws nothing even where it's placed, and the player, the share panel's Captions item and the
  * caption toggle read the same answer. While the setting is on, a row left out reads as placed first
  * and the controls read as on, the answers TikTok gives the accounts it shows them to. Any other
- * answer is TikTok's, and so is every answer while the setting is off, while Hushfeed is paused and
+ * answer is TikTok's, and so is every answer while the setting is off, while Larpfeed is paused and
  * before the application context exists. TikTok reads both values once per launch, so the setting
  * asks for a restart.
  *

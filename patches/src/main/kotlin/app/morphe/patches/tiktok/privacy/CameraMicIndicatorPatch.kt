@@ -1,6 +1,6 @@
 /*
- * Copyright 2026 Hushfeed contributors
- * https://github.com/SysAdminDoc/hushfeed
+ * Copyright 2026 Larpfeed contributors
+ * https://github.com/SysAdminDoc/larpfeed
  */
 package app.morphe.patches.tiktok.privacy
 
@@ -47,7 +47,7 @@ private val MIC_STOP = setOf(
 val cameraMicIndicatorPatch = bytecodePatch(
     name = "Camera and microphone indicator",
     description = "Shows a small mark in the top corner while TikTok is using the camera or " +
-        "microphone, so you always know when it is. Starts off. Turn it on in Hushfeed settings > " +
+        "microphone, so you always know when it is. Starts off. Turn it on in Larpfeed settings > " +
         "Privacy.",
 ) {
     category("Privacy")

@@ -1,6 +1,6 @@
 /*
- * Copyright 2026 Hushfeed contributors
- * https://github.com/SysAdminDoc/hushfeed
+ * Copyright 2026 Larpfeed contributors
+ * https://github.com/SysAdminDoc/larpfeed
  *
  * Built on icysymmetra/tiktok-patches-for-morphe (GPL-3.0).
  */
@@ -178,7 +178,7 @@ public final class KeepUnsent {
                     ? String.format(L10n.t("Removed: %1$d"), removed)
                     : String.format(L10n.t("Removed: %1$d. The other %2$d are still there. Open your Inbox, then try again."), removed, failed);
             Utils.runOnMainThread(() -> report.done(message));
-        }, "hushfeed-clear-unsent");
+        }, "larpfeed-clear-unsent");
         worker.start();
     }
 

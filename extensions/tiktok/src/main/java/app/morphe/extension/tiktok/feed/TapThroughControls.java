@@ -1,6 +1,6 @@
 /*
- * Copyright 2026 Hushfeed contributors
- * https://github.com/SysAdminDoc/hushfeed
+ * Copyright 2026 Larpfeed contributors
+ * https://github.com/SysAdminDoc/larpfeed
  *
  * Built on icysymmetra/tiktok-patches-for-morphe (GPL-3.0).
  */
@@ -142,7 +142,7 @@ final class TapThroughControls {
     /**
      * Hands {@code event} on, with the marked views in {@code window} out of the way when it puts a
      * finger down. The state is asked live rather than taken from the last layout pass, so the
-     * controls take taps again the moment Clear display ends or Hushfeed is paused.
+     * controls take taps again the moment Clear display ends or Larpfeed is paused.
      */
     static boolean dispatch(Window window, Window.Callback inner, MotionEvent event) {
         int action = event.getActionMasked();

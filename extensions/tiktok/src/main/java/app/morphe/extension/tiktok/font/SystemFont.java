@@ -1,6 +1,6 @@
 /*
- * Copyright 2026 Hushfeed contributors
- * https://github.com/SysAdminDoc/hushfeed
+ * Copyright 2026 Larpfeed contributors
+ * https://github.com/SysAdminDoc/larpfeed
  */
 package app.morphe.extension.tiktok.font;
 
@@ -117,7 +117,7 @@ public final class SystemFont {
             lines.add("Use system font: " + (system ? "on" : "off"));
             lines.add("Use an imported font: " + (imported ? "on" : "off"));
             if ((system || imported) && !Settings.SYSTEM_FONT.get() && !Settings.IMPORTED_FONT.get()) {
-                lines.add("Hushfeed is paused, so TikTok keeps its own font");
+                lines.add("Larpfeed is paused, so TikTok keeps its own font");
             }
             Context context = Utils.getContext();
             File file = ImportedFont.file(context);

@@ -65,7 +65,7 @@ public class OfflineVideoExpiryTest {
                 String.join(" ", HookStatus.report()).contains("offline video expiry"));
 
         PausedProcess.set(true);
-        assertFalse("a paused Hushfeed still kept the videos", OfflineVideoExpiry.keepOfflineVideos());
+        assertFalse("a paused Larpfeed still kept the videos", OfflineVideoExpiry.keepOfflineVideos());
         PausedProcess.set(false);
 
         Settings.KEEP_OFFLINE_VIDEOS.save(false);
@@ -83,7 +83,7 @@ public class OfflineVideoExpiryTest {
                 String.join(" ", HookStatus.report()).contains("offline auto adjust"));
 
         PausedProcess.set(true);
-        assertFalse("a paused Hushfeed still held Auto adjust back", OfflineVideoExpiry.keepThroughAutoAdjust());
+        assertFalse("a paused Larpfeed still held Auto adjust back", OfflineVideoExpiry.keepThroughAutoAdjust());
         PausedProcess.set(false);
 
         Settings.KEEP_OFFLINE_VIDEOS.save(false);
@@ -103,7 +103,7 @@ public class OfflineVideoExpiryTest {
                 String.join(" ", HookStatus.report()).contains("offline default cleanup"));
 
         PausedProcess.set(true);
-        assertTrue("a paused Hushfeed still cancelled the clean-up", OfflineVideoExpiry.keepThroughDefaultEnableCleanup(true));
+        assertTrue("a paused Larpfeed still cancelled the clean-up", OfflineVideoExpiry.keepThroughDefaultEnableCleanup(true));
         PausedProcess.set(false);
     }
 

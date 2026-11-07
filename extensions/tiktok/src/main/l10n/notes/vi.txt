@@ -4,17 +4,17 @@
 
 ## 0.80.0 (2026-11-01)
 
-* PineDrama chuyển sang bộ bản vá riêng, HushPine. Hushfeed giờ chỉ vá TikTok.
+* PineDrama chuyển sang bộ bản vá riêng, HushPine. Larpfeed giờ chỉ vá TikTok.
 * Chỉ hỗ trợ TikTok 47.6.3. Tải từ APKMirror và giữ nguyên khóa ký để không mất đăng nhập.
 * Ẩn các nút của Clear display có công tắc giữ lại thanh tiến trình (#237).
 * Nhấn đúp có thể thích hoặc bỏ thích video (#248).
 * Giữ video rồi trượt ngang để đổi tốc độ trong menu của bạn. Mặc định tắt (#248).
 * Lưới đã thích có cách sắp xếp riêng, chỉ áp dụng cho lưới đó (#180).
-* Tiêu đề Hushfeed có dải màu xanh ngọc và đỏ của TikTok chuyển động chậm.
+* Tiêu đề Larpfeed có dải màu xanh ngọc và đỏ của TikTok chuyển động chậm.
 * Đã bỏ Calm feed. Các bộ lọc vẫn ở Bộ lọc nguồn cấp và vẫn bật như cũ.
 * Nhấn đúp và Nhấn giữ có thể mở trang tìm kiếm, kể cả khi đã ẩn nút tìm kiếm (#251).
 * Công tắc mới thu gọn ô tìm kiếm bình luận thành nút kính lúp (#254).
-* Công tắc mới bỏ hàng Hushfeed khỏi cài đặt của TikTok. Nhấn giữ Dành cho bạn để mở cài đặt (#264).
+* Công tắc mới bỏ hàng Larpfeed khỏi cài đặt của TikTok. Nhấn giữ Dành cho bạn để mở cài đặt (#264).
 * @tên người dùng trong tiểu sử giờ là liên kết đến trang cá nhân đó (#247).
 * Thanh dưới có thể là viên kính nổi, có thấu kính trượt và cài đặt độ mờ, độ trong, chiều cao, góc bo (#259).
 * Tùy chọn Morphe đặt giá trị ban đầu, nên bản dựng có thể bật sẵn công tắc. Cảm ơn @XEGARE (#256).
@@ -31,7 +31,7 @@
 * Mới nhất trước trên Đang follow tải 30 bài mỗi lần, nên ít bài mới chen vào hơn (#226).
 * Trong phòng LIVE, nhấn giữ tiểu sử, tên hoặc tên người dùng để sao chép (#268).
 * Ẩn TikTok Shop cũng bỏ các nút cửa hàng dưới chú thích (#271).
-* Biểu tượng tùy chỉnh có thể cho thông báo chữ H Hushfeed sắc nét (#114).
+* Biểu tượng tùy chỉnh có thể cho thông báo chữ H Larpfeed sắc nét (#114).
 * Định dạng âm thanh có thêm MP3, phát được ở mọi nơi (#273).
 * Công tắc mới ẩn cả mũi tên Quay lại cạnh thanh tìm kiếm đã ẩn (#251).
 * Khi bật nút Chặn tác giả, LIVE trong Dành cho bạn cũng có nút chặn (#138).
@@ -44,7 +44,7 @@
 * Có gì mới có tiếng Trung giản thể.
 * Feature Gate Lab có nút khởi động lại và mở lại đúng trang Lab.
 * Dựng trên Morphe patcher 2.1.0, cần Morphe Manager 2.3.0 trở lên hoặc morphe-desktop 1.20.0.
-* Gói bản vá có chữ ký, nên Manager kiểm tra được bản tải về từ Hushfeed.
+* Gói bản vá có chữ ký, nên Manager kiểm tra được bản tải về từ Larpfeed.
 * Kết quả tìm kiếm cài đặt mở đúng hàng đó.
 * Thanh dưới trong suốt: dòng Vuốt lên để bỏ qua lại nằm trên các thẻ (#261).
 * Viên kính nổi cao hơn một chút, đường tiến trình không đè lên nó (#259).
@@ -92,7 +92,7 @@
 * Ghi màn hình LIVE không còn quay nút Ghi, và thông báo có nút Dừng (#265).
 * Đăng nhập không dùng passkey cho biết cần làm gì khi TikTok chỉ hỏi passkey (#102).
 * Xóa công cụ sáng tạo cũng hoạt động với gói tách. Thẻ Tạo sẽ ngừng hoạt động, nên hãy bỏ bản vá này nếu bạn làm video (#285).
-* Khi TikTok từ chối lượt thích, Hushfeed hiện lý do một lần mỗi phiên (#269).
+* Khi TikTok từ chối lượt thích, Larpfeed hiện lý do một lần mỗi phiên (#269).
 * Video đã thích hoặc đã lưu vẫn ở lưới, kể cả khi có dấu quảng cáo (#269).
 * Thông báo tiếng Trung khi bị từ chối follow dùng đúng từ.
 * Viên kính nổi cũng làm mờ bản xem trước LIVE phía sau (#259).

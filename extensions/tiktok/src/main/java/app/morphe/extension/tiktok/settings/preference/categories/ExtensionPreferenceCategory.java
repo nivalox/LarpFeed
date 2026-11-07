@@ -453,10 +453,10 @@ public class ExtensionPreferenceCategory extends ConditionalPreferenceCategory {
         }
         addPreference(new TogglePreference(
                 context,
-                "Hide the Hushfeed row",
-                "Take Hushfeed out of TikTok's Settings and privacy. To open these settings, press "
+                "Hide the Larpfeed row",
+                "Take Larpfeed out of TikTok's Settings and privacy. To open these settings, press "
                         + "and hold For You at the top of the feed, or Home if Long-press Home for "
-                        + "Hushfeed settings is on.",
+                        + "Larpfeed settings is on.",
                 Settings.HIDE_SETTINGS_ROW
         ));
         // Shown from the same start of TikTok's main screen as the settings row, so every bundle has it.

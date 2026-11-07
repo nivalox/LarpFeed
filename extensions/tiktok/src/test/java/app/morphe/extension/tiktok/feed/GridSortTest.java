@@ -1,6 +1,6 @@
 /*
- * Copyright 2026 Hushfeed contributors
- * https://github.com/SysAdminDoc/hushfeed
+ * Copyright 2026 Larpfeed contributors
+ * https://github.com/SysAdminDoc/larpfeed
  */
 package app.morphe.extension.tiktok.feed;
 
@@ -2080,7 +2080,7 @@ public class GridSortTest {
         assertEquals("off, TikTok's own announcement stands", 0, quiet.refreshes);
     }
 
-    @Test public void pausedHushfeedAndUnknownChoicesLeaveTikToksOrder() {
+    @Test public void pausedLarpfeedAndUnknownChoicesLeaveTikToksOrder() {
         List<Aweme> grid = grid();
         Settings.PROFILE_GRID_SORT.save("newest");
         setPaused(true);

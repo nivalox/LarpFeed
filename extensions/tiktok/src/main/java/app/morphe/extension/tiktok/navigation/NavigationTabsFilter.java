@@ -337,7 +337,7 @@ public final class NavigationTabsFilter {
         }
 
         // Bookkeeping on the reader's own list, paused or not: paused, get() would answer the
-        // default list and an open door, and a tab Hushfeed has no name for would be saved over
+        // default list and an open door, and a tab Larpfeed has no name for would be saved over
         // the reader's list together with every tab it knows.
         if (!newlyObservedKeys.isEmpty() && !Settings.FEED_NAVIGATION_BLOCK_NEW_TABS.savedValue()) {
             Set<String> enabledKeys = NavigationTabOptions.parseEnabledKeys(Settings.FEED_NAVIGATION_TABS.savedValue());

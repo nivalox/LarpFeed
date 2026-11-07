@@ -1,6 +1,6 @@
 /*
- * Copyright 2026 Hushfeed contributors
- * https://github.com/SysAdminDoc/hushfeed
+ * Copyright 2026 Larpfeed contributors
+ * https://github.com/SysAdminDoc/larpfeed
  *
  * Built on icysymmetra/tiktok-patches-for-morphe (GPL-3.0).
  */
@@ -88,7 +88,7 @@ val videoFitPatch = bytecodePatch(
     description = "Shows the whole video instead of cutting off its sides on folding phones, " +
         "squarer screens and split screen, and fits photo slideshows whole on squarer screens. " +
         "A second switch does the opposite and fills the screen. Starts off. Turn it on in " +
-        "Hushfeed settings > Playback.",
+        "Larpfeed settings > Playback.",
 ) {
     category("Playback")
     dependsOn(settingsPatch, sharedExtensionPatch)

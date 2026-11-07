@@ -1,6 +1,6 @@
 /*
- * Copyright 2026 Hushfeed contributors
- * https://github.com/SysAdminDoc/hushfeed
+ * Copyright 2026 Larpfeed contributors
+ * https://github.com/SysAdminDoc/larpfeed
  *
  * Built on icysymmetra/tiktok-patches-for-morphe (GPL-3.0).
  */
@@ -195,8 +195,8 @@ public final class InboxFilter {
     public static boolean allowLoadedNotificationClick(Object holder) { return InboxQueryNative.click(holder); }
     public static boolean allowLoadedRefresh(Object spring, boolean starting) { return InboxQueryNative.refresh(spring, starting); }
     public static boolean allowLoadedManualRefresh(Object spring) { return InboxQueryNative.refresh(spring, true); }
-    // TikTok's paging frames call these around its own requests. A throw in Hushfeed's part ends
-    // the search and lets the request go ahead as it would without Hushfeed.
+    // TikTok's paging frames call these around its own requests. A throw in Larpfeed's part ends
+    // the search and lets the request go ahead as it would without Larpfeed.
     public static boolean allowLoadedRequest(Object target) {
         try { InboxQueryNative.probe("loaded request"); return InboxNativeRequests.allowed(target); }
         catch (Throwable failure) { InboxQueryNative.contain("loaded request", failure); return true; }
@@ -487,7 +487,7 @@ public final class InboxFilter {
 
     /**
      * The colour TikTok's own header text is using, so this row is readable whatever theme the
-     * app is in. The theme flag is not usable here: it is a cached value the Hushfeed settings
+     * app is in. The theme flag is not usable here: it is a cached value the Larpfeed settings
      * screen sets, and away from that screen it answers for the system rather than for TikTok's
      * own in-app theme, which would put a dark crimson on a dark sheet. Falls back to the brand
      * accent when the header holds no text of its own to copy.

@@ -1,6 +1,6 @@
 /*
- * Copyright 2026 Hushfeed contributors
- * https://github.com/SysAdminDoc/hushfeed
+ * Copyright 2026 Larpfeed contributors
+ * https://github.com/SysAdminDoc/larpfeed
  *
  * Built on icysymmetra/tiktok-patches-for-morphe (GPL-3.0).
  */
@@ -83,7 +83,7 @@ public final class AutoAdvance {
      * TikTok's search_auto_scroll flag, read where search decides whether its results feed gets
      * auto scroll and which state that starts in. The feed runs the same component as For You, so
      * once the flag lets it exist the hooks below start and stop it like any other. With either
-     * switch off, or Hushfeed paused, the server's answer goes through unchanged.
+     * switch off, or Larpfeed paused, the server's answer goes through unchanged.
      */
     public static int searchFlag(int nativeValue) {
         try {
@@ -176,13 +176,13 @@ public final class AutoAdvance {
     /**
      * On a search page the host hands every new or resumed component the state search last
      * remembered, and a START there starts the component on its own. The flag answer above is
-     * what lets it remember at all, so a scroll Hushfeed started and left running on one page
-     * starts again by itself on the next one. Nothing of Hushfeed's started that one, so it was
+     * what lets it remember at all, so a scroll Larpfeed started and left running on one page
+     * starts again by itself on the next one. Nothing of Larpfeed's started that one, so it was
      * never owned, and the limit, the hold and the shared video check all passed it by. Leaving
      * that read at the server's answer isn't the way out: it then says STOP on every resume and
      * the host turns a running search scroll off each time. So the state is read here, before
      * the host's restore runs, and a component that went from STOP to running in that one step
-     * is claimed as Hushfeed's.
+     * is claimed as Larpfeed's.
      */
     private static void watchRestore(Object component) {
         Control control = CONTROLS.get(component);
@@ -321,9 +321,9 @@ public final class AutoAdvance {
             refreshLimit();
             // A shared video opened alone has no feed after it, so nothing moves on from it, and
             // that takes in TikTok's own auto scroll too: started from the panel action, or by
-            // search on its own, it isn't Hushfeed's, and the pager's touch guard doesn't stop
+            // search on its own, it isn't Larpfeed's, and the pager's touch guard doesn't stop
             // a move the app makes itself. Ownership is released, so the next look once another
-            // video plays starts it again. The switch and Pause Hushfeed are in linkVideoAlone.
+            // video plays starts it again. The switch and Pause Larpfeed are in linkVideoAlone.
             if (FeedLock.linkVideoAlone()) {
                 Object now = state.read();
                 if (now instanceof Enum<?> && !named(now, "AUTO_SCROLL_STATE_STOP")) stop.run();

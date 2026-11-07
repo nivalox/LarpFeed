@@ -1,6 +1,6 @@
 /*
- * Copyright 2026 Hushfeed contributors
- * https://github.com/SysAdminDoc/hushfeed
+ * Copyright 2026 Larpfeed contributors
+ * https://github.com/SysAdminDoc/larpfeed
  */
 package app.morphe.extension.tiktok.privacy;
 
@@ -226,7 +226,7 @@ public final class AccountCleanup {
             if (executor != null) {
                 executor.execute(work);
             } else {
-                Thread thread = new Thread(work, "Hushfeed account cleanup");
+                Thread thread = new Thread(work, "Larpfeed account cleanup");
                 thread.setDaemon(true);
                 thread.start();
             }

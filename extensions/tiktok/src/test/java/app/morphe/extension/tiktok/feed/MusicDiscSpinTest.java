@@ -25,7 +25,7 @@ import org.robolectric.annotation.Config;
  *
  * <p>47.1.4 ships {@code music_animation_close_exp} at 3, the disc and the track name both held,
  * and the rotation duration at 0, which on the S22 left the disc still everywhere with every
- * Hushfeed switch off. These pin that Spin clears the disc's flag only, Keep still sets it and
+ * Larpfeed switch off. These pin that Spin clears the disc's flag only, Keep still sets it and
  * zeroes a duration that would let it turn anyway, the track name's flag is never touched, and
  * nothing changes with both switches off.
  *

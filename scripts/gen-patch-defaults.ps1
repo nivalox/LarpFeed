@@ -1,7 +1,7 @@
 #Requires -Version 7.0
 <#
-Copyright 2026 Hushfeed contributors
-https://github.com/SysAdminDoc/hushfeed
+Copyright 2026 Larpfeed contributors
+https://github.com/SysAdminDoc/larpfeed
 Built on icysymmetra/tiktok-patches-for-morphe (GPL-3.0).
 
 Ownership is reviewed explicitly; types, defaults and numeric ranges come from the Java declarations.

@@ -54,7 +54,7 @@ class DefaultSettingsTest {
 
     @Test
     fun `merging shared defaults is deterministic and conflicts leave the old asset intact`() {
-        val output = File.createTempFile("hushfeed-defaults", ".json").apply { delete() }
+        val output = File.createTempFile("larpfeed-defaults", ".json").apply { delete() }
         try {
             mergeDefaultSettings(output, JsonParser.parseString("""{"simspoof":true,"region_as_flag":true}""").asJsonObject, "A")
             mergeDefaultSettings(output, JsonParser.parseString("""{"simspoof":true}""").asJsonObject, "B")

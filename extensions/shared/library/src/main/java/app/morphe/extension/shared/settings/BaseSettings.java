@@ -40,7 +40,7 @@ public class BaseSettings {
      * The running timed capture, written by {@link DebugCapture} only. Left out of backups, so
      * restoring one can't start logging again.
      */
-    public static final StringSetting DEBUG_CAPTURE = new StringSetting("hushfeed_debug_capture", "", false, false);
+    public static final StringSetting DEBUG_CAPTURE = new StringSetting("larpfeed_debug_capture", "", false, false);
     public static final StringSetting DEBUG_LOG_FILTERS = new StringSetting("morphe_debug_log_filters", "all", false, false);
     public static final BooleanSetting CAPTURE_JAVA_CRASHES =
             new BooleanSetting("morphe_capture_java_crashes", FALSE, true);
@@ -70,17 +70,17 @@ public class BaseSettings {
     public static final StringSetting EXPERIMENTAL_APP_CONFIRMED = new StringSetting("morphe_experimental_app_target_confirmed", "", false, false);
 
     /**
-     * Pause Hushfeed: from the next start TikTok runs as if it were not patched for every hook a
+     * Pause Larpfeed: from the next start TikTok runs as if it were not patched for every hook a
      * setting controls, and every saved value stays as it is. Left out of backups, so restoring
      * one never pauses a phone by surprise.
      */
-    public static final BooleanSetting PAUSED = new BooleanSetting("hushfeed_paused", FALSE, true, false, null, null);
+    public static final BooleanSetting PAUSED = new BooleanSetting("larpfeed_paused", FALSE, true, false, null, null);
 
-    /** Set by {@link HushfeedPause} after three starts in a row crashed within a minute. */
-    public static final BooleanSetting SAFE_MODE = new BooleanSetting("hushfeed_safe_mode", FALSE, true, false, null, null);
+    /** Set by {@link LarpfeedPause} after three starts in a row crashed within a minute. */
+    public static final BooleanSetting SAFE_MODE = new BooleanSetting("larpfeed_safe_mode", FALSE, true, false, null, null);
 
     static {
-        // Hushfeed's own state and its diagnostics, which keep working while it is paused.
+        // Larpfeed's own state and its diagnostics, which keep working while it is paused.
         Setting.keepWhenPaused(DEBUG, DEBUG_CAPTURE, DEBUG_LOG_FILTERS, CAPTURE_JAVA_CRASHES, DEBUG_STACKTRACE,
                 DEBUG_TOAST_ON_ERROR, CHECK_ENVIRONMENT_WARNINGS_ISSUED, MORPHE_LANGUAGE, SHOW_MENU_ICONS,
                 FIRST_TIME_APP_LAUNCHED, EXPERIMENTAL_APP_CONFIRMED, PAUSED, SAFE_MODE);

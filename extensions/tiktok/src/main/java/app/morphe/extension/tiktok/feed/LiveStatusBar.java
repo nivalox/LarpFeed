@@ -1,6 +1,6 @@
 /*
- * Copyright 2026 Hushfeed contributors
- * https://github.com/SysAdminDoc/hushfeed
+ * Copyright 2026 Larpfeed contributors
+ * https://github.com/SysAdminDoc/larpfeed
  */
 package app.morphe.extension.tiktok.feed;
 
@@ -45,7 +45,7 @@ import java.util.WeakHashMap;
  *
  * <p>Show a LIVE under the status bar takes only the strip away and leaves the bar showing, see
  * through, over the stream. That's how rooms looked until TikTok started keeping a black strip
- * for the bar in October 2026, with or without Hushfeed (#137). The black is two things: the
+ * for the bar in October 2026, with or without Larpfeed (#137). The black is two things: the
  * offset that holds the room a bar lower, and a plain view the bar's height that TikTok draws
  * over the top of the room. Both go while the room is in front, and the room's controls are held
  * a bar lower again on their own, so only the stream reaches up under the clock. TikTok's dark

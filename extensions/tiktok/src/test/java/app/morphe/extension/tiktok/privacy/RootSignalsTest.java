@@ -1,6 +1,6 @@
 /*
- * Copyright 2026 Hushfeed contributors
- * https://github.com/SysAdminDoc/hushfeed
+ * Copyright 2026 Larpfeed contributors
+ * https://github.com/SysAdminDoc/larpfeed
  */
 package app.morphe.extension.tiktok.privacy;
 
@@ -16,7 +16,7 @@ import android.preference.SwitchPreference;
 import app.morphe.extension.shared.Utils;
 import app.morphe.extension.shared.settings.BaseSettings;
 import app.morphe.extension.shared.settings.EarlyApplication;
-import app.morphe.extension.shared.settings.HushfeedPause;
+import app.morphe.extension.shared.settings.LarpfeedPause;
 import app.morphe.extension.shared.settings.PausedProcess;
 import app.morphe.extension.shared.settings.Setting;
 import app.morphe.extension.tiktok.SettingsContextRule;
@@ -75,7 +75,7 @@ public class RootSignalsTest {
         Settings.BLOCK_ADVERTISING_ID.save(false);
         Settings.BLOCK_CLIPBOARD_READS.save(false);
         SettingsStatus.devicePrivacyGuardEnabled = false;
-        File marker = HushfeedPause.markerFile(context);
+        File marker = LarpfeedPause.markerFile(context);
         if (marker != null && marker.exists()) assertTrue(marker.delete());
     }
 
@@ -122,7 +122,7 @@ public class RootSignalsTest {
 
     @Test public void anEarlyPauseMarkerRunsNativeProbes() throws Exception {
         saveInFile(Settings.HIDE_ROOT.key, true);
-        File marker = HushfeedPause.markerFile(context);
+        File marker = LarpfeedPause.markerFile(context);
         assertNotNull(marker);
         assertTrue(marker.createNewFile());
         EarlyApplication.set(context);

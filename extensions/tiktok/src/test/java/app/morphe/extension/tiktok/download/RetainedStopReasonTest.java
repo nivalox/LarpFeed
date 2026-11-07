@@ -290,7 +290,7 @@ public class RetainedStopReasonTest {
         record.intent(
                 record.id,
                 "content://media/external/video/media",
-                "hushfeed-pending-" + record.id + ".mp4",
+                "larpfeed-pending-" + record.id + ".mp4",
                 "DCIM/TikTok");
         AtomicReference<LiveRecorder.Result> result = new AtomicReference<>();
         finished(
@@ -508,7 +508,7 @@ public class RetainedStopReasonTest {
     }
 
     private void screenshot(AlertDialog dialog, String name) throws Exception {
-        String output = System.getProperty("hushfeed.recovery.screenshots");
+        String output = System.getProperty("larpfeed.recovery.screenshots");
         if (output == null) return;
         File directory = new File(output);
         if (!directory.mkdirs() && !directory.isDirectory())

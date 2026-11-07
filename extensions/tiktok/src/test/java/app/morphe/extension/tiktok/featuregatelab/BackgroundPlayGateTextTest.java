@@ -19,7 +19,7 @@ import org.robolectric.RobolectricTestRunner;
 import org.robolectric.RuntimeEnvironment;
 import org.robolectric.annotation.Config;
 
-/** The Lab says what TikTok gets for background_play_enable while Hushfeed's switch decides it. */
+/** The Lab says what TikTok gets for background_play_enable while Larpfeed's switch decides it. */
 @RunWith(RobolectricTestRunner.class)
 @Config(sdk = 28)
 public class BackgroundPlayGateTextTest {

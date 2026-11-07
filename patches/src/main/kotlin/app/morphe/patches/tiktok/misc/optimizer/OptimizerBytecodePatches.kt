@@ -45,7 +45,7 @@ private const val UPDATE_CHECKS = "Skip update checks"
 val instantLaunchSplashBlockerPatch = bytecodePatch(
     name = "Skip the splash ad",
     description = "Lets you stop the full-screen ad TikTok can show while it starts up. Starts " +
-        "off. Turn it on in Hushfeed settings > App.",
+        "off. Turn it on in Larpfeed settings > App.",
 ) {
     category("Performance")
     dependsOn(sharedExtensionPatch, settingsPatch)
@@ -126,7 +126,7 @@ val networkTrafficGovernorPatch = bytecodePatch(
     name = "Limit background traffic",
     description = "Lets you stop TikTok loading upcoming videos ahead of time, which uses less " +
         "data in the background, but videos may take a moment longer to start. Starts off. Turn " +
-        "it on in Hushfeed settings > App.",
+        "it on in Larpfeed settings > App.",
 ) {
     category("Performance")
     dependsOn(sharedExtensionPatch, settingsPatch)
@@ -136,9 +136,9 @@ val networkTrafficGovernorPatch = bytecodePatch(
         "skipPushSetup",
         default = false,
         title = "Skip notification setup",
-        description = "With this on, the Limit background traffic switch in Hushfeed settings " +
+        description = "With this on, the Limit background traffic switch in Larpfeed settings " +
             "also stops TikTok setting up notifications, so you won't get any, messages included. " +
-            "Turn the switch off or pause Hushfeed to get them back.",
+            "Turn the switch off or pause Larpfeed to get them back.",
         required = false,
     )
 
@@ -177,7 +177,7 @@ val runtimeMemoryGovernorPatch = bytecodePatch(
     name = "Drop the animated image cache",
     description = "Lets you make TikTok decode animated stickers and GIFs one frame at a time as " +
         "they play, instead of a few frames ahead, so they use a little less memory. Starts off. " +
-        "Turn it on in Hushfeed settings > App.",
+        "Turn it on in Larpfeed settings > App.",
 ) {
     category("Performance")
     dependsOn(sharedExtensionPatch, settingsPatch)
@@ -241,7 +241,7 @@ val updatePromptSuppressorPatch = bytecodePatch(
     name = "Skip update checks",
     description = "Lets you stop two background tasks TikTok uses to check for updates, one of " +
         "them when your phone starts. Some in-app update prompts may stop. Play Store updates " +
-        "still work. Starts off. Turn it on in Hushfeed settings > App.",
+        "still work. Starts off. Turn it on in Larpfeed settings > App.",
 ) {
     category("Performance")
     dependsOn(sharedExtensionPatch, settingsPatch)

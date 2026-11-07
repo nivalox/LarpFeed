@@ -1,13 +1,13 @@
 {
   "schema_version": "1.0.0",
-  "dataset_title": "Hushfeed native runtime observations v1",
+  "dataset_title": "Larpfeed native runtime observations v1",
   "publication_status": "candidate",
   "observation_date_utc": "2026-10-09",
   "scope": {
     "device": "Samsung Galaxy S25 Ultra",
     "device_model": "SM-S938B",
     "os": "Android 16",
-    "installed_patch_build": "Hushfeed 0.68.0",
+    "installed_patch_build": "Larpfeed 0.68.0",
     "installed_app_version": "TikTok 47.1.4",
     "global_pause_mode": "active",
     "static_build_changes_remain": true,
@@ -22,7 +22,7 @@
   },
   "limitations": [
     "These are two sequential observations, with one capture per state. There is no unpaused or stock-app baseline, randomized order, replication, uncertainty estimate, or causal estimate of patch effects.",
-    "Hushfeed's global Pause mode was active. Diagnostic hooks and some runtime exceptions can remain active, while static build changes persist. This is not an unmodified TikTok baseline or an evaluation of current Hushfeed 0.70 behavior.",
+    "Larpfeed's global Pause mode was active. Diagnostic hooks and some runtime exceptions can remain active, while static build changes persist. This is not an unmodified TikTok baseline or an evaluation of current Larpfeed 0.70 behavior.",
     "CPU is the observed change in sampled process runtime counters between actual sample endpoints. Partial endpoint intervals and short-lived or otherwise unobserved processes can be missed. It is not exact CPU for the entire requested interval.",
     "Charge and current refer to the whole phone, including capture overhead and unrelated activity. They do not measure TikTok energy. Equal coarse charge-counter drops do not establish equal energy use or battery savings.",
     "Reported current means are arithmetic means of recorded samples, not time-weighted means or integrated charge. Negative values indicate discharge in these captures.",

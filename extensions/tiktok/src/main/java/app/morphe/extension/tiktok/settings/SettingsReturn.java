@@ -1,6 +1,6 @@
 /*
- * Copyright 2026 Hushfeed contributors
- * https://github.com/SysAdminDoc/hushfeed
+ * Copyright 2026 Larpfeed contributors
+ * https://github.com/SysAdminDoc/larpfeed
  */
 package app.morphe.extension.tiktok.settings;
 
@@ -18,14 +18,14 @@ import app.morphe.extension.shared.settings.Setting;
  *
  * <p>The restart row and the banner's Restart relaunch TikTok, which landed on the feed: whoever
  * flipped three switches on Privacy had to find their way back to Privacy to carry on. Before the
- * relaunch the page goes into Hushfeed's preferences with the time, and the next start opens that
+ * relaunch the page goes into Larpfeed's preferences with the time, and the next start opens that
  * page again when it comes within 90 seconds. The marker is removed before the page opens, so a
  * start that dies while opening it can't open it again, and one left by a relaunch that never
  * happened is dropped once it's stale.
  */
 public final class SettingsReturn {
-    public static final String PAGE_KEY = "hushfeed_return_page";
-    public static final String AT_KEY = "hushfeed_return_at";
+    public static final String PAGE_KEY = "larpfeed_return_page";
+    public static final String AT_KEY = "larpfeed_return_at";
     /** How long after the relaunch the page still opens. */
     public static final long WINDOW_MS = 90_000L;
 

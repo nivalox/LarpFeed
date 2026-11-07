@@ -1,6 +1,6 @@
 /*
- * Copyright 2026 Hushfeed contributors
- * https://github.com/SysAdminDoc/hushfeed
+ * Copyright 2026 Larpfeed contributors
+ * https://github.com/SysAdminDoc/larpfeed
  */
 package app.morphe.extension.tiktok.theme;
 
@@ -25,7 +25,7 @@ import app.morphe.extension.tiktok.privacy.BrowserPrivacyGuard;
  */
 public final class AmoledWebPages {
     private static final String HOOK_FAMILY = "amoled web pages";
-    static final String STYLE_ID = "hushfeed-amoled";
+    static final String STYLE_ID = "larpfeed-amoled";
 
     /**
      * The web tokens behind the dark tiers the resource side paints: UIPageGrouped2 (Activity

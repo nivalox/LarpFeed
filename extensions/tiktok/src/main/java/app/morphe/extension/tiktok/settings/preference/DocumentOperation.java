@@ -1,6 +1,6 @@
 /*
- * Copyright 2026 Hushfeed contributors
- * https://github.com/SysAdminDoc/hushfeed
+ * Copyright 2026 Larpfeed contributors
+ * https://github.com/SysAdminDoc/larpfeed
  *
  * Built on icysymmetra/tiktok-patches-for-morphe (GPL-3.0).
  */
@@ -121,7 +121,7 @@ public final class DocumentOperation {
     public static DocumentOperation start(Kind kind, Work work, Runnable onChange) {
         DocumentOperation operation = new DocumentOperation(kind, onChange);
         if (WORKERS.putIfAbsent(kind, operation) != null) return null;
-        if (!Utils.runOnOwnThread("Hushfeed-" + kind, () -> operation.runWork(work))) {
+        if (!Utils.runOnOwnThread("Larpfeed-" + kind, () -> operation.runWork(work))) {
             WORKERS.remove(kind, operation);
             return null;
         }

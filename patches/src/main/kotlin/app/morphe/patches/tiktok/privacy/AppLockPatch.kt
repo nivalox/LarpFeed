@@ -1,6 +1,6 @@
 /*
- * Copyright 2026 Hushfeed contributors
- * https://github.com/SysAdminDoc/hushfeed
+ * Copyright 2026 Larpfeed contributors
+ * https://github.com/SysAdminDoc/larpfeed
  */
 package app.morphe.patches.tiktok.privacy
 
@@ -49,7 +49,7 @@ val appLockPatch = bytecodePatch(
     name = "App lock",
     description = "Asks for your fingerprint, face or PIN before TikTok opens, and again when " +
         "you come back after a time you pick, so nobody else can open it on your phone. Starts " +
-        "off. Turn it on in Hushfeed settings > Privacy.",
+        "off. Turn it on in Larpfeed settings > Privacy.",
 ) {
     category("Privacy")
     // The bridge lets the lock stop the video on screen, which plays on under the prompt.

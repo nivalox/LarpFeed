@@ -94,15 +94,15 @@ class NearestMethodsFixturesTest {
     }
 
     /**
-     * The retarget itself, when `HUSHFEED_NEAREST_FROM` names an older build: on the declared
+     * The retarget itself, when `LARPFEED_NEAREST_FROM` names an older build: on the declared
      * build, with any one part broken, the shape of the method a sample took on the older build
      * ranks the method among the three a report prints. A sample the older build doesn't take
      * exactly one method of is left out and named, and at least one has to be compared.
      */
     @Test
     fun `an older build's shape finds the method a sample with one broken part missed`() {
-        val from = System.getenv("HUSHFEED_NEAREST_FROM")?.takeIf { it.isNotBlank() }?.let { File(it.trim()) }
-        assumeTrue("HUSHFEED_NEAREST_FROM is not set, so there is no older build to compare with.", from != null)
+        val from = System.getenv("LARPFEED_NEAREST_FROM")?.takeIf { it.isNotBlank() }?.let { File(it.trim()) }
+        assumeTrue("LARPFEED_NEAREST_FROM is not set, so there is no older build to compare with.", from != null)
         val shapes = olderShapes(from!!)
         assertTrue("no sample takes exactly one method on ${from.name}, so nothing was compared", shapes.isNotEmpty())
         Fixtures.forEachDeclared { apk ->
@@ -154,8 +154,8 @@ class NearestMethodsFixturesTest {
             assertTrue(first.missed.toString(), first.missed.isEmpty())
 
             for ((label, wrong) in listOf(
-                "superclass Lhushfeed/NoSuchClass;" to declaring("Lhushfeed/NoSuchClass;", classDef.interfaces),
-                "implements Lhushfeed/NoSuchInterface;" to declaring(superclass, classDef.interfaces + "Lhushfeed/NoSuchInterface;"),
+                "superclass Llarpfeed/NoSuchClass;" to declaring("Llarpfeed/NoSuchClass;", classDef.interfaces),
+                "implements Llarpfeed/NoSuchInterface;" to declaring(superclass, classDef.interfaces + "Llarpfeed/NoSuchInterface;"),
             )) {
                 assertFalse(label, wrong.takes(method, classDef))
                 val ranking = wrong.tally(classes).rank()

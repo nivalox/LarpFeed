@@ -29,7 +29,7 @@ import org.robolectric.annotation.Config;
 /**
  * Translate into: the language TikTok's translation service answers with, swapped for the one the
  * reader typed in TikTok's spelling of it, TikTok's own answer kept while the row is empty or
- * Hushfeed is paused, and a row that takes one language code and nothing else.
+ * Larpfeed is paused, and a row that takes one language code and nothing else.
  */
 @RunWith(RobolectricTestRunner.class)
 @Config(sdk = 28)
@@ -82,7 +82,7 @@ public class TranslateIntoTest {
     }
 
     @Test
-    public void aPausedHushfeedLeavesTikTokAlone() {
+    public void aPausedLarpfeedLeavesTikTokAlone() {
         Settings.TRANSLATE_INTO.save("es");
         PausedProcess.set(true);
         assertEquals("de", TranslateInto.target("de"));

@@ -17,7 +17,7 @@ import org.junit.runner.RunWith;
 import org.robolectric.RobolectricTestRunner;
 import org.robolectric.annotation.Config;
 
-/** Hide the Hushfeed row (#264): the patched Settings and privacy list asks this before adding it. */
+/** Hide the Larpfeed row (#264): the patched Settings and privacy list asks this before adding it. */
 @RunWith(RobolectricTestRunner.class)
 @Config(sdk = 28)
 public class SettingsRowVisibilityTest {

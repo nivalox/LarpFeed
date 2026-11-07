@@ -26,7 +26,7 @@ Puts a save button in the sheet a story's Share button opens. It saves the story
 Save a story from its share sheet	Salvar um story pela folha de compartilhamento
 Save cover	Salvar capa
 Save cover button in the share sheet	Botão Salvar capa na folha de compartilhamento
-Saved videos show the @username and the first line of the caption in the bottom left corner. The phone encodes the whole video again to do it, so saving takes longer. Applies to saves made by Hushfeed.	Os vídeos salvos mostram o @nome de usuário e a primeira linha da legenda no canto inferior esquerdo. Para isso o celular codifica o vídeo inteiro de novo, então salvar demora mais. Vale para o que o Hushfeed salva.
+Saved videos show the @username and the first line of the caption in the bottom left corner. The phone encodes the whole video again to do it, so saving takes longer. Applies to saves made by Larpfeed.	Os vídeos salvos mostram o @nome de usuário e a primeira linha da legenda no canto inferior esquerdo. Para isso o celular codifica o vídeo inteiro de novo, então salvar demora mais. Vale para o que o Larpfeed salva.
 Sound format	Formato do som
 Speed up this video, double tap again to undo	Acelerar este vídeo, toque duplo de novo para desfazer
 Only a watermarked copy existed. Saved to %1$s	Só existia a cópia com marca d'água. Salva em %1$s
@@ -43,7 +43,7 @@ Writing the caption on the video: %1$s	Escrevendo a legenda no vídeo: %1$s
 Your TikTok account changed. Choose the file again for this account.	Sua conta do TikTok mudou. Escolha o arquivo novamente para esta conta.
 Reading watch history	Lendo o histórico de visualização
 Importing watch history	Importando o histórico de visualização
-Reopen Hushfeed settings, then choose the file	Abra as configurações do Hushfeed novamente e escolha o arquivo
+Reopen Larpfeed settings, then choose the file	Abra as configurações do Larpfeed novamente e escolha o arquivo
 Couldn't start the import. Try again in a moment.	Não foi possível iniciar a importação. Tente novamente daqui a pouco.
 Your seen history changed before the import finished. Choose the file again.	Seu histórico mudou antes do fim da importação. Escolha o arquivo novamente.
 Couldn't import watch history. Your saved history is unchanged.	Não foi possível importar o histórico. Seu histórico salvo não foi alterado.
@@ -96,7 +96,7 @@ Turned off %1$d overrides. Check them for TikTok %2$s.	Revise %1$d substituiçõ
 %1$s videos left	Restam %1$s vídeos
 %1$s videos were recorded before each account kept its own list. They hide nothing until you add them here.	%1$s vídeos foram registrados antes de cada conta ter sua própria lista. Eles não ocultam nada até você adicioná-los aqui.
 %1$s was rejected. %2$s	%1$s foi rejeitado. %2$s
-%1$s · Hushfeed's list only	%1$s · só na lista do Hushfeed
+%1$s · Larpfeed's list only	%1$s · só na lista do Larpfeed
 %1$s · current value only	%1$s · só valor atual
 %1$s · declared by TikTok	%1$s · declarado pelo TikTok
 %1$s · declared by TikTok, with a current value	%1$s · declarado pelo TikTok, com um valor atual
@@ -177,7 +177,7 @@ Stickers can't be saved to the folder in that file, so your sticker folder was k
 Stop TikTok's speed tests	Parar os testes de velocidade do TikTok
 Skipped a creator pattern that could stall: %1$s	Padrão de criador ignorado, pode travar: %1$s
 That creator pattern could stall the feed, so it wasn't added: %1$s	Esse padrão de criador pode travar o feed, então não foi adicionado: %1$s
-This key isn't in Hushfeed's list, so its type can't be checked. Reset the override.	Esta chave não está na lista do Hushfeed, então o tipo dela não pode ser verificado. Redefina a substituição.
+This key isn't in Larpfeed's list, so its type can't be checked. Reset the override.	Esta chave não está na lista do Larpfeed, então o tipo dela não pode ser verificado. Redefina a substituição.
 This key touches account safety. Forcing it can change login, region, payment or security checks.	Esta chave mexe com a proteção da conta. Forçá-la pode mudar as verificações de login, região, pagamento ou segurança.
 Activity	Atividade
 Activity center (PIA)	Centro de atividade (PIA)
@@ -299,7 +299,7 @@ Clear all Lab data (overrides, switch, recordings)	Limpar todos os dados do Lab 
 Clear all suggested accounts	Limpar todas as contas sugeridas
 Clears the recent events, saved crash reports, a recorded screen layout and the Hook status results above.	Apaga os eventos recentes, os relatórios de falha salvos, um layout de tela gravado e os resultados do Hook status acima.
 Record a screen's layout	Gravar o layout de uma tela
-Tap, then go to the screen with what you want hidden. After %1$d seconds Hushfeed records how that screen is built, without any of its text, for the diagnostic report.	Toque aqui e vá até a tela com o que você quer ocultar. Depois de %1$d segundos, o Hushfeed grava como essa tela é montada, sem nenhum texto dela, para o relatório de diagnóstico.
+Tap, then go to the screen with what you want hidden. After %1$d seconds Larpfeed records how that screen is built, without any of its text, for the diagnostic report.	Toque aqui e vá até a tela com o que você quer ocultar. Depois de %1$d segundos, o Larpfeed grava como essa tela é montada, sem nenhum texto dela, para o relatório de diagnóstico.
 Waiting to record. Go to the screen you want recorded.	Aguardando para gravar. Vá até a tela que você quer gravar.
 A screen's layout is recorded. Export the diagnostic report to send it, or tap to record another.	Há um layout de tela gravado. Exporte o relatório de diagnóstico para enviá-lo, ou toque para gravar outro.
 Go to the screen. Recording in %1$d seconds.	Vá para a tela. Gravação em %1$d segundos.
@@ -419,7 +419,7 @@ Diagnostic report copied to the clipboard	Relatório de diagnóstico copiado par
 Diagnostics	Diagnóstico
 Disable	Desligar
 Stop analytics and tracking	Parar a análise de uso e o rastreamento
-Long-press Home for Hushfeed settings	Toque e segure Início para abrir as configurações do Hushfeed
+Long-press Home for Larpfeed settings	Toque e segure Início para abrir as configurações do Larpfeed
 Press and hold the Home tab to open these settings. A tap on Home works as before.	Toque e segure a aba Início para abrir estas configurações. Tocar em Início funciona como antes.
 Search instead of Home	Pesquisar no lugar de Início
 The Home tab becomes a search button. Its icon and name say Search, and a tap opens TikTok's search instead of For You. TikTok starts on Inbox, or on Profile when Inbox is hidden, so the feed doesn't play when you open it.	A aba Início vira um botão de pesquisa. O ícone e o nome dizem Pesquisar, e um toque abre a pesquisa do TikTok em vez de Para Você. O TikTok abre na Caixa de entrada, ou no Perfil quando a Caixa de entrada está oculta, para o feed não tocar quando você abre o app.
@@ -448,7 +448,7 @@ Drag to move, release to place	Arraste para mover, solte para posicionar
 Drama and Series	Drama e séries
 Shows TikTok's text in your phone's font instead of TikTok Sans. Icons and gift animations keep their own fonts. Restart TikTok to see the change.	Mostra o texto do TikTok na fonte do seu celular em vez de TikTok Sans. Ícones e animações de presentes mantêm suas próprias fontes. Reinicie o TikTok para ver a mudança.
 Hide the notification saying somebody new followed you before it reaches the drawer. Every other notification is left alone, and the follower still appears in the Inbox.	Esconde a notificação que diz que alguém novo passou a seguir você antes de ela chegar à gaveta. As outras notificações ficam como estão, e o seguidor continua aparecendo na caixa de entrada.
-Each area shows how many of the things Hushfeed looks for were found in this TikTok and how many are missing.	Cada área mostra quantas das coisas que o Hushfeed procura foram encontradas neste TikTok e quantas estão faltando.
+Each area shows how many of the things Larpfeed looks for were found in this TikTok and how many are missing.	Cada área mostra quantas das coisas que o Larpfeed procura foram encontradas neste TikTok e quantas estão faltando.
 Empty	Vazio
 Empty the menu that opens when you press and hold TikTok's icon on the home screen. Turning this off asks TikTok to build them again. Tapping the icon still opens the app, and a shortcut you pinned yourself stays where you put it.	Esvaziar o menu que abre ao manter pressionado o ícone do TikTok na tela inicial. Ao desativar, o TikTok é solicitado a criá-los novamente. Tocar no ícone continua abrindo o app, e um atalho fixado por você permanece onde foi colocado.
 Enable	Ligar
@@ -662,9 +662,9 @@ Hold the feed after the budget	Pausar o feed depois do limite
 Home	Início
 Hook status	Verificação de recursos
 How far each edge press moves the video.	Quanto o vídeo anda a cada toque na borda.
-Hushfeed can't read the creator pattern %1$s	O Hushfeed não consegue ler o padrão de criador %1$s
+Larpfeed can't read the creator pattern %1$s	O Larpfeed não consegue ler o padrão de criador %1$s
 Hid a CAPTCHA. Stuck? Turn off Hide CAPTCHA popups.	Travou? Desligue “Esconder as janelas de CAPTCHA”.
-Hushfeed is active	O Hushfeed está ativo
+Larpfeed is active	O Larpfeed está ativo
 Shows the Duet and Stitch options even when the creator turned them off. TikTok may still refuse to accept the result.	Mostra as opções Dueto e Stitch mesmo quando o criador as desativou. O TikTok ainda pode recusar o resultado.
 Shows Add to Story in the share sheet and on stories even when the creator turned off content reuse. TikTok may still refuse to post it.	Mostra Adicionar ao story no menu de compartilhamento e nos stories mesmo quando o criador desativou a reutilização de conteúdo. O TikTok ainda pode recusar a publicação.
 Import finished	Importação concluída
@@ -840,8 +840,8 @@ Open profile and story website links in your system browser instead of TikTok's 
 Open the feed anyway	Abrir o feed mesmo assim
 Open the feed anyway, %1$d left today	Abrir o feed mesmo assim, restam %1$d hoje
 Open the feed anyway, the last time today	Abrir o feed mesmo assim, pela última vez hoje
-Open the feed once so Hushfeed can see which bottom tabs TikTok loaded.	Abra o início do TikTok para detectar as abas de baixo carregadas.
-Open the feed once so Hushfeed can see which tabs TikTok loaded.	Abra o feed inicial do TikTok para detectar as abas carregadas.
+Open the feed once so Larpfeed can see which bottom tabs TikTok loaded.	Abra o início do TikTok para detectar as abas de baixo carregadas.
+Open the feed once so Larpfeed can see which tabs TikTok loaded.	Abra o feed inicial do TikTok para detectar as abas carregadas.
 Open the profile again and try once more	Abra o perfil de novo e tente mais uma vez
 Open the story again and try once more	Abra o story de novo e tente mais uma vez
 Open TikTok on	Abrir o TikTok em
@@ -963,7 +963,7 @@ Saved photos, covers, story photos and stickers that don't move are the exact fi
 Save field values	Salvar os valores dos campos
 Save full report	Salvar relatório completo
 Save media	Salvar a mídia
-Saves your Hushfeed settings and Feature Gate Lab rules to a file.	Salva suas configurações do Hushfeed e as regras do Feature Gate Lab em um arquivo.
+Saves your Larpfeed settings and Feature Gate Lab rules to a file.	Salva suas configurações do Larpfeed e as regras do Feature Gate Lab em um arquivo.
 Save subtitles beside videos	Salvar as legendas junto com os vídeos
 Saves TikTok's latest crash report on this phone so it can go in the diagnostic report.	Salva neste celular o último relatório de falha do TikTok para que ele possa entrar no relatório de diagnóstico.
 Save the original sound	Salvar o som original
@@ -1138,7 +1138,7 @@ Tap the like heart twice within %1$d seconds. Removing a like stays immediate.	T
 Tap to start the feed	Toque para iniciar o feed
 Technical details	Detalhes técnicos
 Technical details, %1$s	Detalhes técnicos, %1$s
-That backup was written by a newer Hushfeed than this one. Nothing was altered.	Esse backup foi escrito por um Hushfeed mais novo que este. Nada foi alterado.
+That backup was written by a newer Larpfeed than this one. Nothing was altered.	Esse backup foi escrito por um Larpfeed mais novo que este. Nada foi alterado.
 That creator is already in the list	Esse criador já está na lista
 Skipped a creator pattern that's too long: %1$s	Padrão de criador longo demais, ignorado: %1$s
 That creator pattern is too long, so it wasn't added: %1$s	Esse padrão de criador é longo demais, então não foi adicionado: %1$s
@@ -1148,20 +1148,20 @@ That file is too large to be a settings backup. Nothing was altered.	Esse arquiv
 That folder name has a character Android doesn't allow. Use letters, numbers, spaces or dashes.	O destino tem um nome de pasta inválido.
 That is %1$d minutes today	Isso dá %1$d minutos hoje
 That is %1$d videos today	Isso dá %1$d vídeos hoje
-That isn't a Hushfeed settings backup. Nothing was altered.	Isso não é um backup de configurações do Hushfeed. Nada foi alterado.
+That isn't a Larpfeed settings backup. Nothing was altered.	Isso não é um backup de configurações do Larpfeed. Nada foi alterado.
 That isn't an app name. Try something like com.example.downloader, or leave the box empty to keep saving in TikTok.	Isso não é um nome de app. Tente algo como com.example.downloader, ou deixe o campo vazio para continuar salvando no TikTok.
 That is one minute today	Isso dá um minuto hoje
 That is one video today	Isso dá um vídeo hoje
 That list has too many entries. Keep it to %1$s or fewer.	Essa lista tem entradas demais. Limite-a a %1$s ou menos.
 That list is too large. Keep it to %1$s KB or less.	Essa lista é grande demais. Limite-a a %1$s KB ou menos.
 That preset isn't recognized. Choose another.	Predefinição de SIM inválida.
-That settings backup contains a feed rule list larger than Hushfeed accepts. Nothing was altered.	Esse backup de configurações contém uma lista de regras do feed maior do que o Hushfeed aceita. Nada foi alterado.
-That settings backup holds a value Hushfeed can't read. Nothing was altered.	Esse backup tem um valor que o Hushfeed não consegue ler. Nada foi alterado.
+That settings backup contains a feed rule list larger than Larpfeed accepts. Nothing was altered.	Esse backup de configurações contém uma lista de regras do feed maior do que o Larpfeed aceita. Nada foi alterado.
+That settings backup holds a value Larpfeed can't read. Nothing was altered.	Esse backup tem um valor que o Larpfeed não consegue ler. Nada foi alterado.
 That settings backup holds more Feature Gate Lab rules than the Lab takes. Nothing was altered.	Esse backup de configurações tem mais regras do Feature Gate Lab do que o Lab aceita. Nada foi alterado.
 That settings backup is damaged or only partly downloaded. Nothing was altered.	Esse backup está danificado ou só foi baixado em parte. Nada foi alterado.
 That settings backup is incomplete, so it may have been cut short. Nothing was altered.	Esse backup está incompleto, então pode ter sido cortado. Nada foi alterado.
 That settings change didn't go through. Nothing was altered.	Essa mudança de configuração não chegou a valer. Nada foi alterado.
-That sticker is in a format Hushfeed can't read	O Hushfeed não lê o formato deste sticker
+That sticker is in a format Larpfeed can't read	O Larpfeed não lê o formato deste sticker
 The Lab can't check this. TikTok gets it exactly as typed.	O Lab não consegue verificar isso. O TikTok recebe exatamente como você digitou.
 The Lab couldn't open. Go back and open it again.	O Lab não abriu. Volte e abra de novo.
 %2$s rules, but the limit is %1$s. Nothing changed.	%2$s regras, mas o limite é %1$s. Nada mudou.
@@ -1244,7 +1244,7 @@ Turns off at %1$s	Desliga às %1$s
 That loosens the budget. It waits until %1$s.	Isso afrouxa o limite. Espera até as %1$s.
 That loosens the lock. It waits until %1$s.	Isso afrouxa o bloqueio. Espera até as %1$s.
 Today can't start over while Wait a day to loosen the budget is on. The day starts over at %1$s.	O dia de hoje não pode recomeçar enquanto Esperar um dia para afrouxar o limite estiver ligado. O dia recomeça às %1$s.
-Wait a day to loosen the budget is on, so Hushfeed stays on	Esperar um dia para afrouxar o limite está ligado, então o Hushfeed continua ligado
+Wait a day to loosen the budget is on, so Larpfeed stays on	Esperar um dia para afrouxar o limite está ligado, então o Larpfeed continua ligado
 Today has moved on, so there's nothing to put back	O dia já andou, então não há nada para trazer de volta
 Today is back where it was	Hoje está como estava
 Today started over. Tap again to put the counts back.	Hoje recomeçou. Toque de novo para trazer as contagens de volta.
@@ -1318,7 +1318,7 @@ WebP, exactly as TikTok sent it	WebP, exatamente como o TikTok mandou
 What TikTok gets	O que o TikTok recebe
 When TikTok requests this key, return the selected value below	Quando o TikTok pedir esta chave, devolver o valor escolhido abaixo
 When a video ends in full screen, stay on it instead of moving to the next one. Swiping still moves on.	Quando um vídeo termina em tela cheia, fica nele em vez de passar para o próximo. Deslizar ainda avança.
-While diagnostic logging is on, a message names the part of Hushfeed that failed. Off keeps failures in the report only.	Enquanto o registro de diagnóstico estiver ligado, uma mensagem indica a parte do Hushfeed que falhou. Desligado, as falhas ficam só no relatório.
+While diagnostic logging is on, a message names the part of Larpfeed that failed. Off keeps failures in the report only.	Enquanto o registro de diagnóstico estiver ligado, uma mensagem indica a parte do Larpfeed que falhou. Desligado, as falhas ficam só no relatório.
 Window width needed to enable the layout. Restart TikTok to apply this.	Largura de janela necessária para ligar o layout. Reinicie o TikTok para aplicar.
 Words, countries and languages	Palavras, países e idiomas
 Write the video's sound beside it, in the format picked under Sound format. Android 10 and later file audio separately, so it lands in Music under the same folder name as your videos.	Escrever o som do vídeo ao lado dele, no formato escolhido em Formato do som. O Android 10 e posteriores arquivam o áudio à parte, então ele vai para Music, numa pasta com o mesmo nome da dos seus vídeos.
@@ -1330,10 +1330,10 @@ Your filters hid everything TikTok sent, %1$d times in a row. Most were %2$s.	Se
 Your operator's name, like T-Mobile.	O nome da sua operadora, como T-Mobile.
 Your operator's numeric code, like 310260.	O código numérico da sua operadora, como 310260.
 Zero means the way out of the hold is always there. Any other number is how many times a day it works. Once they're used up, the hold stays until the day starts over. Ignored while the budget is locked, which removes the way out.	Zero significa que a saída do bloqueio está sempre disponível. Qualquer outro número é quantas vezes por dia ela funciona. Quando acabam, o bloqueio fica até o dia recomeçar. É ignorado enquanto o orçamento está travado, pois isso tira a saída.
-Zero means no limit. Counts the videos Hushfeed advanced past for you, not the ones you swiped yourself, and starts again when the feed is rebuilt or you change this number.	Zero quer dizer sem limite. Conta os vídeos que o Hushfeed passou por você, não os que você deslizou, e começa de novo quando o feed é reconstruído ou você muda este número.
+Zero means no limit. Counts the videos Larpfeed advanced past for you, not the ones you swiped yourself, and starts again when the feed is rebuilt or you change this number.	Zero quer dizer sem limite. Conta os vídeos que o Larpfeed passou por você, não os que você deslizou, e começa de novo quando o feed é reconstruído ou você muda este número.
 Zero shows the notice and leaves the feed alone. Anything else covers the feed for that many minutes once a budget is reached. Messages, profiles and search keep working, and nothing in the feed is thrown away.	Zero mostra o aviso e deixa o feed em paz. Qualquer outro valor cobre o feed por esses minutos assim que um limite é atingido. Mensagens, perfis e busca continuam funcionando, e nada do feed é descartado.
 Zero switches this off. A short reminder after that many minutes of watching, and again after the same again. Time on messages, a profile or search doesn't count, and nothing is shown while the feed is on hold.	Zero desliga isso. Um lembrete curto depois desses minutos assistindo, e de novo após o mesmo intervalo. Tempo em mensagens, num perfil ou na busca não conta, e nada aparece enquanto o feed está em espera.
-Zero switches this off. Counts every video that comes up in the feed and tells you when you reach the limit. Separate from the auto-advance session limit under Playback, which counts only videos Hushfeed moved past for you.	Zero desliga isto. Conta cada vídeo que aparece no feed e avisa quando você chega ao limite. É separado do limite de sessão do avanço automático em Reprodução, que conta só os vídeos que o Hushfeed passou por você.
+Zero switches this off. Counts every video that comes up in the feed and tells you when you reach the limit. Separate from the auto-advance session limit under Playback, which counts only videos Larpfeed moved past for you.	Zero desliga isto. Conta cada vídeo que aparece no feed e avisa quando você chega ao limite. É separado do limite de sessão do avanço automático em Reprodução, que conta só os vídeos que o Larpfeed passou por você.
 Zero switches this off. Count the minutes the player spends running in the feed. Time on messages, a profile or search doesn't count.	Zero desliga isso. Conta os minutos que o player passa rodando no feed. Tempo em mensagens, num perfil ou na busca não conta.
 collapsed	Recolhido
 expanded	Expandido
@@ -1353,7 +1353,7 @@ Hide feed videos with place badges, even when they aren't paid ads. To keep the 
 Location-tagged videos	Vídeos com localização
 Makes the heart easier to tap by using the empty space around it. The icon and spacing look the same, and Reply and other buttons keep their own space.	Deixa o coração mais fácil de tocar usando o espaço vazio ao redor dele. O ícone e o espaçamento ficam iguais, e Responder e os outros botões mantêm o próprio espaço.
 Hides the comment count, the sort and close buttons and the suggestions above them. Use Back or swipe down to close comments.	Oculta a contagem de comentários, os botões de ordenar e de fechar e as sugestões acima deles. Use Voltar ou deslize para baixo para fechar os comentários.
-Hide TikTok's "Search: ..." banner above the comment count. This doesn't hide the comments or Hushfeed's comment-search box.	Oculte o banner "Pesquisar: ..." do TikTok acima da contagem de comentários. Isso não oculta os comentários nem a caixa de pesquisa de comentários do Hushfeed.
+Hide TikTok's "Search: ..." banner above the comment count. This doesn't hide the comments or Larpfeed's comment-search box.	Oculte o banner "Pesquisar: ..." do TikTok acima da contagem de comentários. Isso não oculta os comentários nem a caixa de pesquisa de comentários do Larpfeed.
 Hide the Report button on videos	Esconder o botão Denunciar nos vídeos
 Hide the flag button TikTok puts above the creator's picture in some regions. You can still report a video from the share menu.	Esconde o botão de bandeira que o TikTok coloca acima da foto do criador em algumas regiões. Você ainda pode denunciar um vídeo pelo menu de compartilhar.
 Hide search rewards	Esconder as recompensas de busca
@@ -1391,15 +1391,15 @@ this creator	este criador
 TikTok refused the follow with code %1$s	O TikTok recusou o seguir com o código %1$s
 Follow refused, code %1$s. Maybe a hidden CAPTCHA.	Seguir recusado (%1$s). Talvez CAPTCHA escondido.
 Follow refused (%1$s). Maybe a hidden CAPTCHA.	Seguir recusado (%1$s). Talvez um CAPTCHA oculto.
-Hushfeed is paused	O Hushfeed está pausado
-Hushfeed's switches are paused. Your settings stay saved. Changes made when you patched, like the app's name or icon, stay.	As chaves do Hushfeed estão pausadas. Suas configurações continuam salvas. As alterações feitas ao aplicar o patch, como o nome ou o ícone do app, permanecem.
-TikTok closed three times within a minute of starting, so Hushfeed paused itself. Your settings stay as they are.	O TikTok fechou três vezes no primeiro minuto depois de abrir, então o Hushfeed se pausou sozinho. Suas configurações continuam como estão.
-A file named hushfeed-safe-mode in TikTok's folder under Android/data paused Hushfeed. Your settings stay as they are.	Um arquivo chamado hushfeed-safe-mode na pasta do TikTok em Android/data pausou o Hushfeed. Suas configurações continuam como estão.
-Turn Hushfeed back on	Ativar o Hushfeed de novo
-Pause Hushfeed	Pausar o Hushfeed
-Pause Hushfeed's switches after TikTok restarts. Your settings stay saved. Changes made when you patched, like the app's name or icon, stay.	Pausa as chaves do Hushfeed após reiniciar o TikTok. Suas configurações continuam salvas. As alterações feitas ao aplicar o patch, como o nome ou o ícone do app, permanecem.
-Hushfeed turns back on when TikTok restarts.	O Hushfeed volta a funcionar quando o TikTok reiniciar.
-The file hushfeed-safe-mode couldn't be removed. Delete it from TikTok's folder under Android/data to turn Hushfeed back on.	Não foi possível remover o arquivo hushfeed-safe-mode. Apague-o da pasta do TikTok em Android/data para ativar o Hushfeed de novo.
+Larpfeed is paused	O Larpfeed está pausado
+Larpfeed's switches are paused. Your settings stay saved. Changes made when you patched, like the app's name or icon, stay.	As chaves do Larpfeed estão pausadas. Suas configurações continuam salvas. As alterações feitas ao aplicar o patch, como o nome ou o ícone do app, permanecem.
+TikTok closed three times within a minute of starting, so Larpfeed paused itself. Your settings stay as they are.	O TikTok fechou três vezes no primeiro minuto depois de abrir, então o Larpfeed se pausou sozinho. Suas configurações continuam como estão.
+A file named larpfeed-safe-mode in TikTok's folder under Android/data paused Larpfeed. Your settings stay as they are.	Um arquivo chamado larpfeed-safe-mode na pasta do TikTok em Android/data pausou o Larpfeed. Suas configurações continuam como estão.
+Turn Larpfeed back on	Ativar o Larpfeed de novo
+Pause Larpfeed	Pausar o Larpfeed
+Pause Larpfeed's switches after TikTok restarts. Your settings stay saved. Changes made when you patched, like the app's name or icon, stay.	Pausa as chaves do Larpfeed após reiniciar o TikTok. Suas configurações continuam salvas. As alterações feitas ao aplicar o patch, como o nome ou o ícone do app, permanecem.
+Larpfeed turns back on when TikTok restarts.	O Larpfeed volta a funcionar quando o TikTok reiniciar.
+The file larpfeed-safe-mode couldn't be removed. Delete it from TikTok's folder under Android/data to turn Larpfeed back on.	Não foi possível remover o arquivo larpfeed-safe-mode. Apague-o da pasta do TikTok em Android/data para ativar o Larpfeed de novo.
 Hide TikTok Shop in search	Esconder o TikTok Shop na busca
 Hide the Products block and product cards in search results.	Esconder o bloco de Produtos e os cartões de produto nos resultados da busca.
 Hide TikTok's Auto scroll button	Esconder o botão Auto scroll do TikTok
@@ -1468,7 +1468,7 @@ Allow storage for TikTok to save the clip	Permita o armazenamento do TikTok para
 This original sound isn't on YouTube Music	Este som original não está no YouTube Music
 Not a handle or id, so ignored: %1$s	Não é um nome de conta nem um id, então foi ignorado: %1$s
 What's new	Novidades
-Changes in Hushfeed %1$s	Mudanças no Hushfeed %1$s
+Changes in Larpfeed %1$s	Mudanças no Larpfeed %1$s
 Reviewed presets	Predefinições verificadas
 Show See translation	Mostrar a opção de tradução
 Reviewed for TikTok %1$s	Verificado para o TikTok %1$s
@@ -1483,12 +1483,12 @@ Preset doesn't match the gates. Nothing changed.	Predefinição não bate com os
 About overrides	Sobre as substituições
 Use {creator}, {date} and {video_id} to build the name. Start with {creator}/ to put each creator in a folder. The file ending is added for you.	Use {creator}, {date} e {video_id} para montar o nome. Comece com {creator}/ para colocar cada criador em uma pasta. A extensão do arquivo é adicionada automaticamente.
 Save details beside the video	Salvar detalhes junto ao vídeo
-Saves the caption, creator, link and post date in a text file next to the video, or one file for a photo post's original photos. On Android 10 and later, they go in Download or Documents under the same folder name. Applies to saves made by Hushfeed.	Salva a legenda, o criador, o link e a data de publicação em um arquivo de texto ao lado do vídeo, ou em um único arquivo para as fotos originais de uma publicação de fotos. No Android 10 e posteriores, eles vão para Download ou Documents com o mesmo nome de pasta. Vale para os salvamentos feitos pelo Hushfeed.
+Saves the caption, creator, link and post date in a text file next to the video, or one file for a photo post's original photos. On Android 10 and later, they go in Download or Documents under the same folder name. Applies to saves made by Larpfeed.	Salva a legenda, o criador, o link e a data de publicação em um arquivo de texto ao lado do vídeo, ou em um único arquivo para as fotos originais de uma publicação de fotos. No Android 10 e posteriores, eles vão para Download ou Documents com o mesmo nome de pasta. Vale para os salvamentos feitos pelo Larpfeed.
 Couldn't write the details file. Save the post again.	Detalhes não gravados. Salve o post de novo.
 Check for already-saved videos	Verificar vídeos já salvos
 Forget saved videos	Esquecer os vídeos salvos
 Undo forgetting saved videos	Desfazer o esquecimento dos vídeos salvos
-Forget which videos Hushfeed saved here, so the already-saved check starts over. The saved files and your settings stay. Turning the check off doesn't erase this record.	Esquece quais vídeos o Hushfeed salvou aqui, para que a verificação de vídeos já salvos comece de novo. Os arquivos salvos e suas configurações continuam. Desligar a verificação não apaga este registro.
+Forget which videos Larpfeed saved here, so the already-saved check starts over. The saved files and your settings stay. Turning the check off doesn't erase this record.	Esquece quais vídeos o Larpfeed salvou aqui, para que a verificação de vídeos já salvos comece de novo. Os arquivos salvos e suas configurações continuam. Desligar a verificação não apaga este registro.
 Forgetting saved videos	Esquecendo os vídeos salvos
 Putting the saved videos back	Trazendo os vídeos salvos de volta
 Forgotten. Tap to put them back.	Esquecidos. Toque para trazê-los de volta.
@@ -1519,10 +1519,10 @@ Saving video: %1$s	Salvando vídeo: %1$s
 Saving %1$s of %2$s: %3$s	Salvando %1$s de %2$s: %3$s
 Couldn't save the change. Try again.	Não foi possível salvar a alteração. Tente novamente.
 Off. TikTok can report views and typing.	Desativado. O TikTok pode informar visualizações e quando você está digitando.
-Hushfeed is paused. Ghost mode isn't active.	O Hushfeed está pausado. O modo fantasma não está ativo.
+Larpfeed is paused. Ghost mode isn't active.	O Larpfeed está pausado. O modo fantasma não está ativo.
 Problem detected. Story views may still be reported. Check Ghost mode diagnostics. The warning stays until TikTok restarts.	Um problema foi detectado. As visualizações de stories ainda podem ser informadas. Consulte o diagnóstico do modo fantasma. O aviso permanece até reiniciar o TikTok.
-Hushfeed blocked TikTok's reports here. It hasn't confirmed that you stay off viewer lists.	O Hushfeed bloqueou aqui os relatórios do TikTok. Ele ainda não confirmou que você fica fora das listas de espectadores.
-On. Hushfeed hasn't seen TikTok send any reports since it started.	Ligado. O Hushfeed não viu o TikTok enviar nenhum relatório desde que ele iniciou.
+Larpfeed blocked TikTok's reports here. It hasn't confirmed that you stay off viewer lists.	O Larpfeed bloqueou aqui os relatórios do TikTok. Ele ainda não confirmou que você fica fora das listas de espectadores.
+On. Larpfeed hasn't seen TikTok send any reports since it started.	Ligado. O Larpfeed não viu o TikTok enviar nenhum relatório desde que ele iniciou.
 Ghost mode diagnostics	Diagnóstico do modo fantasma
 The partial file couldn't be removed. Delete it from the folder you chose.	Não foi possível remover o arquivo incompleto. Exclua-o da pasta que você escolheu.
 The backup didn't start and its partial file couldn't be removed. Delete it from the folder you chose.	O backup não foi iniciado e não foi possível remover o arquivo incompleto. Exclua-o da pasta que você escolheu.
@@ -1534,7 +1534,7 @@ Keep playing in the background	Continuar tocando em segundo plano
 The video you're watching keeps playing to its end after you leave TikTok or turn the screen off, with TikTok's own media notification to pause it. TikTok's background play switch stays on while this is on. Restart TikTok to apply this.	O vídeo que você está assistindo continua tocando até o fim depois que você sai do TikTok ou desliga a tela, com a notificação de mídia do próprio TikTok para pausá-lo. A chave de reprodução em segundo plano do TikTok fica ligada enquanto isto estiver ligado. Reinicie o TikTok para aplicar.
 Replay in the background	Repetir em segundo plano
 When a video ends while TikTok plays in the background, it starts over instead of waiting for you to press Play in the notification. A call or another app's sound still pauses it.	Quando um vídeo termina enquanto o TikTok toca em segundo plano, ele começa de novo em vez de esperar você tocar em Reproduzir na notificação. Uma ligação ou o som de outro app ainda pausa o vídeo.
-Keep playing in the background is on in Hushfeed's Playback settings, so TikTok gets 2 for this key and an override here has no effect until that switch is off.	Continuar tocando em segundo plano está ligado nas configurações de Reprodução do Hushfeed, então o TikTok recebe 2 para esta chave e uma substituição aqui não tem efeito até essa chave ser desligada.
+Keep playing in the background is on in Larpfeed's Playback settings, so TikTok gets 2 for this key and an override here has no effect until that switch is off.	Continuar tocando em segundo plano está ligado nas configurações de Reprodução do Larpfeed, então o TikTok recebe 2 para esta chave e uma substituição aqui não tem efeito até essa chave ser desligada.
 2, from Keep playing in the background	2, de Continuar tocando em segundo plano
 Let the last video finish	Deixar o último vídeo terminar
 When the budget runs out, the video on screen plays to its end before the hold starts, and you can't swipe to another video meanwhile. If the fade already dimmed the feed, the hold starts right away. Needs a hold. It waits %1$d minutes at most.	Quando o orçamento acaba, o vídeo na tela toca até o fim antes de o bloqueio começar, e você não consegue deslizar para outro vídeo nesse meio-tempo. Se o esmaecimento já escureceu o feed, o bloqueio começa na hora. Precisa de um bloqueio. Espera no máximo %1$d minutos.
@@ -1595,7 +1595,7 @@ Hide the Clear display controls leaves the progress bar in sight, so you can sti
 While Clear display is on, also hide the progress bar, the close button and the pause and speed buttons at the bottom. You can still drag along the bottom edge to move through the video. To leave Clear display, press and hold the video and tap Restore display, or pinch the screen.	Com a tela limpa ativada, esconde também a barra de progresso, o botão de fechar e os botões de pausa e velocidade na parte de baixo. Você ainda pode arrastar pela borda de baixo para avançar ou voltar no vídeo. Para sair da tela limpa, toque e segure o vídeo e toque em Restaurar tela, ou faça um gesto de pinça na tela.
 Take the Add comment bar off videos you open from a profile, a hashtag, a sound or search, so the video fills the screen down to the bottom. The comment button on the right still opens comments.	Tire a barra para adicionar comentário dos vídeos que você abre por um perfil, uma hashtag, um som ou pela pesquisa, para o vídeo ocupar a tela até embaixo. O botão de comentários à direita continua abrindo os comentários.
 Build details	Detalhes da compilação
-Copy or save which patches and options this Hushfeed was built with.	Copie ou salve com quais patches e opções este Hushfeed foi criado.
+Copy or save which patches and options this Larpfeed was built with.	Copie ou salve com quais patches e opções este Larpfeed foi criado.
 Copy build details	Copiar detalhes da compilação
 Save build details	Salvar detalhes da compilação
 Build details copied to the clipboard	Detalhes da compilação na área de transferência
@@ -1796,7 +1796,7 @@ Logging until %1$s. Tap to stop now.	Registrando até %1$s. Toque para parar ago
 Logging diagnostics until %1$s	Registrando diagnósticos até %1$s
 Timed logging stopped	Registro temporário parado
 Preview with a made-up post:	Prévia com uma publicação inventada:
-Hushfeed's downloader: %1$s	Baixador do Hushfeed: %1$s
+Larpfeed's downloader: %1$s	Baixador do Larpfeed: %1$s
 TikTok's downloader: %1$s	Baixador do TikTok: %1$s
 Sound: %1$s	Som: %1$s
 Details: %1$s	Detalhes: %1$s
@@ -1804,15 +1804,15 @@ Subtitles: %1$s	Legendas: %1$s
 Stickers: %1$s	Figurinhas: %1$s
 Live photo clips: %1$s	Clipes de fotos ao vivo: %1$s
 TikTok's own name	O nome do próprio TikTok
-Not a part Hushfeed fills in, so it's kept as typed: %1$s	Não é uma parte que o Hushfeed preenche, então fica como foi digitada: %1$s
-Hushfeed's downloader doesn't fill this in, so it's kept as typed: %1$s	O downloader do Hushfeed não preenche isto, então fica como foi digitado: %1$s
+Not a part Larpfeed fills in, so it's kept as typed: %1$s	Não é uma parte que o Larpfeed preenche, então fica como foi digitada: %1$s
+Larpfeed's downloader doesn't fill this in, so it's kept as typed: %1$s	O downloader do Larpfeed não preenche isto, então fica como foi digitado: %1$s
 If that name is taken, Android adds a number to the new file.	Se esse nome já existir, o Android adiciona um número ao arquivo novo.
-If that name is taken, Hushfeed adds a number to the new file.	Se esse nome já existir, o Hushfeed adiciona um número ao arquivo novo.
+If that name is taken, Larpfeed adds a number to the new file.	Se esse nome já existir, o Larpfeed adiciona um número ao arquivo novo.
 Don't start the first video	Não iniciar o primeiro vídeo
 When you open TikTok from its icon, the first video in the feed waits for one tap before it plays. A link, a notification or a shortcut opens as usual.	Quando você abre o TikTok pelo ícone, o primeiro vídeo do feed espera um toque antes de tocar. Um link, uma notificação ou um atalho abrem normalmente.
 Network proxy	Proxy de rede
 Send TikTok through a proxy	Enviar o TikTok por um proxy
-Sends TikTok's feed, search, comments and other app traffic through the proxy below. Videos and LIVE streams still connect directly. Saves and short-link lookups from Hushfeed also connect directly, after their own address checks. Other apps aren't affected.	Envia o feed, a busca, os comentários e o resto do tráfego do TikTok pelo proxy abaixo. Vídeos e transmissões LIVE continuam conectando direto. Os salvamentos e as consultas de links curtos do Hushfeed também conectam direto, depois das próprias verificações de endereço. Outros apps não são afetados.
+Sends TikTok's feed, search, comments and other app traffic through the proxy below. Videos and LIVE streams still connect directly. Saves and short-link lookups from Larpfeed also connect directly, after their own address checks. Other apps aren't affected.	Envia o feed, a busca, os comentários e o resto do tráfego do TikTok pelo proxy abaixo. Vídeos e transmissões LIVE continuam conectando direto. Os salvamentos e as consultas de links curtos do Larpfeed também conectam direto, depois das próprias verificações de endereço. Outros apps não são afetados.
 Proxy type	Tipo de proxy
 HTTP	HTTP
 SOCKS5	SOCKS5
@@ -1850,8 +1850,8 @@ Save seen history to a file	Salvar o histórico de vídeos vistos em um arquivo
 Restore seen history from a file	Restaurar o histórico de vídeos vistos de um arquivo
 Save the videos @%1$s has seen, and when, to a JSON file. Anyone who opens the file can see that viewing history.	Salvar em um arquivo JSON os vídeos que @%1$s viu e quando viu. Quem abrir o arquivo pode ver esse histórico de visualização.
 Save this account's seen videos, and when they were watched, to a JSON file. Anyone who opens the file can see that viewing history.	Salvar em um arquivo JSON os vídeos vistos desta conta e quando foram vistos. Quem abrir o arquivo pode ver esse histórico de visualização.
-Add a seen-history file saved by Hushfeed to the videos @%1$s has seen. A video in both keeps the newer date.	Adicionar um arquivo de histórico salvo pelo Hushfeed aos vídeos que @%1$s viu. Se um vídeo estiver nos dois, fica a data mais recente.
-Add a seen-history file saved by Hushfeed to this account's seen videos. A video in both keeps the newer date.	Adicionar um arquivo de histórico salvo pelo Hushfeed aos vídeos vistos desta conta. Se um vídeo estiver nos dois, fica a data mais recente.
+Add a seen-history file saved by Larpfeed to the videos @%1$s has seen. A video in both keeps the newer date.	Adicionar um arquivo de histórico salvo pelo Larpfeed aos vídeos que @%1$s viu. Se um vídeo estiver nos dois, fica a data mais recente.
+Add a seen-history file saved by Larpfeed to this account's seen videos. A video in both keeps the newer date.	Adicionar um arquivo de histórico salvo pelo Larpfeed aos vídeos vistos desta conta. Se um vídeo estiver nos dois, fica a data mais recente.
 Sign in to TikTok before saving or restoring seen history.	Entre no TikTok antes de salvar ou restaurar o histórico de vídeos vistos.
 Saving seen history	Salvando o histórico de vídeos vistos
 Reading the seen-history file	Lendo o arquivo de histórico
@@ -1875,10 +1875,10 @@ Added %1$s seen videos.	%1$s vídeos vistos adicionados.
 %1$s older seen video was dropped to keep the newest %2$s.	%1$s vídeo visto mais antigo foi removido para manter os %2$s mais recentes.
 %1$s older seen videos were dropped to keep the newest %2$s.	%1$s vídeos vistos mais antigos foram removidos para manter os %2$s mais recentes.
 Couldn't restore seen history. Your saved history is unchanged.	Não foi possível restaurar o histórico de vídeos vistos. Seu histórico salvo não mudou.
-That file is larger than %1$s MB. Choose a seen-history file saved by Hushfeed.	Esse arquivo tem mais de %1$s MB. Escolha um arquivo de histórico salvo pelo Hushfeed.
+That file is larger than %1$s MB. Choose a seen-history file saved by Larpfeed.	Esse arquivo tem mais de %1$s MB. Escolha um arquivo de histórico salvo pelo Larpfeed.
 That file lists more than %1$s videos. Nothing was restored.	Esse arquivo lista mais de %1$s vídeos. Nada foi restaurado.
-That isn't a seen-history file saved by Hushfeed. For TikTok's own data export, use Import watch history.	Esse não é um arquivo de histórico salvo pelo Hushfeed. Para a exportação de dados do próprio TikTok, use Importar histórico de visualização.
-That file was saved by a newer Hushfeed. Update Hushfeed, then try again.	Esse arquivo foi salvo por uma versão mais nova do Hushfeed. Atualize o Hushfeed e tente de novo.
+That isn't a seen-history file saved by Larpfeed. For TikTok's own data export, use Import watch history.	Esse não é um arquivo de histórico salvo pelo Larpfeed. Para a exportação de dados do próprio TikTok, use Importar histórico de visualização.
+That file was saved by a newer Larpfeed. Update Larpfeed, then try again.	Esse arquivo foi salvo por uma versão mais nova do Larpfeed. Atualize o Larpfeed e tente de novo.
 That seen-history file is damaged or was edited. Nothing was restored.	Esse arquivo de histórico está danificado ou foi editado. Nada foi restaurado.
 Turn off haptics	Desativar a resposta tátil
 Stop the short vibrations TikTok plays on its own taps and gestures. Your keyboard and your phone's own haptics stay as they are.	Para as vibrações curtas que o TikTok toca nos próprios toques e gestos. Seu teclado e a resposta tátil do próprio celular continuam como estão.
@@ -1910,7 +1910,7 @@ Turns off TikTok's notification service, so nothing it sends reaches your notifi
 Save details as JSON	Salvar os detalhes como JSON
 Saves the details file in JSON format instead of plain text. Useful if another tool will read it.	Salva o arquivo de detalhes em formato JSON em vez de texto simples. Útil se outra ferramenta for ler o arquivo.
 Tag saved videos with their details	Marcar os vídeos salvos com seus detalhes
-Stores the caption, creator, post date and link inside the video file, where media players can read them. Applies to saves made by Hushfeed.	Guarda a legenda, o criador, a data de publicação e o link dentro do próprio arquivo de vídeo, onde os players de mídia conseguem lê-los. Vale para os salvamentos feitos pelo Hushfeed.
+Stores the caption, creator, post date and link inside the video file, where media players can read them. Applies to saves made by Larpfeed.	Guarda a legenda, o criador, a data de publicação e o link dentro do próprio arquivo de vídeo, onde os players de mídia conseguem lê-los. Vale para os salvamentos feitos pelo Larpfeed.
 Save the video's cover	Salvar a capa do vídeo
 Save the cover as well	Salvar a capa também
 Save the video's cover picture at the largest size TikTok has, each time you tap Download. It goes to your photo folder, named after the video.	Salva a imagem de capa do vídeo no maior tamanho que o TikTok tem, sempre que você tocar em Baixar. Ela vai para a sua pasta de fotos, com o nome do vídeo.
@@ -1953,10 +1953,10 @@ Liked videos	Vídeos curtidos
 Public	Públicos
 Copy	Copiar
 Copy the full link for short links	Copiar o link completo nos links curtos
-When Copy link gives a short vt.tiktok.com or vm.tiktok.com link, Hushfeed opens it once in the background to find the full video link and copies that instead. TikTok sees that visit, and it connects directly even when a proxy is on. Links you send to another app go out as they were.	Quando Copiar link dá um link curto vt.tiktok.com ou vm.tiktok.com, o Hushfeed o abre uma vez em segundo plano para achar o link completo do vídeo e copia esse. O TikTok vê essa visita, e ela conecta direto mesmo com um proxy ativo. Os links que você envia para outro app saem como estavam.
+When Copy link gives a short vt.tiktok.com or vm.tiktok.com link, Larpfeed opens it once in the background to find the full video link and copies that instead. TikTok sees that visit, and it connects directly even when a proxy is on. Links you send to another app go out as they were.	Quando Copiar link dá um link curto vt.tiktok.com ou vm.tiktok.com, o Larpfeed o abre uma vez em segundo plano para achar o link completo do vídeo e copia esse. O TikTok vê essa visita, e ela conecta direto mesmo com um proxy ativo. Os links que você envia para outro app saem como estavam.
 Full link copied	Link completo copiado
 Mark saved videos	Marcar vídeos salvos
-Puts a ✓ by videos and photo posts you saved with Hushfeed, on profile grids and next to the time in the feed. Works only while Check for already-saved videos is on.	Coloca um ✓ nos vídeos e nas publicações de fotos que você salvou com o Hushfeed, nas grades de perfil e ao lado da hora no feed. Só funciona enquanto Verificar vídeos já salvos estiver ligado.
+Puts a ✓ by videos and photo posts you saved with Larpfeed, on profile grids and next to the time in the feed. Works only while Check for already-saved videos is on.	Coloca um ✓ nos vídeos e nas publicações de fotos que você salvou com o Larpfeed, nas grades de perfil e ao lado da hora no feed. Só funciona enquanto Verificar vídeos já salvos estiver ligado.
 Also replaces the saved region and country code TikTok sends with every request. Signing in still sends your real region. Your IP address and your account's own rules still apply.	Também substitui a região salva e o código de país que o TikTok envia a cada solicitação. Ao entrar, a sua região real ainda é enviada. Seu endereço IP e as regras da sua conta continuam valendo.
 Turn off double tap to react	Desativar toque duplo para reagir
 A double tap on a message no longer adds a heart to it. A single tap and a long press work as before.	Um toque duplo numa mensagem não adiciona mais um coração a ela. O toque simples e o toque longo funcionam como antes.
@@ -1993,7 +1993,7 @@ Hide the Thoughts bubble TikTok shows above a profile picture, and the prompt to
 Turn on Thoughts	Ativar o Thoughts
 Show Thoughts on profiles and in your inbox, and the prompt to share one, for accounts TikTok hasn't turned them on for. TikTok's servers may still refuse to post one. Restart TikTok to apply this.	Mostrar o Thoughts nos perfis e na Caixa de entrada, e o convite para compartilhar um, em contas em que o TikTok não o ativou. Os servidores do TikTok ainda podem recusar a publicação. Reinicie o TikTok para aplicar.
 
-About Hushfeed	Sobre o Hushfeed
+About Larpfeed	Sobre o Larpfeed
 Version, changes and licenses	Versão, mudanças e licenças
 Active	Ativo
 Paused	Pausado
@@ -2122,7 +2122,7 @@ About	Sobre
 Your settings	Suas configurações
 Report a problem	Relatar um problema
 Opens a GitHub report with your versions and settings filled in. Add what happened.	Abre um relatório no GitHub com suas versões e configurações já preenchidas. Conte o que aconteceu.
-Support Hushfeed	Apoie o Hushfeed
+Support Larpfeed	Apoie o Larpfeed
 No app on this phone opens web links	Nenhum app deste celular abre links da web
 # context: toast after a long press hides the Quick setups card from the settings home page; the page name is the one holding the row that brings it back
 # context: row on the Backup and restore page; shows or hides the Quick setups card on the settings home page
@@ -2132,16 +2132,16 @@ Your feed	Seu feed
 Saving and sharing	Salvar e compartilhar
 # context: a heading on the settings home page, over Privacy, App, Region, Backup and restore and Feature Gate Lab
 Privacy and app	Privacidade e aplicativo
-# context: a heading on the settings home page, over Hushfeed's status, Pause, Diagnostics, About, Report a problem and Support; the app's name, usually kept as is
-Hushfeed	Hushfeed
-Open Hushfeed settings	Abrir as configurações do Hushfeed
+# context: a heading on the settings home page, over Larpfeed's status, Pause, Diagnostics, About, Report a problem and Support; the app's name, usually kept as is
+Larpfeed	Larpfeed
+Open Larpfeed settings	Abrir as configurações do Larpfeed
 Several photos in one comment	Várias fotos em um comentário
 Scrolling comments on videos	Comentários passando sobre os vídeos
 See-through bottom bar	Barra inferior transparente
 Let the video reach the bottom of the screen on the main feed and show the tabs over it with no bar behind them.	No feed principal, deixe o vídeo chegar até a parte de baixo da tela e mostre as abas por cima, sem barra atrás.
 LIVE chat auto-translate	Tradução automática do chat da LIVE
 
-The Translate comments button in a LIVE room also needs a Japanese SIM. Turn on Override SIM details in Hushfeed settings > Region, set SIM country preset to Japan, NTT DOCOMO (44010), then restart TikTok.	O botão Traduzir comentários numa sala LIVE também precisa de um SIM japonês. Ative Substituir os dados do SIM nas configurações do Hushfeed > Região, defina País predefinido do SIM como Japan, NTT DOCOMO (44010) e reinicie o TikTok.
+The Translate comments button in a LIVE room also needs a Japanese SIM. Turn on Override SIM details in Larpfeed settings > Region, set SIM country preset to Japan, NTT DOCOMO (44010), then restart TikTok.	O botão Traduzir comentários numa sala LIVE também precisa de um SIM japonês. Ative Substituir os dados do SIM nas configurações do Larpfeed > Região, defina País predefinido do SIM como Japan, NTT DOCOMO (44010) e reinicie o TikTok.
 Comments only scroll on videos TikTok has turned them on for, so most videos stay the same.	Os comentários só passam sobre os vídeos em que o TikTok os ativou, então a maioria dos vídeos continua igual.
 
 Pick videos to save from profile grids	Escolher vídeos para salvar nas grades de perfil
@@ -2328,8 +2328,8 @@ Open setting location	Abrir local da configuração
 Expanded	Expandido
 Collapsed	Recolhido
 This setting isn't available. Search for another setting.	Esta configuração não está disponível. Procure outra configuração.
-Hide the Hushfeed row	Ocultar a linha do Hushfeed
-Take Hushfeed out of TikTok's Settings and privacy. To open these settings, press and hold For You at the top of the feed, or Home if Long-press Home for Hushfeed settings is on.	Tira o Hushfeed de Configurações e privacidade do TikTok. Para abrir estas configurações, toque e segure Para você no topo do feed, ou Início se Toque e segure Início para abrir as configurações do Hushfeed estiver ligado.
+Hide the Larpfeed row	Ocultar a linha do Larpfeed
+Take Larpfeed out of TikTok's Settings and privacy. To open these settings, press and hold For You at the top of the feed, or Home if Long-press Home for Larpfeed settings is on.	Tira o Larpfeed de Configurações e privacidade do TikTok. Para abrir estas configurações, toque e segure Para você no topo do feed, ou Início se Toque e segure Início para abrir as configurações do Larpfeed estiver ligado.
 Open the search page	Abrir a página de busca
 Search didn't open. Restart TikTok and try again.	A busca não abriu. Reinicie o TikTok e tente de novo.
 Fold the search into a button	Recolher a busca em um botão
@@ -2387,9 +2387,9 @@ Couldn't make the sticker. Try again.	Não foi possível criar o adesivo. Tente 
 Couldn't read that photo. Try another one.	Não foi possível ler essa foto. Tente outra.
 This account can't make stickers	Esta conta não pode criar adesivos
 Sticker added to Saved	Adesivo adicionado aos salvos
-# context: the comment sticker panel. Recently used is a heading Hushfeed adds above Saved, over the last stickers you sent. TikTok's own label for it isn't in the APK, so this is the usual phone wording
+# context: the comment sticker panel. Recently used is a heading Larpfeed adds above Saved, over the last stickers you sent. TikTok's own label for it isn't in the APK, so this is the usual phone wording
 Recently used	Usados recentemente
-# context: A video's share sheet. Make sticker is a button Hushfeed adds after Save cover, and it turns the video's cover into one of your saved comment stickers. Keep it about as short as Save cover, since share sheet labels get two short lines under the icon
+# context: A video's share sheet. Make sticker is a button Larpfeed adds after Save cover, and it turns the video's cover into one of your saved comment stickers. Keep it about as short as Save cover, since share sheet labels get two short lines under the icon
 Make sticker	Criar adesivo
 TikTok refused the like: %1$s	O TikTok recusou a curtida: %1$s
 TikTok refused the like with code %1$s	O TikTok recusou a curtida com o código %1$s
@@ -2399,7 +2399,7 @@ Copy name	Copiar nome
 Background play in the long-press menu	Reprodução em segundo plano no menu de toque longo
 Adds TikTok's own background play row to the long-press menu, so you pick it for one video and other videos stop as usual. Has no effect while Keep playing in the background is on. Restart TikTok to apply this.	Adiciona a linha de reprodução em segundo plano do próprio TikTok ao menu de toque longo, para você escolher em um vídeo só e os outros pararem como sempre. Não tem efeito enquanto Continuar tocando em segundo plano estiver ligado. Reinicie o TikTok para aplicar.
 1, from Background play in the long-press menu	1, de Reprodução em segundo plano no menu de toque longo
-Background play in the long-press menu is on in Hushfeed's Playback settings, so TikTok gets 1 for this key and an override here has no effect until that switch is off.	Reprodução em segundo plano no menu de toque longo está ligado nas configurações de Reprodução do Hushfeed, então o TikTok recebe 1 para esta chave e uma substituição aqui não tem efeito até essa chave ser desligada.
+Background play in the long-press menu is on in Larpfeed's Playback settings, so TikTok gets 1 for this key and an override here has no effect until that switch is off.	Reprodução em segundo plano no menu de toque longo está ligado nas configurações de Reprodução do Larpfeed, então o TikTok recebe 1 para esta chave e uma substituição aqui não tem efeito até essa chave ser desligada.
 Keep LIVEs from these creators	Manter LIVEs destes criadores
 With Hide LIVE videos on, these creators' LIVEs stay when TikTok sends them. Separate handles or user IDs with commas.	Com Esconder os vídeos LIVE ligado, os LIVEs destes criadores ficam quando o TikTok os envia. Separe nomes de usuário ou IDs com vírgulas.
 Optional. Leave empty for a proxy without a password. TikTok signs in through a small relay on this phone, which other apps here could reach while TikTok is open.	Opcional. Deixe vazio para um proxy sem senha. O TikTok faz login por um pequeno relay neste celular, que outros apps daqui podem acessar enquanto o TikTok estiver aberto.
@@ -2450,7 +2450,7 @@ Watch history cleared	Histórico de exibição limpo
 Couldn't open that video. Try again.	Não foi possível abrir o vídeo. Tente de novo.
 Keep the next videos in full screen	Manter os próximos vídeos em tela cheia
 Full screen opens with just your video on most pages, so there's nothing to swipe to. This brings the videos after it along.	Na maioria das páginas, a tela cheia abre só o seu vídeo, então não há para onde deslizar. Isso traz junto os vídeos seguintes.
-Off until you tap it. Wipes TikTok's data once, on the next start, and gives it a new Android ID and advertising ID, so it sees a phone it hasn't met. You'll be signed out and lose your drafts. Hushfeed's settings stay.	Desligado até você tocar. Apaga os dados do TikTok uma vez, na próxima abertura, e dá a ele um novo ID do Android e um novo ID de publicidade, para ele ver um celular que não conhece. Você sai da conta e perde os rascunhos. As configurações do Hushfeed ficam.
+Off until you tap it. Wipes TikTok's data once, on the next start, and gives it a new Android ID and advertising ID, so it sees a phone it hasn't met. You'll be signed out and lose your drafts. Larpfeed's settings stay.	Desligado até você tocar. Apaga os dados do TikTok uma vez, na próxima abertura, e dá a ele um novo ID do Android e um novo ID de publicidade, para ele ver um celular que não conhece. Você sai da conta e perde os rascunhos. As configurações do Larpfeed ficam.
 In use: TikTok sees the identity you made here, and it stays the same on every start. Tap to make another one, which wipes TikTok's data again.	Em uso: o TikTok vê a identidade que você criou aqui, e ela continua igual a cada abertura. Toque para criar outra, o que apaga os dados do TikTok de novo.
 Couldn't finish wiping TikTok's data. Tap to try again.	Não deu para terminar de apagar os dados do TikTok. Toque para tentar de novo.
 Use this phone's own IDs	Usar os IDs deste celular

@@ -1,6 +1,6 @@
 /*
- * Copyright 2026 Hushfeed contributors
- * https://github.com/SysAdminDoc/hushfeed
+ * Copyright 2026 Larpfeed contributors
+ * https://github.com/SysAdminDoc/larpfeed
  */
 package app.morphe.extension.tiktok.privacy;
 
@@ -29,7 +29,7 @@ import app.morphe.extension.tiktok.settings.Settings;
  * Android 11, {@link StoreInstallSource}. What TikTok's native code reads for itself, from the
  * APK on disk, is out of reach here.
  *
- * <p>Before Hushfeed has a context the setting can't be read, and every answer here is the
+ * <p>Before Larpfeed has a context the setting can't be read, and every answer here is the
  * real one.
  */
 @SuppressWarnings("unused")

@@ -361,7 +361,7 @@ public class CaptureRecoveryTest {
                     record.finalized(),
                     "capture.mp4",
                     "video/mp4",
-                    "Movies/Hushfeed",
+                    "Movies/Larpfeed",
                     true,
                     10000,
                     new RecordingPublication(app, record, file -> 0));

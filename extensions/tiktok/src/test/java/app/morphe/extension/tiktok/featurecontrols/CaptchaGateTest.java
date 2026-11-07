@@ -1,6 +1,6 @@
 /*
- * Copyright 2026 Hushfeed contributors
- * https://github.com/SysAdminDoc/hushfeed
+ * Copyright 2026 Larpfeed contributors
+ * https://github.com/SysAdminDoc/larpfeed
  *
  * Built on icysymmetra/tiktok-patches-for-morphe (GPL-3.0).
  */
@@ -201,7 +201,7 @@ public class CaptchaGateTest {
      * a check has reached it.
      *
      * <p>A report of a comment that went nowhere carried no CAPTCHA line at all, so nobody
-     * could say whether Hushfeed had seen the publish request, whether a puzzle had been
+     * could say whether Larpfeed had seen the publish request, whether a puzzle had been
      * raised, or whether the gate was even in that build. A family that is simply absent says
      * all three.
      */

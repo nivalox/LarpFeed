@@ -1,6 +1,6 @@
 /*
- * Copyright 2026 Hushfeed contributors
- * https://github.com/SysAdminDoc/hushfeed
+ * Copyright 2026 Larpfeed contributors
+ * https://github.com/SysAdminDoc/larpfeed
  *
  * Built on icysymmetra/tiktok-patches-for-morphe (GPL-3.0).
  */
@@ -382,7 +382,7 @@ val regionSpoofPatch = bytecodePatch(
     name = "Region spoof",
     description = "Makes TikTok's region and time zone match the country you set for SIM " +
         "spoof. It changes every region check, sign-in included, and its store region switch is " +
-        "experimental, so it isn't picked for you. Starts off. Turn it on in Hushfeed settings > " +
+        "experimental, so it isn't picked for you. Starts off. Turn it on in Larpfeed settings > " +
         "Region.",
     default = false,
 ) {

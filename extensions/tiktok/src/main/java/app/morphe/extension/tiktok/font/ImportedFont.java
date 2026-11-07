@@ -1,9 +1,9 @@
 /*
- * Copyright 2026 Hushfeed contributors
- * https://github.com/SysAdminDoc/hushfeed
+ * Copyright 2026 Larpfeed contributors
+ * https://github.com/SysAdminDoc/larpfeed
  *
  * The idea of drawing TikTok's text in a font file the reader imports comes from onlynazril's
- * TikTok patches (GPL-3.0). This is Hushfeed's own take: it stands behind Use system font's hook
+ * TikTok patches (GPL-3.0). This is Larpfeed's own take: it stands behind Use system font's hook
  * rather than a second one, and keeps the weight the engine asked for.
  */
 package app.morphe.extension.tiktok.font;
@@ -30,7 +30,7 @@ import java.util.Locale;
  *
  * <p>Use an imported font draws TikTok's text in this file through the same hook as Use system
  * font ({@link SystemFont}). The file is copied out of the file app into
- * {@code files/hushfeed_fonts}, so it outlives the picker's permission, and a new import replaces
+ * {@code files/larpfeed_fonts}, so it outlives the picker's permission, and a new import replaces
  * the old one. The face is loaded once a process and kept: the font engine asks for a face every
  * time it builds a text style, and the file only changes through this class, which drops the
  * kept face when it does.
@@ -44,7 +44,7 @@ public final class ImportedFont {
     /** The largest font file the import takes. Large CJK fonts run to about 16 MB. */
     public static final long MAX_BYTES = 20L * 1024 * 1024;
 
-    static final String DIRECTORY = "hushfeed_fonts";
+    static final String DIRECTORY = "larpfeed_fonts";
     /** Where an import waits while it's checked. A dot name, so it's never taken for the font. */
     static final String INCOMING = ".incoming";
     /** The prefix the earlier font waits under while its replacement moves in. A dot name too. */

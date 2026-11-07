@@ -1,6 +1,6 @@
 /*
- * Copyright 2026 Hushfeed contributors
- * https://github.com/SysAdminDoc/hushfeed
+ * Copyright 2026 Larpfeed contributors
+ * https://github.com/SysAdminDoc/larpfeed
  */
 package app.morphe.extension.tiktok.misc;
 
@@ -26,7 +26,7 @@ import app.morphe.extension.tiktok.settings.SettingsStatus;
  * why the menu's switch comes and goes and why 2 set in the Feature Gate Lab can still fall back.
  * With Keep playing in the background on, the value reads as 2 and the remembered switch reads
  * as on, and TikTok does the rest: its player keeps going, its media notification pauses and
- * resumes, and it gives way when another app takes audio focus. Hushfeed starts no service of
+ * resumes, and it gives way when another app takes audio focus. Larpfeed starts no service of
  * its own. Which posts may play on stays TikTok's call too, with two exceptions: TikTok leaves
  * out photo posts and the videos on your own profile (where your private videos play), and the
  * switch lets both through. Ads, LIVE and paid posts still stop.

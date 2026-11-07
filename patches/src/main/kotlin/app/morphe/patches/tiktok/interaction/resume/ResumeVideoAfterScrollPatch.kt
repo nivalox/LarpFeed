@@ -38,7 +38,7 @@ private val MOVE_RESULTS = setOf(Opcode.MOVE_RESULT, Opcode.MOVE_RESULT_WIDE, Op
 val resumeVideoAfterScrollPatch = bytecodePatch(
     name = "Resume videos after scrolling",
     description = "When you scroll back to a video, it picks up where you left off instead of " +
-        "starting over. On by default. Turn it off in Hushfeed settings > Playback.",
+        "starting over. On by default. Turn it off in Larpfeed settings > Playback.",
     default = true,
 ) {
     category("Interaction")

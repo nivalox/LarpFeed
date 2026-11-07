@@ -146,7 +146,7 @@ internal class Ranking(val nearest: List<Nearness>, val tiedWithLast: Int) {
         }
         if (tiedWithLast > 0) {
             appendLine("  ($tiedWithLast more score the same as the last one, so the ranking can't tell them apart." +
-                " HUSHFEED_NEAREST_FROM adds the likeness to an older build's match.)")
+                " LARPFEED_NEAREST_FROM adds the likeness to an older build's match.)")
         }
     }
 }

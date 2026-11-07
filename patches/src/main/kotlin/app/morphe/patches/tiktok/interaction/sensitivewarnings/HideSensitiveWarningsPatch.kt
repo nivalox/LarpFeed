@@ -1,6 +1,6 @@
 /*
- * Copyright 2026 Hushfeed contributors
- * https://github.com/SysAdminDoc/hushfeed
+ * Copyright 2026 Larpfeed contributors
+ * https://github.com/SysAdminDoc/larpfeed
  *
  * Built on icysymmetra/tiktok-patches-for-morphe (GPL-3.0).
  */
@@ -48,7 +48,7 @@ val hideSensitiveWarningsPatch = bytecodePatch(
     name = "Skip content warnings",
     description = "Plays videos without the warning screen you'd have to tap through first, " +
         "and can hide the Check sources and Check your sources banners. Starts off. Turn it on in " +
-        "Hushfeed settings > Feed screen.",
+        "Larpfeed settings > Feed screen.",
 ) {
     category("Feed")
     dependsOn(settingsPatch, sharedExtensionPatch)

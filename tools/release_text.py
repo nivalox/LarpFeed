@@ -1,4 +1,4 @@
-"""Release text for Hushfeed: the CHANGELOG cut, GitHub notes, the guide and the index.
+"""Release text for Larpfeed: the CHANGELOG cut, GitHub notes, the guide and the index.
 
   py -3.13 tools/release_text.py cut --version 0.70.0 [--date 2026-10-09]
   py -3.13 tools/release_text.py github-notes --version 0.70.0 --intro FILE --checked FILE --out FILE
@@ -42,7 +42,7 @@ NEXT_RELEASE = re.compile(
     re.MULTILINE)
 # The README lines that tell someone which TikTok build to patch: the badge, the Important box,
 # install step 1 and the two paragraphs on fetching the APK.
-INSTALL_CLAIMS = ('<img alt="TikTok ', "> Hushfeed targets the global TikTok package", "1. Get the TikTok ",
+INSTALL_CLAIMS = ('<img alt="TikTok ', "> Larpfeed targets the global TikTok package", "1. Get the TikTok ",
                   "Google Play only ever serves", "APKMirror also offers some TikTok releases")
 
 
@@ -175,14 +175,14 @@ def github_notes(args) -> None:
         parts.append(NOTE_GROUPS.get(name, name) + "\n\n" + "\n".join(items))
         count += len(items)
     _, targets = catalog()
-    parts.append("The [changelog](https://github.com/SysAdminDoc/hushfeed/blob/main/CHANGELOG.md) has every earlier "
+    parts.append("The [changelog](https://github.com/SysAdminDoc/larpfeed/blob/main/CHANGELOG.md) has every earlier "
                  "release too.")
     parts.append("How to update\n\n"
-                 f"1. Update Morphe Manager to {manager_floor()} or newer, then refresh the Hushfeed source.\n"
+                 f"1. Update Morphe Manager to {manager_floor()} or newer, then refresh the Larpfeed source.\n"
                  f"2. Patch TikTok {spoken(targets)} from APKMirror. Keep the manager's existing signing key so your "
                  "login and settings carry over.")
     parts.append("The `.mpp` download is a patch bundle, not a TikTok APK. "
-                 "[Installation instructions](https://github.com/SysAdminDoc/hushfeed#install).")
+                 "[Installation instructions](https://github.com/SysAdminDoc/larpfeed#install).")
     parts.append("What was checked\n\n" + read(Path(args.checked)).strip())
     notes = undash("\n\n".join(parts) + "\n")
     write(Path(args.out), notes)
@@ -345,11 +345,11 @@ def index(args) -> None:
     apks = "the supported APK" if len(targets) == 1 else f"all {counted(len(targets))} supported APKs"
     readme_summary = undash(readme_summary)
     description = undash(
-        f"Hushfeed v{args.version} has {count} patches for global TikTok {spoken(targets)} (com.zhiliaoapp.musically).\n\n"
+        f"Larpfeed v{args.version} has {count} patches for global TikTok {spoken(targets)} (com.zhiliaoapp.musically).\n\n"
         + bundle_summary + "\n\n"
         + f"All {count} patches applied to {apks}."
         + (f" {args.device_line.strip()}" if args.device_line else "") + "\n\n"
-        + f"Needs Morphe Manager {manager} or newer. Refresh the Hushfeed source to update. The .mpp is a patch "
+        + f"Needs Morphe Manager {manager} or newer. Refresh the Larpfeed source to update. The .mpp is a patch "
         + "bundle, not a TikTok APK. Keep the manager's existing signing key when updating."
         + "\n\n" + groups
     )
@@ -358,7 +358,7 @@ def index(args) -> None:
     bundle.update({
         "created_at": args.created,
         "description": description,
-        "download_url": f"https://github.com/SysAdminDoc/hushfeed/releases/download/v{args.version}/patches-{args.version}.mpp",
+        "download_url": f"https://github.com/SysAdminDoc/larpfeed/releases/download/v{args.version}/patches-{args.version}.mpp",
         "version": args.version,
     })
     # Manager pins the first key a source signs with and checks every bundle against it.
@@ -367,12 +367,12 @@ def index(args) -> None:
         bundle["public_key"] = read(public_key).strip()
     readme = ROOT / "README.md"
     edits = {readme: fold_next_release(read(readme), targets)}
-    swap(edits, readme, r"^Hushfeed v\d+\.\d+\.\d+ contains \d+ patches for TikTok .*$",
-         f"Hushfeed v{args.version} contains {count} patches for TikTok {spoken(targets)}. New in this one: "
+    swap(edits, readme, r"^Larpfeed v\d+\.\d+\.\d+ contains \d+ patches for TikTok .*$",
+         f"Larpfeed v{args.version} contains {count} patches for TikTok {spoken(targets)}. New in this one: "
          f"{readme_summary} It needs Morphe Manager {manager} or newer.")
     swap(edits, readme, r"^The main branch contains \d+ patches, .*$",
          f"The main branch contains {count} patches, the same set as v{args.version}.")
-    swap(edits, readme, r"shows all \d+ Hushfeed patches", f"shows all {count} Hushfeed patches")
+    swap(edits, readme, r"shows all \d+ Larpfeed patches", f"shows all {count} Larpfeed patches")
     swap(edits, ROOT / ".github/ISSUE_TEMPLATE/bug_report.yml",
          r"placeholder: Version \d+\.\d+\.\d+ for TikTok \d+\.\d+\.\d+(?!\.?\d)",
          f"placeholder: Version {args.version} for TikTok {targets[-1]}")

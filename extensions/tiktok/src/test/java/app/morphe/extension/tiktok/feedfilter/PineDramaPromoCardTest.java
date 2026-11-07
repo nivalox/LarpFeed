@@ -1,6 +1,6 @@
 /*
- * Copyright 2026 Hushfeed contributors
- * https://github.com/SysAdminDoc/hushfeed
+ * Copyright 2026 Larpfeed contributors
+ * https://github.com/SysAdminDoc/larpfeed
  */
 package app.morphe.extension.tiktok.feedfilter;
 
@@ -47,7 +47,7 @@ public class PineDramaPromoCardTest {
         assertTrue(CardFilters.shouldSkipPineDramaMidInsert());
     }
 
-    @Test public void pausedHushfeedKeepsTheCard() {
+    @Test public void pausedLarpfeedKeepsTheCard() {
         Settings.HIDE_MINI_DRAMAS.save(true);
         PausedProcess.set(true);
         assertFalse(CardFilters.shouldSkipPineDramaMidInsert());

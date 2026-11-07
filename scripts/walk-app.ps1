@@ -8,9 +8,9 @@
     it (or, with -AuditBuild, walks the build already installed from that receipt), then opens
     every screen the patches reach: For You and Following with swipes, the comment and share
     sheets, search, the Friends, Inbox and Profile tabs and Inbox's Activity page. It then expands
-    every Hushfeed settings section, scrolls it to its end and collapses it, plus Search settings.
-    Hushfeed opens from Profile's menu, or from a long press on Home when that route has no
-    Hushfeed row. After each step
+    every Larpfeed settings section, scrolls it to its end and collapses it, plus Search settings.
+    Larpfeed opens from Profile's menu, or from a long press on Home when that route has no
+    Larpfeed row. After each step
     the app has to still be the foreground app on the same process. Logcat's crash lines for it
     decide the rest.
 
@@ -22,7 +22,7 @@
 
     TikTok shows the language picked in its own settings whatever the phone or per-app locale
     says, so the walk finds the app's screens through its profile's labels (walk-app-core.ps1, in
-    English and Italian) and Hushfeed's through its own translation tables.
+    English and Italian) and Larpfeed's through its own translation tables.
 
     The receipt is PASS only when every planned screen was reached, the app never crashed, died
     or left the foreground, and the installed APK is the one patched from -Bundle.
@@ -32,7 +32,7 @@
     task take the phone in the seconds between them, twice in one release.
 
 .EXAMPLE
-    ./scripts/walk-app.ps1 -Serial $env:HUSHFEED_DEVICE_SERIAL -Bundle patches/build/release/patches-0.78.0.mpp `
+    ./scripts/walk-app.ps1 -Serial $env:LARPFEED_DEVICE_SERIAL -Bundle patches/build/release/patches-0.78.0.mpp `
         -PatchArgs @{ Apk = 'C:/fixtures/tiktok.apk'; Keystore = 'C:/keys/device.keystore'; KeyAlias = 'Morphe' }
 
 #>
@@ -48,8 +48,8 @@ param(
     [string]$AuditBuild,
     # The exact signed APK beside -AuditBuild, or an explicit path if the receipt was renamed.
     [string]$PatchedApk,
-    [string]$LeaseDir = $env:HUSHFEED_DEVICE_LEASE_DIR,
-    [string]$ChatIdentity = $env:HUSHFEED_CHAT_IDENTITY,
+    [string]$LeaseDir = $env:LARPFEED_DEVICE_LEASE_DIR,
+    [string]$ChatIdentity = $env:LARPFEED_CHAT_IDENTITY,
     [string]$Out,
     [string]$Query = 'cats',
     # Passed to patch-for-device.ps1 as they are: Apk, DesktopJar, Java, Keystore, KeyAlias,
@@ -76,8 +76,8 @@ $appName = $appProfile.App
 $receiptProfile = Get-WalkProfileName $WalkPackage
 if (-not $receiptProfile) { throw "walk-receipt.ps1 has no receipt profile for $WalkPackage." }
 
-if (-not $LeaseDir) { throw '-LeaseDir or HUSHFEED_DEVICE_LEASE_DIR names the shared device lease folder.' }
-if (-not $ChatIdentity) { throw '-ChatIdentity or HUSHFEED_CHAT_IDENTITY names who is driving the phone.' }
+if (-not $LeaseDir) { throw '-LeaseDir or LARPFEED_DEVICE_LEASE_DIR names the shared device lease folder.' }
+if (-not $ChatIdentity) { throw '-ChatIdentity or LARPFEED_CHAT_IDENTITY names who is driving the phone.' }
 if (-not $Out) { $Out = Join-Path $root 'build/walk/walk-receipt.json' }
 $work = Split-Path -Parent ([IO.Path]::GetFullPath($Out))
 $dumps = Join-Path $work 'screens'
@@ -108,7 +108,7 @@ if (-not $adb) { $adb = Get-ChildItem "$env:LOCALAPPDATA\Microsoft\WinGet\Packag
 if (-not $adb) { throw 'No adb found. Put it on the PATH or install the platform tools.' }
 if ($VerifyCleanApk -and -not (Test-Path -LiteralPath $VerifyCleanApk -PathType Leaf)) { throw "There's no clean APK at $VerifyCleanApk." }
 
-$script:lease = New-DeviceLease -LeaseDir $LeaseDir -Serial $Serial -Project 'hushfeed' -ChatIdentity $ChatIdentity `
+$script:lease = New-DeviceLease -LeaseDir $LeaseDir -Serial $Serial -Project 'larpfeed' -ChatIdentity $ChatIdentity `
     -Purpose 'whole-app walk' -LeaseMinutes 30
 $walkExit = 1
 try {
@@ -119,7 +119,7 @@ if (-not $AuditBuild) {
     if (-not $patch.ContainsKey('OutDir')) { $patch.OutDir = Join-Path $work 'apk' }
     Write-WalkLog "patching and installing from $releaseBundle"
     & (Join-Path $PSScriptRoot 'patch-for-device.ps1') @patch
-    $AuditBuild = Join-Path $patch.OutDir "hushfeed-$(Get-BundleVersion -Root $root)-signed.apk.audit-build.json"
+    $AuditBuild = Join-Path $patch.OutDir "larpfeed-$(Get-BundleVersion -Root $root)-signed.apk.audit-build.json"
 }
 if (-not (Test-Path -LiteralPath $AuditBuild -PathType Leaf)) { throw "There's no build receipt at $AuditBuild." }
 $build = Get-Content -LiteralPath $AuditBuild -Raw | ConvertFrom-Json
@@ -142,8 +142,8 @@ $planned = [Collections.Generic.List[string]]::new()
 $reached = [Collections.Generic.List[string]]::new()
 $faults = [Collections.Generic.List[string]]::new()
 $script:dumpCount = 0
-$translations = Get-HushfeedTranslations -Root $root
-$remoteDump = '/sdcard/hushfeed-walk.xml'
+$translations = Get-LarpfeedTranslations -Root $root
+$remoteDump = '/sdcard/larpfeed-walk.xml'
 
 function Invoke-WalkAdb {
     Assert-DeviceLease -Lease $script:lease -Serial $Serial
@@ -238,8 +238,8 @@ function Get-WalkScreen([string]$Name, [switch]$AllowPause) {
 function Save-WalkShot([string]$Name) {
     $safe = ($Name -replace '[^\w]+', '-').Trim('-')
     $local = Join-Path $dumps ('{0:d3}-{1}.png' -f $script:dumpCount, $safe)
-    Invoke-WalkAdb shell 'screencap -p /sdcard/hushfeed-walk.png' | Out-Null
-    Invoke-WalkAdb pull /sdcard/hushfeed-walk.png $local | Out-Null
+    Invoke-WalkAdb shell 'screencap -p /sdcard/larpfeed-walk.png' | Out-Null
+    Invoke-WalkAdb pull /sdcard/larpfeed-walk.png $local | Out-Null
 }
 
 function Invoke-WalkTap($Node, [string]$What, [int]$WaitMs = 2000, [string]$Title) {
@@ -348,8 +348,8 @@ function Select-WalkRow($Nodes, [string]$Label, [string]$Id, [int]$Height) {
 
 function Find-WalkRow([string]$Label, [int]$Width, [int]$Height, [string]$Name, [string]$Id) {
     # Settings rows: scroll the page up until the row shows or the top stops moving, then down
-    # until it shows. Hushfeed's page rows carry the id "title", which keeps the walk off
-    # Hushfeed home's quick setup buttons (one of them is "Privacy", like the page). The way up
+    # until it shows. Larpfeed's page rows carry the id "title", which keeps the walk off
+    # Larpfeed home's quick setup buttons (one of them is "Privacy", like the page). The way up
     # reads every screen: a header being collapsed sits above its controls, and an expanded Feed
     # filter runs about twelve screens, so eight blind swipes up left the walk under the header.
     # Feed screen runs about 32 on a 720x1600 emulator, past the old cap of 30.
@@ -416,14 +416,14 @@ function Invoke-WalkScrollToEnd([string]$Name, [int]$Width, [int]$Height, [strin
     return $false
 }
 
-function Test-WalkHushfeedHome([string]$HubLabel, [string]$Name) {
+function Test-WalkLarpfeedHome([string]$HubLabel, [string]$Name) {
     $hub = Get-WalkScreen $Name
     return [bool]@(Find-UiNode -Nodes $hub -Label $HubLabel -Id 'title')
 }
 
-# Opens Hushfeed's home: Profile's menu > Settings and privacy > Hushfeed first, then a long press
-# on Home (HomeTabSettingsShortcut) when that route has no Hushfeed row.
-function Open-WalkHushfeed([string]$HubLabel, [int]$Width, [int]$Height) {
+# Opens Larpfeed's home: Profile's menu > Settings and privacy > Larpfeed first, then a long press
+# on Home (HomeTabSettingsShortcut) when that route has no Larpfeed row.
+function Open-WalkLarpfeed([string]$HubLabel, [int]$Width, [int]$Height) {
     $nodes = Get-WalkScreen 'profile'
     $menu = @(Find-UiNode -Nodes $nodes -Label $WalkLabels.ProfileMenu | Where-Object { $_.Top -lt $Height * 0.15 }) | Select-Object -First 1
     if (-not $menu) { Write-WalkLog 'no Profile menu button' }
@@ -434,12 +434,12 @@ function Open-WalkHushfeed([string]$HubLabel, [int]$Width, [int]$Height) {
         if (-not $settings) { Write-WalkLog 'no Settings and privacy in the profile menu' }
         else {
             Invoke-WalkTap $settings 'Settings and privacy' 3000
-            $row = Find-WalkRow '^Hushfeed$' $Width $Height 'settings and privacy'
-            if (-not $row) { Write-WalkLog 'no Hushfeed row in Settings and privacy' }
+            $row = Find-WalkRow '^Larpfeed$' $Width $Height 'settings and privacy'
+            if (-not $row) { Write-WalkLog 'no Larpfeed row in Settings and privacy' }
             else {
-                Invoke-WalkTap $row 'Hushfeed' 3000
-                if (Test-WalkHushfeedHome $HubLabel 'hushfeed home') { return $true }
-                Write-WalkLog 'the Hushfeed row opened no Hushfeed home'
+                Invoke-WalkTap $row 'Larpfeed' 3000
+                if (Test-WalkLarpfeedHome $HubLabel 'larpfeed home') { return $true }
+                Write-WalkLog 'the Larpfeed row opened no Larpfeed home'
             }
         }
     }
@@ -450,14 +450,14 @@ function Open-WalkHushfeed([string]$HubLabel, [int]$Width, [int]$Height) {
     Write-WalkLog "long press Home at $($homeNav.X),$($homeNav.Y)"
     Invoke-WalkAdb shell input swipe $homeNav.X $homeNav.Y $homeNav.X $homeNav.Y 1000 | Out-Null
     Start-Sleep -Seconds 3
-    if (Test-WalkHushfeedHome $HubLabel 'hushfeed home from Home') { return $true }
-    Write-WalkLog "Home's long press opened no Hushfeed home"
+    if (Test-WalkLarpfeedHome $HubLabel 'larpfeed home from Home') { return $true }
+    Write-WalkLog "Home's long press opened no Larpfeed home"
     return $false
 }
 
-$hushfeedPages = @('Feed filter', 'Feed tabs', 'Feed screen', 'Playback', 'Screen time', 'Comments', 'Downloads',
-    'Share sheet', 'Inbox', 'Privacy', 'Region', 'App', 'Diagnostics', 'Backup and restore', 'About Hushfeed')
-foreach ($screen in Get-WalkPlannedScreens -AppProfile $appProfile -HushfeedPages $hushfeedPages) { $planned.Add($screen) }
+$larpfeedPages = @('Feed filter', 'Feed tabs', 'Feed screen', 'Playback', 'Screen time', 'Comments', 'Downloads',
+    'Share sheet', 'Inbox', 'Privacy', 'Region', 'App', 'Diagnostics', 'Backup and restore', 'About Larpfeed')
+foreach ($screen in Get-WalkPlannedScreens -AppProfile $appProfile -LarpfeedPages $larpfeedPages) { $planned.Add($screen) }
 
 $started = [DateTimeOffset]::UtcNow
 $device = ''; $appVersion = ''; $installedSha256 = ''; $installedPackage = ''; $installedVersionCode = ''
@@ -593,13 +593,13 @@ try {
         }
     }
 
-    # Hushfeed settings: expand and collapse each section on the same main page.
+    # Larpfeed settings: expand and collapse each section on the same main page.
     $searchLabel = Get-WalkTitleLabel 'Search settings' $translations
-    if (Open-WalkHushfeed $searchLabel $W $H) {
-        Complete-WalkScreen 'settings: Hushfeed'
-        $boundaryTitles = @($hushfeedPages) + @('Feature Gate Lab', 'Hushfeed', 'Report a problem', 'Support Hushfeed')
+    if (Open-WalkLarpfeed $searchLabel $W $H) {
+        Complete-WalkScreen 'settings: Larpfeed'
+        $boundaryTitles = @($larpfeedPages) + @('Feature Gate Lab', 'Larpfeed', 'Report a problem', 'Support Larpfeed')
         $boundaryLabel = (@($boundaryTitles | ForEach-Object { Get-WalkTitleLabel $_ $translations }) -join '|')
-        foreach ($title in $hushfeedPages) {
+        foreach ($title in $larpfeedPages) {
             $label = Get-WalkTitleLabel $title $translations
             $closed = Get-WalkSectionView $label $W $H "closed $title"
             if (-not $closed) { Write-WalkLog "no row for $title"; continue }
@@ -608,7 +608,7 @@ try {
             $expanded = Get-WalkSectionView $label $W $H "expanded $title"
             if (-not $expanded -or -not $expanded.Next -or $expanded.Next -ceq $closed.Next -or
                     $expanded.Next -cmatch $boundaryLabel) { $faults.Add("$title showed no inline controls"); break }
-            # The exact following row is the boundary. About also has a child named Hushfeed.
+            # The exact following row is the boundary. About also has a child named Larpfeed.
             $stopLabel = '(?-i)^' + [regex]::Escape($closed.Next) + '$'
             if (-not (Invoke-WalkScrollToEnd $title $W $H $stopLabel $label)) { $faults.Add("$title did not reach its final controls"); break }
             Save-WalkShot "$title expanded"
@@ -655,7 +655,7 @@ try {
     Write-WalkLog "stopped: $($_.Exception.Message)"
 } finally {
     try {
-        Invoke-WalkAdb shell "rm -f $remoteDump /sdcard/hushfeed-walk.png" | Out-Null
+        Invoke-WalkAdb shell "rm -f $remoteDump /sdcard/larpfeed-walk.png" | Out-Null
         foreach ($key in @($savedScales.Keys)) {
             if ($savedScales[$key] -match '^\d+(\.\d+)?$') { Invoke-WalkAdb shell settings put global $key $savedScales[$key] | Out-Null }
             else { Invoke-WalkAdb shell settings delete global $key | Out-Null }

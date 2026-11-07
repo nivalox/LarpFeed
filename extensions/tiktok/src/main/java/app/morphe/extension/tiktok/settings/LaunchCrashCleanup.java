@@ -1,6 +1,6 @@
 /*
- * Copyright 2026 Hushfeed contributors
- * https://github.com/SysAdminDoc/hushfeed
+ * Copyright 2026 Larpfeed contributors
+ * https://github.com/SysAdminDoc/larpfeed
  */
 package app.morphe.extension.tiktok.settings;
 
@@ -13,17 +13,17 @@ import java.util.Arrays;
 
 /**
  * TikTok's own recovery from crashes at launch. On the third launch crash in a row it deletes
- * every preferences file whose name isn't on its keep-list, and Hushfeed's weren't on it: a crash
- * loop erased every setting and the Lab's rules one start before Hushfeed's safe mode could
+ * every preferences file whose name isn't on its keep-list, and Larpfeed's weren't on it: a crash
+ * loop erased every setting and the Lab's rules one start before Larpfeed's safe mode could
  * pause anything.
  *
  * <p>This runs where TikTok builds that list, which can be inside its crash handler and before
- * Hushfeed has a context, so it touches nothing but the array it is given. The names are
+ * Larpfeed has a context, so it touches nothing but the array it is given. The names are
  * compile-time constants, and reading them loads none of the classes they come from.
  */
 public final class LaunchCrashCleanup {
-    /** Every preferences file Hushfeed writes. A new one belongs here as well. */
-    static final String[] HUSHFEED_FILES = {
+    /** Every preferences file Larpfeed writes. A new one belongs here as well. */
+    static final String[] LARPFEED_FILES = {
             Setting.PREFERENCES_NAME,
             FeatureGateLabStore.PREFS_NAME,
             ReleaseNotes.PREFS_NAME,
@@ -35,11 +35,11 @@ public final class LaunchCrashCleanup {
     private LaunchCrashCleanup() {
     }
 
-    /** TikTok's keep-list with Hushfeed's files after it. */
-    public static String[] keepHushfeedFiles(String[] kept) {
-        if (kept == null) return HUSHFEED_FILES.clone();
-        String[] joined = Arrays.copyOf(kept, kept.length + HUSHFEED_FILES.length);
-        System.arraycopy(HUSHFEED_FILES, 0, joined, kept.length, HUSHFEED_FILES.length);
+    /** TikTok's keep-list with Larpfeed's files after it. */
+    public static String[] keepLarpfeedFiles(String[] kept) {
+        if (kept == null) return LARPFEED_FILES.clone();
+        String[] joined = Arrays.copyOf(kept, kept.length + LARPFEED_FILES.length);
+        System.arraycopy(LARPFEED_FILES, 0, joined, kept.length, LARPFEED_FILES.length);
         return joined;
     }
 }

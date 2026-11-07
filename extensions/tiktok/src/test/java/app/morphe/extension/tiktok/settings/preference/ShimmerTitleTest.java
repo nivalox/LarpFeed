@@ -1,6 +1,6 @@
 /*
- * Copyright 2026 Hushfeed contributors
- * https://github.com/SysAdminDoc/hushfeed
+ * Copyright 2026 Larpfeed contributors
+ * https://github.com/SysAdminDoc/larpfeed
  */
 package app.morphe.extension.tiktok.settings.preference;
 
@@ -40,7 +40,7 @@ import java.lang.reflect.Method;
 import java.util.concurrent.TimeUnit;
 
 /**
- * Every Hushfeed title in TikTok's cyan and red: every stop reads on the page and dialog surfaces
+ * Every Larpfeed title in TikTok's cyan and red: every stop reads on the page and dialog surfaces
  * of its theme, a sheen sweeps as the title opens and once each period, the colours drift without
  * a jump, a worn title is drawn in more than one colour and in different ones as time passes, the
  * page bar and dialogs wear it, and it keeps moving on screen with Android's animations off, as
@@ -109,7 +109,7 @@ public class ShimmerTitleTest {
 
     @Test
     public void aTitleInDarkInkTakesTheLightThemesColours() {
-        TextView title = title("Hushfeed", SettingsUi.LIGHT_TEXT_PRIMARY);
+        TextView title = title("Larpfeed", SettingsUi.LIGHT_TEXT_PRIMARY);
         ShimmerTitle.wear(title);
         Bitmap still = draw(title, ShimmerTitle.DRIFT_MS);
         assertTrue("red letters", anyPixel(still, true));
@@ -126,8 +126,8 @@ public class ShimmerTitleTest {
     @Test
     public void thePageBarAndDialogsWearIt() {
         Activity activity = Robolectric.buildActivity(Activity.class).setup().get();
-        LinearLayout header = SettingsHeaderPreference.createHeader(activity, "Hushfeed", () -> { });
-        assertTrue(ShimmerTitle.wears(header.findViewWithTag("hushfeed_page_title")));
+        LinearLayout header = SettingsHeaderPreference.createHeader(activity, "Larpfeed", () -> { });
+        assertTrue(ShimmerTitle.wears(header.findViewWithTag("larpfeed_page_title")));
         assertTrue(ShimmerTitle.wears(SettingsUi.dialogTitle(activity, "Download folder")));
 
         AlertDialog dialog = new AlertDialog.Builder(activity).setTitle("Translation preview")
@@ -149,7 +149,7 @@ public class ShimmerTitleTest {
         scale.invoke(null, 0f);
         try (ActivityController<Activity> controller = Robolectric.buildActivity(Activity.class).setup().visible()) {
             assertFalse(ValueAnimator.areAnimatorsEnabled());
-            TextView title = title("Hushfeed", SettingsUi.DARK_TEXT_PRIMARY);
+            TextView title = title("Larpfeed", SettingsUi.DARK_TEXT_PRIMARY);
             FrameLayout root = new FrameLayout(controller.get());
             root.addView(title);
             controller.get().setContentView(root);
@@ -190,7 +190,7 @@ public class ShimmerTitleTest {
     }
 
     private static WeakReference<TextView> wornAndDropped() {
-        TextView title = title("Hushfeed", Color.WHITE);
+        TextView title = title("Larpfeed", Color.WHITE);
         ShimmerTitle.wear(title);
         assertTrue(ShimmerTitle.wears(title));
         return new WeakReference<>(title);

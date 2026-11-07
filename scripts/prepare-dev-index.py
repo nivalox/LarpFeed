@@ -18,7 +18,7 @@ from urllib.parse import urlsplit
 
 # Contract checked at MorpheApp/morphe-manager da8545c92c94b83e23adf7b573b46b282fa2b062:
 # network/dto/MorpheAsset.kt, domain/bundles/RemotePatchBundle.kt, util/VersionUtils.kt.
-REPOSITORY = "SysAdminDoc/HushFeed"
+REPOSITORY = "SysAdminDoc/LarpFeed"
 LIMIT = 65_536
 VERSION = re.compile(r"(\d+)\.(\d+)\.(\d+)(?:-(dev|alpha|beta|rc|preview)\.(\d+))?\Z")
 REQUIRED = {"download_url", "created_at", "description", "version"}

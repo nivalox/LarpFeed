@@ -472,7 +472,7 @@ public class SettingsSearchLocationTest {
     }
 
     private void screenshot(String name) throws Exception {
-        String output = System.getProperty("hushfeed.search.screenshots");
+        String output = System.getProperty("larpfeed.search.screenshots");
         if (output == null) return;
         File directory = new File(output);
         if (!directory.mkdirs() && !directory.isDirectory())

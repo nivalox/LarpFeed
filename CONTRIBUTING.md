@@ -4,16 +4,16 @@ Feature ideas, bug reports, and pull requests are welcome.
 
 For the source map, target boundary, factory install notes, and patch workflow, see the [app and patch development map](concepts/patch-development.md). For current ad routes, tracking scope, signed-in settings, observed onboarding, and patch opportunities, see the [TikTok app audit](concepts/tiktok-app-audit.md).
 
-Not sure it's a bug, or just have a question? Start in [Discussions](https://github.com/SysAdminDoc/hushfeed/discussions). If it turns out to be a bug, it moves to an issue from there.
+Not sure it's a bug, or just have a question? Start in [Discussions](https://github.com/SysAdminDoc/larpfeed/discussions). If it turns out to be a bug, it moves to an issue from there.
 
 If you open an issue, include:
 
 - the TikTok package name and version
-- the Morphe Manager version and Hushfeed bundle version
+- the Morphe Manager version and Larpfeed bundle version
 - every selected patch, including the settings patch
 - the affected surface, such as Feed, Inbox, Comments or Downloads
 - the expected and actual behavior
-- ordered reproduction steps, including each Hushfeed setting changed before the first failure
+- ordered reproduction steps, including each Larpfeed setting changed before the first failure
 - logs or screenshots if the issue is visual or crash related
 
 GitHub doesn't let the person who opened an issue reopen it once a maintainer closes it. So a
@@ -30,7 +30,7 @@ A release is one command: `scripts/release/release.ps1 -Version <x.y.z> -Summary
 
 The steps run what actually proves the bundle: the runtime and patch tests once, lint, the bundle build, every patch applied to each APK the catalog declares, a whole-app walk of each declared app patched from that exact bundle, and the Android runtime's own verifier over the patched TikTok. Nothing goes public until those pass. The release assets go up before `patches-bundle.json` moves, so its `download_url` always points at a file that exists.
 
-The local helpers are `scripts/gen-l10n.py`, `scripts/verify-all-patches.ps1` and `scripts/patch-for-device.ps1`. The last two need a Morphe desktop jar and a fixture APK. Anything more than one of them needs goes in `scripts/common.ps1`, which they all dot-source. The jar runs on JDK 21 or newer, so set `HUSHFEED_JAVA` or `JAVA_HOME` if that isn't the `java` first on your PATH. An explicit `-Java` directory must contain `bin/java.exe` or `bin/java`.
+The local helpers are `scripts/gen-l10n.py`, `scripts/verify-all-patches.ps1` and `scripts/patch-for-device.ps1`. The last two need a Morphe desktop jar and a fixture APK. Anything more than one of them needs goes in `scripts/common.ps1`, which they all dot-source. The jar runs on JDK 21 or newer, so set `LARPFEED_JAVA` or `JAVA_HOME` if that isn't the `java` first on your PATH. An explicit `-Java` directory must contain `bin/java.exe` or `bin/java`.
 
 When the TikTok target moves, record the content-marker corpus again on the new build.
 `ContentMarkerCorpusTest` replays shapes recorded from real videos through the AI label, paid
@@ -59,7 +59,7 @@ or as the `source,target` CSV a Weblate export gives you. `scripts/gen-l10n.py` 
 writes `en.csv`, the base a Weblate project translates from. Rerun it after touching a table:
 the tests compare the tables against the generated class and fail if the two disagree.
 
-Run `scripts/install-hooks.ps1` once per checkout. It installs a pre-push hook that takes a couple of seconds: it refuses a commit naming an AI tool as author or co-author, and an added line carrying a device serial or a home folder path. Set `HUSHFEED_SKIP_PRE_PUSH=1` to push past a false match. Builds and tests run with the work and at release time, never on a push.
+Run `scripts/install-hooks.ps1` once per checkout. It installs a pre-push hook that takes a couple of seconds: it refuses a commit naming an AI tool as author or co-author, and an added line carrying a device serial or a home folder path. Set `LARPFEED_SKIP_PRE_PUSH=1` to push past a false match. Builds and tests run with the work and at release time, never on a push.
 
 ## Settings for your machine
 
@@ -75,17 +75,17 @@ additional dependencies.
 Nothing in the repository points at a folder or a phone on anybody's machine. These variables do
 that instead, and none of them has a default:
 
-- `HUSHFEED_FIXTURE_DIR` is the folder that holds the vendor TikTok APKs the fixture tests read.
+- `LARPFEED_FIXTURE_DIR` is the folder that holds the vendor TikTok APKs the fixture tests read.
   They're hundreds of megabytes each, so they aren't in the repository. When it's unset the
   fixture tests skip and say which variable to set. When it names a folder that holds none of
   them they fail, because a skip there would look like a pass. `scripts/patch-for-device.ps1` and
   `scripts/verify-injected-registers.ps1` take their default APK from the same folder.
-- `HUSHFEED_DESKTOP_JAR` is the Morphe desktop CLI jar. `HUSHFEED_WORKDIR` or a jar under
+- `LARPFEED_DESKTOP_JAR` is the Morphe desktop CLI jar. `LARPFEED_WORKDIR` or a jar under
   `build/morphe-tools` works too, except in the release command, which reads this variable only.
-- `HUSHFEED_BUILD_WRAPPER` names a PowerShell script the release command runs Gradle through,
+- `LARPFEED_BUILD_WRAPPER` names a PowerShell script the release command runs Gradle through,
   called as `<wrapper> -ProjectDir <repository> -Tasks <task>...`. It helps when several builds
   share one machine and need to queue. Unset, it runs `gradlew.bat` itself.
-- `HUSHFEED_DEVICE_SERIAL` is the adb serial of the one test phone `scripts/phone.sh` may drive.
+- `LARPFEED_DEVICE_SERIAL` is the adb serial of the one test phone `scripts/phone.sh` may drive.
   The script refuses every other device, and it won't run at all while this is unset. Keep your
   own phone out of it.
 
@@ -99,8 +99,8 @@ New source written specifically for this project may use:
 
 ```text
 /*
- * Copyright <year> Hushfeed contributors
- * https://github.com/SysAdminDoc/hushfeed
+ * Copyright <year> Larpfeed contributors
+ * https://github.com/SysAdminDoc/larpfeed
  *
  * Built on icysymmetra/tiktok-patches-for-morphe (GPL-3.0).
  */

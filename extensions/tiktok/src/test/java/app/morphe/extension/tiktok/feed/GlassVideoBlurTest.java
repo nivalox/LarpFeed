@@ -117,7 +117,7 @@ public class GlassVideoBlurTest {
         Settings.GLASS_VIDEO_BLUR.save(true);
         assertTrue(GlassVideoBlur.wanted());
         PausedProcess.set(true);
-        assertFalse("Pause Hushfeed turns it off", GlassVideoBlur.wanted());
+        assertFalse("Pause Larpfeed turns it off", GlassVideoBlur.wanted());
     }
 
     @Test
@@ -427,7 +427,7 @@ public class GlassVideoBlurTest {
             glass.blur.start(bar);
             PausedProcess.set(true);
             glass.blur.step(3000);
-            assertFalse("Hushfeed paused", glass.blur.sampling());
+            assertFalse("Larpfeed paused", glass.blur.sampling());
             PausedProcess.set(false);
 
             glass.blur.start(bar);

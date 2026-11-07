@@ -1,6 +1,6 @@
 /*
- * Copyright 2026 Hushfeed contributors
- * https://github.com/SysAdminDoc/hushfeed
+ * Copyright 2026 Larpfeed contributors
+ * https://github.com/SysAdminDoc/larpfeed
  */
 package app.morphe.extension.tiktok.settings.preference;
 
@@ -105,7 +105,7 @@ public class SettingsRadiusScaleTest {
                 RadiusScale.assertOnScale(box, look + " search box");
                 RadiusScale.assertOnScale(new RecentSearchPreference(activity, "cats", query -> {}, query -> {})
                         .getView(null, parent), look + " recent search");
-                RadiusScale.assertOnScale(SettingsHeaderPreference.createHeader(activity, "Hushfeed", () -> {}),
+                RadiusScale.assertOnScale(SettingsHeaderPreference.createHeader(activity, "Larpfeed", () -> {}),
                         look + " page header");
             }
         }

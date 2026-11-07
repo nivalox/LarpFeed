@@ -31,7 +31,7 @@ val rememberClearDisplayPatch = bytecodePatch(
     description = "Keeps clear display, TikTok's mode that hides the buttons over a video, on " +
         "as you swipe to the next video (`Keep Clear display across videos` turns that part off). " +
         "It can also turn on by itself after a delay you pick, " +
-        "which starts off in Hushfeed settings > Feed screen. When clear display ends, the " +
+        "which starts off in Larpfeed settings > Feed screen. When clear display ends, the " +
         "Following stories bubble TikTok hid comes back too.",
     default = true,
 ) {

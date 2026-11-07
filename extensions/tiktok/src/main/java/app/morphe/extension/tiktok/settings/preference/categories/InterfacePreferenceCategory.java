@@ -28,7 +28,7 @@ import app.morphe.extension.tiktok.settings.preference.TogglePreference;
 
 /**
  * Everything drawn on the feed itself, grouped by where it sits: the right column, the buttons
- * Hushfeed adds, the text beside the video, what is around it, what pops over it, then
+ * Larpfeed adds, the text beside the video, what is around it, what pops over it, then
  * captions, clear display and gestures. The status bar and screenshot switches cover the whole
  * app, so they're on App. The page used to be one 27-row "Feed controls" card after the
  * captions, in the order the patches were written.
@@ -201,7 +201,7 @@ public final class InterfacePreferenceCategory extends ConditionalPreferenceCate
     }
 
     /**
-     * Every control Hushfeed draws on the video, in one card. They were split between Feed filter
+     * Every control Larpfeed draws on the video, in one card. They were split between Feed filter
      * and Playback, so nobody could see in one place which of them would show up. Each starts off.
      */
     private void addButtonsOnVideos(Context context) {

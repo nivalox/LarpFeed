@@ -1,6 +1,6 @@
 /*
- * Copyright 2026 Hushfeed contributors
- * https://github.com/SysAdminDoc/hushfeed
+ * Copyright 2026 Larpfeed contributors
+ * https://github.com/SysAdminDoc/larpfeed
  */
 package app.morphe.extension.tiktok.popups;
 
@@ -26,7 +26,7 @@ import app.morphe.extension.tiktok.settings.Settings;
  * <p>The LIVE bubble is the one TikTok floats at the top of the feed when someone is live. It's
  * raised from LiveBubbleUtil's check, outside the popup layer altogether, and with its switch on
  * that check returns before anything shows. The switch is off until turned on, and pausing
- * Hushfeed brings the bubble back.
+ * Larpfeed brings the bubble back.
  */
 public final class PopupSwitches {
     private static volatile Field nameField;

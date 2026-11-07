@@ -29,7 +29,7 @@ import org.robolectric.annotation.GraphicsMode;
 import java.lang.reflect.Method;
 
 /**
- * Hushfeed's controls over the video follow it into the detail pager, where a video opened from
+ * Larpfeed's controls over the video follow it into the detail pager, where a video opened from
  * a creator's grid, a hashtag or a sound plays, and come back with the reader (#47 on the S22:
  * the block and mute controls stayed on the feed's window, hidden behind the pager).
  */

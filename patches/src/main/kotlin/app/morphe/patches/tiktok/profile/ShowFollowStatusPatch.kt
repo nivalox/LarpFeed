@@ -1,6 +1,6 @@
 /*
- * Copyright 2026 Hushfeed contributors
- * https://github.com/SysAdminDoc/hushfeed
+ * Copyright 2026 Larpfeed contributors
+ * https://github.com/SysAdminDoc/larpfeed
  */
 package app.morphe.patches.tiktok.profile
 
@@ -78,7 +78,7 @@ internal fun ClassDef.itemViewField(): Field? = fields.singleOrNull {
 val showFollowStatusPatch = bytecodePatch(
     name = "Show follow status",
     description = "Shows on a profile whether that person follows you back, and marks " +
-        "accounts in your follow lists that don't. On by default. Turn it off in Hushfeed " +
+        "accounts in your follow lists that don't. On by default. Turn it off in Larpfeed " +
         "settings > App. A separate switch adds the month an account was made. Optional local " +
         "counts and appearance controls apply to your own profile.",
     default = true,

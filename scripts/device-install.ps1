@@ -56,7 +56,7 @@ function Assert-InstalledApkSigner {
         if ($base.Count -ne 1) { throw "adb returned no unique base APK for $PackageName." }
         $temporaryRoot = [IO.Path]::GetFullPath([IO.Path]::GetTempPath())
         $checkDirectory = Resolve-WithinRoot -Root $temporaryRoot `
-            -Path (Join-Path $temporaryRoot ('hushfeed-signer-' + [Guid]::NewGuid().ToString('N')))
+            -Path (Join-Path $temporaryRoot ('larpfeed-signer-' + [Guid]::NewGuid().ToString('N')))
         New-Item -ItemType Directory -Path $checkDirectory | Out-Null
         $installedApk = Join-Path $checkDirectory 'installed.apk'
         $ErrorActionPreference = 'Continue'

@@ -25,7 +25,7 @@ import org.robolectric.annotation.GraphicsMode;
 @Config(sdk = 28, qualifiers = "night")
 @GraphicsMode(GraphicsMode.Mode.NATIVE)
 public class SettingsBackupUndoGenerationTest {
-    private static final String CURRENT = "hushfeed-settings-undo.json";
+    private static final String CURRENT = "larpfeed-settings-undo.json";
     private static final String LEGACY = "metra-settings-undo.json";
 
     private Context context;

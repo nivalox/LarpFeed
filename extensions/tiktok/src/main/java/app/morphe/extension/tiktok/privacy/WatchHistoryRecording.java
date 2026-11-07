@@ -1,6 +1,6 @@
 /*
- * Copyright 2026 Hushfeed contributors
- * https://github.com/SysAdminDoc/hushfeed
+ * Copyright 2026 Larpfeed contributors
+ * https://github.com/SysAdminDoc/larpfeed
  */
 package app.morphe.extension.tiktok.privacy;
 
@@ -16,7 +16,7 @@ import app.morphe.extension.tiktok.settings.SettingsStatus;
  * at once or queues for a batch, and the batch send. That report (/aweme/v1/aweme/stats/) is
  * how TikTok counts a view, and Watch history is built from it on TikTok's side. It also carries
  * how long the video before played, so For You learns less while it's held back. Read on every
- * call, so a change applies to the next video, and while Hushfeed is paused the switch answers
+ * call, so a change applies to the next video, and while Larpfeed is paused the switch answers
  * off and TikTok reports as it ships. Off by default even with the patch picked: people use
  * Watch history to find a video again.
  */

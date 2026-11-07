@@ -1,6 +1,6 @@
 /*
- * Copyright 2026 Hushfeed contributors
- * https://github.com/SysAdminDoc/hushfeed
+ * Copyright 2026 Larpfeed contributors
+ * https://github.com/SysAdminDoc/larpfeed
  *
  * Built on icysymmetra/tiktok-patches-for-morphe (GPL-3.0).
  */
@@ -120,7 +120,7 @@ val hideLauncherShortcutsPatch = bytecodePatch(
     name = "Hide the launcher shortcuts",
     description = "Empties the menu that pops up when you press and hold TikTok's icon on " +
         "your home screen. Tapping the icon still opens the app. Starts off. Turn it on in " +
-        "Hushfeed settings > App.",
+        "Larpfeed settings > App.",
 ) {
     category("Interface")
     dependsOn(settingsPatch, sharedExtensionPatch)
@@ -204,7 +204,7 @@ val hideLauncherShortcutsPatch = bytecodePatch(
                 invoke-virtual {v0, v1}, $SERVICE_MANAGER->getService(Ljava/lang/Class;)Ljava/lang/Object;
                 move-result-object v0
                 check-cast v0, $SHORTCUT_SERVICE
-                const-string v1, "hushfeed"
+                const-string v1, "larpfeed"
                 const/4 v2, 0x1
                 invoke-interface {v0, v1, v2}, $SHORTCUT_SERVICE->${rebuild.name}(Ljava/lang/String;Z)V
                 return-void

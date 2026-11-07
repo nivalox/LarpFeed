@@ -1,6 +1,6 @@
 /*
- * Copyright 2026 Hushfeed contributors
- * https://github.com/SysAdminDoc/hushfeed
+ * Copyright 2026 Larpfeed contributors
+ * https://github.com/SysAdminDoc/larpfeed
  */
 package app.morphe.patches.tiktok.interaction.hdupload
 
@@ -82,7 +82,7 @@ val alwaysUploadHdPatch = bytecodePatch(
     name = "Always upload in HD",
     description = "Posts every video you upload in HD, as if you'd turned on TikTok's own HD " +
         "upload setting each time. Videos TikTok doesn't count as high quality post as usual. " +
-        "Starts off. Turn it on in Hushfeed settings > App.",
+        "Starts off. Turn it on in Larpfeed settings > App.",
 ) {
     category("Interaction")
     dependsOn(settingsPatch, sharedExtensionPatch)

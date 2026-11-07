@@ -1,6 +1,6 @@
 /*
- * Copyright 2026 Hushfeed contributors
- * https://github.com/SysAdminDoc/hushfeed
+ * Copyright 2026 Larpfeed contributors
+ * https://github.com/SysAdminDoc/larpfeed
  *
  * Built on icysymmetra/tiktok-patches-for-morphe (GPL-3.0).
  */
@@ -60,7 +60,7 @@ public final class EdgeSwipeLevels {
     static final float MIN_BRIGHTNESS = 0.01f;
     static final float SYSTEM_BRIGHTNESS = WindowManager.LayoutParams.BRIGHTNESS_OVERRIDE_NONE;
     private static final long LEVEL_SHOWN_MS = 900L;
-    static final String TAG = "hushfeed_swipe_level";
+    static final String TAG = "larpfeed_swipe_level";
 
     /** The strip a press lands in. */
     enum Side { NONE, LEFT, RIGHT }

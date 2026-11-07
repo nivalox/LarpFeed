@@ -47,11 +47,11 @@ class ChangeAppNameTest {
             """,
         )
 
-        assertEquals(2, renameApp(manifest, "Hushfeed"))
-        assertEquals("Hushfeed", element(manifest, "application").getAttribute("android:label"))
-        assertEquals("Hushfeed", named(manifest, "com.ss.android.ugc.aweme.splash.SplashActivity").getAttribute("android:label"))
+        assertEquals(2, renameApp(manifest, "Larpfeed"))
+        assertEquals("Larpfeed", element(manifest, "application").getAttribute("android:label"))
+        assertEquals("Larpfeed", named(manifest, "com.ss.android.ugc.aweme.splash.SplashActivity").getAttribute("android:label"))
         // An alias that already had a label of its own gets the name too, or it would keep showing its own.
-        assertEquals("Hushfeed", named(manifest, "com.ss.android.ugc.aweme.splash.SeasonalIcon").getAttribute("android:label"))
+        assertEquals("Larpfeed", named(manifest, "com.ss.android.ugc.aweme.splash.SeasonalIcon").getAttribute("android:label"))
         // MAIN and LAUNCHER in two different filters is not a launcher entry.
         assertEquals("MainActivity", named(manifest, "com.ss.android.ugc.aweme.deeplink.Links").getAttribute("android:label"))
         assertTrue(!named(manifest, "com.ss.android.ugc.aweme.main.MainActivity").hasAttribute("android:label"))
@@ -60,7 +60,7 @@ class ChangeAppNameTest {
     @Test
     fun `a manifest with no launcher entry is refused before the label is written`() {
         val manifest = manifest("""<activity android:name="com.example.Only"/>""")
-        assertThrows(PatchException::class.java) { renameApp(manifest, "Hushfeed") }
+        assertThrows(PatchException::class.java) { renameApp(manifest, "Larpfeed") }
         assertEquals("@string/app_name", element(manifest, "application").getAttribute("android:label"))
     }
 

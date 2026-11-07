@@ -1,6 +1,6 @@
 /*
- * Copyright 2026 Hushfeed contributors
- * https://github.com/SysAdminDoc/hushfeed
+ * Copyright 2026 Larpfeed contributors
+ * https://github.com/SysAdminDoc/larpfeed
  *
  * Built on icysymmetra/tiktok-patches-for-morphe (GPL-3.0).
  */
@@ -29,7 +29,7 @@ import org.json.JSONObject;
 
 /** Serializes persistent settings changes and repairs an interrupted change at startup. */
 public final class SettingsOperationJournal {
-    static final String FILE_NAME = "hushfeed-settings-operation.json";
+    static final String FILE_NAME = "larpfeed-settings-operation.json";
     // Each snapshot is bounded to 2 MB, and embedding it as a JSON string can escape every
     // quote and backslash. Leave room for that expansion and the journal envelope.
     private static final int MAX_JOURNAL_BYTES = SettingsBackup.MAX_BYTES * 4 + 16384;

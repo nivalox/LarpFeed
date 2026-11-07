@@ -1,6 +1,6 @@
 /*
- * Copyright 2026 Hushfeed contributors
- * https://github.com/SysAdminDoc/hushfeed
+ * Copyright 2026 Larpfeed contributors
+ * https://github.com/SysAdminDoc/larpfeed
  *
  * Built on icysymmetra/tiktok-patches-for-morphe (GPL-3.0).
  */
@@ -47,7 +47,7 @@ import java.util.concurrent.atomic.AtomicReference;
  * the record holds, read once off the main thread and changed with the rows from then on.
  */
 public final class SavedVideoArchive {
-    static final String DATABASE_NAME = "hushfeed-saved-videos.db";
+    static final String DATABASE_NAME = "larpfeed-saved-videos.db";
     public static final int LIMIT = 10_000;
     /** How long a read of the ids that failed, or couldn't start, waits before the next try. */
     static final long IDS_RETRY_MS = 60_000L;

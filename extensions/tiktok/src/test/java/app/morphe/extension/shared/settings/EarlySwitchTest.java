@@ -1,6 +1,6 @@
 /*
- * Copyright 2026 Hushfeed contributors
- * https://github.com/SysAdminDoc/hushfeed
+ * Copyright 2026 Larpfeed contributors
+ * https://github.com/SysAdminDoc/larpfeed
  */
 package app.morphe.extension.shared.settings;
 
@@ -26,7 +26,7 @@ import org.robolectric.annotation.Config;
 import java.io.File;
 import java.io.IOException;
 
-/** A switch read straight from the saved file, before Hushfeed's settings context exists. */
+/** A switch read straight from the saved file, before Larpfeed's settings context exists. */
 @RunWith(RobolectricTestRunner.class)
 @Config(sdk = 28)
 public class EarlySwitchTest {
@@ -51,7 +51,7 @@ public class EarlySwitchTest {
 
     private void clear() {
         saved.edit().remove(KEY).remove(EarlySwitch.PAUSED_KEY).remove(EarlySwitch.SAFE_MODE_KEY).commit();
-        File marker = HushfeedPause.markerFile(context);
+        File marker = LarpfeedPause.markerFile(context);
         if (marker != null) marker.delete();
     }
 
@@ -80,7 +80,7 @@ public class EarlySwitchTest {
         assertFalse("safe mode", EarlySwitch.isOn(KEY));
         saved.edit().remove(EarlySwitch.SAFE_MODE_KEY).commit();
 
-        File marker = HushfeedPause.markerFile(context);
+        File marker = LarpfeedPause.markerFile(context);
         assertNotNull(marker);
         //noinspection ResultOfMethodCallIgnored
         marker.getParentFile().mkdirs();

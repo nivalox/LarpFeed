@@ -1,6 +1,6 @@
 /*
- * Copyright 2026 Hushfeed contributors
- * https://github.com/SysAdminDoc/hushfeed
+ * Copyright 2026 Larpfeed contributors
+ * https://github.com/SysAdminDoc/larpfeed
  *
  * Built on icysymmetra/tiktok-patches-for-morphe (GPL-3.0).
  */
@@ -55,7 +55,7 @@ import java.util.WeakHashMap;
  * expose its title through their accessibility delegate, so both descriptions are read.
  *
  * There used to be a confirm step here, a second tap before a video went to a friend. On every
- * build Hushfeed supports, a tap on a person only marks them chosen and TikTok's own Send button
+ * build Larpfeed supports, a tap on a person only marks them chosen and TikTok's own Send button
  * sends, and the method the step was hooked to was the contact cell's impression callback, which
  * TikTok runs when a cell scrolls into view. So it asked for a second tap nobody had made a first
  * time (#58) and never held a real one.

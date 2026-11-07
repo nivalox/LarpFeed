@@ -4,17 +4,17 @@
 
 ## 0.80.0 (2026-11-01)
 
-* PineDrama pindah ke set patch sendiri, HushPine. Mulai sekarang Hushfeed hanya mem-patch TikTok.
+* PineDrama pindah ke set patch sendiri, HushPine. Mulai sekarang Larpfeed hanya mem-patch TikTok.
 * TikTok 47.6.3 kini satu-satunya build yang didukung. Ambil dari APKMirror dan pakai kunci tanda tangan yang sama agar login dan pengaturan Anda tetap ada.
 * Sembunyikan kontrol Tampilan bersih punya sakelar baru yang menjaga bilah progres tetap tampil, jadi kamu masih bisa melihat dan menggesernya (#237).
 * Ketuk dua kali sekarang bisa menyukai dan membatalkan suka. Ketuk dua kali pada video yang sudah kamu sukai akan menarik kembali sukanya (#248).
 * Geser ke kiri atau kanan saat menahan video untuk berpindah di antara Pilihan di menu kecepatan milikmu. Bawaannya mati (#248).
 * Kisi Disukai punya urutan sendiri, dan tombol urutan di kisi Disukai hanya mengubah urutan itu (#180).
-* Setiap judul Hushfeed sekarang menampilkan warna sian dan merah TikTok dalam gradasi yang bergerak pelan.
+* Setiap judul Larpfeed sekarang menampilkan warna sian dan merah TikTok dalam gradasi yang bergerak pelan.
 * Preset Feed tenang sudah dihapus. Semua filternya tetap ada di Filter feed, dan apa pun yang sempat ia aktifkan tetap aktif.
 * Ketuk dua kali dan Tekan lama bisa membuka halaman pencarian TikTok, bahkan saat tombol pencarian feed disembunyikan (#251).
 * Sakelar baru melipat kotak pencarian komentar menjadi tombol kaca pembesar di kiri atas (#254).
-* Sakelar baru mengeluarkan baris Hushfeed dari Pengaturan dan privasi TikTok. Setelah itu, tekan lama Untuk Kamu untuk membuka pengaturan (#264).
+* Sakelar baru mengeluarkan baris Larpfeed dari Pengaturan dan privasi TikTok. Setelah itu, tekan lama Untuk Kamu untuk membuka pengaturan (#264).
 * @nama pengguna yang diketik di bio seseorang sekarang menjadi tautan. Ketuk, dan profil itu terbuka (#247).
 * Bilah bawah feed utama bisa berupa pil kaca melayang, dengan lensa yang bergeser di antara tab dan pengaturan baru untuk keburaman, opasitas, tinggi, dan sudut (#259).
 * Patch yang punya pengaturan punya opsi Morphe untuk nilai awalnya, jadi build bisa langsung datang dengan sakelar pilihanmu menyala. Terima kasih kepada @XEGARE (#256).
@@ -24,14 +24,14 @@
 * Pencarian pengaturan mengenal nama sehari-hari seperti autoplay, PiP, dan AI, dan menemukan baris pilihan lewat opsi apa pun di dalamnya.
 * Kunci feed pada jam tertentu mengunci feed dengan sendirinya selama jam yang kamu pilih, dan panel kunci menyebut kapan feed terbuka lagi.
 * Simpan hanya lewat Wi-Fi menjaga penyimpanan tidak memakai data seluler. Penyimpanan menunggu Wi-Fi sampai 30 menit, dan kamu bisa membatalkannya dari Unduhan.
-* Sakelar baru mematikan kotak Simpan media dari Hushfeed untuk stiker obrolan (#274).
+* Sakelar baru mematikan kotak Simpan media dari Larpfeed untuk stiker obrolan (#274).
 * Biarkan aplikasi lain tetap diputar sampai video mulai menjaga musik aplikasi lain tetap jalan saat kamu membuka TikTok atau pesanmu, sampai video diputar (#283).
 * Simpan pesan yang ditarik membiarkan pesan yang ditarik seseorang darimu tetap di obrolan, dengan tanda opsional. Terima kasih kepada @maayan080 (#291).
 * Sakelar baru menyembunyikan baris Service+ di bawah pratinjau LIVE, dan baris itu tidak lagi terbawa dari LIVE sebelumnya (#94).
 * Dengan Terbaru dulu di Mengikuti aktif, Mengikuti memuat 30 postingan sekaligus, jadi lebih sedikit postingan baru muncul setelah kamu menggulir lewat (#226).
 * Di ruang LIVE, menekan lama bio, nama, atau nama pengguna di kartu profil akan menyalinnya, dan tanda salin menyalin nama pengguna (#268).
 * Sembunyikan TikTok Shop juga menghapus tombol toko dari bawah keterangan (#271).
-* Ikon peluncur khusus bisa memberi notifikasi TikTok huruf H Hushfeed yang tajam di bilah status (#114).
+* Ikon peluncur khusus bisa memberi notifikasi TikTok huruf H Larpfeed yang tajam di bilah status (#114).
 * Format suara punya pilihan MP3, jadi suara yang disimpan bisa diputar di mana saja, di semua versi Android (#273).
 * Sakelar baru juga menyembunyikan panah Kembali di samping bilah pencarian yang disembunyikan pada video yang dibuka (#251).
 * Dengan Tombol blokir pembuat aktif, LIVE di Untuk Anda juga mendapat tombol blokir (#138).
@@ -43,8 +43,8 @@
 * Tampilkan kapan akun dibuat menambahkan tanggal bergabung di bawah @nama pengguna di profil orang lain.
 * Yang baru kini tersedia juga dalam bahasa Mandarin Sederhana.
 * Feature Gate Lab kini punya tombol mulai ulang, dan TikTok terbuka lagi di Lab setelahnya.
-* Hushfeed kini dibangun di atas Morphe patcher 2.1.0, jadi perlu Morphe Manager 2.3.0 atau lebih baru, atau morphe-desktop 1.20.0 di komputer.
-* Paket patch membawa tanda tangan paket Morphe, jadi Manager bisa memeriksa bahwa unduhan berikutnya benar-benar dari Hushfeed.
+* Larpfeed kini dibangun di atas Morphe patcher 2.1.0, jadi perlu Morphe Manager 2.3.0 atau lebih baru, atau morphe-desktop 1.20.0 di komputer.
+* Paket patch membawa tanda tangan paket Morphe, jadi Manager bisa memeriksa bahwa unduhan berikutnya benar-benar dari Larpfeed.
 * Hasil pencarian pengaturan yang jauh di bawah halaman sekarang terbuka tepat di barisnya.
 * Dengan Bilah bawah tembus pandang aktif, baris Geser ke atas untuk melewati pada kartu akun yang disarankan kembali berada di atas tab (#261).
 * Pil tab melayang sedikit lebih tinggi, jadi ikon Beranda dan namanya tetap di dalam sorotan, dan garis progres tidak lagi menumpang di atasnya (#259).
@@ -69,7 +69,7 @@
 * Tahan sakelar di pencarian pengaturan untuk menampilkan dan menyorot kontrolnya di daftar utama (#248).
 * Pemeriksaan saat dimulai mencatat pemutar mana yang menggambar frame pertama (#150).
 * Mengekspor rekaman yang dipulihkan lebih cepat untuk berkas besar.
-* Coba lagi pada pemulihan mempertahankan alasan berhenti asli rekaman, dan dialog pemulihan mengikuti tema Hushfeed.
+* Coba lagi pada pemulihan mempertahankan alasan berhenti asli rekaman, dan dialog pemulihan mengikuti tema Larpfeed.
 * Rekaman layar memeriksa penyimpanan selagi berjalan dan menyimpan berkas pemulihan sampai salinan yang tersimpan terverifikasi.
 * Beberapa frame pertama rekaman layar masing-masing mempertahankan waktunya sendiri selagi suara mulai.
 * Rekaman layar mempertahankan frame video pertamanya selagi suara mulai disiapkan.
@@ -92,7 +92,7 @@
 * Merekam layar LIVE tidak lagi ikut merekam tombol Rekam, dan notifikasinya punya tombol Berhenti (#265).
 * Masuk tanpa kunci sandi menjelaskan apa yang harus dilakukan saat verifikasi 2 langkah TikTok hanya meminta kunci sandi (#102).
 * Hapus alat kreasi kini juga berlaku di paket terpisah APKMirror, karena paket TikTok 47.6.3 membawa file editor lagi. Tab Buat berhenti berfungsi, jadi jangan pilih jika Anda membuat video (#285).
-* Saat TikTok menolak suka, Hushfeed menampilkan alasannya pertama kali di setiap sesi (#269).
+* Saat TikTok menolak suka, Larpfeed menampilkan alasannya pertama kali di setiap sesi (#269).
 * Video yang kamu sukai atau simpan tetap ada di grid Disukai dan Favorit, meski punya tanda iklan (#269).
 * Pesan bahasa Mandarin untuk ikuti yang ditolak kini memakai kata yang benar.
 * Pil tab melayang juga memburamkan pratinjau LIVE di belakangnya (#259).
@@ -113,7 +113,7 @@
 
 ## 0.79.0 (2026-10-24)
 
-* Di PineDrama, pengaturan Hushfeed sekarang meminta kamu memulai ulang PineDrama, bukan TikTok (#156).
+* Di PineDrama, pengaturan Larpfeed sekarang meminta kamu memulai ulang PineDrama, bukan TikTok (#156).
 
 * Sakelar baru Sembunyikan komentar spam menyembunyikan komentar bot yang menawarkan tautan, kontak, atau pengikut gratis. Komentarmu sendiri dan komentar kreator tetap ada (#187).
 
@@ -163,7 +163,7 @@
 
 * Build sekarang memakai Gradle 9.8.2.
 
-* README mencantumkan bagian pengaturan Hushfeed yang bisa diandalkan oleh bundle tambahan.
+* README mencantumkan bagian pengaturan Larpfeed yang bisa diandalkan oleh bundle tambahan.
 
 * Yang baru hanya memuat rilis terbaru dan sisanya ada di Full changelog, jadi ekstensinya lebih kecil.
 
@@ -203,7 +203,7 @@
 
 ## 0.78.0 (2026-10-22)
 
-* Hushfeed pindah ke TikTok 47.5.3 dan 47.4.3 tidak didukung lagi. Patch APK 47.5.3 dengan kunci tanda tangan yang sama, maka login dan pengaturanmu tetap ada. PineDrama tetap di 47.4.3.
+* Larpfeed pindah ke TikTok 47.5.3 dan 47.4.3 tidak didukung lagi. Patch APK 47.5.3 dengan kunci tanda tangan yang sama, maka login dan pengaturanmu tetap ada. PineDrama tetap di 47.4.3.
 
 * Remove unused language packs kini juga berfungsi di PineDrama 47.4.3.
 
@@ -233,7 +233,7 @@
 
 * Saat Catat diagnostik aktif, setiap baris komentar LIVE menyebut ruangnya dengan kode pendek, bukan ID ruang (#110).
 
-* Hushfeed kini butuh Morphe Manager 2.0.0 atau yang lebih baru, atau morphe-desktop 1.19.0 di komputer. Proses patch memakan waktu sekitar setengahnya.
+* Larpfeed kini butuh Morphe Manager 2.0.0 atau yang lebih baru, atau morphe-desktop 1.19.0 di komputer. Proses patch memakan waktu sekitar setengahnya.
 
 * Sakelar baru Sembunyikan Saldo di menu profil mengeluarkan Saldo dari menu yang dibuka tombol kanan atas di profilmu (#194).
 
@@ -255,7 +255,7 @@
 
 * Sakelar baru Tekan lama Profil untuk riwayat tontonan membuka riwayat tontonan saat kamu menahan tab Profil (#199).
 
-* Dalam bahasa Mandarin Sederhana, Profil di pengaturan Hushfeed kini tertulis 个人主页, bukan "profil perusahaan".
+* Dalam bahasa Mandarin Sederhana, Profil di pengaturan Larpfeed kini tertulis 个人主页, bukan "profil perusahaan".
 
 * Pilihan baru Kualitas rekaman LIVE merekam LIVE dengan kualitas ruangnya, yang tertinggi atau yang terendah (#203).
 
@@ -305,7 +305,7 @@
 
 * Gunakan font sistem dan Gunakan font yang diimpor kini juga berlaku di Pusat aktivitas, Riwayat tontonan, dan halaman web TikTok lainnya (#7).
 
-* Unduhan Hushfeed kembali berfungsi di balik aplikasi proxy dalam mode fake-IP, cara Clash, mihomo, sing-box, dan Xray sering berjalan (#145).
+* Unduhan Larpfeed kembali berfungsi di balik aplikasi proxy dalam mode fake-IP, cara Clash, mihomo, sing-box, dan Xray sering berjalan (#145).
 
 * Menahan foto profil akun terverifikasi kembali menyimpannya.
 
@@ -321,11 +321,11 @@
 
 * Fakta akun kembali menampilkan bahasa akun di TikTok 47.4.3, dibaca dari video akun itu sendiri.
 
-* Salin tautan lengkap untuk tautan pendek berhenti menunggu begitu kamu berbagi ke aplikasi lain, jadi Android tidak lagi bilang Hushfeed menempel dari papan klip.
+* Salin tautan lengkap untuk tautan pendek berhenti menunggu begitu kamu berbagi ke aplikasi lain, jadi Android tidak lagi bilang Larpfeed menempel dari papan klip.
 
 * Dengan Tampilkan zona waktu aktif, bahasa yang tidak punya nama pendek untuk zonamu menuliskannya sebagai GMT-4, bukan GMT-04:00, jadi nama kreator muat lagi.
 
-* Hasil pencarian di pengaturan Hushfeed menampilkan nilai baru sebuah pengaturan saat kamu mengubahnya dari hasil lalu kembali.
+* Hasil pencarian di pengaturan Larpfeed menampilkan nilai baru sebuah pengaturan saat kamu mengubahnya dari hasil lalu kembali.
 
 * Kolom Suka di Jumlah profil sendiri kini sudah diterjemahkan.
 
@@ -343,7 +343,7 @@
 
 ## 0.76.0 (2026-10-18)
 
-* Hushfeed kini mendukung TikTok 47.4.3, dan hanya versi itu. Patch APK 47.4.3 dari APKMirror. PineDrama tetap di 47.1.4.
+* Larpfeed kini mendukung TikTok 47.4.3, dan hanya versi itu. Patch APK 47.4.3 dari APKMirror. PineDrama tetap di 47.1.4.
 
 * Hanya tampilkan teman yang saling mengikuti di tab Teman kembali melihat siapa yang me-repost video, dan filter feed kini juga menjangkau daftar repost di tab Teman.
 
@@ -371,17 +371,17 @@
 
 * Identitas perangkat baru di halaman Privasi menghapus data TikTok saat mulai ulang berikutnya agar servernya memberi ID perangkat baru. Anda akan keluar dari akun, dan PineDrama juga punya baris ini.
 
-* Menghentikan cadangan atau ekspor saat aplikasi file masih memegangnya tidak lagi dihitung sebagai error Hushfeed, juga di PineDrama.
+* Menghentikan cadangan atau ekspor saat aplikasi file masih memegangnya tidak lagi dihitung sebagai error Larpfeed, juga di PineDrama.
 
 * Impor nilai yang dimuat di Feature Gate Lab kembali menerima ekspor asli, juga file .gz yang sudah diekstrak.
 
-* Saat Feature Gate Lab menolak sesuatu dan menjelaskan alasannya, itu tidak lagi dicatat sebagai error Hushfeed.
+* Saat Feature Gate Lab menolak sesuatu dan menjelaskan alasannya, itu tidak lagi dicatat sebagai error Larpfeed.
 
 * Hapus paket bahasa yang tidak dipakai melewati bahasa yang tidak dimiliki TikTok alih-alih menghentikan seluruh proses patch (#196).
 
 * Laporkan masalah membiarkan kotak apa yang salah tetap kosong dan menampilkan pertanyaannya sebagai petunjuk (#197, #201).
 
-* Unggahan foto yang disimpan Hushfeed kini dihitung oleh Periksa video yang sudah disimpan dan mendapat tanda dari Tandai video tersimpan (#197).
+* Unggahan foto yang disimpan Larpfeed kini dihitung oleh Periksa video yang sudah disimpan dan mendapat tanda dari Tandai video tersimpan (#197).
 
 * Unggahan foto yang dipilih di kisi profil disimpan sebagai satu video saat Simpan unggahan foto sebagai video aktif (#197).
 
@@ -447,13 +447,13 @@
 
 * Tata letak layar yang direkam kini mencantumkan tampilan sebuah popup meski layar di belakangnya sangat ramai (#162).
 
-* Pengaturan Hushfeed kini bisa mengikuti TikTok dalam bahasa Mandarin Sederhana.
+* Pengaturan Larpfeed kini bisa mengikuti TikTok dalam bahasa Mandarin Sederhana.
 
 * Izinkan tangkapan layar dan Circle to Search kini juga berlaku untuk popup yang dibuka TikTok di luar jendela utamanya.
 
 * Mulai rilis berikutnya, Morphe Manager menampilkan daftar perubahan lengkap dari rilis terbaru.
 
-* TikTok 47.1.4 dengan Hushfeed lolos pemeriksaan ketat halaman 16 KB di Android 17.
+* TikTok 47.1.4 dengan Larpfeed lolos pemeriksaan ketat halaman 16 KB di Android 17.
 
 * Tab Profil kembali terbuka di ponsel yang sejak 0.72.0 membuatnya tertutup paksa atau kosong (#165, #140).
 
@@ -488,7 +488,7 @@
 
 * Sakelar baru Tampilkan opsi terjemahan di pengaturan Bahasa di Komentar: halaman Bahasa milik TikTok kembali menampilkan baris terjemahan di akun yang di sana hanya melihat Bahasa aplikasi (#143).
 
-* Hushfeed kini juga bisa mem-patch PineDrama 47.1.4, aplikasi drama TikTok. 90 patch berfungsi di sana, dan Morphe Manager hanya menawarkan patch itu (#156).
+* Larpfeed kini juga bisa mem-patch PineDrama 47.1.4, aplikasi drama TikTok. 90 patch berfungsi di sana, dan Morphe Manager hanya menawarkan patch itu (#156).
 
 * Tombol Rekam LIVE turun agar tidak menghalangi saat panel Jelajahi TikTok terbuka di atas ruangan, lalu kembali saat panel ditutup (#37).
 
@@ -564,7 +564,7 @@
 
 * Feature Gate Lab punya preset baru, Terjemahan otomatis chat LIVE. Preset ini mengaktifkan opsi Terjemahkan komentar di bawah Bagikan di ruang LIVE (#98).
 
-* Aktifkan Pilih video untuk disimpan dari grid profil di setelan Hushfeed > Unduhan, dan setiap video di grid profil, Disukai, atau Favorit akan punya lingkaran. Pilih hingga 50, ketuk Simpan, dan semuanya disimpan satu per satu dengan hitungan dan Batal (#27).
+* Aktifkan Pilih video untuk disimpan dari grid profil di setelan Larpfeed > Unduhan, dan setiap video di grid profil, Disukai, atau Favorit akan punya lingkaran. Pilih hingga 50, ketuk Simpan, dan semuanya disimpan satu per satu dengan hitungan dan Batal (#27).
 
 * Pilih video untuk disimpan dari grid profil kini punya tombol Pilih semua. Tombol ini memilih hingga 50 postingan yang sudah dimuat daftar, melewati video yang sudah disimpan saat Periksa video yang sudah disimpan aktif, jadi seluruh daftar tersimpan bertahap, masing-masing melanjutkan dari tempat yang sebelumnya berhenti (#27).
 
@@ -576,7 +576,7 @@
 
 * Menambahkan catatan penyiapan emulator Android 17 untuk alat SDK yang salah membaca versi minor API.
 
-* Setiap halaman pengaturan kini ada langsung di halaman utama pengaturan, di bawah judul singkat, cukup satu ketukan. Jeda Hushfeed dan status lengkap ada di dekat akhir, di bawah Hushfeed.
+* Setiap halaman pengaturan kini ada langsung di halaman utama pengaturan, di bawah judul singkat, cukup satu ketukan. Jeda Larpfeed dan status lengkap ada di dekat akhir, di bawah Larpfeed.
 
 * Sakelar baru di Pop-up, Sembunyikan peringatan Periksa sumbermu, menghapus spanduk Periksa sumbermu di bagian atas beberapa video dan peringatan yang ditampilkan TikTok saat kamu membagikannya.
 
@@ -584,15 +584,15 @@
 
 * Pengaturan cepat ada di bawah kolom pencarian. Tenang, Privasi, dan Kembalikan default cukup sekali ketuk, memberi tahu berapa pengaturan yang berubah, dan menawarkan Urungkan.
 
-* Halaman utama pengaturan kini diakhiri Laporkan masalah, yang membuka laporan GitHub dengan versi dan sakelarmu sudah terisi, dan Dukung Hushfeed, yang membuka Ko-fi.
+* Halaman utama pengaturan kini diakhiri Laporkan masalah, yang membuka laporan GitHub dengan versi dan sakelarmu sudah terisi, dan Dukung Larpfeed, yang membuka Ko-fi.
 
-* Memulai ulang TikTok dari baris mulai ulang atau banner kini membawamu kembali ke halaman pengaturan Hushfeed tempatmu tadi.
+* Memulai ulang TikTok dari baris mulai ulang atau banner kini membawamu kembali ke halaman pengaturan Larpfeed tempatmu tadi.
 
-* Pengaturan Hushfeed punya tampilan baru, dengan menu halaman utama dalam satu kelompok dan ikon merah muda. Panel membulat dan sakelar berbentuk pil juga hadir di Feature Gate Lab dan editor daftar kreator tersembunyi. Teks besar dan mode terang tetap mudah dibaca.
+* Pengaturan Larpfeed punya tampilan baru, dengan menu halaman utama dalam satu kelompok dan ikon merah muda. Panel membulat dan sakelar berbentuk pil juga hadir di Feature Gate Lab dan editor daftar kreator tersembunyi. Teks besar dan mode terang tetap mudah dibaca.
 
 * Pemeriksaan cakupan menu profil, kasus uji register tinggi, dan proyek uji penandatanganan sudah diperbaiki. Uji penandatanganan juga menerima opsi D8 dalam urutan apa pun.
 
-* Tekan lama Untuk Kamu di bagian atas feed untuk membuka pengaturan Hushfeed. Ketukan singkat tetap berfungsi seperti biasa, dan pintasan ini tetap berfungsi saat Hushfeed dijeda.
+* Tekan lama Untuk Kamu di bagian atas feed untuk membuka pengaturan Larpfeed. Ketukan singkat tetap berfungsi seperti biasa, dan pintasan ini tetap berfungsi saat Larpfeed dijeda.
 
 * Unduhan punya sakelar baru di bawah Kualitas unduhan video: Tanyakan kualitas setiap kali menyimpan. Jika aktif, Unduh menampilkan kualitas yang tersedia untuk video, dengan ukuran yang diberikan TikTok untuk masing-masing, lalu menyimpan yang Anda pilih. Otomatis, yaitu file TikTok sendiri, selalu ada di urutan pertama. Kualitas yang Anda atur tetap sama untuk penyimpanan berikutnya.
 
@@ -614,9 +614,9 @@
 
 * AMOLED dark theme sekarang juga membuat hitam panel yang terbuka saat kamu menekan lama video di feed, serta halaman Aktivitas dan Pengikut baru di Kotak masuk. Sebelumnya semuanya tetap abu-abu gelap bawaan TikTok. Kartu di dalam panel tetap abu-abu agar tetap terlihat jelas.
 
-* Network proxy sekarang menyebutkan koneksi mana yang tidak lewat proxy. Unduhan Hushfeed dan pencarian tautan pendek di balik Salin tautan terhubung langsung setelah pemeriksaan alamatnya sendiri, dan laporan diagnostik yang diekspor mencantumkan setiap rute di bawah Network routes.
+* Network proxy sekarang menyebutkan koneksi mana yang tidak lewat proxy. Unduhan Larpfeed dan pencarian tautan pendek di balik Salin tautan terhubung langsung setelah pemeriksaan alamatnya sendiri, dan laporan diagnostik yang diekspor mencantumkan setiap rute di bawah Network routes.
 
-* Di Android 6 sampai 8.1, pembaca layar sekarang membacakan judul halaman, judul bagian, dan judul layar pemulihan di pengaturan Hushfeed sebagai judul, sama seperti di Android yang lebih baru.
+* Di Android 6 sampai 8.1, pembaca layar sekarang membacakan judul halaman, judul bagian, dan judul layar pemulihan di pengaturan Larpfeed sebagai judul, sama seperti di Android yang lebih baru.
 
 * Penerbitan rilis sekarang berjalan di Windows PowerShell 5.1 maupun PowerShell 7. Pemeriksaan tag ganda di 5.1 sekarang membaca setiap rilis di satu halaman, padahal sebelumnya menganggap seluruh halaman sebagai satu rilis, dan pemeriksaan penerbitan serta skrip lolos di kedua shell.
 
@@ -630,13 +630,13 @@
 
 * Penerbitan rilis sekarang mengunggah dan mengunduh aset melalui rilis yang sudah diperiksanya, bukan mencari rilis lagi berdasarkan tag, dan berhenti jika dua rilis memakai tag yang sama. Membangun ulang tag yang sudah terbit ditolak, dan langkah indeks membandingkan tanda terima dengan checksum salinan yang dihosting sebelum menyalinnya.
 
-* Patch baru Show commenter handle and region: komentar bisa menampilkan @namapengguna pengomentar sebagai ganti nama tampilannya, dan negara yang diatur di akunnya setelah waktu komentar. Masing-masing punya tombol sendiri di Pengaturan Hushfeed > Komentar, dan keduanya mati di awal. Diadaptasi dari patch onlynazril milik na-x-ril.
+* Patch baru Show commenter handle and region: komentar bisa menampilkan @namapengguna pengomentar sebagai ganti nama tampilannya, dan negara yang diatur di akunnya setelah waktu komentar. Masing-masing punya tombol sendiri di Pengaturan Larpfeed > Komentar, dan keduanya mati di awal. Diadaptasi dari patch onlynazril milik na-x-ril.
 
 * Gunakan font sistem kini juga bisa menampilkan teks TikTok dengan file .ttf atau .otf yang kamu impor. Nyalakan Gunakan font yang diimpor di Aplikasi, pilih filenya, lalu mulai ulang TikTok. Jika file dihapus atau tidak bisa dibaca, teks kembali seperti yang ditampilkan Gunakan font sistem. Diadaptasi dari patch onlynazril milik na-x-ril.
 
 * Patch baru Profile background: sakelar di Profil pada Aplikasi membuka editor latar profil milik TikTok di Edit profil dan menampilkan latar yang dipasang profil lain. Server TikTok mungkin tetap menolak menyimpannya untuk akun yang belum ditawari fitur ini. Awalnya mati. Diadaptasi dari patch onlynazril milik na-x-ril.
 
-* Sembunyikan popup CAPTCHA kembali menjadi sakelar, di Pengaturan Hushfeed > Layar feed, dan mulai dalam keadaan mati. Sakelar ini melewati teka-teki yang ditampilkan TikTok saat kamu hanya menjelajah. Teka-teki tepat setelah kamu menyukai, mengikuti, berkomentar, atau memposting ulang tetap muncul, begitu juga pemeriksaan masuk, SMS, dan dua langkah. Dengan patch Hide the risk control CAPTCHA, teka-teki penjelajahan dari pemeriksaan itu juga dilewati. Aturannya berasal dari patch onlynazril milik na-x-ril.
+* Sembunyikan popup CAPTCHA kembali menjadi sakelar, di Pengaturan Larpfeed > Layar feed, dan mulai dalam keadaan mati. Sakelar ini melewati teka-teki yang ditampilkan TikTok saat kamu hanya menjelajah. Teka-teki tepat setelah kamu menyukai, mengikuti, berkomentar, atau memposting ulang tetap muncul, begitu juga pemeriksaan masuk, SMS, dan dua langkah. Dengan patch Hide the risk control CAPTCHA, teka-teki penjelajahan dari pemeriksaan itu juga dilewati. Aturannya berasal dari patch onlynazril milik na-x-ril.
 
 * Dengan Blokir akses ke daftar kontak aktif, pembacaan kontak yang meminta semua kolom kini mendapat daftar kosong yang tetap punya kolom kontak, jadi layar TikTok yang mencari nama kartu kontak tidak tersandung kolom yang hilang.
 
@@ -724,7 +724,7 @@
 
 * Pemeriksa patch kini memeriksa folder simpanannya sebelum mengosongkannya, dan menolak folder yang tidak dibuatnya.
 
-* Saat TalkBack aktif, Untuk Kamu menyediakan tindakan Buka pengaturan Hushfeed, jadi pintasan tekan lama juga berfungsi dengan pembaca layar.
+* Saat TalkBack aktif, Untuk Kamu menyediakan tindakan Buka pengaturan Larpfeed, jadi pintasan tekan lama juga berfungsi dengan pembaca layar.
 
 * Jika menyimpan font baru yang diimpor gagal atau TikTok tertutup di tengah jalan, font yang sebelumnya kamu pakai tetap ada dan tidak hilang.
 
@@ -910,7 +910,7 @@
 
 * Izinkan tangkapan layar kini mencakup Circle to Search, popup mengambang dan layar Compose.
 
-* Rekam feed mencatat keputusan filter dan aturan yang menyembunyikan video ke berkas teks lokal Download/Hushfeed, dimulai dan dihentikan dengan ketukan. Setiap rekaman memakai kode video dan kreator baru, tanpa teks, nama, nama pengguna atau URL. Baca sebelum membagikannya.
+* Rekam feed mencatat keputusan filter dan aturan yang menyembunyikan video ke berkas teks lokal Download/Larpfeed, dimulai dan dihentikan dengan ketukan. Setiap rekaman memakai kode video dan kreator baru, tanpa teks, nama, nama pengguna atau URL. Baca sebelum membagikannya.
 
 * Sembunyikan kontrol Tampilan bersih kini menjelaskan cara mencubit untuk keluar (#84).
 
@@ -1102,7 +1102,7 @@
 
 * Pencarian pengaturan kini mengutamakan kecocokan judul dan mengenali istilah log diagnostik dalam setiap bahasa pengaturan.
 
-* Foto khusus HEIF kini punya jalur konversi JPEG kedua. Jika kedua dekoder gagal, Hushfeed mempertahankan file asli.
+* Foto khusus HEIF kini punya jalur konversi JPEG kedua. Jika kedua dekoder gagal, Larpfeed mempertahankan file asli.
 
 * Yang baru kini menerjemahkan 0.68.0 dan 0.67.1 ke delapan bahasa pengaturan, dengan pemberitahuan bahasa Inggris untuk versi lama (#91).
 
@@ -1144,7 +1144,7 @@
 
 * Penyimpanan laporan diagnostik dan Lab kini memakai pekerja tersendiri. Ketukan ulang memberi tahu bahwa penyimpanan sudah berjalan.
 
-* Hushfeed kini memerlukan Morphe Manager 1.34.0 atau lebih baru dengan patcher 1.15.1. Pemeriksaan rilis memakai CLI 1.18.1.
+* Larpfeed kini memerlukan Morphe Manager 1.34.0 atau lebih baru dengan patcher 1.15.1. Pemeriksaan rilis memakai CLI 1.18.1.
 
 * Build memakai Guava 33.7.2 di luar peringatan keamanan secara konsisten, dengan checksum terverifikasi. Guava tidak disertakan dalam aplikasi atau bundel. Pemeriksaan impor sumber kini membaca berkas patch yang diperiksanya.
 
@@ -1168,7 +1168,7 @@
 
 * Tombol sembunyikan dan blokir suara kini bekerja terpisah dari tombol blokir, perlu Filter feed dan awalnya mati (#95).
 
-* Jeda mempertahankan pintasan tekan lama Beranda yang aktif agar tamu bisa melanjutkan Hushfeed. Pintasan nonaktif tetap mati, ketukan biasa bekerja seperti sebelumnya dan aksi tekan lama TikTok tetap ada (#89).
+* Jeda mempertahankan pintasan tekan lama Beranda yang aktif agar tamu bisa melanjutkan Larpfeed. Pintasan nonaktif tetap mati, ketukan biasa bekerja seperti sebelumnya dan aksi tekan lama TikTok tetap ada (#89).
 
 * Android 6 kini memakai bentuk jamak bahasa yang disertakan, dengan fallback Inggris yang benar untuk jumlah tanpa terjemahan.
 

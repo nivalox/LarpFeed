@@ -1,6 +1,6 @@
 /*
- * Copyright 2026 Hushfeed contributors
- * https://github.com/SysAdminDoc/hushfeed
+ * Copyright 2026 Larpfeed contributors
+ * https://github.com/SysAdminDoc/larpfeed
  */
 package app.morphe.patches.tiktok.privacy
 
@@ -20,7 +20,7 @@ private const val LISTENER = "Landroid/location/LocationListener;"
 val locationGovernorPatch = bytecodePatch(
     name = "Location access governor",
     description = "Gives TikTok no location when it asks, so it can't see where you are from " +
-        "your phone's location services. Starts off. Turn it on in Hushfeed settings > Privacy.",
+        "your phone's location services. Starts off. Turn it on in Larpfeed settings > Privacy.",
 ) {
     category("Privacy")
     dependsOn(settingsPatch, sharedExtensionPatch)

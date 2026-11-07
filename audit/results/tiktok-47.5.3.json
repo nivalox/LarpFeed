@@ -5,7 +5,7 @@
     "versionCode": "2147483647"
   },
   "apk": {
-    "file": "hushfeed-0.80.0-signed.apk",
+    "file": "larpfeed-0.80.0-signed.apk",
     "sha256": "50c9caa169895980b126593f42786b49e17d9d4e2bda2e653609e6bb770c3d69"
   },
   "runner": {
@@ -13672,7 +13672,7 @@
       "checks": [
         {
           "id": "live-bubble",
-          "what": "The LIVE bubble's check starts with Hushfeed's hook: with Hide the LIVE bubble on the hook answers true (skip the bubble) and logs 'Block popups: skipped the LIVE bubble', with it off it answers false. TikTok only runs that check when its server sends a bubble, so the check calls the hook directly.",
+          "what": "The LIVE bubble's check starts with Larpfeed's hook: with Hide the LIVE bubble on the hook answers true (skip the bubble) and logs 'Block popups: skipped the LIVE bubble', with it off it answers false. TikTok only runs that check when its server sends a bubble, so the check calls the hook directly.",
           "auto": true,
           "status": "pass",
           "failures": [],
@@ -16920,7 +16920,7 @@
       "checks": [
         {
           "id": "manifest-label",
-          "what": "The application label and every launcher entry carry the chosen name (default Hushfeed) instead of TikTok.",
+          "what": "The application label and every launcher entry carry the chosen name (default Larpfeed) instead of TikTok.",
           "auto": true,
           "status": "pass",
           "failures": [],
@@ -17324,7 +17324,7 @@
           "review": [
             {
               "shot": "Change_app_name-home-label-app-info-label-addc60889556419fbacd22f133ba9616.png",
-              "criteria": "App info page: the title under the icon is the patch option's name (default Hushfeed), not TikTok. Nothing on the page is tapped."
+              "criteria": "App info page: the title under the icon is the patch option's name (default Larpfeed), not TikTok. Nothing on the page is tapped."
             }
           ],
           "definitionHash": "138bf098433ef890ade2eacb03bc14877bda79bd074c38fa697bbb061647acad",
@@ -17707,7 +17707,7 @@
             "review": [
               {
                 "shot": "Change_app_name-home-label-app-info-label-addc60889556419fbacd22f133ba9616.png",
-                "criteria": "App info page: the title under the icon is the patch option's name (default Hushfeed), not TikTok. Nothing on the page is tapped."
+                "criteria": "App info page: the title under the icon is the patch option's name (default Larpfeed), not TikTok. Nothing on the page is tapped."
               }
             ],
             "auto": false,
@@ -17715,11 +17715,11 @@
             "failures": []
           },
           "receiptId": "fe3445ea32e13d206e924cb78bdc6ef537ededca265df9bc8df81fd7d1422a5c",
-          "verdictNote": "App info title reads Hushfeed.",
+          "verdictNote": "App info title reads Larpfeed.",
           "verdict": {
             "receiptId": "fe3445ea32e13d206e924cb78bdc6ef537ededca265df9bc8df81fd7d1422a5c",
             "status": "pass",
-            "note": "App info title reads Hushfeed."
+            "note": "App info title reads Larpfeed."
           }
         }
       ]
@@ -25947,11 +25947,11 @@
             "failures": []
           },
           "receiptId": "d86e98ff822453c277134084397186c3165d5781c4ddb90b1d0abf5edd6b9feb",
-          "verdictNote": "The build keeps the default TikTok colors style: App info shows the cyan and red note on a dark circle, labeled Hushfeed.",
+          "verdictNote": "The build keeps the default TikTok colors style: App info shows the cyan and red note on a dark circle, labeled Larpfeed.",
           "verdict": {
             "receiptId": "d86e98ff822453c277134084397186c3165d5781c4ddb90b1d0abf5edd6b9feb",
             "status": "pass",
-            "note": "The build keeps the default TikTok colors style: App info shows the cyan and red note on a dark circle, labeled Hushfeed."
+            "note": "The build keeps the default TikTok colors style: App info shows the cyan and red note on a dark circle, labeled Larpfeed."
           }
         }
       ]
@@ -39330,7 +39330,7 @@
         },
         {
           "id": "gate-forced",
-          "what": "A stored override changes what TikTok reads: with favorite_reverse forced to 1 and Keep the Favorites tab on, opening the share sheet reads the gate as 1, which Hushfeed's answer records ('refused favorite_reverse').",
+          "what": "A stored override changes what TikTok reads: with favorite_reverse forced to 1 and Keep the Favorites tab on, opening the share sheet reads the gate as 1, which Larpfeed's answer records ('refused favorite_reverse').",
           "auto": true,
           "status": "pass",
           "failures": [],
@@ -92144,7 +92144,7 @@
       "checks": [
         {
           "id": "proxy-dialed",
-          "what": "With the proxy on and pointed at a closed port on the phone itself, the start-up reachability probe fails and Hushfeed says so (info line 'Network proxy: the ... didn't answer'); nothing leaves the phone.",
+          "what": "With the proxy on and pointed at a closed port on the phone itself, the start-up reachability probe fails and Larpfeed says so (info line 'Network proxy: the ... didn't answer'); nothing leaves the phone.",
           "auto": true,
           "status": "pass",
           "failures": [],
@@ -119342,7 +119342,7 @@
       "checks": [
         {
           "id": "home-page",
-          "what": "Hushfeed's settings open and the home page lists the section rows the installed patches ask for (Feed filter, Feed tabs, Downloads, Inbox, Diagnostics) and the Backup and restore and About rows.",
+          "what": "Larpfeed's settings open and the home page lists the section rows the installed patches ask for (Feed filter, Feed tabs, Downloads, Inbox, Diagnostics) and the Backup and restore and About rows.",
           "auto": true,
           "status": "pass",
           "failures": [],
@@ -120542,7 +120542,7 @@
         },
         {
           "id": "home-long-press",
-          "what": "Holding the Home tab opens Hushfeed's settings (home_tab_opens_settings, on by default), and the Hushfeed row in TikTok's Settings and privacy opens them too.",
+          "what": "Holding the Home tab opens Larpfeed's settings (home_tab_opens_settings, on by default), and the Larpfeed row in TikTok's Settings and privacy opens them too.",
           "auto": true,
           "status": "pass",
           "failures": [],
@@ -151637,7 +151637,7 @@
         },
         {
           "id": "slide-gone",
-          "what": "Hushfeed's row on TikTok's Settings and privacy is tapped while the screen is filmed: with the switch off the clip passes through a run of frames between the two screens (the slide), with it on it jumps straight to Hushfeed's page.",
+          "what": "Larpfeed's row on TikTok's Settings and privacy is tapped while the screen is filmed: with the switch off the clip passes through a run of frames between the two screens (the slide), with it on it jumps straight to Larpfeed's page.",
           "auto": true,
           "status": "pass",
           "failures": [],

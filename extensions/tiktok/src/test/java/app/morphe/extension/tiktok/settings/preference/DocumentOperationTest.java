@@ -82,7 +82,7 @@ public class DocumentOperationTest {
         owner = Robolectric.buildActivity(SettingsPagesTest.PageActivity.class).setup().visible();
         activity = owner.get();
         Utils.setContext(activity);
-        new File(activity.getApplicationContext().getFilesDir(), "hushfeed-settings-undo.json").delete();
+        new File(activity.getApplicationContext().getFilesDir(), "larpfeed-settings-undo.json").delete();
         ShadowToast.reset();
     }
 
@@ -436,7 +436,7 @@ public class DocumentOperationTest {
      */
     @Test public void aBackupStoppedBeforeTheFileAppOpenedTheFileItReplacesLeavesThatFileAlone() throws Exception {
         TikTokPreferenceFragment fragment = attachBackupPage();
-        byte[] older = "{\"format\":\"hushfeed-settings\",\"older\":true}".getBytes(StandardCharsets.UTF_8);
+        byte[] older = "{\"format\":\"larpfeed-settings\",\"older\":true}".getBytes(StandardCharsets.UTF_8);
         DocumentExportProvider provider = DocumentExportProvider.register(activity).contents(older);
         provider.honorCancel = true;
         CountDownLatch release = holdOpens(provider);
@@ -551,9 +551,9 @@ public class DocumentOperationTest {
         Shadows.shadowOf(Looper.getMainLooper()).idle();
         assertEquals(7, (int) Settings.MAX_VIDEO_SECONDS.get());
         android.view.View banner = activity.getWindow().getDecorView()
-                .findViewWithTag("hushfeed_settings_action_banner");
+                .findViewWithTag("larpfeed_settings_action_banner");
         assertNotNull("the outcome didn't reach the rebuilt window", banner);
-        android.widget.TextView message = banner.findViewWithTag("hushfeed_settings_action_message");
+        android.widget.TextView message = banner.findViewWithTag("larpfeed_settings_action_message");
         assertEquals("Settings restored. Restart TikTok to apply all changes.", String.valueOf(message.getText()));
         assertEquals("the outcome went to a toast instead of the window", 0, ShadowToast.shownToastCount());
         assertResting(rebuilt);
@@ -600,7 +600,7 @@ public class DocumentOperationTest {
         assertTrue(backup.isEnabled());
         assertTrue(restore.isEnabled());
         assertTrue(fragment.findPreference(RESET).isEnabled());
-        assertEquals("Saves your Hushfeed settings and Feature Gate Lab rules to a file.",
+        assertEquals("Saves your Larpfeed settings and Feature Gate Lab rules to a file.",
                 String.valueOf(backup.getSummary()));
         assertEquals("Choose a backup file. Your current settings are kept for Undo.",
                 String.valueOf(restore.getSummary()));

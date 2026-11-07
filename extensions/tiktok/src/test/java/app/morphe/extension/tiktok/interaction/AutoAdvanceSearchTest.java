@@ -1,6 +1,6 @@
 /*
- * Copyright 2026 Hushfeed contributors
- * https://github.com/SysAdminDoc/hushfeed
+ * Copyright 2026 Larpfeed contributors
+ * https://github.com/SysAdminDoc/larpfeed
  */
 package app.morphe.extension.tiktok.interaction;
 
@@ -158,7 +158,7 @@ public class AutoAdvanceSearchTest {
 
     @Test @Config(shadows = HostComponent.class)
     public void withoutTheSearchSwitchARestoredScrollStaysTikToks() {
-        // Then it's the server's own flag that let search remember it, and a scroll Hushfeed
+        // Then it's the server's own flag that let search remember it, and a scroll Larpfeed
         // didn't cause is left to TikTok the way it always was.
         Settings.AUTO_ADVANCE.save(true);
         holdTheFeed();

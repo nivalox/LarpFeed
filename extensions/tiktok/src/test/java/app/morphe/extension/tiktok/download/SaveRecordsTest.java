@@ -1,6 +1,6 @@
 /*
- * Copyright 2026 Hushfeed contributors
- * https://github.com/SysAdminDoc/hushfeed
+ * Copyright 2026 Larpfeed contributors
+ * https://github.com/SysAdminDoc/larpfeed
  */
 package app.morphe.extension.tiktok.download;
 
@@ -56,7 +56,7 @@ import java.util.concurrent.TimeUnit;
 @RunWith(RobolectricTestRunner.class)
 @Config(manifest = Config.NONE, sdk = 29, qualifiers = "en")
 public class SaveRecordsTest {
-    private static final String FOLDER = "Pictures/Hushfeed";
+    private static final String FOLDER = "Pictures/Larpfeed";
     private static final Uri COLLECTION = MediaStore.Images.Media.getContentUri(MediaStore.VOLUME_EXTERNAL_PRIMARY);
 
     private Context context;
@@ -441,7 +441,7 @@ public class SaveRecordsTest {
         assertTrue(reached.await(5, TimeUnit.SECONDS));
 
         String kept = text(atDeath(context));
-        for (String secret : new String[]{"http", "tiktokcdn", "SECRETTOKEN", videoId, "creatorname", "Pictures", "Hushfeed"}) {
+        for (String secret : new String[]{"http", "tiktokcdn", "SECRETTOKEN", videoId, "creatorname", "Pictures", "Larpfeed"}) {
             assertFalse("the records kept " + secret + ": " + kept, kept.contains(secret));
         }
 

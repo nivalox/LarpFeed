@@ -1,6 +1,6 @@
 /*
- * Copyright 2026 Hushfeed contributors
- * https://github.com/SysAdminDoc/hushfeed
+ * Copyright 2026 Larpfeed contributors
+ * https://github.com/SysAdminDoc/larpfeed
  */
 package app.morphe.patches.tiktok.promobanners
 
@@ -57,7 +57,7 @@ val hideProfileShortcutsPatch = bytecodePatch(
     description = "Hides the shortcuts you pick from the row under a profile's bio, like " +
         "TikTok Studio or Your orders, and can hide the Thoughts bubble, and Balance and the " +
         "TikTok Minis icons in your profile's menu. It can also turn Thoughts on for accounts " +
-        "TikTok left out. Starts off. Turn it on in Hushfeed settings > App, then restart TikTok.",
+        "TikTok left out. Starts off. Turn it on in Larpfeed settings > App, then restart TikTok.",
     default = true,
 ) {
     category("Feed")

@@ -1,6 +1,6 @@
 /*
- * Copyright 2026 Hushfeed contributors
- * https://github.com/SysAdminDoc/hushfeed
+ * Copyright 2026 Larpfeed contributors
+ * https://github.com/SysAdminDoc/larpfeed
  *
  * Built on icysymmetra/tiktok-patches-for-morphe (GPL-3.0).
  */
@@ -25,7 +25,7 @@ import app.morphe.extension.shared.Utils;
 import app.morphe.extension.tiktok.settings.L10n;
 
 /**
- * Feedback that stays inside the Hushfeed settings window instead of disappearing as a toast.
+ * Feedback that stays inside the Larpfeed settings window instead of disappearing as a toast.
  *
  * <p>The settings pages replace one another inside a fragment container. The banner sits in the
  * stable surface above that container, with elevation above it, so an Undo offered on one page
@@ -36,10 +36,10 @@ public final class SettingsActionBanner {
     }
 
     /** Set on the fragment container by {@code TikTokActivityHook}. */
-    public static final String CONTENT_ROOT_TAG = "hushfeed_settings_content";
-    static final String BANNER_TAG = "hushfeed_settings_action_banner";
-    static final String MESSAGE_TAG = "hushfeed_settings_action_message";
-    static final String ACTION_TAG = "hushfeed_settings_action_button";
+    public static final String CONTENT_ROOT_TAG = "larpfeed_settings_content";
+    static final String BANNER_TAG = "larpfeed_settings_action_banner";
+    static final String MESSAGE_TAG = "larpfeed_settings_action_message";
+    static final String ACTION_TAG = "larpfeed_settings_action_button";
     static final long VISIBLE_MS = 10_000L;
     /** The longest a banner stays, however long its message. */
     static final long LONGEST_VISIBLE_MS = 30_000L;

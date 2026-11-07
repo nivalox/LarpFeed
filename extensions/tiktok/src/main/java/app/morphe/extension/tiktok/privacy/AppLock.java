@@ -1,6 +1,6 @@
 /*
- * Copyright 2026 Hushfeed contributors
- * https://github.com/SysAdminDoc/hushfeed
+ * Copyright 2026 Larpfeed contributors
+ * https://github.com/SysAdminDoc/larpfeed
  */
 package app.morphe.extension.tiktok.privacy;
 
@@ -65,8 +65,8 @@ import app.morphe.extension.tiktok.wellbeing.SessionPlaybackHold;
  */
 @SuppressWarnings("deprecation")
 public final class AppLock {
-    static final String COVER_TAG = "hushfeed_app_lock";
-    static final String CREDENTIAL_TAG = "hushfeed_app_lock_credential";
+    static final String COVER_TAG = "larpfeed_app_lock";
+    static final String CREDENTIAL_TAG = "larpfeed_app_lock_credential";
     /** Long enough for a link's trampoline to hand over and finish before anything is asked. */
     static final long ASK_DELAY_MS = 250;
     private static final long NEVER = Long.MIN_VALUE;
@@ -179,7 +179,7 @@ public final class AppLock {
         return known;
     }
 
-    /** Kept while Hushfeed is paused, so pausing is no way past the lock. */
+    /** Kept while Larpfeed is paused, so pausing is no way past the lock. */
     private static boolean enabled() {
         return Settings.APP_LOCK.get();
     }
@@ -437,7 +437,7 @@ public final class AppLock {
      * activities aren't ours to hook for it.
      */
     public static final class CredentialRequest extends Fragment {
-        static final String INTENT = "hushfeed_confirm_intent";
+        static final String INTENT = "larpfeed_confirm_intent";
         static final int REQUEST = 0x4C4B;
 
         public CredentialRequest() {

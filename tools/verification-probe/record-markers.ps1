@@ -8,11 +8,11 @@
     emptied feeds three times over that gap). This script makes that recording repeatable for the
     next TikTok target.
 
-    Recording drives the probe's marker-corpus action on the phone HUSHFEED_DEVICE_SERIAL names,
+    Recording drives the probe's marker-corpus action on the phone LARPFEED_DEVICE_SERIAL names,
     only while TikTok is in front: one broadcast, then one swipe, per round. Every newly bound video
     is appended to work/marker-corpus/<route>.jsonl, keyed by a truncated hash of its id so repeats
     are dropped. Before the first round it snapshots what is already bound and leaves that out:
-    Hushfeed's recent-binds cache still holds up to 16 videos of the screen you came from.
+    Larpfeed's recent-binds cache still holds up to 16 videos of the screen you came from.
 
     The phones are shared, so recording takes the device lease (scripts/device-lease.ps1) on that
     serial before its first command, checks it before every one, and releases it at the end. It
@@ -37,12 +37,12 @@
     -FirstTap is tapped once after the snapshot, for example a profile grid tile, so the viewer it
     opens binds that route's videos while the swipes move through them. Then:
 
-    tools/verification-probe/record-markers.ps1 -Write -TikTokVersion 47.6.3 -HushfeedBuild 0.80.0
+    tools/verification-probe/record-markers.ps1 -Write -TikTokVersion 47.6.3 -LarpfeedBuild 0.80.0
 
-    Routes recorded under different Hushfeed builds are written one build at a time with -Only,
+    Routes recorded under different Larpfeed builds are written one build at a time with -Only,
     so each file names the build whose filters gave its verdicts:
 
-    tools/verification-probe/record-markers.ps1 -Write -TikTokVersion 47.6.3 -HushfeedBuild 0.80.0 -Only paid,series
+    tools/verification-probe/record-markers.ps1 -Write -TikTokVersion 47.6.3 -LarpfeedBuild 0.80.0 -Only paid,series
 #>
 [CmdletBinding(DefaultParameterSetName = 'Record')]
 param(
@@ -55,13 +55,13 @@ param(
     # Keep the currently bound video for a deliberately opened labelled example.
     [Parameter(ParameterSetName = 'Record')][switch]$IncludeCurrent,
     [Parameter(ParameterSetName = 'Record')][int]$SettleMs = 2000,
-    [Parameter(ParameterSetName = 'Record')][string]$LeaseDir = $env:HUSHFEED_DEVICE_LEASE_DIR,
-    [Parameter(ParameterSetName = 'Record')][string]$ChatIdentity = $env:HUSHFEED_CHAT_IDENTITY,
+    [Parameter(ParameterSetName = 'Record')][string]$LeaseDir = $env:LARPFEED_DEVICE_LEASE_DIR,
+    [Parameter(ParameterSetName = 'Record')][string]$ChatIdentity = $env:LARPFEED_CHAT_IDENTITY,
     [Parameter(ParameterSetName = 'Record')][ValidateRange(1, 30)][int]$LeaseMinutes = 30,
     [Parameter(Mandatory = $true, ParameterSetName = 'Write')][switch]$Write,
     [Parameter(Mandatory = $true, ParameterSetName = 'Write')][string]$TikTokVersion,
-    # The Hushfeed build installed on the phone while recording; its filters gave the verdicts.
-    [Parameter(Mandatory = $true, ParameterSetName = 'Write')][string]$HushfeedBuild,
+    # The Larpfeed build installed on the phone while recording; its filters gave the verdicts.
+    [Parameter(Mandatory = $true, ParameterSetName = 'Write')][string]$LarpfeedBuild,
     [Parameter(ParameterSetName = 'Write')]
     [ValidateSet('for-you', 'profile', 'following', 'search', 'paid', 'series', 'playlist', 'drama')][string[]]$Only
 )
@@ -113,7 +113,7 @@ if ($Write) {
             "  `"route`": `"$name`",`n" +
             "  `"tiktok`": `"$TikTokVersion`",`n" +
             "  `"recorded`": `"$((Get-Item -LiteralPath $source).LastWriteTime.ToString('yyyy-MM-dd'))`",`n" +
-            "  `"source`": `"tools/verification-probe marker-corpus on the S22 test account, verdicts from Hushfeed $HushfeedBuild`",`n" +
+            "  `"source`": `"tools/verification-probe marker-corpus on the S22 test account, verdicts from Larpfeed $LarpfeedBuild`",`n" +
             "  `"items`": [`n" + ($items -join ",`n") + "`n  ]`n}`n"
         $path = Join-Path $target "$name-$TikTokVersion.json"
         [IO.File]::WriteAllText($path, $text, (New-Object System.Text.UTF8Encoding($false)))
@@ -123,10 +123,10 @@ if ($Write) {
     return
 }
 
-$serial = $env:HUSHFEED_DEVICE_SERIAL
-if (-not $serial) { throw 'Set HUSHFEED_DEVICE_SERIAL to the serial of the test phone this machine may drive.' }
-if (-not $LeaseDir) { throw 'Recording requires -LeaseDir or HUSHFEED_DEVICE_LEASE_DIR for the shared device pool.' }
-if (-not $ChatIdentity) { throw 'Recording requires -ChatIdentity or HUSHFEED_CHAT_IDENTITY.' }
+$serial = $env:LARPFEED_DEVICE_SERIAL
+if (-not $serial) { throw 'Set LARPFEED_DEVICE_SERIAL to the serial of the test phone this machine may drive.' }
+if (-not $LeaseDir) { throw 'Recording requires -LeaseDir or LARPFEED_DEVICE_LEASE_DIR for the shared device pool.' }
+if (-not $ChatIdentity) { throw 'Recording requires -ChatIdentity or LARPFEED_CHAT_IDENTITY.' }
 $swipePoints = @($Swipe -split ',' | ForEach-Object { [int]$_.Trim() })
 if ($swipePoints.Count -ne 4) { throw "-Swipe needs four numbers, x1,y1,x2,y2: $Swipe" }
 $tapPoint = if ($FirstTap) { @($FirstTap -split ',' | ForEach-Object { [int]$_.Trim() }) } else { @() }
@@ -153,8 +153,8 @@ function Invoke-Phone([Parameter(ValueFromRemainingArguments = $true)][string[]]
     }
     $script = '/mnt/' + $Matches[1].ToLowerInvariant() + '/' + $Matches[2]
     # phone.sh rereads the lease before each adb call it makes.
-    & wsl.exe env "PHONE_SERIAL=$serial" "HUSHFEED_DEVICE_SERIAL=$serial" PHONE_SCALE=1 `
-        "HUSHFEED_LEASE_FILE=$($deviceLease.Path)" "HUSHFEED_LEASE_TOKEN=$($deviceLease.OwnershipToken)" `
+    & wsl.exe env "PHONE_SERIAL=$serial" "LARPFEED_DEVICE_SERIAL=$serial" PHONE_SCALE=1 `
+        "LARPFEED_LEASE_FILE=$($deviceLease.Path)" "LARPFEED_LEASE_TOKEN=$($deviceLease.OwnershipToken)" `
         bash $script @Arguments
     if ($LASTEXITCODE -ne 0) { throw "Guarded phone input failed: $($Arguments -join ' ')" }
 }
@@ -166,7 +166,7 @@ function Get-Bound {
     }
 }
 
-$deviceLease = New-DeviceLease -LeaseDir $LeaseDir -Serial $serial -Project 'hushfeed' `
+$deviceLease = New-DeviceLease -LeaseDir $LeaseDir -Serial $serial -Project 'larpfeed' `
     -ChatIdentity $ChatIdentity -Purpose "verification probe marker recording ($Route)" -LeaseMinutes $LeaseMinutes
 try {
     Assert-TikTok

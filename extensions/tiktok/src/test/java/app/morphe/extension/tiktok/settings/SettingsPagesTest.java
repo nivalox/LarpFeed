@@ -47,7 +47,7 @@ public class SettingsPagesTest {
             "Screen time", "Comments", "Downloads", "Share sheet", "Inbox", "Privacy", "Region", "App",
             "Diagnostics", "Backup and restore"};
     /**
-     * The continuous home list under search, followed by Hushfeed status and actions, with the
+     * The continuous home list under search, followed by Larpfeed status and actions, with the
      * two rows that leave settings, the report and Ko-fi, last.
      */
     private static final String[] HOME_LAYOUT = {
@@ -55,8 +55,8 @@ public class SettingsPagesTest {
             "Comments", "Inbox",
             "Downloads", "Share sheet",
             "Privacy", "App", "Region", "Backup and restore",
-            "# Hushfeed", "[status card]", "[Pause Hushfeed]", "Diagnostics", "About Hushfeed",
-            "Report a problem", "Support Hushfeed"};
+            "# Larpfeed", "[status card]", "[Pause Larpfeed]", "Diagnostics", "About Larpfeed",
+            "Report a problem", "Support Larpfeed"};
     private final Map<Field, Boolean> statuses = new LinkedHashMap<>();
 
     public static class PageActivity extends Activity {
@@ -102,7 +102,7 @@ public class SettingsPagesTest {
                     "Screen time", "Region", "App"}) {
                 assertFalse(title + " has nothing in it without its patches", routes.contains(title));
             }
-            assertTrue(routes.contains("About Hushfeed"));
+            assertTrue(routes.contains("About Larpfeed"));
             assertTrue(routes.contains("Backup and restore"));
             // A heading with every page under it left out of the bundle isn't shown either.
             var screen = home.getPreferenceScreen();
@@ -216,7 +216,7 @@ public class SettingsPagesTest {
             Activity activity = owner.get();
             Utils.setContext(activity);
             TikTokPreferenceFragment page = attachSection(activity, "INTERFACE");
-            assertNull(page.findPreference("hushfeed_captcha_unavailable"));
+            assertNull(page.findPreference("larpfeed_captcha_unavailable"));
             Preference row = page.findPreference(Settings.HIDE_CAPTCHA_POPUPS.key);
             assertNotNull(row);
             assertTrue(row instanceof android.preference.SwitchPreference);
@@ -432,7 +432,7 @@ public class SettingsPagesTest {
         return built.getPreferenceCount();
     }
 
-    /** Every category stays on the main list, followed by Hushfeed's status and actions. */
+    /** Every category stays on the main list, followed by Larpfeed's status and actions. */
     @Test @Config(qualifiers = "w390dp-h708dp-night-mdpi")
     public void theHomePageListsEveryPageUnderItsHeading() throws Exception {
         try (var owner = Robolectric.buildActivity(PageActivity.class).setup().visible()) {
@@ -445,7 +445,7 @@ public class SettingsPagesTest {
             Shadows.shadowOf(Looper.getMainLooper()).idle();
 
             android.preference.PreferenceScreen screen = home.getPreferenceScreen();
-            assertNull("duplicate quick routes returned to the home menu", screen.findPreference("hushfeed_quick_routes"));
+            assertNull("duplicate quick routes returned to the home menu", screen.findPreference("larpfeed_quick_routes"));
             java.util.List<String> layout = new java.util.ArrayList<>();
             for (int index = 0; index < screen.getPreferenceCount(); index++) {
                 Preference row = screen.getPreference(index);
@@ -456,7 +456,7 @@ public class SettingsPagesTest {
                 } else if (row instanceof app.morphe.extension.tiktok.settings.preference.SettingsStatusPreference) {
                     layout.add("[status card]");
                 } else if (app.morphe.extension.shared.settings.BaseSettings.PAUSED.key.equals(row.getKey())) {
-                    layout.add("[Pause Hushfeed]");
+                    layout.add("[Pause Larpfeed]");
                 }
             }
             assertEquals(java.util.Arrays.asList(HOME_LAYOUT), layout);
@@ -469,9 +469,9 @@ public class SettingsPagesTest {
             assertEquals("Search settings", String.valueOf(search.getTitle()));
             assertTrue("Search is not above the first destination",
                     preferenceIndex(screen, search) < preferenceIndex(screen, menuRows(home).get(0)));
-            TextView heading = home.getView().findViewWithTag("hushfeed_page_title");
-            assertEquals("Hushfeed", heading.getText().toString());
-            TextView subtitle = home.getView().findViewWithTag("hushfeed_home_subtitle");
+            TextView heading = home.getView().findViewWithTag("larpfeed_page_title");
+            assertEquals("Larpfeed", heading.getText().toString());
+            TextView subtitle = home.getView().findViewWithTag("larpfeed_home_subtitle");
             assertNull("the removed promotional introduction returned", subtitle);
             assertNull("Quick setups returned to home", home.findPreference("quick_setups"));
 
@@ -480,10 +480,10 @@ public class SettingsPagesTest {
             layout(home.getView(), 390, 708);
             Shadows.shadowOf(Looper.getMainLooper()).idle();
             ListView list = home.getView().findViewById(android.R.id.list);
-            int card = positionOf(list, "hushfeed_status");
+            int card = positionOf(list, "larpfeed_status");
             assertTrue("the status card shows without scrolling, so this proves nothing",
                     card > list.getLastVisiblePosition());
-            View status = home.getView().findViewWithTag("hushfeed_compact_status");
+            View status = home.getView().findViewWithTag("larpfeed_compact_status");
             assertNotNull("the compact status is missing", status);
             assertAccessibleButton(activity, status, String.valueOf(status.getContentDescription()));
             assertTrue("the compact status has no spoken state", status.getContentDescription().length() > 0);
@@ -588,11 +588,11 @@ public class SettingsPagesTest {
                     .SettingsStatusPreference(activity, () -> {});
             View statusView = status.getView(null, null);
             android.widget.LinearLayout statusCard = statusView.findViewWithTag(
-                    "hushfeed_status_card");
+                    "larpfeed_status_card");
             assertEquals("large text kept Diagnostics beside the version sentence",
                     android.widget.LinearLayout.VERTICAL, statusCard.getOrientation());
             assertAccessibleButton(activity,
-                    statusView.findViewWithTag("hushfeed_status_diagnostics"), "Diagnostics");
+                    statusView.findViewWithTag("larpfeed_status_diagnostics"), "Diagnostics");
         }
     }
 
@@ -609,9 +609,9 @@ public class SettingsPagesTest {
             Shadows.shadowOf(Looper.getMainLooper()).idle();
 
             layout(home.getView(), 480, 960);
-            TextView title = home.getView().findViewWithTag("hushfeed_page_title");
+            TextView title = home.getView().findViewWithTag("larpfeed_page_title");
             assertTextFits(title);
-            View status = home.getView().findViewWithTag("hushfeed_compact_status");
+            View status = home.getView().findViewWithTag("larpfeed_compact_status");
             assertAccessibleButton(activity, status, String.valueOf(status.getContentDescription()));
             assertRootRowsReadable(home.getView().findViewById(android.R.id.list));
         }
@@ -648,7 +648,7 @@ public class SettingsPagesTest {
             layout(home.getView(), 390, 844);
             Shadows.shadowOf(Looper.getMainLooper()).idle();
             assertNull(home.findPreference("quick_setups"));
-            View header = home.getView().findViewWithTag("hushfeed_page_header");
+            View header = home.getView().findViewWithTag("larpfeed_page_header");
             assertTrue("the oversized home header returned", header.getHeight() <= 64);
             UiCapture.save(home.getView(), "reference/" + theme + "/home.png", 390, 844);
             TikTokPreferenceFragment playback = openMenu(activity, home, "section_playback");
@@ -674,7 +674,7 @@ public class SettingsPagesTest {
             for (var row : menuRows(home)) {
                 assertTrue("the root row returned to the oversized card layout", row.isCompact());
             }
-            TextView heading = home.getView().findViewWithTag("hushfeed_page_title");
+            TextView heading = home.getView().findViewWithTag("larpfeed_page_title");
             assertTextFits(heading);
             assertRootRowsReadable(list);
             assertTrue("the saving and sharing destinations still need a scroll on a standard phone",
@@ -706,7 +706,7 @@ public class SettingsPagesTest {
             activity.getFragmentManager().executePendingTransactions();
             Shadows.shadowOf(Looper.getMainLooper()).idle();
             UiCapture.save(home.getView(), "pages/" + theme + "/settings.png");
-            // The rest of the home page: the headings further down, the Hushfeed group with the
+            // The rest of the home page: the headings further down, the Larpfeed group with the
             // status card and Pause, and the report and Ko-fi rows at the end.
             ListView homeList = home.getView().findViewById(android.R.id.list);
             homeList.setSelection(homeList.getCount() - 1);
@@ -1149,7 +1149,7 @@ public class SettingsPagesTest {
     /**
      * Pause keeps its stable setting key, and locating it closes search on the same main list.
      */
-    @Test public void settingsSearchOpensPauseHushfeedOnTheMasterMenu() throws Exception {
+    @Test public void settingsSearchOpensPauseLarpfeedOnTheMasterMenu() throws Exception {
         try (var owner = Robolectric.buildActivity(PageActivity.class).setup().visible()) {
             Activity activity = owner.get();
             Utils.setContext(activity);
@@ -1164,7 +1164,7 @@ public class SettingsPagesTest {
             EditText input = (EditText) page.getView().findViewWithTag("settings_search_input");
             input.setText("pause");
             Shadows.shadowOf(Looper.getMainLooper()).idle();
-            Preference result = findPreference(page.getPreferenceScreen(), "Pause Hushfeed");
+            Preference result = findPreference(page.getPreferenceScreen(), "Pause Larpfeed");
             assertNotNull(result);
 
             assertTrue(result.getOnPreferenceClickListener().onPreferenceClick(result));
@@ -1181,7 +1181,7 @@ public class SettingsPagesTest {
             // Search has closed, so the main header's Back leaves settings.
             list.setSelection(0);
             Shadows.shadowOf(Looper.getMainLooper()).idle();
-            android.view.ViewGroup toolbar = targetPage.getView().findViewWithTag("hushfeed_toolbar");
+            android.view.ViewGroup toolbar = targetPage.getView().findViewWithTag("larpfeed_toolbar");
             assertTrue(toolbar.getChildAt(0).performClick());
             activity.getFragmentManager().executePendingTransactions();
             Shadows.shadowOf(Looper.getMainLooper()).idle();
@@ -1221,7 +1221,7 @@ public class SettingsPagesTest {
             assertNotNull(findPreference(page.getPreferenceScreen(), "Tippe zum Suchen"));
             ((ListView) page.getView().findViewById(android.R.id.list)).setSelection(0);
             Shadows.shadowOf(Looper.getMainLooper()).idle();
-            View toolbar = page.getView().findViewWithTag("hushfeed_toolbar");
+            View toolbar = page.getView().findViewWithTag("larpfeed_toolbar");
             assertNotNull(toolbar);
             assertTrue(((android.view.ViewGroup) toolbar).getChildAt(0).performClick());
             activity.getFragmentManager().executePendingTransactions();
@@ -1860,7 +1860,7 @@ assertEquals(View.LAYOUT_DIRECTION_RTL, configuration.getLayoutDirection());
             assertFalse("the toggled row still carries the generic sentence",
                     String.valueOf(toggle.getSummary()).contains("Restart TikTok to apply this."));
 
-            View row = pinned.getView(null, null).findViewWithTag("hushfeed_restart_pending_row");
+            View row = pinned.getView(null, null).findViewWithTag("larpfeed_restart_pending_row");
             assertNotNull("the pinned row draws no button", row);
             assertEquals("Restart TikTok to apply this change",
                     ((android.widget.TextView) row).getText().toString());
@@ -1895,7 +1895,7 @@ assertEquals(View.LAYOUT_DIRECTION_RTL, configuration.getLayoutDirection());
                     .restartPending.add(Settings.REGION_SPOOF.key);
             home.onResume();
             View homeRow = home.findPreference(key).getView(null, null)
-                    .findViewWithTag("hushfeed_restart_pending_row");
+                    .findViewWithTag("larpfeed_restart_pending_row");
             assertEquals("Restart TikTok to apply 2 changes",
                     ((android.widget.TextView) homeRow).getText().toString());
 
@@ -1934,7 +1934,7 @@ assertEquals(View.LAYOUT_DIRECTION_RTL, configuration.getLayoutDirection());
                 layout(home.getView(), 480, 960);
                 Shadows.shadowOf(Looper.getMainLooper()).idle();
                 View restart = home.findPreference(rowKey).getView(null, null)
-                        .findViewWithTag("hushfeed_restart_pending_row");
+                        .findViewWithTag("larpfeed_restart_pending_row");
 
                 assertTrue(restart.performClick());
                 assertEquals("home", preferences.getString(SettingsReturn.PAGE_KEY, null));
@@ -1982,7 +1982,7 @@ assertEquals(View.LAYOUT_DIRECTION_RTL, configuration.getLayoutDirection());
                 assertEquals("changing a category jumped down to the restart's row again", 0,
                         ((ListView) home.getView().findViewById(android.R.id.list)).getFirstVisiblePosition());
                 // Still the page settings opened on: its Back arrow closes settings.
-                android.view.ViewGroup toolbar = home.getView().findViewWithTag("hushfeed_toolbar");
+                android.view.ViewGroup toolbar = home.getView().findViewWithTag("larpfeed_toolbar");
                 assertTrue(toolbar.getChildAt(0).performClick());
                 assertTrue("the returned home page lost its way out of settings", activity.isFinishing());
             }
@@ -2253,7 +2253,7 @@ assertEquals(View.LAYOUT_DIRECTION_RTL, configuration.getLayoutDirection());
         Shadows.shadowOf(Looper.getMainLooper()).idle();
         forceRtl(root);
         layout(root, root.getWidth(), root.getHeight());
-        View toolbar = root.findViewWithTag("hushfeed_toolbar");
+        View toolbar = root.findViewWithTag("larpfeed_toolbar");
         assertNotNull("the page has no toolbar, so this proves nothing", toolbar);
         View back = ((android.view.ViewGroup) toolbar).getChildAt(0);
         assertTrue("the first thing in the toolbar is not the back button",

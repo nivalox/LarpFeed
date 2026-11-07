@@ -1,6 +1,6 @@
 /*
- * Copyright 2026 Hushfeed contributors
- * https://github.com/SysAdminDoc/hushfeed
+ * Copyright 2026 Larpfeed contributors
+ * https://github.com/SysAdminDoc/larpfeed
  *
  * Built on icysymmetra/tiktok-patches-for-morphe (GPL-3.0).
  */
@@ -239,8 +239,8 @@ final class L10nTranslationsVi {
                 "Đã thêm các video đã xem %1$s.");
         table.put("%1$s were already saved",
                 "%1$s đã được lưu trước đó");
-        table.put("%1$s · Hushfeed's list only",
-                "%1$s · Chỉ danh sách của Hushfeed");
+        table.put("%1$s · Larpfeed's list only",
+                "%1$s · Chỉ danh sách của Larpfeed");
         table.put("%1$s · current value only",
                 "%1$s · Chỉ giá trị hiện tại");
         table.put("%1$s · declared by TikTok",
@@ -344,8 +344,8 @@ final class L10nTranslationsVi {
                 "Chạm đúp vào tin nhắn sẽ không còn thả tim nữa. Chạm một lần và nhấn giữ vẫn hoạt động như trước.");
         table.put("A few seconds",
                 "Vài giây");
-        table.put("A file named hushfeed-safe-mode in TikTok's folder under Android/data paused Hushfeed. Your settings stay as they are.",
-                "Một tệp có tên hushfeed-safe-mode trong thư mục của TikTok dưới Android/data đã tạm dừng Hushfeed. Cài đặt của bạn được giữ nguyên.");
+        table.put("A file named larpfeed-safe-mode in TikTok's folder under Android/data paused Larpfeed. Your settings stay as they are.",
+                "Một tệp có tên larpfeed-safe-mode trong thư mục của TikTok dưới Android/data đã tạm dừng Larpfeed. Cài đặt của bạn được giữ nguyên.");
         table.put("A forced value applies to this copy of TikTok whichever account is signed in. It can't get past a check the server makes.",
                 "Giá trị bắt buộc áp dụng cho bản sao TikTok này bất kể tài khoản nào đăng nhập. Nó không thể vượt qua một số kiểm tra từ máy chủ.");
         table.put("A good place to stop, if you want one.",
@@ -402,8 +402,8 @@ final class L10nTranslationsVi {
                 "Giới thiệu");
         table.put("About %1$s of storage at this limit",
                 "Khoảng %1$s dung lượng lưu trữ ở giới hạn này");
-        table.put("About Hushfeed",
-                "Giới thiệu về Hushfeed");
+        table.put("About Larpfeed",
+                "Giới thiệu về Larpfeed");
         table.put("About overrides",
                 "Giới thiệu về các ghi đè");
         table.put("Above moves the caption and the buttons up a little so the time fits over the right end of the bar. When something else is in the way, the time goes beside the bar.",
@@ -441,10 +441,10 @@ final class L10nTranslationsVi {
                 "Thêm nhà sáng tạo");
         table.put("Add a line along the bottom of a sound's cover while its preview plays, with the time played and the preview's length. Tap or drag it to move through the preview.",
                 "Thêm một đường dọc theo cạnh dưới của bìa âm thanh khi phát bản xem trước, hiển thị thời gian đã phát và độ dài bản xem trước. Chạm hoặc kéo thanh đó để di chuyển trong bản xem trước.");
-        table.put("Add a seen-history file saved by Hushfeed to the videos @%1$s has seen. A video in both keeps the newer date.",
-                "Thêm tệp lịch sử đã xem được lưu bởi Hushfeed vào danh sách video mà @%1$s đã xem. Video xuất hiện ở cả hai sẽ giữ lại mốc thời gian mới hơn.");
-        table.put("Add a seen-history file saved by Hushfeed to this account's seen videos. A video in both keeps the newer date.",
-                "Thêm tệp lịch sử đã xem được lưu bởi Hushfeed vào danh sách video đã xem của tài khoản này. Video xuất hiện ở cả hai sẽ giữ lại mốc thời gian mới hơn.");
+        table.put("Add a seen-history file saved by Larpfeed to the videos @%1$s has seen. A video in both keeps the newer date.",
+                "Thêm tệp lịch sử đã xem được lưu bởi Larpfeed vào danh sách video mà @%1$s đã xem. Video xuất hiện ở cả hai sẽ giữ lại mốc thời gian mới hơn.");
+        table.put("Add a seen-history file saved by Larpfeed to this account's seen videos. A video in both keeps the newer date.",
+                "Thêm tệp lịch sử đã xem được lưu bởi Larpfeed vào danh sách video đã xem của tài khoản này. Video xuất hiện ở cả hai sẽ giữ lại mốc thời gian mới hơn.");
         table.put("Add a separate button that skips videos using the current sound.",
                 "Thêm một nút riêng biệt để bỏ qua các video sử dụng âm thanh hiện tại.");
         table.put("Add a thin line along the bottom of a video story that you can drag to go back or skip ahead. The time shows while you drag, and a tap on it still moves between stories.",
@@ -666,8 +666,8 @@ final class L10nTranslationsVi {
                 "Nền phía sau chữ trên video");
         table.put("Background play in the long-press menu",
                 "Phát nền trong menu nhấn giữ");
-        table.put("Background play in the long-press menu is on in Hushfeed's Playback settings, so TikTok gets 1 for this key and an override here has no effect until that switch is off.",
-                "Phát nền trong menu nhấn giữ đang bật trong cài đặt Phát của Hushfeed, do đó TikTok nhận giá trị 1 cho khóa này và ghi đè ở đây sẽ không có hiệu lực cho đến khi tắt công tắc đó.");
+        table.put("Background play in the long-press menu is on in Larpfeed's Playback settings, so TikTok gets 1 for this key and an override here has no effect until that switch is off.",
+                "Phát nền trong menu nhấn giữ đang bật trong cài đặt Phát của Larpfeed, do đó TikTok nhận giá trị 1 cho khóa này và ghi đè ở đây sẽ không có hiệu lực cho đến khi tắt công tắc đó.");
         table.put("Backup and restore",
                 "Sao lưu và khôi phục");
         table.put("Bend the video at the edges",
@@ -816,8 +816,8 @@ final class L10nTranslationsVi {
                 "Thu thập bảng tin");
         table.put("Capturing. Find the problem, then come back to stop.",
                 "Đang ghi lại. Hãy tìm sự cố, sau đó quay lại để dừng.");
-        table.put("Changes in Hushfeed %1$s",
-                "Thay đổi trong Hushfeed %1$s");
+        table.put("Changes in Larpfeed %1$s",
+                "Thay đổi trong Larpfeed %1$s");
         table.put("Changes to %1$s at %2$s",
                 "Thay đổi thành %1$s lúc %2$s");
         table.put("Check for already-saved videos",
@@ -975,8 +975,8 @@ final class L10nTranslationsVi {
                 "Sao chép tên");
         table.put("Copy only the comment text when using TikTok's copy comment action.",
                 "Chỉ sao chép nội dung bình luận khi sử dụng thao tác sao chép bình luận của TikTok.");
-        table.put("Copy or save which patches and options this Hushfeed was built with.",
-                "Sao chép hoặc lưu các bản vá và tùy chọn đã được sử dụng để xây dựng Hushfeed này.");
+        table.put("Copy or save which patches and options this Larpfeed was built with.",
+                "Sao chép hoặc lưu các bản vá và tùy chọn đã được sử dụng để xây dựng Larpfeed này.");
         table.put("Copy quick report",
                 "Sao chép báo cáo nhanh");
         table.put("Copy report",
@@ -1292,8 +1292,8 @@ final class L10nTranslationsVi {
     }
 
     private static void fill10(Map<String, String> table) {
-        table.put("Each area shows how many of the things Hushfeed looks for were found in this TikTok and how many are missing.",
-                "Mỗi khu vực hiển thị số lượng mục mà Hushfeed tìm kiếm có trong TikTok này và số lượng bị thiếu.");
+        table.put("Each area shows how many of the things Larpfeed looks for were found in this TikTok and how many are missing.",
+                "Mỗi khu vực hiển thị số lượng mục mà Larpfeed tìm kiếm có trong TikTok này và số lượng bị thiếu.");
         table.put("Earlier this session",
                 "Đã hoàn thành trong phiên này");
         table.put("Easier comment likes",
@@ -1503,8 +1503,8 @@ final class L10nTranslationsVi {
                 "Quên video mà @%2$s đã xem.");
         table.put("Forget what has been counted today and end any hold. The budgets themselves are left alone.",
                 "Quên những gì đã tính toán trong hôm nay và kết thúc mọi trạng thái giữ. Ngân sách cốt lõi vẫn được giữ nguyên.");
-        table.put("Forget which videos Hushfeed saved here, so the already-saved check starts over. The saved files and your settings stay. Turning the check off doesn't erase this record.",
-                "Quên các video mà Hushfeed đã lưu tại đây, để quá trình kiểm tra video đã lưu bắt đầu lại từ đầu. Các tệp đã lưu và cài đặt của bạn vẫn được giữ nguyên. Tắt tính năng kiểm tra sẽ không xóa bản ghi này.");
+        table.put("Forget which videos Larpfeed saved here, so the already-saved check starts over. The saved files and your settings stay. Turning the check off doesn't erase this record.",
+                "Quên các video mà Larpfeed đã lưu tại đây, để quá trình kiểm tra video đã lưu bắt đầu lại từ đầu. Các tệp đã lưu và cài đặt của bạn vẫn được giữ nguyên. Tắt tính năng kiểm tra sẽ không xóa bản ghi này.");
         table.put("Forgetting saved videos",
                 "Đang xóa bộ nhớ video đã lưu");
         table.put("Forgotten. Tap to put them back.",
@@ -1644,8 +1644,8 @@ final class L10nTranslationsVi {
                 "Ẩn TikTok Shop trong kết quả tìm kiếm");
         table.put("Hide TikTok Shop posts from the feed, and the shop buttons under captions.",
                 "Ẩn các bài đăng TikTok Shop khỏi bảng tin và các nút mua sắm bên dưới chú thích.");
-        table.put("Hide TikTok's \"Search: ...\" banner above the comment count. This doesn't hide the comments or Hushfeed's comment-search box.",
-                "Ẩn biểu ngữ \"Tìm kiếm: ...\" của TikTok phía trên số lượng bình luận. Thao tác này không ẩn các bình luận hay hộp tìm kiếm bình luận của Hushfeed.");
+        table.put("Hide TikTok's \"Search: ...\" banner above the comment count. This doesn't hide the comments or Larpfeed's comment-search box.",
+                "Ẩn biểu ngữ \"Tìm kiếm: ...\" của TikTok phía trên số lượng bình luận. Thao tác này không ẩn các bình luận hay hộp tìm kiếm bình luận của Larpfeed.");
         table.put("Hide TikTok's Auto scroll button",
                 "Ẩn nút Tự động cuộn của TikTok");
         table.put("Hide TikTok's short drama episodes and the cards that promote them.",
@@ -1834,8 +1834,8 @@ final class L10nTranslationsVi {
                 "Ẩn nút Toàn màn hình");
         table.put("Hide the Full screen button over videos. Playback and automatic rotation keep working as before.",
                 "Ẩn nút toàn màn hình trên video. Quá trình phát và tự động xoay màn hình vẫn hoạt động bình thường như trước.");
-        table.put("Hide the Hushfeed row",
-                "Ẩn mục Hushfeed");
+        table.put("Hide the Larpfeed row",
+                "Ẩn mục Larpfeed");
         table.put("Hide the Inbox search button",
                 "Ẩn nút tìm kiếm trong Hộp thư đến");
         table.put("Hide the LIVE bubble",
@@ -2078,30 +2078,30 @@ final class L10nTranslationsVi {
                 "Chiều cao của thanh viên thuốc nổi trên bảng tin chính bên trong thanh điều hướng. Tùy chọn Nhỏ gọn sẽ hiển thị nhiều không gian video xung quanh hơn. Các thẻ vẫn giữ nguyên kích thước và vùng chạm.");
         table.put("How wide each edge strip is, as a percent of the screen width.",
                 "Độ rộng của từng dải mép màn hình, tính theo tỷ lệ phần trăm chiều rộng màn hình.");
-        table.put("Hushfeed",
-                "Hushfeed");
-        table.put("Hushfeed blocked TikTok's reports here. It hasn't confirmed that you stay off viewer lists.",
-                "Hushfeed đã chặn các báo cáo của TikTok tại đây. Tính năng này chưa xác nhận việc bạn có bị loại hoàn toàn khỏi danh sách người xem hay không.");
-        table.put("Hushfeed can't read the creator pattern %1$s",
-                "Hushfeed không thể đọc mẫu nhà sáng tạo %1$s");
-        table.put("Hushfeed is active",
-                "Hushfeed đang hoạt động");
-        table.put("Hushfeed is paused",
-                "Hushfeed đã tạm dừng");
-        table.put("Hushfeed is paused. Ghost mode isn't active.",
-                "Hushfeed đã tạm dừng. Chế độ ẩn danh (Ghost mode) không hoạt động.");
-        table.put("Hushfeed turns back on when TikTok restarts.",
-                "Hushfeed sẽ bật trở lại khi TikTok khởi động lại.");
-        table.put("Hushfeed's downloader doesn't fill this in, so it's kept as typed: %1$s",
-                "Trình tải xuống của Hushfeed không điền thông tin này, nên được giữ nguyên theo nội dung đã nhập: %1$s");
-        table.put("Hushfeed's downloader: %1$s",
-                "Trình tải xuống của Hushfeed: %1$s");
-        table.put("Hushfeed's switches are paused. Your settings stay saved. Changes made when you patched, like the app's name or icon, stay.",
-                "Các công tắc của Hushfeed đã tạm dừng. Cài đặt của bạn vẫn được lưu. Các thay đổi khi vá (như tên hoặc biểu tượng ứng dụng) vẫn được giữ nguyên.");
+        table.put("Larpfeed",
+                "Larpfeed");
+        table.put("Larpfeed blocked TikTok's reports here. It hasn't confirmed that you stay off viewer lists.",
+                "Larpfeed đã chặn các báo cáo của TikTok tại đây. Tính năng này chưa xác nhận việc bạn có bị loại hoàn toàn khỏi danh sách người xem hay không.");
+        table.put("Larpfeed can't read the creator pattern %1$s",
+                "Larpfeed không thể đọc mẫu nhà sáng tạo %1$s");
+        table.put("Larpfeed is active",
+                "Larpfeed đang hoạt động");
+        table.put("Larpfeed is paused",
+                "Larpfeed đã tạm dừng");
+        table.put("Larpfeed is paused. Ghost mode isn't active.",
+                "Larpfeed đã tạm dừng. Chế độ ẩn danh (Ghost mode) không hoạt động.");
+        table.put("Larpfeed turns back on when TikTok restarts.",
+                "Larpfeed sẽ bật trở lại khi TikTok khởi động lại.");
+        table.put("Larpfeed's downloader doesn't fill this in, so it's kept as typed: %1$s",
+                "Trình tải xuống của Larpfeed không điền thông tin này, nên được giữ nguyên theo nội dung đã nhập: %1$s");
+        table.put("Larpfeed's downloader: %1$s",
+                "Trình tải xuống của Larpfeed: %1$s");
+        table.put("Larpfeed's switches are paused. Your settings stay saved. Changes made when you patched, like the app's name or icon, stay.",
+                "Các công tắc của Larpfeed đã tạm dừng. Cài đặt của bạn vẫn được lưu. Các thay đổi khi vá (như tên hoặc biểu tượng ứng dụng) vẫn được giữ nguyên.");
         table.put("If that name is taken, Android adds a number to the new file.",
                 "Nếu tên đó đã tồn tại, Android sẽ thêm một số vào tệp mới.");
-        table.put("If that name is taken, Hushfeed adds a number to the new file.",
-                "Nếu tên đó đã tồn tại, Hushfeed sẽ thêm một số vào tệp mới.");
+        table.put("If that name is taken, Larpfeed adds a number to the new file.",
+                "Nếu tên đó đã tồn tại, Larpfeed sẽ thêm một số vào tệp mới.");
         table.put("If the video blinks as you swipe with See-through bottom bar on, this draws it inside TikTok instead of on a layer of its own. It can use a little more battery. Needs See-through bottom bar.",
                 "Nếu video nhấp nháy khi bạn vuốt lúc bật Thanh dưới cùng trong suốt, tùy chọn này vẽ video ngay trong TikTok thay vì trên một lớp riêng. Có thể tốn pin hơn một chút. Yêu cầu bật Thanh dưới cùng trong suốt.");
         table.put("Import a font file",
@@ -2191,8 +2191,8 @@ final class L10nTranslationsVi {
                 "Ảnh giữ nguyên định dạng TikTok gửi");
         table.put("Keep playing in the background",
                 "Tiếp tục phát ở nền");
-        table.put("Keep playing in the background is on in Hushfeed's Playback settings, so TikTok gets 2 for this key and an override here has no effect until that switch is off.",
-                "Tiếp tục phát ở nền đang bật trong cài đặt Phát của Hushfeed, do đó TikTok nhận giá trị 2 cho khóa này và ghi đè ở đây sẽ không có hiệu lực cho đến khi tắt công tắc đó.");
+        table.put("Keep playing in the background is on in Larpfeed's Playback settings, so TikTok gets 2 for this key and an override here has no effect until that switch is off.",
+                "Tiếp tục phát ở nền đang bật trong cài đặt Phát của Larpfeed, do đó TikTok nhận giá trị 2 cho khóa này và ghi đè ở đây sẽ không có hiệu lực cho đến khi tắt công tắc đó.");
         table.put("Keep the Favorites tab",
                 "Giữ thẻ Yêu thích");
         table.put("Keep the For You feed on your real SIM",
@@ -2449,8 +2449,8 @@ final class L10nTranslationsVi {
                 "Nhấn giữ Dành cho bạn sẽ mở lịch sử xem của tôi");
         table.put("Long press on Profile opens my watch history",
                 "Nhấn giữ Trang cá nhân sẽ mở lịch sử xem của tôi");
-        table.put("Long-press Home for Hushfeed settings",
-                "Nhấn giữ nút Trang chủ để vào cài đặt Hushfeed");
+        table.put("Long-press Home for Larpfeed settings",
+                "Nhấn giữ nút Trang chủ để vào cài đặt Larpfeed");
         table.put("Long-press Inbox for read receipts",
                 "Nhấn giữ Hộp thư để bật tắt xác nhận đã đọc");
         table.put("Long-press Profile for Watch history",
@@ -2725,8 +2725,8 @@ final class L10nTranslationsVi {
                 "Bình thường");
         table.put("Not a handle or id, so ignored: %1$s",
                 "Không phải handle hoặc ID nên bị bỏ qua: %1$s");
-        table.put("Not a part Hushfeed fills in, so it's kept as typed: %1$s",
-                "Không phải phần Hushfeed tự điền, nên được giữ nguyên theo nội dung đã nhập: %1$s");
+        table.put("Not a part Larpfeed fills in, so it's kept as typed: %1$s",
+                "Không phải phần Larpfeed tự điền, nên được giữ nguyên theo nội dung đã nhập: %1$s");
         table.put("Not available on this TikTok version",
                 "Không khả dụng trên phiên bản TikTok này");
         table.put("Not blocked",
@@ -2784,8 +2784,8 @@ final class L10nTranslationsVi {
                 "Tắt");
         table.put("Off forces the value to false, on forces it to true. Reset lets TikTok decide again.",
                 "Tắt ép buộc giá trị thành false, Bật ép buộc thành true. Đặt lại để TikTok tự quyết định.");
-        table.put("Off until you tap it. Wipes TikTok's data once, on the next start, and gives it a new Android ID and advertising ID, so it sees a phone it hasn't met. You'll be signed out and lose your drafts. Hushfeed's settings stay.",
-                "Tắt cho đến khi bạn nhấn. Xóa dữ liệu TikTok một lần ở lần khởi động tiếp theo và cấp Android ID cùng ID quảng cáo mới, để TikTok thấy một điện thoại nó chưa gặp. Bạn sẽ bị đăng xuất và mất bản nháp. Cài đặt Hushfeed vẫn còn.");
+        table.put("Off until you tap it. Wipes TikTok's data once, on the next start, and gives it a new Android ID and advertising ID, so it sees a phone it hasn't met. You'll be signed out and lose your drafts. Larpfeed's settings stay.",
+                "Tắt cho đến khi bạn nhấn. Xóa dữ liệu TikTok một lần ở lần khởi động tiếp theo và cấp Android ID cùng ID quảng cáo mới, để TikTok thấy một điện thoại nó chưa gặp. Bạn sẽ bị đăng xuất và mất bản nháp. Cài đặt Larpfeed vẫn còn.");
         table.put("Off, only its button closes it.",
                 "Khi tắt, chỉ nút của nó mới đóng được.");
         table.put("Off. TikTok can report views and typing.",
@@ -2818,8 +2818,8 @@ final class L10nTranslationsVi {
                 "Trên bảng tin chính, một bong bóng kính nổi sẽ nằm phía sau thẻ bạn đang chọn và trượt sang thẻ tiếp theo bạn bấm. Yêu cầu bật Giao diện kính lỏng (Liquid glass).");
         table.put("On the main feed, slide a finger along the glass pill and the lens follows it. Let go and that tab opens. Taps and long presses work as before. Needs Glass lens on the current tab.",
                 "Trên bảng tin chính, vuốt ngón tay dọc theo thanh viên thuốc bằng kính và kính lúp sẽ trượt theo. Thả tay ra để mở thẻ đó. Thao tác chạm và nhấn giữ vẫn hoạt động như trước. Yêu cầu bật Kính lúp dạng kính trên thẻ hiện tại.");
-        table.put("On. Hushfeed hasn't seen TikTok send any reports since it started.",
-                "Bật. Hushfeed chưa thấy TikTok gửi bất kỳ báo cáo nào kể từ khi khởi động.");
+        table.put("On. Larpfeed hasn't seen TikTok send any reports since it started.",
+                "Bật. Larpfeed chưa thấy TikTok gửi bất kỳ báo cáo nào kể từ khi khởi động.");
         table.put("Once today's budget runs out, the hold stays and can't be dismissed. The budget settings are locked until the day starts over. Turn this off any time before the budget runs out.",
                 "Một khi ngân sách hôm nay dùng hết, trạng thái tạm giữ sẽ tiếp tục duy trì và không thể bỏ qua. Cài đặt ngân sách sẽ bị khóa cho đến khi bắt đầu ngày mới. Hãy tắt tính năng này bất kỳ lúc nào trước khi hết ngân sách.");
         table.put("One area was checked and everything it needs is here.",
@@ -2860,8 +2860,8 @@ final class L10nTranslationsVi {
                 "Chỉ các ngôn ngữ phụ đề này");
         table.put("Open",
                 "Mở");
-        table.put("Open Hushfeed settings",
-                "Mở cài đặt Hushfeed");
+        table.put("Open Larpfeed settings",
+                "Mở cài đặt Larpfeed");
         table.put("Open TikTok on",
                 "Mở TikTok tại");
         table.put("Open a share sheet once, then return here to choose its actions.",
@@ -2893,10 +2893,10 @@ final class L10nTranslationsVi {
     private static void fill23(Map<String, String> table) {
         table.put("Open the feed anyway, the last time today",
                 "Vẫn mở bảng tin, lần cuối cùng trong hôm nay");
-        table.put("Open the feed once so Hushfeed can see which bottom tabs TikTok loaded.",
-                "Mở bảng tin một lần để Hushfeed có thể nhận diện các thẻ dưới cùng mà TikTok đã tải.");
-        table.put("Open the feed once so Hushfeed can see which tabs TikTok loaded.",
-                "Mở bảng tin một lần để Hushfeed có thể nhận diện các thẻ mà TikTok đã tải.");
+        table.put("Open the feed once so Larpfeed can see which bottom tabs TikTok loaded.",
+                "Mở bảng tin một lần để Larpfeed có thể nhận diện các thẻ dưới cùng mà TikTok đã tải.");
+        table.put("Open the feed once so Larpfeed can see which tabs TikTok loaded.",
+                "Mở bảng tin một lần để Larpfeed có thể nhận diện các thẻ mà TikTok đã tải.");
         table.put("Open the profile again and try once more",
                 "Hãy mở lại trang cá nhân và thử lại một lần nữa");
         table.put("Open the search page",
@@ -2973,10 +2973,10 @@ final class L10nTranslationsVi {
                 "Vượt qua các kiểm tra cài đặt của TikTok");
         table.put("Pause",
                 "Tạm dừng");
-        table.put("Pause Hushfeed",
-                "Tạm dừng Hushfeed");
-        table.put("Pause Hushfeed's switches after TikTok restarts. Your settings stay saved. Changes made when you patched, like the app's name or icon, stay.",
-                "Tạm dừng các công tắc của Hushfeed sau khi TikTok khởi động lại. Cài đặt của bạn vẫn được lưu. Các thay đổi thực hiện khi vá (như tên hoặc biểu tượng ứng dụng) vẫn được giữ nguyên.");
+        table.put("Pause Larpfeed",
+                "Tạm dừng Larpfeed");
+        table.put("Pause Larpfeed's switches after TikTok restarts. Your settings stay saved. Changes made when you patched, like the app's name or icon, stay.",
+                "Tạm dừng các công tắc của Larpfeed sau khi TikTok khởi động lại. Cài đặt của bạn vẫn được lưu. Các thay đổi thực hiện khi vá (như tên hoặc biểu tượng ứng dụng) vẫn được giữ nguyên.");
         table.put("Pause the video while comments are open",
                 "Tạm dừng video khi đang mở phần bình luận");
         table.put("Paused",
@@ -3179,8 +3179,8 @@ final class L10nTranslationsVi {
                 "Hiển thị một hình tròn trên mỗi video trong lưới trang cá nhân, video đã thích hoặc danh sách yêu thích. Chọn tối đa %1$s, sau đó chạm Lưu để lưu lần lượt từng video kèm số lượng và nút Hủy.");
         table.put("Puts a save button in the sheet a story's Share button opens. It saves the story you're watching, and holding a story still pauses it.",
                 "Thêm nút lưu vào bảng mở ra khi nhấn nút Chia sẻ của tin (story). Nút này giúp lưu tin bạn đang xem và việc nhấn giữ tin vẫn giữ chức năng tạm dừng.");
-        table.put("Puts a ✓ by videos and photo posts you saved with Hushfeed, on profile grids and next to the time in the feed. Works only while Check for already-saved videos is on.",
-                "Hiển thị dấu ✓ bên cạnh các video và bài đăng ảnh bạn đã lưu bằng Hushfeed trên lưới trang cá nhân và bên cạnh mốc thời gian trên bảng tin. Chỉ hoạt động khi tính năng Kiểm tra các video đã lưu trước đó đang bật.");
+        table.put("Puts a ✓ by videos and photo posts you saved with Larpfeed, on profile grids and next to the time in the feed. Works only while Check for already-saved videos is on.",
+                "Hiển thị dấu ✓ bên cạnh các video và bài đăng ảnh bạn đã lưu bằng Larpfeed trên lưới trang cá nhân và bên cạnh mốc thời gian trên bảng tin. Chỉ hoạt động khi tính năng Kiểm tra các video đã lưu trước đó đang bật.");
         table.put("Puts your time zone after the time to the second, like EDT.",
                 "Hiển thị múi giờ của bạn chính xác đến từng giây phía sau mốc thời gian, ví dụ như EDT.");
         table.put("Putting seen videos back",
@@ -3302,8 +3302,8 @@ final class L10nTranslationsVi {
                 "Xóa tất cả bài đăng lại sau %1$d");
         table.put("Removing the kept messages",
                 "Đang xóa các tin nhắn được giữ lại");
-        table.put("Reopen Hushfeed settings, then choose the file",
-                "Mở lại cài đặt Hushfeed, sau đó chọn tệp");
+        table.put("Reopen Larpfeed settings, then choose the file",
+                "Mở lại cài đặt Larpfeed, sau đó chọn tệp");
         table.put("Replace values when TikTok asks for them",
                 "Thay thế các giá trị khi TikTok yêu cầu");
         table.put("Replay a story from the start when it ends instead of moving to the next one. Tap or swipe to move on.",
@@ -3546,8 +3546,8 @@ final class L10nTranslationsVi {
                 "Đã xóa lịch sử ghi nhớ các video đã lưu. Các tệp vẫn còn nguyên trên máy.");
         table.put("Saved videos put back",
                 "Đã khôi phục lại các video đã lưu");
-        table.put("Saved videos show the @username and the first line of the caption in the bottom left corner. The phone encodes the whole video again to do it, so saving takes longer. Applies to saves made by Hushfeed.",
-                "Các video đã lưu sẽ hiển thị @username và dòng đầu tiên của chú thích ở góc dưới bên trái. Điện thoại sẽ mã hóa lại toàn bộ video để thực hiện việc này nên thời gian lưu sẽ lâu hơn. Áp dụng cho các lượt lưu do Hushfeed thực hiện.");
+        table.put("Saved videos show the @username and the first line of the caption in the bottom left corner. The phone encodes the whole video again to do it, so saving takes longer. Applies to saves made by Larpfeed.",
+                "Các video đã lưu sẽ hiển thị @username và dòng đầu tiên của chú thích ở góc dưới bên trái. Điện thoại sẽ mã hóa lại toàn bộ video để thực hiện việc này nên thời gian lưu sẽ lâu hơn. Áp dụng cho các lượt lưu do Larpfeed thực hiện.");
         table.put("Saved, but a later save may make a second copy",
                 "Đã lưu, nhưng lần sau có thể tạo bản thứ hai");
         table.put("Saved, override off",
@@ -3562,14 +3562,14 @@ final class L10nTranslationsVi {
                 "Các lượt lưu đang thực hiện");
         table.put("Saves subtitle (SRT) files with the video. They go to Movies on Android 11 and newer, Download on Android 10, and your video folder on older versions. On Android 11 and newer with Save details on, the video moves to Download or Documents and the subtitles stay in Movies.",
                 "Lưu tệp phụ đề (SRT) cùng với video. Tệp sẽ lưu vào thư mục Phim (Movies) trên Android 11 trở lên, thư mục Tải xuống (Download) trên Android 10 và thư mục video của bạn trên các bản cũ hơn. Trên Android 11 trở lên nếu bật Lưu chi tiết, video sẽ chuyển sang Tải xuống hoặc Tài liệu còn phụ đề vẫn ở thư mục Phim.");
-        table.put("Saves the caption, creator, link and post date in a text file next to the video, or one file for a photo post's original photos. On Android 10 and later, they go in Download or Documents under the same folder name. Applies to saves made by Hushfeed.",
-                "Lưu chú thích, nhà sáng tạo, liên kết và ngày đăng trong một tệp văn bản bên cạnh video, hoặc chung một tệp cho các ảnh gốc của bài đăng ảnh. Trên Android 10 trở lên, chúng nằm trong Tải xuống hoặc Tài liệu dưới cùng tên thư mục. Áp dụng cho các lượt lưu do Hushfeed thực hiện.");
+        table.put("Saves the caption, creator, link and post date in a text file next to the video, or one file for a photo post's original photos. On Android 10 and later, they go in Download or Documents under the same folder name. Applies to saves made by Larpfeed.",
+                "Lưu chú thích, nhà sáng tạo, liên kết và ngày đăng trong một tệp văn bản bên cạnh video, hoặc chung một tệp cho các ảnh gốc của bài đăng ảnh. Trên Android 10 trở lên, chúng nằm trong Tải xuống hoặc Tài liệu dưới cùng tên thư mục. Áp dụng cho các lượt lưu do Larpfeed thực hiện.");
         table.put("Saves the details file in JSON format instead of plain text. Useful if another tool will read it.",
                 "Lưu tệp chi tiết dưới dạng định dạng JSON thay vì văn bản thuần túy. Hữu ích nếu bạn muốn đọc dữ liệu bằng công cụ khác.");
         table.put("Saves wait for Wi-Fi or another network that isn't metered, for up to 30 minutes, and stop if you leave it. Saving a frame still works anywhere.",
                 "Tiến trình lưu sẽ chờ mạng Wi-Fi hoặc mạng không tính phí dữ liệu trong tối đa 30 phút và sẽ dừng lại nếu bạn ngắt kết nối. Việc lưu khung hình vẫn hoạt động ở mọi mạng.");
-        table.put("Saves your Hushfeed settings and Feature Gate Lab rules to a file.",
-                "Lưu cài đặt Hushfeed và các quy tắc Feature Gate Lab của bạn vào một tệp.");
+        table.put("Saves your Larpfeed settings and Feature Gate Lab rules to a file.",
+                "Lưu cài đặt Larpfeed và các quy tắc Feature Gate Lab của bạn vào một tệp.");
         table.put("Saving",
                 "Đang lưu");
         table.put("Saving %1$s of %2$s",
@@ -3701,8 +3701,8 @@ final class L10nTranslationsVi {
                 "Đang gửi phản hồi");
         table.put("Sending the message",
                 "Đang gửi tin nhắn");
-        table.put("Sends TikTok's feed, search, comments and other app traffic through the proxy below. Videos and LIVE streams still connect directly. Saves and short-link lookups from Hushfeed also connect directly, after their own address checks. Other apps aren't affected.",
-                "Gửi lưu lượng truy cập bảng tin, tìm kiếm, bình luận và các dữ liệu ứng dụng khác của TikTok qua proxy bên dưới. Video và luồng LIVE vẫn kết nối trực tiếp. Các lượt lưu và tra cứu liên kết rút gọn từ Hushfeed cũng kết nối trực tiếp sau khi tự kiểm tra địa chỉ. Các ứng dụng khác không bị ảnh hưởng.");
+        table.put("Sends TikTok's feed, search, comments and other app traffic through the proxy below. Videos and LIVE streams still connect directly. Saves and short-link lookups from Larpfeed also connect directly, after their own address checks. Other apps aren't affected.",
+                "Gửi lưu lượng truy cập bảng tin, tìm kiếm, bình luận và các dữ liệu ứng dụng khác của TikTok qua proxy bên dưới. Video và luồng LIVE vẫn kết nối trực tiếp. Các lượt lưu và tra cứu liên kết rút gọn từ Larpfeed cũng kết nối trực tiếp sau khi tự kiểm tra địa chỉ. Các ứng dụng khác không bị ảnh hưởng.");
         table.put("Sends one message a day to each person below at the time below, so your streaks keep going on days you don't open TikTok.",
                 "Gửi một tin nhắn mỗi ngày cho mỗi người bên dưới vào thời gian đã chọn, giúp duy trì chuỗi tin nhắn liên tục (streak) vào những ngày bạn không mở TikTok.");
         table.put("Sends today's message right away. The daily one then waits for tomorrow.",
@@ -4203,8 +4203,8 @@ final class L10nTranslationsVi {
                 "Bộ nhớ gần đầy. Đã lưu bản ghi vào %1$s");
         table.put("Store TikTok thinks it came from",
                 "Cửa hàng ứng dụng mà TikTok nhận diện nguồn nguồn cài đặt");
-        table.put("Stores the caption, creator, post date and link inside the video file, where media players can read them. Applies to saves made by Hushfeed.",
-                "Lưu chú thích, nhà sáng tạo, ngày đăng và liên kết trực tiếp vào bên trong tệp video để trình phát phương tiện có thể đọc được. Áp dụng cho các lượt lưu do Hushfeed thực hiện.");
+        table.put("Stores the caption, creator, post date and link inside the video file, where media players can read them. Applies to saves made by Larpfeed.",
+                "Lưu chú thích, nhà sáng tạo, ngày đăng và liên kết trực tiếp vào bên trong tệp video để trình phát phương tiện có thể đọc được. Áp dụng cho các lượt lưu do Larpfeed thực hiện.");
         table.put("Stories",
                 "Tin (Stories)");
         table.put("Story",
@@ -4231,8 +4231,8 @@ final class L10nTranslationsVi {
                 "Phụ đề");
         table.put("Subtitles: %1$s",
                 "Phụ đề: %1$s");
-        table.put("Support Hushfeed",
-                "Hỗ trợ Hushfeed");
+        table.put("Support Larpfeed",
+                "Hỗ trợ Larpfeed");
         table.put("Swap the website in shared links",
                 "Thay đổi trang web trong các liên kết chia sẻ");
         table.put("Swipe for brightness and volume",
@@ -4250,8 +4250,8 @@ final class L10nTranslationsVi {
                 "Hệ thống");
         table.put("Tag saved videos with their details",
                 "Gắn nhãn thông tin chi tiết vào video đã lưu");
-        table.put("Take Hushfeed out of TikTok's Settings and privacy. To open these settings, press and hold For You at the top of the feed, or Home if Long-press Home for Hushfeed settings is on.",
-                "Gỡ mục Hushfeed khỏi phần Cài đặt và quyền riêng tư của TikTok. Để mở các cài đặt này, hãy nhấn giữ chữ Dành cho bạn ở đầu bảng tin hoặc nhấn giữ nút Trang chủ (Home) nếu đã bật tính năng Nhấn giữ nút Trang chủ để vào cài đặt Hushfeed.");
+        table.put("Take Larpfeed out of TikTok's Settings and privacy. To open these settings, press and hold For You at the top of the feed, or Home if Long-press Home for Larpfeed settings is on.",
+                "Gỡ mục Larpfeed khỏi phần Cài đặt và quyền riêng tư của TikTok. Để mở các cài đặt này, hãy nhấn giữ chữ Dành cho bạn ở đầu bảng tin hoặc nhấn giữ nút Trang chủ (Home) nếu đã bật tính năng Nhấn giữ nút Trang chủ để vào cài đặt Larpfeed.");
         table.put("Take the Add comment bar off videos you open from a profile, a hashtag, a sound or search, so the video fills the screen down to the bottom. The comment button on the right still opens comments.",
                 "Gỡ thanh Thêm bình luận khỏi các video mở từ trang cá nhân, hashtag, âm thanh hoặc tìm kiếm để video lấp đầy màn hình xuống tận đáy. Nút bình luận ở bên phải vẫn mở phần bình luận bình thường.");
         table.put("Take the pulsing LIVE ring off profile pictures on the feed and in comments. Tapping the picture of a creator who's live opens their profile instead of the LIVE.",
@@ -4288,8 +4288,8 @@ final class L10nTranslationsVi {
                 "Chạm để bắt đầu phát bảng tin");
         table.put("Tap to start, then scroll until the feed problem shows up and come back here to save it. The file has no captions or names, and videos and creators appear only as short codes. Read it before you share it.",
                 "Chạm để bắt đầu, sau đó cuộn đến khi sự cố bảng tin xuất hiện rồi quay lại đây để lưu. Tệp không chứa chú thích hay tên thật, video và nhà sáng tạo chỉ hiển thị dưới dạng mã ngắn. Hãy đọc kỹ trước khi chia sẻ.");
-        table.put("Tap, then go to the screen with what you want hidden. After %1$d seconds Hushfeed records how that screen is built, without any of its text, for the diagnostic report.",
-                "Chạm, sau đó chuyển đến màn hình có nội dung bạn muốn ẩn. Sau %1$d giây, Hushfeed sẽ ghi lại cấu trúc màn hình đó (không chứa văn bản) để phục vụ báo cáo chẩn đoán.");
+        table.put("Tap, then go to the screen with what you want hidden. After %1$d seconds Larpfeed records how that screen is built, without any of its text, for the diagnostic report.",
+                "Chạm, sau đó chuyển đến màn hình có nội dung bạn muốn ẩn. Sau %1$d giây, Larpfeed sẽ ghi lại cấu trúc màn hình đó (không chứa văn bản) để phục vụ báo cáo chẩn đoán.");
         table.put("Tapping a sticker someone sent you in a chat opens a box with Save media. Turn this off to skip it.",
                 "Chạm vào nhãn dán người khác gửi trong đoạn chat sẽ mở ra hộp có tùy chọn \"Lưu phương tiện\". Tắt tính năng này để bỏ qua.");
         table.put("Tapping more under a video opens its comments with the whole caption at the top instead of spreading the caption over the video. A tap on the caption itself does the same. Photo posts keep TikTok's own page for this.",
@@ -4302,8 +4302,8 @@ final class L10nTranslationsVi {
                 "Từ ngữ trong nhãn dán chữ");
         table.put("That JSON file doesn't contain the supported TikTok watch history.",
                 "Tệp JSON đó không chứa lịch sử xem TikTok được hỗ trợ.");
-        table.put("That backup was written by a newer Hushfeed than this one. Nothing was altered.",
-                "Bản sao lưu đó được tạo bởi phiên bản Hushfeed mới hơn phiên bản này. Không có thay đổi nào được thực hiện.");
+        table.put("That backup was written by a newer Larpfeed than this one. Nothing was altered.",
+                "Bản sao lưu đó được tạo bởi phiên bản Larpfeed mới hơn phiên bản này. Không có thay đổi nào được thực hiện.");
         table.put("That creator is already in the list",
                 "Nhà sáng tạo đó đã có trong danh sách");
         table.put("That creator pattern could stall the feed, so it wasn't added: %1$s",
@@ -4312,8 +4312,8 @@ final class L10nTranslationsVi {
                 "Mẫu nhà sáng tạo đó quá dài nên chưa được thêm: %1$s");
         table.put("That file has more than %1$s watch-history entries.",
                 "Tệp đó chứa hơn %1$s mục lịch sử xem.");
-        table.put("That file is larger than %1$s MB. Choose a seen-history file saved by Hushfeed.",
-                "Tệp đó lớn hơn %1$s MB. Vui lòng chọn tệp lịch sử đã xem do Hushfeed lưu.");
+        table.put("That file is larger than %1$s MB. Choose a seen-history file saved by Larpfeed.",
+                "Tệp đó lớn hơn %1$s MB. Vui lòng chọn tệp lịch sử đã xem do Larpfeed lưu.");
         table.put("That file is larger than %1$s MB. Choose a smaller font file.",
                 "Tệp đó lớn hơn %1$s MB. Vui lòng chọn tệp phông chữ nhỏ hơn.");
         table.put("That file is larger than %1$s MB. Choose a smaller watch-history export.",
@@ -4328,8 +4328,8 @@ final class L10nTranslationsVi {
                 "Tệp đó không chứa văn bản đọc được, có thể đã bị lỗi trong quá trình truyền tải. Không có thay đổi nào được thực hiện.");
         table.put("That file lists more than %1$s videos. Nothing was restored.",
                 "Tệp đó liệt kê hơn %1$s video. Không có dữ liệu nào được khôi phục.");
-        table.put("That file was saved by a newer Hushfeed. Update Hushfeed, then try again.",
-                "Tệp đó được lưu bởi phiên bản Hushfeed mới hơn. Hãy cập nhật Hushfeed rồi thử lại.");
+        table.put("That file was saved by a newer Larpfeed. Update Larpfeed, then try again.",
+                "Tệp đó được lưu bởi phiên bản Larpfeed mới hơn. Hãy cập nhật Larpfeed rồi thử lại.");
         table.put("That folder name has a character Android doesn't allow. Use letters, numbers, spaces or dashes.",
                 "Tên thư mục chứa ký tự Android không cho phép. Vui lòng sử dụng chữ cái, chữ số, khoảng trắng hoặc dấu gạch ngang.");
         table.put("That is %1$d minutes today",
@@ -4340,10 +4340,10 @@ final class L10nTranslationsVi {
                 "Thời gian hôm nay là 1 phút");
         table.put("That is one video today",
                 "Số lượng hôm nay là 1 video");
-        table.put("That isn't a Hushfeed settings backup. Nothing was altered.",
-                "Đó không phải tệp sao lưu cài đặt của Hushfeed. Không có thay đổi nào được thực hiện.");
-        table.put("That isn't a seen-history file saved by Hushfeed. For TikTok's own data export, use Import watch history.",
-                "Đó không phải tệp lịch sử đã xem do Hushfeed lưu. Đối với bản xuất dữ liệu của TikTok, hãy dùng tính năng Nhập lịch sử xem.");
+        table.put("That isn't a Larpfeed settings backup. Nothing was altered.",
+                "Đó không phải tệp sao lưu cài đặt của Larpfeed. Không có thay đổi nào được thực hiện.");
+        table.put("That isn't a seen-history file saved by Larpfeed. For TikTok's own data export, use Import watch history.",
+                "Đó không phải tệp lịch sử đã xem do Larpfeed lưu. Đối với bản xuất dữ liệu của TikTok, hãy dùng tính năng Nhập lịch sử xem.");
         table.put("That isn't an app name. Try something like com.example.downloader, or leave the box empty to keep saving in TikTok.",
                 "Đó không phải tên gói ứng dụng hợp lệ. Hãy thử dạng như com.example.downloader, hoặc để trống để tiếp tục lưu trong TikTok.");
         table.put("That list has too many entries. Keep it to %1$s or fewer.",
@@ -4358,10 +4358,10 @@ final class L10nTranslationsVi {
                 "Cấu hình đó không hợp lệ. Hãy chọn cấu hình khác.");
         table.put("That seen-history file is damaged or was edited. Nothing was restored.",
                 "Tệp lịch sử đã xem đó bị hỏng hoặc đã bị chỉnh sửa. Không có dữ liệu nào được khôi phục.");
-        table.put("That settings backup contains a feed rule list larger than Hushfeed accepts. Nothing was altered.",
-                "Bản sao lưu cài đặt đó chứa danh sách quy tắc bảng tin vượt quá dung lượng Hushfeed cho phép. Không có thay đổi nào được thực hiện.");
-        table.put("That settings backup holds a value Hushfeed can't read. Nothing was altered.",
-                "Bản sao lưu cài đặt đó chứa giá trị Hushfeed không thể đọc được. Không có thay đổi nào được thực hiện.");
+        table.put("That settings backup contains a feed rule list larger than Larpfeed accepts. Nothing was altered.",
+                "Bản sao lưu cài đặt đó chứa danh sách quy tắc bảng tin vượt quá dung lượng Larpfeed cho phép. Không có thay đổi nào được thực hiện.");
+        table.put("That settings backup holds a value Larpfeed can't read. Nothing was altered.",
+                "Bản sao lưu cài đặt đó chứa giá trị Larpfeed không thể đọc được. Không có thay đổi nào được thực hiện.");
         table.put("That settings backup holds more Feature Gate Lab rules than the Lab takes. Nothing was altered.",
                 "Bản sao lưu cài đặt đó chứa nhiều quy tắc Feature Gate Lab hơn mức Lab cho phép. Không có thay đổi nào được thực hiện.");
     }
@@ -4373,8 +4373,8 @@ final class L10nTranslationsVi {
                 "Bản sao lưu cài đặt đó không hoàn chỉnh, có thể đã bị cắt ngắn. Không có thay đổi nào được thực hiện.");
         table.put("That settings change didn't go through. Nothing was altered.",
                 "Thay đổi cài đặt đó chưa được áp dụng. Không có thay đổi nào được thực hiện.");
-        table.put("That sticker is in a format Hushfeed can't read",
-                "Nhãn dán đó ở định dạng Hushfeed không thể đọc được");
+        table.put("That sticker is in a format Larpfeed can't read",
+                "Nhãn dán đó ở định dạng Larpfeed không thể đọc được");
         table.put("That watch-history file is damaged. Nothing was imported.",
                 "Tệp lịch sử xem đó bị hỏng. Không có dữ liệu nào được nhập.");
         table.put("The Activity row of likes and comments on your posts leaves the Inbox. Notifications about them still arrive.",
@@ -4397,8 +4397,8 @@ final class L10nTranslationsVi {
                 "Hàng Người theo dõi mới sẽ bị gỡ khỏi đầu Hộp thư đến. Các tài khoản đó vẫn tiếp tục theo dõi bạn.");
         table.put("The Tako assistant's conversation leaves the Inbox list. The Tako bubble on the feed has its own switch under Feed tabs.",
                 "Cuộc trò chuyện với trợ lý Tako sẽ bị gỡ khỏi danh sách Hộp thư đến. Bong bóng Tako trên bảng tin có công tắc riêng trong mục Thẻ bảng tin.");
-        table.put("The Translate comments button in a LIVE room also needs a Japanese SIM. Turn on Override SIM details in Hushfeed settings > Region, set SIM country preset to Japan, NTT DOCOMO (44010), then restart TikTok.",
-                "Nút Dịch bình luận trong phòng LIVE cần có SIM Nhật Bản. Hãy bật Ghi đè chi tiết SIM trong cài đặt Hushfeed > Khu vực, đặt cấu hình quốc gia SIM thành Japan, NTT DOCOMO (44010), sau đó khởi động lại TikTok.");
+        table.put("The Translate comments button in a LIVE room also needs a Japanese SIM. Turn on Override SIM details in Larpfeed settings > Region, set SIM country preset to Japan, NTT DOCOMO (44010), then restart TikTok.",
+                "Nút Dịch bình luận trong phòng LIVE cần có SIM Nhật Bản. Hãy bật Ghi đè chi tiết SIM trong cài đặt Larpfeed > Khu vực, đặt cấu hình quốc gia SIM thành Japan, NTT DOCOMO (44010), sau đó khởi động lại TikTok.");
         table.put("The accounts TikTok suggests you follow no longer take up rows in the Inbox.",
                 "Các tài khoản mà TikTok đề xuất bạn theo dõi không còn chiếm các hàng trong Hộp thư đến.");
         table.put("The activity status control leaves the Inbox header. Whether others see you as active is unchanged.",
@@ -4445,8 +4445,8 @@ final class L10nTranslationsVi {
                 "Bảng tin sẽ chờ một lần chạm trước khi tự động phát lại khi bạn quay lại ứng dụng. Tin nhắn, trang cá nhân và tìm kiếm vẫn sẵn sàng truy cập chỉ với một chạm.");
         table.put("The file app still has the last file. Try again once it lets go, or restart TikTok.",
                 "Ứng dụng quản lý tệp vẫn đang giữ tệp gần nhất. Vui lòng thử lại sau khi ứng dụng đó giải phóng tệp, hoặc khởi động lại TikTok.");
-        table.put("The file hushfeed-safe-mode couldn't be removed. Delete it from TikTok's folder under Android/data to turn Hushfeed back on.",
-                "Không thể xóa tệp hushfeed-safe-mode. Hãy xóa tệp này khỏi thư mục của TikTok trong Android/data để bật lại Hushfeed.");
+        table.put("The file larpfeed-safe-mode couldn't be removed. Delete it from TikTok's folder under Android/data to turn Larpfeed back on.",
+                "Không thể xóa tệp larpfeed-safe-mode. Hãy xóa tệp này khỏi thư mục của TikTok trong Android/data để bật lại Larpfeed.");
         table.put("The frame couldn't be read. Try again.",
                 "Không thể đọc khung hình này. Vui lòng thử lại.");
         table.put("The frame couldn't be saved. Try again.",
@@ -4578,8 +4578,8 @@ final class L10nTranslationsVi {
                 "Tệp này không phải là bản xuất giá trị đã tải");
         table.put("This gate type isn't supported",
                 "Loại cổng này không được hỗ trợ");
-        table.put("This key isn't in Hushfeed's list, so its type can't be checked. Reset the override.",
-                "Khóa này không nằm trong danh sách của Hushfeed nên không thể kiểm tra kiểu dữ liệu. Vui lòng đặt lại ghi đè.");
+        table.put("This key isn't in Larpfeed's list, so its type can't be checked. Reset the override.",
+                "Khóa này không nằm trong danh sách của Larpfeed nên không thể kiểm tra kiểu dữ liệu. Vui lòng đặt lại ghi đè.");
         table.put("This key touches account safety. Forcing it can change login, region, payment or security checks.",
                 "Khóa này đụng chạm đến an toàn tài khoản. Ép buộc nó có thể thay đổi các kiểm tra về đăng nhập, khu vực, thanh toán hoặc bảo mật.");
         table.put("This line opens a rule and doesn't finish it: %1$s. Write two phrases as \"a\" & \"b\" for both, or \"a\" !& \"b\" for the first without the second.",
@@ -4633,8 +4633,8 @@ final class L10nTranslationsVi {
                 "TikTok kiểm tra cách ứng dụng được ký chữ ký số và cài đặt. Tùy chọn này phản hồi các kiểm tra đó theo cách của bản Play Store. Hãy thử nếu các lượt theo dõi hoặc thích tự động hủy sau khi làm mới. Tùy chọn có thể không hiệu quả nếu TikTok dùng các biện pháp kiểm tra khác.");
         table.put("TikTok closed during these saves",
                 "TikTok đã đóng trong quá trình lưu");
-        table.put("TikTok closed three times within a minute of starting, so Hushfeed paused itself. Your settings stay as they are.",
-                "TikTok đã đóng 3 lần trong vòng một phút kể từ khi khởi động, do đó Hushfeed đã tự động tạm dừng. Cài đặt của bạn vẫn được giữ nguyên.");
+        table.put("TikTok closed three times within a minute of starting, so Larpfeed paused itself. Your settings stay as they are.",
+                "TikTok đã đóng 3 lần trong vòng một phút kể từ khi khởi động, do đó Larpfeed đã tự động tạm dừng. Cài đặt của bạn vẫn được giữ nguyên.");
         table.put("TikTok closed. What was recorded is saved to %1$s",
                 "TikTok đã đóng. Nội dung đã ghi hình được lưu vào %1$s");
         table.put("TikTok closes at %1$s",
@@ -4800,8 +4800,8 @@ final class L10nTranslationsVi {
                 "Thử lại hoặc quay lại TikTok.");
         table.put("Turn Clear display on or off",
                 "Bật hoặc tắt xóa hiển thị");
-        table.put("Turn Hushfeed back on",
-                "Bật lại Hushfeed");
+        table.put("Turn Larpfeed back on",
+                "Bật lại Larpfeed");
         table.put("Turn off double tap to react",
                 "Tắt chạm đúp để thả cảm xúc");
         table.put("Turn off haptics",
@@ -5024,8 +5024,8 @@ final class L10nTranslationsVi {
                 "Âm lượng");
         table.put("Wait a day to loosen the budget",
                 "Chờ một ngày để nới lỏng ngân sách");
-        table.put("Wait a day to loosen the budget is on, so Hushfeed stays on",
-                "Tính năng chờ một ngày để nới lỏng ngân sách đang bật, do đó Hushfeed tiếp tục hoạt động");
+        table.put("Wait a day to loosen the budget is on, so Larpfeed stays on",
+                "Tính năng chờ một ngày để nới lỏng ngân sách đang bật, do đó Larpfeed tiếp tục hoạt động");
         table.put("Wait before hiding the controls.",
                 "Thời gian chờ trước khi ẩn các điều khiển.");
         table.put("Wait for loading to finish",
@@ -5056,8 +5056,8 @@ final class L10nTranslationsVi {
                 "Nội dung mà thông báo hiển thị.");
         table.put("What's new",
                 "Có gì mới");
-        table.put("When Copy link gives a short vt.tiktok.com or vm.tiktok.com link, Hushfeed opens it once in the background to find the full video link and copies that instead. TikTok sees that visit, and it connects directly even when a proxy is on. Links you send to another app go out as they were.",
-                "Khi tính năng Sao chép liên kết trả về liên kết rút gọn dạng vt.tiktok.com hoặc vm.tiktok.com, Hushfeed sẽ tự động mở ngầm một lần để tìm liên kết video đầy đủ và sao chép liên kết đó thay thế. TikTok sẽ ghi nhận lượt truy cập này và kết nối trực tiếp ngay cả khi đang bật proxy. Các liên kết bạn gửi sang ứng dụng khác được giữ nguyên bản gốc.");
+        table.put("When Copy link gives a short vt.tiktok.com or vm.tiktok.com link, Larpfeed opens it once in the background to find the full video link and copies that instead. TikTok sees that visit, and it connects directly even when a proxy is on. Links you send to another app go out as they were.",
+                "Khi tính năng Sao chép liên kết trả về liên kết rút gọn dạng vt.tiktok.com hoặc vm.tiktok.com, Larpfeed sẽ tự động mở ngầm một lần để tìm liên kết video đầy đủ và sao chép liên kết đó thay thế. TikTok sẽ ghi nhận lượt truy cập này và kết nối trực tiếp ngay cả khi đang bật proxy. Các liên kết bạn gửi sang ứng dụng khác được giữ nguyên bản gốc.");
         table.put("When TikTok is in dark mode, the list of collections you get by holding the Favorites button is dark too instead of white.",
                 "Khi TikTok ở chế độ tối, danh sách bộ sưu tập mở ra khi nhấn giữ nút Mục yêu thích cũng hiển thị màu tối thay vì màu trắng.");
         table.put("When TikTok requests this key, return the selected value below",
@@ -5086,8 +5086,8 @@ final class L10nTranslationsVi {
                 "Vị trí hiển thị thời gian");
         table.put("While Clear display is on, also hide the progress bar, the close button and the pause and speed buttons at the bottom. You can still drag along the bottom edge to move through the video. To leave Clear display, press and hold the video and tap Restore display, or pinch the screen.",
                 "Khi chế độ Hiển thị rõ ràng đang bật, ẩn thêm thanh tiến trình, nút đóng, nút tạm dừng và nút tốc độ ở phía dưới. Bạn vẫn có thể kéo dọc theo mép dưới để tua video. Để thoát chế độ này, hãy nhấn giữ video rồi chạm vào Khôi phục hiển thị hoặc dùng cử chỉ chụm hai ngón tay trên màn hình.");
-        table.put("While diagnostic logging is on, a message names the part of Hushfeed that failed. Off keeps failures in the report only.",
-                "Khi bật ghi nhật ký chẩn đoán, một thông báo sẽ chỉ định phần nào của Hushfeed gặp lỗi. Khi tắt, lỗi sẽ chỉ được ghi lại trong báo cáo.");
+        table.put("While diagnostic logging is on, a message names the part of Larpfeed that failed. Off keeps failures in the report only.",
+                "Khi bật ghi nhật ký chẩn đoán, một thông báo sẽ chỉ định phần nào của Larpfeed gặp lỗi. Khi tắt, lỗi sẽ chỉ được ghi lại trong báo cáo.");
         table.put("While you hold a video, slide left or right to step through the speed menu's speeds, and a bubble shows the one you're on. Your next hold starts there. Letting go goes back to normal. A pull-down lock keeps the speed you slid to. On a locked video, letting go locks the new speed.",
                 "Khi nhấn giữ video, trượt sang trái hoặc phải để chuyển qua các mức tốc độ, bong bóng sẽ hiển thị tốc độ hiện tại. Lần nhấn giữ tiếp theo sẽ bắt đầu từ mức đó. Thả tay ra sẽ trở về tốc độ bình thường. Vuốt xuống để khóa mức tốc độ đã trượt tới. Với video đã khóa, thả tay sẽ khóa tốc độ mới.");
         table.put("White",
@@ -5177,8 +5177,8 @@ final class L10nTranslationsVi {
                 "Lịch sử đã xem của bạn đã thay đổi trước khi quá trình nhập hoàn tất. Vui lòng chọn lại tệp.");
         table.put("Your settings",
                 "Cài đặt của bạn");
-        table.put("Zero means no limit. Counts the videos Hushfeed advanced past for you, not the ones you swiped yourself, and starts again when the feed is rebuilt or you change this number.",
-                "Số 0 nghĩa là không giới hạn. Đếm số video mà Hushfeed đã tự động chuyển qua hộ bạn (không tính các video bạn tự vuốt) và tính lại từ đầu khi bảng tin được xây dựng lại hoặc khi bạn thay đổi con số này.");
+        table.put("Zero means no limit. Counts the videos Larpfeed advanced past for you, not the ones you swiped yourself, and starts again when the feed is rebuilt or you change this number.",
+                "Số 0 nghĩa là không giới hạn. Đếm số video mà Larpfeed đã tự động chuyển qua hộ bạn (không tính các video bạn tự vuốt) và tính lại từ đầu khi bảng tin được xây dựng lại hoặc khi bạn thay đổi con số này.");
         table.put("Zero means the way out of the hold is always there. Any other number is how many times a day it works. Once they're used up, the hold stays until the day starts over. Ignored while the budget is locked, which removes the way out.",
                 "Số 0 nghĩa là lối thoát khỏi thời gian tạm dừng luôn khả dụng. Bất kỳ số nào khác quy định số lần tính năng này hoạt động mỗi ngày. Khi dùng hết số lần, trạng thái tạm dừng sẽ duy trì đến hết ngày. Tùy chọn này bị bỏ qua khi ngân sách đang bị khóa (tính năng khóa sẽ vô hiệu hóa lối thoát).");
         table.put("Zero shows the notice and leaves the feed alone. Anything else covers the feed for that many minutes once a budget is reached. Messages, profiles and search keep working, and nothing in the feed is thrown away.",
@@ -5189,8 +5189,8 @@ final class L10nTranslationsVi {
                 "Số 0 để tắt tính năng này. Sau khoảng thời gian không có bất kỳ thao tác chạm nào trên màn hình, video sẽ dừng lại và TikTok chuyển chạy ngầm, rất hữu ích khi bạn ngủ quên lúc xem video. Mọi thao tác chạm sẽ tính lại thời gian chờ từ đầu.");
         table.put("Zero switches this off. Count the minutes the player spends running in the feed. Time on messages, a profile or search doesn't count.",
                 "Số 0 để tắt tính năng này. Đếm số phút trình phát hoạt động trong bảng tin. Thời gian sử dụng tin nhắn, trang cá nhân hoặc tìm kiếm không được tính.");
-        table.put("Zero switches this off. Counts every video that comes up in the feed and tells you when you reach the limit. Separate from the auto-advance session limit under Playback, which counts only videos Hushfeed moved past for you.",
-                "Số 0 để tắt tính năng này. Đếm mọi video xuất hiện trên bảng tin và thông báo khi bạn đạt đến giới hạn. Tách biệt với giới hạn phiên tự động chuyển tiếp trong phần Phát lại (vốn chỉ đếm các video do Hushfeed tự động chuyển qua).");
+        table.put("Zero switches this off. Counts every video that comes up in the feed and tells you when you reach the limit. Separate from the auto-advance session limit under Playback, which counts only videos Larpfeed moved past for you.",
+                "Số 0 để tắt tính năng này. Đếm mọi video xuất hiện trên bảng tin và thông báo khi bạn đạt đến giới hạn. Tách biệt với giới hạn phiên tự động chuyển tiếp trong phần Phát lại (vốn chỉ đếm các video do Larpfeed tự động chuyển qua).");
         table.put("autoplay auto play",
                 "tự động phát autoplay");
         table.put("collapsed",

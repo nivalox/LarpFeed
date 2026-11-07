@@ -1,6 +1,6 @@
 /*
- * Copyright 2026 Hushfeed contributors
- * https://github.com/SysAdminDoc/hushfeed
+ * Copyright 2026 Larpfeed contributors
+ * https://github.com/SysAdminDoc/larpfeed
  *
  * Built on icysymmetra/tiktok-patches-for-morphe (GPL-3.0).
  */
@@ -96,7 +96,7 @@ val keepFavoritesTabPatch = bytecodePatch(
     description = "Keeps the Favorites tab and your saved videos on your profile when TikTok " +
         "tries out a version of the app that hides them, and makes the collections popup you " +
         "get by holding the Favorites button dark when TikTok is. Both are on by default. Turn " +
-        "them off in Hushfeed settings > App.",
+        "them off in Larpfeed settings > App.",
     default = true,
 ) {
     category("Settings")

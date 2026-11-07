@@ -1,6 +1,6 @@
 /*
- * Copyright 2026 Hushfeed contributors
- * https://github.com/SysAdminDoc/hushfeed
+ * Copyright 2026 Larpfeed contributors
+ * https://github.com/SysAdminDoc/larpfeed
  */
 package app.morphe.extension.tiktok.live;
 
@@ -50,7 +50,7 @@ import java.util.Random;
  * Taps wait while a real finger is on the screen, while a panel or the keyboard has the window,
  * and never land on anything that takes a tap. Tapping stops on its own when the room closes, a
  * swipe brings another room in front, TikTok goes to the background, the screen turns off or
- * locks, the switch goes off, or Hushfeed is paused. Main thread only.
+ * locks, the switch goes off, or Larpfeed is paused. Main thread only.
  */
 @SuppressWarnings("unused")
 public final class LiveAutoTap {
@@ -105,7 +105,7 @@ public final class LiveAutoTap {
     private static long lastTapAt;
     private static int upGeneration;
 
-    /** True while the switch is on and Hushfeed isn't paused. */
+    /** True while the switch is on and Larpfeed isn't paused. */
     static boolean enabled() {
         return SettingsStatus.liveControlsEnabled && Settings.LIVE_AUTO_TAP.get() && !Setting.isPaused();
     }

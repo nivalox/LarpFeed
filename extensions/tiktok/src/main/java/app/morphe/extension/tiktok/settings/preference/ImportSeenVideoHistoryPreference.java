@@ -1,6 +1,6 @@
 /*
- * Copyright 2026 Hushfeed contributors
- * https://github.com/SysAdminDoc/hushfeed
+ * Copyright 2026 Larpfeed contributors
+ * https://github.com/SysAdminDoc/larpfeed
  */
 package app.morphe.extension.tiktok.settings.preference;
 
@@ -27,8 +27,8 @@ import java.util.concurrent.atomic.AtomicBoolean;
 @SuppressWarnings("deprecation")
 public final class ImportSeenVideoHistoryPreference extends Preference {
     static final int REQUEST_IMPORT = 7321;
-    private static final String ACCOUNT_STATE = "hushfeed_watch_import_account";
-    private static final String ZONE_STATE = "hushfeed_watch_import_zone";
+    private static final String ACCOUNT_STATE = "larpfeed_watch_import_account";
+    private static final String ZONE_STATE = "larpfeed_watch_import_zone";
     private static final String SUMMARY =
             "Use this account's TikTok JSON export, up to %1$s MB and %2$s entries. Dates without a time zone use this phone's time zone.";
     private static final String SIGN_IN = "Sign in to TikTok before importing watch history.";

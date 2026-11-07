@@ -366,7 +366,7 @@
     }
   },
   "schema_version": 1,
-  "scope": "TikTok 47.1.4 with Hushfeed 0.68.0 global Pause active, Samsung Galaxy S25 Ultra, Android 16",
+  "scope": "TikTok 47.1.4 with Larpfeed 0.68.0 global Pause active, Samsung Galaxy S25 Ultra, Android 16",
   "limitations": [
     "Raw packet records do not independently establish UID ownership. App selection and VPN policy were verified separately.",
     "Packet and payload counts include both directions and retransmissions, not unique application requests.",
@@ -386,7 +386,7 @@
     "package": "com.zhiliaoapp.musically",
     "app": "TikTok",
     "app_version": "47.1.4",
-    "installed_extension": "Hushfeed",
+    "installed_extension": "Larpfeed",
     "installed_extension_version": "0.68.0",
     "runtime_pause_verified_after_restart": true,
     "build_label": "patched APK, runtime paused",

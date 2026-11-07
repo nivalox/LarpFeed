@@ -1,6 +1,6 @@
 /*
- * Copyright 2026 Hushfeed contributors
- * https://github.com/SysAdminDoc/hushfeed
+ * Copyright 2026 Larpfeed contributors
+ * https://github.com/SysAdminDoc/larpfeed
  */
 package app.morphe.extension.tiktok.settings.preference;
 
@@ -22,7 +22,7 @@ import java.util.Map;
 import java.util.WeakHashMap;
 
 /**
- * Every Hushfeed title in TikTok's cyan and red: the settings bar, its pages and dialogs, and the
+ * Every Larpfeed title in TikTok's cyan and red: the settings bar, its pages and dialogs, and the
  * screens that stand in for them. The colours drift along the words all the time the title is on
  * screen, and as it opens, and every {@link #PERIOD_MS} after, a white sheen sweeps over them. It
  * moves whatever Android's animation scale says, since the S22 runs with animations off and a

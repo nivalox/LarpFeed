@@ -3,7 +3,7 @@
  * https://github.com/SysAdminDoc/Hushfacebook
  *
  * Modified for HushGram (Instagram), 2026.
- * Modified for hushfeed (TikTok), 2026.
+ * Modified for larpfeed (TikTok), 2026.
  */
 package app.morphe.extension.tiktok.settings.preference;
 

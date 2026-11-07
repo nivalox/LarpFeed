@@ -1,6 +1,6 @@
 /*
- * Copyright 2026 Hushfeed contributors
- * https://github.com/SysAdminDoc/hushfeed
+ * Copyright 2026 Larpfeed contributors
+ * https://github.com/SysAdminDoc/larpfeed
  *
  * Built on icysymmetra/tiktok-patches-for-morphe (GPL-3.0).
  */
@@ -36,7 +36,7 @@ import java.util.regex.Pattern;
  * and stopped from Diagnostics and saved as a text file.
  *
  * <p>The idea comes from icysymmetra's feed debugger, which walks TikTok's model objects by
- * reflection from a bytecode probe of its own. This one listens where Hushfeed already decides:
+ * reflection from a bytecode probe of its own. This one listens where Larpfeed already decides:
  * every route in {@link FeedItemsFilter} that keeps or hides a video writes one event per list,
  * with a line per item under it. A route asks {@link #batch} for somewhere to write and gets null
  * while nothing is recording, so the only cost outside a capture is one volatile read per list.
@@ -251,10 +251,10 @@ public final class FeedCapture {
             }
             long end = stoppedNow == 0 ? System.currentTimeMillis() : stoppedNow;
             StringBuilder text = new StringBuilder((int) Math.min(Integer.MAX_VALUE - 1024L, usedNow + 2048L));
-            text.append("Hushfeed feed capture\n")
+            text.append("Larpfeed feed capture\n")
                     .append("Read this file before you share it. Videos and creators appear only as short codes")
                     .append(" made for this capture, and it carries no captions, names, handles or web addresses.\n")
-                    .append("Hushfeed: ").append(orUnknown(patchesVersion())).append('\n')
+                    .append("Larpfeed: ").append(orUnknown(patchesVersion())).append('\n')
                     .append("TikTok: ").append(orUnknown(appVersion())).append('\n')
                     .append("Android API: ").append(Build.VERSION.SDK_INT).append('\n')
                     .append("Started: ").append(utc(startedAtMs)).append('\n')

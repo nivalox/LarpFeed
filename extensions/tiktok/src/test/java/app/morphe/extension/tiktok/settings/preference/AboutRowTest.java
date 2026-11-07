@@ -1,6 +1,6 @@
 /*
- * Copyright 2026 Hushfeed contributors
- * https://github.com/SysAdminDoc/hushfeed
+ * Copyright 2026 Larpfeed contributors
+ * https://github.com/SysAdminDoc/larpfeed
  *
  * Built on icysymmetra/tiktok-patches-for-morphe (GPL-3.0).
  */
@@ -44,7 +44,7 @@ public class AboutRowTest {
 
         assertEquals("Version 0.31.0 for TikTok 46.2.3. Opens github.com in your browser",
                 row.getSummary().toString());
-        assertEquals("Hushfeed", row.getTitle().toString());
+        assertEquals("Larpfeed", row.getTitle().toString());
         assertEquals("a row with no key is skipped by the settings search",
                 MorpheTikTokAboutPreference.KEY, row.getKey());
     }
@@ -54,7 +54,7 @@ public class AboutRowTest {
         SettingsStatusPreference status = new SettingsStatusPreference(
                 context, "0.47.0", "47.0.3", () -> opened[0] = true);
 
-        assertEquals("Hushfeed is active", status.getTitle().toString());
+        assertEquals("Larpfeed is active", status.getTitle().toString());
         assertEquals("Version 0.47.0 for TikTok 47.0.3", status.getSummary().toString());
         android.view.View view = status.getView(null, null);
         android.view.View diagnostics = view.findViewWithTag(

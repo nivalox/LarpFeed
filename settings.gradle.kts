@@ -1,6 +1,6 @@
 import org.gradle.api.artifacts.repositories.MavenArtifactRepository
 
-rootProject.name = "hushfeed"
+rootProject.name = "larpfeed"
 
 pluginManagement {
     val allowLocalPlugins = providers.gradleProperty("allowMavenLocal")

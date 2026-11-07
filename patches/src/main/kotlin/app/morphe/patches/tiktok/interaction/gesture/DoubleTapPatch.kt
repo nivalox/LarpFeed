@@ -1,6 +1,6 @@
 /*
- * Copyright 2026 Hushfeed contributors
- * https://github.com/SysAdminDoc/hushfeed
+ * Copyright 2026 Larpfeed contributors
+ * https://github.com/SysAdminDoc/larpfeed
  *
  * Built on icysymmetra/tiktok-patches-for-morphe (GPL-3.0).
  */
@@ -106,7 +106,7 @@ val doubleTapPatch = bytecodePatch(
     description = "Lets a double tap on a video do nothing, open its comments, copy the link, save " +
         "the sound or the frame on screen, speed the video up, or set a sleep timer instead of " +
         "liking it, so you don't like videos by accident. Each corner of the video can get its own " +
-        "action too. Starts off. Pick an action in Hushfeed settings > Feed screen.",
+        "action too. Starts off. Pick an action in Larpfeed settings > Feed screen.",
 ) {
     category("Interaction")
     compatibleWith(*AppCompatibilities.tiktok())

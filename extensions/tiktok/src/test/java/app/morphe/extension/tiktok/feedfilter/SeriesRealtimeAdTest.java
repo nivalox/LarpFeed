@@ -1,6 +1,6 @@
 /*
- * Copyright 2026 Hushfeed contributors
- * https://github.com/SysAdminDoc/hushfeed
+ * Copyright 2026 Larpfeed contributors
+ * https://github.com/SysAdminDoc/larpfeed
  */
 package app.morphe.extension.tiktok.feedfilter;
 
@@ -49,7 +49,7 @@ public class SeriesRealtimeAdTest {
         assertFalse(CardFilters.shouldRefuseSeriesRealtimeAd());
     }
 
-    @Test public void pausedHushfeedLeavesTheSeriesAdAlone() {
+    @Test public void pausedLarpfeedLeavesTheSeriesAdAlone() {
         Settings.REMOVE_ADS.save(true);
         PausedProcess.set(true);
         assertFalse(CardFilters.shouldRefuseSeriesRealtimeAd());

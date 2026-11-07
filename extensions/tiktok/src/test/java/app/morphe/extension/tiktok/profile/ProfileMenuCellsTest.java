@@ -1,6 +1,6 @@
 /*
- * Copyright 2026 Hushfeed contributors
- * https://github.com/SysAdminDoc/hushfeed
+ * Copyright 2026 Larpfeed contributors
+ * https://github.com/SysAdminDoc/larpfeed
  */
 package app.morphe.extension.tiktok.profile;
 
@@ -34,7 +34,7 @@ import org.robolectric.annotation.Config;
 /**
  * Hide Balance in the profile menu (#194). The patch asks {@link ProfileMenuCells#hide} about each
  * cell of the menu your profile's top right button opens, by id. The switch starts off, hides the
- * Balance cell and nothing else, and leaves TikTok's menu alone while Hushfeed is paused.
+ * Balance cell and nothing else, and leaves TikTok's menu alone while Larpfeed is paused.
  */
 @RunWith(RobolectricTestRunner.class)
 @Config(sdk = 28)
@@ -125,7 +125,7 @@ public class ProfileMenuCellsTest {
         }
     }
 
-    @Test public void aPausedHushfeedLeavesTheMenuAlone() {
+    @Test public void aPausedLarpfeedLeavesTheMenuAlone() {
         Settings.HIDE_PROFILE_MENU_BALANCE.save(true);
         PausedProcess.set(true);
         assertFalse(ProfileMenuCells.hide(ProfileMenuCells.BALANCE));

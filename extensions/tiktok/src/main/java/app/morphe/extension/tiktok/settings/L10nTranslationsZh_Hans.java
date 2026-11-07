@@ -1,6 +1,6 @@
 /*
- * Copyright 2026 Hushfeed contributors
- * https://github.com/SysAdminDoc/hushfeed
+ * Copyright 2026 Larpfeed contributors
+ * https://github.com/SysAdminDoc/larpfeed
  *
  * Built on icysymmetra/tiktok-patches-for-morphe (GPL-3.0).
  */
@@ -239,8 +239,8 @@ final class L10nTranslationsZh_Hans {
                 "%1$s 观看了已添加的视频.");
         table.put("%1$s were already saved",
                 "%1$s 已保存");
-        table.put("%1$s · Hushfeed's list only",
-                "仅 %1$s · Hushfeed 的列表");
+        table.put("%1$s · Larpfeed's list only",
+                "仅 %1$s · Larpfeed 的列表");
         table.put("%1$s · current value only",
                 "%1$s · 仅当前值");
         table.put("%1$s · declared by TikTok",
@@ -344,8 +344,8 @@ final class L10nTranslationsZh_Hans {
                 "双击消息不再为其添加爱心。单击并长按即可像以前一样工作.");
         table.put("A few seconds",
                 "几秒钟");
-        table.put("A file named hushfeed-safe-mode in TikTok's folder under Android/data paused Hushfeed. Your settings stay as they are.",
-                "Android/data 下 TikTok 的文件夹中名为 hushfeed-safe-mode 的文件已暂停 Hushfeed。你的设置保持原样.");
+        table.put("A file named larpfeed-safe-mode in TikTok's folder under Android/data paused Larpfeed. Your settings stay as they are.",
+                "Android/data 下 TikTok 的文件夹中名为 larpfeed-safe-mode 的文件已暂停 Larpfeed。你的设置保持原样.");
         table.put("A forced value applies to this copy of TikTok whichever account is signed in. It can't get past a check the server makes.",
                 "无论登录哪个账号，强制值都会应用于 TikTok 的此副本。它无法通过服务器进行的检查.");
         table.put("A good place to stop, if you want one.",
@@ -402,8 +402,8 @@ final class L10nTranslationsZh_Hans {
                 "关于");
         table.put("About %1$s of storage at this limit",
                 "在此限制下大约有 %1$s 的存储空间");
-        table.put("About Hushfeed",
-                "关于Hushfeed");
+        table.put("About Larpfeed",
+                "关于Larpfeed");
         table.put("About overrides",
                 "关于覆盖");
         table.put("Above moves the caption and the buttons up a little so the time fits over the right end of the bar. When something else is in the way, the time goes beside the bar.",
@@ -441,10 +441,10 @@ final class L10nTranslationsZh_Hans {
                 "添加创作者");
         table.put("Add a line along the bottom of a sound's cover while its preview plays, with the time played and the preview's length. Tap or drag it to move through the preview.",
                 "在声音试听播放时，沿声音封面底部添加一条线，显示已播放时间和试听时长。点按或拖动它即可在试听中移动.");
-        table.put("Add a seen-history file saved by Hushfeed to the videos @%1$s has seen. A video in both keeps the newer date.",
-                "将 Hushfeed 保存的观看历史文件添加到 @%1$s 看过的视频中。两者中的视频都保留了最新的日期.");
-        table.put("Add a seen-history file saved by Hushfeed to this account's seen videos. A video in both keeps the newer date.",
-                "将 Hushfeed 保存的观看历史记录文件添加到此账号的观看视频中。两者中的视频都保留了最新的日期.");
+        table.put("Add a seen-history file saved by Larpfeed to the videos @%1$s has seen. A video in both keeps the newer date.",
+                "将 Larpfeed 保存的观看历史文件添加到 @%1$s 看过的视频中。两者中的视频都保留了最新的日期.");
+        table.put("Add a seen-history file saved by Larpfeed to this account's seen videos. A video in both keeps the newer date.",
+                "将 Larpfeed 保存的观看历史记录文件添加到此账号的观看视频中。两者中的视频都保留了最新的日期.");
         table.put("Add a separate button that skips videos using the current sound.",
                 "添加一个单独的按钮，使用当前声音跳过视频.");
         table.put("Add a thin line along the bottom of a video story that you can drag to go back or skip ahead. The time shows while you drag, and a tap on it still moves between stories.",
@@ -666,8 +666,8 @@ final class L10nTranslationsZh_Hans {
                 "视频文字背景");
         table.put("Background play in the long-press menu",
                 "长按菜单中的后台播放");
-        table.put("Background play in the long-press menu is on in Hushfeed's Playback settings, so TikTok gets 1 for this key and an override here has no effect until that switch is off.",
-                "在 Hushfeed 的播放设置中，“长按菜单中的后台播放”处于打开状态，因此 TikTok 该键的值为 1，并且在该开关关闭之前，此处的覆盖不会产生任何效果.");
+        table.put("Background play in the long-press menu is on in Larpfeed's Playback settings, so TikTok gets 1 for this key and an override here has no effect until that switch is off.",
+                "在 Larpfeed 的播放设置中，“长按菜单中的后台播放”处于打开状态，因此 TikTok 该键的值为 1，并且在该开关关闭之前，此处的覆盖不会产生任何效果.");
         table.put("Backup and restore",
                 "备份和恢复");
         table.put("Bend the video at the edges",
@@ -816,8 +816,8 @@ final class L10nTranslationsZh_Hans {
                 "捕获信息流");
         table.put("Capturing. Find the problem, then come back to stop.",
                 "正在捕获。找到问题后返回此处即可停止.");
-        table.put("Changes in Hushfeed %1$s",
-                "Hushfeed %1$s 的变化");
+        table.put("Changes in Larpfeed %1$s",
+                "Larpfeed %1$s 的变化");
         table.put("Changes to %1$s at %2$s",
                 "更改为 %1$s（位于 %2$s）");
         table.put("Check for already-saved videos",
@@ -975,8 +975,8 @@ final class L10nTranslationsZh_Hans {
                 "复制昵称");
         table.put("Copy only the comment text when using TikTok's copy comment action.",
                 "使用 TikTok 的复制评论操作时仅复制评论文本.");
-        table.put("Copy or save which patches and options this Hushfeed was built with.",
-                "复制或保存构建此 Hushfeed 所使用的补丁和选项.");
+        table.put("Copy or save which patches and options this Larpfeed was built with.",
+                "复制或保存构建此 Larpfeed 所使用的补丁和选项.");
         table.put("Copy quick report",
                 "复制快速报告");
         table.put("Copy report",
@@ -1292,8 +1292,8 @@ final class L10nTranslationsZh_Hans {
     }
 
     private static void fill10(Map<String, String> table) {
-        table.put("Each area shows how many of the things Hushfeed looks for were found in this TikTok and how many are missing.",
-                "每个区域显示在这个 TikTok 中找到了 Hushfeed 寻找的东西以及丢失了多少东西.");
+        table.put("Each area shows how many of the things Larpfeed looks for were found in this TikTok and how many are missing.",
+                "每个区域显示在这个 TikTok 中找到了 Larpfeed 寻找的东西以及丢失了多少东西.");
         table.put("Earlier this session",
                 "本次会话中已结束的");
         table.put("Easier comment likes",
@@ -1503,8 +1503,8 @@ final class L10nTranslationsZh_Hans {
                 "忘记@%2$s 看过的视频.");
         table.put("Forget what has been counted today and end any hold. The budgets themselves are left alone.",
                 "忘记今天已计算的内容并结束任何保留。预算本身就不用管了.");
-        table.put("Forget which videos Hushfeed saved here, so the already-saved check starts over. The saved files and your settings stay. Turning the check off doesn't erase this record.",
-                "忘记 Hushfeed 保存在此处的视频，因此已保存的检查会重新开始。保存的文件和你的设置将保留。关闭检查并不会删除该记录.");
+        table.put("Forget which videos Larpfeed saved here, so the already-saved check starts over. The saved files and your settings stay. Turning the check off doesn't erase this record.",
+                "忘记 Larpfeed 保存在此处的视频，因此已保存的检查会重新开始。保存的文件和你的设置将保留。关闭检查并不会删除该记录.");
         table.put("Forgetting saved videos",
                 "忘记保存的视频");
         table.put("Forgotten. Tap to put them back.",
@@ -1644,8 +1644,8 @@ final class L10nTranslationsZh_Hans {
                 "隐藏 TikTok 搜索中的商店");
         table.put("Hide TikTok Shop posts from the feed, and the shop buttons under captions.",
                 "隐藏信息流中的 TikTok 商店帖子，以及说明文字下方的商店按钮.");
-        table.put("Hide TikTok's \"Search: ...\" banner above the comment count. This doesn't hide the comments or Hushfeed's comment-search box.",
-                "隐藏评论计数上方 TikTok 的“搜索：...”横幅。这不会隐藏评论或 Hushfeed 的评论搜索框.");
+        table.put("Hide TikTok's \"Search: ...\" banner above the comment count. This doesn't hide the comments or Larpfeed's comment-search box.",
+                "隐藏评论计数上方 TikTok 的“搜索：...”横幅。这不会隐藏评论或 Larpfeed 的评论搜索框.");
         table.put("Hide TikTok's Auto scroll button",
                 "隐藏 TikTok 的自动滚动按钮");
         table.put("Hide TikTok's short drama episodes and the cards that promote them.",
@@ -1834,8 +1834,8 @@ final class L10nTranslationsZh_Hans {
                 "隐藏全屏按钮");
         table.put("Hide the Full screen button over videos. Playback and automatic rotation keep working as before.",
                 "隐藏视频上的全屏按钮。播放和自动旋转继续像以前一样工作.");
-        table.put("Hide the Hushfeed row",
-                "隐藏 Hushfeed 入口");
+        table.put("Hide the Larpfeed row",
+                "隐藏 Larpfeed 入口");
         table.put("Hide the Inbox search button",
                 "隐藏收件箱搜索按钮");
         table.put("Hide the LIVE bubble",
@@ -2078,30 +2078,30 @@ final class L10nTranslationsZh_Hans {
                 "主信息流的浮动药丸在底栏内的高度。紧凑会在它周围露出更多视频。选项卡保持原来的大小和点按区域.");
         table.put("How wide each edge strip is, as a percent of the screen width.",
                 "每个边缘条的宽度，以屏幕宽度的百分比表示.");
-        table.put("Hushfeed",
-                "Hushfeed");
-        table.put("Hushfeed blocked TikTok's reports here. It hasn't confirmed that you stay off viewer lists.",
-                "Hushfeed 在此屏蔽了 TikTok 的报告。它尚未确认你是否不在观看者列表中.");
-        table.put("Hushfeed can't read the creator pattern %1$s",
-                "Hushfeed 无法读取创建者模式 %1$s");
-        table.put("Hushfeed is active",
-                "Hushfeed 处于活动状态");
-        table.put("Hushfeed is paused",
-                "Hushfeed 已暂停");
-        table.put("Hushfeed is paused. Ghost mode isn't active.",
-                "Hushfeed 已暂停。幽灵模式未激活.");
-        table.put("Hushfeed turns back on when TikTok restarts.",
-                "当 TikTok 重新启动时，Hushfeed 将重新打开.");
-        table.put("Hushfeed's downloader doesn't fill this in, so it's kept as typed: %1$s",
-                "Hushfeed 的下载器不会填写此内容，因此它保留为键入的内容：%1$s");
-        table.put("Hushfeed's downloader: %1$s",
-                "Hushfeed 的下载器：%1$s");
-        table.put("Hushfeed's switches are paused. Your settings stay saved. Changes made when you patched, like the app's name or icon, stay.",
-                "Hushfeed 的开关已暂停。你的设置将保持保存。修补时所做的更改（例如应用程序的名称或图标）将保留.");
+        table.put("Larpfeed",
+                "Larpfeed");
+        table.put("Larpfeed blocked TikTok's reports here. It hasn't confirmed that you stay off viewer lists.",
+                "Larpfeed 在此屏蔽了 TikTok 的报告。它尚未确认你是否不在观看者列表中.");
+        table.put("Larpfeed can't read the creator pattern %1$s",
+                "Larpfeed 无法读取创建者模式 %1$s");
+        table.put("Larpfeed is active",
+                "Larpfeed 处于活动状态");
+        table.put("Larpfeed is paused",
+                "Larpfeed 已暂停");
+        table.put("Larpfeed is paused. Ghost mode isn't active.",
+                "Larpfeed 已暂停。幽灵模式未激活.");
+        table.put("Larpfeed turns back on when TikTok restarts.",
+                "当 TikTok 重新启动时，Larpfeed 将重新打开.");
+        table.put("Larpfeed's downloader doesn't fill this in, so it's kept as typed: %1$s",
+                "Larpfeed 的下载器不会填写此内容，因此它保留为键入的内容：%1$s");
+        table.put("Larpfeed's downloader: %1$s",
+                "Larpfeed 的下载器：%1$s");
+        table.put("Larpfeed's switches are paused. Your settings stay saved. Changes made when you patched, like the app's name or icon, stay.",
+                "Larpfeed 的开关已暂停。你的设置将保持保存。修补时所做的更改（例如应用程序的名称或图标）将保留.");
         table.put("If that name is taken, Android adds a number to the new file.",
                 "如果该名称已被使用，Android 会向新文件添加一个数字.");
-        table.put("If that name is taken, Hushfeed adds a number to the new file.",
-                "如果该名称已被使用，Hushfeed 会向新文件添加一个数字.");
+        table.put("If that name is taken, Larpfeed adds a number to the new file.",
+                "如果该名称已被使用，Larpfeed 会向新文件添加一个数字.");
         table.put("If the video blinks as you swipe with See-through bottom bar on, this draws it inside TikTok instead of on a layer of its own. It can use a little more battery. Needs See-through bottom bar.",
                 "如果开启透明底栏后滑动时视频闪烁，此项会把视频直接绘制在 TikTok 内，而不是单独的图层上。可能会稍微多耗一点电。需要透明底栏.");
         table.put("Import a font file",
@@ -2191,8 +2191,8 @@ final class L10nTranslationsZh_Hans {
                 "照片保持 TikTok 发送时的格式");
         table.put("Keep playing in the background",
                 "继续在后台播放");
-        table.put("Keep playing in the background is on in Hushfeed's Playback settings, so TikTok gets 2 for this key and an override here has no effect until that switch is off.",
-                "在 Hushfeed 的播放设置中，“继续在后台播放”处于打开状态，因此 TikTok 该键的值为 2，并且在该开关关闭之前，此处的覆盖不会产生任何效果.");
+        table.put("Keep playing in the background is on in Larpfeed's Playback settings, so TikTok gets 2 for this key and an override here has no effect until that switch is off.",
+                "在 Larpfeed 的播放设置中，“继续在后台播放”处于打开状态，因此 TikTok 该键的值为 2，并且在该开关关闭之前，此处的覆盖不会产生任何效果.");
         table.put("Keep the Favorites tab",
                 "保留收藏夹选项卡");
         table.put("Keep the For You feed on your real SIM",
@@ -2449,8 +2449,8 @@ final class L10nTranslationsZh_Hans {
                 "长按“为你推荐”打开我的观看历史");
         table.put("Long press on Profile opens my watch history",
                 "长按“个人主页”打开我的观看历史");
-        table.put("Long-press Home for Hushfeed settings",
-                "长按 Home 进行 Hushfeed 设置");
+        table.put("Long-press Home for Larpfeed settings",
+                "长按 Home 进行 Larpfeed 设置");
         table.put("Long-press Inbox for read receipts",
                 "长按收件箱切换已读回执");
         table.put("Long-press Profile for Watch history",
@@ -2725,8 +2725,8 @@ final class L10nTranslationsZh_Hans {
                 "正常");
         table.put("Not a handle or id, so ignored: %1$s",
                 "不是句柄或 ID，因此被忽略：%1$s");
-        table.put("Not a part Hushfeed fills in, so it's kept as typed: %1$s",
-                "Hushfeed 部分未填写，因此保持键入的状态：%1$s");
+        table.put("Not a part Larpfeed fills in, so it's kept as typed: %1$s",
+                "Larpfeed 部分未填写，因此保持键入的状态：%1$s");
         table.put("Not available on this TikTok version",
                 "此 TikTok 版本不支持");
         table.put("Not blocked",
@@ -2784,8 +2784,8 @@ final class L10nTranslationsZh_Hans {
                 "关闭");
         table.put("Off forces the value to false, on forces it to true. Reset lets TikTok decide again.",
                 "Off 强制将值设置为 false，on 强制将值设置为 true。重置让 TikTok 再次决定.");
-        table.put("Off until you tap it. Wipes TikTok's data once, on the next start, and gives it a new Android ID and advertising ID, so it sees a phone it hasn't met. You'll be signed out and lose your drafts. Hushfeed's settings stay.",
-                "点按前不会生效. 在下次启动时清除一次 TikTok 的数据,并给它新的 Android ID 和广告 ID,让它看到一部没见过的手机. 你会退出登录并丢失草稿. Hushfeed 的设置会保留.");
+        table.put("Off until you tap it. Wipes TikTok's data once, on the next start, and gives it a new Android ID and advertising ID, so it sees a phone it hasn't met. You'll be signed out and lose your drafts. Larpfeed's settings stay.",
+                "点按前不会生效. 在下次启动时清除一次 TikTok 的数据,并给它新的 Android ID 和广告 ID,让它看到一部没见过的手机. 你会退出登录并丢失草稿. Larpfeed 的设置会保留.");
         table.put("Off, only its button closes it.",
                 "关闭后只能用它的按钮关闭.");
         table.put("Off. TikTok can report views and typing.",
@@ -2818,8 +2818,8 @@ final class L10nTranslationsZh_Hans {
                 "在主信息流上，一个凸起的玻璃气泡位于你所在的选项卡后面，并滑到你选择的下一个选项卡。需要液态玻璃外观.");
         table.put("On the main feed, slide a finger along the glass pill and the lens follows it. Let go and that tab opens. Taps and long presses work as before. Needs Glass lens on the current tab.",
                 "在主信息流上，手指沿玻璃药丸滑动，透镜会跟着手指移动。松开手指就会打开那个选项卡。点按和长按照常使用。需要当前选项卡上的玻璃透镜.");
-        table.put("On. Hushfeed hasn't seen TikTok send any reports since it started.",
-                "上。自启动以来，Hushfeed 尚未看到 TikTok 发送任何报告.");
+        table.put("On. Larpfeed hasn't seen TikTok send any reports since it started.",
+                "上。自启动以来，Larpfeed 尚未看到 TikTok 发送任何报告.");
         table.put("Once today's budget runs out, the hold stays and can't be dismissed. The budget settings are locked until the day starts over. Turn this off any time before the budget runs out.",
                 "一旦今天的预算用完，保留将继续存在且无法撤销。预算设置将被锁定，直到新的一天开始。在预算用完之前随时关闭此功能.");
         table.put("One area was checked and everything it needs is here.",
@@ -2860,8 +2860,8 @@ final class L10nTranslationsZh_Hans {
                 "仅这些字幕语言");
         table.put("Open",
                 "打开");
-        table.put("Open Hushfeed settings",
-                "打开 Hushfeed 设置");
+        table.put("Open Larpfeed settings",
+                "打开 Larpfeed 设置");
         table.put("Open TikTok on",
                 "打开 TikTok 于");
         table.put("Open a share sheet once, then return here to choose its actions.",
@@ -2893,10 +2893,10 @@ final class L10nTranslationsZh_Hans {
     private static void fill23(Map<String, String> table) {
         table.put("Open the feed anyway, the last time today",
                 "无论如何，今天最后一次打开信息流");
-        table.put("Open the feed once so Hushfeed can see which bottom tabs TikTok loaded.",
-                "打开一次信息流，以便 Hushfeed 可以看到 TikTok 加载了哪些底部选项卡.");
-        table.put("Open the feed once so Hushfeed can see which tabs TikTok loaded.",
-                "打开一次信息流，以便 Hushfeed 可以看到 TikTok 加载了哪些选项卡.");
+        table.put("Open the feed once so Larpfeed can see which bottom tabs TikTok loaded.",
+                "打开一次信息流，以便 Larpfeed 可以看到 TikTok 加载了哪些底部选项卡.");
+        table.put("Open the feed once so Larpfeed can see which tabs TikTok loaded.",
+                "打开一次信息流，以便 Larpfeed 可以看到 TikTok 加载了哪些选项卡.");
         table.put("Open the profile again and try once more",
                 "再次打开配置文件并再试一次");
         table.put("Open the search page",
@@ -2973,10 +2973,10 @@ final class L10nTranslationsZh_Hans {
                 "通过 TikTok 的安装检查");
         table.put("Pause",
                 "暂停");
-        table.put("Pause Hushfeed",
-                "暂停Hushfeed");
-        table.put("Pause Hushfeed's switches after TikTok restarts. Your settings stay saved. Changes made when you patched, like the app's name or icon, stay.",
-                "TikTok 重新启动后暂停 Hushfeed 的开关。你的设置将保持保存。修补时所做的更改（例如应用程序的名称或图标）将保留.");
+        table.put("Pause Larpfeed",
+                "暂停Larpfeed");
+        table.put("Pause Larpfeed's switches after TikTok restarts. Your settings stay saved. Changes made when you patched, like the app's name or icon, stay.",
+                "TikTok 重新启动后暂停 Larpfeed 的开关。你的设置将保持保存。修补时所做的更改（例如应用程序的名称或图标）将保留.");
         table.put("Pause the video while comments are open",
                 "评论开放时暂停视频");
         table.put("Paused",
@@ -3179,8 +3179,8 @@ final class L10nTranslationsZh_Hans {
                 "在个人资料、喜欢的或收藏夹网格中的每个视频上放置一个圆圈。选择 %1$s，然后点击“保存”将它们依次保存，并计数并取消.");
         table.put("Puts a save button in the sheet a story's Share button opens. It saves the story you're watching, and holding a story still pauses it.",
                 "在故事的共享按钮打开的工作表中放置一个保存按钮。它会保存你正在观看的故事，并且保留故事仍然会暂停它.");
-        table.put("Puts a ✓ by videos and photo posts you saved with Hushfeed, on profile grids and next to the time in the feed. Works only while Check for already-saved videos is on.",
-                "在你使用 Hushfeed 保存的视频和照片帖子旁边、个人资料网格上以及信息流中的时间旁边打上 ✓。仅当检查已保存的视频处于打开状态时才有效.");
+        table.put("Puts a ✓ by videos and photo posts you saved with Larpfeed, on profile grids and next to the time in the feed. Works only while Check for already-saved videos is on.",
+                "在你使用 Larpfeed 保存的视频和照片帖子旁边、个人资料网格上以及信息流中的时间旁边打上 ✓。仅当检查已保存的视频处于打开状态时才有效.");
         table.put("Puts your time zone after the time to the second, like EDT.",
                 "将你的时区置于时间之后，如 EDT.");
         table.put("Putting seen videos back",
@@ -3302,8 +3302,8 @@ final class L10nTranslationsZh_Hans {
                 "%1$d 秒后移除所有转发");
         table.put("Removing the kept messages",
                 "正在删除保留的消息");
-        table.put("Reopen Hushfeed settings, then choose the file",
-                "重新打开 Hushfeed 设置，然后选择文件");
+        table.put("Reopen Larpfeed settings, then choose the file",
+                "重新打开 Larpfeed 设置，然后选择文件");
         table.put("Replace values when TikTok asks for them",
                 "当 TikTok 要求时替换值");
         table.put("Replay a story from the start when it ends instead of moving to the next one. Tap or swipe to move on.",
@@ -3546,8 +3546,8 @@ final class L10nTranslationsZh_Hans {
                 "已保存的视频被遗忘。文件还在那里.");
         table.put("Saved videos put back",
                 "保存的视频放回");
-        table.put("Saved videos show the @username and the first line of the caption in the bottom left corner. The phone encodes the whole video again to do it, so saving takes longer. Applies to saves made by Hushfeed.",
-                "保存的视频在左下角显示@用户名和标题的第一行。手机会再次对整个视频进行编码来完成此操作，因此保存时间会更长。适用于 Hushfeed 进行的保存.");
+        table.put("Saved videos show the @username and the first line of the caption in the bottom left corner. The phone encodes the whole video again to do it, so saving takes longer. Applies to saves made by Larpfeed.",
+                "保存的视频在左下角显示@用户名和标题的第一行。手机会再次对整个视频进行编码来完成此操作，因此保存时间会更长。适用于 Larpfeed 进行的保存.");
         table.put("Saved, but a later save may make a second copy",
                 "已保存，但之后再保存可能产生第二份副本");
         table.put("Saved, override off",
@@ -3562,14 +3562,14 @@ final class L10nTranslationsZh_Hans {
                 "正在进行的保存");
         table.put("Saves subtitle (SRT) files with the video. They go to Movies on Android 11 and newer, Download on Android 10, and your video folder on older versions. On Android 11 and newer with Save details on, the video moves to Download or Documents and the subtitles stay in Movies.",
                 "与视频一起保存字幕 (SRT) 文件。他们会在 Android 11 及更高版本上转到“电影”，在 Android 10 上转到“下载”，在旧版本上会转到你的视频文件夹。在 Android 11 及更高版本上，如果打开“保存详细信息”，视频将移至“下载”或“文档”，而字幕仍保留在“电影”中.");
-        table.put("Saves the caption, creator, link and post date in a text file next to the video, or one file for a photo post's original photos. On Android 10 and later, they go in Download or Documents under the same folder name. Applies to saves made by Hushfeed.",
-                "将标题、创建者、链接和发布日期保存在视频旁边的文本文件中，图片帖子的原图则共用一个文件。在 Android 10 及更高版本上，它们会进入同一文件夹名称下的“下载”或“文档”。适用于 Hushfeed 进行的保存.");
+        table.put("Saves the caption, creator, link and post date in a text file next to the video, or one file for a photo post's original photos. On Android 10 and later, they go in Download or Documents under the same folder name. Applies to saves made by Larpfeed.",
+                "将标题、创建者、链接和发布日期保存在视频旁边的文本文件中，图片帖子的原图则共用一个文件。在 Android 10 及更高版本上，它们会进入同一文件夹名称下的“下载”或“文档”。适用于 Larpfeed 进行的保存.");
         table.put("Saves the details file in JSON format instead of plain text. Useful if another tool will read it.",
                 "以 JSON 格式而不是纯文本格式保存详细信息文件。如果其他工具可以读取它，则很有用.");
         table.put("Saves wait for Wi-Fi or another network that isn't metered, for up to 30 minutes, and stop if you leave it. Saving a frame still works anywhere.",
                 "保存会等待 Wi-Fi 或其他不计流量的网络，最多 30 分钟，离开该网络就会停止。保存画面在任何网络下都可以.");
-        table.put("Saves your Hushfeed settings and Feature Gate Lab rules to a file.",
-                "将 Hushfeed 设置和功能门实验室规则保存到文件中.");
+        table.put("Saves your Larpfeed settings and Feature Gate Lab rules to a file.",
+                "将 Larpfeed 设置和功能门实验室规则保存到文件中.");
         table.put("Saving",
                 "节省");
         table.put("Saving %1$s of %2$s",
@@ -3701,8 +3701,8 @@ final class L10nTranslationsZh_Hans {
                 "发送反馈");
         table.put("Sending the message",
                 "发送消息");
-        table.put("Sends TikTok's feed, search, comments and other app traffic through the proxy below. Videos and LIVE streams still connect directly. Saves and short-link lookups from Hushfeed also connect directly, after their own address checks. Other apps aren't affected.",
-                "通过下面的代理发送 TikTok 的信息流、搜索、评论和其他应用程序流量。视频和 LIVE 流仍然直接连接。在检查自己的地址后，来自 Hushfeed 的保存和短链接查找也会直接连接。其他应用程序不受影响.");
+        table.put("Sends TikTok's feed, search, comments and other app traffic through the proxy below. Videos and LIVE streams still connect directly. Saves and short-link lookups from Larpfeed also connect directly, after their own address checks. Other apps aren't affected.",
+                "通过下面的代理发送 TikTok 的信息流、搜索、评论和其他应用程序流量。视频和 LIVE 流仍然直接连接。在检查自己的地址后，来自 Larpfeed 的保存和短链接查找也会直接连接。其他应用程序不受影响.");
         table.put("Sends one message a day to each person below at the time below, so your streaks keep going on days you don't open TikTok.",
                 "每天在下面的时间向下面的每个人发送一条消息，这样你的连胜在你不打开 TikTok 的日子里会继续下去.");
         table.put("Sends today's message right away. The daily one then waits for tomorrow.",
@@ -4203,8 +4203,8 @@ final class L10nTranslationsZh_Hans {
                 "存储空间快满了，录制已保存到 %1$s");
         table.put("Store TikTok thinks it came from",
                 "TikTok 认为自己来自哪个商店");
-        table.put("Stores the caption, creator, post date and link inside the video file, where media players can read them. Applies to saves made by Hushfeed.",
-                "将标题、创建者、发布日期和链接存储在视频文件中，供媒体播放器读取。适用于 Hushfeed 进行的保存.");
+        table.put("Stores the caption, creator, post date and link inside the video file, where media players can read them. Applies to saves made by Larpfeed.",
+                "将标题、创建者、发布日期和链接存储在视频文件中，供媒体播放器读取。适用于 Larpfeed 进行的保存.");
         table.put("Stories",
                 "故事");
         table.put("Story",
@@ -4231,8 +4231,8 @@ final class L10nTranslationsZh_Hans {
                 "字幕");
         table.put("Subtitles: %1$s",
                 "字幕：%1$s");
-        table.put("Support Hushfeed",
-                "支持Hushfeed");
+        table.put("Support Larpfeed",
+                "支持Larpfeed");
         table.put("Swap the website in shared links",
                 "交换共享链接中的网站");
         table.put("Swipe for brightness and volume",
@@ -4250,8 +4250,8 @@ final class L10nTranslationsZh_Hans {
                 "系统");
         table.put("Tag saved videos with their details",
                 "为保存的视频添加详细信息标签");
-        table.put("Take Hushfeed out of TikTok's Settings and privacy. To open these settings, press and hold For You at the top of the feed, or Home if Long-press Home for Hushfeed settings is on.",
-                "从 TikTok 的“设置和隐私”中移除 Hushfeed。要打开这些设置，请长按信息流顶部的“为你”，如果已开启“长按 Home 进行 Hushfeed 设置”，也可以长按 Home.");
+        table.put("Take Larpfeed out of TikTok's Settings and privacy. To open these settings, press and hold For You at the top of the feed, or Home if Long-press Home for Larpfeed settings is on.",
+                "从 TikTok 的“设置和隐私”中移除 Larpfeed。要打开这些设置，请长按信息流顶部的“为你”，如果已开启“长按 Home 进行 Larpfeed 设置”，也可以长按 Home.");
         table.put("Take the Add comment bar off videos you open from a profile, a hashtag, a sound or search, so the video fills the screen down to the bottom. The comment button on the right still opens comments.",
                 "将添加评论栏从你从个人资料、主题标签、声音或搜索中打开的视频中删除，以便视频填满屏幕直至底部。右侧的评论按钮仍然可以打开评论.");
         table.put("Take the pulsing LIVE ring off profile pictures on the feed and in comments. Tapping the picture of a creator who's live opens their profile instead of the LIVE.",
@@ -4288,8 +4288,8 @@ final class L10nTranslationsZh_Hans {
                 "点击以开始信息流");
         table.put("Tap to start, then scroll until the feed problem shows up and come back here to save it. The file has no captions or names, and videos and creators appear only as short codes. Read it before you share it.",
                 "点击开始，然后滚动直到出现信息流问题，然后返回此处保存。该文件没有标题或名称，视频和创建者仅显示为短代码。在分享之前先阅读它.");
-        table.put("Tap, then go to the screen with what you want hidden. After %1$d seconds Hushfeed records how that screen is built, without any of its text, for the diagnostic report.",
-                "点击，然后转到包含你想要隐藏的内容的屏幕。 %1$d 秒后，Hushfeed 记录该屏幕的构建方式（不包含任何文本）以用于诊断报告.");
+        table.put("Tap, then go to the screen with what you want hidden. After %1$d seconds Larpfeed records how that screen is built, without any of its text, for the diagnostic report.",
+                "点击，然后转到包含你想要隐藏的内容的屏幕。 %1$d 秒后，Larpfeed 记录该屏幕的构建方式（不包含任何文本）以用于诊断报告.");
         table.put("Tapping a sticker someone sent you in a chat opens a box with Save media. Turn this off to skip it.",
                 "点按聊天中别人发来的贴纸会打开一个带有保存媒体的框。关闭此项即可跳过.");
         table.put("Tapping more under a video opens its comments with the whole caption at the top instead of spreading the caption over the video. A tap on the caption itself does the same. Photo posts keep TikTok's own page for this.",
@@ -4302,8 +4302,8 @@ final class L10nTranslationsZh_Hans {
                 "文字贴纸字");
         table.put("That JSON file doesn't contain the supported TikTok watch history.",
                 "该 JSON 文件不包含受支持的 TikTok 观看历史记录.");
-        table.put("That backup was written by a newer Hushfeed than this one. Nothing was altered.",
-                "该备份是由比这个更新的 Hushfeed 编写的。一切都没有改变.");
+        table.put("That backup was written by a newer Larpfeed than this one. Nothing was altered.",
+                "该备份是由比这个更新的 Larpfeed 编写的。一切都没有改变.");
         table.put("That creator is already in the list",
                 "该创建者已在列表中");
         table.put("That creator pattern could stall the feed, so it wasn't added: %1$s",
@@ -4312,8 +4312,8 @@ final class L10nTranslationsZh_Hans {
                 "该创建者模式太长，因此未添加：%1$s");
         table.put("That file has more than %1$s watch-history entries.",
                 "该文件具有超过 %1$s 观看历史记录条目.");
-        table.put("That file is larger than %1$s MB. Choose a seen-history file saved by Hushfeed.",
-                "该文件大于 %1$s MB。选择 Hushfeed 保存的查看历史记录文件.");
+        table.put("That file is larger than %1$s MB. Choose a seen-history file saved by Larpfeed.",
+                "该文件大于 %1$s MB。选择 Larpfeed 保存的查看历史记录文件.");
         table.put("That file is larger than %1$s MB. Choose a smaller font file.",
                 "该文件大于 %1$s MB。选择较小的字体文件.");
         table.put("That file is larger than %1$s MB. Choose a smaller watch-history export.",
@@ -4328,8 +4328,8 @@ final class L10nTranslationsZh_Hans {
                 "该文件不是可读文本，因此可能在传输过程中已损坏。一切都没有改变.");
         table.put("That file lists more than %1$s videos. Nothing was restored.",
                 "该文件列出了超过 %1$s 个视频。什么都没有恢复.");
-        table.put("That file was saved by a newer Hushfeed. Update Hushfeed, then try again.",
-                "该文件由较新的 Hushfeed 保存。更新 Hushfeed，然后重试.");
+        table.put("That file was saved by a newer Larpfeed. Update Larpfeed, then try again.",
+                "该文件由较新的 Larpfeed 保存。更新 Larpfeed，然后重试.");
         table.put("That folder name has a character Android doesn't allow. Use letters, numbers, spaces or dashes.",
                 "该文件夹名称包含 Android 不允许的字符。使用字母、数字、空格或破折号.");
         table.put("That is %1$d minutes today",
@@ -4340,10 +4340,10 @@ final class L10nTranslationsZh_Hans {
                 "这是今天的一分钟");
         table.put("That is one video today",
                 "这是今天的一个视频");
-        table.put("That isn't a Hushfeed settings backup. Nothing was altered.",
-                "这不是 Hushfeed 设置备份。一切都没有改变.");
-        table.put("That isn't a seen-history file saved by Hushfeed. For TikTok's own data export, use Import watch history.",
-                "这不是 Hushfeed 保存的可见历史文件。对于 TikTok 自己的数据导出，请使用导入观察历史记录.");
+        table.put("That isn't a Larpfeed settings backup. Nothing was altered.",
+                "这不是 Larpfeed 设置备份。一切都没有改变.");
+        table.put("That isn't a seen-history file saved by Larpfeed. For TikTok's own data export, use Import watch history.",
+                "这不是 Larpfeed 保存的可见历史文件。对于 TikTok 自己的数据导出，请使用导入观察历史记录.");
         table.put("That isn't an app name. Try something like com.example.downloader, or leave the box empty to keep saving in TikTok.",
                 "这不是应用程序名称。尝试类似 com.example.downloader 的内容，或者将框留空以继续保存在 TikTok 中.");
         table.put("That list has too many entries. Keep it to %1$s or fewer.",
@@ -4358,10 +4358,10 @@ final class L10nTranslationsZh_Hans {
                 "该预设无法识别。选择另一个.");
         table.put("That seen-history file is damaged or was edited. Nothing was restored.",
                 "该查看历史文件已损坏或已被编辑。什么都没有恢复.");
-        table.put("That settings backup contains a feed rule list larger than Hushfeed accepts. Nothing was altered.",
-                "该设置备份包含的信息流规则列表大于 Hushfeed 接受的大小。一切都没有改变.");
-        table.put("That settings backup holds a value Hushfeed can't read. Nothing was altered.",
-                "该设置备份保存的值 Hushfeed 无法读取。一切都没有改变.");
+        table.put("That settings backup contains a feed rule list larger than Larpfeed accepts. Nothing was altered.",
+                "该设置备份包含的信息流规则列表大于 Larpfeed 接受的大小。一切都没有改变.");
+        table.put("That settings backup holds a value Larpfeed can't read. Nothing was altered.",
+                "该设置备份保存的值 Larpfeed 无法读取。一切都没有改变.");
         table.put("That settings backup holds more Feature Gate Lab rules than the Lab takes. Nothing was altered.",
                 "该设置备份保存的功能门实验室规则多于实验室所占用的规则。一切都没有改变.");
     }
@@ -4373,8 +4373,8 @@ final class L10nTranslationsZh_Hans {
                 "该设置备份不完整，因此可能已被缩短。一切都没有改变.");
         table.put("That settings change didn't go through. Nothing was altered.",
                 "该设置更改没有完成。一切都没有改变.");
-        table.put("That sticker is in a format Hushfeed can't read",
-                "该贴纸的格式为 Hushfeed 无法读取");
+        table.put("That sticker is in a format Larpfeed can't read",
+                "该贴纸的格式为 Larpfeed 无法读取");
         table.put("That watch-history file is damaged. Nothing was imported.",
                 "该观看历史文件已损坏。没有进口任何东西.");
         table.put("The Activity row of likes and comments on your posts leaves the Inbox. Notifications about them still arrive.",
@@ -4397,8 +4397,8 @@ final class L10nTranslationsZh_Hans {
                 "新关注者行离开收件箱顶部。账号仍然跟着你.");
         table.put("The Tako assistant's conversation leaves the Inbox list. The Tako bubble on the feed has its own switch under Feed tabs.",
                 "Tako 助理的对话离开收件箱列表。 信息流上的 Tako 气泡在信息流选项卡下有自己的开关.");
-        table.put("The Translate comments button in a LIVE room also needs a Japanese SIM. Turn on Override SIM details in Hushfeed settings > Region, set SIM country preset to Japan, NTT DOCOMO (44010), then restart TikTok.",
-                "LIVE 直播间里的“翻译评论”按钮还需要日本 SIM 卡。在 Hushfeed 设置 > 地区中开启“覆盖 SIM 卡详细信息”，将“SIM 卡国家/地区预设”设为 Japan, NTT DOCOMO (44010)，然后重启 TikTok.");
+        table.put("The Translate comments button in a LIVE room also needs a Japanese SIM. Turn on Override SIM details in Larpfeed settings > Region, set SIM country preset to Japan, NTT DOCOMO (44010), then restart TikTok.",
+                "LIVE 直播间里的“翻译评论”按钮还需要日本 SIM 卡。在 Larpfeed 设置 > 地区中开启“覆盖 SIM 卡详细信息”，将“SIM 卡国家/地区预设”设为 Japan, NTT DOCOMO (44010)，然后重启 TikTok.");
         table.put("The accounts TikTok suggests you follow no longer take up rows in the Inbox.",
                 "TikTok 建议你关注的账号不再占用收件箱中的行.");
         table.put("The activity status control leaves the Inbox header. Whether others see you as active is unchanged.",
@@ -4445,8 +4445,8 @@ final class L10nTranslationsZh_Hans {
                 "当你返回应用程序时，信息流会等待一次点击，然后才会再次开始播放。消息、个人资料和搜索仍然只需轻轻一按即可完成.");
         table.put("The file app still has the last file. Try again once it lets go, or restart TikTok.",
                 "文件应用程序仍然保留着最后一个文件。松开后重试，或重新启动 TikTok.");
-        table.put("The file hushfeed-safe-mode couldn't be removed. Delete it from TikTok's folder under Android/data to turn Hushfeed back on.",
-                "无法删除文件 hushfeed-safe-mode。将其从 Android/data 下的 TikTok 文件夹中删除，以重新打开 Hushfeed.");
+        table.put("The file larpfeed-safe-mode couldn't be removed. Delete it from TikTok's folder under Android/data to turn Larpfeed back on.",
+                "无法删除文件 larpfeed-safe-mode。将其从 Android/data 下的 TikTok 文件夹中删除，以重新打开 Larpfeed.");
         table.put("The frame couldn't be read. Try again.",
                 "无法读取该框架。再试一次.");
         table.put("The frame couldn't be saved. Try again.",
@@ -4578,8 +4578,8 @@ final class L10nTranslationsZh_Hans {
                 "此文件不是加载值的导出文件");
         table.put("This gate type isn't supported",
                 "不支持此门类型");
-        table.put("This key isn't in Hushfeed's list, so its type can't be checked. Reset the override.",
-                "该键不在 Hushfeed 的列表中，因此无法检查其类型。重置覆盖.");
+        table.put("This key isn't in Larpfeed's list, so its type can't be checked. Reset the override.",
+                "该键不在 Larpfeed 的列表中，因此无法检查其类型。重置覆盖.");
         table.put("This key touches account safety. Forcing it can change login, region, payment or security checks.",
                 "这个键涉及账号安全。强制设置它可能会改变登录、地区、付款或安全检查.");
         table.put("This line opens a rule and doesn't finish it: %1$s. Write two phrases as \"a\" & \"b\" for both, or \"a\" !& \"b\" for the first without the second.",
@@ -4633,8 +4633,8 @@ final class L10nTranslationsZh_Hans {
                 "TikTok 检查它是如何签名和安装的。这将按照 Play 商店版本的方式回答这些检查。如果关注或喜欢在刷新后自行撤消，请尝试一下。它可能没有帮助，因为 TikTok 还有其他检查.");
         table.put("TikTok closed during these saves",
                 "TikTok 在这些保存期间关闭");
-        table.put("TikTok closed three times within a minute of starting, so Hushfeed paused itself. Your settings stay as they are.",
-                "TikTok 在启动后一分钟内关闭了 3 次，因此 Hushfeed 自行暂停。你的设置保持原样.");
+        table.put("TikTok closed three times within a minute of starting, so Larpfeed paused itself. Your settings stay as they are.",
+                "TikTok 在启动后一分钟内关闭了 3 次，因此 Larpfeed 自行暂停。你的设置保持原样.");
         table.put("TikTok closed. What was recorded is saved to %1$s",
                 "TikTok 已关闭。录制的内容保存到 %1$s");
         table.put("TikTok closes at %1$s",
@@ -4800,8 +4800,8 @@ final class L10nTranslationsZh_Hans {
                 "再试一次，或返回 TikTok.");
         table.put("Turn Clear display on or off",
                 "开启或关闭清除显示");
-        table.put("Turn Hushfeed back on",
-                "重新打开 Hushfeed");
+        table.put("Turn Larpfeed back on",
+                "重新打开 Larpfeed");
         table.put("Turn off double tap to react",
                 "关闭双击即可做出反应");
         table.put("Turn off haptics",
@@ -5024,8 +5024,8 @@ final class L10nTranslationsZh_Hans {
                 "体积");
         table.put("Wait a day to loosen the budget",
                 "等一天放松预算");
-        table.put("Wait a day to loosen the budget is on, so Hushfeed stays on",
-                "等待一天放松预算，所以 Hushfeed 保持不变");
+        table.put("Wait a day to loosen the budget is on, so Larpfeed stays on",
+                "等待一天放松预算，所以 Larpfeed 保持不变");
         table.put("Wait before hiding the controls.",
                 "隐藏控件之前请等待.");
         table.put("Wait for loading to finish",
@@ -5056,8 +5056,8 @@ final class L10nTranslationsZh_Hans {
                 "消息显示的内容.");
         table.put("What's new",
                 "有什么新消息");
-        table.put("When Copy link gives a short vt.tiktok.com or vm.tiktok.com link, Hushfeed opens it once in the background to find the full video link and copies that instead. TikTok sees that visit, and it connects directly even when a proxy is on. Links you send to another app go out as they were.",
-                "当“复制链接”提供简短的 vt.tiktok.com 或 vm.tiktok.com 链接时，Hushfeed 在后台打开一次以找到完整的视频链接并复制该链接。 TikTok 看到该访问，即使代理打开，它也会直接连接。你发送到另一个应用程序的链接将按原样消失.");
+        table.put("When Copy link gives a short vt.tiktok.com or vm.tiktok.com link, Larpfeed opens it once in the background to find the full video link and copies that instead. TikTok sees that visit, and it connects directly even when a proxy is on. Links you send to another app go out as they were.",
+                "当“复制链接”提供简短的 vt.tiktok.com 或 vm.tiktok.com 链接时，Larpfeed 在后台打开一次以找到完整的视频链接并复制该链接。 TikTok 看到该访问，即使代理打开，它也会直接连接。你发送到另一个应用程序的链接将按原样消失.");
         table.put("When TikTok is in dark mode, the list of collections you get by holding the Favorites button is dark too instead of white.",
                 "当 TikTok 处于深色模式时，你通过按住“收藏夹”按钮获得的收藏列表也是深色的，而不是白色的.");
         table.put("When TikTok requests this key, return the selected value below",
@@ -5086,8 +5086,8 @@ final class L10nTranslationsZh_Hans {
                 "时间显示位置");
         table.put("While Clear display is on, also hide the progress bar, the close button and the pause and speed buttons at the bottom. You can still drag along the bottom edge to move through the video. To leave Clear display, press and hold the video and tap Restore display, or pinch the screen.",
                 "启用“清晰显示”时，还隐藏底部的进度条、关闭按钮以及暂停和速度按钮。你仍然可以沿着底部边缘拖动以在视频中移动。要离开清晰显示，请按住视频并点击恢复显示，或捏合屏幕.");
-        table.put("While diagnostic logging is on, a message names the part of Hushfeed that failed. Off keeps failures in the report only.",
-                "当诊断日志记录打开时，一条消息会指出 Hushfeed 失败的部分。关闭仅在报告中保留失败.");
+        table.put("While diagnostic logging is on, a message names the part of Larpfeed that failed. Off keeps failures in the report only.",
+                "当诊断日志记录打开时，一条消息会指出 Larpfeed 失败的部分。关闭仅在报告中保留失败.");
         table.put("While you hold a video, slide left or right to step through the speed menu's speeds, and a bubble shows the one you're on. Your next hold starts there. Letting go goes back to normal. A pull-down lock keeps the speed you slid to. On a locked video, letting go locks the new speed.",
                 "按住视频时向左或向右滑动，可在速度菜单的各个速度之间切换，气泡会显示当前速度。下次按住时从这个速度开始。松手后恢复正常。下拉锁定会保留你滑到的速度。在已锁定的视频上，松手会锁定新的速度.");
         table.put("White",
@@ -5177,8 +5177,8 @@ final class L10nTranslationsZh_Hans {
                 "在导入完成之前，你看到的历史记录发生了变化。再次选择该文件.");
         table.put("Your settings",
                 "你的设置");
-        table.put("Zero means no limit. Counts the videos Hushfeed advanced past for you, not the ones you swiped yourself, and starts again when the feed is rebuilt or you change this number.",
-                "零意味着没有限制。计算 Hushfeed 为你提前过去的视频，而不是你自己刷过的视频，并在重建信息流或你更改此数字时重新开始.");
+        table.put("Zero means no limit. Counts the videos Larpfeed advanced past for you, not the ones you swiped yourself, and starts again when the feed is rebuilt or you change this number.",
+                "零意味着没有限制。计算 Larpfeed 为你提前过去的视频，而不是你自己刷过的视频，并在重建信息流或你更改此数字时重新开始.");
         table.put("Zero means the way out of the hold is always there. Any other number is how many times a day it works. Once they're used up, the hold stays until the day starts over. Ignored while the budget is locked, which removes the way out.",
                 "零意味着脱离困境的出路始终存在。任何其他数字都是每天工作的次数。一旦用完，保留就会一直保留到新的一天开始。在预算被锁定时被忽略，从而消除了出路.");
         table.put("Zero shows the notice and leaves the feed alone. Anything else covers the feed for that many minutes once a budget is reached. Messages, profiles and search keep working, and nothing in the feed is thrown away.",
@@ -5189,8 +5189,8 @@ final class L10nTranslationsZh_Hans {
                 "零将其关闭。屏幕在这么多分钟内没有被触摸时，视频会停止，TikTok 会转到后台，适合看着看着睡着的时候。任何触摸都会重新开始等待.");
         table.put("Zero switches this off. Count the minutes the player spends running in the feed. Time on messages, a profile or search doesn't count.",
                 "零将其关闭。计算玩家在信息流中运行的分钟数。消息、个人资料或搜索的时间不计算在内.");
-        table.put("Zero switches this off. Counts every video that comes up in the feed and tells you when you reach the limit. Separate from the auto-advance session limit under Playback, which counts only videos Hushfeed moved past for you.",
-                "零将其关闭。计算信息流中出现的每个视频，并在达到限制时告诉你。与“播放”下的自动前进会话限制分开，后者仅计算为你移动过去的视频 Hushfeed.");
+        table.put("Zero switches this off. Counts every video that comes up in the feed and tells you when you reach the limit. Separate from the auto-advance session limit under Playback, which counts only videos Larpfeed moved past for you.",
+                "零将其关闭。计算信息流中出现的每个视频，并在达到限制时告诉你。与“播放”下的自动前进会话限制分开，后者仅计算为你移动过去的视频 Larpfeed.");
         table.put("autoplay auto play",
                 "自动播放");
         table.put("collapsed",

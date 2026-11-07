@@ -1,6 +1,6 @@
 /*
- * Copyright 2026 Hushfeed contributors
- * https://github.com/SysAdminDoc/hushfeed
+ * Copyright 2026 Larpfeed contributors
+ * https://github.com/SysAdminDoc/larpfeed
  */
 package app.morphe.patches.tiktok.misc.settings
 
@@ -33,8 +33,8 @@ private const val KEPT_LAUNCH_CRASH_PREFERENCES = "launch_crash_intercept_sp"
  * The static initialiser that builds the keep-list of TikTok's launch-crash cleanup.
  *
  * <p>On the third launch crash in a row, TikTok deletes every file in `shared_prefs` whose name
- * isn't on this list (`X.03JS` on 47.0.3, `X.0CpP` on 46.2.3). Hushfeed's settings weren't on
- * it, so a crash loop erased all of them one start before Hushfeed's safe mode could pause
+ * isn't on this list (`X.03JS` on 47.0.3, `X.0CpP` on 46.2.3). Larpfeed's settings weren't on
+ * it, so a crash loop erased all of them one start before Larpfeed's safe mode could pause
  * anything. TikTok's SafeMode dialog runs the same deletion when its clean button is pressed.
  */
 internal object LaunchCrashKeepListFingerprint : Fingerprint(
@@ -45,14 +45,14 @@ internal object LaunchCrashKeepListFingerprint : Fingerprint(
 )
 
 /**
- * Adds Hushfeed's preferences files to the keep-list [clinit] builds.
+ * Adds Larpfeed's preferences files to the keep-list [clinit] builds.
  *
  * <p>The list is the first `String[]` stored after TikTok's own launch-crash preferences are
  * named, and it has to be the one a method of the same class reads while walking `shared_prefs`.
  * That is checked before anything is written, so a build where the arrays moved refuses instead
  * of extending a list nothing reads.
  */
-internal fun keepHushfeedPreferenceFiles(clinit: MutableMethod, ownerMethods: Iterable<Method>) {
+internal fun keepLarpfeedPreferenceFiles(clinit: MutableMethod, ownerMethods: Iterable<Method>) {
     val instructions = clinit.implementationOrPatchException(CONTRACT).instructions.toList()
     val nameIndex = instructions.indexOfFirst {
         it.getReference<StringReference>()?.string == KEPT_LAUNCH_CRASH_PREFERENCES
@@ -77,7 +77,7 @@ internal fun keepHushfeedPreferenceFiles(clinit: MutableMethod, ownerMethods: It
     clinit.addInstructionsAtControlFlowLabel(
         storeIndex,
         """
-            invoke-static/range { v$register .. v$register }, $LAUNCH_CRASH_CLEANUP_CLASS_DESCRIPTOR->keepHushfeedFiles([Ljava/lang/String;)[Ljava/lang/String;
+            invoke-static/range { v$register .. v$register }, $LAUNCH_CRASH_CLEANUP_CLASS_DESCRIPTOR->keepLarpfeedFiles([Ljava/lang/String;)[Ljava/lang/String;
             move-result-object v$register
         """,
     )

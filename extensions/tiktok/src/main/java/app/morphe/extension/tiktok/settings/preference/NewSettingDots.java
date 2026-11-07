@@ -1,6 +1,6 @@
 /*
- * Copyright 2026 Hushfeed contributors
- * https://github.com/SysAdminDoc/hushfeed
+ * Copyright 2026 Larpfeed contributors
+ * https://github.com/SysAdminDoc/larpfeed
  */
 package app.morphe.extension.tiktok.settings.preference;
 
@@ -39,7 +39,7 @@ import app.morphe.extension.tiktok.settings.L10n;
  * <p>Anything that goes wrong shows no dot.
  */
 final class NewSettingDots {
-    static final String FILE = "hushfeed_new_dots";
+    static final String FILE = "larpfeed_new_dots";
     static final String SEEN = "seen";
     /** Marks a title that wears the dot, so a recycled row can lose it and a test can find it. */
     static final int TAG = 0x7f7f4008;

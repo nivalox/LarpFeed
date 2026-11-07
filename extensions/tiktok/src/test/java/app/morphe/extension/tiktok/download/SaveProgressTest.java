@@ -1,6 +1,6 @@
 /*
- * Copyright 2026 Hushfeed contributors
- * https://github.com/SysAdminDoc/hushfeed
+ * Copyright 2026 Larpfeed contributors
+ * https://github.com/SysAdminDoc/larpfeed
  */
 package app.morphe.extension.tiktok.download;
 
@@ -216,14 +216,14 @@ public class SaveProgressTest {
             ViewGroup root = feed.findViewById(android.R.id.content);
             SaveProgress next = SaveProgress.begin(4);
             settle();
-            View row = root.findViewWithTag("hushfeed_save_progress");
+            View row = root.findViewWithTag("larpfeed_save_progress");
             assertNotNull("the feed's save has a row", row);
             assertEquals("and it can be seen", View.VISIBLE, row.getVisibility());
-            assertNull("no line counts rows nobody can see", root.findViewWithTag("hushfeed_save_waiting"));
+            assertNull("no line counts rows nobody can see", root.findViewWithTag("larpfeed_save_waiting"));
             next.run(index -> { });
             for (SaveProgress progress : left) progress.run(index -> { });
             idle();
-            assertNull(root.findViewWithTag("hushfeed_save_progress"));
+            assertNull(root.findViewWithTag("larpfeed_save_progress"));
         }
     }
 
@@ -409,7 +409,7 @@ public class SaveProgressTest {
             finishFirst.countDown();
             waitFor(ended, 1);
             idle();
-            assertNull("the row stayed after the save", root.findViewWithTag("hushfeed_save_progress"));
+            assertNull("the row stayed after the save", root.findViewWithTag("larpfeed_save_progress"));
             assertEquals(2, said.size());
         }
     }
@@ -434,7 +434,7 @@ public class SaveProgressTest {
             cancel.performClick();
             idle();
             assertEquals("Save cancelled. Nothing was saved.", ShadowToast.getTextOfLatestToast());
-            assertNull("the cancelled save's row stayed", root.findViewWithTag("hushfeed_save_progress"));
+            assertNull("the cancelled save's row stayed", root.findViewWithTag("larpfeed_save_progress"));
             assertEquals(1, ended.get());
             assertFalse(job.waiting());
             assertEquals(0, MediaJobScheduler.queuedJobs());
@@ -501,15 +501,15 @@ public class SaveProgressTest {
             try {
                 assertEquals(3, visibleRows(root).size());
                 assertEquals("One more save waiting",
-                        ((TextView) root.findViewWithTag("hushfeed_save_waiting")).getText().toString());
-                View line = root.findViewWithTag("hushfeed_save_waiting_row");
+                        ((TextView) root.findViewWithTag("larpfeed_save_waiting")).getText().toString());
+                View line = root.findViewWithTag("larpfeed_save_waiting_row");
                 assertNotNull("nothing in sight can cancel the save in line", line);
                 TextView cancel = find(line, "Cancel");
                 assertNotNull("the line has no Cancel", cancel);
                 cancel.performClick();
                 idle();
                 assertEquals("Save cancelled. Nothing was saved.", ShadowToast.getTextOfLatestToast());
-                assertNull("the line stayed after its save left", root.findViewWithTag("hushfeed_save_waiting"));
+                assertNull("the line stayed after its save left", root.findViewWithTag("larpfeed_save_waiting"));
             } finally {
                 finish.countDown();
             }
@@ -536,7 +536,7 @@ public class SaveProgressTest {
             }
             settle();
             assertEquals(3, visibleRows(root).size());
-            TextView line = root.findViewWithTag("hushfeed_save_waiting");
+            TextView line = root.findViewWithTag("larpfeed_save_waiting");
             assertNotNull("nothing counts the rows out of sight", line);
             assertEquals("2 more saves waiting", line.getText().toString());
             assertEquals("each row in sight and the line are said once",
@@ -548,13 +548,13 @@ public class SaveProgressTest {
             idle();
             assertEquals(3, visibleRows(root).size());
             assertNotNull("the next row came into sight", visible(find(root, "Waiting to save 6 files")));
-            assertEquals("One more save waiting", ((TextView) root.findViewWithTag("hushfeed_save_waiting")).getText().toString());
+            assertEquals("One more save waiting", ((TextView) root.findViewWithTag("larpfeed_save_waiting")).getText().toString());
             assertEquals("the row that came up is said, the shorter count is not",
                     List.of("Waiting to save 6 files"), said);
 
             clickCancelOf(root, "Waiting to save 4 files");
             idle();
-            assertNull("the line stayed with nothing out of sight", root.findViewWithTag("hushfeed_save_waiting"));
+            assertNull("the line stayed with nothing out of sight", root.findViewWithTag("larpfeed_save_waiting"));
             assertEquals(3, visibleRows(root).size());
             for (MediaJobScheduler.Job job : jobs) job.cancel();
             idle();
@@ -575,7 +575,7 @@ public class SaveProgressTest {
 
     private static View rowOf(View view) {
         View at = view;
-        while (at != null && !"hushfeed_save_progress".equals(at.getTag())) at = (View) at.getParent();
+        while (at != null && !"larpfeed_save_progress".equals(at.getTag())) at = (View) at.getParent();
         return at;
     }
 
@@ -588,12 +588,12 @@ public class SaveProgressTest {
         List<View> rows = new ArrayList<>();
         for (int index = 0; index < root.getChildCount(); index++) {
             View child = root.getChildAt(index);
-            if ("hushfeed_save_progress".equals(child.getTag()) && child.getVisibility() == View.VISIBLE) rows.add(child);
+            if ("larpfeed_save_progress".equals(child.getTag()) && child.getVisibility() == View.VISIBLE) rows.add(child);
         }
         return rows;
     }
 
-    /** What the queue says in each language Hushfeed ships, with a count of one in each. */
+    /** What the queue says in each language Larpfeed ships, with a count of one in each. */
     private static final String[][] LOCALES = {
             {"en", "Waiting to save 3 files", "One more save waiting",
                     "Waiting to save video\nStarts after one other save",
@@ -639,7 +639,7 @@ public class SaveProgressTest {
                 }
                 settle();
                 assertNotNull(locale[0] + " row", find(root, locale[1]));
-                TextView line = root.findViewWithTag("hushfeed_save_waiting");
+                TextView line = root.findViewWithTag("larpfeed_save_waiting");
                 assertEquals(locale[0], locale[2], line.getText().toString());
 
                 clickCancelOf(root, locale[1]);
@@ -737,7 +737,7 @@ public class SaveProgressTest {
                 settle();
                 assertNotNull(find(root, "Saving 1 of " + files));
                 assertNull("A one-photo job must not be named video", find(root, "Saving video"));
-                View row = root.findViewWithTag("hushfeed_save_progress");
+                View row = root.findViewWithTag("larpfeed_save_progress");
                 assertNotNull(row);
                 assertFalse("File counts must not pretend to stream byte progress",
                         containsProgressBar(row));
@@ -752,7 +752,7 @@ public class SaveProgressTest {
                 drainPool();
                 idle();
                 assertEquals("Only the file already under way may finish", List.of(0), ran);
-                assertNull(root.findViewWithTag("hushfeed_save_progress"));
+                assertNull(root.findViewWithTag("larpfeed_save_progress"));
             }
         }
     }

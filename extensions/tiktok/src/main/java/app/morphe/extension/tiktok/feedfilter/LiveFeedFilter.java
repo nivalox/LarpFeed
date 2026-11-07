@@ -1,6 +1,6 @@
 /*
- * Copyright 2026 Hushfeed contributors
- * https://github.com/SysAdminDoc/hushfeed
+ * Copyright 2026 Larpfeed contributors
+ * https://github.com/SysAdminDoc/larpfeed
  */
 package app.morphe.extension.tiktok.feedfilter;
 
@@ -446,7 +446,7 @@ public final class LiveFeedFilter {
             // reader never turned off.
             boolean saved = Settings.LIVE_FEED_FILTER.savedValue();
             lines.add("Filter the LIVE feed: " + (saved ? "on" : "off"));
-            if (saved && !Settings.LIVE_FEED_FILTER.get()) lines.add("Hushfeed is paused, so the LIVE feed is as TikTok sends it");
+            if (saved && !Settings.LIVE_FEED_FILTER.get()) lines.add("Larpfeed is paused, so the LIVE feed is as TikTok sends it");
             lines.add("LIVE feed pages since TikTok started: " + PAGES.get());
             lines.add("Of them, LIVE rows outside the feed (Following, Inbox, pushes), blocked creators only: " + FOLLOW_ROW_PAGES.get());
             lines.add("Rooms checked: " + ROOMS.get() + ", hidden: " + HIDDEN.get());

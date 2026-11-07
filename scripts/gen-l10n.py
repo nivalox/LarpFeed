@@ -216,8 +216,8 @@ def class_name(lang):
 
 HEADER = [
     "/*",
-    " * Copyright 2026 Hushfeed contributors",
-    " * https://github.com/SysAdminDoc/hushfeed",
+    " * Copyright 2026 Larpfeed contributors",
+    " * https://github.com/SysAdminDoc/larpfeed",
     " *",
     " * Built on icysymmetra/tiktok-patches-for-morphe (GPL-3.0).",
     " */",

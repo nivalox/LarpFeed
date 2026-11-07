@@ -1,6 +1,6 @@
 /*
- * Copyright 2026 Hushfeed contributors
- * https://github.com/SysAdminDoc/hushfeed
+ * Copyright 2026 Larpfeed contributors
+ * https://github.com/SysAdminDoc/larpfeed
  */
 package app.morphe.patches.tiktok.interaction.exactcounts
 
@@ -84,7 +84,7 @@ internal val COMPACT_COUNT_FORMATTERS = 4..5
 val showExactCountsPatch = bytecodePatch(
     name = "Show exact counts",
     description = "Shows likes, comments and other counts as full numbers, like 1,234,567 " +
-        "instead of 1.2M. Starts off. Turn it on in Hushfeed settings > Feed screen.",
+        "instead of 1.2M. Starts off. Turn it on in Larpfeed settings > Feed screen.",
     default = true,
 ) {
     category("Feed")

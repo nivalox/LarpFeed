@@ -223,7 +223,7 @@ public class DebugCaptureTest {
         assertFalse(BaseSettings.DEBUG.get());
     }
 
-    @Test public void aCaptureLogsWhileHushfeedIsPaused() {
+    @Test public void aCaptureLogsWhileLarpfeedIsPaused() {
         PausedProcess.set(true);
         DebugCapture.start();
 

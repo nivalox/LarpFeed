@@ -86,7 +86,7 @@ source,target
 %1$s watched video added.,Đã thêm video đã xem %1$s.
 %1$s watched videos added.,Đã thêm các video đã xem %1$s.
 %1$s were already saved,%1$s đã được lưu trước đó
-%1$s · Hushfeed's list only,%1$s · Chỉ danh sách của Hushfeed
+%1$s · Larpfeed's list only,%1$s · Chỉ danh sách của Larpfeed
 %1$s · current value only,%1$s · Chỉ giá trị hiện tại
 %1$s · declared by TikTok,%1$s · Do TikTok công bố
 "%1$s · declared by TikTok, with a current value","%1$s · Do TikTok công bố, kèm theo giá trị hiện tại"
@@ -131,7 +131,7 @@ A diagnostic report is already being saved,Báo cáo chẩn đoán đang đượ
 "A different account is signed in. Switch back to the one you set this up on, or enter who to message again.","Một tài khoản khác đã đăng nhập. Hãy chuyển lại tài khoản bạn đã thiết lập tính năng này, hoặc nhập lại người cần nhắn tin."
 A double tap on a message no longer adds a heart to it. A single tap and a long press work as before.,Chạm đúp vào tin nhắn sẽ không còn thả tim nữa. Chạm một lần và nhấn giữ vẫn hoạt động như trước.
 A few seconds,Vài giây
-A file named hushfeed-safe-mode in TikTok's folder under Android/data paused Hushfeed. Your settings stay as they are.,Một tệp có tên hushfeed-safe-mode trong thư mục của TikTok dưới Android/data đã tạm dừng Hushfeed. Cài đặt của bạn được giữ nguyên.
+A file named larpfeed-safe-mode in TikTok's folder under Android/data paused Larpfeed. Your settings stay as they are.,Một tệp có tên larpfeed-safe-mode trong thư mục của TikTok dưới Android/data đã tạm dừng Larpfeed. Cài đặt của bạn được giữ nguyên.
 A forced value applies to this copy of TikTok whichever account is signed in. It can't get past a check the server makes.,Giá trị bắt buộc áp dụng cho bản sao TikTok này bất kể tài khoản nào đăng nhập. Nó không thể vượt qua một số kiểm tra từ máy chủ.
 "A good place to stop, if you want one.","Một nơi tuyệt vời để dừng lại, nếu bạn muốn."
 "A green square in the top corner while TikTok has the camera open, and an orange diamond while it records sound. They go when the access ends.",Hình vuông màu xanh lá cây ở góc trên khi TikTok mở máy ảnh và hình thoi màu cam khi ghi âm. Chúng sẽ biến mất khi kết thúc quyền truy cập.
@@ -157,7 +157,7 @@ AI chat,Trò chuyện AI
 AI-generated posts,Bài đăng do AI tạo
 About,Giới thiệu
 About %1$s of storage at this limit,Khoảng %1$s dung lượng lưu trữ ở giới hạn này
-About Hushfeed,Giới thiệu về Hushfeed
+About Larpfeed,Giới thiệu về Larpfeed
 About overrides,Giới thiệu về các ghi đè
 "Above moves the caption and the buttons up a little so the time fits over the right end of the bar. When something else is in the way, the time goes beside the bar.","Tùy chọn Phía trên dịch chuyển chú thích và các nút lên trên một chút để thời gian hiển thị vừa vặn ở đầu bên phải của thanh tiến trình. Khi có thành phần khác cản trở, thời gian sẽ tự động chuyển sang hiển thị bên cạnh thanh tiến trình."
 Above the bar,Phía trên thanh tiến trình
@@ -174,8 +174,8 @@ Add a button beside the block control to send feedback about the current video.,
 Add a button that hides the current creator on this phone without blocking them.,Thêm một nút ẩn nhà sáng tạo hiện tại trên điện thoại này mà không cần chặn họ.
 Add a creator,Thêm nhà sáng tạo
 "Add a line along the bottom of a sound's cover while its preview plays, with the time played and the preview's length. Tap or drag it to move through the preview.","Thêm một đường dọc theo cạnh dưới của bìa âm thanh khi phát bản xem trước, hiển thị thời gian đã phát và độ dài bản xem trước. Chạm hoặc kéo thanh đó để di chuyển trong bản xem trước."
-Add a seen-history file saved by Hushfeed to the videos @%1$s has seen. A video in both keeps the newer date.,Thêm tệp lịch sử đã xem được lưu bởi Hushfeed vào danh sách video mà @%1$s đã xem. Video xuất hiện ở cả hai sẽ giữ lại mốc thời gian mới hơn.
-Add a seen-history file saved by Hushfeed to this account's seen videos. A video in both keeps the newer date.,Thêm tệp lịch sử đã xem được lưu bởi Hushfeed vào danh sách video đã xem của tài khoản này. Video xuất hiện ở cả hai sẽ giữ lại mốc thời gian mới hơn.
+Add a seen-history file saved by Larpfeed to the videos @%1$s has seen. A video in both keeps the newer date.,Thêm tệp lịch sử đã xem được lưu bởi Larpfeed vào danh sách video mà @%1$s đã xem. Video xuất hiện ở cả hai sẽ giữ lại mốc thời gian mới hơn.
+Add a seen-history file saved by Larpfeed to this account's seen videos. A video in both keeps the newer date.,Thêm tệp lịch sử đã xem được lưu bởi Larpfeed vào danh sách video đã xem của tài khoản này. Video xuất hiện ở cả hai sẽ giữ lại mốc thời gian mới hơn.
 Add a separate button that skips videos using the current sound.,Thêm một nút riêng biệt để bỏ qua các video sử dụng âm thanh hiện tại.
 "Add a thin line along the bottom of a video story that you can drag to go back or skip ahead. The time shows while you drag, and a tap on it still moves between stories.",Thêm một đường mảnh dọc theo cạnh dưới của tin (story) video mà bạn có thể kéo để tua lại hoặc tua tới. Thời gian sẽ hiển thị khi bạn kéo và chạm vào đó vẫn giúp chuyển đổi giữa các tin.
 Add apps to Share via,Thêm ứng dụng vào mục Chia sẻ qua
@@ -342,7 +342,7 @@ Captions,Phụ đề
 Capture crash reports locally,Lưu cục bộ báo cáo sự cố
 Capture the feed,Thu thập bảng tin
 "Capturing. Find the problem, then come back to stop.","Đang ghi lại. Hãy tìm sự cố, sau đó quay lại để dừng."
-Changes in Hushfeed %1$s,Thay đổi trong Hushfeed %1$s
+Changes in Larpfeed %1$s,Thay đổi trong Larpfeed %1$s
 Changes to %1$s at %2$s,Thay đổi thành %1$s lúc %2$s
 Check for already-saved videos,Kiểm tra các video đã lưu trước đó
 Check the brackets and quotes in this JSON,Kiểm tra dấu ngoặc và dấu nháy trong JSON này
@@ -411,7 +411,7 @@ Copy bio and IDs,Sao chép tiểu sử và ID
 Copy build details,Sao chép chi tiết bản dựng
 Copy comments without username,Sao chép bình luận không kèm tên người dùng
 Copy only the comment text when using TikTok's copy comment action.,Chỉ sao chép nội dung bình luận khi sử dụng thao tác sao chép bình luận của TikTok.
-Copy or save which patches and options this Hushfeed was built with.,Sao chép hoặc lưu các bản vá và tùy chọn đã được sử dụng để xây dựng Hushfeed này.
+Copy or save which patches and options this Larpfeed was built with.,Sao chép hoặc lưu các bản vá và tùy chọn đã được sử dụng để xây dựng Larpfeed này.
 Copy quick report,Sao chép báo cáo nhanh
 Copy report,Sao chép báo cáo
 Copy the full link for short links,Sao chép liên kết đầy đủ cho liên kết rút gọn
@@ -554,7 +554,7 @@ Drag up or down along the left or right edge of a video to change what that edge
 Drama and Series,Phim ngắn và Phim bộ
 "Draw a larger handle and a slightly thicker line on the progress bar, so it's easier to see where you are.",Vẽ một tay cầm lớn hơn và một đường thanh tiến trình dày hơn một chút để bạn dễ dàng nhận biết vị trí hiện tại.
 "Draw the main feed's floating pill as glass, lighter and more see-through, with a bright rim along its top edge. Needs Floating bottom bar.","Thiết kế thanh viên thuốc nổi của bảng tin chính theo hiệu ứng kính, nhạt màu và trong suốt hơn với viền sáng dọc theo mép trên. Yêu cầu bật Thanh nổi dưới cùng."
-Each area shows how many of the things Hushfeed looks for were found in this TikTok and how many are missing.,Mỗi khu vực hiển thị số lượng mục mà Hushfeed tìm kiếm có trong TikTok này và số lượng bị thiếu.
+Each area shows how many of the things Larpfeed looks for were found in this TikTok and how many are missing.,Mỗi khu vực hiển thị số lượng mục mà Larpfeed tìm kiếm có trong TikTok này và số lượng bị thiếu.
 Earlier this session,Đã hoàn thành trong phiên này
 Easier comment likes,Thích bình luận dễ dàng hơn
 Edge strip width,Độ rộng dải cạnh
@@ -655,7 +655,7 @@ Forget the %1$s videos @%2$s has seen.,Quên %1$s video mà @%2$s đã xem.
 Forget the seen video.,Quên video đã xem.
 Forget the video @%2$s has seen.,Quên video mà @%2$s đã xem.
 Forget what has been counted today and end any hold. The budgets themselves are left alone.,Quên những gì đã tính toán trong hôm nay và kết thúc mọi trạng thái giữ. Ngân sách cốt lõi vẫn được giữ nguyên.
-"Forget which videos Hushfeed saved here, so the already-saved check starts over. The saved files and your settings stay. Turning the check off doesn't erase this record.","Quên các video mà Hushfeed đã lưu tại đây, để quá trình kiểm tra video đã lưu bắt đầu lại từ đầu. Các tệp đã lưu và cài đặt của bạn vẫn được giữ nguyên. Tắt tính năng kiểm tra sẽ không xóa bản ghi này."
+"Forget which videos Larpfeed saved here, so the already-saved check starts over. The saved files and your settings stay. Turning the check off doesn't erase this record.","Quên các video mà Larpfeed đã lưu tại đây, để quá trình kiểm tra video đã lưu bắt đầu lại từ đầu. Các tệp đã lưu và cài đặt của bạn vẫn được giữ nguyên. Tắt tính năng kiểm tra sẽ không xóa bản ghi này."
 Forgetting saved videos,Đang xóa bộ nhớ video đã lưu
 Forgotten. Tap to put them back.,Đã xóa khỏi bộ nhớ. Chạm để khôi phục lại.
 Found %1$s in your chats.,Đã tìm thấy %1$s trong các đoạn chat của bạn.
@@ -722,7 +722,7 @@ Hide Thoughts on profiles,Ẩn mục Suy nghĩ trên trang cá nhân
 Hide TikTok Shop,Ẩn TikTok Shop
 Hide TikTok Shop in search,Ẩn TikTok Shop trong kết quả tìm kiếm
 "Hide TikTok Shop posts from the feed, and the shop buttons under captions.",Ẩn các bài đăng TikTok Shop khỏi bảng tin và các nút mua sắm bên dưới chú thích.
-"Hide TikTok's ""Search: ..."" banner above the comment count. This doesn't hide the comments or Hushfeed's comment-search box.","Ẩn biểu ngữ ""Tìm kiếm: ..."" của TikTok phía trên số lượng bình luận. Thao tác này không ẩn các bình luận hay hộp tìm kiếm bình luận của Hushfeed."
+"Hide TikTok's ""Search: ..."" banner above the comment count. This doesn't hide the comments or Larpfeed's comment-search box.","Ẩn biểu ngữ ""Tìm kiếm: ..."" của TikTok phía trên số lượng bình luận. Thao tác này không ẩn các bình luận hay hộp tìm kiếm bình luận của Larpfeed."
 Hide TikTok's Auto scroll button,Ẩn nút Tự động cuộn của TikTok
 Hide TikTok's short drama episodes and the cards that promote them.,Ẩn các tập phim ngắn của TikTok và thẻ quảng cáo phim.
 Hide TikTok's wind-down screens,Ẩn màn hình nhắc nhở nghỉ ngơi của TikTok
@@ -804,7 +804,7 @@ Hide the Clear display controls,Ẩn các điều khiển xóa hiển thị
 Hide the Footnotes banner TikTok shows on a video that has a note attached. The video and its comments stay as they are.,Ẩn biểu ngữ Chú thích mà TikTok hiển thị trên video có đính kèm ghi chú. Video và phần bình luận được giữ nguyên.
 Hide the Full screen button,Ẩn nút Toàn màn hình
 Hide the Full screen button over videos. Playback and automatic rotation keep working as before.,Ẩn nút toàn màn hình trên video. Quá trình phát và tự động xoay màn hình vẫn hoạt động bình thường như trước.
-Hide the Hushfeed row,Ẩn mục Hushfeed
+Hide the Larpfeed row,Ẩn mục Larpfeed
 Hide the Inbox search button,Ẩn nút tìm kiếm trong Hộp thư đến
 Hide the LIVE bubble,Ẩn bong bóng LIVE
 Hide the LIVE button,Ẩn nút LIVE
@@ -915,18 +915,18 @@ How much the video behind the glass pill on the main feed is blurred.,Mức đ�
 How round the main feed's floating pill and its glass lens are. Fully round gives them half circle ends.,Độ bo tròn của thanh viên thuốc nổi và kính lúp dạng kính trên bảng tin chính. Tùy chọn Bo tròn hoàn toàn sẽ làm cho hai đầu thành hình bán nguyệt.
 How tall the main feed's floating pill is inside the bar. Compact leaves more of the video showing around it. The tabs keep their size and their taps.,Chiều cao của thanh viên thuốc nổi trên bảng tin chính bên trong thanh điều hướng. Tùy chọn Nhỏ gọn sẽ hiển thị nhiều không gian video xung quanh hơn. Các thẻ vẫn giữ nguyên kích thước và vùng chạm.
 "How wide each edge strip is, as a percent of the screen width.","Độ rộng của từng dải mép màn hình, tính theo tỷ lệ phần trăm chiều rộng màn hình."
-Hushfeed,Hushfeed
-Hushfeed blocked TikTok's reports here. It hasn't confirmed that you stay off viewer lists.,Hushfeed đã chặn các báo cáo của TikTok tại đây. Tính năng này chưa xác nhận việc bạn có bị loại hoàn toàn khỏi danh sách người xem hay không.
-Hushfeed can't read the creator pattern %1$s,Hushfeed không thể đọc mẫu nhà sáng tạo %1$s
-Hushfeed is active,Hushfeed đang hoạt động
-Hushfeed is paused,Hushfeed đã tạm dừng
-Hushfeed is paused. Ghost mode isn't active.,Hushfeed đã tạm dừng. Chế độ ẩn danh (Ghost mode) không hoạt động.
-Hushfeed turns back on when TikTok restarts.,Hushfeed sẽ bật trở lại khi TikTok khởi động lại.
-"Hushfeed's downloader doesn't fill this in, so it's kept as typed: %1$s","Trình tải xuống của Hushfeed không điền thông tin này, nên được giữ nguyên theo nội dung đã nhập: %1$s"
-Hushfeed's downloader: %1$s,Trình tải xuống của Hushfeed: %1$s
-"Hushfeed's switches are paused. Your settings stay saved. Changes made when you patched, like the app's name or icon, stay.",Các công tắc của Hushfeed đã tạm dừng. Cài đặt của bạn vẫn được lưu. Các thay đổi khi vá (như tên hoặc biểu tượng ứng dụng) vẫn được giữ nguyên.
+Larpfeed,Larpfeed
+Larpfeed blocked TikTok's reports here. It hasn't confirmed that you stay off viewer lists.,Larpfeed đã chặn các báo cáo của TikTok tại đây. Tính năng này chưa xác nhận việc bạn có bị loại hoàn toàn khỏi danh sách người xem hay không.
+Larpfeed can't read the creator pattern %1$s,Larpfeed không thể đọc mẫu nhà sáng tạo %1$s
+Larpfeed is active,Larpfeed đang hoạt động
+Larpfeed is paused,Larpfeed đã tạm dừng
+Larpfeed is paused. Ghost mode isn't active.,Larpfeed đã tạm dừng. Chế độ ẩn danh (Ghost mode) không hoạt động.
+Larpfeed turns back on when TikTok restarts.,Larpfeed sẽ bật trở lại khi TikTok khởi động lại.
+"Larpfeed's downloader doesn't fill this in, so it's kept as typed: %1$s","Trình tải xuống của Larpfeed không điền thông tin này, nên được giữ nguyên theo nội dung đã nhập: %1$s"
+Larpfeed's downloader: %1$s,Trình tải xuống của Larpfeed: %1$s
+"Larpfeed's switches are paused. Your settings stay saved. Changes made when you patched, like the app's name or icon, stay.",Các công tắc của Larpfeed đã tạm dừng. Cài đặt của bạn vẫn được lưu. Các thay đổi khi vá (như tên hoặc biểu tượng ứng dụng) vẫn được giữ nguyên.
 "If that name is taken, Android adds a number to the new file.","Nếu tên đó đã tồn tại, Android sẽ thêm một số vào tệp mới."
-"If that name is taken, Hushfeed adds a number to the new file.","Nếu tên đó đã tồn tại, Hushfeed sẽ thêm một số vào tệp mới."
+"If that name is taken, Larpfeed adds a number to the new file.","Nếu tên đó đã tồn tại, Larpfeed sẽ thêm một số vào tệp mới."
 Import a font file,Nhập tệp phông chữ
 Import finished,Nhập hoàn tất
 Import loaded values,Nhập các giá trị đã tải
@@ -964,7 +964,7 @@ Keep offline videos out of the feed,Không hiển thị video ngoại tuyến tr
 Keep offline videos until you delete them,Giữ video ngoại tuyến cho đến khi bạn tự xóa
 Keep photos as TikTok sent them,Ảnh giữ nguyên định dạng TikTok gửi
 Keep playing in the background,Tiếp tục phát ở nền
-"Keep playing in the background is on in Hushfeed's Playback settings, so TikTok gets 2 for this key and an override here has no effect until that switch is off.","Tiếp tục phát ở nền đang bật trong cài đặt Phát của Hushfeed, do đó TikTok nhận giá trị 2 cho khóa này và ghi đè ở đây sẽ không có hiệu lực cho đến khi tắt công tắc đó."
+"Keep playing in the background is on in Larpfeed's Playback settings, so TikTok gets 2 for this key and an override here has no effect until that switch is off.","Tiếp tục phát ở nền đang bật trong cài đặt Phát của Larpfeed, do đó TikTok nhận giá trị 2 cho khóa này và ghi đè ở đây sẽ không có hiệu lực cho đến khi tắt công tắc đó."
 Keep the Favorites tab,Giữ thẻ Yêu thích
 Keep the For You feed on your real SIM,Giữ mục Dành cho bạn trên SIM thực của bạn
 Keep the LIVE quality after TikTok restarts,Giữ nguyên chất lượng LIVE sau khi TikTok khởi động lại
@@ -1086,7 +1086,7 @@ Logging until %1$s. Tap to stop now.,Đang ghi nhật ký cho đến %1$s. Chạ
 "Logging, hook status and reports","Nhật ký, trạng thái hook và báo cáo"
 "Logs for 15 minutes, then stops on its own. Restarting TikTok doesn't move the end, and the switch above stays as you set it.",Ghi nhật ký trong 15 phút rồi tự động dừng. Việc khởi động lại TikTok không làm thay đổi thời gian kết thúc và công tắc phía trên vẫn giữ nguyên như bạn đã đặt.
 Long press,Nhấn giữ
-Long-press Home for Hushfeed settings,Nhấn giữ nút Trang chủ để vào cài đặt Hushfeed
+Long-press Home for Larpfeed settings,Nhấn giữ nút Trang chủ để vào cài đặt Larpfeed
 Long-press Profile for Watch history,Nhấn giữ trang cá nhân để xem Lịch sử xem
 "Long-press a bio to copy it. A profile's share sheet gets buttons that copy its username and user ID, and a video's share sheet one that copies the video ID. On a LIVE profile card, long-press the name, username or bio to copy it, or tap the copy mark by the username.","Nhấn giữ tiểu sử để sao chép. Bảng chia sẻ trang cá nhân sẽ có các nút sao chép tên người dùng và ID người dùng, bảng chia sẻ video có nút sao chép ID video. Trên thẻ trang cá nhân LIVE, nhấn giữ tên, tên người dùng hoặc tiểu sử để sao chép, hoặc chạm vào biểu tượng sao chép bên cạnh tên người dùng."
 Long-press menu on every post,Menu nhấn giữ trên mọi bài đăng
@@ -1213,7 +1213,7 @@ None of these gates takes a true or false value,Không cổng nào nhận giá t
 None recorded,Không ghi lại được gì
 Normal,Bình thường
 "Not a handle or id, so ignored: %1$s",Không phải handle hoặc ID nên bị bỏ qua: %1$s
-"Not a part Hushfeed fills in, so it's kept as typed: %1$s","Không phải phần Hushfeed tự điền, nên được giữ nguyên theo nội dung đã nhập: %1$s"
+"Not a part Larpfeed fills in, so it's kept as typed: %1$s","Không phải phần Larpfeed tự điền, nên được giữ nguyên theo nội dung đã nhập: %1$s"
 Not blocked,Không bị chặn
 Not interested in this video,Không quan tâm đến video này
 Not read yet,Chưa đọc
@@ -1251,7 +1251,7 @@ On or off,Bật hoặc tắt
 "On the main feed, a light tick each time the glass lens passes a tab, as it slides after a tap or under your finger. Needs Glass lens on the current tab.","Trên bảng tin chính, máy sẽ rung nhẹ mỗi khi kính lúp trượt qua một thẻ (khi chạm hoặc trượt ngón tay). Yêu cầu bật Kính lúp dạng kính trên thẻ hiện tại."
 "On the main feed, a raised bubble of glass sits behind the tab you're on and slides to the next tab you pick. Needs Liquid glass look.","Trên bảng tin chính, một bong bóng kính nổi sẽ nằm phía sau thẻ bạn đang chọn và trượt sang thẻ tiếp theo bạn bấm. Yêu cầu bật Giao diện kính lỏng (Liquid glass)."
 "On the main feed, slide a finger along the glass pill and the lens follows it. Let go and that tab opens. Taps and long presses work as before. Needs Glass lens on the current tab.","Trên bảng tin chính, vuốt ngón tay dọc theo thanh viên thuốc bằng kính và kính lúp sẽ trượt theo. Thả tay ra để mở thẻ đó. Thao tác chạm và nhấn giữ vẫn hoạt động như trước. Yêu cầu bật Kính lúp dạng kính trên thẻ hiện tại."
-On. Hushfeed hasn't seen TikTok send any reports since it started.,Bật. Hushfeed chưa thấy TikTok gửi bất kỳ báo cáo nào kể từ khi khởi động.
+On. Larpfeed hasn't seen TikTok send any reports since it started.,Bật. Larpfeed chưa thấy TikTok gửi bất kỳ báo cáo nào kể từ khi khởi động.
 "Once today's budget runs out, the hold stays and can't be dismissed. The budget settings are locked until the day starts over. Turn this off any time before the budget runs out.","Một khi ngân sách hôm nay dùng hết, trạng thái tạm giữ sẽ tiếp tục duy trì và không thể bỏ qua. Cài đặt ngân sách sẽ bị khóa cho đến khi bắt đầu ngày mới. Hãy tắt tính năng này bất kỳ lúc nào trước khi hết ngân sách."
 One area was checked and everything it needs is here.,Đã kiểm tra một khu vực và mọi thứ cần thiết đều có ở đây.
 One at a time,Một tệp mỗi lần
@@ -1272,7 +1272,7 @@ Only tabs TikTok has loaded on this device are shown here. This doesn't force un
 Only the first %1$s characters of the sample were checked.,Chỉ có %1$s ký tự đầu tiên của mẫu được kiểm tra.
 Only these caption languages,Chỉ các ngôn ngữ phụ đề này
 Open,Mở
-Open Hushfeed settings,Mở cài đặt Hushfeed
+Open Larpfeed settings,Mở cài đặt Larpfeed
 Open TikTok on,Mở TikTok tại
 "Open a share sheet once, then return here to choose its actions.",Hãy mở bảng chia sẻ một lần rồi quay lại đây để chọn các thao tác cho nó.
 Open and close TikTok's screens without their slide. Swipes inside a screen still follow your finger.,Mở và đóng các màn hình của TikTok mà không có hiệu ứng trượt. Các thao tác vuốt bên trong màn hình vẫn đi theo ngón tay của bạn.
@@ -1287,8 +1287,8 @@ Open the comments at full height,Mở bảng bình luận toàn màn hình
 Open the feed anyway,Vẫn mở bảng tin
 "Open the feed anyway, %1$d left today","Vẫn mở bảng tin, hôm nay còn lại %1$d lần"
 "Open the feed anyway, the last time today","Vẫn mở bảng tin, lần cuối cùng trong hôm nay"
-Open the feed once so Hushfeed can see which bottom tabs TikTok loaded.,Mở bảng tin một lần để Hushfeed có thể nhận diện các thẻ dưới cùng mà TikTok đã tải.
-Open the feed once so Hushfeed can see which tabs TikTok loaded.,Mở bảng tin một lần để Hushfeed có thể nhận diện các thẻ mà TikTok đã tải.
+Open the feed once so Larpfeed can see which bottom tabs TikTok loaded.,Mở bảng tin một lần để Larpfeed có thể nhận diện các thẻ dưới cùng mà TikTok đã tải.
+Open the feed once so Larpfeed can see which tabs TikTok loaded.,Mở bảng tin một lần để Larpfeed có thể nhận diện các thẻ mà TikTok đã tải.
 Open the profile again and try once more,Hãy mở lại trang cá nhân và thử lại một lần nữa
 Open the search page,Mở trang tìm kiếm
 Open the story again and try once more,Hãy mở lại tin (story) và thử lại một lần nữa
@@ -1325,8 +1325,8 @@ Own profile counts,Số liệu trang cá nhân của bạn
 Paid partnerships,Hợp tác trả phí
 Pass TikTok's install checks,Vượt qua các kiểm tra cài đặt của TikTok
 Pause,Tạm dừng
-Pause Hushfeed,Tạm dừng Hushfeed
-"Pause Hushfeed's switches after TikTok restarts. Your settings stay saved. Changes made when you patched, like the app's name or icon, stay.",Tạm dừng các công tắc của Hushfeed sau khi TikTok khởi động lại. Cài đặt của bạn vẫn được lưu. Các thay đổi thực hiện khi vá (như tên hoặc biểu tượng ứng dụng) vẫn được giữ nguyên.
+Pause Larpfeed,Tạm dừng Larpfeed
+"Pause Larpfeed's switches after TikTok restarts. Your settings stay saved. Changes made when you patched, like the app's name or icon, stay.",Tạm dừng các công tắc của Larpfeed sau khi TikTok khởi động lại. Cài đặt của bạn vẫn được lưu. Các thay đổi thực hiện khi vá (như tên hoặc biểu tượng ứng dụng) vẫn được giữ nguyên.
 Pause the video while comments are open,Tạm dừng video khi đang mở phần bình luận
 Paused,Đã tạm dừng
 Pauses the video behind the comment sheet while you read. It plays on from the same spot when the sheet closes.,Tạm dừng video phía sau bảng bình luận trong khi bạn đọc. Video sẽ tiếp tục phát từ vị trí đó khi đóng bảng bình luận.
@@ -1419,7 +1419,7 @@ Put every setting back to its default straight away. Your current settings are k
 Put the comment search away,Thu gọn tìm kiếm bình luận
 "Puts a circle on each video in a profile, Liked or Favorites grid. Pick up to %1$s, then tap Save to save them one after another, with a count and Cancel.","Hiển thị một hình tròn trên mỗi video trong lưới trang cá nhân, video đã thích hoặc danh sách yêu thích. Chọn tối đa %1$s, sau đó chạm Lưu để lưu lần lượt từng video kèm số lượng và nút Hủy."
 "Puts a save button in the sheet a story's Share button opens. It saves the story you're watching, and holding a story still pauses it.",Thêm nút lưu vào bảng mở ra khi nhấn nút Chia sẻ của tin (story). Nút này giúp lưu tin bạn đang xem và việc nhấn giữ tin vẫn giữ chức năng tạm dừng.
-"Puts a ✓ by videos and photo posts you saved with Hushfeed, on profile grids and next to the time in the feed. Works only while Check for already-saved videos is on.",Hiển thị dấu ✓ bên cạnh các video và bài đăng ảnh bạn đã lưu bằng Hushfeed trên lưới trang cá nhân và bên cạnh mốc thời gian trên bảng tin. Chỉ hoạt động khi tính năng Kiểm tra các video đã lưu trước đó đang bật.
+"Puts a ✓ by videos and photo posts you saved with Larpfeed, on profile grids and next to the time in the feed. Works only while Check for already-saved videos is on.",Hiển thị dấu ✓ bên cạnh các video và bài đăng ảnh bạn đã lưu bằng Larpfeed trên lưới trang cá nhân và bên cạnh mốc thời gian trên bảng tin. Chỉ hoạt động khi tính năng Kiểm tra các video đã lưu trước đó đang bật.
 "Puts your time zone after the time to the second, like EDT.","Hiển thị múi giờ của bạn chính xác đến từng giây phía sau mốc thời gian, ví dụ như EDT."
 Putting seen videos back,Đang khôi phục lại các video đã xem
 Putting the saved videos back,Đang khôi phục lại các video đã lưu
@@ -1469,7 +1469,7 @@ Removed: %1$d,Đã xóa: %1$d
 "Removed: %1$d. The other %2$d are still there. Open your Inbox, then try again.",Đã xóa: %1$d. Còn %2$d tin nhắn khác vẫn ở đó. Vui lòng mở Hộp thư đến rồi thử lại.
 Removes every message that was kept. Each chat shows TikTok's usual notice that a message was unsent.,Xóa tất cả các tin nhắn đã được giữ lại. Mỗi khung chat sẽ hiển thị thông báo quen thuộc của TikTok rằng một tin nhắn đã bị thu hồi.
 Removing the kept messages,Đang xóa các tin nhắn được giữ lại
-"Reopen Hushfeed settings, then choose the file","Mở lại cài đặt Hushfeed, sau đó chọn tệp"
+"Reopen Larpfeed settings, then choose the file","Mở lại cài đặt Larpfeed, sau đó chọn tệp"
 Replace values when TikTok asks for them,Thay thế các giá trị khi TikTok yêu cầu
 Replay a story from the start when it ends instead of moving to the next one. Tap or swipe to move on.,Phát lại tin (story) từ đầu khi kết thúc thay vì chuyển sang tin tiếp theo. Chạm hoặc vuốt để chuyển tiếp.
 Replay in the background,Phát lại ở nền
@@ -1586,7 +1586,7 @@ Saved the photos as a video in %1$s,Đã lưu các ảnh dưới dạng video tr
 "Saved to %1$s, but without sound","Đã lưu vào %1$s, nhưng không có âm thanh"
 Saved videos forgotten. The files are still there.,Đã xóa lịch sử ghi nhớ các video đã lưu. Các tệp vẫn còn nguyên trên máy.
 Saved videos put back,Đã khôi phục lại các video đã lưu
-"Saved videos show the @username and the first line of the caption in the bottom left corner. The phone encodes the whole video again to do it, so saving takes longer. Applies to saves made by Hushfeed.",Các video đã lưu sẽ hiển thị @username và dòng đầu tiên của chú thích ở góc dưới bên trái. Điện thoại sẽ mã hóa lại toàn bộ video để thực hiện việc này nên thời gian lưu sẽ lâu hơn. Áp dụng cho các lượt lưu do Hushfeed thực hiện.
+"Saved videos show the @username and the first line of the caption in the bottom left corner. The phone encodes the whole video again to do it, so saving takes longer. Applies to saves made by Larpfeed.",Các video đã lưu sẽ hiển thị @username và dòng đầu tiên của chú thích ở góc dưới bên trái. Điện thoại sẽ mã hóa lại toàn bộ video để thực hiện việc này nên thời gian lưu sẽ lâu hơn. Áp dụng cho các lượt lưu do Larpfeed thực hiện.
 "Saved, but a later save may make a second copy","Đã lưu, nhưng lần sau có thể tạo bản thứ hai"
 "Saved, override off","Đã lưu, tắt ghi đè"
 Saved. Restart TikTok to apply this.,Đã lưu. Khởi động lại TikTok để áp dụng.
@@ -1594,10 +1594,10 @@ Saves TikTok's latest crash report on this phone so it can go in the diagnostic 
 Saves at once,Số lượt lưu đồng thời
 Saves right now,Các lượt lưu đang thực hiện
 "Saves subtitle (SRT) files with the video. They go to Movies on Android 11 and newer, Download on Android 10, and your video folder on older versions. On Android 11 and newer with Save details on, the video moves to Download or Documents and the subtitles stay in Movies.","Lưu tệp phụ đề (SRT) cùng với video. Tệp sẽ lưu vào thư mục Phim (Movies) trên Android 11 trở lên, thư mục Tải xuống (Download) trên Android 10 và thư mục video của bạn trên các bản cũ hơn. Trên Android 11 trở lên nếu bật Lưu chi tiết, video sẽ chuyển sang Tải xuống hoặc Tài liệu còn phụ đề vẫn ở thư mục Phim."
-"Saves the caption, creator, link and post date in a text file next to the video, or one file for a photo post's original photos. On Android 10 and later, they go in Download or Documents under the same folder name. Applies to saves made by Hushfeed.","Lưu chú thích, nhà sáng tạo, liên kết và ngày đăng trong một tệp văn bản bên cạnh video, hoặc chung một tệp cho các ảnh gốc của bài đăng ảnh. Trên Android 10 trở lên, chúng nằm trong Tải xuống hoặc Tài liệu dưới cùng tên thư mục. Áp dụng cho các lượt lưu do Hushfeed thực hiện."
+"Saves the caption, creator, link and post date in a text file next to the video, or one file for a photo post's original photos. On Android 10 and later, they go in Download or Documents under the same folder name. Applies to saves made by Larpfeed.","Lưu chú thích, nhà sáng tạo, liên kết và ngày đăng trong một tệp văn bản bên cạnh video, hoặc chung một tệp cho các ảnh gốc của bài đăng ảnh. Trên Android 10 trở lên, chúng nằm trong Tải xuống hoặc Tài liệu dưới cùng tên thư mục. Áp dụng cho các lượt lưu do Larpfeed thực hiện."
 Saves the details file in JSON format instead of plain text. Useful if another tool will read it.,Lưu tệp chi tiết dưới dạng định dạng JSON thay vì văn bản thuần túy. Hữu ích nếu bạn muốn đọc dữ liệu bằng công cụ khác.
 "Saves wait for Wi-Fi or another network that isn't metered, for up to 30 minutes, and stop if you leave it. Saving a frame still works anywhere.",Tiến trình lưu sẽ chờ mạng Wi-Fi hoặc mạng không tính phí dữ liệu trong tối đa 30 phút và sẽ dừng lại nếu bạn ngắt kết nối. Việc lưu khung hình vẫn hoạt động ở mọi mạng.
-Saves your Hushfeed settings and Feature Gate Lab rules to a file.,Lưu cài đặt Hushfeed và các quy tắc Feature Gate Lab của bạn vào một tệp.
+Saves your Larpfeed settings and Feature Gate Lab rules to a file.,Lưu cài đặt Larpfeed và các quy tắc Feature Gate Lab của bạn vào một tệp.
 Saving,Đang lưu
 Saving %1$s of %2$s,Đang lưu %1$s/%2$s
 Saving %1$s of %2$s: %3$s,Đang lưu %1$s/%2$s: %3$s
@@ -1661,7 +1661,7 @@ Send it now,Gửi ngay bây giờ
 Send links to another app,Gửi liên kết sang ứng dụng khác
 Sending feedback,Đang gửi phản hồi
 Sending the message,Đang gửi tin nhắn
-"Sends TikTok's feed, search, comments and other app traffic through the proxy below. Videos and LIVE streams still connect directly. Saves and short-link lookups from Hushfeed also connect directly, after their own address checks. Other apps aren't affected.","Gửi lưu lượng truy cập bảng tin, tìm kiếm, bình luận và các dữ liệu ứng dụng khác của TikTok qua proxy bên dưới. Video và luồng LIVE vẫn kết nối trực tiếp. Các lượt lưu và tra cứu liên kết rút gọn từ Hushfeed cũng kết nối trực tiếp sau khi tự kiểm tra địa chỉ. Các ứng dụng khác không bị ảnh hưởng."
+"Sends TikTok's feed, search, comments and other app traffic through the proxy below. Videos and LIVE streams still connect directly. Saves and short-link lookups from Larpfeed also connect directly, after their own address checks. Other apps aren't affected.","Gửi lưu lượng truy cập bảng tin, tìm kiếm, bình luận và các dữ liệu ứng dụng khác của TikTok qua proxy bên dưới. Video và luồng LIVE vẫn kết nối trực tiếp. Các lượt lưu và tra cứu liên kết rút gọn từ Larpfeed cũng kết nối trực tiếp sau khi tự kiểm tra địa chỉ. Các ứng dụng khác không bị ảnh hưởng."
 "Sends one message a day to each person below at the time below, so your streaks keep going on days you don't open TikTok.","Gửi một tin nhắn mỗi ngày cho mỗi người bên dưới vào thời gian đã chọn, giúp duy trì chuỗi tin nhắn liên tục (streak) vào những ngày bạn không mở TikTok."
 Sends today's message right away. The daily one then waits for tomorrow.,Gửi ngay tin nhắn của ngày hôm nay. Tin nhắn hàng ngày sau đó sẽ chờ đến ngày mai.
 Sent to %1$d/%2$d chats. The rest still need a message.,Đã gửi tới %1$d/%2$d đoạn chat. Các đoạn chat còn lại vẫn cần gửi tin nhắn.
@@ -1897,7 +1897,7 @@ Stops TikTok from reading your phone's motion and compass sensors. Apps can use 
 "Stops websites you open from inside TikTok from reaching back into the app. TikTok's own pages, such as Activity center, Watch history, shop checkout and CAPTCHA, keep working.","Ngăn các trang web bạn mở từ bên trong TikTok truy cập ngược lại vào ứng dụng. Các trang riêng của TikTok như Trung tâm hoạt động, Lịch sử xem, Thanh toán shop và CAPTCHA vẫn hoạt động bình thường."
 Storage almost full. Recording saved to %1$s,Bộ nhớ gần đầy. Đã lưu bản ghi vào %1$s
 Store TikTok thinks it came from,Cửa hàng ứng dụng mà TikTok nhận diện nguồn nguồn cài đặt
-"Stores the caption, creator, post date and link inside the video file, where media players can read them. Applies to saves made by Hushfeed.","Lưu chú thích, nhà sáng tạo, ngày đăng và liên kết trực tiếp vào bên trong tệp video để trình phát phương tiện có thể đọc được. Áp dụng cho các lượt lưu do Hushfeed thực hiện."
+"Stores the caption, creator, post date and link inside the video file, where media players can read them. Applies to saves made by Larpfeed.","Lưu chú thích, nhà sáng tạo, ngày đăng và liên kết trực tiếp vào bên trong tệp video để trình phát phương tiện có thể đọc được. Áp dụng cho các lượt lưu do Larpfeed thực hiện."
 Stories,Tin (Stories)
 Story,Tin (Story)
 Story position,Vị trí tin (story)
@@ -1911,7 +1911,7 @@ Subscriber-only posts,Bài đăng dành riêng cho người đăng ký
 Subtitle language,Ngôn ngữ phụ đề
 Subtitles,Phụ đề
 Subtitles: %1$s,Phụ đề: %1$s
-Support Hushfeed,Hỗ trợ Hushfeed
+Support Larpfeed,Hỗ trợ Larpfeed
 Swap the website in shared links,Thay đổi trang web trong các liên kết chia sẻ
 Swipe for brightness and volume,Vuốt để chỉnh độ sáng và âm lượng
 Swipe left,Vuốt sang trái
@@ -1919,7 +1919,7 @@ Swiping a message sideways no longer starts a reply to it. Taps and long presses
 "Swiping right on the For You feed no longer opens TikTok's side menu, with Your orders, TikTok Minis and more.","Vuốt sang phải trên bảng tin Dành cho bạn sẽ không còn mở menu bên của TikTok (chứa các mục Đơn hàng của bạn, TikTok Minis, v.v.)."
 System,Hệ thống
 Tag saved videos with their details,Gắn nhãn thông tin chi tiết vào video đã lưu
-"Take Hushfeed out of TikTok's Settings and privacy. To open these settings, press and hold For You at the top of the feed, or Home if Long-press Home for Hushfeed settings is on.","Gỡ mục Hushfeed khỏi phần Cài đặt và quyền riêng tư của TikTok. Để mở các cài đặt này, hãy nhấn giữ chữ Dành cho bạn ở đầu bảng tin hoặc nhấn giữ nút Trang chủ (Home) nếu đã bật tính năng Nhấn giữ nút Trang chủ để vào cài đặt Hushfeed."
+"Take Larpfeed out of TikTok's Settings and privacy. To open these settings, press and hold For You at the top of the feed, or Home if Long-press Home for Larpfeed settings is on.","Gỡ mục Larpfeed khỏi phần Cài đặt và quyền riêng tư của TikTok. Để mở các cài đặt này, hãy nhấn giữ chữ Dành cho bạn ở đầu bảng tin hoặc nhấn giữ nút Trang chủ (Home) nếu đã bật tính năng Nhấn giữ nút Trang chủ để vào cài đặt Larpfeed."
 "Take the Add comment bar off videos you open from a profile, a hashtag, a sound or search, so the video fills the screen down to the bottom. The comment button on the right still opens comments.","Gỡ thanh Thêm bình luận khỏi các video mở từ trang cá nhân, hashtag, âm thanh hoặc tìm kiếm để video lấp đầy màn hình xuống tận đáy. Nút bình luận ở bên phải vẫn mở phần bình luận bình thường."
 Take the pulsing LIVE ring off profile pictures on the feed and in comments. Tapping the picture of a creator who's live opens their profile instead of the LIVE.,Gỡ vòng viền LIVE nhấp nháy khỏi ảnh đại diện trên bảng tin và trong bình luận. Chạm vào ảnh đại diện của nhà sáng tạo đang phát trực tiếp sẽ mở trang cá nhân của họ thay vì tham gia buổi LIVE.
 "Take the story ring off profile pictures on the feed, in comments and on profiles. Tapping a picture opens the profile instead of the story.","Gỡ vòng viền tin (story) khỏi ảnh đại diện trên bảng tin, trong bình luận và trên trang cá nhân. Chạm vào ảnh đại diện sẽ mở trang cá nhân thay vì xem tin."
@@ -1937,19 +1937,19 @@ Tap the feed Follow button twice within %1$d seconds.,Chạm vào nút Theo dõi
 Tap the like heart twice within %1$d seconds. Removing a like stays immediate.,Chạm 2 lần vào biểu tượng thả tim trong %1$d giây. Việc bỏ thích vẫn có hiệu lực ngay lập tức.
 Tap to start the feed,Chạm để bắt đầu phát bảng tin
 "Tap to start, then scroll until the feed problem shows up and come back here to save it. The file has no captions or names, and videos and creators appear only as short codes. Read it before you share it.","Chạm để bắt đầu, sau đó cuộn đến khi sự cố bảng tin xuất hiện rồi quay lại đây để lưu. Tệp không chứa chú thích hay tên thật, video và nhà sáng tạo chỉ hiển thị dưới dạng mã ngắn. Hãy đọc kỹ trước khi chia sẻ."
-"Tap, then go to the screen with what you want hidden. After %1$d seconds Hushfeed records how that screen is built, without any of its text, for the diagnostic report.","Chạm, sau đó chuyển đến màn hình có nội dung bạn muốn ẩn. Sau %1$d giây, Hushfeed sẽ ghi lại cấu trúc màn hình đó (không chứa văn bản) để phục vụ báo cáo chẩn đoán."
+"Tap, then go to the screen with what you want hidden. After %1$d seconds Larpfeed records how that screen is built, without any of its text, for the diagnostic report.","Chạm, sau đó chuyển đến màn hình có nội dung bạn muốn ẩn. Sau %1$d giây, Larpfeed sẽ ghi lại cấu trúc màn hình đó (không chứa văn bản) để phục vụ báo cáo chẩn đoán."
 Tapping a sticker someone sent you in a chat opens a box with Save media. Turn this off to skip it.,"Chạm vào nhãn dán người khác gửi trong đoạn chat sẽ mở ra hộp có tùy chọn ""Lưu phương tiện"". Tắt tính năng này để bỏ qua."
 Tapping more under a video opens its comments with the whole caption at the top instead of spreading the caption over the video. A tap on the caption itself does the same. Photo posts keep TikTok's own page for this.,"Chạm vào ""Xem thêm"" bên dưới video sẽ mở phần bình luận với toàn bộ chú thích hiển thị ở trên cùng thay vì đè lên video. Chạm trực tiếp vào chú thích cũng có tác dụng tương tự. Bài đăng ảnh vẫn giữ nguyên trang mặc định của TikTok cho tính năng này."
 Technical details,Chi tiết kỹ thuật
 "Technical details, %1$s","Chi tiết kỹ thuật, %1$s"
 Text sticker words,Từ ngữ trong nhãn dán chữ
 That JSON file doesn't contain the supported TikTok watch history.,Tệp JSON đó không chứa lịch sử xem TikTok được hỗ trợ.
-That backup was written by a newer Hushfeed than this one. Nothing was altered.,Bản sao lưu đó được tạo bởi phiên bản Hushfeed mới hơn phiên bản này. Không có thay đổi nào được thực hiện.
+That backup was written by a newer Larpfeed than this one. Nothing was altered.,Bản sao lưu đó được tạo bởi phiên bản Larpfeed mới hơn phiên bản này. Không có thay đổi nào được thực hiện.
 That creator is already in the list,Nhà sáng tạo đó đã có trong danh sách
 "That creator pattern could stall the feed, so it wasn't added: %1$s",Mẫu nhà sáng tạo đó có thể làm gián đoạn bảng tin nên chưa được thêm: %1$s
 "That creator pattern is too long, so it wasn't added: %1$s",Mẫu nhà sáng tạo đó quá dài nên chưa được thêm: %1$s
 That file has more than %1$s watch-history entries.,Tệp đó chứa hơn %1$s mục lịch sử xem.
-That file is larger than %1$s MB. Choose a seen-history file saved by Hushfeed.,Tệp đó lớn hơn %1$s MB. Vui lòng chọn tệp lịch sử đã xem do Hushfeed lưu.
+That file is larger than %1$s MB. Choose a seen-history file saved by Larpfeed.,Tệp đó lớn hơn %1$s MB. Vui lòng chọn tệp lịch sử đã xem do Larpfeed lưu.
 That file is larger than %1$s MB. Choose a smaller font file.,Tệp đó lớn hơn %1$s MB. Vui lòng chọn tệp phông chữ nhỏ hơn.
 That file is larger than %1$s MB. Choose a smaller watch-history export.,Tệp đó lớn hơn %1$s MB. Vui lòng chọn bản xuất lịch sử xem nhỏ hơn.
 That file is too large to be a settings backup. Nothing was altered.,Tệp đó quá lớn để làm bản sao lưu cài đặt. Không có thay đổi nào được thực hiện.
@@ -1957,14 +1957,14 @@ That file isn't a font Android can use. Choose a .ttf or .otf file.,Tệp đó k
 "That file isn't a loaded-values export, or it's larger than the Lab accepts",Tệp đó không phải bản xuất giá trị đã tải hoặc kích thước lớn hơn mức Lab hỗ trợ
 "That file isn't readable text, so it may have been damaged in transit. Nothing was altered.","Tệp đó không chứa văn bản đọc được, có thể đã bị lỗi trong quá trình truyền tải. Không có thay đổi nào được thực hiện."
 That file lists more than %1$s videos. Nothing was restored.,Tệp đó liệt kê hơn %1$s video. Không có dữ liệu nào được khôi phục.
-"That file was saved by a newer Hushfeed. Update Hushfeed, then try again.",Tệp đó được lưu bởi phiên bản Hushfeed mới hơn. Hãy cập nhật Hushfeed rồi thử lại.
+"That file was saved by a newer Larpfeed. Update Larpfeed, then try again.",Tệp đó được lưu bởi phiên bản Larpfeed mới hơn. Hãy cập nhật Larpfeed rồi thử lại.
 "That folder name has a character Android doesn't allow. Use letters, numbers, spaces or dashes.","Tên thư mục chứa ký tự Android không cho phép. Vui lòng sử dụng chữ cái, chữ số, khoảng trắng hoặc dấu gạch ngang."
 That is %1$d minutes today,Thời gian hôm nay là %1$d phút
 That is %1$d videos today,Số lượng hôm nay là %1$d video
 That is one minute today,Thời gian hôm nay là 1 phút
 That is one video today,Số lượng hôm nay là 1 video
-That isn't a Hushfeed settings backup. Nothing was altered.,Đó không phải tệp sao lưu cài đặt của Hushfeed. Không có thay đổi nào được thực hiện.
-"That isn't a seen-history file saved by Hushfeed. For TikTok's own data export, use Import watch history.","Đó không phải tệp lịch sử đã xem do Hushfeed lưu. Đối với bản xuất dữ liệu của TikTok, hãy dùng tính năng Nhập lịch sử xem."
+That isn't a Larpfeed settings backup. Nothing was altered.,Đó không phải tệp sao lưu cài đặt của Larpfeed. Không có thay đổi nào được thực hiện.
+"That isn't a seen-history file saved by Larpfeed. For TikTok's own data export, use Import watch history.","Đó không phải tệp lịch sử đã xem do Larpfeed lưu. Đối với bản xuất dữ liệu của TikTok, hãy dùng tính năng Nhập lịch sử xem."
 "That isn't an app name. Try something like com.example.downloader, or leave the box empty to keep saving in TikTok.","Đó không phải tên gói ứng dụng hợp lệ. Hãy thử dạng như com.example.downloader, hoặc để trống để tiếp tục lưu trong TikTok."
 That list has too many entries. Keep it to %1$s or fewer.,Danh sách đó có quá nhiều mục. Vui lòng giữ tối đa %1$s mục.
 That list is too large. Keep it to %1$s KB or less.,Danh sách đó quá lớn. Vui lòng giữ dung lượng tối đa %1$s KB.
@@ -1972,13 +1972,13 @@ That loosens the budget. It waits until %1$s.,Thao tác này làm nới lỏng n
 That loosens the lock. It waits until %1$s.,Thao tác này làm nới lỏng khóa. Nó sẽ có hiệu lực từ %1$s.
 That preset isn't recognized. Choose another.,Cấu hình đó không hợp lệ. Hãy chọn cấu hình khác.
 That seen-history file is damaged or was edited. Nothing was restored.,Tệp lịch sử đã xem đó bị hỏng hoặc đã bị chỉnh sửa. Không có dữ liệu nào được khôi phục.
-That settings backup contains a feed rule list larger than Hushfeed accepts. Nothing was altered.,Bản sao lưu cài đặt đó chứa danh sách quy tắc bảng tin vượt quá dung lượng Hushfeed cho phép. Không có thay đổi nào được thực hiện.
-That settings backup holds a value Hushfeed can't read. Nothing was altered.,Bản sao lưu cài đặt đó chứa giá trị Hushfeed không thể đọc được. Không có thay đổi nào được thực hiện.
+That settings backup contains a feed rule list larger than Larpfeed accepts. Nothing was altered.,Bản sao lưu cài đặt đó chứa danh sách quy tắc bảng tin vượt quá dung lượng Larpfeed cho phép. Không có thay đổi nào được thực hiện.
+That settings backup holds a value Larpfeed can't read. Nothing was altered.,Bản sao lưu cài đặt đó chứa giá trị Larpfeed không thể đọc được. Không có thay đổi nào được thực hiện.
 That settings backup holds more Feature Gate Lab rules than the Lab takes. Nothing was altered.,Bản sao lưu cài đặt đó chứa nhiều quy tắc Feature Gate Lab hơn mức Lab cho phép. Không có thay đổi nào được thực hiện.
 That settings backup is damaged or only partly downloaded. Nothing was altered.,Bản sao lưu cài đặt đó bị hỏng hoặc chỉ mới tải xuống một phần. Không có thay đổi nào được thực hiện.
 "That settings backup is incomplete, so it may have been cut short. Nothing was altered.","Bản sao lưu cài đặt đó không hoàn chỉnh, có thể đã bị cắt ngắn. Không có thay đổi nào được thực hiện."
 That settings change didn't go through. Nothing was altered.,Thay đổi cài đặt đó chưa được áp dụng. Không có thay đổi nào được thực hiện.
-That sticker is in a format Hushfeed can't read,Nhãn dán đó ở định dạng Hushfeed không thể đọc được
+That sticker is in a format Larpfeed can't read,Nhãn dán đó ở định dạng Larpfeed không thể đọc được
 That watch-history file is damaged. Nothing was imported.,Tệp lịch sử xem đó bị hỏng. Không có dữ liệu nào được nhập.
 The Activity row of likes and comments on your posts leaves the Inbox. Notifications about them still arrive.,Hàng Hoạt động ghi nhận lượt thích và bình luận trên bài đăng của bạn sẽ bị gỡ khỏi Hộp thư đến. Thông báo về chúng vẫn được gửi đến.
 The Archive row leaves the Inbox. Archived chats are kept.,Hàng Lưu trữ sẽ bị gỡ khỏi Hộp thư đến. Các cuộc trò chuyện đã lưu trữ vẫn được giữ nguyên.
@@ -1989,7 +1989,7 @@ The Lab couldn't open. Go back and open it again.,Không thể mở Lab. Vui lò
 The Message requests row leaves the Inbox. Requests keep arriving and wait there until you turn this off.,Hàng Yêu cầu tin nhắn sẽ bị gỡ khỏi Hộp thư đến. Các yêu cầu vẫn tiếp tục đến và chờ ở đó cho đến khi bạn tắt tùy chọn này.
 The New followers row leaves the top of the Inbox. The accounts still follow you.,Hàng Người theo dõi mới sẽ bị gỡ khỏi đầu Hộp thư đến. Các tài khoản đó vẫn tiếp tục theo dõi bạn.
 The Tako assistant's conversation leaves the Inbox list. The Tako bubble on the feed has its own switch under Feed tabs.,Cuộc trò chuyện với trợ lý Tako sẽ bị gỡ khỏi danh sách Hộp thư đến. Bong bóng Tako trên bảng tin có công tắc riêng trong mục Thẻ bảng tin.
-"The Translate comments button in a LIVE room also needs a Japanese SIM. Turn on Override SIM details in Hushfeed settings > Region, set SIM country preset to Japan, NTT DOCOMO (44010), then restart TikTok.","Nút Dịch bình luận trong phòng LIVE cần có SIM Nhật Bản. Hãy bật Ghi đè chi tiết SIM trong cài đặt Hushfeed > Khu vực, đặt cấu hình quốc gia SIM thành Japan, NTT DOCOMO (44010), sau đó khởi động lại TikTok."
+"The Translate comments button in a LIVE room also needs a Japanese SIM. Turn on Override SIM details in Larpfeed settings > Region, set SIM country preset to Japan, NTT DOCOMO (44010), then restart TikTok.","Nút Dịch bình luận trong phòng LIVE cần có SIM Nhật Bản. Hãy bật Ghi đè chi tiết SIM trong cài đặt Larpfeed > Khu vực, đặt cấu hình quốc gia SIM thành Japan, NTT DOCOMO (44010), sau đó khởi động lại TikTok."
 The accounts TikTok suggests you follow no longer take up rows in the Inbox.,Các tài khoản mà TikTok đề xuất bạn theo dõi không còn chiếm các hàng trong Hộp thư đến.
 The activity status control leaves the Inbox header. Whether others see you as active is unchanged.,Bộ điều khiển trạng thái hoạt động sẽ bị gỡ khỏi phần đầu Hộp thư đến. Trạng thái hiển thị hoạt động của bạn với người khác không thay đổi.
 "The add people icon leaves the Inbox header. Only the shortcut goes, so friend suggestions elsewhere are unchanged.","Biểu tượng thêm người sẽ bị gỡ khỏi phần đầu Hộp thư đến. Chỉ có lối tắt bị gỡ, các gợi ý bạn bè ở nơi khác vẫn giữ nguyên."
@@ -2013,7 +2013,7 @@ The feed is open again,Bảng tin đã mở trở lại
 The feed stops when this video ends.,Bảng tin sẽ dừng khi video này kết thúc.
 "The feed waits for one tap before it starts playing again when you come back to the app. Messages, profiles and search are still one tap away.","Bảng tin sẽ chờ một lần chạm trước khi tự động phát lại khi bạn quay lại ứng dụng. Tin nhắn, trang cá nhân và tìm kiếm vẫn sẵn sàng truy cập chỉ với một chạm."
 "The file app still has the last file. Try again once it lets go, or restart TikTok.","Ứng dụng quản lý tệp vẫn đang giữ tệp gần nhất. Vui lòng thử lại sau khi ứng dụng đó giải phóng tệp, hoặc khởi động lại TikTok."
-The file hushfeed-safe-mode couldn't be removed. Delete it from TikTok's folder under Android/data to turn Hushfeed back on.,Không thể xóa tệp hushfeed-safe-mode. Hãy xóa tệp này khỏi thư mục của TikTok trong Android/data để bật lại Hushfeed.
+The file larpfeed-safe-mode couldn't be removed. Delete it from TikTok's folder under Android/data to turn Larpfeed back on.,Không thể xóa tệp larpfeed-safe-mode. Hãy xóa tệp này khỏi thư mục của TikTok trong Android/data để bật lại Larpfeed.
 The frame couldn't be read. Try again.,Không thể đọc khung hình này. Vui lòng thử lại.
 The frame couldn't be saved. Try again.,Không thể lưu khung hình này. Vui lòng thử lại.
 "The hour both budgets reset, on a 24 hour clock. The default is 4 in the morning, so a late night still counts as the same day.","Thời điểm đặt lại cả hai ngân sách, sử dụng định dạng 24 giờ. Mặc định là 4 giờ sáng, do đó thời gian thức khuya vẫn tính vào cùng một ngày."
@@ -2075,7 +2075,7 @@ This configuration has no fields that can be copied and changed safely on this b
 This file has no loaded values in it,Tệp này không chứa giá trị đã tải nào
 This file isn't a loaded-values export,Tệp này không phải là bản xuất giá trị đã tải
 This gate type isn't supported,Loại cổng này không được hỗ trợ
-"This key isn't in Hushfeed's list, so its type can't be checked. Reset the override.",Khóa này không nằm trong danh sách của Hushfeed nên không thể kiểm tra kiểu dữ liệu. Vui lòng đặt lại ghi đè.
+"This key isn't in Larpfeed's list, so its type can't be checked. Reset the override.",Khóa này không nằm trong danh sách của Larpfeed nên không thể kiểm tra kiểu dữ liệu. Vui lòng đặt lại ghi đè.
 "This key touches account safety. Forcing it can change login, region, payment or security checks.","Khóa này đụng chạm đến an toàn tài khoản. Ép buộc nó có thể thay đổi các kiểm tra về đăng nhập, khu vực, thanh toán hoặc bảo mật."
 "This line opens a rule and doesn't finish it: %1$s. Write two phrases as ""a"" & ""b"" for both, or ""a"" !& ""b"" for the first without the second.","Dòng này mở đầu một quy tắc nhưng chưa kết thúc: %1$s. Hãy viết hai cụm từ dạng “a” & “b” nếu cần cả hai, hoặc “a” !& “b” nếu cần cụm thứ nhất mà không có cụm thứ hai."
 This list is too long to preview here. Saving still follows the usual limit.,Danh sách này quá dài để xem trước tại đây. Việc lưu vẫn tuân theo giới hạn thông thường.
@@ -2101,7 +2101,7 @@ TikTok account facts,Thông tin tài khoản TikTok
 TikTok can't lock without a phone screen lock,TikTok không khóa được nếu máy chưa có khóa màn hình
 "TikTok checks how it was signed and installed. This answers those checks the way the Play Store version would. Try it if follows or likes undo themselves after a refresh. It may not help, since TikTok has other checks.",TikTok kiểm tra cách ứng dụng được ký chữ ký số và cài đặt. Tùy chọn này phản hồi các kiểm tra đó theo cách của bản Play Store. Hãy thử nếu các lượt theo dõi hoặc thích tự động hủy sau khi làm mới. Tùy chọn có thể không hiệu quả nếu TikTok dùng các biện pháp kiểm tra khác.
 TikTok closed during these saves,TikTok đã đóng trong quá trình lưu
-"TikTok closed three times within a minute of starting, so Hushfeed paused itself. Your settings stay as they are.","TikTok đã đóng 3 lần trong vòng một phút kể từ khi khởi động, do đó Hushfeed đã tự động tạm dừng. Cài đặt của bạn vẫn được giữ nguyên."
+"TikTok closed three times within a minute of starting, so Larpfeed paused itself. Your settings stay as they are.","TikTok đã đóng 3 lần trong vòng một phút kể từ khi khởi động, do đó Larpfeed đã tự động tạm dừng. Cài đặt của bạn vẫn được giữ nguyên."
 TikTok closed. What was recorded is saved to %1$s,TikTok đã đóng. Nội dung đã ghi hình được lưu vào %1$s
 TikTok closes at %1$s,TikTok đóng lúc %1$s
 TikTok default,TikTok mặc định
@@ -2178,7 +2178,7 @@ Try a different word or clear the search.,Hãy thử từ khóa khác hoặc xó
 Try a different word or clear the search. Switches from patches you didn't tick in Morphe Manager aren't listed.,Hãy thử từ khóa khác hoặc xóa tìm kiếm. Các công tắc từ các bản vá bạn chưa chọn trong Morphe Manager sẽ không được liệt kê.
 "Try again, or go back to TikTok.",Thử lại hoặc quay lại TikTok.
 Turn Clear display on or off,Bật hoặc tắt xóa hiển thị
-Turn Hushfeed back on,Bật lại Hushfeed
+Turn Larpfeed back on,Bật lại Larpfeed
 Turn off double tap to react,Tắt chạm đúp để thả cảm xúc
 Turn off haptics,Tắt phản hồi rung
 Turn off push notifications,Tắt thông báo đẩy
@@ -2282,7 +2282,7 @@ Views range,Khoảng lượt xem
 Visual search,Tìm kiếm hình ảnh (Visual search)
 Volume,Âm lượng
 Wait a day to loosen the budget,Chờ một ngày để nới lỏng ngân sách
-"Wait a day to loosen the budget is on, so Hushfeed stays on","Tính năng chờ một ngày để nới lỏng ngân sách đang bật, do đó Hushfeed tiếp tục hoạt động"
+"Wait a day to loosen the budget is on, so Larpfeed stays on","Tính năng chờ một ngày để nới lỏng ngân sách đang bật, do đó Larpfeed tiếp tục hoạt động"
 Wait before hiding the controls.,Thời gian chờ trước khi ẩn các điều khiển.
 Wait for loading to finish,Đợi quá trình tải hoàn tất
 Waiting for Wi-Fi,Đang chờ kết nối Wi-Fi
@@ -2296,7 +2296,7 @@ Watch history was imported for the account that chose the file. Switch back to s
 What TikTok gets,Dữ liệu mà TikTok nhận được
 What gets sent each day.,Dữ liệu được gửi đi mỗi ngày.
 What's new,Có gì mới
-"When Copy link gives a short vt.tiktok.com or vm.tiktok.com link, Hushfeed opens it once in the background to find the full video link and copies that instead. TikTok sees that visit, and it connects directly even when a proxy is on. Links you send to another app go out as they were.","Khi tính năng Sao chép liên kết trả về liên kết rút gọn dạng vt.tiktok.com hoặc vm.tiktok.com, Hushfeed sẽ tự động mở ngầm một lần để tìm liên kết video đầy đủ và sao chép liên kết đó thay thế. TikTok sẽ ghi nhận lượt truy cập này và kết nối trực tiếp ngay cả khi đang bật proxy. Các liên kết bạn gửi sang ứng dụng khác được giữ nguyên bản gốc."
+"When Copy link gives a short vt.tiktok.com or vm.tiktok.com link, Larpfeed opens it once in the background to find the full video link and copies that instead. TikTok sees that visit, and it connects directly even when a proxy is on. Links you send to another app go out as they were.","Khi tính năng Sao chép liên kết trả về liên kết rút gọn dạng vt.tiktok.com hoặc vm.tiktok.com, Larpfeed sẽ tự động mở ngầm một lần để tìm liên kết video đầy đủ và sao chép liên kết đó thay thế. TikTok sẽ ghi nhận lượt truy cập này và kết nối trực tiếp ngay cả khi đang bật proxy. Các liên kết bạn gửi sang ứng dụng khác được giữ nguyên bản gốc."
 "When TikTok is in dark mode, the list of collections you get by holding the Favorites button is dark too instead of white.","Khi TikTok ở chế độ tối, danh sách bộ sưu tập mở ra khi nhấn giữ nút Mục yêu thích cũng hiển thị màu tối thay vì màu trắng."
 "When TikTok requests this key, return the selected value below","Khi TikTok yêu cầu khóa này, trả về giá trị được chọn bên dưới"
 "When TikTok starts and decides the phone's language changed, it forgets the language you picked in its settings and follows the phone. With this on, your pick stays. Counts from TikTok's next start.","Khi TikTok khởi động và phát hiện ngôn ngữ điện thoại thay đổi, ứng dụng thường sẽ quên ngôn ngữ bạn đã chọn trong cài đặt và chuyển sang theo ngôn ngữ hệ thống. Khi bật tính năng này, lựa chọn của bạn sẽ được giữ nguyên, có hiệu lực từ lần khởi động tiếp theo của TikTok."
@@ -2311,7 +2311,7 @@ When to send,Thời điểm gửi
 "When you open TikTok from its icon, the first video in the feed waits for one tap before it plays. A link, a notification or a shortcut opens as usual.","Khi bạn mở TikTok từ biểu tượng ứng dụng, video đầu tiên trên bảng tin sẽ chờ một lần chạm trước khi bắt đầu phát. Các liên kết, thông báo hoặc lối tắt mở ứng dụng hoạt động bình thường như cũ."
 Where the time goes,Vị trí hiển thị thời gian
 "While Clear display is on, also hide the progress bar, the close button and the pause and speed buttons at the bottom. You can still drag along the bottom edge to move through the video. To leave Clear display, press and hold the video and tap Restore display, or pinch the screen.","Khi chế độ Hiển thị rõ ràng đang bật, ẩn thêm thanh tiến trình, nút đóng, nút tạm dừng và nút tốc độ ở phía dưới. Bạn vẫn có thể kéo dọc theo mép dưới để tua video. Để thoát chế độ này, hãy nhấn giữ video rồi chạm vào Khôi phục hiển thị hoặc dùng cử chỉ chụm hai ngón tay trên màn hình."
-"While diagnostic logging is on, a message names the part of Hushfeed that failed. Off keeps failures in the report only.","Khi bật ghi nhật ký chẩn đoán, một thông báo sẽ chỉ định phần nào của Hushfeed gặp lỗi. Khi tắt, lỗi sẽ chỉ được ghi lại trong báo cáo."
+"While diagnostic logging is on, a message names the part of Larpfeed that failed. Off keeps failures in the report only.","Khi bật ghi nhật ký chẩn đoán, một thông báo sẽ chỉ định phần nào của Larpfeed gặp lỗi. Khi tắt, lỗi sẽ chỉ được ghi lại trong báo cáo."
 Who to message,Gửi tin nhắn cho ai
 Window width needed to enable the layout. Restart TikTok to apply this.,Chiều rộng cửa sổ cần thiết để bật bố cục này. Khởi động lại TikTok để áp dụng.
 "With TikTok in dark mode, a LIVE room still opens its share menu, fan club and other panels in light colors. This opens them dark.","Khi TikTok ở chế độ tối, phòng LIVE vẫn mở menu chia sẻ, câu lạc bộ người hâm mộ và các bảng khác bằng giao diện sáng màu. Tùy chọn này sẽ hiển thị chúng ở chế độ tối."
@@ -2346,13 +2346,13 @@ Your filters hid everything TikTok just sent. Most were %1$s.,Các bộ lọc c�
 "Your operator's numeric code, like 310260.","Mã số nhà mạng của bạn, ví dụ 310260."
 Your seen history changed before the import finished. Choose the file again.,Lịch sử đã xem của bạn đã thay đổi trước khi quá trình nhập hoàn tất. Vui lòng chọn lại tệp.
 Your settings,Cài đặt của bạn
-"Zero means no limit. Counts the videos Hushfeed advanced past for you, not the ones you swiped yourself, and starts again when the feed is rebuilt or you change this number.",Số 0 nghĩa là không giới hạn. Đếm số video mà Hushfeed đã tự động chuyển qua hộ bạn (không tính các video bạn tự vuốt) và tính lại từ đầu khi bảng tin được xây dựng lại hoặc khi bạn thay đổi con số này.
+"Zero means no limit. Counts the videos Larpfeed advanced past for you, not the ones you swiped yourself, and starts again when the feed is rebuilt or you change this number.",Số 0 nghĩa là không giới hạn. Đếm số video mà Larpfeed đã tự động chuyển qua hộ bạn (không tính các video bạn tự vuốt) và tính lại từ đầu khi bảng tin được xây dựng lại hoặc khi bạn thay đổi con số này.
 "Zero means the way out of the hold is always there. Any other number is how many times a day it works. Once they're used up, the hold stays until the day starts over. Ignored while the budget is locked, which removes the way out.","Số 0 nghĩa là lối thoát khỏi thời gian tạm dừng luôn khả dụng. Bất kỳ số nào khác quy định số lần tính năng này hoạt động mỗi ngày. Khi dùng hết số lần, trạng thái tạm dừng sẽ duy trì đến hết ngày. Tùy chọn này bị bỏ qua khi ngân sách đang bị khóa (tính năng khóa sẽ vô hiệu hóa lối thoát)."
 "Zero shows the notice and leaves the feed alone. Anything else covers the feed for that many minutes once a budget is reached. Messages, profiles and search keep working, and nothing in the feed is thrown away.","Số 0 hiển thị thông báo và để yên bảng tin. Bất kỳ giá trị nào khác sẽ che phủ bảng tin trong từng đó phút ngay khi đạt đến giới hạn ngân sách. Tin nhắn, trang cá nhân và tìm kiếm vẫn hoạt động bình thường và không có video nào trong bảng tin bị loại bỏ."
 "Zero switches this off. A short reminder after that many minutes of watching, and again after the same again. Time on messages, a profile or search doesn't count, and nothing is shown while the feed is on hold.","Số 0 để tắt tính năng này. Nhắc nhở ngắn gọn sau từng đó phút xem và tiếp tục nhắc lại sau khoảng thời gian tương tự. Thời gian sử dụng tin nhắn, trang cá nhân hoặc tìm kiếm không được tính, và không có thông báo nào hiển thị khi bảng tin đang tạm dừng."
 "Zero switches this off. After that many minutes with no touch on the screen, the video stops and TikTok goes to the background, for when you fall asleep watching. Any touch starts the wait over.","Số 0 để tắt tính năng này. Sau khoảng thời gian không có bất kỳ thao tác chạm nào trên màn hình, video sẽ dừng lại và TikTok chuyển chạy ngầm, rất hữu ích khi bạn ngủ quên lúc xem video. Mọi thao tác chạm sẽ tính lại thời gian chờ từ đầu."
 "Zero switches this off. Count the minutes the player spends running in the feed. Time on messages, a profile or search doesn't count.","Số 0 để tắt tính năng này. Đếm số phút trình phát hoạt động trong bảng tin. Thời gian sử dụng tin nhắn, trang cá nhân hoặc tìm kiếm không được tính."
-"Zero switches this off. Counts every video that comes up in the feed and tells you when you reach the limit. Separate from the auto-advance session limit under Playback, which counts only videos Hushfeed moved past for you.",Số 0 để tắt tính năng này. Đếm mọi video xuất hiện trên bảng tin và thông báo khi bạn đạt đến giới hạn. Tách biệt với giới hạn phiên tự động chuyển tiếp trong phần Phát lại (vốn chỉ đếm các video do Hushfeed tự động chuyển qua).
+"Zero switches this off. Counts every video that comes up in the feed and tells you when you reach the limit. Separate from the auto-advance session limit under Playback, which counts only videos Larpfeed moved past for you.",Số 0 để tắt tính năng này. Đếm mọi video xuất hiện trên bảng tin và thông báo khi bạn đạt đến giới hạn. Tách biệt với giới hạn phiên tự động chuyển tiếp trong phần Phát lại (vốn chỉ đếm các video do Larpfeed tự động chuyển qua).
 autoplay auto play,tự động phát autoplay
 collapsed,Đã thu gọn
 debug debugging logs logging,gỡ lỗi gỡ lỗi nhật ký ghi nhật ký
@@ -2368,7 +2368,7 @@ Copy name,Sao chép tên
 Background play in the long-press menu,Phát nền trong menu nhấn giữ
 "Adds TikTok's own background play row to the long-press menu, so you pick it for one video and other videos stop as usual. Has no effect while Keep playing in the background is on. Restart TikTok to apply this.","Thêm mục phát nền của TikTok vào menu nhấn giữ để bạn chọn cho từng video, còn các video khác dừng như bình thường. Không có tác dụng khi Tiếp tục phát ở nền đang bật. Khởi động lại TikTok để áp dụng."
 "1, from Background play in the long-press menu","1, từ Phát nền trong menu nhấn giữ"
-"Background play in the long-press menu is on in Hushfeed's Playback settings, so TikTok gets 1 for this key and an override here has no effect until that switch is off.","Phát nền trong menu nhấn giữ đang bật trong cài đặt Phát của Hushfeed, do đó TikTok nhận giá trị 1 cho khóa này và ghi đè ở đây sẽ không có hiệu lực cho đến khi tắt công tắc đó."
+"Background play in the long-press menu is on in Larpfeed's Playback settings, so TikTok gets 1 for this key and an override here has no effect until that switch is off.","Phát nền trong menu nhấn giữ đang bật trong cài đặt Phát của Larpfeed, do đó TikTok nhận giá trị 1 cho khóa này và ghi đè ở đây sẽ không có hiệu lực cho đến khi tắt công tắc đó."
 Keep LIVEs from these creators,Giữ LIVE của các nhà sáng tạo này
 "With Hide LIVE videos on, these creators' LIVEs stay when TikTok sends them. Separate handles or user IDs with commas.","Khi bật Ẩn video LIVE, LIVE của các nhà sáng tạo này vẫn được giữ lại khi TikTok gửi đến. Phân tách tên người dùng hoặc ID người dùng bằng dấu phẩy."
 "Optional. Leave empty for a proxy without a password. TikTok signs in through a small relay on this phone, which other apps here could reach while TikTok is open.","Không bắt buộc. Để trống nếu proxy không có mật khẩu. TikTok đăng nhập qua một trạm chuyển tiếp nhỏ trên điện thoại này, các ứng dụng khác trên máy có thể truy cập trạm đó khi TikTok đang mở."
@@ -2419,7 +2419,7 @@ Watch history cleared,Đã xóa lịch sử xem
 Couldn't open that video. Try again.,Không mở được video này. Hãy thử lại.
 Keep the next videos in full screen,Giữ các video tiếp theo ở chế độ toàn màn hình
 "Full screen opens with just your video on most pages, so there's nothing to swipe to. This brings the videos after it along.","Ở hầu hết các trang, chế độ toàn màn hình chỉ mở video của bạn nên không có gì để vuốt tiếp. Tùy chọn này mang theo các video sau đó."
-"Off until you tap it. Wipes TikTok's data once, on the next start, and gives it a new Android ID and advertising ID, so it sees a phone it hasn't met. You'll be signed out and lose your drafts. Hushfeed's settings stay.","Tắt cho đến khi bạn nhấn. Xóa dữ liệu TikTok một lần ở lần khởi động tiếp theo và cấp Android ID cùng ID quảng cáo mới, để TikTok thấy một điện thoại nó chưa gặp. Bạn sẽ bị đăng xuất và mất bản nháp. Cài đặt Hushfeed vẫn còn."
+"Off until you tap it. Wipes TikTok's data once, on the next start, and gives it a new Android ID and advertising ID, so it sees a phone it hasn't met. You'll be signed out and lose your drafts. Larpfeed's settings stay.","Tắt cho đến khi bạn nhấn. Xóa dữ liệu TikTok một lần ở lần khởi động tiếp theo và cấp Android ID cùng ID quảng cáo mới, để TikTok thấy một điện thoại nó chưa gặp. Bạn sẽ bị đăng xuất và mất bản nháp. Cài đặt Larpfeed vẫn còn."
 "In use: TikTok sees the identity you made here, and it stays the same on every start. Tap to make another one, which wipes TikTok's data again.","Đang dùng: TikTok thấy danh tính bạn tạo ở đây, và nó giữ nguyên ở mỗi lần khởi động. Nhấn để tạo cái khác, việc này lại xóa dữ liệu TikTok."
 Couldn't finish wiping TikTok's data. Tap to try again.,Không thể xóa xong dữ liệu TikTok. Nhấn để thử lại.
 Use this phone's own IDs,Dùng ID của chính điện thoại này

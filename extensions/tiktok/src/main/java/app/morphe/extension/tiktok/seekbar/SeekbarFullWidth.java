@@ -1,6 +1,6 @@
 /*
- * Copyright 2026 Hushfeed contributors
- * https://github.com/SysAdminDoc/hushfeed
+ * Copyright 2026 Larpfeed contributors
+ * https://github.com/SysAdminDoc/larpfeed
  */
 package app.morphe.extension.tiktok.seekbar;
 
@@ -23,7 +23,7 @@ import app.morphe.extension.tiktok.settings.Settings;
  * margins, the padding around the frame that holds the seek bar, and on 47.1.4 the seek bar's own
  * side margins (32 px on the Login2 emulator, the whole gap there). This takes those to zero on
  * each progress tick while the switch is on (TikTok can write them again when it lays out
- * another video), and gives the first values back the moment the switch is off or Hushfeed is
+ * another video), and gives the first values back the moment the switch is off or Larpfeed is
  * paused. The seek bar's own padding, which places its thumb at the ends, is left alone, so a
  * drag still runs from one end of the bar to the other.
  */

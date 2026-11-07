@@ -1,6 +1,6 @@
 /*
- * Copyright 2026 Hushfeed contributors
- * https://github.com/SysAdminDoc/hushfeed
+ * Copyright 2026 Larpfeed contributors
+ * https://github.com/SysAdminDoc/larpfeed
  *
  * Built on icysymmetra/tiktok-patches-for-morphe (GPL-3.0).
  */
@@ -60,7 +60,7 @@ final class KeptUnsentStore {
         }
     }
 
-    private static final String FILE_NAME = "hushfeed_kept_unsent.json";
+    private static final String FILE_NAME = "larpfeed_kept_unsent.json";
     private static final int LIMIT = 500;
     private static final Object LOCK = new Object();
 

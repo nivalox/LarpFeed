@@ -3,7 +3,7 @@
  * https://github.com/SysAdminDoc/Hushfacebook
  *
  * Modified for HushGram (Instagram), 2026.
- * Modified for hushfeed (TikTok), 2026.
+ * Modified for larpfeed (TikTok), 2026.
  */
 package app.morphe.extension.tiktok.settings.preference;
 
@@ -276,7 +276,7 @@ public final class ScreenColors {
     }
 
     /** The tag the chevron wears in a row's widget frame. */
-    static final String CHEVRON = "hushfeed_chevron";
+    static final String CHEVRON = "larpfeed_chevron";
 
     /**
      * Whether a tap on [preference] opens something: a page, a picker, a dialog or a link. A

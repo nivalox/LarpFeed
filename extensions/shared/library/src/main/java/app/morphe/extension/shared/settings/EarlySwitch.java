@@ -1,6 +1,6 @@
 /*
- * Copyright 2026 Hushfeed contributors
- * https://github.com/SysAdminDoc/hushfeed
+ * Copyright 2026 Larpfeed contributors
+ * https://github.com/SysAdminDoc/larpfeed
  */
 package app.morphe.extension.shared.settings;
 
@@ -14,7 +14,7 @@ import java.io.File;
 import app.morphe.extension.shared.Logger;
 
 /**
- * A switch read straight from Hushfeed's preferences file, for a hook that runs before the
+ * A switch read straight from Larpfeed's preferences file, for a hook that runs before the
  * settings context exists.
  *
  * <p>Reading a setting then would build the settings registry without a context, and the class
@@ -29,9 +29,9 @@ import app.morphe.extension.shared.Logger;
  */
 public final class EarlySwitch {
     /** {@link BaseSettings#PAUSED}'s key. */
-    static final String PAUSED_KEY = "hushfeed_paused";
+    static final String PAUSED_KEY = "larpfeed_paused";
     /** {@link BaseSettings#SAFE_MODE}'s key. */
-    static final String SAFE_MODE_KEY = "hushfeed_safe_mode";
+    static final String SAFE_MODE_KEY = "larpfeed_safe_mode";
 
     /** Where the application comes from. Tests put their own here. */
     interface ApplicationSource {
@@ -70,7 +70,7 @@ public final class EarlySwitch {
             if (preferences.getBoolean(PAUSED_KEY, false) || preferences.getBoolean(SAFE_MODE_KEY, false)) {
                 return false;
             }
-            File marker = HushfeedPause.markerFile(application);
+            File marker = LarpfeedPause.markerFile(application);
             if (marker != null && marker.exists()) return false;
             Logger.printInfo(() -> "Early switch: " + key + " is on before the settings context");
             return true;

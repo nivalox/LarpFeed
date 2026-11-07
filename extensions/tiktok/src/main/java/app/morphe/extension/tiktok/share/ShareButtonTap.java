@@ -1,6 +1,6 @@
 /*
- * Copyright 2026 Hushfeed contributors
- * https://github.com/SysAdminDoc/hushfeed
+ * Copyright 2026 Larpfeed contributors
+ * https://github.com/SysAdminDoc/larpfeed
  */
 package app.morphe.extension.tiktok.share;
 
@@ -48,7 +48,7 @@ public final class ShareButtonTap {
 
     /**
      * Called first thing in TikTok's Share button click, with the cell's bound item (TikTok's
-     * VideoItemParams, or null before one is bound). True when the press was Hushfeed's and TikTok's
+     * VideoItemParams, or null before one is bound). True when the press was Larpfeed's and TikTok's
      * sheet stays shut.
      */
     public static boolean onTap(View button, @Nullable Object item) {

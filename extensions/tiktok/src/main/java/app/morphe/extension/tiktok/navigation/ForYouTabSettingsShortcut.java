@@ -1,6 +1,6 @@
 /*
- * Copyright 2026 Hushfeed contributors
- * https://github.com/SysAdminDoc/hushfeed
+ * Copyright 2026 Larpfeed contributors
+ * https://github.com/SysAdminDoc/larpfeed
  */
 package app.morphe.extension.tiktok.navigation;
 
@@ -30,7 +30,7 @@ import app.morphe.extension.tiktok.settings.preference.LocalWatchHistoryPreferen
 
 /**
  * A long press on For You, the feed's name in the strip of tabs across the top of TikTok's home
- * screen, opens Hushfeed's settings. The other Hush packages open theirs from the app's logo, and
+ * screen, opens Larpfeed's settings. The other Hush packages open theirs from the app's logo, and
  * TikTok's feed shows none, so For You stands in for it. {@link HomeTabSettingsShortcut} is the
  * other way in, from the bottom bar.
  *
@@ -42,12 +42,12 @@ import app.morphe.extension.tiktok.settings.preference.LocalWatchHistoryPreferen
  * vibration. The rest of that touch is kept from the tab, so letting go doesn't also reload the
  * feed.
  *
- * <p>TalkBack can't time a press, so For You also carries a named action, Open Hushfeed settings,
+ * <p>TalkBack can't time a press, so For You also carries a named action, Open Larpfeed settings,
  * in the actions TalkBack lists for it ({@link OpenAction}).
  *
  * <p>One switch can send the press to the watch history kept on the phone instead (#172). Pause
- * answers that switch's default, so a paused Hushfeed opens the settings: it's a way back to the
- * switch that resumes Hushfeed. The other top tabs are left alone, and a tab TikTok makes
+ * answers that switch's default, so a paused Larpfeed opens the settings: it's a way back to the
+ * switch that resumes Larpfeed. The other top tabs are left alone, and a tab TikTok makes
  * long-clickable keeps its own long press.
  */
 public final class ForYouTabSettingsShortcut {
@@ -73,7 +73,7 @@ public final class ForYouTabSettingsShortcut {
                     press = new Press();
                     tab.setOnTouchListener(press);
                     PRESSES.put(tab, press);
-                    Logger.printInfo(() -> "A long press on For You opens Hushfeed settings");
+                    Logger.printInfo(() -> "A long press on For You opens Larpfeed settings");
                 }
                 press.forYou = forYou;
                 if (forYou) offerToTalkBack(tab, press);
@@ -112,7 +112,7 @@ public final class ForYouTabSettingsShortcut {
 
     /**
      * Whether the press opens the watch history. Pause answers both switches' defaults, so a paused
-     * Hushfeed still opens the settings, where Pause is turned off.
+     * Larpfeed still opens the settings, where Pause is turned off.
      */
     static boolean opensWatchHistory() {
         return Settings.FOR_YOU_HOLD_OPENS_WATCH_HISTORY.get() && Settings.LOCAL_WATCH_HISTORY.get();
@@ -181,7 +181,7 @@ public final class ForYouTabSettingsShortcut {
             pressed = null;
             if (tab == null || !tab.isAttachedToWindow() || !forYou) return;
             try {
-                // Not asked for, and letting go is TikTok's tap, as it is without Hushfeed.
+                // Not asked for, and letting go is TikTok's tap, as it is without Larpfeed.
                 if (!open(tab)) return;
                 opened = true;
                 tab.performHapticFeedback(HapticFeedbackConstants.LONG_PRESS);
@@ -248,7 +248,7 @@ public final class ForYouTabSettingsShortcut {
             else super.onInitializeAccessibilityNodeInfo(host, info);
             if (offered(host)) {
                 info.addAction(new AccessibilityNodeInfo.AccessibilityAction(ID,
-                        L10n.t(host.getContext(), "Open Hushfeed settings")));
+                        L10n.t(host.getContext(), "Open Larpfeed settings")));
             }
         }
 

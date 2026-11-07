@@ -1,6 +1,6 @@
 /*
- * Copyright 2026 Hushfeed contributors
- * https://github.com/SysAdminDoc/hushfeed
+ * Copyright 2026 Larpfeed contributors
+ * https://github.com/SysAdminDoc/larpfeed
  */
 package app.morphe.extension.tiktok.settings.preference.categories;
 
@@ -126,7 +126,7 @@ public final class ScreenTimePreferenceCategory extends ConditionalPreferenceCat
         addPreference(new NumberInputPreference(context, "Daily video budget",
                 "Zero switches this off. Counts every video that comes up in the feed and tells "
                         + "you when you reach the limit. Separate from the auto-advance session "
-                        + "limit under Playback, which counts only videos Hushfeed moved past "
+                        + "limit under Playback, which counts only videos Larpfeed moved past "
                         + "for you.", Settings.SESSION_BUDGET_VIDEOS, "%1$s video", "%1$s videos") {
             @Override protected String extraSummaryLine() {
                 String waiting = waitingLine(getContext(), Settings.SESSION_BUDGET_VIDEOS, this::shown);

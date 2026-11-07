@@ -1,6 +1,6 @@
 /*
- * Copyright 2026 Hushfeed contributors
- * https://github.com/SysAdminDoc/hushfeed
+ * Copyright 2026 Larpfeed contributors
+ * https://github.com/SysAdminDoc/larpfeed
  *
  * Built on icysymmetra/tiktok-patches-for-morphe (GPL-3.0).
  */
@@ -636,7 +636,7 @@ public final class AuthorRegion {
     }
 
     /**
-     * A country code the way Hushfeed shows one, trimmed and upper case, or null when there's
+     * A country code the way Larpfeed shows one, trimmed and upper case, or null when there's
      * none. The feed's row and a comment's time both go through this.
      */
     public static String regionCode(String raw) {

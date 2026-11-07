@@ -1,6 +1,6 @@
 /*
- * Copyright 2026 Hushfeed contributors
- * https://github.com/SysAdminDoc/hushfeed
+ * Copyright 2026 Larpfeed contributors
+ * https://github.com/SysAdminDoc/larpfeed
  *
  * Built on icysymmetra/tiktok-patches-for-morphe (GPL-3.0).
  */
@@ -64,7 +64,7 @@ val hideFeedLiveButtonPatch = bytecodePatch(
     name = "Hide feed LIVE button",
     description = "Removes the LIVE button and the side menu button from the top left of the " +
         "feed, for a cleaner screen, and can stop a right swipe on For You from opening the side " +
-        "menu. Each has its own switch, and all start off. Turn them on in Hushfeed settings > " +
+        "menu. Each has its own switch, and all start off. Turn them on in Larpfeed settings > " +
         "Feed screen.",
     default = true,
 ) {

@@ -1,6 +1,6 @@
 /*
- * Copyright 2026 Hushfeed contributors
- * https://github.com/SysAdminDoc/hushfeed
+ * Copyright 2026 Larpfeed contributors
+ * https://github.com/SysAdminDoc/larpfeed
  */
 package app.morphe.extension.tiktok.share;
 
@@ -32,7 +32,7 @@ import java.util.List;
  * only while Record LIVEs you watch is on. The carrier needs no post, so it is built with none.
  */
 public final class ShareLiveQuality {
-    static final String KEY = "hushfeed_live_record_quality";
+    static final String KEY = "larpfeed_live_record_quality";
     static final String LABEL = "LIVE recording quality";
     private static final String FAMILY = "live recording quality";
     private static final List<Built> BUILT = new ArrayList<>();

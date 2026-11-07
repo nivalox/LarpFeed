@@ -1,6 +1,6 @@
 /*
- * Copyright 2026 Hushfeed contributors
- * https://github.com/SysAdminDoc/hushfeed
+ * Copyright 2026 Larpfeed contributors
+ * https://github.com/SysAdminDoc/larpfeed
  */
 package app.morphe.extension.tiktok.download;
 
@@ -562,7 +562,7 @@ final class CaptionBurner {
                 GLES20.glTexParameteri(GLES11Ext.GL_TEXTURE_EXTERNAL_OES, GLES20.GL_TEXTURE_WRAP_S, GLES20.GL_CLAMP_TO_EDGE);
                 GLES20.glTexParameteri(GLES11Ext.GL_TEXTURE_EXTERNAL_OES, GLES20.GL_TEXTURE_WRAP_T, GLES20.GL_CLAMP_TO_EDGE);
                 GLES20.glActiveTexture(GLES20.GL_TEXTURE0);
-                thread = new HandlerThread("Hushfeed-CaptionFrames");
+                thread = new HandlerThread("Larpfeed-CaptionFrames");
                 thread.start();
                 texture = new SurfaceTexture(textureName);
                 texture.setOnFrameAvailableListener(this, new Handler(thread.getLooper()));

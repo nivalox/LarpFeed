@@ -30,7 +30,7 @@ import org.robolectric.annotation.Config;
  * nobody thought of: Hide series emptied feeds three times because of that gap (#5, #20, #24), the
  * last time over an episode number of "0" on every ordinary profile post. The files under
  * {@code feed-markers/} hold what 428 real videos carried, recorded by the probe's
- * {@code marker-corpus} action with the verdicts Hushfeed gave them on the phone: 266 from four
+ * {@code marker-corpus} action with the verdicts Larpfeed gave them on the phone: 266 from four
  * broad routes, then paid partnership results, a search for Series, a playlist and 12 episodes of
  * TikTok's short dramas, which are the corpus's Series positives as well. Each file names
  * the build whose filters gave its verdicts. Every ordinary video has to stay ordinary and every

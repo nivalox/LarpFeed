@@ -1,6 +1,6 @@
 /*
- * Copyright 2026 Hushfeed contributors
- * https://github.com/SysAdminDoc/hushfeed
+ * Copyright 2026 Larpfeed contributors
+ * https://github.com/SysAdminDoc/larpfeed
  */
 package app.morphe.extension.tiktok.translation;
 
@@ -34,7 +34,7 @@ import org.robolectric.annotation.Config;
 /**
  * TikTok's translate button in the comment header (#85): its gates answer TikTok's own values
  * until the reader turns the switch on, and a toggle the button turned on reads off again once
- * the switch is off or Hushfeed is paused, while a toggle TikTok set itself keeps TikTok's answer.
+ * the switch is off or Larpfeed is paused, while a toggle TikTok set itself keeps TikTok's answer.
  * With Auto translate comments on, the toggle reads on, and the reader turning it off stops the
  * translating everywhere until it's turned back on (#282).
  */
@@ -104,7 +104,7 @@ public class CommentTranslateButtonTest {
         assertFalse(CommentTranslateButton.toggleOn(false));
 
         PausedProcess.set(true);
-        assertFalse("paused, the toggle Hushfeed turned on is off", CommentTranslateButton.toggleOn(true));
+        assertFalse("paused, the toggle Larpfeed turned on is off", CommentTranslateButton.toggleOn(true));
         PausedProcess.set(false);
         assertTrue(CommentTranslateButton.toggleOn(true));
 
@@ -133,7 +133,7 @@ public class CommentTranslateButtonTest {
         Settings.COMMENT_TRANSLATE_BUTTON.save(false);
         assertTrue(CommentTranslateButton.toggleOn(true));
 
-        // The button on an account TikTok built it for, with Hushfeed's switch off.
+        // The button on an account TikTok built it for, with Larpfeed's switch off.
         CommentTranslateButton.onToggleWritten(Boolean.TRUE, null);
         assertFalse(Settings.COMMENT_TRANSLATE_BUTTON_TURNED_ON.get());
         assertTrue(CommentTranslateButton.toggleOn(true));
@@ -243,7 +243,7 @@ public class CommentTranslateButtonTest {
         assertFalse("turning it on while paused still counts", Settings.COMMENT_TRANSLATION_TURNED_OFF.get());
     }
 
-    @Test public void aButtonTapWhileAutoTranslatingIsHushfeeds() {
+    @Test public void aButtonTapWhileAutoTranslatingIsLarpfeeds() {
         Settings.COMMENT_BATCH_TRANSLATION.save(true);
         CommentTranslateButton.onToggleWritten(Boolean.TRUE, null);
         assertTrue(Settings.COMMENT_TRANSLATE_BUTTON_TURNED_ON.get());

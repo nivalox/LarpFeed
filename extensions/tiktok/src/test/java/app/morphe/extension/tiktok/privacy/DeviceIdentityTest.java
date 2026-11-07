@@ -1,6 +1,6 @@
 /*
- * Copyright 2026 Hushfeed contributors
- * https://github.com/SysAdminDoc/hushfeed
+ * Copyright 2026 Larpfeed contributors
+ * https://github.com/SysAdminDoc/larpfeed
  */
 package app.morphe.extension.tiktok.privacy;
 
@@ -123,23 +123,23 @@ public class DeviceIdentityTest {
         };
     }
 
-    @Test public void theWipeKeepsHushfeedsFilesAndTakesTikToksOwn() throws IOException {
+    @Test public void theWipeKeepsLarpfeedsFilesAndTakesTikToksOwn() throws IOException {
         File data = temporary.newFolder("data");
         File[] kept = {
                 file(data, "shared_prefs/morphe_prefs.xml"),
                 file(data, "shared_prefs/morphe_feature_gate_lab.xml"),
-                file(data, "shared_prefs/hushfeed_device_identity.xml"),
-                file(data, "shared_prefs/hushfeed-calm-feed-preset.xml"),
-                file(data, "files/hushfeed-save-records.json"),
-                file(data, "files/hushfeed_fonts/imported.ttf"),
+                file(data, "shared_prefs/larpfeed_device_identity.xml"),
+                file(data, "shared_prefs/larpfeed-calm-feed-preset.xml"),
+                file(data, "files/larpfeed-save-records.json"),
+                file(data, "files/larpfeed_fonts/imported.ttf"),
                 file(data, "files/metra-settings-undo.json"),
                 file(data, "files/feature-gate-lab-undo.json"),
                 file(data, "files/morphe_java_crash_report_v1.txt"),
                 file(data, "databases/seen_videos.db"),
                 file(data, "databases/seen_videos.db-journal"),
-                file(data, "databases/hushfeed-saved-videos.db"),
-                file(data, "cache/hushfeed-media/clip.mp4"),
-                file(data, "no_backup/hushfeed-media/pending-uris.tsv"),
+                file(data, "databases/larpfeed-saved-videos.db"),
+                file(data, "cache/larpfeed-media/clip.mp4"),
+                file(data, "no_backup/larpfeed-media/pending-uris.tsv"),
                 file(data, "lib/libtiktok.so"),
                 file(data, "code_cache/compiled.dex"),
                 file(data, DeviceIdentity.WIPING_MARKER),
@@ -156,7 +156,7 @@ public class DeviceIdentityTest {
 
         int removed = DeviceIdentity.wipe(data);
 
-        for (File file : kept) assertTrue("the wipe took Hushfeed's " + file, file.isFile());
+        for (File file : kept) assertTrue("the wipe took Larpfeed's " + file, file.isFile());
         for (File file : taken) assertFalse("the wipe left TikTok's " + file, file.exists());
         assertFalse("TikTok's directories go whole", new File(data, "files/keva").exists());
         assertFalse(new File(data, "app_webview").exists());
@@ -211,7 +211,7 @@ public class DeviceIdentityTest {
         File tiktok = file(data, "shared_prefs/applog_stats.xml");
         File deviceTikTok = file(deviceData, "files/push_device_id");
         File externalTikTok = file(external, "files/logs/device.log");
-        File hushfeed = file(data, "shared_prefs/morphe_prefs.xml");
+        File larpfeed = file(data, "shared_prefs/morphe_prefs.xml");
         Context app = dataIn(data, deviceData, external);
         assertTrue(DeviceIdentity.setArmed(app, true));
 
@@ -234,7 +234,7 @@ public class DeviceIdentityTest {
         assertFalse(tiktok.exists());
         assertFalse("the device-protected copy goes too", deviceTikTok.exists());
         assertFalse("and TikTok's files on shared storage", externalTikTok.exists());
-        assertTrue(hushfeed.isFile());
+        assertTrue(larpfeed.isFile());
         assertFalse("one wipe per arming", DeviceIdentity.isArmed(app));
         String androidId = DeviceIdentity.androidId();
         String advertisingId = DeviceIdentity.advertisingId();

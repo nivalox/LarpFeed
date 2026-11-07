@@ -169,10 +169,10 @@ object BundleSource {
             && start.rawFingerprint.matches(Regex("[0-9A-Fa-f]{64}"))
             && start.rawFingerprint == end.rawFingerprint
         return mapOf(
-            "Hushfeed-Source-Commit" to start.commit,
-            "Hushfeed-Source-Clean" to clean.toString(),
-            "Hushfeed-Source-Start" to start.fingerprint,
-            "Hushfeed-Source-End" to end.fingerprint
+            "Larpfeed-Source-Commit" to start.commit,
+            "Larpfeed-Source-Clean" to clean.toString(),
+            "Larpfeed-Source-Start" to start.fingerprint,
+            "Larpfeed-Source-End" to end.fingerprint
         )
     }
 }
@@ -203,7 +203,7 @@ abstract class CaptureBundleSource : DefaultTask() {
  * source: Ed25519 over "MorpheSig1" and the SHA-256 of the archive with an empty comment, stored
  * in the zip comment as "MorpheSig1 <public key> <signature>" (PatchBundleSignature.sign writes
  * the same bytes). MORPHE_SIGNING_KEY is the Base64 raw private key; scripts/release/release.ps1
- * loads it from HUSHFEED_BUNDLE_SIGNING_KEY. Without it the bundle stays unsigned, which a release
+ * loads it from LARPFEED_BUNDLE_SIGNING_KEY. Without it the bundle stays unsigned, which a release
  * run refuses. Ed25519 is deterministic, so the same bundle always gets the same signature.
  */
 fun signBundle(bundle: File, privateKey: String?, publicKey: String) {
@@ -300,12 +300,12 @@ group = "app.morphe"
 
 patches {
     about {
-        name = "Hushfeed"
-        description = "Hushfeed patches for TikTok 47.7.2, built for Morphe. Fewer accidental taps, less noise, more control over the feed, inbox, comments and downloads."
-        source = "https://github.com/SysAdminDoc/hushfeed"
+        name = "Larpfeed"
+        description = "Larpfeed patches for TikTok 47.7.2, built for Morphe. Fewer accidental taps, less noise, more control over the feed, inbox, comments and downloads."
+        source = "https://github.com/SysAdminDoc/larpfeed"
         author = "SysAdminDoc"
-        contact = "https://github.com/SysAdminDoc/hushfeed/issues"
-        website = "https://github.com/SysAdminDoc/hushfeed"
+        contact = "https://github.com/SysAdminDoc/larpfeed/issues"
+        website = "https://github.com/SysAdminDoc/larpfeed"
         license = "GNU General Public License v3.0, with additional GPL section 7 requirements"
     }
 }
@@ -506,7 +506,7 @@ val nativeTest = tasks.register<Test>("nativeTest") {
 }
 // The fixture tests skip when this is unset and read the folder when it is set. Blank counts as
 // unset, as Fixtures.kt reads it; File("") would be the whole project.
-val fixtureDirectory = providers.environmentVariable("HUSHFEED_FIXTURE_DIR")
+val fixtureDirectory = providers.environmentVariable("LARPFEED_FIXTURE_DIR")
 // Gradle's file-hash cache can reuse a digest after an external file is replaced with the same
 // size and timestamp, so the fixture bytes are read independently. Once per build: both
 // partitions that open the APKs declare the same digests.
@@ -553,8 +553,8 @@ tasks.withType<Test>().matching { it.name == "test" || it.name == "nativeTest" }
         .withPathSensitivity(PathSensitivity.RELATIVE)
     inputs.property("fixtureBytes", provider { fixtureDigests })
     // NearestMethodsReport ranks methods for the fingerprint these name, so a new name runs it again.
-    inputs.property("nearestMethods", providers.environmentVariable("HUSHFEED_NEAREST").orElse(""))
-    inputs.property("nearestMethodsFrom", providers.environmentVariable("HUSHFEED_NEAREST_FROM").orElse(""))
+    inputs.property("nearestMethods", providers.environmentVariable("LARPFEED_NEAREST").orElse(""))
+    inputs.property("nearestMethodsFrom", providers.environmentVariable("LARPFEED_NEAREST_FROM").orElse(""))
 }
 
 tasks {
@@ -664,7 +664,7 @@ tasks {
         dependsOn("generatePatchesList")
     }
     // Rebuilds the Feature Gate Lab's offline catalogs from every declared TikTok build:
-    // ./gradlew :patches:generateGateCatalog reads their APKs from HUSHFEED_FIXTURE_DIR, and
+    // ./gradlew :patches:generateGateCatalog reads their APKs from LARPFEED_FIXTURE_DIR, and
     // -Papk=<a.apk>;<b.apk> names them instead. The generator is a test-source tool because the
     // test classpath is the one that carries dexlib2 and apksig.
     register<JavaExec>("generateGateCatalog") {

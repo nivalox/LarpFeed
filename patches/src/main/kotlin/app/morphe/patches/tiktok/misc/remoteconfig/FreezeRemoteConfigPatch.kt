@@ -1,6 +1,6 @@
 /*
- * Copyright 2026 Hushfeed contributors
- * https://github.com/SysAdminDoc/hushfeed
+ * Copyright 2026 Larpfeed contributors
+ * https://github.com/SysAdminDoc/larpfeed
  */
 package app.morphe.patches.tiktok.misc.remoteconfig
 
@@ -62,7 +62,7 @@ val freezeRemoteConfigPatch = bytecodePatch(
     name = "Freeze TikTok's experiments",
     description = "Lets you keep the settings TikTok's servers sent it so far. TikTok tests new " +
         "layouts and features on people by sending new ones all the time, and with this on it " +
-        "ignores them. Starts off. Turn it on in Hushfeed settings > App.",
+        "ignores them. Starts off. Turn it on in Larpfeed settings > App.",
 ) {
     category("Settings")
     dependsOn(sharedExtensionPatch, settingsPatch)

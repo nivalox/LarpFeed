@@ -111,7 +111,7 @@ public class BesideStoreAppTest {
         assertEquals(ownPackage, header.getString("package"));
     }
 
-    /** Before Hushfeed has a context the pause isn't decided, so TikTok's value goes out. */
+    /** Before Larpfeed has a context the pause isn't decided, so TikTok's value goes out. */
     @Test public void withoutAContextTheCopyWritesItsOwnName() throws JSONException {
         Utils.setContext(null);
         try {

@@ -1,5 +1,5 @@
-# Copyright 2026 Hushfeed contributors
-# https://github.com/SysAdminDoc/hushfeed
+# Copyright 2026 Larpfeed contributors
+# https://github.com/SysAdminDoc/larpfeed
 #
 # Built on icysymmetra/tiktok-patches-for-morphe (GPL-3.0).
 
@@ -111,7 +111,7 @@ def add_brand(canvas: Image.Image, *, compact: bool = False) -> None:
 
     brand_x = 86 + icon_size + 26
     brand_y = 87 if compact else 103
-    draw.text((brand_x, brand_y), "HUSHFEED", font=font(FONT_BOLD, 36), fill=INK)
+    draw.text((brand_x, brand_y), "LARPFEED", font=font(FONT_BOLD, 36), fill=INK)
     draw.rectangle((brand_x, brand_y + 53, brand_x + 164, brand_y + 58), fill=CYAN)
     draw.rectangle((brand_x + 164, brand_y + 53, brand_x + 218, brand_y + 58), fill=PINK)
 

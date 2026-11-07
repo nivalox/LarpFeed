@@ -46,11 +46,11 @@ try {
     Invoke-GestureTool $javac (@('--release', '11', '-encoding', 'UTF-8', '-classpath', $androidJar,
         '-d', (Join-Path $OutDir 'classes')) + $sources)
     Invoke-GestureTool $Java @('-cp', (Join-Path $OutDir 'classes'),
-        'app.hushfeed.verification.gestures.GestureSequenceContract')
+        'app.larpfeed.verification.gestures.GestureSequenceContract')
     Invoke-GestureTool $Java @('-cp', (Join-Path $OutDir 'classes'),
-        'app.hushfeed.verification.gestures.GestureAudioContract')
+        'app.larpfeed.verification.gestures.GestureAudioContract')
     Invoke-GestureTool $Java @('-cp', (Join-Path $OutDir 'classes'),
-        'app.hushfeed.verification.gestures.GestureDriverContract')
+        'app.larpfeed.verification.gestures.GestureDriverContract')
     $classes = @(Get-ChildItem (Join-Path $OutDir 'classes') -Recurse -Filter '*.class' | ForEach-Object FullName)
     Invoke-GestureTool (Join-Path $tools 'd8.bat') (@('--lib', $androidJar, '--min-api', '34',
         '--output', (Join-Path $OutDir 'dex')) + $classes)
@@ -65,7 +65,7 @@ try {
     } finally { $archive.Dispose() }
     $aligned = Join-Path $OutDir 'gesture-aligned.apk'
     Invoke-GestureTool (Join-Path $tools 'zipalign.exe') @('-f', '-p', '4', $unsigned, $aligned)
-    $apk = Join-Path $OutDir 'hushfeed-gesture-probe.apk'
+    $apk = Join-Path $OutDir 'larpfeed-gesture-probe.apk'
     Invoke-ApkSigning -Session $session -InputApk $aligned -OutputApk $apk
     Write-Output "[gesture-probe] $apk"
 } finally { Close-ApkSigningSession -Session $session }

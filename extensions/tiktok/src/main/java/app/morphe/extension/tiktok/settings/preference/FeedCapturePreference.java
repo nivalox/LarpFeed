@@ -1,6 +1,6 @@
 /*
- * Copyright 2026 Hushfeed contributors
- * https://github.com/SysAdminDoc/hushfeed
+ * Copyright 2026 Larpfeed contributors
+ * https://github.com/SysAdminDoc/larpfeed
  *
  * Built on icysymmetra/tiktok-patches-for-morphe (GPL-3.0).
  */
@@ -63,7 +63,7 @@ public final class FeedCapturePreference extends Preference implements Immediate
 
     /** The name a saved capture gets, dated the way the other reports are. */
     static String fileName() {
-        return "hushfeed-feed-capture-" + LogBufferManager.fileTimestamp() + ".txt";
+        return "larpfeed-feed-capture-" + LogBufferManager.fileTimestamp() + ".txt";
     }
 
     private static void save(Context context, FeedCapturePreference row) {
@@ -75,7 +75,7 @@ public final class FeedCapturePreference extends Preference implements Immediate
         }
         Context application = context.getApplicationContext();
         Context app = application == null ? context : application;
-        boolean started = Utils.runOnOwnThread("Hushfeed-feed-capture", () -> {
+        boolean started = Utils.runOnOwnThread("Larpfeed-feed-capture", () -> {
             try {
                 String saved = GateReportExport.write(app, recording.text(), fileName(), "text/plain");
                 if (unsaved == recording) unsaved = null;

@@ -44,7 +44,7 @@ import org.robolectric.annotation.Config;
 import org.robolectric.annotation.GraphicsMode;
 
 /**
- * The main page opens on Hushfeed's icon, its name and the version line, centred, with nothing on
+ * The main page opens on Larpfeed's icon, its name and the version line, centred, with nothing on
  * it to tap. It's there on the main page only, and a search keeps it.
  */
 @RunWith(RobolectricTestRunner.class)
@@ -170,7 +170,7 @@ public class SettingsHeaderTest {
 
         TextView name = (TextView) column.getChildAt(1);
         assertSame(name, list.findViewWithTag(SettingsHeader.NAME));
-        assertEquals("Hushfeed", name.getText().toString());
+        assertEquals("Larpfeed", name.getText().toString());
         assertEquals(TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_SP, 32,
                 name.getResources().getDisplayMetrics()), name.getTextSize(), 0.01f);
         assertEquals(Typeface.create("sans-serif-medium", Typeface.NORMAL), name.getTypeface());
@@ -248,7 +248,7 @@ public class SettingsHeaderTest {
         assertFalse(alone, alone.contains("TikTok"));
     }
 
-    @Test public void theLauncherIconShowsOnlyWhenTheBuildGaveTikTokHushfeedsIcon() throws Exception {
+    @Test public void theLauncherIconShowsOnlyWhenTheBuildGaveTikTokLarpfeedsIcon() throws Exception {
         TikTokPreferenceFragment home = openHome();
         Activity activity = home.getActivity();
         ScreenColors colors = ScreenColors.current();

@@ -30,7 +30,7 @@
     }
   },
   "distinction": {
-    "installed_measurement_app": "TikTok 47.1.4 with Hushfeed 0.68.0 paused, a different modified artifact",
+    "installed_measurement_app": "TikTok 47.1.4 with Larpfeed 0.68.0 paused, a different modified artifact",
     "factory_ui_observation": "Separate unpatched TikTok 38.3.3 emulator observation",
     "runtime_measurement_of_this_fixture": false
   },

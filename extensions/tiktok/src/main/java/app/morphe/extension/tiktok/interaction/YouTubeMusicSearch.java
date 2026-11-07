@@ -1,6 +1,6 @@
 /*
- * Copyright 2026 Hushfeed contributors
- * https://github.com/SysAdminDoc/hushfeed
+ * Copyright 2026 Larpfeed contributors
+ * https://github.com/SysAdminDoc/larpfeed
  */
 package app.morphe.extension.tiktok.interaction;
 
@@ -20,7 +20,7 @@ import app.morphe.extension.tiktok.settings.L10n;
  *
  * <p>TikTok once offered to save a sound to a YouTube Music playlist and took the option away.
  * YouTube Music has no API a phone can add to a playlist with short of an account token, and
- * Hushfeed holds no account of anyone's, so this stops at the search: the sound's title and
+ * Larpfeed holds no account of anyone's, so this stops at the search: the sound's title and
  * artist, as TikTok's own sound page shows them, opened in YouTube Music's search box. What the
  * reader does there is theirs. Nothing is sent anywhere else, and nothing is fetched first: the
  * title and artist are already in the video model, so the gesture answers at once.

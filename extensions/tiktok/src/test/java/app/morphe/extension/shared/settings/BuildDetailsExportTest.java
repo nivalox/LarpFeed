@@ -37,7 +37,7 @@ public class BuildDetailsExportTest {
 
     @Before public void start() throws Exception {
         oldSettings = SettingsBackup.create(false);
-        HushfeedPause.resetForTests();
+        LarpfeedPause.resetForTests();
         // A failed preference commit rolls the filter back to "all" and logs an error the clear
         // below removes, and every later assertion then reads unrelated categories. Say so here.
         boolean interruptedBefore = Thread.currentThread().isInterrupted();
@@ -49,7 +49,7 @@ public class BuildDetailsExportTest {
 
     @After public void finish() throws Exception {
         try {
-            HushfeedPause.resetForTests();
+            LarpfeedPause.resetForTests();
             SettingsBackup.restore(RuntimeEnvironment.getApplication(), oldSettings, false);
         } finally {
             LogBufferManager.clearLogBuffer();
@@ -83,11 +83,11 @@ public class BuildDetailsExportTest {
         String metadata = BuildDetailsTest.metadata(), expected = BuildDetails.report(metadata);
         try (BuildDetailsFixture asset = asset(metadata)) {
             Utils.setContext(asset.context);
-            for (HushfeedPause.Reason reason : HushfeedPause.Reason.values()) {
-                HushfeedPause.pauseForTests(reason);
+            for (LarpfeedPause.Reason reason : LarpfeedPause.Reason.values()) {
+                LarpfeedPause.pauseForTests(reason);
                 assertEquals(expected, BuildDetails.report());
             }
-            HushfeedPause.resetForTests();
+            LarpfeedPause.resetForTests();
             String backup = SettingsBackup.create(true);
             assertFalse(backup.contains("patch_time"));
             assertFalse(backup.contains("source_commit"));

@@ -182,7 +182,7 @@ public class SettingsActivityRecreationTest {
             assertSame("the collapsed category covered the live Undo action", banner,
                     settingsSurface.getChildAt(settingsSurface.getChildCount() - 1));
 
-            TextView undo = banner.findViewWithTag("hushfeed_settings_action_button");
+            TextView undo = banner.findViewWithTag("larpfeed_settings_action_button");
             assertNotNull(undo);
             assertTrue(undo.performClick());
             assertNull(banner.getParent());
@@ -241,7 +241,7 @@ public class SettingsActivityRecreationTest {
     }
 
     @Test public void aLegacyRestartMarkerExpandsTheMainListWithoutPushingAReturnPage() {
-        Intent intent = settingsIntent().putExtra("hushfeed_settings_page", "section:DOWNLOADS#download_video_quality");
+        Intent intent = settingsIntent().putExtra("larpfeed_settings_page", "section:DOWNLOADS#download_video_quality");
         try (var owner = Robolectric.buildActivity(SettingsActivity.class, intent).setup().visible()) {
             SettingsActivity activity = owner.get();
             settle(activity);
@@ -262,7 +262,7 @@ public class SettingsActivityRecreationTest {
     }
 
     @Test public void anInlineRestartMarkerRestoresAllOpenCategoriesAndTheVisibleRow() {
-        Intent intent = settingsIntent().putExtra("hushfeed_settings_page", "home:FEED_FILTER,DOWNLOADS#download_video_quality");
+        Intent intent = settingsIntent().putExtra("larpfeed_settings_page", "home:FEED_FILTER,DOWNLOADS#download_video_quality");
         try (var owner = Robolectric.buildActivity(SettingsActivity.class, intent).setup().visible()) {
             SettingsActivity activity = owner.get();
             settle(activity);
@@ -285,7 +285,7 @@ public class SettingsActivityRecreationTest {
         // The header is not selectable, so selection skips it outside touch mode.
         list.smoothScrollToPositionFromTop(0, 0, 0);
         settle((SettingsActivity) page.getActivity());
-        ViewGroup toolbar = page.getView().findViewWithTag("hushfeed_toolbar");
+        ViewGroup toolbar = page.getView().findViewWithTag("larpfeed_toolbar");
         assertNotNull("the page has no toolbar", toolbar);
         return toolbar.getChildAt(0);
     }

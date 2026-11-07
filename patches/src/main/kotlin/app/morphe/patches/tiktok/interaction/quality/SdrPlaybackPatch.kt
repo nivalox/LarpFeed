@@ -1,6 +1,6 @@
 /*
- * Copyright 2026 Hushfeed contributors
- * https://github.com/SysAdminDoc/hushfeed
+ * Copyright 2026 Larpfeed contributors
+ * https://github.com/SysAdminDoc/larpfeed
  */
 package app.morphe.patches.tiktok.interaction.quality
 
@@ -52,7 +52,7 @@ internal object SimVideoUrlModelSetBitRateFingerprint : Fingerprint(
 val sdrPlaybackPatch = bytecodePatch(
     name = "Play SDR instead of HDR",
     description = "Plays the normal version of HDR videos, so your screen doesn't suddenly " +
-        "jump to full brightness. Starts off. Turn it on in Hushfeed settings > Playback.",
+        "jump to full brightness. Starts off. Turn it on in Larpfeed settings > Playback.",
     default = true,
 ) {
     category("Playback")

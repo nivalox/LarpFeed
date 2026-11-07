@@ -188,7 +188,7 @@ public class DownloadsPreferenceCategory extends ConditionalPreferenceCategory {
                     "Saves the caption, creator, link and post date in a text file next to the "
                             + "video, or one file for a photo post's original photos. On Android 10 "
                             + "and later, they go in Download or Documents under the same folder "
-                            + "name. Applies to saves made by Hushfeed.",
+                            + "name. Applies to saves made by Larpfeed.",
                     Settings.DOWNLOAD_DETAILS));
             addPreference(new TogglePreference(context, "Save details as JSON",
                     "Saves the details file in JSON format instead of plain text. Useful if "
@@ -197,12 +197,12 @@ public class DownloadsPreferenceCategory extends ConditionalPreferenceCategory {
             addPreference(new TogglePreference(context, "Tag saved videos with their details",
                     "Stores the caption, creator, post date and link inside the video file, "
                             + "where media players can read them. Applies to saves made by "
-                            + "Hushfeed.",
+                            + "Larpfeed.",
                     Settings.DOWNLOAD_TAGS));
             addPreference(new TogglePreference(context, "Write the username and caption on the video",
                     "Saved videos show the @username and the first line of the caption in the "
                             + "bottom left corner. The phone encodes the whole video again to do "
-                            + "it, so saving takes longer. Applies to saves made by Hushfeed.",
+                            + "it, so saving takes longer. Applies to saves made by Larpfeed.",
                     Settings.DOWNLOAD_BURN_CAPTION));
             addPreference(new TogglePreference(context, "Check for already-saved videos",
                     L10n.f(context, "Remembers up to %1$s videos you saved here. If the file is "
@@ -211,7 +211,7 @@ public class DownloadsPreferenceCategory extends ConditionalPreferenceCategory {
                             java.text.NumberFormat.getIntegerInstance().format(SavedVideoArchive.LIMIT)),
                     Settings.CHECK_SAVED_VIDEOS));
             addPreference(new TogglePreference(context, "Mark saved videos",
-                    "Puts a ✓ by videos and photo posts you saved with Hushfeed, on profile "
+                    "Puts a ✓ by videos and photo posts you saved with Larpfeed, on profile "
                             + "grids and next to the time in the feed. Works only while Check "
                             + "for already-saved videos is on.",
                     Settings.MARK_SAVED_VIDEOS));

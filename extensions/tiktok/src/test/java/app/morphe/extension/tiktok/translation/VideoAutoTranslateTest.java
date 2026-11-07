@@ -1,6 +1,6 @@
 /*
- * Copyright 2026 Hushfeed contributors
- * https://github.com/SysAdminDoc/hushfeed
+ * Copyright 2026 Larpfeed contributors
+ * https://github.com/SysAdminDoc/larpfeed
  */
 package app.morphe.extension.tiktok.translation;
 
@@ -42,7 +42,7 @@ import org.robolectric.annotation.Config;
  * VideoAutoTranslate#publishedState}, so both answer off on a yes, while TikTok's comment switch
  * defaults through {@link VideoAutoTranslate#commentDefault} to the state as TikTok published it.
  * The switch starts off, asks for a restart because TikTok builds the state at launch, and leaves
- * TikTok's answer alone while Hushfeed is paused or before the settings context exists.
+ * TikTok's answer alone while Larpfeed is paused or before the settings context exists.
  */
 @RunWith(RobolectricTestRunner.class)
 @Config(sdk = 28)
@@ -117,7 +117,7 @@ public class VideoAutoTranslateTest {
     }
 
     @Test
-    public void aPausedHushfeedLeavesTikTokAlone() {
+    public void aPausedLarpfeedLeavesTikTokAlone() {
         Settings.NO_VIDEO_AUTO_TRANSLATE.save(true);
         PausedProcess.set(true);
         assertFalse(VideoAutoTranslate.keepOriginal());

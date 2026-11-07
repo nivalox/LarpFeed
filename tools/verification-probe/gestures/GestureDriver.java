@@ -1,4 +1,4 @@
-package app.hushfeed.verification.gestures;
+package app.larpfeed.verification.gestures;
 
 import java.util.List;
 

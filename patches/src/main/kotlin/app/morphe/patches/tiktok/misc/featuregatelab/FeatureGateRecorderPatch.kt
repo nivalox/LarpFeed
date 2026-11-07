@@ -1,6 +1,6 @@
 /*
- * Copyright 2026 Hushfeed contributors
- * https://github.com/SysAdminDoc/hushfeed
+ * Copyright 2026 Larpfeed contributors
+ * https://github.com/SysAdminDoc/larpfeed
  *
  * Built on icysymmetra/tiktok-patches-for-morphe (GPL-3.0).
  */
@@ -17,7 +17,7 @@ val featureGateRecorderPatch = bytecodePatch(
     name = "Feature Gate Recorder",
     description = "Records which hidden TikTok settings the app reads while you use it, and " +
         "which ones changed. It's a research tool and changes nothing in TikTok. Start a " +
-        "recording in Hushfeed settings > Diagnostics.",
+        "recording in Larpfeed settings > Diagnostics.",
     default = false,
 ) {
     category("Settings")

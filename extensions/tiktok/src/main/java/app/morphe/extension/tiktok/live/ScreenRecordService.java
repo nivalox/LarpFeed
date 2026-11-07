@@ -1,6 +1,6 @@
 /*
- * Copyright 2026 Hushfeed contributors
- * https://github.com/SysAdminDoc/hushfeed
+ * Copyright 2026 Larpfeed contributors
+ * https://github.com/SysAdminDoc/larpfeed
  */
 package app.morphe.extension.tiktok.live;
 
@@ -26,11 +26,11 @@ import app.morphe.extension.tiktok.settings.L10n;
  * service type is declared in the manifest as mediaProjection.
  */
 public final class ScreenRecordService extends Service {
-    static final String EXTRA_CODE = "hushfeed_code";
-    static final String EXTRA_DATA = "hushfeed_data";
+    static final String EXTRA_CODE = "larpfeed_code";
+    static final String EXTRA_DATA = "larpfeed_data";
     /** The notification's Stop (#265); the Record chip is hidden while the screen is filmed. */
     static final String ACTION_STOP = "app.morphe.extension.tiktok.live.STOP_SCREEN_RECORDING";
-    private static final String CHANNEL = "hushfeed_screen_record";
+    private static final String CHANNEL = "larpfeed_screen_record";
     private static final int NOTIFICATION_ID = 3701;
     /** ServiceInfo.FOREGROUND_SERVICE_TYPE_MEDIA_PROJECTION, API 29. */
     private static final int TYPE_MEDIA_PROJECTION = 32;

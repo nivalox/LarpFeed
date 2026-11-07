@@ -1,6 +1,6 @@
 /*
- * Copyright 2026 Hushfeed contributors
- * https://github.com/SysAdminDoc/hushfeed
+ * Copyright 2026 Larpfeed contributors
+ * https://github.com/SysAdminDoc/larpfeed
  *
  * Built on icysymmetra/tiktok-patches-for-morphe (GPL-3.0).
  */
@@ -239,8 +239,8 @@ final class L10nTranslationsDe {
                 "%1$s angesehene Videos hinzugefügt.");
         table.put("%1$s were already saved",
                 "%1$s waren schon gespeichert");
-        table.put("%1$s · Hushfeed's list only",
-                "%1$s · nur in der Liste von Hushfeed");
+        table.put("%1$s · Larpfeed's list only",
+                "%1$s · nur in der Liste von Larpfeed");
         table.put("%1$s · current value only",
                 "%1$s · nur aktueller Wert");
         table.put("%1$s · declared by TikTok",
@@ -344,8 +344,8 @@ final class L10nTranslationsDe {
                 "Doppeltippen auf eine Nachricht fügt ihr kein Herz mehr hinzu. Einfaches Tippen und langes Drücken funktionieren wie bisher.");
         table.put("A few seconds",
                 "Wenige Sekunden");
-        table.put("A file named hushfeed-safe-mode in TikTok's folder under Android/data paused Hushfeed. Your settings stay as they are.",
-                "Eine Datei namens hushfeed-safe-mode im TikTok-Ordner unter Android/data hat Hushfeed pausiert. Deine Einstellungen bleiben, wie sie sind.");
+        table.put("A file named larpfeed-safe-mode in TikTok's folder under Android/data paused Larpfeed. Your settings stay as they are.",
+                "Eine Datei namens larpfeed-safe-mode im TikTok-Ordner unter Android/data hat Larpfeed pausiert. Deine Einstellungen bleiben, wie sie sind.");
         table.put("A forced value applies to this copy of TikTok whichever account is signed in. It can't get past a check the server makes.",
                 "Ein erzwungener Wert gilt für diese TikTok-Installation, egal welches Konto angemeldet ist. An einer Prüfung des Servers kommt er nicht vorbei.");
         table.put("A good place to stop, if you want one.",
@@ -402,8 +402,8 @@ final class L10nTranslationsDe {
                 "Über");
         table.put("About %1$s of storage at this limit",
                 "Etwa %1$s Speicher bei diesem Limit");
-        table.put("About Hushfeed",
-                "Über Hushfeed");
+        table.put("About Larpfeed",
+                "Über Larpfeed");
         table.put("About overrides",
                 "Über Überschreibungen");
         table.put("Above moves the caption and the buttons up a little so the time fits over the right end of the bar. When something else is in the way, the time goes beside the bar.",
@@ -441,10 +441,10 @@ final class L10nTranslationsDe {
                 "Creator hinzufügen");
         table.put("Add a line along the bottom of a sound's cover while its preview plays, with the time played and the preview's length. Tap or drag it to move through the preview.",
                 "Eine Linie am unteren Rand des Covers eines Sounds hinzufügen, solange seine Vorschau läuft, mit der gespielten Zeit und der Länge der Vorschau. Tippe darauf oder ziehe sie, um in der Vorschau zu springen.");
-        table.put("Add a seen-history file saved by Hushfeed to the videos @%1$s has seen. A video in both keeps the newer date.",
-                "Eine von Hushfeed gesicherte Verlaufsdatei zu den Videos hinzufügen, die @%1$s gesehen hat. Ein Video, das in beiden steht, behält das neuere Datum.");
-        table.put("Add a seen-history file saved by Hushfeed to this account's seen videos. A video in both keeps the newer date.",
-                "Eine von Hushfeed gesicherte Verlaufsdatei zu den gesehenen Videos dieses Kontos hinzufügen. Ein Video, das in beiden steht, behält das neuere Datum.");
+        table.put("Add a seen-history file saved by Larpfeed to the videos @%1$s has seen. A video in both keeps the newer date.",
+                "Eine von Larpfeed gesicherte Verlaufsdatei zu den Videos hinzufügen, die @%1$s gesehen hat. Ein Video, das in beiden steht, behält das neuere Datum.");
+        table.put("Add a seen-history file saved by Larpfeed to this account's seen videos. A video in both keeps the newer date.",
+                "Eine von Larpfeed gesicherte Verlaufsdatei zu den gesehenen Videos dieses Kontos hinzufügen. Ein Video, das in beiden steht, behält das neuere Datum.");
         table.put("Add a separate button that skips videos using the current sound.",
                 "Eine separate Schaltfläche hinzufügen, die Videos mit dem aktuellen Sound überspringt.");
         table.put("Add a thin line along the bottom of a video story that you can drag to go back or skip ahead. The time shows while you drag, and a tap on it still moves between stories.",
@@ -666,8 +666,8 @@ final class L10nTranslationsDe {
                 "Hintergrund hinter dem Videotext");
         table.put("Background play in the long-press menu",
                 "Hintergrundwiedergabe im Langdruck-Menü");
-        table.put("Background play in the long-press menu is on in Hushfeed's Playback settings, so TikTok gets 1 for this key and an override here has no effect until that switch is off.",
-                "Hintergrundwiedergabe im Langdruck-Menü ist in Hushfeeds Wiedergabe-Einstellungen an, daher bekommt TikTok für diesen Schlüssel 1, und eine Überschreibung hier wirkt erst, wenn dieser Schalter aus ist.");
+        table.put("Background play in the long-press menu is on in Larpfeed's Playback settings, so TikTok gets 1 for this key and an override here has no effect until that switch is off.",
+                "Hintergrundwiedergabe im Langdruck-Menü ist in Larpfeeds Wiedergabe-Einstellungen an, daher bekommt TikTok für diesen Schlüssel 1, und eine Überschreibung hier wirkt erst, wenn dieser Schalter aus ist.");
         table.put("Backup and restore",
                 "Sichern und wiederherstellen");
         table.put("Bend the video at the edges",
@@ -816,8 +816,8 @@ final class L10nTranslationsDe {
                 "Feed aufzeichnen");
         table.put("Capturing. Find the problem, then come back to stop.",
                 "Läuft. Such das Problem, dann zurück zum Beenden.");
-        table.put("Changes in Hushfeed %1$s",
-                "Änderungen in Hushfeed %1$s");
+        table.put("Changes in Larpfeed %1$s",
+                "Änderungen in Larpfeed %1$s");
         table.put("Changes to %1$s at %2$s",
                 "Ändert sich um %2$s auf %1$s");
         table.put("Check for already-saved videos",
@@ -975,8 +975,8 @@ final class L10nTranslationsDe {
                 "Namen kopieren");
         table.put("Copy only the comment text when using TikTok's copy comment action.",
                 "Beim Kopieren eines Kommentars über TikTok nur den Kommentartext übernehmen.");
-        table.put("Copy or save which patches and options this Hushfeed was built with.",
-                "Kopiere oder speichere, mit welchen Patches und Optionen dieses Hushfeed gebaut wurde.");
+        table.put("Copy or save which patches and options this Larpfeed was built with.",
+                "Kopiere oder speichere, mit welchen Patches und Optionen dieses Larpfeed gebaut wurde.");
         table.put("Copy quick report",
                 "Kurzbericht kopieren");
         table.put("Copy report",
@@ -1292,8 +1292,8 @@ final class L10nTranslationsDe {
     }
 
     private static void fill10(Map<String, String> table) {
-        table.put("Each area shows how many of the things Hushfeed looks for were found in this TikTok and how many are missing.",
-                "Jeder Bereich zeigt, wie viele der Dinge, nach denen Hushfeed sucht, in diesem TikTok gefunden wurden und wie viele fehlen.");
+        table.put("Each area shows how many of the things Larpfeed looks for were found in this TikTok and how many are missing.",
+                "Jeder Bereich zeigt, wie viele der Dinge, nach denen Larpfeed sucht, in diesem TikTok gefunden wurden und wie viele fehlen.");
         table.put("Earlier this session",
                 "Früher in dieser Sitzung");
         table.put("Easier comment likes",
@@ -1503,8 +1503,8 @@ final class L10nTranslationsDe {
                 "Das Video vergessen, das @%2$s gesehen hat.");
         table.put("Forget what has been counted today and end any hold. The budgets themselves are left alone.",
                 "Vergessen, was heute gezählt wurde, und jede Sperre beenden. Die Budgets selbst bleiben unverändert.");
-        table.put("Forget which videos Hushfeed saved here, so the already-saved check starts over. The saved files and your settings stay. Turning the check off doesn't erase this record.",
-                "Vergisst, welche Videos Hushfeed hier gespeichert hat, damit die Prüfung auf bereits gespeicherte Videos neu beginnt. Die gespeicherten Dateien und deine Einstellungen bleiben. Die Prüfung auszuschalten löscht diese Liste nicht.");
+        table.put("Forget which videos Larpfeed saved here, so the already-saved check starts over. The saved files and your settings stay. Turning the check off doesn't erase this record.",
+                "Vergisst, welche Videos Larpfeed hier gespeichert hat, damit die Prüfung auf bereits gespeicherte Videos neu beginnt. Die gespeicherten Dateien und deine Einstellungen bleiben. Die Prüfung auszuschalten löscht diese Liste nicht.");
         table.put("Forgetting saved videos",
                 "Gespeicherte Videos werden vergessen");
         table.put("Forgotten. Tap to put them back.",
@@ -1644,8 +1644,8 @@ final class L10nTranslationsDe {
                 "TikTok Shop in der Suche ausblenden");
         table.put("Hide TikTok Shop posts from the feed, and the shop buttons under captions.",
                 "TikTok-Shop-Beiträge aus dem Feed und Shop-Schaltflächen unter Beschreibungen ausblenden.");
-        table.put("Hide TikTok's \"Search: ...\" banner above the comment count. This doesn't hide the comments or Hushfeed's comment-search box.",
-                "Blende TikToks Banner „Suchen: ...“ über der Kommentaranzahl aus. Die Kommentare und das Hushfeed-Suchfeld für Kommentare bleiben sichtbar.");
+        table.put("Hide TikTok's \"Search: ...\" banner above the comment count. This doesn't hide the comments or Larpfeed's comment-search box.",
+                "Blende TikToks Banner „Suchen: ...“ über der Kommentaranzahl aus. Die Kommentare und das Larpfeed-Suchfeld für Kommentare bleiben sichtbar.");
         table.put("Hide TikTok's Auto scroll button",
                 "TikToks Auto-Scroll-Schaltfläche ausblenden");
         table.put("Hide TikTok's short drama episodes and the cards that promote them.",
@@ -1834,8 +1834,8 @@ final class L10nTranslationsDe {
                 "Vollbild-Schaltfläche ausblenden");
         table.put("Hide the Full screen button over videos. Playback and automatic rotation keep working as before.",
                 "Blende die Vollbild-Schaltfläche über Videos aus. Wiedergabe und automatische Drehung funktionieren wie bisher.");
-        table.put("Hide the Hushfeed row",
-                "Hushfeed-Zeile ausblenden");
+        table.put("Hide the Larpfeed row",
+                "Larpfeed-Zeile ausblenden");
         table.put("Hide the Inbox search button",
                 "Suchschaltfläche im Posteingang ausblenden");
         table.put("Hide the LIVE bubble",
@@ -2078,30 +2078,30 @@ final class L10nTranslationsDe {
                 "Wie hoch die schwebende Pille im Haupt-Feed in der Leiste ist. Kompakt lässt mehr vom Video um sie herum frei. Die Tabs behalten ihre Größe und ihre Tippflächen.");
         table.put("How wide each edge strip is, as a percent of the screen width.",
                 "Wie breit jeder Randstreifen ist, in Prozent der Bildschirmbreite.");
-        table.put("Hushfeed",
-                "Hushfeed");
-        table.put("Hushfeed blocked TikTok's reports here. It hasn't confirmed that you stay off viewer lists.",
-                "Hushfeed hat hier TikToks Meldungen blockiert. Es hat noch nicht bestätigt, dass du auf Zuschauerlisten nicht auftauchst.");
-        table.put("Hushfeed can't read the creator pattern %1$s",
-                "Hushfeed kann Creator-Muster %1$s nicht lesen");
-        table.put("Hushfeed is active",
-                "Hushfeed ist aktiv");
-        table.put("Hushfeed is paused",
-                "Hushfeed ist pausiert");
-        table.put("Hushfeed is paused. Ghost mode isn't active.",
-                "Hushfeed ist pausiert. Der Geistermodus ist nicht aktiv.");
-        table.put("Hushfeed turns back on when TikTok restarts.",
-                "Hushfeed ist wieder aktiv, sobald TikTok neu startet.");
-        table.put("Hushfeed's downloader doesn't fill this in, so it's kept as typed: %1$s",
-                "Hushfeeds Downloader füllt das nicht aus, daher bleibt es wie eingegeben: %1$s");
-        table.put("Hushfeed's downloader: %1$s",
-                "Hushfeeds Downloader: %1$s");
-        table.put("Hushfeed's switches are paused. Your settings stay saved. Changes made when you patched, like the app's name or icon, stay.",
-                "Hushfeeds Schalter sind pausiert. Deine Einstellungen bleiben gespeichert. Was du beim Patchen geändert hast, etwa Name oder Symbol der App, bleibt.");
+        table.put("Larpfeed",
+                "Larpfeed");
+        table.put("Larpfeed blocked TikTok's reports here. It hasn't confirmed that you stay off viewer lists.",
+                "Larpfeed hat hier TikToks Meldungen blockiert. Es hat noch nicht bestätigt, dass du auf Zuschauerlisten nicht auftauchst.");
+        table.put("Larpfeed can't read the creator pattern %1$s",
+                "Larpfeed kann Creator-Muster %1$s nicht lesen");
+        table.put("Larpfeed is active",
+                "Larpfeed ist aktiv");
+        table.put("Larpfeed is paused",
+                "Larpfeed ist pausiert");
+        table.put("Larpfeed is paused. Ghost mode isn't active.",
+                "Larpfeed ist pausiert. Der Geistermodus ist nicht aktiv.");
+        table.put("Larpfeed turns back on when TikTok restarts.",
+                "Larpfeed ist wieder aktiv, sobald TikTok neu startet.");
+        table.put("Larpfeed's downloader doesn't fill this in, so it's kept as typed: %1$s",
+                "Larpfeeds Downloader füllt das nicht aus, daher bleibt es wie eingegeben: %1$s");
+        table.put("Larpfeed's downloader: %1$s",
+                "Larpfeeds Downloader: %1$s");
+        table.put("Larpfeed's switches are paused. Your settings stay saved. Changes made when you patched, like the app's name or icon, stay.",
+                "Larpfeeds Schalter sind pausiert. Deine Einstellungen bleiben gespeichert. Was du beim Patchen geändert hast, etwa Name oder Symbol der App, bleibt.");
         table.put("If that name is taken, Android adds a number to the new file.",
                 "Ist der Name schon vergeben, hängt Android an die neue Datei eine Zahl an.");
-        table.put("If that name is taken, Hushfeed adds a number to the new file.",
-                "Ist der Name schon vergeben, hängt Hushfeed an die neue Datei eine Zahl an.");
+        table.put("If that name is taken, Larpfeed adds a number to the new file.",
+                "Ist der Name schon vergeben, hängt Larpfeed an die neue Datei eine Zahl an.");
         table.put("If the video blinks as you swipe with See-through bottom bar on, this draws it inside TikTok instead of on a layer of its own. It can use a little more battery. Needs See-through bottom bar.",
                 "Wenn das Video beim Wischen mit Durchsichtige untere Leiste flackert, zeichnet dies es direkt in TikTok statt auf einer eigenen Ebene. Kann etwas mehr Akku brauchen. Braucht Durchsichtige untere Leiste.");
         table.put("Import a font file",
@@ -2191,8 +2191,8 @@ final class L10nTranslationsDe {
                 "Fotos so behalten, wie TikTok sie sendet");
         table.put("Keep playing in the background",
                 "Im Hintergrund weiterspielen");
-        table.put("Keep playing in the background is on in Hushfeed's Playback settings, so TikTok gets 2 for this key and an override here has no effect until that switch is off.",
-                "Im Hintergrund weiterspielen ist in Hushfeeds Wiedergabe-Einstellungen an, daher bekommt TikTok für diesen Schlüssel 2, und eine Überschreibung hier wirkt erst, wenn dieser Schalter aus ist.");
+        table.put("Keep playing in the background is on in Larpfeed's Playback settings, so TikTok gets 2 for this key and an override here has no effect until that switch is off.",
+                "Im Hintergrund weiterspielen ist in Larpfeeds Wiedergabe-Einstellungen an, daher bekommt TikTok für diesen Schlüssel 2, und eine Überschreibung hier wirkt erst, wenn dieser Schalter aus ist.");
         table.put("Keep the Favorites tab",
                 "Favoriten-Tab behalten");
         table.put("Keep the For You feed on your real SIM",
@@ -2449,8 +2449,8 @@ final class L10nTranslationsDe {
                 "Langes Drücken auf Für dich öffnet meinen Wiedergabeverlauf");
         table.put("Long press on Profile opens my watch history",
                 "Langes Drücken auf Profil öffnet meinen Wiedergabeverlauf");
-        table.put("Long-press Home for Hushfeed settings",
-                "Startseite lange drücken für Hushfeed-Einstellungen");
+        table.put("Long-press Home for Larpfeed settings",
+                "Startseite lange drücken für Larpfeed-Einstellungen");
         table.put("Long-press Inbox for read receipts",
                 "Posteingang lang drücken für Lesebestätigungen");
         table.put("Long-press Profile for Watch history",
@@ -2725,8 +2725,8 @@ final class L10nTranslationsDe {
                 "Normal");
         table.put("Not a handle or id, so ignored: %1$s",
                 "Kein Konto-Name und keine ID, daher ignoriert: %1$s");
-        table.put("Not a part Hushfeed fills in, so it's kept as typed: %1$s",
-                "Kein Teil, den Hushfeed ausfüllt, daher bleibt es wie eingegeben: %1$s");
+        table.put("Not a part Larpfeed fills in, so it's kept as typed: %1$s",
+                "Kein Teil, den Larpfeed ausfüllt, daher bleibt es wie eingegeben: %1$s");
         table.put("Not available on this TikTok version",
                 "In dieser TikTok-Version nicht verfügbar");
         table.put("Not blocked",
@@ -2784,8 +2784,8 @@ final class L10nTranslationsDe {
                 "Aus");
         table.put("Off forces the value to false, on forces it to true. Reset lets TikTok decide again.",
                 "Aus erzwingt den Wert false, an erzwingt true. Zurücksetzen lässt TikTok wieder selbst entscheiden.");
-        table.put("Off until you tap it. Wipes TikTok's data once, on the next start, and gives it a new Android ID and advertising ID, so it sees a phone it hasn't met. You'll be signed out and lose your drafts. Hushfeed's settings stay.",
-                "Aus, bis du darauf tippst. Löscht TikToks Daten einmal beim nächsten Start und gibt ihm eine neue Android-ID und Werbe-ID, sodass es ein Telefon sieht, das es nicht kennt. Du wirst abgemeldet und verlierst deine Entwürfe. Die Hushfeed-Einstellungen bleiben.");
+        table.put("Off until you tap it. Wipes TikTok's data once, on the next start, and gives it a new Android ID and advertising ID, so it sees a phone it hasn't met. You'll be signed out and lose your drafts. Larpfeed's settings stay.",
+                "Aus, bis du darauf tippst. Löscht TikToks Daten einmal beim nächsten Start und gibt ihm eine neue Android-ID und Werbe-ID, sodass es ein Telefon sieht, das es nicht kennt. Du wirst abgemeldet und verlierst deine Entwürfe. Die Larpfeed-Einstellungen bleiben.");
         table.put("Off, only its button closes it.",
                 "Aus: Nur die Schaltfläche schließt sie.");
         table.put("Off. TikTok can report views and typing.",
@@ -2818,8 +2818,8 @@ final class L10nTranslationsDe {
                 "Im Haupt-Feed liegt eine gewölbte Glasblase hinter dem Tab, auf dem du bist, und gleitet zum nächsten Tab, den du wählst. Braucht Liquid-Glass-Look.");
         table.put("On the main feed, slide a finger along the glass pill and the lens follows it. Let go and that tab opens. Taps and long presses work as before. Needs Glass lens on the current tab.",
                 "Zieh im Haupt-Feed einen Finger über die Glaspille und die Linse folgt ihm. Lass los und dieser Tab öffnet sich. Tippen und langes Drücken funktionieren wie bisher. Braucht Glaslinse auf dem aktuellen Tab.");
-        table.put("On. Hushfeed hasn't seen TikTok send any reports since it started.",
-                "An. Hushfeed hat seit dem Start von TikTok keine Meldungen von TikTok gesehen.");
+        table.put("On. Larpfeed hasn't seen TikTok send any reports since it started.",
+                "An. Larpfeed hat seit dem Start von TikTok keine Meldungen von TikTok gesehen.");
         table.put("Once today's budget runs out, the hold stays and can't be dismissed. The budget settings are locked until the day starts over. Turn this off any time before the budget runs out.",
                 "Sobald das heutige Budget aufgebraucht ist, bleibt die Sperre bestehen. Die Budgeteinstellungen sind bis zum nächsten Tag gesperrt. Schalte dies jederzeit vor Ablauf des Budgets aus.");
         table.put("One area was checked and everything it needs is here.",
@@ -2860,8 +2860,8 @@ final class L10nTranslationsDe {
                 "Nur diese Untertitelsprachen");
         table.put("Open",
                 "Öffnen");
-        table.put("Open Hushfeed settings",
-                "Hushfeed-Einstellungen öffnen");
+        table.put("Open Larpfeed settings",
+                "Larpfeed-Einstellungen öffnen");
         table.put("Open TikTok on",
                 "TikTok öffnen mit");
         table.put("Open a share sheet once, then return here to choose its actions.",
@@ -2893,9 +2893,9 @@ final class L10nTranslationsDe {
     private static void fill23(Map<String, String> table) {
         table.put("Open the feed anyway, the last time today",
                 "Feed trotzdem öffnen, heute zum letzten Mal");
-        table.put("Open the feed once so Hushfeed can see which bottom tabs TikTok loaded.",
+        table.put("Open the feed once so Larpfeed can see which bottom tabs TikTok loaded.",
                 "Öffne die TikTok-Startseite, damit geladene untere Tabs erkannt werden.");
-        table.put("Open the feed once so Hushfeed can see which tabs TikTok loaded.",
+        table.put("Open the feed once so Larpfeed can see which tabs TikTok loaded.",
                 "Öffne den TikTok-Startfeed, damit geladene Tabs erkannt werden.");
         table.put("Open the profile again and try once more",
                 "Öffne das Profil erneut und versuche es noch einmal");
@@ -2973,10 +2973,10 @@ final class L10nTranslationsDe {
                 "TikToks Installationsprüfungen bestehen");
         table.put("Pause",
                 "Pausieren");
-        table.put("Pause Hushfeed",
-                "Hushfeed pausieren");
-        table.put("Pause Hushfeed's switches after TikTok restarts. Your settings stay saved. Changes made when you patched, like the app's name or icon, stay.",
-                "Pausiere Hushfeeds Schalter nach dem Neustart von TikTok. Deine Einstellungen bleiben gespeichert. Was du beim Patchen geändert hast, etwa Name oder Symbol der App, bleibt.");
+        table.put("Pause Larpfeed",
+                "Larpfeed pausieren");
+        table.put("Pause Larpfeed's switches after TikTok restarts. Your settings stay saved. Changes made when you patched, like the app's name or icon, stay.",
+                "Pausiere Larpfeeds Schalter nach dem Neustart von TikTok. Deine Einstellungen bleiben gespeichert. Was du beim Patchen geändert hast, etwa Name oder Symbol der App, bleibt.");
         table.put("Pause the video while comments are open",
                 "Video anhalten, solange Kommentare offen sind");
         table.put("Paused",
@@ -3179,8 +3179,8 @@ final class L10nTranslationsDe {
                 "Setzt einen Kreis auf jedes Video in einem Profil-, Gefällt-mir- oder Favoritenraster. Wähle bis zu %1$s aus und tippe dann auf Speichern, um sie nacheinander zu speichern, mit Zähler und Abbrechen.");
         table.put("Puts a save button in the sheet a story's Share button opens. It saves the story you're watching, and holding a story still pauses it.",
                 "Fügt dem Menü, das der Teilen-Button einer Story öffnet, einen Speichern-Button hinzu. Er speichert die Story, die du gerade ansiehst, und Gedrückthalten pausiert eine Story weiterhin.");
-        table.put("Puts a ✓ by videos and photo posts you saved with Hushfeed, on profile grids and next to the time in the feed. Works only while Check for already-saved videos is on.",
-                "Setzt ein ✓ an Videos und Fotobeiträgen, die du mit Hushfeed gespeichert hast, in Profilrastern und neben der Uhrzeit im Feed. Funktioniert nur, solange „Bereits gespeicherte Videos prüfen“ an ist.");
+        table.put("Puts a ✓ by videos and photo posts you saved with Larpfeed, on profile grids and next to the time in the feed. Works only while Check for already-saved videos is on.",
+                "Setzt ein ✓ an Videos und Fotobeiträgen, die du mit Larpfeed gespeichert hast, in Profilrastern und neben der Uhrzeit im Feed. Funktioniert nur, solange „Bereits gespeicherte Videos prüfen“ an ist.");
         table.put("Puts your time zone after the time to the second, like EDT.",
                 "Setzt deine Zeitzone hinter die sekundengenaue Uhrzeit, etwa MESZ.");
         table.put("Putting seen videos back",
@@ -3302,8 +3302,8 @@ final class L10nTranslationsDe {
                 "Reposts werden entfernt in %1$d");
         table.put("Removing the kept messages",
                 "Behaltene Nachrichten werden entfernt");
-        table.put("Reopen Hushfeed settings, then choose the file",
-                "Öffne die Hushfeed-Einstellungen erneut und wähle dann die Datei");
+        table.put("Reopen Larpfeed settings, then choose the file",
+                "Öffne die Larpfeed-Einstellungen erneut und wähle dann die Datei");
         table.put("Replace values when TikTok asks for them",
                 "Werte ersetzen, wenn TikTok sie abfragt");
         table.put("Replay a story from the start when it ends instead of moving to the next one. Tap or swipe to move on.",
@@ -3546,8 +3546,8 @@ final class L10nTranslationsDe {
                 "Gespeicherte Videos vergessen. Die Dateien sind noch da.");
         table.put("Saved videos put back",
                 "Gespeicherte Videos zurückgeholt");
-        table.put("Saved videos show the @username and the first line of the caption in the bottom left corner. The phone encodes the whole video again to do it, so saving takes longer. Applies to saves made by Hushfeed.",
-                "Gespeicherte Videos zeigen unten links den @Benutzernamen und die erste Zeile der Beschreibung. Dafür kodiert das Handy das ganze Video neu, das Speichern dauert also länger. Gilt für Speicherungen durch Hushfeed.");
+        table.put("Saved videos show the @username and the first line of the caption in the bottom left corner. The phone encodes the whole video again to do it, so saving takes longer. Applies to saves made by Larpfeed.",
+                "Gespeicherte Videos zeigen unten links den @Benutzernamen und die erste Zeile der Beschreibung. Dafür kodiert das Handy das ganze Video neu, das Speichern dauert also länger. Gilt für Speicherungen durch Larpfeed.");
         table.put("Saved, but a later save may make a second copy",
                 "Gespeichert, erneutes Speichern evtl. doppelt");
         table.put("Saved, override off",
@@ -3562,14 +3562,14 @@ final class L10nTranslationsDe {
                 "Laufende Speicherungen");
         table.put("Saves subtitle (SRT) files with the video. They go to Movies on Android 11 and newer, Download on Android 10, and your video folder on older versions. On Android 11 and newer with Save details on, the video moves to Download or Documents and the subtitles stay in Movies.",
                 "Speichert Untertiteldateien (SRT) mit dem Video. Sie landen ab Android 11 in Movies, unter Android 10 in Download und bei älteren Versionen in deinem Videoordner. Ab Android 11 mit eingeschaltetem „Details speichern“ wandert das Video nach Download oder Documents, und die Untertitel bleiben in Movies.");
-        table.put("Saves the caption, creator, link and post date in a text file next to the video, or one file for a photo post's original photos. On Android 10 and later, they go in Download or Documents under the same folder name. Applies to saves made by Hushfeed.",
-                "Speichert Beschreibung, Creator, Link und Veröffentlichungsdatum in einer Textdatei neben dem Video, bei einem Fotobeitrag in einer Datei für die Originalfotos. Ab Android 10 landen sie in Download oder Documents unter demselben Ordnernamen. Gilt für Speicherungen durch Hushfeed.");
+        table.put("Saves the caption, creator, link and post date in a text file next to the video, or one file for a photo post's original photos. On Android 10 and later, they go in Download or Documents under the same folder name. Applies to saves made by Larpfeed.",
+                "Speichert Beschreibung, Creator, Link und Veröffentlichungsdatum in einer Textdatei neben dem Video, bei einem Fotobeitrag in einer Datei für die Originalfotos. Ab Android 10 landen sie in Download oder Documents unter demselben Ordnernamen. Gilt für Speicherungen durch Larpfeed.");
         table.put("Saves the details file in JSON format instead of plain text. Useful if another tool will read it.",
                 "Speichert die Detaildatei im JSON-Format statt als einfachen Text. Praktisch, wenn ein anderes Programm sie liest.");
         table.put("Saves wait for Wi-Fi or another network that isn't metered, for up to 30 minutes, and stop if you leave it. Saving a frame still works anywhere.",
                 "Speicherungen warten bis zu 30 Minuten auf WLAN oder ein anderes Netz ohne Volumenbegrenzung und stoppen, wenn du es verlässt. Ein Einzelbild lässt sich überall speichern.");
-        table.put("Saves your Hushfeed settings and Feature Gate Lab rules to a file.",
-                "Speichert deine Hushfeed-Einstellungen und Feature-Gate-Lab-Regeln in einer Datei.");
+        table.put("Saves your Larpfeed settings and Feature Gate Lab rules to a file.",
+                "Speichert deine Larpfeed-Einstellungen und Feature-Gate-Lab-Regeln in einer Datei.");
         table.put("Saving",
                 "Wird gespeichert");
         table.put("Saving %1$s of %2$s",
@@ -3701,8 +3701,8 @@ final class L10nTranslationsDe {
                 "Rückmeldung wird gesendet");
         table.put("Sending the message",
                 "Nachricht wird gesendet");
-        table.put("Sends TikTok's feed, search, comments and other app traffic through the proxy below. Videos and LIVE streams still connect directly. Saves and short-link lookups from Hushfeed also connect directly, after their own address checks. Other apps aren't affected.",
-                "Leitet TikToks Feed, Suche, Kommentare und anderen App-Datenverkehr über den Proxy unten. Videos und LIVE-Streams verbinden sich weiterhin direkt. Speichern und Kurzlink-Abfragen von Hushfeed verbinden sich ebenfalls direkt, nach ihren eigenen Adressprüfungen. Andere Apps sind nicht betroffen.");
+        table.put("Sends TikTok's feed, search, comments and other app traffic through the proxy below. Videos and LIVE streams still connect directly. Saves and short-link lookups from Larpfeed also connect directly, after their own address checks. Other apps aren't affected.",
+                "Leitet TikToks Feed, Suche, Kommentare und anderen App-Datenverkehr über den Proxy unten. Videos und LIVE-Streams verbinden sich weiterhin direkt. Speichern und Kurzlink-Abfragen von Larpfeed verbinden sich ebenfalls direkt, nach ihren eigenen Adressprüfungen. Andere Apps sind nicht betroffen.");
         table.put("Sends one message a day to each person below at the time below, so your streaks keep going on days you don't open TikTok.",
                 "Sendet jeden Tag zur unten angegebenen Zeit eine Nachricht an jede der unten genannten Personen, damit eure Flammen auch an Tagen erhalten bleiben, an denen du TikTok nicht öffnest.");
         table.put("Sends today's message right away. The daily one then waits for tomorrow.",
@@ -4203,8 +4203,8 @@ final class L10nTranslationsDe {
                 "Speicher fast voll. Gespeichert unter %1$s");
         table.put("Store TikTok thinks it came from",
                 "Store, von dem TikTok glaubt, dass es daher kommt");
-        table.put("Stores the caption, creator, post date and link inside the video file, where media players can read them. Applies to saves made by Hushfeed.",
-                "Legt Beschreibung, Creator, Veröffentlichungsdatum und Link in der Videodatei selbst ab, wo Mediaplayer sie lesen können. Gilt für Speicherungen durch Hushfeed.");
+        table.put("Stores the caption, creator, post date and link inside the video file, where media players can read them. Applies to saves made by Larpfeed.",
+                "Legt Beschreibung, Creator, Veröffentlichungsdatum und Link in der Videodatei selbst ab, wo Mediaplayer sie lesen können. Gilt für Speicherungen durch Larpfeed.");
         table.put("Stories",
                 "Storys");
         table.put("Story",
@@ -4231,8 +4231,8 @@ final class L10nTranslationsDe {
                 "Untertitel");
         table.put("Subtitles: %1$s",
                 "Untertitel: %1$s");
-        table.put("Support Hushfeed",
-                "Hushfeed unterstützen");
+        table.put("Support Larpfeed",
+                "Larpfeed unterstützen");
         table.put("Swap the website in shared links",
                 "Website in geteilten Links austauschen");
         table.put("Swipe for brightness and volume",
@@ -4250,8 +4250,8 @@ final class L10nTranslationsDe {
                 "System");
         table.put("Tag saved videos with their details",
                 "Gespeicherte Videos mit ihren Details versehen");
-        table.put("Take Hushfeed out of TikTok's Settings and privacy. To open these settings, press and hold For You at the top of the feed, or Home if Long-press Home for Hushfeed settings is on.",
-                "Nimmt Hushfeed aus TikToks Einstellungen und Datenschutz. Um diese Einstellungen zu öffnen, halte Für dich oben im Feed gedrückt, oder Startseite, wenn Startseite lange drücken für Hushfeed-Einstellungen an ist.");
+        table.put("Take Larpfeed out of TikTok's Settings and privacy. To open these settings, press and hold For You at the top of the feed, or Home if Long-press Home for Larpfeed settings is on.",
+                "Nimmt Larpfeed aus TikToks Einstellungen und Datenschutz. Um diese Einstellungen zu öffnen, halte Für dich oben im Feed gedrückt, oder Startseite, wenn Startseite lange drücken für Larpfeed-Einstellungen an ist.");
         table.put("Take the Add comment bar off videos you open from a profile, a hashtag, a sound or search, so the video fills the screen down to the bottom. The comment button on the right still opens comments.",
                 "Blende die Kommentarleiste unter Videos aus, die du über ein Profil, einen Hashtag, einen Sound oder die Suche öffnest, damit das Video den Bildschirm bis ganz unten füllt. Die Kommentar-Schaltfläche rechts öffnet die Kommentare weiterhin.");
         table.put("Take the pulsing LIVE ring off profile pictures on the feed and in comments. Tapping the picture of a creator who's live opens their profile instead of the LIVE.",
@@ -4288,8 +4288,8 @@ final class L10nTranslationsDe {
                 "Zum Starten des Feeds tippen");
         table.put("Tap to start, then scroll until the feed problem shows up and come back here to save it. The file has no captions or names, and videos and creators appear only as short codes. Read it before you share it.",
                 "Tippe zum Starten, scrolle dann, bis das Problem im Feed auftritt, und komm hierher zurück, um es zu speichern. Die Datei enthält keine Untertitel oder Namen, Videos und Creator erscheinen nur als kurze Codes. Lies sie, bevor du sie teilst.");
-        table.put("Tap, then go to the screen with what you want hidden. After %1$d seconds Hushfeed records how that screen is built, without any of its text, for the diagnostic report.",
-                "Tippe hier und geh dann zu dem Bildschirm mit dem, was ausgeblendet werden soll. Nach %1$d Sekunden zeichnet Hushfeed auf, wie dieser Bildschirm aufgebaut ist, ohne seinen Text, für den Diagnosebericht.");
+        table.put("Tap, then go to the screen with what you want hidden. After %1$d seconds Larpfeed records how that screen is built, without any of its text, for the diagnostic report.",
+                "Tippe hier und geh dann zu dem Bildschirm mit dem, was ausgeblendet werden soll. Nach %1$d Sekunden zeichnet Larpfeed auf, wie dieser Bildschirm aufgebaut ist, ohne seinen Text, für den Diagnosebericht.");
         table.put("Tapping a sticker someone sent you in a chat opens a box with Save media. Turn this off to skip it.",
                 "Wenn du in einem Chat auf einen Sticker tippst, den dir jemand geschickt hat, öffnet sich ein Fenster mit Medien speichern. Schalte das aus, um es zu überspringen.");
         table.put("Tapping more under a video opens its comments with the whole caption at the top instead of spreading the caption over the video. A tap on the caption itself does the same. Photo posts keep TikTok's own page for this.",
@@ -4302,8 +4302,8 @@ final class L10nTranslationsDe {
                 "Wörter in Textstickern");
         table.put("That JSON file doesn't contain the supported TikTok watch history.",
                 "Diese JSON-Datei enthält keinen unterstützten TikTok-Wiedergabeverlauf.");
-        table.put("That backup was written by a newer Hushfeed than this one. Nothing was altered.",
-                "Diese Sicherung stammt aus einem neueren Hushfeed als diesem. Es wurde nichts geändert.");
+        table.put("That backup was written by a newer Larpfeed than this one. Nothing was altered.",
+                "Diese Sicherung stammt aus einem neueren Larpfeed als diesem. Es wurde nichts geändert.");
         table.put("That creator is already in the list",
                 "Dieser Creator ist bereits in der Liste");
         table.put("That creator pattern could stall the feed, so it wasn't added: %1$s",
@@ -4312,8 +4312,8 @@ final class L10nTranslationsDe {
                 "Dieses Kreator-Muster ist zu lang und wurde nicht hinzugefügt: %1$s");
         table.put("That file has more than %1$s watch-history entries.",
                 "Die Datei enthält mehr als %1$s Einträge im Wiedergabeverlauf.");
-        table.put("That file is larger than %1$s MB. Choose a seen-history file saved by Hushfeed.",
-                "Die Datei ist größer als %1$s MB. Wähle eine von Hushfeed gesicherte Verlaufsdatei.");
+        table.put("That file is larger than %1$s MB. Choose a seen-history file saved by Larpfeed.",
+                "Die Datei ist größer als %1$s MB. Wähle eine von Larpfeed gesicherte Verlaufsdatei.");
         table.put("That file is larger than %1$s MB. Choose a smaller font file.",
                 "Die Datei ist größer als %1$s MB. Wähle eine kleinere Schriftdatei.");
         table.put("That file is larger than %1$s MB. Choose a smaller watch-history export.",
@@ -4328,8 +4328,8 @@ final class L10nTranslationsDe {
                 "Diese Datei ist kein lesbarer Text und wurde womöglich bei der Übertragung beschädigt. Es wurde nichts geändert.");
         table.put("That file lists more than %1$s videos. Nothing was restored.",
                 "Die Datei enthält mehr als %1$s Videos. Es wurde nichts wiederhergestellt.");
-        table.put("That file was saved by a newer Hushfeed. Update Hushfeed, then try again.",
-                "Die Datei stammt von einer neueren Hushfeed-Version. Aktualisiere Hushfeed und versuch es dann noch einmal.");
+        table.put("That file was saved by a newer Larpfeed. Update Larpfeed, then try again.",
+                "Die Datei stammt von einer neueren Larpfeed-Version. Aktualisiere Larpfeed und versuch es dann noch einmal.");
         table.put("That folder name has a character Android doesn't allow. Use letters, numbers, spaces or dashes.",
                 "Im Zielpfad steht ein unzulässiger Ordnername.");
         table.put("That is %1$d minutes today",
@@ -4340,10 +4340,10 @@ final class L10nTranslationsDe {
                 "Das ist eine Minute heute");
         table.put("That is one video today",
                 "Das ist ein Video heute");
-        table.put("That isn't a Hushfeed settings backup. Nothing was altered.",
-                "Das ist keine Hushfeed-Einstellungssicherung. Es wurde nichts geändert.");
-        table.put("That isn't a seen-history file saved by Hushfeed. For TikTok's own data export, use Import watch history.",
-                "Das ist keine von Hushfeed gesicherte Verlaufsdatei. Für TikToks eigenen Datenexport nimm Wiedergabeverlauf importieren.");
+        table.put("That isn't a Larpfeed settings backup. Nothing was altered.",
+                "Das ist keine Larpfeed-Einstellungssicherung. Es wurde nichts geändert.");
+        table.put("That isn't a seen-history file saved by Larpfeed. For TikTok's own data export, use Import watch history.",
+                "Das ist keine von Larpfeed gesicherte Verlaufsdatei. Für TikToks eigenen Datenexport nimm Wiedergabeverlauf importieren.");
         table.put("That isn't an app name. Try something like com.example.downloader, or leave the box empty to keep saving in TikTok.",
                 "Das ist kein App-Name. Versuche etwas wie com.example.downloader, oder lass das Feld leer, damit weiter in TikTok gespeichert wird.");
         table.put("That list has too many entries. Keep it to %1$s or fewer.",
@@ -4358,10 +4358,10 @@ final class L10nTranslationsDe {
                 "Ungültige SIM-Vorlage.");
         table.put("That seen-history file is damaged or was edited. Nothing was restored.",
                 "Die Verlaufsdatei ist beschädigt oder wurde bearbeitet. Es wurde nichts wiederhergestellt.");
-        table.put("That settings backup contains a feed rule list larger than Hushfeed accepts. Nothing was altered.",
-                "Diese Einstellungssicherung enthält eine Feed-Regelliste, die größer ist, als Hushfeed zulässt. Es wurde nichts geändert.");
-        table.put("That settings backup holds a value Hushfeed can't read. Nothing was altered.",
-                "Diese Einstellungssicherung enthält einen Wert, den Hushfeed nicht lesen kann. Es wurde nichts geändert.");
+        table.put("That settings backup contains a feed rule list larger than Larpfeed accepts. Nothing was altered.",
+                "Diese Einstellungssicherung enthält eine Feed-Regelliste, die größer ist, als Larpfeed zulässt. Es wurde nichts geändert.");
+        table.put("That settings backup holds a value Larpfeed can't read. Nothing was altered.",
+                "Diese Einstellungssicherung enthält einen Wert, den Larpfeed nicht lesen kann. Es wurde nichts geändert.");
         table.put("That settings backup holds more Feature Gate Lab rules than the Lab takes. Nothing was altered.",
                 "Diese Einstellungssicherung enthält mehr Feature-Gate-Lab-Regeln, als das Lab annimmt. Es wurde nichts geändert.");
     }
@@ -4373,8 +4373,8 @@ final class L10nTranslationsDe {
                 "Diese Einstellungssicherung ist unvollständig und wurde womöglich abgeschnitten. Es wurde nichts geändert.");
         table.put("That settings change didn't go through. Nothing was altered.",
                 "Diese Änderung hat nicht geklappt. Es wurde nichts geändert.");
-        table.put("That sticker is in a format Hushfeed can't read",
-                "Hushfeed kann das Format dieses Stickers nicht lesen");
+        table.put("That sticker is in a format Larpfeed can't read",
+                "Larpfeed kann das Format dieses Stickers nicht lesen");
         table.put("That watch-history file is damaged. Nothing was imported.",
                 "Die Datei mit dem Wiedergabeverlauf ist beschädigt. Es wurde nichts importiert.");
         table.put("The Activity row of likes and comments on your posts leaves the Inbox. Notifications about them still arrive.",
@@ -4397,8 +4397,8 @@ final class L10nTranslationsDe {
                 "Die Zeile Neue Follower verschwindet oben aus dem Posteingang. Die Konten folgen dir weiterhin.");
         table.put("The Tako assistant's conversation leaves the Inbox list. The Tako bubble on the feed has its own switch under Feed tabs.",
                 "Die Unterhaltung mit dem Tako-Assistenten verschwindet aus der Liste im Posteingang. Die Tako-Blase im Feed hat einen eigenen Schalter unter Feed-Tabs.");
-        table.put("The Translate comments button in a LIVE room also needs a Japanese SIM. Turn on Override SIM details in Hushfeed settings > Region, set SIM country preset to Japan, NTT DOCOMO (44010), then restart TikTok.",
-                "Die Schaltfläche „Kommentare übersetzen“ in einem LIVE-Raum braucht zusätzlich eine japanische SIM. Schalte in den Hushfeed-Einstellungen > Region „SIM-Angaben überschreiben“ ein, stelle die SIM-Ländervorgabe auf Japan, NTT DOCOMO (44010) und starte TikTok neu.");
+        table.put("The Translate comments button in a LIVE room also needs a Japanese SIM. Turn on Override SIM details in Larpfeed settings > Region, set SIM country preset to Japan, NTT DOCOMO (44010), then restart TikTok.",
+                "Die Schaltfläche „Kommentare übersetzen“ in einem LIVE-Raum braucht zusätzlich eine japanische SIM. Schalte in den Larpfeed-Einstellungen > Region „SIM-Angaben überschreiben“ ein, stelle die SIM-Ländervorgabe auf Japan, NTT DOCOMO (44010) und starte TikTok neu.");
         table.put("The accounts TikTok suggests you follow no longer take up rows in the Inbox.",
                 "Die Konten, die TikTok dir zum Folgen vorschlägt, belegen keine Zeilen mehr im Posteingang.");
         table.put("The activity status control leaves the Inbox header. Whether others see you as active is unchanged.",
@@ -4445,8 +4445,8 @@ final class L10nTranslationsDe {
                 "Der Feed wartet auf ein Tippen, bevor er wieder abspielt, wenn du zur App zurückkehrst. Nachrichten, Profile und Suche bleiben einen Tipp entfernt.");
         table.put("The file app still has the last file. Try again once it lets go, or restart TikTok.",
                 "Die Datei-App hält die letzte Datei noch fest. Versuch es erneut, sobald sie sie freigibt, oder starte TikTok neu.");
-        table.put("The file hushfeed-safe-mode couldn't be removed. Delete it from TikTok's folder under Android/data to turn Hushfeed back on.",
-                "Die Datei hushfeed-safe-mode konnte nicht entfernt werden. Lösche sie im TikTok-Ordner unter Android/data, um Hushfeed wieder einzuschalten.");
+        table.put("The file larpfeed-safe-mode couldn't be removed. Delete it from TikTok's folder under Android/data to turn Larpfeed back on.",
+                "Die Datei larpfeed-safe-mode konnte nicht entfernt werden. Lösche sie im TikTok-Ordner unter Android/data, um Larpfeed wieder einzuschalten.");
         table.put("The frame couldn't be read. Try again.",
                 "Standbild nicht gelesen. Versuch es erneut.");
         table.put("The frame couldn't be saved. Try again.",
@@ -4578,8 +4578,8 @@ final class L10nTranslationsDe {
                 "Diese Datei ist kein Export geladener Werte");
         table.put("This gate type isn't supported",
                 "Dieser Gate-Typ wird nicht unterstützt");
-        table.put("This key isn't in Hushfeed's list, so its type can't be checked. Reset the override.",
-                "Dieser Schlüssel steht nicht in der Liste von Hushfeed, deshalb lässt sich sein Typ nicht prüfen. Setze die Überschreibung zurück.");
+        table.put("This key isn't in Larpfeed's list, so its type can't be checked. Reset the override.",
+                "Dieser Schlüssel steht nicht in der Liste von Larpfeed, deshalb lässt sich sein Typ nicht prüfen. Setze die Überschreibung zurück.");
         table.put("This key touches account safety. Forcing it can change login, region, payment or security checks.",
                 "Dieser Schlüssel betrifft den Kontoschutz. Ihn zu erzwingen kann Anmelde-, Regions-, Zahlungs- oder Sicherheitsprüfungen verändern.");
         table.put("This line opens a rule and doesn't finish it: %1$s. Write two phrases as \"a\" & \"b\" for both, or \"a\" !& \"b\" for the first without the second.",
@@ -4633,8 +4633,8 @@ final class L10nTranslationsDe {
                 "TikTok prüft, wie es signiert und installiert wurde. Das beantwortet diese Prüfungen so, wie es die Play-Store-Version täte. Probier es, wenn Folgen oder Likes sich nach einem Aktualisieren selbst zurücknehmen. Es hilft vielleicht nicht, denn TikTok hat noch andere Prüfungen.");
         table.put("TikTok closed during these saves",
                 "TikTok wurde während dieser Speicherungen geschlossen");
-        table.put("TikTok closed three times within a minute of starting, so Hushfeed paused itself. Your settings stay as they are.",
-                "TikTok wurde dreimal innerhalb einer Minute nach dem Start beendet, deshalb hat sich Hushfeed selbst pausiert. Deine Einstellungen bleiben, wie sie sind.");
+        table.put("TikTok closed three times within a minute of starting, so Larpfeed paused itself. Your settings stay as they are.",
+                "TikTok wurde dreimal innerhalb einer Minute nach dem Start beendet, deshalb hat sich Larpfeed selbst pausiert. Deine Einstellungen bleiben, wie sie sind.");
         table.put("TikTok closed. What was recorded is saved to %1$s",
                 "TikTok geschlossen. Gespeichert unter %1$s");
         table.put("TikTok closes at %1$s",
@@ -4800,8 +4800,8 @@ final class L10nTranslationsDe {
                 "Versuche es erneut oder kehre zu TikTok zurück.");
         table.put("Turn Clear display on or off",
                 "Freie Ansicht ein- oder ausschalten");
-        table.put("Turn Hushfeed back on",
-                "Hushfeed wieder einschalten");
+        table.put("Turn Larpfeed back on",
+                "Larpfeed wieder einschalten");
         table.put("Turn off double tap to react",
                 "Doppeltippen zum Reagieren ausschalten");
         table.put("Turn off haptics",
@@ -5024,8 +5024,8 @@ final class L10nTranslationsDe {
                 "Lautstärke");
         table.put("Wait a day to loosen the budget",
                 "Lockerungen des Budgets einen Tag warten lassen");
-        table.put("Wait a day to loosen the budget is on, so Hushfeed stays on",
-                "Lockerungen des Budgets einen Tag warten lassen ist an, daher bleibt Hushfeed an");
+        table.put("Wait a day to loosen the budget is on, so Larpfeed stays on",
+                "Lockerungen des Budgets einen Tag warten lassen ist an, daher bleibt Larpfeed an");
         table.put("Wait before hiding the controls.",
                 "Wartezeit, bevor die Bedienelemente ausgeblendet werden.");
         table.put("Wait for loading to finish",
@@ -5055,9 +5055,9 @@ final class L10nTranslationsDe {
         table.put("What the message says.",
                 "Was in der Nachricht steht.");
         table.put("What's new",
-                "Neu in Hushfeed");
-        table.put("When Copy link gives a short vt.tiktok.com or vm.tiktok.com link, Hushfeed opens it once in the background to find the full video link and copies that instead. TikTok sees that visit, and it connects directly even when a proxy is on. Links you send to another app go out as they were.",
-                "Wenn „Link kopieren“ einen kurzen Link wie vt.tiktok.com oder vm.tiktok.com liefert, öffnet Hushfeed ihn einmal im Hintergrund, findet den vollständigen Videolink und kopiert stattdessen den. TikTok sieht diesen Aufruf, und er läuft auch bei aktivem Proxy direkt. Links, die du an eine andere App sendest, gehen unverändert raus.");
+                "Neu in Larpfeed");
+        table.put("When Copy link gives a short vt.tiktok.com or vm.tiktok.com link, Larpfeed opens it once in the background to find the full video link and copies that instead. TikTok sees that visit, and it connects directly even when a proxy is on. Links you send to another app go out as they were.",
+                "Wenn „Link kopieren“ einen kurzen Link wie vt.tiktok.com oder vm.tiktok.com liefert, öffnet Larpfeed ihn einmal im Hintergrund, findet den vollständigen Videolink und kopiert stattdessen den. TikTok sieht diesen Aufruf, und er läuft auch bei aktivem Proxy direkt. Links, die du an eine andere App sendest, gehen unverändert raus.");
         table.put("When TikTok is in dark mode, the list of collections you get by holding the Favorites button is dark too instead of white.",
                 "Wenn TikTok im dunklen Modus ist, ist auch die Liste deiner Sammlungen dunkel statt weiß, die beim Gedrückthalten der Favoriten-Schaltfläche erscheint.");
         table.put("When TikTok requests this key, return the selected value below",
@@ -5086,8 +5086,8 @@ final class L10nTranslationsDe {
                 "Wo die Zeit steht");
         table.put("While Clear display is on, also hide the progress bar, the close button and the pause and speed buttons at the bottom. You can still drag along the bottom edge to move through the video. To leave Clear display, press and hold the video and tap Restore display, or pinch the screen.",
                 "Bei freier Ansicht auch den Fortschrittsbalken, die Schließen-Schaltfläche und die Pause- und Tempo-Schaltflächen unten ausblenden. Du kannst trotzdem am unteren Rand entlang ziehen, um im Video zu spulen. Um die freie Ansicht zu verlassen, halte das Video gedrückt und tippe auf Anzeige wiederherstellen. Du kannst auch zwei Finger auf dem Bildschirm zusammenziehen.");
-        table.put("While diagnostic logging is on, a message names the part of Hushfeed that failed. Off keeps failures in the report only.",
-                "Solange die Diagnoseprotokollierung läuft, nennt eine Meldung den Teil von Hushfeed, der fehlgeschlagen ist. Aus behält Fehler nur im Bericht.");
+        table.put("While diagnostic logging is on, a message names the part of Larpfeed that failed. Off keeps failures in the report only.",
+                "Solange die Diagnoseprotokollierung läuft, nennt eine Meldung den Teil von Larpfeed, der fehlgeschlagen ist. Aus behält Fehler nur im Bericht.");
         table.put("While you hold a video, slide left or right to step through the speed menu's speeds, and a bubble shows the one you're on. Your next hold starts there. Letting go goes back to normal. A pull-down lock keeps the speed you slid to. On a locked video, letting go locks the new speed.",
                 "Während du ein Video gedrückt hältst, wisch nach links oder rechts, um durch die Geschwindigkeiten im Geschwindigkeitsmenü zu gehen. Eine Blase zeigt die aktuelle an. Dein nächstes Halten beginnt dort. Beim Loslassen geht es zurück auf normal. Eine Sperre per Herunterziehen behält die gewählte Geschwindigkeit. Bei einem gesperrten Video sperrt das Loslassen die neue Geschwindigkeit.");
         table.put("White",
@@ -5177,8 +5177,8 @@ final class L10nTranslationsDe {
                 "Dein Verlauf hat sich vor Abschluss des Imports geändert. Wähle die Datei erneut.");
         table.put("Your settings",
                 "Deine Einstellungen");
-        table.put("Zero means no limit. Counts the videos Hushfeed advanced past for you, not the ones you swiped yourself, and starts again when the feed is rebuilt or you change this number.",
-                "Null bedeutet kein Limit. Zählt die Videos, die Hushfeed für dich weitergeschaltet hat, nicht die, die du selbst weggewischt hast, und beginnt neu, wenn der Feed neu aufgebaut wird oder du diese Zahl änderst.");
+        table.put("Zero means no limit. Counts the videos Larpfeed advanced past for you, not the ones you swiped yourself, and starts again when the feed is rebuilt or you change this number.",
+                "Null bedeutet kein Limit. Zählt die Videos, die Larpfeed für dich weitergeschaltet hat, nicht die, die du selbst weggewischt hast, und beginnt neu, wenn der Feed neu aufgebaut wird oder du diese Zahl änderst.");
         table.put("Zero means the way out of the hold is always there. Any other number is how many times a day it works. Once they're used up, the hold stays until the day starts over. Ignored while the budget is locked, which removes the way out.",
                 "Null heißt, der Ausweg aus der Sperre ist immer da. Jede andere Zahl ist, wie oft er pro Tag funktioniert. Sind sie aufgebraucht, bleibt die Sperre, bis der Tag neu beginnt. Wird ignoriert, solange das Budget gesperrt ist, denn dann entfällt der Ausweg.");
         table.put("Zero shows the notice and leaves the feed alone. Anything else covers the feed for that many minutes once a budget is reached. Messages, profiles and search keep working, and nothing in the feed is thrown away.",
@@ -5189,8 +5189,8 @@ final class L10nTranslationsDe {
                 "Null schaltet das aus. Nach so vielen Minuten ohne Berührung des Bildschirms stoppt das Video und TikTok geht in den Hintergrund, falls du beim Schauen einschläfst. Jede Berührung startet die Wartezeit neu.");
         table.put("Zero switches this off. Count the minutes the player spends running in the feed. Time on messages, a profile or search doesn't count.",
                 "Null schaltet das aus. Zählt die Minuten, die der Player im Feed läuft. Zeit in Nachrichten, auf einem Profil oder in der Suche zählt nicht.");
-        table.put("Zero switches this off. Counts every video that comes up in the feed and tells you when you reach the limit. Separate from the auto-advance session limit under Playback, which counts only videos Hushfeed moved past for you.",
-                "Null schaltet das aus. Zählt jedes Video, das im Feed erscheint, und sagt dir Bescheid, wenn du das Limit erreichst. Getrennt vom Sitzungslimit für automatisches Weiterschalten unter Wiedergabe, das nur Videos zählt, die Hushfeed für dich übersprungen hat.");
+        table.put("Zero switches this off. Counts every video that comes up in the feed and tells you when you reach the limit. Separate from the auto-advance session limit under Playback, which counts only videos Larpfeed moved past for you.",
+                "Null schaltet das aus. Zählt jedes Video, das im Feed erscheint, und sagt dir Bescheid, wenn du das Limit erreichst. Getrennt vom Sitzungslimit für automatisches Weiterschalten unter Wiedergabe, das nur Videos zählt, die Larpfeed für dich übersprungen hat.");
         table.put("autoplay auto play",
                 "automatische Wiedergabe Autoplay");
         table.put("collapsed",

@@ -48,7 +48,7 @@ public class GlassRefractionTest {
         Settings.GLASS_REFRACTION.save(true);
         assertTrue(GlassRefraction.wanted());
         PausedProcess.set(true);
-        assertFalse("Pause Hushfeed turns it off", GlassRefraction.wanted());
+        assertFalse("Pause Larpfeed turns it off", GlassRefraction.wanted());
     }
 
     @Test

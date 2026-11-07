@@ -1,6 +1,6 @@
 /*
- * Copyright 2026 Hushfeed contributors
- * https://github.com/SysAdminDoc/hushfeed
+ * Copyright 2026 Larpfeed contributors
+ * https://github.com/SysAdminDoc/larpfeed
  */
 package app.morphe.extension.tiktok.misc;
 
@@ -21,7 +21,7 @@ import app.morphe.extension.tiktok.settings.Settings;
  * changed, it clears that pick from {@code key_language_sp_key} and follows the phone again. The
  * #61 reporter's TikTok came up in English after every reboot while its Language page still said
  * Italian, and their own build that skipped this reset stayed Italian. With the switch on the
- * reset returns before it clears anything. With it off, and while Hushfeed is paused, TikTok's
+ * reset returns before it clears anything. With it off, and while Larpfeed is paused, TikTok's
  * reset runs as it ships.
  *
  * <p>The reset runs inside the application's attachBaseContext, before the settings context
@@ -30,7 +30,7 @@ import app.morphe.extension.tiktok.settings.Settings;
  * process's application is tried.
  *
  * <p>Skipping the reset alone wasn't enough: the reporter's TikTok still came up in English after
- * a reboot, with the language page and Hushfeed's settings in Italian. TikTok's own strings come
+ * a reboot, with the language page and Larpfeed's settings in Italian. TikTok's own strings come
  * from its reword table, which loads for whatever locale it sees early in the start, and that can
  * be the wrong one right after a boot. Their build that stayed Italian also put the picked
  * language back at the top of the application's onCreate, so the switch does that too: the

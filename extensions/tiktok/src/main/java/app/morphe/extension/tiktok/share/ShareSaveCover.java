@@ -1,6 +1,6 @@
 /*
- * Copyright 2026 Hushfeed contributors
- * https://github.com/SysAdminDoc/hushfeed
+ * Copyright 2026 Larpfeed contributors
+ * https://github.com/SysAdminDoc/larpfeed
  */
 package app.morphe.extension.tiktok.share;
 
@@ -32,7 +32,7 @@ import java.util.List;
  * carrier as Block this creator. While the switch is on, Download saves only the video.
  */
 public final class ShareSaveCover {
-    static final String KEY = "hushfeed_save_cover";
+    static final String KEY = "larpfeed_save_cover";
     private static final String SAVE_KEY = "save";
     private static final String FAMILY = "cover saves";
     private static final String POST_PACKAGE = "com.ss.android.ugc.aweme.share.improve.pkg.AwemeSharePackage";

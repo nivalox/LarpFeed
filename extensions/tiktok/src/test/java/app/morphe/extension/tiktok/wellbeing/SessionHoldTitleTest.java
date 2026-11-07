@@ -1,6 +1,6 @@
 /*
- * Copyright 2026 Hushfeed contributors
- * https://github.com/SysAdminDoc/hushfeed
+ * Copyright 2026 Larpfeed contributors
+ * https://github.com/SysAdminDoc/larpfeed
  */
 package app.morphe.extension.tiktok.wellbeing;
 
@@ -39,7 +39,7 @@ import org.robolectric.annotation.GraphicsMode;
 import org.robolectric.util.ReflectionHelpers;
 
 /**
- * The hold's title is a Hushfeed title like the settings page's, the dialogs' and the App lock
+ * The hold's title is a Larpfeed title like the settings page's, the dialogs' and the App lock
  * cover's, so it wears the same moving cyan and red. The panel is the same near-black scrim in
  * either settings theme, so the title takes the colours made for a dark ground both times, and
  * each of them still reads at 7:1 where the scrim is thinnest, over a white video frame.

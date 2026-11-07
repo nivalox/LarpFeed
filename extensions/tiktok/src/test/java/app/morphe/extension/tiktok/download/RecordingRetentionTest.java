@@ -84,7 +84,7 @@ public class RecordingRetentionTest {
                 record.finalized(),
                 "live_creator.mp4",
                 "video/mp4",
-                "Movies/Hushfeed",
+                "Movies/Larpfeed",
                 true,
                 MediaBudget.MAX_LIVE_RECORDING_BYTES,
                 new RecordingPublication(app, record));
@@ -390,7 +390,7 @@ public class RecordingRetentionTest {
                         original,
                         "live_creator.mp4",
                         "video/mp4",
-                        "Movies/HushfeedRetained-" + record.id,
+                        "Movies/LarpfeedRetained-" + record.id,
                         true,
                         MediaBudget.MAX_LIVE_RECORDING_BYTES,
                         new RecordingPublication(app, record));
@@ -454,7 +454,7 @@ public class RecordingRetentionTest {
                     record.finalized(),
                     "live_creator.mp4",
                     "video/mp4",
-                    "Movies/HushfeedRetained-" + record.id,
+                    "Movies/LarpfeedRetained-" + record.id,
                     true,
                     MediaBudget.MAX_LIVE_RECORDING_BYTES,
                     corrupting);

@@ -1,6 +1,6 @@
 /*
- * Copyright 2026 Hushfeed contributors
- * https://github.com/SysAdminDoc/hushfeed
+ * Copyright 2026 Larpfeed contributors
+ * https://github.com/SysAdminDoc/larpfeed
  */
 package app.morphe.extension.tiktok.share;
 
@@ -112,7 +112,7 @@ public class ShareLiveQualityTest {
         assertEquals(0, constructed);
     }
 
-    @Test public void staysOutWhileRecordingIsOffOrHushfeedIsPaused() {
+    @Test public void staysOutWhileRecordingIsOffOrLarpfeedIsPaused() {
         Settings.RECORD_LIVE.save(false);
         List<Object> nativeRow = row();
         assertSame(nativeRow, ShareLiveQuality.actions(new Package("live"), nativeRow));

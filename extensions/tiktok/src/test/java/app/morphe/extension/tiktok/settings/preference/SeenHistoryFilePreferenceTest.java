@@ -56,7 +56,7 @@ public class SeenHistoryFilePreferenceTest {
     private static final String STOP_OFFER = "Still waiting for the file app. Tap to stop waiting.";
     private static final String ACCOUNT_CHANGED = "Your TikTok account changed. Choose the file again for this account.";
     private static final String HEADER =
-            "{\"format\":\"hushfeed-seen-history\",\"schema\":1,\"exported_at\":1700000001000,\"videos\":[";
+            "{\"format\":\"larpfeed-seen-history\",\"schema\":1,\"exported_at\":1700000001000,\"videos\":[";
 
     @Rule public final SettingsContextRule settingsContext = new SettingsContextRule();
     /** Every hold a test makes, let go afterwards so a failed test can't keep the slot for the next. */
@@ -124,7 +124,7 @@ public class SeenHistoryFilePreferenceTest {
         assertEquals("application/json", request.intent.getType());
         assertTrue(request.intent.getCategories().contains(Intent.CATEGORY_OPENABLE));
         String name = request.intent.getStringExtra(Intent.EXTRA_TITLE);
-        assertTrue(name, name.startsWith("hushfeed-seen-history-") && name.endsWith(".json"));
+        assertTrue(name, name.startsWith("larpfeed-seen-history-") && name.endsWith(".json"));
         assertFalse("the suggested name gives the account away", name.contains(account));
         assertEquals(SeenHistoryFilePreference.REQUEST_SAVE, request.requestCode & 0xffff);
         assertFalse("a second picker could open over the first", saveRow.isEnabled());
@@ -211,7 +211,7 @@ public class SeenHistoryFilePreferenceTest {
         fragment.onActivityResult(SeenHistoryFilePreference.REQUEST_RESTORE, Activity.RESULT_OK,
                 new Intent().setData(provider.uri));
         finishWorkers();
-        assertEquals("That isn't a seen-history file saved by Hushfeed. "
+        assertEquals("That isn't a seen-history file saved by Larpfeed. "
                 + "For TikTok's own data export, use Import watch history.", bannerMessage());
         assertEquals(0, rowsFor(account));
         assertResting();
@@ -357,9 +357,9 @@ public class SeenHistoryFilePreferenceTest {
                         + "Anyone who opens the file can see that viewing history.",
                 save.getSummary().toString());
         assertEquals(handle != null
-                        ? "Add a seen-history file saved by Hushfeed to the videos @" + handle + " has seen. "
+                        ? "Add a seen-history file saved by Larpfeed to the videos @" + handle + " has seen. "
                         + "A video in both keeps the newer date."
-                        : "Add a seen-history file saved by Hushfeed to this account's seen videos. "
+                        : "Add a seen-history file saved by Larpfeed to this account's seen videos. "
                         + "A video in both keeps the newer date.",
                 restore.getSummary().toString());
         assertFalse(DocumentOperation.busy(DocumentOperation.Kind.SEEN_HISTORY_FILE));

@@ -1,6 +1,6 @@
 /*
- * Copyright 2026 Hushfeed contributors
- * https://github.com/SysAdminDoc/hushfeed
+ * Copyright 2026 Larpfeed contributors
+ * https://github.com/SysAdminDoc/larpfeed
  */
 package app.morphe.extension.tiktok.download;
 
@@ -120,7 +120,7 @@ public class MutedDashSaveTest {
 
         File storage = Environment.getExternalStorageDirectory();
         Set<String> before = listed(storage);
-        assertTrue("a muted DASH save is Hushfeed's", VideoDownloads.start(post, RuntimeEnvironment.getApplication()));
+        assertTrue("a muted DASH save is Larpfeed's", VideoDownloads.start(post, RuntimeEnvironment.getApplication()));
         drainPool();
         Shadows.shadowOf(Looper.getMainLooper()).idle();
 

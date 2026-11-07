@@ -1,6 +1,6 @@
 /*
- * Copyright 2026 Hushfeed contributors
- * https://github.com/SysAdminDoc/hushfeed
+ * Copyright 2026 Larpfeed contributors
+ * https://github.com/SysAdminDoc/larpfeed
  */
 package app.morphe.extension.tiktok.navigation;
 
@@ -109,7 +109,7 @@ public class ForYouShowRepairTest {
         assertEquals("the next swipe finds a healthy feed", List.of("show"), tiktok.calls);
     }
 
-    @Test public void pausedHushfeedLeavesTikTokAlone() {
+    @Test public void pausedLarpfeedLeavesTikTokAlone() {
         PausedProcess.set(true);
         assertEquals(ForYouShowRepair.Outcome.PAUSED, ForYouShowRepair.check(pager, false));
         assertEquals(List.of(), tiktok.calls);

@@ -76,9 +76,9 @@ public class FeedCapturePreferenceTest {
         assertTrue(said, said.endsWith(READ_IT));
         File saved = new File(said.substring(SAVED.length(), said.length() - READ_IT.length()));
         try {
-            assertTrue(saved.getName(), saved.getName().matches("hushfeed-feed-capture-\\d{8}-\\d{6}(-\\d+)?\\.txt"));
+            assertTrue(saved.getName(), saved.getName().matches("larpfeed-feed-capture-\\d{8}-\\d{6}(-\\d+)?\\.txt"));
             String text = new String(Files.readAllBytes(saved.toPath()), StandardCharsets.UTF_8);
-            assertTrue(text, text.startsWith("Hushfeed feed capture\nRead this file before you share it."));
+            assertTrue(text, text.startsWith("Larpfeed feed capture\nRead this file before you share it."));
         } finally {
             assertTrue(saved.delete());
         }

@@ -1,9 +1,9 @@
 /*
- * Copyright 2026 Hushfeed contributors
- * https://github.com/SysAdminDoc/hushfeed
+ * Copyright 2026 Larpfeed contributors
+ * https://github.com/SysAdminDoc/larpfeed
  *
  * Which gate to answer comes from onlynazril's TikTok patches (GPL-3.0), which force the same
- * one. Hushfeed puts a switch in front of it and leaves the rest of the experiment alone.
+ * one. Larpfeed puts a switch in front of it and leaves the rest of the experiment alone.
  */
 package app.morphe.patches.tiktok.profile
 
@@ -130,7 +130,7 @@ val profileBackgroundPatch = bytecodePatch(
     description = "Opens TikTok's own profile background editor in Edit profile on accounts TikTok " +
         "hasn't offered it to yet, and shows the backgrounds other profiles have set. TikTok's " +
         "servers may still refuse to save one for such an account. Starts off. Turn it on in " +
-        "Hushfeed settings > App.",
+        "Larpfeed settings > App.",
     default = true,
 ) {
     category("Interaction")

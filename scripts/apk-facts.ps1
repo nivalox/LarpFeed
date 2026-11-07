@@ -54,7 +54,7 @@ function Get-BundleManifestFacts {
 
     $sourceFields = @{}
     foreach ($name in @('Commit', 'Clean', 'Start', 'End')) {
-        $matches = [regex]::Matches($text, "(?m)^Hushfeed-Source-${name}:([^`r`n]*)")
+        $matches = [regex]::Matches($text, "(?m)^Larpfeed-Source-${name}:([^`r`n]*)")
         if ($matches.Count -gt 1) { throw "The bundle repeats source field ${name}: $BundlePath" }
         $sourceFields[$name] = if ($matches.Count -eq 1) { $matches[0].Groups[1].Value.Trim() } else { '' }
     }
@@ -77,7 +77,7 @@ function Resolve-Aapt2 {
     .SYNOPSIS
         The aapt2 that reads a binary AndroidManifest.xml, or a throw saying where to get one.
     .DESCRIPTION
-        Taken in order from -Explicit, HUSHFEED_AAPT2, and the newest build-tools directory of
+        Taken in order from -Explicit, LARPFEED_AAPT2, and the newest build-tools directory of
         the SDK named in local.properties or ANDROID_HOME. Newest by version number, not by text:
         sorting build-tools as strings puts 9.0.0 above 37.0.0.
     #>
@@ -89,8 +89,8 @@ function Resolve-Aapt2 {
         }
         return $Explicit
     }
-    if ($env:HUSHFEED_AAPT2 -and (Test-Path -LiteralPath $env:HUSHFEED_AAPT2 -PathType Leaf)) {
-        return $env:HUSHFEED_AAPT2
+    if ($env:LARPFEED_AAPT2 -and (Test-Path -LiteralPath $env:LARPFEED_AAPT2 -PathType Leaf)) {
+        return $env:LARPFEED_AAPT2
     }
 
     $sdk = $env:ANDROID_HOME
@@ -100,7 +100,7 @@ function Resolve-Aapt2 {
             Where-Object { $_ -match '^\s*sdk\.dir\s*=' }) | Select-Object -First 1
         if ($line) { $sdk = ($line -replace '^\s*sdk\.dir\s*=\s*', '') -replace '\\\\', '\' }
     }
-    if (-not $sdk) { throw 'No Android SDK: set ANDROID_HOME, sdk.dir or HUSHFEED_AAPT2.' }
+    if (-not $sdk) { throw 'No Android SDK: set ANDROID_HOME, sdk.dir or LARPFEED_AAPT2.' }
 
     $buildTools = Join-Path $sdk 'build-tools'
     if (-not (Test-Path -LiteralPath $buildTools -PathType Container)) {

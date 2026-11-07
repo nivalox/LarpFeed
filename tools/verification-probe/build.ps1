@@ -1,6 +1,6 @@
 <#
 .SYNOPSIS
-    Build and install the test-only instrumentation that reaches Hushfeed settings on a phone.
+    Build and install the test-only instrumentation that reaches Larpfeed settings on a phone.
 
 .DESCRIPTION
     Built with the SDK tools directly rather than through the project's build, because it is not
@@ -18,28 +18,28 @@
     cleanup, and relative paths resolve from PowerShell's working folder.
 
 .EXAMPLE
-    tools/verification-probe/build.ps1 -Serial $env:HUSHFEED_DEVICE_SERIAL -Install
+    tools/verification-probe/build.ps1 -Serial $env:LARPFEED_DEVICE_SERIAL -Install
 
 .EXAMPLE
     Load it into TikTok, then send it work. It answers in the log rather than through
     "am instrument -w", because TikTok replaces the thread's instrumentation and there is no
     result bundle to answer with by the time the probe is running. Reinstalling TikTok or
     stopping it drops the probe, so run the instrument line again after either.
-    HUSHFEED_DEVICE_SERIAL names the test phone.
+    LARPFEED_DEVICE_SERIAL names the test phone.
 
-    $phone = $env:HUSHFEED_DEVICE_SERIAL
-    adb -s $phone shell am instrument app.hushfeed.verification/.Probe
-    adb -s $phone shell am broadcast -a app.hushfeed.verification.PROBE `
+    $phone = $env:LARPFEED_DEVICE_SERIAL
+    adb -s $phone shell am instrument app.larpfeed.verification/.Probe
+    adb -s $phone shell am broadcast -a app.larpfeed.verification.PROBE `
         -p com.zhiliaoapp.musically -e action dump
-    adb -s $phone shell am broadcast -a app.hushfeed.verification.PROBE `
+    adb -s $phone shell am broadcast -a app.larpfeed.verification.PROBE `
         -p com.zhiliaoapp.musically -e action set -e key auto_advance -e value true
-    adb -s $phone logcat -d | Select-String HushfeedProbe
+    adb -s $phone logcat -d | Select-String LarpfeedProbe
 #>
 [CmdletBinding()]
 param(
     [string]$Serial,
-    [string]$LeaseDir = $env:HUSHFEED_DEVICE_LEASE_DIR,
-    [string]$ChatIdentity = $env:HUSHFEED_CHAT_IDENTITY,
+    [string]$LeaseDir = $env:LARPFEED_DEVICE_LEASE_DIR,
+    [string]$ChatIdentity = $env:LARPFEED_CHAT_IDENTITY,
     [ValidateRange(1, 30)][int]$LeaseMinutes = 30,
     [switch]$Install,
     [switch]$Uninstall,
@@ -50,7 +50,7 @@ param(
     [ValidateSet('BKS', 'JKS', 'PKCS12')][string]$KeystoreType,
     [AllowEmptyString()][string]$KeystorePassword,
     [AllowEmptyString()][string]$KeyPassword,
-    [string]$OutDir = (Join-Path $env:TEMP 'hushfeed-probe')
+    [string]$OutDir = (Join-Path $env:TEMP 'larpfeed-probe')
 )
 
 $ErrorActionPreference = 'Stop'
@@ -89,8 +89,8 @@ function Initialize-ProbeOutputDirectory {
         }
         $cursor = Split-Path -Parent $cursor
     }
-    $marker = Resolve-WithinRoot -Root $absolute -Path (Join-Path $absolute '.hushfeed-probe-output')
-    $ownership = "hushfeed-verification-probe-output-v1`n$absolute"
+    $marker = Resolve-WithinRoot -Root $absolute -Path (Join-Path $absolute '.larpfeed-probe-output')
+    $ownership = "larpfeed-verification-probe-output-v1`n$absolute"
     if (Test-Path -LiteralPath $absolute) {
         if (-not (Test-Path -LiteralPath $absolute -PathType Container)) { throw 'Refusing probe output over an existing file.' }
         $children = @(Get-ChildItem -LiteralPath $absolute -Force)
@@ -113,8 +113,8 @@ function Initialize-ProbeOutputDirectory {
                 if ($child.PSIsContainer) {
                     $generated = $relative -in @('classes', 'dex') -or $inClasses
                 } else {
-                    $generated = $relative -in @('.hushfeed-probe-output', 'AndroidManifest.xml', 'd8-inputs.args', 'probe-unsigned.apk', 'probe-aligned.apk',
-                        'hushfeed-verification-probe.apk', 'hushfeed-verification-probe.apk.idsig') -or
+                    $generated = $relative -in @('.larpfeed-probe-output', 'AndroidManifest.xml', 'd8-inputs.args', 'probe-unsigned.apk', 'probe-aligned.apk',
+                        'larpfeed-verification-probe.apk', 'larpfeed-verification-probe.apk.idsig') -or
                         ($inClasses -and $child.Extension -eq '.class') -or $relative -match '^dex\\classes\d*\.dex$'
                 }
                 if (-not $generated) { throw 'Refusing probe output containing unexpected files or directories.' }
@@ -144,7 +144,7 @@ if ($Uninstall) {
     $deviceLease = $null
     try {
         $adb = Resolve-Adb
-        $deviceLease = New-DeviceLease -LeaseDir $LeaseDir -Serial $Serial -Project 'hushfeed' `
+        $deviceLease = New-DeviceLease -LeaseDir $LeaseDir -Serial $Serial -Project 'larpfeed' `
             -ChatIdentity $ChatIdentity -Purpose 'verification probe uninstall' -LeaseMinutes $LeaseMinutes
         # pm path first: uninstalling a probe that isn't there fails with DELETE_FAILED_INTERNAL_ERROR.
         [void](Remove-AndroidPackageIfInstalled -Adb $adb -Serial $Serial -PackageName $probeProfile.ProbePackage -Lease $deviceLease)
@@ -241,14 +241,14 @@ $aligned = Join-Path $OutDir 'probe-aligned.apk'
 & (Join-Path $buildTools.FullName 'zipalign.exe') -f -p 4 $unsigned $aligned
 if ($LASTEXITCODE -ne 0) { throw 'zipalign failed.' }
 
-$signed = Join-Path $OutDir 'hushfeed-verification-probe.apk'
+$signed = Join-Path $OutDir 'larpfeed-verification-probe.apk'
 Invoke-ApkSigning -Session $signingSession -InputApk $aligned -OutputApk $signed
 Write-Host "[probe] $signed"
 
 if ($Install) {
     if (-not $Serial) { throw '-Install needs -Serial.' }
     $adb = Resolve-Adb
-    $deviceLease = New-DeviceLease -LeaseDir $LeaseDir -Serial $Serial -Project 'hushfeed' `
+    $deviceLease = New-DeviceLease -LeaseDir $LeaseDir -Serial $Serial -Project 'larpfeed' `
         -ChatIdentity $ChatIdentity -Purpose 'verification probe install' -LeaseMinutes $LeaseMinutes
     Assert-InstalledApkSigner -Adb $adb -Serial $Serial -PackageName $probeProfile.ProbePackage -SigningSession $signingSession -Lease $deviceLease
     Assert-InstalledApkSigner -Adb $adb -Serial $Serial -PackageName $probeProfile.Package `
@@ -258,7 +258,7 @@ if ($Install) {
     if ($LASTEXITCODE -ne 0) { throw "adb install failed on $Serial. The output above says why." }
     Write-Host "[probe] installed for $($probeProfile.Name). Load its instrumentation:"
     Write-Host "  adb -s $Serial shell am instrument $($probeProfile.ProbePackage)/$($probeProfile.Instrumentation)"
-    Write-Host "  adb -s $Serial shell am broadcast -a app.hushfeed.verification.PROBE -p $($probeProfile.Package) -e action dump"
+    Write-Host "  adb -s $Serial shell am broadcast -a app.larpfeed.verification.PROBE -p $($probeProfile.Package) -e action dump"
     Write-Host "  adb -s $Serial logcat -d -s $($probeProfile.LogTag):V -v raw"
 }
 } finally {

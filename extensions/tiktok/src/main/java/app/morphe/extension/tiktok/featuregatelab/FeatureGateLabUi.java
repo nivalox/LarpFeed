@@ -65,7 +65,7 @@ final class FeatureGateLabUi {
             View menu = iconButton(context, "icon_ellipsis_horizontal", android.R.drawable.ic_menu_more,
                     L10n.t(context, "More options"), onMenu);
             menu.setTag("feature_gate_menu");
-            ((LinearLayout) header.findViewWithTag("hushfeed_toolbar")).addView(menu,
+            ((LinearLayout) header.findViewWithTag("larpfeed_toolbar")).addView(menu,
                     new LinearLayout.LayoutParams(dp(context, 48), dp(context, 48)));
         }
         frame.addView(header, new FrameLayout.LayoutParams(-1, -2));

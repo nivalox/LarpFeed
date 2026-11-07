@@ -2,7 +2,7 @@
 # (scripts/device-lease.ps1), checked again before each one.
 . (Join-Path $PSScriptRoot 'device-lease.ps1')
 
-function Invoke-HushfeedAdbCommand {
+function Invoke-LarpfeedAdbCommand {
     [CmdletBinding()]
     param(
         [Parameter(Mandatory = $true)][string]$Adb,
@@ -33,7 +33,7 @@ function Invoke-HushfeedAdbCommand {
     [pscustomobject]@{ ExitCode = $LASTEXITCODE; Output = $output }
 }
 
-function Format-HushfeedAdbFailure {
+function Format-LarpfeedAdbFailure {
     param([string]$Message, $Result)
 
     $detail = @($Result.Output | Select-Object -First 3) -join '; '
@@ -57,31 +57,31 @@ function Invoke-AndroidVerifierTally {
     }
     $device = @{ Adb = $Adb; Invoker = $AdbInvoker; Lease = $Lease; Serial = $Serial }
 
-    $remote = "/data/local/tmp/hushfeed-verify-$Label.apk"
-    $directory = "/data/local/tmp/hushfeed-verify-$Label"
+    $remote = "/data/local/tmp/larpfeed-verify-$Label.apk"
+    $directory = "/data/local/tmp/larpfeed-verify-$Label"
     $primaryFailure = $null
     try {
-        $push = Invoke-HushfeedAdbCommand @device `
+        $push = Invoke-LarpfeedAdbCommand @device `
             -Arguments @('-s', $Serial, 'push', $Local, $remote)
         if ($push.ExitCode -ne 0) {
-            throw (Format-HushfeedAdbFailure -Message "Could not push $Label to $Serial" -Result $push)
+            throw (Format-LarpfeedAdbFailure -Message "Could not push $Label to $Serial" -Result $push)
         }
 
-        $setup = Invoke-HushfeedAdbCommand @device `
+        $setup = Invoke-LarpfeedAdbCommand @device `
             -Arguments @('-s', $Serial, 'shell', "rm -rf $directory && mkdir -p $directory")
         if ($setup.ExitCode -ne 0) {
-            throw (Format-HushfeedAdbFailure `
+            throw (Format-LarpfeedAdbFailure `
                 -Message "Could not prepare the verifier output directory for $Label on $Serial" `
                 -Result $setup)
         }
 
         # The phones are shared, so the log buffer is never cleared. A unique marker line starts
         # this run's part of it, and only the lines after it are read.
-        $marker = "hushfeed-verify-$Label-$([guid]::NewGuid().ToString('N'))"
-        $mark = Invoke-HushfeedAdbCommand @device `
-            -Arguments @('-s', $Serial, 'shell', "log -t HushfeedVerify $marker")
+        $marker = "larpfeed-verify-$Label-$([guid]::NewGuid().ToString('N'))"
+        $mark = Invoke-LarpfeedAdbCommand @device `
+            -Arguments @('-s', $Serial, 'shell', "log -t LarpfeedVerify $marker")
         if ($mark.ExitCode -ne 0) {
-            throw (Format-HushfeedAdbFailure `
+            throw (Format-LarpfeedAdbFailure `
                 -Message "Could not mark logcat on $Serial before verifying $Label" `
                 -Result $mark)
         }
@@ -89,10 +89,10 @@ function Invoke-AndroidVerifierTally {
         $dexCommand = "dex2oat64 --dex-file=$remote --oat-file=$directory/out.oat " +
             "--output-vdex=$directory/out.vdex --instruction-set=arm64 " +
             '--compiler-filter=verify --runtime-arg -Xmx1024m -j4; echo exit=$?'
-        $dex = Invoke-HushfeedAdbCommand @device `
+        $dex = Invoke-LarpfeedAdbCommand @device `
             -Arguments @('-s', $Serial, 'shell', $dexCommand)
         if ($dex.ExitCode -ne 0) {
-            throw (Format-HushfeedAdbFailure `
+            throw (Format-LarpfeedAdbFailure `
                 -Message "Could not run dex2oat on $Label on $Serial" -Result $dex)
         }
         $dexExit = $null
@@ -104,10 +104,10 @@ function Invoke-AndroidVerifierTally {
         }
         if ($dexExit -ne 0) { throw "dex2oat on $Label exited $dexExit." }
 
-        $logResult = Invoke-HushfeedAdbCommand @device `
+        $logResult = Invoke-LarpfeedAdbCommand @device `
             -Arguments @('-s', $Serial, 'logcat', '-d')
         if ($logResult.ExitCode -ne 0) {
-            throw (Format-HushfeedAdbFailure `
+            throw (Format-LarpfeedAdbFailure `
                 -Message "Could not read logcat on $Serial after verifying $Label" `
                 -Result $logResult)
         }
@@ -141,10 +141,10 @@ function Invoke-AndroidVerifierTally {
         $cleanupFailures = [System.Collections.Generic.List[string]]::new()
         foreach ($remotePath in @($directory, $remote)) {
             try {
-                $cleanup = Invoke-HushfeedAdbCommand @device `
+                $cleanup = Invoke-LarpfeedAdbCommand @device `
                     -Arguments @('-s', $Serial, 'shell', "rm -rf $remotePath")
                 if ($cleanup.ExitCode -ne 0) {
-                    $cleanupFailures.Add((Format-HushfeedAdbFailure `
+                    $cleanupFailures.Add((Format-LarpfeedAdbFailure `
                         -Message "Could not remove $remotePath" -Result $cleanup))
                 }
             } catch {

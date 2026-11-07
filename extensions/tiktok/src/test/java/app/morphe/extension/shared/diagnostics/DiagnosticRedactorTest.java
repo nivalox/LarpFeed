@@ -1,6 +1,6 @@
 /*
- * Copyright 2026 Hushfeed contributors
- * https://github.com/SysAdminDoc/hushfeed
+ * Copyright 2026 Larpfeed contributors
+ * https://github.com/SysAdminDoc/larpfeed
  *
  * Built on icysymmetra/tiktok-patches-for-morphe (GPL-3.0).
  */
@@ -36,7 +36,7 @@ public class DiagnosticRedactorTest {
     }
 
     @Test public void clockTimesAndVersionsAreNotTakenForAddresses() {
-        String line = "10:23:11.269 Hushfeed 0.63.0 for TikTok 47.1.3, Logger::printInfo";
+        String line = "10:23:11.269 Larpfeed 0.63.0 for TikTok 47.1.3, Logger::printInfo";
 
         assertEquals(line, DiagnosticRedactor.redact(line));
     }

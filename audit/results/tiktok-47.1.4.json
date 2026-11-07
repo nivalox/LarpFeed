@@ -5,10 +5,10 @@
     "versionCode": "2147483647"
   },
   "apk": {
-    "file": "hushfeed-0.74.0-signed.apk",
+    "file": "larpfeed-0.74.0-signed.apk",
     "sha256": "4cbb13a33d4260897703f9513d84067aa67796e44ed66c686262ae14d5bb463d"
   },
-  "hushfeed": {
+  "larpfeed": {
     "commit": "3c4ccf0ec",
     "catalog": "17a91cafdd7e87e7"
   },
@@ -735,7 +735,7 @@
       "checks": [
         {
           "id": "manifest-label",
-          "what": "The application label and every launcher entry carry the chosen name (default Hushfeed) instead of TikTok.",
+          "what": "The application label and every launcher entry carry the chosen name (default Larpfeed) instead of TikTok.",
           "auto": true,
           "status": "pass",
           "failures": [],
@@ -756,10 +756,10 @@
           "review": [
             {
               "shot": "Change_app_name-home-label-app-info-label.png",
-              "criteria": "App info page: the title under the icon is the patch option's name (default Hushfeed), not TikTok. Nothing on the page is tapped."
+              "criteria": "App info page: the title under the icon is the patch option's name (default Larpfeed), not TikTok. Nothing on the page is tapped."
             }
           ],
-          "verdictNote": "Pass 3: App info names the app Hushfeed."
+          "verdictNote": "Pass 3: App info names the app Larpfeed."
         }
       ]
     },
@@ -1624,7 +1624,7 @@
         },
         {
           "id": "gate-forced",
-          "what": "A stored override changes what TikTok reads: with favorite_reverse forced to 1 and Keep the Favorites tab on, opening the share sheet reads the gate as 1, which Hushfeed's answer records ('refused favorite_reverse').",
+          "what": "A stored override changes what TikTok reads: with favorite_reverse forced to 1 and Keep the Favorites tab on, opening the share sheet reads the gate as 1, which Larpfeed's answer records ('refused favorite_reverse').",
           "auto": true,
           "status": "pass",
           "failures": [],
@@ -3422,10 +3422,10 @@
           "status": "pass",
           "failures": [],
           "evidence": [
-            "tapped text ~ ^(Hushfeed test account|\\+ Add bio)$ at 237.5,630.5",
+            "tapped text ~ ^(Larpfeed test account|\\+ Add bio)$ at 237.5,630.5",
             "tapped text ~ ^Bio$ at 233.5,1627",
             "Lift_text_length_limits-bio-counter-bio-off.png",
-            "tapped text ~ ^(Hushfeed test account|\\+ Add bio)$ at 237.5,630.5",
+            "tapped text ~ ^(Larpfeed test account|\\+ Add bio)$ at 237.5,630.5",
             "tapped text ~ ^Bio$ at 233.5,1627",
             "Lift_text_length_limits-bio-counter-bio-on.png"
           ],
@@ -3667,7 +3667,7 @@
       "checks": [
         {
           "id": "proxy-dialed",
-          "what": "With the proxy on and pointed at a closed port on the phone itself, the start-up reachability probe fails and Hushfeed says so (info line 'Network proxy: the ... didn't answer'); nothing leaves the phone.",
+          "what": "With the proxy on and pointed at a closed port on the phone itself, the start-up reachability probe fails and Larpfeed says so (info line 'Network proxy: the ... didn't answer'); nothing leaves the phone.",
           "auto": true,
           "status": "pass",
           "failures": [],
@@ -4649,7 +4649,7 @@
       "checks": [
         {
           "id": "home-page",
-          "what": "Hushfeed's settings open and the home page lists the section rows the installed patches ask for (Feed filter, Feed tabs, Downloads, Inbox, Diagnostics) and the Backup and restore and About rows.",
+          "what": "Larpfeed's settings open and the home page lists the section rows the installed patches ask for (Feed filter, Feed tabs, Downloads, Inbox, Diagnostics) and the Backup and restore and About rows.",
           "auto": true,
           "status": "pass",
           "failures": [],
@@ -4685,7 +4685,7 @@
         },
         {
           "id": "home-long-press",
-          "what": "Holding the Home tab opens Hushfeed's settings (home_tab_opens_settings, on by default), and the Hushfeed row in TikTok's Settings and privacy opens them too.",
+          "what": "Holding the Home tab opens Larpfeed's settings (home_tab_opens_settings, on by default), and the Larpfeed row in TikTok's Settings and privacy opens them too.",
           "auto": true,
           "status": "pass",
           "failures": [],
@@ -4694,7 +4694,7 @@
             "Settings-home-long-press-6-findtext.txt",
             "tapped content-desc ~ ^Profile menu$ at 999,147.5",
             "tapped text ~ ^Settings and privacy$ at 649,1061",
-            "tapped label ~ ^Hushfeed$ at 540,456.5",
+            "tapped label ~ ^Larpfeed$ at 540,456.5",
             "Settings-home-long-press-15-findtext.txt"
           ],
           "review": []
@@ -5878,19 +5878,19 @@
         },
         {
           "id": "slide-gone",
-          "what": "Hushfeed's row on TikTok's Settings and privacy is tapped while the screen is filmed: with the switch off the clip passes through a run of frames between the two screens (the slide), with it on it jumps straight to Hushfeed's page.",
+          "what": "Larpfeed's row on TikTok's Settings and privacy is tapped while the screen is filmed: with the switch off the clip passes through a run of frames between the two screens (the slide), with it on it jumps straight to Larpfeed's page.",
           "auto": true,
           "status": "pass",
           "failures": [],
           "evidence": [
             "tapped content-desc ~ ^Profile menu$ at 999,147.5",
             "tapped text ~ ^Settings and privacy$ at 649,1061",
-            "tapped label ~ ^Hushfeed$ at 540,456.5",
+            "tapped label ~ ^Larpfeed$ at 540,456.5",
             "Turn_off_screen_transitions-slide-gone-11-screen.mp4",
             "Turn_off_screen_transitions-slide-gone-11-frames.txt",
             "tapped content-desc ~ ^Profile menu$ at 999,147.5",
             "tapped text ~ ^Settings and privacy$ at 649,1061",
-            "tapped label ~ ^Hushfeed$ at 540,456.5",
+            "tapped label ~ ^Larpfeed$ at 540,456.5",
             "Turn_off_screen_transitions-slide-gone-23-screen.mp4",
             "Turn_off_screen_transitions-slide-gone-23-frames.txt"
           ],

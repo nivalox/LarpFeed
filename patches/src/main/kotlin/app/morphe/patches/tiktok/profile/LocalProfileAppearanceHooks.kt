@@ -1,6 +1,6 @@
 /*
- * Copyright 2026 Hushfeed contributors
- * https://github.com/SysAdminDoc/hushfeed
+ * Copyright 2026 Larpfeed contributors
+ * https://github.com/SysAdminDoc/larpfeed
  */
 package app.morphe.patches.tiktok.profile
 
@@ -54,15 +54,15 @@ internal const val DIMENSION_DP = "LX/04J2;"
 internal const val PIXEL_ROUND = "LX/06EV;"
 internal const val RESTRICTION_OWNER = "Lcom/ss/android/ugc/profile/business/pns/account/AccountAGSWarningProtocol;"
 internal const val NATIVE_BLUE_BADGE = 0x7f01026f
-internal const val APPEARANCE_SELECT = "hushfeedLocalNicknameBadge"
-internal const val APPEARANCE_RENDER = "hushfeedRenderNicknameBadge"
-internal const val APPEARANCE_LEGACY = "hushfeedLocalVerifiedNickname"
-internal const val APPEARANCE_NOTICE = "hushfeedOwnNoticeVisibility"
-internal const val APPEARANCE_BEGIN = "hushfeedBeginNicknameBind"
-internal const val APPEARANCE_CURRENT = "hushfeedCurrentNicknameRepaint"
-internal const val APPEARANCE_APPEND = "hushfeedAppendLocalNickname"
-internal const val APPEARANCE_ADD_NAME = "hushfeedAddNameText"
-internal const val APPEARANCE_CACHED = "hushfeedNativeNicknameCached"
+internal const val APPEARANCE_SELECT = "larpfeedLocalNicknameBadge"
+internal const val APPEARANCE_RENDER = "larpfeedRenderNicknameBadge"
+internal const val APPEARANCE_LEGACY = "larpfeedLocalVerifiedNickname"
+internal const val APPEARANCE_NOTICE = "larpfeedOwnNoticeVisibility"
+internal const val APPEARANCE_BEGIN = "larpfeedBeginNicknameBind"
+internal const val APPEARANCE_CURRENT = "larpfeedCurrentNicknameRepaint"
+internal const val APPEARANCE_APPEND = "larpfeedAppendLocalNickname"
+internal const val APPEARANCE_ADD_NAME = "larpfeedAddNameText"
+internal const val APPEARANCE_CACHED = "larpfeedNativeNicknameCached"
 private const val STRING = "Ljava/lang/String;"
 private const val INTEGER = "Ljava/lang/Integer;"
 private const val BOOLEAN = "Ljava/lang/Boolean;"

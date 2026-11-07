@@ -134,7 +134,7 @@ class BuildDetailsPatchTest {
 
     @Test fun `provenance keeps exact hashes and distinguishes dirty and legacy bundles`() {
         val first = record("clean")
-        val dirty = manifest().apply { putValue("Hushfeed-Source-Clean", "false"); putValue("Hushfeed-Source-End", "D".repeat(64)) }
+        val dirty = manifest().apply { putValue("Larpfeed-Source-Clean", "false"); putValue("Larpfeed-Source-End", "D".repeat(64)) }
         val second = record("dirty", facts = dirty)
         assertNotEquals(first.readText(), second.readText())
         assertEquals("false", second.facts()["source_clean"])
@@ -144,8 +144,8 @@ class BuildDetailsPatchTest {
         assertEquals("1.14.2", second.facts()["patcher_applying_engine"])
         val invalid = manifest().apply {
             putValue("Version", "https://SOURCE_SENTINEL.invalid/")
-            putValue("Hushfeed-Source-Commit", "account=SOURCE_SENTINEL")
-            putValue("Hushfeed-Source-End", "bad")
+            putValue("Larpfeed-Source-Commit", "account=SOURCE_SENTINEL")
+            putValue("Larpfeed-Source-End", "bad")
         }
         val third = record("invalid", facts = invalid)
         assertEquals("unknown", third.facts()["source_clean"])
@@ -260,7 +260,7 @@ class BuildDetailsPatchTest {
         assertEquals("AMOLED's own bytecode is the palette repaint, the comment bar and the web pages", 3, amoledOwn.size)
         assertTrue(amoledOwn.all { it.name == null })
         // The core asset strip returns out of the content credential service's start before it
-        // loads the emptied library (#211). Bytecode too, and just as free of Hushfeed's own code.
+        // loads the emptied library (#211). Bytecode too, and just as free of Larpfeed's own code.
         val core = dependencies(coreAssetDebloatPatch)
         assertTrue("the asset strip has no metadata dependency", buildDetailsPatch in core)
         assertEquals("the asset strip's bytecode is the C2PA guard alone",
@@ -290,8 +290,8 @@ class BuildDetailsPatchTest {
 
     private fun manifest() = Attributes().apply {
         putValue("Version", "0.66.0"); putValue("Patcher-Version", "1.14.1")
-        putValue("Hushfeed-Source-Commit", "a".repeat(40)); putValue("Hushfeed-Source-Clean", "true")
-        putValue("Hushfeed-Source-Start", fingerprint); putValue("Hushfeed-Source-End", fingerprint)
+        putValue("Larpfeed-Source-Commit", "a".repeat(40)); putValue("Larpfeed-Source-Clean", "true")
+        putValue("Larpfeed-Source-Start", fingerprint); putValue("Larpfeed-Source-End", fingerprint)
     }
 
     private fun File.facts() = readLines().associate { it.substringBefore('=') to it.substringAfter('=') }

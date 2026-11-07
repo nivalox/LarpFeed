@@ -1,6 +1,6 @@
 /*
- * Copyright 2026 Hushfeed contributors
- * https://github.com/SysAdminDoc/hushfeed
+ * Copyright 2026 Larpfeed contributors
+ * https://github.com/SysAdminDoc/larpfeed
  */
 package app.morphe.extension.tiktok.download;
 
@@ -27,7 +27,7 @@ import java.util.UUID;
 
 /** Durable ownership of recording bytes until their exact destination is acknowledged. */
 final class RecordingRetention {
-    static final String DIRECTORY = "hushfeed-recordings";
+    static final String DIRECTORY = "larpfeed-recordings";
     private static final Object LOCK = new Object();
     private static final int MAX_JOURNAL_BYTES = 32 * 1024;
     final File root;

@@ -16,7 +16,7 @@
     the raw stamped log to cli.log and the GC log to gc.log. Nothing is written to the repo.
 
     The desktop CLI is found the way patch-for-device.ps1 finds it: -DesktopJar,
-    HUSHFEED_DESKTOP_JAR, HUSHFEED_WORKDIR, then build/morphe-tools. HUSHFEED_JAVA is optional.
+    LARPFEED_DESKTOP_JAR, LARPFEED_WORKDIR, then build/morphe-tools. LARPFEED_JAVA is optional.
 
 .EXAMPLE
     scripts/time-patches.ps1 -Apk C:\fixtures\tiktok-47.1.4.apk -OutDir C:\scratch\times -DesktopJar C:\tools\morphe-desktop-1.18.0-all.jar

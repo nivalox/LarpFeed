@@ -1,14 +1,14 @@
 {
-  "schema": "hushfeed.quiet-observations.v1",
+  "schema": "larpfeed.quiet-observations.v1",
   "dataset_version": "1.0.0",
   "observation_date": "2026-10-09",
   "target": {
     "package": "com.zhiliaoapp.musically",
     "app_version": "47.1.4",
-    "installed_hushfeed_version": "0.68.0",
+    "installed_larpfeed_version": "0.68.0",
     "runtime_patch_state": "Pause enabled and verified after app restart",
     "build_label": "patched APK, runtime paused",
-    "source_review_hushfeed_version": "0.70.0",
+    "source_review_larpfeed_version": "0.70.0",
     "factory_build_comparison": false,
     "static_patch_selection_fully_verified": false
   },

@@ -253,7 +253,7 @@ public final class VendorSlice {
             DexBackedDexFile helper = new DexBackedDexFile(Opcodes.forApi(23), ByteBuffer.wrap(read(zip, "classes.dex")));
             boolean map = false, sort = false, caption = false, feed = false;
             for (ClassDef owner : helper.getClasses()) {
-                if (!owner.getType().startsWith("Lapp/hushfeed/verification/api23/")) {
+                if (!owner.getType().startsWith("Lapp/larpfeed/verification/api23/")) {
                     throw new IllegalArgumentException("helper DEX contains a production/model substitute: " + owner.getType());
                 }
                 for (Method method : owner.getMethods()) if (method.getImplementation() != null) {
@@ -261,7 +261,7 @@ public final class VendorSlice {
                         Object reference = ((ReferenceInstruction) instruction).getReference();
                         if (!(reference instanceof MethodReference)) continue;
                         MethodReference call = (MethodReference) reference;
-                        if (owner.getType().equals("Lapp/hushfeed/verification/api23/Api24NegativeControl;")
+                        if (owner.getType().equals("Lapp/larpfeed/verification/api23/Api24NegativeControl;")
                                 && method.getParameterTypes().isEmpty() && method.getReturnType().equals("V")
                                 && (instruction.getOpcode() == Opcode.INVOKE_INTERFACE || instruction.getOpcode() == Opcode.INVOKE_INTERFACE_RANGE)) {
                             map |= method.getName().equals("mapDefault") && call.getDefiningClass().equals("Ljava/util/Map;")

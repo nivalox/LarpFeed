@@ -1,6 +1,6 @@
 /*
- * Copyright 2026 Hushfeed contributors
- * https://github.com/SysAdminDoc/hushfeed
+ * Copyright 2026 Larpfeed contributors
+ * https://github.com/SysAdminDoc/larpfeed
  */
 package app.morphe.patches.tiktok.misc.settings
 
@@ -29,12 +29,12 @@ import java.io.File
 private const val OWNER = "LX/KeepList;"
 private const val HELPER = "Lapp/morphe/extension/tiktok/settings/LaunchCrashCleanup;"
 
-/** Hushfeed's preferences files join the list TikTok's launch-crash cleanup keeps. */
+/** Larpfeed's preferences files join the list TikTok's launch-crash cleanup keeps. */
 class LaunchCrashKeepListTest {
     @Test
-    fun `the list the cleanup reads gains Hushfeed's files and the other lists do not`() {
+    fun `the list the cleanup reads gains Larpfeed's files and the other lists do not`() {
         val init = keepListInit()
-        keepHushfeedPreferenceFiles(init, listOf(init, sharedPrefsWalker(reads = "LIZIZ")))
+        keepLarpfeedPreferenceFiles(init, listOf(init, sharedPrefsWalker(reads = "LIZIZ")))
 
         val store = assertHelperFeedsTheStore(init)
         assertEquals("LIZIZ", store.name)
@@ -44,7 +44,7 @@ class LaunchCrashKeepListTest {
     @Test
     fun `a list without TikTok's language preferences is found by its launch-crash entry`() {
         val init = keepListInit(withLanguage = false)
-        keepHushfeedPreferenceFiles(init, listOf(init, sharedPrefsWalker(reads = "LIZIZ")))
+        keepLarpfeedPreferenceFiles(init, listOf(init, sharedPrefsWalker(reads = "LIZIZ")))
 
         assertEquals("LIZIZ", assertHelperFeedsTheStore(init).name)
     }
@@ -54,7 +54,7 @@ class LaunchCrashKeepListTest {
         val init = keepListInit()
         val before = init.implementation!!.instructions.map { it.opcode }
         val refused = assertThrows(PatchException::class.java) {
-            keepHushfeedPreferenceFiles(init, listOf(init, sharedPrefsWalker(reads = "LIZJ")))
+            keepLarpfeedPreferenceFiles(init, listOf(init, sharedPrefsWalker(reads = "LIZJ")))
         }
         assertTrue(refused.message.orEmpty(), "nothing that walks shared_prefs" in refused.message.orEmpty())
         assertEquals("a refused list was still changed", before, init.implementation!!.instructions.map { it.opcode })
@@ -83,7 +83,7 @@ class LaunchCrashKeepListTest {
             val owner = owners.single()
             val init = MutableMethod(owner.methods.single { it.name == "<clinit>" })
 
-            keepHushfeedPreferenceFiles(init, owner.methods)
+            keepLarpfeedPreferenceFiles(init, owner.methods)
 
             val store = assertHelperFeedsTheStore(init)
             val walker = owner.methods.single { it.hasStrings("shared_prefs") }
@@ -102,7 +102,7 @@ class LaunchCrashKeepListTest {
         val source = File(root, "app/morphe/patches/tiktok/misc/settings/SettingsPatch.kt").readText()
         val execute = source.indexOf("execute {", source.indexOf("val settingsPatch"))
         assertTrue("the Settings patch has no execute block", execute >= 0)
-        val call = source.indexOf("keepHushfeedPreferenceFiles(", execute)
+        val call = source.indexOf("keepLarpfeedPreferenceFiles(", execute)
         val firstWrite = Regex("""\.(addInstructions?|addInstructionsWithLabels|replaceInstruction|removeInstruction)\b""")
             .find(source, execute)?.range?.first ?: source.length
         assertTrue("the Settings patch no longer extends TikTok's launch-crash keep-list", call >= 0)
@@ -114,7 +114,7 @@ class LaunchCrashKeepListTest {
         val instructions = init.implementation!!.instructions.toList()
         val calls = instructions.withIndex().filter { (_, instruction) ->
             instruction.getReference<MethodReference>()?.let {
-                it.definingClass == HELPER && it.name == "keepHushfeedFiles" &&
+                it.definingClass == HELPER && it.name == "keepLarpfeedFiles" &&
                     it.parameterTypes.map(CharSequence::toString) == listOf("[Ljava/lang/String;") &&
                     it.returnType == "[Ljava/lang/String;"
             } == true

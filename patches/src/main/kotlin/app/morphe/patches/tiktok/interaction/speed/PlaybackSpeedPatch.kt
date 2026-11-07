@@ -162,7 +162,7 @@ val playbackSpeedPatch = bytecodePatch(
     name = "Playback speed",
     description = "Remembers the speed you picked for the next video, and lets you set a " +
         "default speed, add speeds up to 3x to the menu and choose the speed for press and hold. " +
-        "On by default. Turn it off in Hushfeed settings > Playback.",
+        "On by default. Turn it off in Larpfeed settings > Playback.",
     default = true,
 ) {
     category("Playback")

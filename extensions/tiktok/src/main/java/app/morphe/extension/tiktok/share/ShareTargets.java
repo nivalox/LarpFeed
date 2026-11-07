@@ -1,6 +1,6 @@
 /*
- * Copyright 2026 Hushfeed contributors
- * https://github.com/SysAdminDoc/hushfeed
+ * Copyright 2026 Larpfeed contributors
+ * https://github.com/SysAdminDoc/larpfeed
  */
 package app.morphe.extension.tiktok.share;
 
@@ -35,7 +35,7 @@ import java.util.Set;
  * <p>TikTok already has a channel for a share target its server names: it's built from a
  * {@code ShareChannelInfo} (a key, a package, a label) and sends the link to that package as plain
  * text, the same way the built-in WhatsApp or Telegram channels do. Each picked app gets one of
- * those, keyed {@code hushfeed_app_<package>}, with its own launcher icon put where TikTok looks a
+ * those, keyed {@code larpfeed_app_<package>}, with its own launcher icon put where TikTok looks a
  * channel's icon up. They go in just before More, so More stays last. An app that's uninstalled,
  * or that no longer takes shared text, is left out, and so is one TikTok already shows.
  *
@@ -48,7 +48,7 @@ import java.util.Set;
  * Sanitize sharing links is on.
  */
 public final class ShareTargets {
-    static final String KEY_PREFIX = "hushfeed_app_";
+    static final String KEY_PREFIX = "larpfeed_app_";
     static final String MORE_KEY = "more";
     /** TikTok looks a channel's square icon up under its key with this added. */
     static final String SQUARE_ICON_SUFFIX = "__square_icon";
@@ -105,7 +105,7 @@ public final class ShareTargets {
 
     /**
      * The sheet's finished channel row with the picked apps added before More. Called from the
-     * patched share sheet after TikTok and Hushfeed have filtered the row, so a name hidden by hand
+     * patched share sheet after TikTok and Larpfeed have filtered the row, so a name hidden by hand
      * doesn't take a picked app away, and nothing is added when the whole row is hidden. Hands back
      * the list it was given when there's nothing to add or anything goes wrong.
      */

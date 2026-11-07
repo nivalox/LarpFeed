@@ -1,6 +1,6 @@
 /*
- * Copyright 2026 Hushfeed contributors
- * https://github.com/SysAdminDoc/hushfeed
+ * Copyright 2026 Larpfeed contributors
+ * https://github.com/SysAdminDoc/larpfeed
  *
  * Built on icysymmetra/tiktok-patches-for-morphe (GPL-3.0).
  */
@@ -65,7 +65,7 @@ import java.util.WeakHashMap;
  * sits underneath it.
  */
 public final class CommentTools {
-    /** The optional suggested-search banner, not Hushfeed's loaded-comment search box. */
+    /** The optional suggested-search banner, not Larpfeed's loaded-comment search box. */
     public static boolean shouldHideCommentSearchSuggestions() {
         HookStatus.bound("comment search suggestions", "comment_top banner factory");
         return Settings.HIDE_COMMENT_SEARCH_SUGGESTIONS.get();

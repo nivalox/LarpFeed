@@ -1,6 +1,6 @@
 /*
- * Copyright 2026 Hushfeed contributors
- * https://github.com/SysAdminDoc/hushfeed
+ * Copyright 2026 Larpfeed contributors
+ * https://github.com/SysAdminDoc/larpfeed
  */
 package app.morphe.patches.tiktok.privacy
 
@@ -44,7 +44,7 @@ val browserPrivacyGuardPatch = bytecodePatch(
     name = "In-app browser privacy guard",
     description = "Stops websites you open in TikTok's built-in browser from reaching into " +
         "the TikTok app. TikTok's own pages, like Watch history and checkout, keep working. " +
-        "Starts off. Turn it on in Hushfeed settings > Privacy.",
+        "Starts off. Turn it on in Larpfeed settings > Privacy.",
 ) {
     category("Privacy")
     dependsOn(settingsPatch, sharedExtensionPatch)

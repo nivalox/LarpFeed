@@ -251,7 +251,7 @@ public class LiveRecordChipTest {
         assertEquals(90, top(autoTap));
         assertEquals(140, top(block));
 
-        // Auto tap's fingers still steer clear of every Hushfeed button.
+        // Auto tap's fingers still steer clear of every Larpfeed button.
         List<Rect> forAutoTapFingers = new ArrayList<>();
         LiveRecordChip.tapTargets(content, null, area, (long) area.width() * area.height() / 4, forAutoTapFingers);
         assertEquals(3, forAutoTapFingers.size());

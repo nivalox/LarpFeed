@@ -1,6 +1,6 @@
 /*
- * Copyright 2026 Hushfeed contributors
- * https://github.com/SysAdminDoc/hushfeed
+ * Copyright 2026 Larpfeed contributors
+ * https://github.com/SysAdminDoc/larpfeed
  */
 package app.morphe.patches.tiktok.misc.comment
 
@@ -115,7 +115,7 @@ val liftLengthLimitsPatch = bytecodePatch(
     name = "Lift text length limits",
     description = "Lets you write longer comments, repost notes and bios than the app " +
         "normally allows. TikTok can still refuse one that's too long. Starts off. Turn it on in " +
-        "Hushfeed settings > Comments.",
+        "Larpfeed settings > Comments.",
     default = true,
 ) {
     category("Comments")

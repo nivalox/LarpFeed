@@ -1,6 +1,6 @@
 /*
- * Copyright 2026 Hushfeed contributors
- * https://github.com/SysAdminDoc/hushfeed
+ * Copyright 2026 Larpfeed contributors
+ * https://github.com/SysAdminDoc/larpfeed
  */
 package app.morphe.patches.tiktok.misc.login.passkey
 
@@ -84,7 +84,7 @@ val skipPasskeySignInPatch = bytecodePatch(
     description = "Lets you sign in another way, like your password or a code by email or text, " +
         "when TikTok wants a passkey. Password managers won't hand a passkey to a patched app, " +
         "so that step can't finish here. With the switch on, TikTok treats your phone as one " +
-        "without passkeys. Starts off. Turn it on in Hushfeed settings > App.",
+        "without passkeys. Starts off. Turn it on in Larpfeed settings > App.",
 ) {
     category("Settings")
     dependsOn(sharedExtensionPatch, settingsPatch)

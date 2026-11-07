@@ -1,6 +1,6 @@
 /*
- * Copyright 2026 Hushfeed contributors
- * https://github.com/SysAdminDoc/hushfeed
+ * Copyright 2026 Larpfeed contributors
+ * https://github.com/SysAdminDoc/larpfeed
  */
 package app.morphe.extension.tiktok.download;
 
@@ -79,7 +79,7 @@ public class SingleSaveProgressTest {
         assertEquals("Saving video: 50%", find(root, TextView.class).getText().toString());
         assertEquals("Repeated byte updates must not interrupt TalkBack", 1, spoken.size());
 
-        View banner = root.findViewWithTag("hushfeed_save_progress");
+        View banner = root.findViewWithTag("larpfeed_save_progress");
         banner.measure(View.MeasureSpec.makeMeasureSpec(328, View.MeasureSpec.EXACTLY),
                 View.MeasureSpec.makeMeasureSpec(800, View.MeasureSpec.AT_MOST));
         UiCapture.save(banner, "pages/downloads/single-save-progress.png", 328, banner.getMeasuredHeight());
@@ -92,7 +92,7 @@ public class SingleSaveProgressTest {
         assertTrue("Muxing and publication have no byte estimate", bar.isIndeterminate());
         assertTrue(progress.run(index -> { }).complete());
         idle();
-        assertNull(root.findViewWithTag("hushfeed_save_progress"));
+        assertNull(root.findViewWithTag("larpfeed_save_progress"));
     }
 
     /**
@@ -103,7 +103,7 @@ public class SingleSaveProgressTest {
     @Test public void writingTheCaptionSaysSoAndOffersACancelThatStopsIt() {
         progress = SaveProgress.begin(1, true);
         settle();
-        ViewGroup banner = root.findViewWithTag("hushfeed_save_progress");
+        ViewGroup banner = root.findViewWithTag("larpfeed_save_progress");
         View cancel = banner.getChildAt(banner.getChildCount() - 1);
         progress.transfer(500, 1000);
         idle();
@@ -127,7 +127,7 @@ public class SingleSaveProgressTest {
     @Test public void afterTheCaptionTheRowSavesAgainWithoutCancel() {
         progress = SaveProgress.begin(1, true);
         settle();
-        ViewGroup banner = root.findViewWithTag("hushfeed_save_progress");
+        ViewGroup banner = root.findViewWithTag("larpfeed_save_progress");
         View cancel = banner.getChildAt(banner.getChildCount() - 1);
         progress.transfer(500, 1000);
         progress.captioning(990_000, 1_000_000);
@@ -147,7 +147,7 @@ public class SingleSaveProgressTest {
         settle();
         progress.transfer(75, 100);
         idle();
-        ViewGroup banner = root.findViewWithTag("hushfeed_save_progress");
+        ViewGroup banner = root.findViewWithTag("larpfeed_save_progress");
         banner.measure(View.MeasureSpec.makeMeasureSpec(328, View.MeasureSpec.EXACTLY),
                 View.MeasureSpec.makeMeasureSpec(640, View.MeasureSpec.AT_MOST));
         banner.layout(0, 0, 328, banner.getMeasuredHeight());
@@ -166,13 +166,13 @@ public class SingleSaveProgressTest {
         progress = SaveProgress.begin(1, false);
         progress.transfer(50, 100);
         settle();
-        assertNull(root.findViewWithTag("hushfeed_save_progress"));
+        assertNull(root.findViewWithTag("larpfeed_save_progress"));
         assertTrue(spoken.isEmpty());
         progress.run(index -> { });
         progress = SaveProgress.begin(1, true);
         progress.run(index -> { });
         settle();
-        assertNull(root.findViewWithTag("hushfeed_save_progress"));
+        assertNull(root.findViewWithTag("larpfeed_save_progress"));
         assertTrue(spoken.isEmpty());
     }
 
@@ -180,12 +180,12 @@ public class SingleSaveProgressTest {
     public void simultaneousSavesDoNotOverlapAtLargeTextSizes() {
         progress = SaveProgress.begin(1, true);
         settle();
-        View first = root.findViewWithTag("hushfeed_save_progress");
+        View first = root.findViewWithTag("larpfeed_save_progress");
         SaveProgress secondRun = SaveProgress.begin(1, true);
         try {
             settle();
             View second = root.getChildAt(root.getChildCount() - 1);
-            assertEquals("hushfeed_save_progress", second.getTag());
+            assertEquals("larpfeed_save_progress", second.getTag());
             for (int pass = 0; pass < 3; pass++) {
                 root.measure(View.MeasureSpec.makeMeasureSpec(360, View.MeasureSpec.EXACTLY),
                         View.MeasureSpec.makeMeasureSpec(640, View.MeasureSpec.EXACTLY));
@@ -240,8 +240,8 @@ public class SingleSaveProgressTest {
             View line = null;
             for (int index = 0; index < root.getChildCount(); index++) {
                 View child = root.getChildAt(index);
-                if ("hushfeed_save_waiting_row".equals(child.getTag())) line = child;
-                if (!"hushfeed_save_progress".equals(child.getTag())) continue;
+                if ("larpfeed_save_waiting_row".equals(child.getTag())) line = child;
+                if (!"larpfeed_save_progress".equals(child.getTag())) continue;
                 if (child.getVisibility() == View.VISIBLE) shown.add(child);
                 else hidden++;
             }
@@ -249,7 +249,7 @@ public class SingleSaveProgressTest {
             assertEquals("rows out of sight", 2, hidden);
             assertNotNull("nothing counts the rows out of sight", line);
             assertEquals("2 more saves waiting",
-                    ((TextView) line.findViewWithTag("hushfeed_save_waiting")).getText().toString());
+                    ((TextView) line.findViewWithTag("larpfeed_save_waiting")).getText().toString());
             shown.sort((a, b) -> Integer.compare(b.getTop(), a.getTop()));
             for (int index = 1; index < shown.size(); index++) {
                 assertTrue("row " + index + " overlaps the row below it",
@@ -294,7 +294,7 @@ public class SingleSaveProgressTest {
             assertEquals(Long.valueOf(body.length), received.get(received.size() - 1));
             assertTrue(percentages.stream().anyMatch(value -> value > 0 && value < 99));
             assertEquals(Integer.valueOf(99), percentages.get(percentages.size() - 1));
-            assertNull(root.findViewWithTag("hushfeed_save_progress"));
+            assertNull(root.findViewWithTag("larpfeed_save_progress"));
             assertEquals(1, spoken.size());
         } finally { Files.deleteIfExists(target.toPath()); }
     }
@@ -318,7 +318,7 @@ public class SingleSaveProgressTest {
             idle();
             assertEquals(0, failed.saved);
             assertEquals(1, failed.skipped);
-            assertNull(root.findViewWithTag("hushfeed_save_progress"));
+            assertNull(root.findViewWithTag("larpfeed_save_progress"));
         } finally { Files.deleteIfExists(target.toPath()); }
     }
 

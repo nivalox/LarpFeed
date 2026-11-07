@@ -1,6 +1,6 @@
 /*
- * Copyright 2026 Hushfeed contributors
- * https://github.com/SysAdminDoc/hushfeed
+ * Copyright 2026 Larpfeed contributors
+ * https://github.com/SysAdminDoc/larpfeed
  */
 package app.morphe.extension.tiktok.theme;
 
@@ -19,14 +19,14 @@ import app.morphe.extension.shared.Utils;
  * <p>Lynx pages carry their own colors and hand each one to the text as a number, so the style
  * rewrite of Accent color never reaches them. The patch calls {@link #color(int)} where Lynx
  * stores a text color and where a Lynx view takes its background color (the dot before each of
- * those words), and writes a {@code hushfeed_lynx_<rrggbb>} color for each red it changes:
+ * those words), and writes a {@code larpfeed_lynx_<rrggbb>} color for each red it changes:
  * the preset's shade, or with Follow the wallpaper the system accent step on Android 12 and up.
  * A color without such a name, or one that isn't solid, stays as the page asked. Like the rest
- * of Accent color this is part of the build, so pausing Hushfeed leaves it.
+ * of Accent color this is part of the build, so pausing Larpfeed leaves it.
  */
 public final class LynxAccent {
     /** What the patch names each color a Lynx red becomes. */
-    static final String PREFIX = "hushfeed_lynx_";
+    static final String PREFIX = "larpfeed_lynx_";
 
     /** Where the colors come from: the app's resources, or a stand-in in the tests. */
     interface Palette {

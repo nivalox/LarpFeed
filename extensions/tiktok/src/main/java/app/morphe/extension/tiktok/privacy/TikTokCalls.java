@@ -1,6 +1,6 @@
 /*
- * Copyright 2026 Hushfeed contributors
- * https://github.com/SysAdminDoc/hushfeed
+ * Copyright 2026 Larpfeed contributors
+ * https://github.com/SysAdminDoc/larpfeed
  */
 package app.morphe.extension.tiktok.privacy;
 
@@ -265,7 +265,7 @@ final class TikTokCalls {
                 case "hashCode":
                     return System.identityHashCode(proxy);
                 case "toString":
-                    return "Hushfeed account cleanup observer";
+                    return "Larpfeed account cleanup observer";
                 default:
                     return defaultFor(method.getReturnType());
             }

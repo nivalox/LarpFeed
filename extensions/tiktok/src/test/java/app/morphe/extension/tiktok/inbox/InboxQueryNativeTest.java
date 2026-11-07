@@ -734,7 +734,7 @@ public class InboxQueryNativeTest {
                     surface.state.LJ, new Pair<>(0, 1));
             fail("the native failure must propagate");
         } catch (IllegalStateException expected) { assertSame(surface.fragment.helper.failure, expected); }
-        assertNotNull("TikTok's own failure is not a Hushfeed fault", InboxQueryOwners.ownerForTests(surface.list));
+        assertNotNull("TikTok's own failure is not a Larpfeed fault", InboxQueryOwners.ownerForTests(surface.list));
         assertTrue(HookStatus.missing(InboxQueryOwners.FAMILY).isEmpty());
         HookStatus.clear();
     }

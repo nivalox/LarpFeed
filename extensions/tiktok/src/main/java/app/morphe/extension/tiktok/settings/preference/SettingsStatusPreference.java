@@ -1,6 +1,6 @@
 /*
- * Copyright 2026 Hushfeed contributors
- * https://github.com/SysAdminDoc/hushfeed
+ * Copyright 2026 Larpfeed contributors
+ * https://github.com/SysAdminDoc/larpfeed
  *
  * Built on icysymmetra/tiktok-patches-for-morphe (GPL-3.0).
  */
@@ -24,18 +24,18 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import app.morphe.extension.shared.Utils;
-import app.morphe.extension.shared.settings.HushfeedPause;
+import app.morphe.extension.shared.settings.LarpfeedPause;
 import app.morphe.extension.tiktok.settings.L10n;
 
 /** A compact, readable proof that the injected settings runtime is alive. */
 @SuppressWarnings("deprecation")
 public final class SettingsStatusPreference extends Preference {
-    public static final String KEY = "hushfeed_status";
-    public static final String ROW_TAG = "hushfeed_status_card";
-    public static final String ACTION_TAG = "hushfeed_status_diagnostics";
-    public static final String TURN_BACK_ON_TAG = "hushfeed_status_turn_back_on";
-    private static final String TITLE_TAG = "hushfeed_status_title";
-    private static final String SUMMARY_TAG = "hushfeed_status_summary";
+    public static final String KEY = "larpfeed_status";
+    public static final String ROW_TAG = "larpfeed_status_card";
+    public static final String ACTION_TAG = "larpfeed_status_diagnostics";
+    public static final String TURN_BACK_ON_TAG = "larpfeed_status_turn_back_on";
+    private static final String TITLE_TAG = "larpfeed_status_title";
+    private static final String SUMMARY_TAG = "larpfeed_status_summary";
 
     private final Runnable diagnosticsAction;
     private Runnable turnBackOnAction;
@@ -57,19 +57,19 @@ public final class SettingsStatusPreference extends Preference {
         setKey(KEY);
         setPersistent(false);
         setSelectable(false);
-        // No fixed order: the home page lists the card where it adds it, under the Hushfeed
+        // No fixed order: the home page lists the card where it adds it, under the Larpfeed
         // heading, while the restart row keeps its -950 just under the page header.
-        if (HushfeedPause.isPaused()) {
-            setTitle(L10n.t(context, "Hushfeed is paused"));
+        if (LarpfeedPause.isPaused()) {
+            setTitle(L10n.t(context, "Larpfeed is paused"));
             showPause(context);
         } else {
-            setTitle(L10n.t(context, "Hushfeed is active"));
+            setTitle(L10n.t(context, "Larpfeed is active"));
             setSummary(MorpheTikTokAboutPreference.versionSummary(
                     context, bundleVersion, appVersion));
         }
     }
 
-    /** What the card offers while Hushfeed is paused, in place of Diagnostics. */
+    /** What the card offers while Larpfeed is paused, in place of Diagnostics. */
     public void setTurnBackOnAction(Runnable action) {
         turnBackOnAction = action;
     }
@@ -79,26 +79,26 @@ public final class SettingsStatusPreference extends Preference {
      * two summaries differ, so setSummary rebinds the card and the way back hides or returns.
      */
     public void refresh() {
-        if (!HushfeedPause.isPaused()) return;
+        if (!LarpfeedPause.isPaused()) return;
         showPause(getContext());
     }
 
     private void showPause(Context context) {
-        backOnAtRestart = !HushfeedPause.pausesNextStart(context);
+        backOnAtRestart = !LarpfeedPause.pausesNextStart(context);
         setSummary(backOnAtRestart
-                ? L10n.t(context, "Hushfeed turns back on when TikTok restarts.")
-                : pausedSummary(context, HushfeedPause.reason()));
+                ? L10n.t(context, "Larpfeed turns back on when TikTok restarts.")
+                : pausedSummary(context, LarpfeedPause.reason()));
     }
 
     /** Why this start runs paused, and that nothing the reader saved has changed. */
-    static String pausedSummary(Context context, HushfeedPause.Reason reason) {
+    static String pausedSummary(Context context, LarpfeedPause.Reason reason) {
         switch (reason) {
             case CRASH_LOOP:
-                return L10n.t(context, "TikTok closed three times within a minute of starting, so Hushfeed paused itself. Your settings stay as they are.");
+                return L10n.t(context, "TikTok closed three times within a minute of starting, so Larpfeed paused itself. Your settings stay as they are.");
             case MARKER_FILE:
-                return L10n.t(context, "A file named hushfeed-safe-mode in TikTok's folder under Android/data paused Hushfeed. Your settings stay as they are.");
+                return L10n.t(context, "A file named larpfeed-safe-mode in TikTok's folder under Android/data paused Larpfeed. Your settings stay as they are.");
             default:
-                return L10n.t(context, "Hushfeed's switches are paused. Your settings stay saved. Changes made when you patched, like the app's name or icon, stay.");
+                return L10n.t(context, "Larpfeed's switches are paused. Your settings stay saved. Changes made when you patched, like the app's name or icon, stay.");
         }
     }
 
@@ -108,7 +108,7 @@ public final class SettingsStatusPreference extends Preference {
         // The paused card carries a sentence and a longer action, so the action goes underneath.
         boolean stack = context.getResources().getConfiguration().fontScale > 1.3f
                 || context.getResources().getConfiguration().screenWidthDp < 360
-                || HushfeedPause.isPaused();
+                || LarpfeedPause.isPaused();
         LinearLayout card = new LinearLayout(context);
         card.setTag(ROW_TAG);
         card.setOrientation(stack ? LinearLayout.VERTICAL : LinearLayout.HORIZONTAL);
@@ -121,7 +121,7 @@ public final class SettingsStatusPreference extends Preference {
                 SettingsUi.dp(context, 12));
         GradientDrawable cardBackground = SettingsUi.borderedSurface(
                 context, SettingsUi.RADIUS_SETTINGS_CARD, true);
-        if (!HushfeedPause.isPaused() && SettingsUi.isDarkMode()) {
+        if (!LarpfeedPause.isPaused() && SettingsUi.isDarkMode()) {
             cardBackground.setColor(SettingsUi.DARK_STATUS_SURFACE);
             cardBackground.setStroke(SettingsUi.dp(context, 1), SettingsUi.DARK_STATUS_BORDER);
         }
@@ -132,7 +132,7 @@ public final class SettingsStatusPreference extends Preference {
         information.setGravity(Gravity.CENTER_VERTICAL);
 
         ImageView mark = new ImageView(context);
-        mark.setImageDrawable(HushfeedPause.isPaused() ? new PausedDrawable(context) : new ActiveDrawable(context));
+        mark.setImageDrawable(LarpfeedPause.isPaused() ? new PausedDrawable(context) : new ActiveDrawable(context));
         mark.setImportantForAccessibility(View.IMPORTANT_FOR_ACCESSIBILITY_NO);
         information.addView(mark, new LinearLayout.LayoutParams(
                 SettingsUi.dp(context, 44), SettingsUi.dp(context, 44)));
@@ -175,10 +175,10 @@ public final class SettingsStatusPreference extends Preference {
         card.addView(information, informationParams);
 
         // Paused, the one thing the card offers is the way back; Diagnostics is on the home page.
-        boolean offerTurnBackOn = HushfeedPause.isPaused() && turnBackOnAction != null;
+        boolean offerTurnBackOn = LarpfeedPause.isPaused() && turnBackOnAction != null;
         Runnable cardAction = offerTurnBackOn ? turnBackOnAction : diagnosticsAction;
         if (cardAction != null) {
-            String label = L10n.t(context, offerTurnBackOn ? "Turn Hushfeed back on" : "Diagnostics");
+            String label = L10n.t(context, offerTurnBackOn ? "Turn Larpfeed back on" : "Diagnostics");
             TextView action = SettingsUi.text(
                     context, label, SettingsUi.TEXT_BODY_SMALL, SettingsUi.accent(),
                     android.graphics.Typeface.BOLD);
@@ -188,7 +188,7 @@ public final class SettingsStatusPreference extends Preference {
             SettingsUi.styleTextAction(action, true);
             GradientDrawable actionBackground = SettingsUi.borderedSurface(
                     context, SettingsUi.RADIUS_SETTINGS_FIELD, false);
-            if (!HushfeedPause.isPaused() && SettingsUi.isDarkMode()) {
+            if (!LarpfeedPause.isPaused() && SettingsUi.isDarkMode()) {
                 actionBackground.setColor(SettingsUi.DARK_STATUS_SURFACE);
                 actionBackground.setStroke(SettingsUi.dp(context, 1), SettingsUi.accent());
             }
@@ -238,7 +238,7 @@ public final class SettingsStatusPreference extends Preference {
         }
     }
 
-    /** The same tile with two bars: Hushfeed is paused. */
+    /** The same tile with two bars: Larpfeed is paused. */
     private static final class PausedDrawable extends Drawable {
         private final Paint fill = new Paint(Paint.ANTI_ALIAS_FLAG);
         private final Paint bar = new Paint(Paint.ANTI_ALIAS_FLAG);

@@ -52,7 +52,7 @@ val simSpoofPatch = bytecodePatch(
     name = "SIM spoof",
     description = "Makes TikTok see the SIM country and carrier you choose. It may not change " +
         "your region, since TikTok also goes by your internet connection and account. Starts off. " +
-        "Turn it on in Hushfeed settings > Region.",
+        "Turn it on in Larpfeed settings > Region.",
     default = true,
 ) {
     category("Settings")

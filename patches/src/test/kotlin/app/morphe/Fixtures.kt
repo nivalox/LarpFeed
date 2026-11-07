@@ -16,7 +16,7 @@ import org.junit.Assert.fail
 import org.junit.Assume.assumeTrue
 
 /**
- * The vendor TikTok builds the fixture tests read, from the folder `HUSHFEED_FIXTURE_DIR` names.
+ * The vendor TikTok builds the fixture tests read, from the folder `LARPFEED_FIXTURE_DIR` names.
  *
  * Unset, every fixture test skips and says which variable to set: the APKs are hundreds of
  * megabytes each and are not in the repository. Set, the folder has to hold what the test reads.
@@ -25,7 +25,7 @@ import org.junit.Assume.assumeTrue
  * which skipped quietly everywhere else and published that machine's layout.
  */
 internal object Fixtures {
-    const val VARIABLE = "HUSHFEED_FIXTURE_DIR"
+    const val VARIABLE = "LARPFEED_FIXTURE_DIR"
 
     private data class CacheKey(val file: File, val api: Int?, val artVersion: Int?)
     private data class CacheEntry(

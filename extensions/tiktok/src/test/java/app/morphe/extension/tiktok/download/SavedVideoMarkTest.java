@@ -1,6 +1,6 @@
 /*
- * Copyright 2026 Hushfeed contributors
- * https://github.com/SysAdminDoc/hushfeed
+ * Copyright 2026 Larpfeed contributors
+ * https://github.com/SysAdminDoc/larpfeed
  */
 package app.morphe.extension.tiktok.download;
 
@@ -142,7 +142,7 @@ public class SavedVideoMarkTest {
         SettingsStatus.advancedDownloadsEnabled = true;
 
         PausedProcess.set(true);
-        assertEquals("Pause Hushfeed left the mark on", "12.3K", SavedVideoMark.gridText("12.3K", cell));
+        assertEquals("Pause Larpfeed left the mark on", "12.3K", SavedVideoMark.gridText("12.3K", cell));
         PausedProcess.set(false);
         assertEquals(MARKED, SavedVideoMark.gridText("12.3K", cell));
     }

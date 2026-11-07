@@ -1,6 +1,6 @@
 /*
- * Copyright 2026 Hushfeed contributors
- * https://github.com/SysAdminDoc/hushfeed
+ * Copyright 2026 Larpfeed contributors
+ * https://github.com/SysAdminDoc/larpfeed
  *
  * Built on icysymmetra/tiktok-patches-for-morphe (GPL-3.0).
  * Follows hxreborn/hxreborn-tiktok-patches (GPL-3.0).
@@ -38,7 +38,7 @@ private const val ATOMIC_BOOLEAN_DESCRIPTOR = "Ljava/util/concurrent/atomic/Atom
 val expandActivityListPatch = bytecodePatch(
     name = "Expand activity list",
     description = "Shows the whole Activity and New followers lists in the Inbox, so you " +
-        "don't have to tap View all. Starts off. Turn it on in Hushfeed settings > Inbox.",
+        "don't have to tap View all. Starts off. Turn it on in Larpfeed settings > Inbox.",
 ) {
     category("Inbox")
     dependsOn(settingsPatch, sharedExtensionPatch)

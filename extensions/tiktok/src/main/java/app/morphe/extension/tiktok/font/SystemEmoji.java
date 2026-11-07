@@ -1,6 +1,6 @@
 /*
- * Copyright 2026 Hushfeed contributors
- * https://github.com/SysAdminDoc/hushfeed
+ * Copyright 2026 Larpfeed contributors
+ * https://github.com/SysAdminDoc/larpfeed
  */
 package app.morphe.extension.tiktok.font;
 
@@ -43,7 +43,7 @@ public final class SystemEmoji {
     /**
      * Whether EmojiCompat should take the device's font as having the emoji it's checking. True
      * only while the switch is on; false, so TikTok's own check runs, while it's off, while
-     * Hushfeed is paused or on any failure. Called first thing in EmojiCompat's glyph check, from
+     * Larpfeed is paused or on any failure. Called first thing in EmojiCompat's glyph check, from
      * whichever thread lays out the text.
      */
     public static boolean leaveToDevice() {

@@ -861,7 +861,7 @@ public final class FeatureGateLabRuntime {
                 active.put(identity(rule.manager, rule.key, rule.type), rule);
             }
         }
-        // The Lab's master switch lives in its own store, outside the settings Pause Hushfeed
+        // The Lab's master switch lives in its own store, outside the settings Pause Larpfeed
         // answers for, so a paused process turns it off here.
         boolean masterEnabled = FeatureGateLabStore.masterEnabled() && !Setting.isPaused();
         Log.i(TAG, DiagnosticRedactor.redact("snapshot master=" + masterEnabled

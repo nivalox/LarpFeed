@@ -10,20 +10,20 @@ import org.junit.Test
 /**
  * The methods nearest a fingerprint on each declared build, for a retarget where it missed.
  *
- * Skips unless `HUSHFEED_NEAREST` names the fingerprint: its object's full class name
+ * Skips unless `LARPFEED_NEAREST` names the fingerprint: its object's full class name
  * (`app.morphe.patches.tiktok.feedfilter.OpenedListFillFingerprint`), a top-level val as
- * `<file class>.<field>`, or just the object's simple name. `HUSHFEED_NEAREST_FROM` may name an
+ * `<file class>.<field>`, or just the object's simple name. `LARPFEED_NEAREST_FROM` may name an
  * older APK the fingerprint still takes one method of; that method's shape then counts half of
  * each score, which tells apart the methods the parts alone leave tied. Run it as
  *
  *     :patches:test --tests app.morphe.NearestMethodsReport
  *
- * with `HUSHFEED_FIXTURE_DIR` set as for the fixture tests. Each ranking prints to the test's
+ * with `LARPFEED_FIXTURE_DIR` set as for the fixture tests. Each ranking prints to the test's
  * output and to `patches/build/nearest-methods/<fingerprint>-<version>.txt`.
  */
 class NearestMethodsReport {
     @Test
-    fun `print the methods nearest the fingerprint HUSHFEED_NEAREST names`() {
+    fun `print the methods nearest the fingerprint LARPFEED_NEAREST names`() {
         val name = System.getenv(NAMED)
         assumeTrue("$NAMED is not set, so there is no fingerprint to rank methods for.", !name.isNullOrBlank())
         val fingerprint = fingerprintNamed(name!!.trim())
@@ -39,8 +39,8 @@ class NearestMethodsReport {
     }
 
     private companion object {
-        const val NAMED = "HUSHFEED_NEAREST"
-        const val FROM = "HUSHFEED_NEAREST_FROM"
+        const val NAMED = "LARPFEED_NEAREST"
+        const val FROM = "LARPFEED_NEAREST_FROM"
 
         /** The shape of the one method [fingerprint] takes on [apk], which has to be an older build it still matches. */
         fun previousShape(fingerprint: Fingerprint, apk: File): Shape {

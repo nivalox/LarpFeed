@@ -1,6 +1,6 @@
 /*
- * Copyright 2026 Hushfeed contributors
- * https://github.com/SysAdminDoc/hushfeed
+ * Copyright 2026 Larpfeed contributors
+ * https://github.com/SysAdminDoc/larpfeed
  */
 package app.morphe.extension.tiktok.feed;
 
@@ -31,7 +31,7 @@ import app.morphe.extension.tiktok.settings.SettingsStatus;
  *
  * <p>Nothing else about the window changes: no flags, no insets, no cutout mode. The color TikTok
  * last gave the bar is kept, and given back when the feed leaves the front, the switch goes off or
- * Hushfeed is paused, unless TikTok has set another color since.
+ * Larpfeed is paused, unless TikTok has set another color since.
  *
  * <p>TikTok sizes each video's surface to the picture and centers it in the cell's player, so on
  * a tall screen a 9:16 video still left a black band under the clock with the spacer gone (S22: a

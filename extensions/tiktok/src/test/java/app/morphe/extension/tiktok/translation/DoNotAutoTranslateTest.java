@@ -123,7 +123,7 @@ public class DoNotAutoTranslateTest {
     }
 
     @Test
-    public void aPausedHushfeedLeavesTikTokAlone() {
+    public void aPausedLarpfeedLeavesTikTokAlone() {
         Settings.DONT_AUTO_TRANSLATE_LANGUAGES.save("es");
         PausedProcess.set(true);
         String[] tiktok = {"fr"};
@@ -143,7 +143,7 @@ public class DoNotAutoTranslateTest {
         assertFalse(problem, problem.contains("video"));
     }
 
-    /** Hushfeed's own comment translator reads TikTok's list too, and has to see the added languages. */
+    /** Larpfeed's own comment translator reads TikTok's list too, and has to see the added languages. */
     @Test
     public void theCommentTranslatorSeesTheAddedLanguages() throws Exception {
         java.lang.reflect.Method read = CommentBatchTranslator.class.getDeclaredMethod("getNativeDoNotTranslateLanguages");

@@ -1,6 +1,6 @@
 /*
- * Copyright 2026 Hushfeed contributors
- * https://github.com/SysAdminDoc/hushfeed
+ * Copyright 2026 Larpfeed contributors
+ * https://github.com/SysAdminDoc/larpfeed
  */
 package app.morphe.extension.tiktok.download;
 
@@ -161,7 +161,7 @@ public final class LiveRecordingSaver {
 
     /** Existing Retry banners open an action list; no usable recording is silently pruned. */
     static void showRetained(Context context) {
-        Utils.runOnOwnThread("hushfeed-recording-recovery-list", () -> {
+        Utils.runOnOwnThread("larpfeed-recording-recovery-list", () -> {
             try {
                 RecordingRetention store = RecordingRetention.in(context);
                 java.util.List<String> ids = store.ids();
@@ -185,7 +185,7 @@ public final class LiveRecordingSaver {
         });
     }
     private static void chooseRetained(Context context, android.app.Activity activity, String id, String name) {
-        Utils.runOnOwnThread("hushfeed-recording-recovery-options", () -> {
+        Utils.runOnOwnThread("larpfeed-recording-recovery-options", () -> {
             try {
                 RecordingRetention.Record record = RecordingRetention.in(context).open(id);
                 if (record == null) return;
@@ -234,7 +234,7 @@ public final class LiveRecordingSaver {
     }
 
     private static void actOnRetained(Context app, String id, boolean discard) {
-        Utils.runOnOwnThread("hushfeed-recording-recovery-action", () -> {
+        Utils.runOnOwnThread("larpfeed-recording-recovery-action", () -> {
             try {
                 RecordingRetention.Record record = RecordingRetention.in(app).open(id);
                 if (record == null) return;

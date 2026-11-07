@@ -1,6 +1,6 @@
 /*
- * Copyright 2026 Hushfeed contributors
- * https://github.com/SysAdminDoc/hushfeed
+ * Copyright 2026 Larpfeed contributors
+ * https://github.com/SysAdminDoc/larpfeed
  *
  * Built on icysymmetra/tiktok-patches-for-morphe (GPL-3.0).
  */
@@ -20,8 +20,8 @@ import app.morphe.extension.tiktok.settings.L10n;
 /** A compact entry to the searchable settings index without opening the keyboard on home. */
 @SuppressWarnings("deprecation")
 public final class SettingsSearchEntryPreference extends Preference {
-    public static final String KEY = "hushfeed_search_entry";
-    public static final String ROW_TAG = "hushfeed_search_entry_row";
+    public static final String KEY = "larpfeed_search_entry";
+    public static final String ROW_TAG = "larpfeed_search_entry_row";
 
     public SettingsSearchEntryPreference(Context context, OnPreferenceClickListener listener) {
         super(context);

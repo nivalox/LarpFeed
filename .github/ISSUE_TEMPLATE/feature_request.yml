@@ -6,12 +6,12 @@ body:
   - type: markdown
     attributes:
       value: |
-        # Hushfeed feature request
+        # Larpfeed feature request
 
         Before creating a new feature request, please keep the following in mind:
 
-        - **Do not submit a duplicate feature request**: Search for existing feature requests [here](https://github.com/SysAdminDoc/hushfeed/issues?q=is%3Aissue%20label%3Aenhancement). If yours was closed and you have something to add, comment on it and we'll reopen it. GitHub doesn't let the person who asked reopen it.
-        - **Review the contribution guidelines**: Make sure your feature request adheres to them. You can find the guidelines [here](https://github.com/SysAdminDoc/hushfeed/blob/main/CONTRIBUTING.md).
+        - **Do not submit a duplicate feature request**: Search for existing feature requests [here](https://github.com/SysAdminDoc/larpfeed/issues?q=is%3Aissue%20label%3Aenhancement). If yours was closed and you have something to add, comment on it and we'll reopen it. GitHub doesn't let the person who asked reopen it.
+        - **Review the contribution guidelines**: Make sure your feature request adheres to them. You can find the guidelines [here](https://github.com/SysAdminDoc/larpfeed/blob/main/CONTRIBUTING.md).
   - type: textarea
     id: requested_behavior
     attributes:
@@ -43,7 +43,7 @@ body:
     id: current_behavior
     attributes:
       label: Current behavior
-      description: Explain what Hushfeed or TikTok does today and how the requested behavior differs.
+      description: Explain what Larpfeed or TikTok does today and how the requested behavior differs.
     validations:
       required: true
   - type: textarea

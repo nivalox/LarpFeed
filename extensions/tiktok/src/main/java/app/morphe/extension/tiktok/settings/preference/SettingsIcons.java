@@ -3,7 +3,7 @@
  * https://github.com/SysAdminDoc/Hushfacebook
  *
  * Modified for HushGram (Instagram), 2026.
- * Modified for hushfeed (TikTok), 2026.
+ * Modified for larpfeed (TikTok), 2026.
  *
  * Material Design outlined icons, Copyright Google LLC, Apache-2.0.
  * Source revision: bd8cb85bd4bad964fe6918f79665bb40c3a8efef. See NOTICE for the license.

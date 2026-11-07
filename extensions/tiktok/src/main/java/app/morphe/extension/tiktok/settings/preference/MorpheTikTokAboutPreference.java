@@ -19,7 +19,7 @@ public final class MorpheTikTokAboutPreference extends Preference
      * "version" found nothing even though the row carries it.
      */
     public static final String KEY = "action_about";
-    public static final String SOURCE_URL = "https://github.com/SysAdminDoc/hushfeed";
+    public static final String SOURCE_URL = "https://github.com/SysAdminDoc/larpfeed";
 
     public MorpheTikTokAboutPreference(Context context) {
         this(context, Utils.getPatchesReleaseVersion(), Utils.getAppVersionName());
@@ -29,7 +29,7 @@ public final class MorpheTikTokAboutPreference extends Preference
     MorpheTikTokAboutPreference(Context context, String bundleVersion, String appVersion) {
         super(context);
         setKey(KEY);
-        setTitle("Hushfeed");
+        setTitle("Larpfeed");
         setSummary(summaryFor(context, bundleVersion, appVersion));
         setOnPreferenceClickListener(preference -> {
             Utils.openLink(SOURCE_URL);
@@ -46,7 +46,7 @@ public final class MorpheTikTokAboutPreference extends Preference
      * The bundle's own version and the app it is running in, where somebody filing a bug report
      * can read both off.
      *
-     * <p>Nothing in the app said which Hushfeed was installed. The version is stamped into the
+     * <p>Nothing in the app said which Larpfeed was installed. The version is stamped into the
      * extension at patch time and only the exported diagnostic report printed it, so every one of
      * the first three bug reports had to be asked for it separately, and the settings search had
      * nothing to find when somebody looked for "version". The TikTok version rides along because

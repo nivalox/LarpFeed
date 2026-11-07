@@ -1,6 +1,6 @@
 /*
- * Copyright 2026 Hushfeed contributors
- * https://github.com/SysAdminDoc/hushfeed
+ * Copyright 2026 Larpfeed contributors
+ * https://github.com/SysAdminDoc/larpfeed
  */
 package app.morphe.extension.tiktok.share;
 
@@ -12,7 +12,7 @@ import android.widget.ImageView;
 import app.morphe.extension.shared.Logger;
 import app.morphe.extension.shared.Utils;
 import app.morphe.extension.shared.diagnostics.HookStatus;
-import app.morphe.extension.shared.settings.HushfeedPause;
+import app.morphe.extension.shared.settings.LarpfeedPause;
 import app.morphe.extension.tiktok.blockauthor.Reflect;
 import app.morphe.extension.tiktok.comment.StickerCreator;
 import app.morphe.extension.tiktok.download.CoverSaver;
@@ -35,7 +35,7 @@ import java.util.List;
  * turns the video's cover into one of your saved stickers through Create stickers instead.
  */
 public final class ShareMakeSticker {
-    static final String KEY = "hushfeed_make_sticker";
+    static final String KEY = "larpfeed_make_sticker";
     private static final String[] AFTER_KEYS = {ShareSaveCover.KEY, "save"};
     private static final String FAMILY = "share stickers";
     private static final String POST_PACKAGE = "com.ss.android.ugc.aweme.share.improve.pkg.AwemeSharePackage";
@@ -60,9 +60,9 @@ public final class ShareMakeSticker {
         }
     }
 
-    /** Whether Create stickers is patched in and Hushfeed isn't paused. */
+    /** Whether Create stickers is patched in and Larpfeed isn't paused. */
     static boolean enabled() {
-        return SettingsStatus.stickerCreatorEnabled && !HushfeedPause.isPaused();
+        return SettingsStatus.stickerCreatorEnabled && !LarpfeedPause.isPaused();
     }
 
     /** Finished native row. Stale owned actions come out even when off or on another surface. */

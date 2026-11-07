@@ -246,8 +246,8 @@ public class PauseSwitchPlaybackTest {
         }
     }
 
-    /** With the switch off, or on but with Hushfeed paused, nothing turns TikTok's plays down. */
-    @Test public void withTheSwitchOffOrHushfeedPausedTikTokPlaysAsUsual() {
+    /** With the switch off, or on but with Larpfeed paused, nothing turns TikTok's plays down. */
+    @Test public void withTheSwitchOffOrLarpfeedPausedTikTokPlaysAsUsual() {
         Intent launcher = new Intent(Intent.ACTION_MAIN).addCategory(Intent.CATEGORY_LAUNCHER);
         for (boolean paused : new boolean[] {false, true}) {
             Settings.PAUSE_FIRST_VIDEO.save(paused);

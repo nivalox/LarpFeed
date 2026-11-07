@@ -16,22 +16,22 @@
 #   scripts/phone.sh text hello
 #   scripts/phone.sh open_url https://www.tiktok.com/@creator/video/123
 #   scripts/phone.sh top                          the foreground activity
-#   scripts/phone.sh logcat "morphe|hushfeed"     recent payload lines
+#   scripts/phone.sh logcat "morphe|larpfeed"     recent payload lines
 #   scripts/phone.sh gfx                          frame stats for the perf device check
 #
 # PHONE_SERIAL selects the device; it must be the test phone, never the owner's own.
-# HUSHFEED_DEVICE_SERIAL names the one test phone this machine may drive, and PHONE_SERIAL has
+# LARPFEED_DEVICE_SERIAL names the one test phone this machine may drive, and PHONE_SERIAL has
 # to equal it, so a typo or another phone plugged in beside it is refused.
 #
 # The phones are shared, so every adb call also needs the device lease scripts/device-lease.ps1
-# took for that phone: HUSHFEED_LEASE_FILE is its file and HUSHFEED_LEASE_TOKEN its ownership
+# took for that phone: LARPFEED_LEASE_FILE is its file and LARPFEED_LEASE_TOKEN its ownership
 # token. The file is read again before each call, and a missing file, another serial, another
 # token or a passed expiry refuses the call before adb runs.
 set -eu
 S="${PHONE_SERIAL:?set PHONE_SERIAL to the test phone serial}"
-ALLOWED="${HUSHFEED_DEVICE_SERIAL:?set HUSHFEED_DEVICE_SERIAL to the serial of the test phone this machine may drive}"
+ALLOWED="${LARPFEED_DEVICE_SERIAL:?set LARPFEED_DEVICE_SERIAL to the serial of the test phone this machine may drive}"
 if [[ "$S" != "$ALLOWED" ]]; then
-    echo "REFUSED: device $S is not the test phone named by HUSHFEED_DEVICE_SERIAL" >&2
+    echo "REFUSED: device $S is not the test phone named by LARPFEED_DEVICE_SERIAL" >&2
     exit 2
 fi
 
@@ -80,7 +80,7 @@ elif ! ADB=$(find_adb); then
     echo "REFUSED: adb was not found" >&2
     exit 127
 fi
-SP=$(normalise_path "${PHONE_SHOTS:-${TEMP:-/tmp}/hushfeed-device/shots}")
+SP=$(normalise_path "${PHONE_SHOTS:-${TEMP:-/tmp}/larpfeed-device/shots}")
 PKG=com.zhiliaoapp.musically
 SCALE="${PHONE_SCALE:-1.15756}"
 mkdir -p "$SP"
@@ -100,13 +100,13 @@ lease_field() {
 # `|| return` or set -e carries the 2 out. Either way adb never runs.
 require_lease() {
     local file text expires ends
-    [[ -n "${HUSHFEED_LEASE_FILE:-}" && -n "${HUSHFEED_LEASE_TOKEN:-}" ]] ||
-        refuse_lease "set HUSHFEED_LEASE_FILE and HUSHFEED_LEASE_TOKEN"
-    file=$(normalise_path "$HUSHFEED_LEASE_FILE") || refuse_lease "its path could not be read"
+    [[ -n "${LARPFEED_LEASE_FILE:-}" && -n "${LARPFEED_LEASE_TOKEN:-}" ]] ||
+        refuse_lease "set LARPFEED_LEASE_FILE and LARPFEED_LEASE_TOKEN"
+    file=$(normalise_path "$LARPFEED_LEASE_FILE") || refuse_lease "its path could not be read"
     text=$(cat -- "$file" 2>/dev/null) || refuse_lease "$file could not be read"
     [[ "$(lease_field schemaVersion "$text")" == 1 ]] || refuse_lease "unknown lease format"
     [[ "$(lease_field serial "$text")" == "$S" ]] || refuse_lease "the lease names another phone"
-    [[ "$(lease_field ownershipToken "$text")" == "$HUSHFEED_LEASE_TOKEN" ]] || refuse_lease "another task holds it"
+    [[ "$(lease_field ownershipToken "$text")" == "$LARPFEED_LEASE_TOKEN" ]] || refuse_lease "another task holds it"
     expires=$(lease_field expiresUtc "$text") || refuse_lease "it has no expiry"
     ends=$(date -u -d "$expires" +%s 2>/dev/null) || refuse_lease "its expiry is unreadable"
     (( ends > $(date -u +%s) )) || refuse_lease "it expired at $expires"

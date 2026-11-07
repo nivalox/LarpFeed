@@ -1,6 +1,6 @@
 /*
- * Copyright 2026 Hushfeed contributors
- * https://github.com/SysAdminDoc/hushfeed
+ * Copyright 2026 Larpfeed contributors
+ * https://github.com/SysAdminDoc/larpfeed
  */
 package app.morphe.patches.tiktok.misc.language
 
@@ -131,7 +131,7 @@ val keepAppLanguagePatch = bytecodePatch(
     description = "Lets you keep the language you picked in TikTok's own settings. When TikTok " +
         "starts and decides the phone's language changed, it drops that pick and follows the " +
         "phone, which can leave it in the wrong language after a reboot. Starts off. Turn it on " +
-        "in Hushfeed settings > App.",
+        "in Larpfeed settings > App.",
 ) {
     category("Settings")
     dependsOn(sharedExtensionPatch, settingsPatch)

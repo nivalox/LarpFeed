@@ -710,7 +710,7 @@ public class AdvancedDownloadsTest {
         String photoTemplate = Settings.DOWNLOAD_PHOTO_FILENAME_TEMPLATE.get();
         try {
             Settings.DOWNLOAD_PHOTO_FILENAME_TEMPLATE.save("{creator}_{index}");
-            File folder = temporary.newFolder("hushfeed-slideshow-short");
+            File folder = temporary.newFolder("larpfeed-slideshow-short");
             Item post = new Item("dancer", "7712345");
 
             assertEquals("dancer_1.jpg", resolveSavedName(folder, "source_1.jpg", post));
@@ -724,7 +724,7 @@ public class AdvancedDownloadsTest {
         String photoTemplate = Settings.DOWNLOAD_PHOTO_FILENAME_TEMPLATE.get();
         try {
             Settings.DOWNLOAD_PHOTO_FILENAME_TEMPLATE.save("{creator}_{index}");
-            File folder = temporary.newFolder("hushfeed-native-slideshow");
+            File folder = temporary.newFolder("larpfeed-native-slideshow");
             Item post = new Item("dancer", "7712345-native", 3);
 
             assertEquals("dancer_1.jpg", resolveSavedName(folder, "stage-a.jpg", post));
@@ -743,7 +743,7 @@ public class AdvancedDownloadsTest {
         String videoTemplate = Settings.DOWNLOAD_VIDEO_FILENAME_TEMPLATE.get();
         try {
             Settings.DOWNLOAD_VIDEO_FILENAME_TEMPLATE.save("{creator}");
-            File folder = temporary.newFolder("hushfeed-long-extension");
+            File folder = temporary.newFolder("larpfeed-long-extension");
             // Multi-byte, so a character count that is inside the limit is not a byte count that
             // is: 200 of these are 400 bytes.
             Item post = new Item("\u00e9".repeat(200), "7712345");
@@ -771,7 +771,7 @@ public class AdvancedDownloadsTest {
         String photoTemplate = Settings.DOWNLOAD_PHOTO_FILENAME_TEMPLATE.get();
         try {
             Settings.DOWNLOAD_PHOTO_FILENAME_TEMPLATE.save("{creator}_{index}");
-            File folder = temporary.newFolder("hushfeed-registration-cap");
+            File folder = temporary.newFolder("larpfeed-registration-cap");
             // Multi-byte, so 200 characters are 400 bytes and both budgets have to bite.
             Item post = new Item("\u00e9".repeat(200), "7712345");
 
@@ -797,7 +797,7 @@ public class AdvancedDownloadsTest {
      * whoever loses the race gets the next number rather than a second chance at the same one.
      */
     @Test public void theDestinationIsWhatKeepsTwoDownloadsApart() throws Exception {
-        File folder = temporary.newFolder("hushfeed-claim");
+        File folder = temporary.newFolder("larpfeed-claim");
 
         File first = MediaFileWriter.claim(folder, "dancer.jpg");
         File second = MediaFileWriter.claim(folder, "dancer.jpg");
@@ -815,7 +815,7 @@ public class AdvancedDownloadsTest {
         String photoTemplate = Settings.DOWNLOAD_PHOTO_FILENAME_TEMPLATE.get();
         try {
             Settings.DOWNLOAD_PHOTO_FILENAME_TEMPLATE.save("{creator}_{index}");
-            File folder = temporary.newFolder("hushfeed-two-photos");
+            File folder = temporary.newFolder("larpfeed-two-photos");
             Item post = new Item("dancer", "7712345");
 
             String first = DownloadFilenameFormatter.formatOriginalPhotoName(post, 1, "jpg");

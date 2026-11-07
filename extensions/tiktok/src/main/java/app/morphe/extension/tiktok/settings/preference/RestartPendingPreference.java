@@ -1,6 +1,6 @@
 /*
- * Copyright 2026 Hushfeed contributors
- * https://github.com/SysAdminDoc/hushfeed
+ * Copyright 2026 Larpfeed contributors
+ * https://github.com/SysAdminDoc/larpfeed
  *
  * Built on icysymmetra/tiktok-patches-for-morphe (GPL-3.0).
  */
@@ -34,8 +34,8 @@ import app.morphe.extension.tiktok.settings.SettingsReturn;
  */
 @SuppressWarnings("deprecation")
 public final class RestartPendingPreference extends Preference {
-    public static final String KEY = "hushfeed_restart_pending";
-    public static final String ROW_TAG = "hushfeed_restart_pending_row";
+    public static final String KEY = "larpfeed_restart_pending";
+    public static final String ROW_TAG = "larpfeed_restart_pending_row";
 
     /** What the press does with the context it is given. */
     public interface Restarter {

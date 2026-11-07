@@ -14,7 +14,7 @@ public final class FeatureGateLabSession {
      * The Lab's restart debt lives in the settings pages' own set, as one change, so the
      * restart row on those pages counts it and the Lab's row and theirs never disagree.
      */
-    static final String RESTART_KEY = "hushfeed_feature_gate_lab";
+    static final String RESTART_KEY = "larpfeed_feature_gate_lab";
     private static boolean noticeShown;
 
     private FeatureGateLabSession() {}

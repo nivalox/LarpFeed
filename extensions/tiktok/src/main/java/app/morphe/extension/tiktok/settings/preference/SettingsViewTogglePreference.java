@@ -1,6 +1,6 @@
 /*
- * Copyright 2026 Hushfeed contributors
- * https://github.com/SysAdminDoc/hushfeed
+ * Copyright 2026 Larpfeed contributors
+ * https://github.com/SysAdminDoc/larpfeed
  */
 package app.morphe.extension.tiktok.settings.preference;
 
@@ -18,7 +18,7 @@ import app.morphe.extension.tiktok.settings.Settings;
  */
 @SuppressWarnings("deprecation")
 public final class SettingsViewTogglePreference extends Preference implements ImmediateAction {
-    public static final String KEY = "hushfeed_view_toggle";
+    public static final String KEY = "larpfeed_view_toggle";
 
     public SettingsViewTogglePreference(Context context, OnPreferenceClickListener listener) {
         super(context);

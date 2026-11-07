@@ -1,6 +1,6 @@
 /*
- * Copyright 2026 Hushfeed contributors
- * https://github.com/SysAdminDoc/hushfeed
+ * Copyright 2026 Larpfeed contributors
+ * https://github.com/SysAdminDoc/larpfeed
  */
 package app.morphe.extension.tiktok.network;
 
@@ -38,7 +38,7 @@ import java.util.concurrent.atomic.AtomicInteger;
  * The user name, password and tunnel targets are never logged.
  */
 final class ProxyRelay {
-    private static final String THREAD_NAME = "Hushfeed proxy relay";
+    private static final String THREAD_NAME = "Larpfeed proxy relay";
     private static final long THREAD_STACK_BYTES = 128 * 1024L;
     private static final int BACKLOG = 64;
     /** Two threads a connection, and TikTok holds a few dozen at most. */

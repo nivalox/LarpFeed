@@ -1,6 +1,6 @@
 /*
- * Copyright 2026 Hushfeed contributors
- * https://github.com/SysAdminDoc/hushfeed
+ * Copyright 2026 Larpfeed contributors
+ * https://github.com/SysAdminDoc/larpfeed
  */
 package app.morphe.patches.tiktok.privacy
 
@@ -19,7 +19,7 @@ private const val RESOLVER = "Landroid/content/ContentResolver;"
 val contactListBlockerPatch = bytecodePatch(
     name = "Block contact list access",
     description = "Gives TikTok an empty contact list when it tries to read your phone's " +
-        "contacts, so it can't use them to suggest friends. Starts off. Turn it on in Hushfeed " +
+        "contacts, so it can't use them to suggest friends. Starts off. Turn it on in Larpfeed " +
         "settings > Privacy.",
 ) {
     category("Privacy")

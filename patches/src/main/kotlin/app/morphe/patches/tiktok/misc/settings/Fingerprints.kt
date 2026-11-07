@@ -63,7 +63,7 @@ internal object NpthExtentTaskInitFingerprint : Fingerprint(
  *
  * TikTok 47.0.3 changed the method name and parameter count again. The class and the final
  * comparator-plus-iterable sort are the contract the patch actually consumes, so matching that
- * call keeps the Hushfeed row at index zero without coupling the fingerprint to R8 output.
+ * call keeps the Larpfeed row at index zero without coupling the fingerprint to R8 output.
  */
 internal fun isSettingsComposeRowsMethod(method: Method, classDef: ClassDef): Boolean =
     classDef.type.endsWith("/SettingsComposeRvmpFragment;") &&

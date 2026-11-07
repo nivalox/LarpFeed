@@ -544,7 +544,7 @@ function Read-DeviceBuildIdentity([string]$ApkPath, [string]$ReceiptPath, [strin
     . (Join-Path (Split-Path -Parent $PSScriptRoot) 'scripts/apk-facts.ps1')
     $receipt = Get-Content -LiteralPath $ReceiptPath -Raw -Encoding UTF8 | ConvertFrom-Json
     if (($receipt.schemaVersion -isnot [int] -and $receipt.schemaVersion -isnot [long]) -or
-        $receipt.schemaVersion -cnotin @(1,2) -or $receipt.kind -cne 'hushfeed-device-build') { throw 'Unsupported device-build receipt.' }
+        $receipt.schemaVersion -cnotin @(1,2) -or $receipt.kind -cne 'larpfeed-device-build') { throw 'Unsupported device-build receipt.' }
     if ($receipt.apk.sha256 -ine (Get-FileHash -LiteralPath $ApkPath -Algorithm SHA256).Hash -or
         $receipt.bundle.sha256 -ine (Get-FileHash -LiteralPath $BundlePath -Algorithm SHA256).Hash) {
         throw 'The build receipt does not match the APK and bundle.'

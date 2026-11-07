@@ -542,7 +542,7 @@ public class VideoFitTest {
         try {
             assertEquals(java.util.List.of("Fit the video to the screen: off",
                     "Fill the screen with the video: on",
-                    "Hushfeed is paused, so videos keep TikTok's size",
+                    "Larpfeed is paused, so videos keep TikTok's size",
                     "Fit checks since TikTok started: 0 resized the video, 0 left it at TikTok's size"),
                     VideoFit.Report.INSTANCE.lines());
         } finally {
@@ -552,7 +552,7 @@ public class VideoFitTest {
         // Not paused, the line goes.
         Settings.FIT_VIDEO_TO_SCREEN.save(true);
         try {
-            assertFalse(VideoFit.Report.INSTANCE.lines().contains("Hushfeed is paused, so videos keep TikTok's size"));
+            assertFalse(VideoFit.Report.INSTANCE.lines().contains("Larpfeed is paused, so videos keep TikTok's size"));
         } finally {
             Settings.FIT_VIDEO_TO_SCREEN.save(false);
         }

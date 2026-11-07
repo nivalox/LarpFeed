@@ -1,6 +1,6 @@
 /*
- * Copyright 2026 Hushfeed contributors
- * https://github.com/SysAdminDoc/hushfeed
+ * Copyright 2026 Larpfeed contributors
+ * https://github.com/SysAdminDoc/larpfeed
  */
 package app.morphe.patches.tiktok.interaction.live
 
@@ -2114,7 +2114,7 @@ val liveControlsPatch = bytecodePatch(
     description = "Stops a LIVE in the feed from opening by itself after a countdown. It can " +
         "show a LIVE's exact viewer count instead of a rounded one, offer a quality choice and " +
         "clear screen in more LIVE rooms, and keep your quality pick after TikTok restarts. " +
-        "Starts off. Turn it on in Hushfeed settings > Playback. " +
+        "Starts off. Turn it on in Larpfeed settings > Playback. " +
         "It also keeps a LIVE in the feed from showing the Service+ row of the LIVE before it " +
         "(or hides that row altogether), " +
         "and can add a Record button to a LIVE room that saves what you watch from when you tap it.",

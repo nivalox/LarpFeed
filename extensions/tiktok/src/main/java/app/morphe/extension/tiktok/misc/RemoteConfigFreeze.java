@@ -1,6 +1,6 @@
 /*
- * Copyright 2026 Hushfeed contributors
- * https://github.com/SysAdminDoc/hushfeed
+ * Copyright 2026 Larpfeed contributors
+ * https://github.com/SysAdminDoc/larpfeed
  */
 package app.morphe.extension.tiktok.misc;
 
@@ -27,7 +27,7 @@ import app.morphe.extension.tiktok.settings.SettingsStatus;
  * through its newer optimized path. Every one of them writes the values TikTok reads afterwards,
  * so with the switch on each store returns before it writes anything and TikTok keeps the values
  * it already had. Each is a parse of a response that already arrived, so returning early leaves
- * no request waiting and nothing to retry. With the switch off, and while Hushfeed is paused,
+ * no request waiting and nothing to retry. With the switch off, and while Larpfeed is paused,
  * every store runs as TikTok ships it.
  *
  * <p>The values kept have to be ones the running TikTok and account were sent. A freeze turned on

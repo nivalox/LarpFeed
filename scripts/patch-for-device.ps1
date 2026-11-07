@@ -1,6 +1,6 @@
 <#
 .SYNOPSIS
-    Patch the vendor APK with every Hushfeed patch, sign it, and optionally install it.
+    Patch the vendor APK with every Larpfeed patch, sign it, and optionally install it.
 
 .DESCRIPTION
     verify-all-patches.ps1 answers whether the patches apply and throws its APK away. This
@@ -18,18 +18,18 @@
     cleanup, and relative paths resolve from PowerShell's working folder.
 
     The vendor APK defaults to the build of the target version in the folder
-    HUSHFEED_FIXTURE_DIR names. The desktop CLI is found through -DesktopJar,
-    HUSHFEED_DESKTOP_JAR or HUSHFEED_WORKDIR, and Java through -Java, HUSHFEED_JAVA or
+    LARPFEED_FIXTURE_DIR names. The desktop CLI is found through -DesktopJar,
+    LARPFEED_DESKTOP_JAR or LARPFEED_WORKDIR, and Java through -Java, LARPFEED_JAVA or
     JAVA_HOME. None of them has a machine-specific default.
 
 .EXAMPLE
-    scripts/patch-for-device.ps1 -Serial $env:HUSHFEED_DEVICE_SERIAL -Replace
+    scripts/patch-for-device.ps1 -Serial $env:LARPFEED_DEVICE_SERIAL -Replace
 #>
 [CmdletBinding()]
 param(
     [string]$Serial,
-    [string]$LeaseDir = $env:HUSHFEED_DEVICE_LEASE_DIR,
-    [string]$ChatIdentity = $env:HUSHFEED_CHAT_IDENTITY,
+    [string]$LeaseDir = $env:LARPFEED_DEVICE_LEASE_DIR,
+    [string]$ChatIdentity = $env:LARPFEED_CHAT_IDENTITY,
     [ValidateRange(1, 30)][int]$LeaseMinutes = 30,
     # A lease the caller already holds on -Serial (walk-app.ps1 passes its own). The install
     # runs under it and leaves it held, so no other task can take the phone before the walk.
@@ -59,7 +59,7 @@ param(
     [ValidateSet('BKS', 'JKS', 'PKCS12')][string]$KeystoreType,
     [AllowEmptyString()][string]$KeystorePassword,
     [AllowEmptyString()][string]$KeyPassword,
-    [string]$OutDir = (Join-Path $env:TEMP 'hushfeed-device')
+    [string]$OutDir = (Join-Path $env:TEMP 'larpfeed-device')
 )
 
 $ErrorActionPreference = 'Stop'
@@ -78,13 +78,13 @@ if (-not (Test-Path -LiteralPath $catalogPath -PathType Leaf)) { throw "No patch
 try { $catalog = Get-Content -LiteralPath $catalogPath -Raw | ConvertFrom-Json }
 catch { throw "Could not read patch list ${catalogPath}: $($_.Exception.Message)" }
 $target = Get-PatchTarget -PatchList $catalog
-if (-not $Apk -and $env:HUSHFEED_FIXTURE_DIR -and (Test-Path -LiteralPath $env:HUSHFEED_FIXTURE_DIR -PathType Container)) {
-    $Apk = (Get-ChildItem -LiteralPath $env:HUSHFEED_FIXTURE_DIR `
+if (-not $Apk -and $env:LARPFEED_FIXTURE_DIR -and (Test-Path -LiteralPath $env:LARPFEED_FIXTURE_DIR -PathType Container)) {
+    $Apk = (Get-ChildItem -LiteralPath $env:LARPFEED_FIXTURE_DIR `
         -Filter "*$($target.PackageVersion)*.apk" -File | Select-Object -First 1).FullName
 }
 if (-not $Apk -or -not (Test-Path -LiteralPath $Apk -PathType Leaf)) {
     throw ("No vendor APK. Pass -Apk with a $(Format-VersionList -Versions @($target.PackageVersions)) build, or set " +
-        'HUSHFEED_FIXTURE_DIR to the folder that holds one.')
+        'LARPFEED_FIXTURE_DIR to the folder that holds one.')
 }
 $version = Get-BundleVersion -Root $root
 $bundle = Get-ReleaseBundlePath -Root $root -Version $version
@@ -110,8 +110,8 @@ $auditInputHash = (Get-FileHash -LiteralPath $Apk -Algorithm SHA256).Hash.ToLowe
 $auditBundleSource = (Get-BundleManifestFacts -BundlePath $bundle).source
 
 $OutDir = $ExecutionContext.SessionState.Path.GetUnresolvedProviderPathFromPSPath($OutDir)
-$out = Join-Path $OutDir "hushfeed-$version-signed.apk"
-$unsigned = Join-Path $OutDir "hushfeed-$version-unsigned.apk"
+$out = Join-Path $OutDir "larpfeed-$version-signed.apk"
+$unsigned = Join-Path $OutDir "larpfeed-$version-unsigned.apk"
 $temp = Join-Path $OutDir 'tmp'
 $result = Join-Path $OutDir 'result.json'
 $argumentFile = Join-Path $OutDir 'morphe-patch.args'
@@ -192,7 +192,7 @@ if ($auditBundleHash -ine (Get-FileHash -LiteralPath $bundle -Algorithm SHA256).
 $patchedApkFacts = Get-ApkManifestFacts -Apk $out -Aapt2 $Aapt2
 # This describes the APK just produced, not the checkout running the audit later.
 $auditBuildReceipt = [ordered]@{
-    schemaVersion = 2; kind = 'hushfeed-device-build'
+    schemaVersion = 2; kind = 'larpfeed-device-build'
     apk = [ordered]@{
         package = $patchedApkFacts.package; versionName = $patchedApkFacts.versionName; versionCode = $patchedApkFacts.versionCode
         sha256 = (Get-FileHash -LiteralPath $out -Algorithm SHA256).Hash.ToLowerInvariant()
@@ -220,7 +220,7 @@ if ($Lease) {
     Assert-DeviceLease -Lease $Lease -Serial $Serial
     $deviceLease = $Lease
 } else {
-    $deviceLease = New-DeviceLease -LeaseDir $LeaseDir -Serial $Serial -Project 'hushfeed' `
+    $deviceLease = New-DeviceLease -LeaseDir $LeaseDir -Serial $Serial -Project 'larpfeed' `
         -ChatIdentity $ChatIdentity -Purpose 'patched application install' -LeaseMinutes $LeaseMinutes
 }
 if ($Replace) {

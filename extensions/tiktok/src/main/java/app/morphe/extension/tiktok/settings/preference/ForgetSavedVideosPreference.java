@@ -1,6 +1,6 @@
 /*
- * Copyright 2026 Hushfeed contributors
- * https://github.com/SysAdminDoc/hushfeed
+ * Copyright 2026 Larpfeed contributors
+ * https://github.com/SysAdminDoc/larpfeed
  */
 package app.morphe.extension.tiktok.settings.preference;
 
@@ -28,7 +28,7 @@ public final class ForgetSavedVideosPreference extends Preference
 
     static final String FORGET_TITLE = "Forget saved videos";
     static final String UNDO_TITLE = "Undo forgetting saved videos";
-    static final String SUMMARY = "Forget which videos Hushfeed saved here, so the already-saved "
+    static final String SUMMARY = "Forget which videos Larpfeed saved here, so the already-saved "
             + "check starts over. The saved files and your settings stay. Turning the check off "
             + "doesn't erase this record.";
 

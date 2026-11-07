@@ -1,6 +1,6 @@
 /*
- * Copyright 2026 Hushfeed contributors
- * https://github.com/SysAdminDoc/hushfeed
+ * Copyright 2026 Larpfeed contributors
+ * https://github.com/SysAdminDoc/larpfeed
  *
  * Built on icysymmetra/tiktok-patches-for-morphe (GPL-3.0).
  */
@@ -236,7 +236,7 @@ val commentToolsPatch = bytecodePatch(
     name = "Comment tools",
     description = "Hides comments with words you pick or from accounts you pick, and adds a " +
         "search box for a video's comments. It can also make links tappable and show poll results " +
-        "before you vote. Starts off. Turn it on in Hushfeed settings > Comments.",
+        "before you vote. Starts off. Turn it on in Larpfeed settings > Comments.",
 ) {
     category("Comments")
     // The player bridge: "Pause the video while comments are open" pauses the video through

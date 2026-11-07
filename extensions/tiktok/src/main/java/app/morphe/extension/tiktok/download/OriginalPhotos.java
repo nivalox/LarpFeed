@@ -1,6 +1,6 @@
 /*
- * Copyright 2026 Hushfeed contributors
- * https://github.com/SysAdminDoc/hushfeed
+ * Copyright 2026 Larpfeed contributors
+ * https://github.com/SysAdminDoc/larpfeed
  *
  * Built on icysymmetra/tiktok-patches-for-morphe (GPL-3.0).
  */
@@ -82,7 +82,7 @@ public final class OriginalPhotos {
      * So it only stands aside where it matters: a chosen photo that really is a live photo
      * would come down as a video, and that save stays TikTok's whole.
      *
-     * @return true when Hushfeed took the save, so TikTok's own must not run.
+     * @return true when Larpfeed took the save, so TikTok's own must not run.
      */
     public static boolean startPhotos(Object aweme, Set<?> indices, boolean video) {
         if (video && anyChosenIsLive(aweme, indices)) return false;
@@ -97,7 +97,7 @@ public final class OriginalPhotos {
      * video sharing, so the image job never calls it, including on failure or cancellation.
      * Live Photo video choices stay native. This entry carries no selected-photo indices.
      *
-     * <p>With Save photo posts as a video on, Hushfeed makes that video itself, without the
+     * <p>With Save photo posts as a video on, Larpfeed makes that video itself, without the
      * logo and end card TikTok's render adds. Otherwise Download original photos saves the image.
      */
     public static boolean startImageAsVideo(Object aweme) {

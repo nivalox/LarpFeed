@@ -566,7 +566,7 @@ public class SessionBudgetTest {
     }
 
     @Test public void theBudgetIsNotTheAutoAdvanceLimit() {
-        // AUTO_ADVANCE_LIMIT counts only videos Hushfeed itself advanced past, and lives on the
+        // AUTO_ADVANCE_LIMIT counts only videos Larpfeed itself advanced past, and lives on the
         // per-component controller. Wiring one to the other would stop the feed for someone who
         // never turned automatic advance on.
         Settings.AUTO_ADVANCE_LIMIT.save(1);

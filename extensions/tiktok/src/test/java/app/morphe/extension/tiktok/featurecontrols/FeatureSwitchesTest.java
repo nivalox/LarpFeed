@@ -168,7 +168,7 @@ public class FeatureSwitchesTest {
 
     /**
      * #128: the side menu button beside LIVE answers the same "is it enabled" question, with its
-     * own switch. Pause Hushfeed hands it back to TikTok, and the Hook status line says the check
+     * own switch. Pause Larpfeed hands it back to TikTok, and the Hook status line says the check
      * ran, since the button has no view id a report could name.
      */
     @Test public void theSideMenuButtonIsDisabledByItsOwnSwitchAndComesBackWhilePaused() {
@@ -186,7 +186,7 @@ public class FeatureSwitchesTest {
         assertFalse(FeatureControls.hideFeedSidebarButtonEnabled(false));
 
         PausedProcess.set(true);
-        assertTrue("Pause Hushfeed leaves the button to TikTok",
+        assertTrue("Pause Larpfeed leaves the button to TikTok",
                 FeatureControls.hideFeedSidebarButtonEnabled(true));
     }
 
@@ -206,14 +206,14 @@ public class FeatureSwitchesTest {
         assertTrue(FeatureControls.hideFeedSidebarButtonView());
 
         PausedProcess.set(true);
-        assertFalse("Pause Hushfeed leaves the button to TikTok",
+        assertFalse("Pause Larpfeed leaves the button to TikTok",
                 FeatureControls.hideFeedSidebarButtonView());
     }
 
     /**
      * #213: the swipe check TikTok makes before a right swipe from For You may go to the side
      * menu. Off, it is left to TikTok. On, it answers that the menu isn't on offer. Pause
-     * Hushfeed hands it back, and the Hook status line says the check ran.
+     * Larpfeed hands it back, and the Hook status line says the check ran.
      */
     @Test public void theSideMenuSwipeIsTurnedOffByItsOwnSwitchAndComesBackWhilePaused() {
         assertEquals("the key", "disable_feed_sidebar_swipe", Settings.DISABLE_FEED_SIDEBAR_SWIPE.key);
@@ -235,7 +235,7 @@ public class FeatureSwitchesTest {
                 FeatureControls.hideFeedSidebarButtonView());
 
         PausedProcess.set(true);
-        assertFalse("Pause Hushfeed leaves the swipe to TikTok", FeatureControls.sidebarSwipeOff());
+        assertFalse("Pause Larpfeed leaves the swipe to TikTok", FeatureControls.sidebarSwipeOff());
         assertTrue("paused, TikTok's yes stands", FeatureControls.sidebarSwipeOffered(true));
         PausedProcess.set(false);
         Settings.DISABLE_FEED_SIDEBAR_SWIPE.save(false);

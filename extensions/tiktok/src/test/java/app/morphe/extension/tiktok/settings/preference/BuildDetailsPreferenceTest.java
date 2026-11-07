@@ -200,7 +200,7 @@ public class BuildDetailsPreferenceTest {
         settle(owner.get());
         TikTokPreferenceFragment home = page(owner.get());
         Preference about = home.findPreference("hub_about");
-        assertNotNull("the home menu has no About Hushfeed route", about);
+        assertNotNull("the home menu has no About Larpfeed route", about);
         assertTrue(about.getOnPreferenceClickListener().onPreferenceClick(about));
         settle(owner.get());
         assertSame("About replaced the main settings list", home, page(owner.get()));
@@ -210,7 +210,7 @@ public class BuildDetailsPreferenceTest {
     }
 
     private static TikTokPreferenceFragment page(SettingsActivity activity) {
-        var root = activity.getFragmentManager().findFragmentByTag("hushfeed_settings_root");
+        var root = activity.getFragmentManager().findFragmentByTag("larpfeed_settings_root");
         return (TikTokPreferenceFragment) activity.getFragmentManager().findFragmentById(root.getId());
     }
 

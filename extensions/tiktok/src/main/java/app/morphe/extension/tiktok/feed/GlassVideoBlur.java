@@ -1,6 +1,6 @@
 /*
- * Copyright 2026 Hushfeed contributors
- * https://github.com/SysAdminDoc/hushfeed
+ * Copyright 2026 Larpfeed contributors
+ * https://github.com/SysAdminDoc/larpfeed
  */
 package app.morphe.extension.tiktok.feed;
 
@@ -49,7 +49,7 @@ import java.util.List;
  * the plain glass stays. One bitmap is kept and written in
  * place. It is sampled at an eighth of the pill's size about 20 times a second while the bar is on
  * screen and the window has focus, a few times a second once the picture has stopped changing (a
- * paused video), and not at all once the switch is off, Hushfeed is paused, the bar is hidden or
+ * paused video), and not at all once the switch is off, Larpfeed is paused, the bar is hidden or
  * another background replaced the glass. Android 12 added RenderEffect, so below it the switch does nothing.
  */
 final class GlassVideoBlur {
@@ -150,7 +150,7 @@ final class GlassVideoBlur {
         return Build.VERSION.SDK_INT >= Build.VERSION_CODES.S;
     }
 
-    /** True while the switch is on, Hushfeed isn't paused and the phone can draw it. */
+    /** True while the switch is on, Larpfeed isn't paused and the phone can draw it. */
     static boolean wanted() {
         return supported() && Settings.GLASS_VIDEO_BLUR.get();
     }

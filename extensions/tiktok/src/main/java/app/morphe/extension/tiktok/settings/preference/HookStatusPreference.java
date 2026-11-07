@@ -1,6 +1,6 @@
 /*
- * Copyright 2026 Hushfeed contributors
- * https://github.com/SysAdminDoc/hushfeed
+ * Copyright 2026 Larpfeed contributors
+ * https://github.com/SysAdminDoc/larpfeed
  */
 package app.morphe.extension.tiktok.settings.preference;
 
@@ -90,7 +90,7 @@ public class HookStatusPreference extends Preference {
                     "Nothing has been checked yet, so there's nothing to report."));
         } else {
             message.append(L10n.t(context,
-                    "Each area shows how many of the things Hushfeed looks for were found in "
+                    "Each area shows how many of the things Larpfeed looks for were found in "
                             + "this TikTok and how many are missing."));
             for (String line : report) message.append("\n\n").append(line);
         }

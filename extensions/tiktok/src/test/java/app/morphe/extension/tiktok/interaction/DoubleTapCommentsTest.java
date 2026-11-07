@@ -643,7 +643,7 @@ public class DoubleTapCommentsTest {
         Settings.DOUBLE_TAP_ACTION.save("like_toggle");
         ShadowToast.reset();
         try {
-            assertTrue("the tap is Hushfeed's, not TikTok's like", GestureActions.onDoubleTap());
+            assertTrue("the tap is Larpfeed's, not TikTok's like", GestureActions.onDoubleTap());
             assertEquals(1, onScreen.clicks);
             assertTrue(GestureActions.onDoubleTap());
             assertEquals("a second double tap is a second click", 2, onScreen.clicks);

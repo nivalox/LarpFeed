@@ -1,6 +1,6 @@
 /*
- * Copyright 2026 Hushfeed contributors
- * https://github.com/SysAdminDoc/hushfeed
+ * Copyright 2026 Larpfeed contributors
+ * https://github.com/SysAdminDoc/larpfeed
  */
 package app.morphe.extension.tiktok.feed;
 
@@ -59,7 +59,7 @@ import app.morphe.extension.tiktok.settings.preference.SettingsUi;
  * order the grid shows, and swiping goes on in the sorted order ({@link #beforeOpen}). From then
  * on TikTok's own order is rebuilt from the copy kept before that write, with each later video
  * added where TikTok put it, which is how Original order, switching the setting off and pausing
- * Hushfeed still bring TikTok's order back.
+ * Larpfeed still bring TikTok's order back.
  *
  * <p>Pinned videos keep their place at the front in the order TikTok has them. A video with no
  * value for the chosen order (no length, no counts, no date) goes after the ones that have one,
@@ -145,8 +145,8 @@ public final class GridSort {
     /** A hold shows nothing this early, so a profile with few videos doesn't flash a spinner. */
     static final long HOLD_SPINNER_DELAY_MS = 250;
 
-    static final String CHIP_TAG = "hushfeed_grid_sort_chip";
-    static final String HOLD_TAG = "hushfeed_grid_sort_hold";
+    static final String CHIP_TAG = "larpfeed_grid_sort_chip";
+    static final String HOLD_TAG = "larpfeed_grid_sort_hold";
 
     private static final Handler MAIN = new Handler(Looper.getMainLooper());
 

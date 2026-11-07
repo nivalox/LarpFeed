@@ -258,7 +258,7 @@ public class CommentsPreferenceCategory extends ConditionalPreferenceCategory {
                     context,
                     "Hide search suggestions above comments",
                     "Hide TikTok's \"Search: ...\" banner above the comment count. "
-                            + "This doesn't hide the comments or Hushfeed's comment-search box.",
+                            + "This doesn't hide the comments or Larpfeed's comment-search box.",
                     Settings.HIDE_COMMENT_SEARCH_SUGGESTIONS
             ));
             addPreference(new TogglePreference(

@@ -124,7 +124,7 @@
     },
     {
       "name": "Account cleanup",
-      "description": "Adds Remove all reposts, Remove all likes and Clear Favorites to Hushfeed settings > Privacy. Each one takes items off your account one at a time through TikTok's own requests, with a pause between them, and stops on the first error.",
+      "description": "Adds Remove all reposts, Remove all likes and Clear Favorites to Larpfeed settings > Privacy. Each one takes items off your account one at a time through TikTok's own requests, with a pause between them, and stops on the first error.",
       "category": "Privacy",
       "use": true,
       "dependencies": [
@@ -163,7 +163,7 @@
     },
     {
       "name": "Advanced downloads",
-      "description": "Adds more ways to save: pick the video quality, save full-size photos, the sound on its own or a photo post as one video, hold a profile picture or story to save it, save a story or a video's cover from the share sheet, put a save button on the video, and pick videos on a profile grid to save in one run. Starts off. Turn it on in Hushfeed settings > Downloads.",
+      "description": "Adds more ways to save: pick the video quality, save full-size photos, the sound on its own or a photo post as one video, hold a profile picture or story to save it, save a story or a video's cover from the share sheet, put a save button on the video, and pick videos on a profile grid to save in one run. Starts off. Turn it on in Larpfeed settings > Downloads.",
       "category": "Downloads",
       "use": true,
       "dependencies": [
@@ -511,7 +511,7 @@
     },
     {
       "name": "Allow Duet and Stitch",
-      "description": "Shows the Duet and Stitch buttons on videos whose creator turned them off, so you can still make one, and Add to Story in the share sheet and on stories when the creator turned off content reuse. TikTok may still refuse some videos or the upload. Starts off. Turn it on in Hushfeed settings > Share sheet.",
+      "description": "Shows the Duet and Stitch buttons on videos whose creator turned them off, so you can still make one, and Add to Story in the share sheet and on stories when the creator turned off content reuse. TikTok may still refuse some videos or the upload. Starts off. Turn it on in Larpfeed settings > Share sheet.",
       "category": "Downloads",
       "use": true,
       "dependencies": [
@@ -570,7 +570,7 @@
     },
     {
       "name": "Allow screenshots and Circle to Search",
-      "description": "Lets screenshots, screen recordings and Circle to Search work on TikTok screens that would otherwise come out black. Starts off. Turn it on in Hushfeed settings > App, then restart TikTok.",
+      "description": "Lets screenshots, screen recordings and Circle to Search work on TikTok screens that would otherwise come out black. Starts off. Turn it on in Larpfeed settings > App, then restart TikTok.",
       "category": "Downloads",
       "use": true,
       "dependencies": [
@@ -620,7 +620,7 @@
     },
     {
       "name": "Always show publish date",
-      "description": "Shows the date a video was posted next to the creator's name, so you can tell how old it is. It can also show the exact time, dates and lengths on profile grids, or sort the videos a grid has loaded. On by default. Turn it off in Hushfeed settings > Feed screen.",
+      "description": "Shows the date a video was posted next to the creator's name, so you can tell how old it is. It can also show the exact time, dates and lengths on profile grids, or sort the videos a grid has loaded. On by default. Turn it off in Larpfeed settings > Feed screen.",
       "category": "Feed",
       "use": true,
       "dependencies": [
@@ -742,7 +742,7 @@
     },
     {
       "name": "Always upload in HD",
-      "description": "Posts every video you upload in HD, as if you'd turned on TikTok's own HD upload setting each time. Videos TikTok doesn't count as high quality post as usual. Starts off. Turn it on in Hushfeed settings > App.",
+      "description": "Posts every video you upload in HD, as if you'd turned on TikTok's own HD upload setting each time. Videos TikTok doesn't count as high quality post as usual. Starts off. Turn it on in Larpfeed settings > App.",
       "category": "Interaction",
       "use": true,
       "dependencies": [
@@ -792,7 +792,7 @@
     },
     {
       "name": "App lock",
-      "description": "Asks for your fingerprint, face or PIN before TikTok opens, and again when you come back after a time you pick, so nobody else can open it on your phone. Starts off. Turn it on in Hushfeed settings > Privacy.",
+      "description": "Asks for your fingerprint, face or PIN before TikTok opens, and again when you come back after a time you pick, so nobody else can open it on your phone. Starts off. Turn it on in Larpfeed settings > Privacy.",
       "category": "Privacy",
       "use": true,
       "dependencies": [
@@ -851,7 +851,7 @@
     },
     {
       "name": "Automatic video advance",
-      "description": "Moves on to the next video by itself when one ends, so you can watch hands-free. It can also turn on TikTok's auto scroll in search results. Starts off. Turn it on in Hushfeed settings > Playback.",
+      "description": "Moves on to the next video by itself when one ends, so you can watch hands-free. It can also turn on TikTok's auto scroll in search results. Starts off. Turn it on in Larpfeed settings > Playback.",
       "category": "Playback",
       "use": true,
       "dependencies": [
@@ -966,7 +966,7 @@
     },
     {
       "name": "Block author button",
-      "description": "Adds buttons on videos to block the creator, hide them only on your phone, or block the sound, so you can get rid of what you don't want in one tap. Starts off. Turn it on in Hushfeed settings > Feed screen.",
+      "description": "Adds buttons on videos to block the creator, hide them only on your phone, or block the sound, so you can get rid of what you don't want in one tap. Starts off. Turn it on in Larpfeed settings > Feed screen.",
       "category": "Interaction",
       "use": true,
       "dependencies": [
@@ -1232,7 +1232,7 @@
     },
     {
       "name": "Block contact list access",
-      "description": "Gives TikTok an empty contact list when it tries to read your phone's contacts, so it can't use them to suggest friends. Starts off. Turn it on in Hushfeed settings > Privacy.",
+      "description": "Gives TikTok an empty contact list when it tries to read your phone's contacts, so it can't use them to suggest friends. Starts off. Turn it on in Larpfeed settings > Privacy.",
       "category": "Privacy",
       "use": true,
       "dependencies": [
@@ -1282,7 +1282,7 @@
     },
     {
       "name": "Block installed app scanning",
-      "description": "Gives TikTok an empty list when it asks which apps are on your phone, so it learns less about you. Opening another app from TikTok still works. Starts off. Turn it on in Hushfeed settings > Privacy.",
+      "description": "Gives TikTok an empty list when it asks which apps are on your phone, so it learns less about you. Opening another app from TikTok still works. Starts off. Turn it on in Larpfeed settings > Privacy.",
       "category": "Privacy",
       "use": true,
       "dependencies": [
@@ -1332,7 +1332,7 @@
     },
     {
       "name": "Block popups",
-      "description": "Lets you stop TikTok's popups, like friend suggestions and offers. Each one joins a checklist after it first appears, and once ticked it won't come back. Sign-in, age and verification screens are never blocked. Starts off. Turn it on in Hushfeed settings > Feed screen.",
+      "description": "Lets you stop TikTok's popups, like friend suggestions and offers. Each one joins a checklist after it first appears, and once ticked it won't come back. Sign-in, age and verification screens are never blocked. Starts off. Turn it on in Larpfeed settings > Feed screen.",
       "category": "Feed",
       "use": true,
       "dependencies": [
@@ -1400,7 +1400,7 @@
     },
     {
       "name": "Block suggested video notifications",
-      "description": "Stops TikTok's \"Videos you might like\" notifications about popular videos it picked for you. Messages, comments, likes and posts from people you follow still come through. On by default. Turn it off in Hushfeed settings > Inbox.",
+      "description": "Stops TikTok's \"Videos you might like\" notifications about popular videos it picked for you. Messages, comments, likes and posts from people you follow still come through. On by default. Turn it off in Larpfeed settings > Inbox.",
       "category": "Inbox",
       "use": true,
       "dependencies": [
@@ -1450,7 +1450,7 @@
     },
     {
       "name": "Camera and microphone indicator",
-      "description": "Shows a small mark in the top corner while TikTok is using the camera or microphone, so you always know when it is. Starts off. Turn it on in Hushfeed settings > Privacy.",
+      "description": "Shows a small mark in the top corner while TikTok is using the camera or microphone, so you always know when it is. Starts off. Turn it on in Larpfeed settings > Privacy.",
       "category": "Privacy",
       "use": true,
       "dependencies": [
@@ -1541,14 +1541,14 @@
           "description": "The name shown under the app icon, up to 50 characters.",
           "required": true,
           "type": "kotlin.String",
-          "default": "Hushfeed",
+          "default": "Larpfeed",
           "values": null
         }
       ]
     },
     {
       "name": "Comment publish diagnostics",
-      "description": "Adds a note to Hushfeed's diagnostic report about how far a comment got when it fails to post, which helps track down comments that vanish without an error. Works as soon as you patch it in, with no switch.",
+      "description": "Adds a note to Larpfeed's diagnostic report about how far a comment got when it fails to post, which helps track down comments that vanish without an error. Works as soon as you patch it in, with no switch.",
       "category": "Comments",
       "use": true,
       "dependencies": [
@@ -1625,7 +1625,7 @@
     },
     {
       "name": "Comment sort controls",
-      "description": "Shows TikTok's full comment sort menu on every video, with hot, newest, media and creator options, even when your account only got a cut-down version. Starts off. Turn it on in Hushfeed settings > Comments.",
+      "description": "Shows TikTok's full comment sort menu on every video, with hot, newest, media and creator options, even when your account only got a cut-down version. Starts off. Turn it on in Larpfeed settings > Comments.",
       "category": "Comments",
       "use": true,
       "dependencies": [
@@ -1675,7 +1675,7 @@
     },
     {
       "name": "Comment tools",
-      "description": "Hides comments with words you pick or from accounts you pick, and adds a search box for a video's comments. It can also make links tappable and show poll results before you vote. Starts off. Turn it on in Hushfeed settings > Comments.",
+      "description": "Hides comments with words you pick or from accounts you pick, and adds a search box for a video's comments. It can also make links tappable and show poll results before you vote. Starts off. Turn it on in Larpfeed settings > Comments.",
       "category": "Comments",
       "use": true,
       "dependencies": [
@@ -1933,7 +1933,7 @@
     },
     {
       "name": "Confirm feed interactions",
-      "description": "Asks for a second tap before Follow, a like, or a quick repost goes through, so a stray tap doesn't count. Starts off. Turn it on in Hushfeed settings > Feed screen.",
+      "description": "Asks for a second tap before Follow, a like, or a quick repost goes through, so a stray tap doesn't count. Starts off. Turn it on in Larpfeed settings > Feed screen.",
       "category": "Interaction",
       "use": true,
       "dependencies": [
@@ -2020,7 +2020,7 @@
     },
     {
       "name": "Copy bio and IDs",
-      "description": "Lets you long-press a bio to copy it, makes the @names in a bio open those profiles on a tap, and adds share sheet buttons that copy a display name, username, user ID or video ID. On a profile card inside a LIVE room, long-press the bio or the name to copy it, long-press the username for the user ID, or tap the copy mark by the username. On by default. Turn it off in Hushfeed settings > App.",
+      "description": "Lets you long-press a bio to copy it, makes the @names in a bio open those profiles on a tap, and adds share sheet buttons that copy a display name, username, user ID or video ID. On a profile card inside a LIVE room, long-press the bio or the name to copy it, long-press the username for the user ID, or tap the copy mark by the username. On by default. Turn it off in Larpfeed settings > App.",
       "category": "Interaction",
       "use": true,
       "dependencies": [
@@ -2088,7 +2088,7 @@
     },
     {
       "name": "Copy comments without username",
-      "description": "When you copy a comment, you get just its text, without the username in front. On by default. Turn it off in Hushfeed settings > Comments.",
+      "description": "When you copy a comment, you get just its text, without the username in front. On by default. Turn it off in Larpfeed settings > Comments.",
       "category": "Comments",
       "use": true,
       "dependencies": [
@@ -2176,7 +2176,7 @@
     },
     {
       "name": "Custom launcher icon",
-      "description": "Gives TikTok's home screen icon a themed version that takes your wallpaper's color on Android 13 and up. The options can also make it black, plain, Material You, any background color or your own picture, and put Hushfeed's H in the status bar. Only patching again without it puts the old icons back.",
+      "description": "Gives TikTok's home screen icon a themed version that takes your wallpaper's color on Android 13 and up. The options can also make it black, plain, Material You, any background color or your own picture, and put Larpfeed's H in the status bar. Only patching again without it puts the old icons back.",
       "category": "Interface",
       "use": false,
       "dependencies": [
@@ -2247,20 +2247,20 @@
         {
           "key": "notificationIcon",
           "title": "Notification icon",
-          "description": "The small icon TikTok's notifications show in the status bar. TikTok's note keeps it as it is. Hushfeed's H swaps it for a sharp H on every screen.",
+          "description": "The small icon TikTok's notifications show in the status bar. TikTok's note keeps it as it is. Larpfeed's H swaps it for a sharp H on every screen.",
           "required": false,
           "type": "kotlin.String",
           "default": "tiktok",
           "values": {
             "TikTok's note": "tiktok",
-            "Hushfeed's H": "hushfeed"
+            "Larpfeed's H": "larpfeed"
           }
         }
       ]
     },
     {
       "name": "Custom offline videos limit",
-      "description": "Lets you pick how many videos TikTok saves for watching offline, from 1 to 10,000, and keep them until you delete them. Handy when you're often without internet. Starts off. Turn it on in Hushfeed settings > Downloads.",
+      "description": "Lets you pick how many videos TikTok saves for watching offline, from 1 to 10,000, and keep them until you delete them. Handy when you're often without internet. Starts off. Turn it on in Larpfeed settings > Downloads.",
       "category": "Feed",
       "use": true,
       "dependencies": [
@@ -2328,7 +2328,7 @@
     },
     {
       "name": "Device privacy guard",
-      "description": "Stops TikTok reading what you copied and gives it a blank advertising ID. Can also hide a VPN connection and root status with details about root tools, and give TikTok a new device identity. Each switch starts off in Hushfeed settings > Privacy. Changing Hide root needs a restart.",
+      "description": "Stops TikTok reading what you copied and gives it a blank advertising ID. Can also hide a VPN connection and root status with details about root tools, and give TikTok a new device identity. Each switch starts off in Larpfeed settings > Privacy. Changing Hide root needs a restart.",
       "category": "Privacy",
       "use": true,
       "dependencies": [
@@ -2405,7 +2405,7 @@
     },
     {
       "name": "Diagnostic tools",
-      "description": "Adds logs and reports you can save or share when something goes wrong, so a problem is easier to report and fix. Starts off. Turn it on in Hushfeed settings > Diagnostics.",
+      "description": "Adds logs and reports you can save or share when something goes wrong, so a problem is easier to report and fix. Starts off. Turn it on in Larpfeed settings > Diagnostics.",
       "category": "Settings",
       "use": true,
       "dependencies": [
@@ -2567,7 +2567,7 @@
     },
     {
       "name": "Disable telemetry",
-      "description": "Stops TikTok sending usage statistics and crash reports to TikTok and the tracking services it uses, so less of what you do in the app leaves your phone. Starts off. Turn it on in Hushfeed settings > Privacy.",
+      "description": "Stops TikTok sending usage statistics and crash reports to TikTok and the tracking services it uses, so less of what you do in the app leaves your phone. Starts off. Turn it on in Larpfeed settings > Privacy.",
       "category": "Privacy",
       "use": true,
       "dependencies": [
@@ -2617,7 +2617,7 @@
     },
     {
       "name": "Disable the long press quick share",
-      "description": "Stops a long press on Share from opening TikTok's quick share, so you don't send a video by accident. Starts off. Turn it on in Hushfeed settings > Feed screen.",
+      "description": "Stops a long press on Share from opening TikTok's quick share, so you don't send a video by accident. Starts off. Turn it on in Larpfeed settings > Feed screen.",
       "category": "Interaction",
       "use": true,
       "dependencies": [
@@ -2667,7 +2667,7 @@
     },
     {
       "name": "Disable the long press repost",
-      "description": "Stops a long press on Like from opening TikTok's repost option, so you don't repost by accident. Starts off. Turn it on in Hushfeed settings > Feed screen.",
+      "description": "Stops a long press on Like from opening TikTok's repost option, so you don't repost by accident. Starts off. Turn it on in Larpfeed settings > Feed screen.",
       "category": "Interaction",
       "use": true,
       "dependencies": [
@@ -2717,7 +2717,7 @@
     },
     {
       "name": "Double-tap controls",
-      "description": "Lets a double tap on a video do nothing, open its comments, copy the link, save the sound or the frame on screen, speed the video up, or set a sleep timer instead of liking it, so you don't like videos by accident. Each corner of the video can get its own action too. Starts off. Pick an action in Hushfeed settings > Feed screen.",
+      "description": "Lets a double tap on a video do nothing, open its comments, copy the link, save the sound or the frame on screen, speed the video up, or set a sleep timer instead of liking it, so you don't like videos by accident. Each corner of the video can get its own action too. Starts off. Pick an action in Larpfeed settings > Feed screen.",
       "category": "Interaction",
       "use": true,
       "dependencies": [
@@ -2813,7 +2813,7 @@
     },
     {
       "name": "Downloads",
-      "description": "Saves videos and photos without TikTok's watermark, even when the creator turned downloads off. You can also choose the folders and file names. On by default. Turn it off in Hushfeed settings > Downloads.",
+      "description": "Saves videos and photos without TikTok's watermark, even when the creator turned downloads off. You can also choose the folders and file names. On by default. Turn it off in Larpfeed settings > Downloads.",
       "category": "Downloads",
       "use": true,
       "dependencies": [
@@ -2971,7 +2971,7 @@
     },
     {
       "name": "Drop the animated image cache",
-      "description": "Lets you make TikTok decode animated stickers and GIFs one frame at a time as they play, instead of a few frames ahead, so they use a little less memory. Starts off. Turn it on in Hushfeed settings > App.",
+      "description": "Lets you make TikTok decode animated stickers and GIFs one frame at a time as they play, instead of a few frames ahead, so they use a little less memory. Starts off. Turn it on in Larpfeed settings > App.",
       "category": "Performance",
       "use": true,
       "dependencies": [
@@ -3021,7 +3021,7 @@
     },
     {
       "name": "Enable voice comments",
-      "description": "Lets you turn on TikTok's voice comments, so you can record and post a spoken comment, for accounts that don't have them yet. It hasn't been tried on a real account, so it may not work. Starts off. Turn it on in Hushfeed settings > Comments.",
+      "description": "Lets you turn on TikTok's voice comments, so you can record and post a spoken comment, for accounts that don't have them yet. It hasn't been tried on a real account, so it may not work. Starts off. Turn it on in Larpfeed settings > Comments.",
       "category": "Comments",
       "use": true,
       "dependencies": [
@@ -3071,7 +3071,7 @@
     },
     {
       "name": "Expand activity list",
-      "description": "Shows the whole Activity and New followers lists in the Inbox, so you don't have to tap View all. Starts off. Turn it on in Hushfeed settings > Inbox.",
+      "description": "Shows the whole Activity and New followers lists in the Inbox, so you don't have to tap View all. Starts off. Turn it on in Larpfeed settings > Inbox.",
       "category": "Inbox",
       "use": true,
       "dependencies": [
@@ -3121,7 +3121,7 @@
     },
     {
       "name": "Feature Gate Lab",
-      "description": "Adds an advanced page that lists the hidden settings TikTok uses to test features and lets you change them. It's for people who like to experiment. Starts off. Turn it on in Hushfeed settings > Diagnostics.",
+      "description": "Adds an advanced page that lists the hidden settings TikTok uses to test features and lets you change them. It's for people who like to experiment. Starts off. Turn it on in Larpfeed settings > Diagnostics.",
       "category": "Settings",
       "use": true,
       "dependencies": [
@@ -3159,7 +3159,7 @@
     },
     {
       "name": "Feature Gate Recorder",
-      "description": "Records which hidden TikTok settings the app reads while you use it, and which ones changed. It's a research tool and changes nothing in TikTok. Start a recording in Hushfeed settings > Diagnostics.",
+      "description": "Records which hidden TikTok settings the app reads while you use it, and which ones changed. It's a research tool and changes nothing in TikTok. Start a recording in Larpfeed settings > Diagnostics.",
       "category": "Settings",
       "use": false,
       "dependencies": [
@@ -3198,7 +3198,7 @@
     },
     {
       "name": "Feed filter",
-      "description": "Hides ads in the feed, and lets you hide other things you don't want to see, like LIVEs, Shop posts, AI videos or videos with words, creators or sounds you pick. Hiding ads is on by default. Everything else starts off in Hushfeed settings > Feed filter.",
+      "description": "Hides ads in the feed, and lets you hide other things you don't want to see, like LIVEs, Shop posts, AI videos or videos with words, creators or sounds you pick. Hiding ads is on by default. Everything else starts off in Larpfeed settings > Feed filter.",
       "category": "Feed",
       "use": true,
       "dependencies": [
@@ -3770,7 +3770,7 @@
     },
     {
       "name": "Feed tab navigation",
-      "description": "Lets you hide feed and bottom tabs you don't use, rename the bottom tabs, choose the tab TikTok opens on, stop For You reloading when you tap Home and hold Profile to open your Watch history. Starts off, except holding Home to open Hushfeed settings. Find it in Hushfeed settings > Feed tabs.",
+      "description": "Lets you hide feed and bottom tabs you don't use, rename the bottom tabs, choose the tab TikTok opens on, stop For You reloading when you tap Home and hold Profile to open your Watch history. Starts off, except holding Home to open Larpfeed settings. Find it in Larpfeed settings > Feed tabs.",
       "category": "Settings",
       "use": true,
       "dependencies": [
@@ -4027,7 +4027,7 @@
     },
     {
       "name": "Feed text sizes",
-      "description": "Lets you make video descriptions, creator names and post dates bigger or smaller, or give them a color and a backdrop, so they're easier to read. Starts off. Pick them in Hushfeed settings > Feed screen.",
+      "description": "Lets you make video descriptions, creator names and post dates bigger or smaller, or give them a color and a backdrop, so they're easier to read. Starts off. Pick them in Larpfeed settings > Feed screen.",
       "category": "Interface",
       "use": true,
       "dependencies": [
@@ -4104,7 +4104,7 @@
     },
     {
       "name": "Fit the video to the screen",
-      "description": "Shows the whole video instead of cutting off its sides on folding phones, squarer screens and split screen, and fits photo slideshows whole on squarer screens. A second switch does the opposite and fills the screen. Starts off. Turn it on in Hushfeed settings > Playback.",
+      "description": "Shows the whole video instead of cutting off its sides on folding phones, squarer screens and split screen, and fits photo slideshows whole on squarer screens. A second switch does the opposite and fills the screen. Starts off. Turn it on in Larpfeed settings > Playback.",
       "category": "Playback",
       "use": true,
       "dependencies": [
@@ -4201,7 +4201,7 @@
     },
     {
       "name": "Foldable split comment view",
-      "description": "On a folding phone or tablet, shows comments beside the video instead of over it when the screen is wide enough. Starts off. Turn it on in Hushfeed settings > App.",
+      "description": "On a folding phone or tablet, shows comments beside the video instead of over it when the screen is wide enough. Starts off. Turn it on in Larpfeed settings > App.",
       "category": "Comments",
       "use": true,
       "dependencies": [
@@ -4298,7 +4298,7 @@
     },
     {
       "name": "Freeze TikTok's experiments",
-      "description": "Lets you keep the settings TikTok's servers sent it so far. TikTok tests new layouts and features on people by sending new ones all the time, and with this on it ignores them. Starts off. Turn it on in Hushfeed settings > App.",
+      "description": "Lets you keep the settings TikTok's servers sent it so far. TikTok tests new layouts and features on people by sending new ones all the time, and with this on it ignores them. Starts off. Turn it on in Larpfeed settings > App.",
       "category": "Settings",
       "use": true,
       "dependencies": [
@@ -4348,7 +4348,7 @@
     },
     {
       "name": "Ghost mode",
-      "description": "Stops TikTok telling people you viewed their story or profile, or that you're typing. What TikTok already recorded stays. Each of the three has its own switch under it, and a separate one hides your online status. Starts off. Turn it on in Hushfeed settings > Privacy.",
+      "description": "Stops TikTok telling people you viewed their story or profile, or that you're typing. What TikTok already recorded stays. Each of the three has its own switch under it, and a separate one hides your online status. Starts off. Turn it on in Larpfeed settings > Privacy.",
       "category": "Privacy",
       "use": true,
       "dependencies": [
@@ -4434,7 +4434,7 @@
     },
     {
       "name": "Hide CAPTCHA popups",
-      "description": "Skips the puzzle TikTok shows while you're just browsing. A puzzle right after you like, follow, comment or repost still shows, and so do sign-in, SMS and two-step checks. Starts off. Turn it on in Hushfeed settings > Feed screen, then restart TikTok.",
+      "description": "Skips the puzzle TikTok shows while you're just browsing. A puzzle right after you like, follow, comment or repost still shows, and so do sign-in, SMS and two-step checks. Starts off. Turn it on in Larpfeed settings > Feed screen, then restart TikTok.",
       "category": "Feed",
       "use": true,
       "dependencies": [
@@ -4522,7 +4522,7 @@
     },
     {
       "name": "Hide already seen videos",
-      "description": "Remembers the videos you've watched and hides them when the feed sends them again, so you only see new ones. It can also keep a watch history you can search and reopen videos from. Both stay on your phone. Starts off. Turn them on in Hushfeed settings > Feed filter.",
+      "description": "Remembers the videos you've watched and hides them when the feed sends them again, so you only see new ones. It can also keep a watch history you can search and reopen videos from. Both stay on your phone. Starts off. Turn them on in Larpfeed settings > Feed filter.",
       "category": "Feed",
       "use": true,
       "dependencies": [
@@ -4609,7 +4609,7 @@
     },
     {
       "name": "Hide comment popup ads",
-      "description": "Stops the brand animation that pops up over the comments when someone types a word or emoji an advertiser paid for. Starts off. Turn it on in Hushfeed settings > Comments.",
+      "description": "Stops the brand animation that pops up over the comments when someone types a word or emoji an advertiser paid for. Starts off. Turn it on in Larpfeed settings > Comments.",
       "category": "Comments",
       "use": true,
       "dependencies": [
@@ -4659,7 +4659,7 @@
     },
     {
       "name": "Hide comment typing suggestions",
-      "description": "Hides the emoji and sticker suggestions that pop up above the comment box while you type. The emoji and sticker buttons still work. Starts off. Turn it on in Hushfeed settings > Comments.",
+      "description": "Hides the emoji and sticker suggestions that pop up above the comment box while you type. The emoji and sticker buttons still work. Starts off. Turn it on in Larpfeed settings > Comments.",
       "category": "Comments",
       "use": true,
       "dependencies": [
@@ -4709,7 +4709,7 @@
     },
     {
       "name": "Hide feed LIVE button",
-      "description": "Removes the LIVE button and the side menu button from the top left of the feed, for a cleaner screen, and can stop a right swipe on For You from opening the side menu. Each has its own switch, and all start off. Turn them on in Hushfeed settings > Feed screen.",
+      "description": "Removes the LIVE button and the side menu button from the top left of the feed, for a cleaner screen, and can stop a right swipe on For You from opening the side menu. Each has its own switch, and all start off. Turn them on in Larpfeed settings > Feed screen.",
       "category": "Feed",
       "use": true,
       "dependencies": [
@@ -4777,7 +4777,7 @@
     },
     {
       "name": "Hide feed follow button",
-      "description": "Removes the + follow button under creators' pictures on the feed, so you don't follow someone by accident. Starts off. Turn it on in Hushfeed settings > Feed screen.",
+      "description": "Removes the + follow button under creators' pictures on the feed, so you don't follow someone by accident. Starts off. Turn it on in Larpfeed settings > Feed screen.",
       "category": "Feed",
       "use": true,
       "dependencies": [
@@ -4827,7 +4827,7 @@
     },
     {
       "name": "Hide feed save button",
-      "description": "Removes the save button from the right side of the feed, for a cleaner screen. Starts off. Turn it on in Hushfeed settings > Feed screen.",
+      "description": "Removes the save button from the right side of the feed, for a cleaner screen. Starts off. Turn it on in Larpfeed settings > Feed screen.",
       "category": "Feed",
       "use": true,
       "dependencies": [
@@ -4877,7 +4877,7 @@
     },
     {
       "name": "Hide feed search button",
-      "description": "Removes the search button from the top right of the feed, for a cleaner screen. Starts off. Turn it on in Hushfeed settings > Feed screen.",
+      "description": "Removes the search button from the top right of the feed, for a cleaner screen. Starts off. Turn it on in Larpfeed settings > Feed screen.",
       "category": "Feed",
       "use": true,
       "dependencies": [
@@ -4927,7 +4927,7 @@
     },
     {
       "name": "Hide floating promotions",
-      "description": "Hides the floating promotion badges, coins and timers on the feed, and can hide the rewards button on your profile. Starts off. Turn it on in Hushfeed settings > Feed screen, and App for the rewards button.",
+      "description": "Hides the floating promotion badges, coins and timers on the feed, and can hide the rewards button on your profile. Starts off. Turn it on in Larpfeed settings > Feed screen, and App for the rewards button.",
       "category": "Feed",
       "use": true,
       "dependencies": [
@@ -4986,7 +4986,7 @@
     },
     {
       "name": "Hide inbox items",
-      "description": "Lets you hide Inbox rows you don't use, like message requests, TikTok Shop and the stories row, plus call buttons and suggested replies in chats. Each has its own switch. Also offers search in loaded Activity notifications and TikTok's Main, Requests, Unread and Starred tabs on any account, and a way to rebuild message search. Starts off. Turn it on in Hushfeed settings > Inbox.",
+      "description": "Lets you hide Inbox rows you don't use, like message requests, TikTok Shop and the stories row, plus call buttons and suggested replies in chats. Each has its own switch. Also offers search in loaded Activity notifications and TikTok's Main, Requests, Unread and Starred tabs on any account, and a way to rebuild message search. Starts off. Turn it on in Larpfeed settings > Inbox.",
       "category": "Inbox",
       "use": true,
       "dependencies": [
@@ -5225,7 +5225,7 @@
     },
     {
       "name": "Hide inbox stories",
-      "description": "Hides the row of stories at the top of the Inbox. It uses the same switch as Hide inbox items. Starts off. Turn it on in Hushfeed settings > Inbox.",
+      "description": "Hides the row of stories at the top of the Inbox. It uses the same switch as Hide inbox items. Starts off. Turn it on in Larpfeed settings > Inbox.",
       "category": "Inbox",
       "use": true,
       "dependencies": [
@@ -5275,7 +5275,7 @@
     },
     {
       "name": "Hide profile shortcuts",
-      "description": "Hides the shortcuts you pick from the row under a profile's bio, like TikTok Studio or Your orders, and can hide the Thoughts bubble, and Balance and the TikTok Minis icons in your profile's menu. It can also turn Thoughts on for accounts TikTok left out. Starts off. Turn it on in Hushfeed settings > App, then restart TikTok.",
+      "description": "Hides the shortcuts you pick from the row under a profile's bio, like TikTok Studio or Your orders, and can hide the Thoughts bubble, and Balance and the TikTok Minis icons in your profile's menu. It can also turn Thoughts on for accounts TikTok left out. Starts off. Turn it on in Larpfeed settings > App, then restart TikTok.",
       "category": "Feed",
       "use": true,
       "dependencies": [
@@ -5370,7 +5370,7 @@
     },
     {
       "name": "Hide read receipts",
-      "description": "Stops TikTok telling people you've read their messages. Your own unread badges still clear as usual. Starts off. Turn it on in Hushfeed settings > Inbox.",
+      "description": "Stops TikTok telling people you've read their messages. Your own unread badges still clear as usual. Starts off. Turn it on in Larpfeed settings > Inbox.",
       "category": "Inbox",
       "use": true,
       "dependencies": [
@@ -5420,7 +5420,7 @@
     },
     {
       "name": "Hide search suggestions",
-      "description": "Hides the searches TikTok suggests before you type, and can hide the search rewards banner. Your own search history stays. Starts off. Turn it on in Hushfeed settings > App.",
+      "description": "Hides the searches TikTok suggests before you type, and can hide the search rewards banner. Your own search history stays. Starts off. Turn it on in Larpfeed settings > App.",
       "category": "Search",
       "use": true,
       "dependencies": [
@@ -5488,7 +5488,7 @@
     },
     {
       "name": "Hide suggested accounts",
-      "description": "Hides TikTok's People you may like suggestions in the Inbox, on profiles, on the Friends tab and in the feed. It uses the same switch as Hide inbox items. Starts off. Turn it on in Hushfeed settings > Inbox.",
+      "description": "Hides TikTok's People you may like suggestions in the Inbox, on profiles, on the Friends tab and in the feed. It uses the same switch as Hide inbox items. Starts off. Turn it on in Larpfeed settings > Inbox.",
       "category": "Inbox",
       "use": true,
       "dependencies": [
@@ -5538,7 +5538,7 @@
     },
     {
       "name": "Hide the launcher shortcuts",
-      "description": "Empties the menu that pops up when you press and hold TikTok's icon on your home screen. Tapping the icon still opens the app. Starts off. Turn it on in Hushfeed settings > App.",
+      "description": "Empties the menu that pops up when you press and hold TikTok's icon on your home screen. Tapping the icon still opens the app. Starts off. Turn it on in Larpfeed settings > App.",
       "category": "Interface",
       "use": true,
       "dependencies": [
@@ -5627,7 +5627,7 @@
     },
     {
       "name": "Hide video overlays",
-      "description": "Lets you hide clutter over videos, like the caption, the music line, buttons on the right, surveys and location labels, so you see more of the video. It can also make the music disc spin again or keep it still. Each has its own switch. Starts off. Turn it on in Hushfeed settings > Feed screen.",
+      "description": "Lets you hide clutter over videos, like the caption, the music line, buttons on the right, surveys and location labels, so you see more of the video. It can also make the music disc spin again or keep it still. Each has its own switch. Starts off. Turn it on in Larpfeed settings > Feed screen.",
       "category": "Feed",
       "use": true,
       "dependencies": [
@@ -6172,7 +6172,7 @@
     },
     {
       "name": "Hold-and-slide 2x lock",
-      "description": "Turns on TikTok's own gesture where you hold a video, slide down and let go to keep it playing fast without holding. Starts off. Turn it on in Hushfeed settings > Feed screen.",
+      "description": "Turns on TikTok's own gesture where you hold a video, slide down and let go to keep it playing fast without holding. Starts off. Turn it on in Larpfeed settings > Feed screen.",
       "category": "Playback",
       "use": true,
       "dependencies": [
@@ -6222,7 +6222,7 @@
     },
     {
       "name": "In-app browser privacy guard",
-      "description": "Stops websites you open in TikTok's built-in browser from reaching into the TikTok app. TikTok's own pages, like Watch history and checkout, keep working. Starts off. Turn it on in Hushfeed settings > Privacy.",
+      "description": "Stops websites you open in TikTok's built-in browser from reaching into the TikTok app. TikTok's own pages, like Watch history and checkout, keep working. Starts off. Turn it on in Larpfeed settings > Privacy.",
       "category": "Privacy",
       "use": true,
       "dependencies": [
@@ -6272,7 +6272,7 @@
     },
     {
       "name": "Keep a streak going",
-      "description": "Sends a daily message you choose to people you pick, at a time you set, so your message streaks keep going on days you don't open TikTok. Starts off. Turn it on in Hushfeed settings > Inbox.",
+      "description": "Sends a daily message you choose to people you pick, at a time you set, so your message streaks keep going on days you don't open TikTok. Starts off. Turn it on in Larpfeed settings > Inbox.",
       "category": "Inbox",
       "use": true,
       "dependencies": [
@@ -6350,7 +6350,7 @@
     },
     {
       "name": "Keep playing in the background",
-      "description": "Keeps the video playing when you leave TikTok or turn the screen off, with a notification to pause it. It can also start the video over when it ends. Handy for music and talks. If you only want it on some videos, a second switch adds TikTok's own row to the long-press menu. Starts off. Turn it on in Hushfeed settings > Playback, then restart TikTok.",
+      "description": "Keeps the video playing when you leave TikTok or turn the screen off, with a notification to pause it. It can also start the video over when it ends. Handy for music and talks. If you only want it on some videos, a second switch adds TikTok's own row to the long-press menu. Starts off. Turn it on in Larpfeed settings > Playback, then restart TikTok.",
       "category": "Playback",
       "use": true,
       "dependencies": [
@@ -6418,7 +6418,7 @@
     },
     {
       "name": "Keep pulled sounds",
-      "description": "Plays the sound on videos TikTok muted for copyright or because of where you live. TikTok may still say the sound isn't available. Starts off. Turn it on in Hushfeed settings > Playback.",
+      "description": "Plays the sound on videos TikTok muted for copyright or because of where you live. TikTok may still say the sound isn't available. Starts off. Turn it on in Larpfeed settings > Playback.",
       "category": "Playback",
       "use": true,
       "dependencies": [
@@ -6506,7 +6506,7 @@
     },
     {
       "name": "Keep the Favorites tab",
-      "description": "Keeps the Favorites tab and your saved videos on your profile when TikTok tries out a version of the app that hides them, and makes the collections popup you get by holding the Favorites button dark when TikTok is. Both are on by default. Turn them off in Hushfeed settings > App.",
+      "description": "Keeps the Favorites tab and your saved videos on your profile when TikTok tries out a version of the app that hides them, and makes the collections popup you get by holding the Favorites button dark when TikTok is. Both are on by default. Turn them off in Larpfeed settings > App.",
       "category": "Settings",
       "use": true,
       "dependencies": [
@@ -6565,7 +6565,7 @@
     },
     {
       "name": "Keep the app language",
-      "description": "Lets you keep the language you picked in TikTok's own settings. When TikTok starts and decides the phone's language changed, it drops that pick and follows the phone, which can leave it in the wrong language after a reboot. Starts off. Turn it on in Hushfeed settings > App.",
+      "description": "Lets you keep the language you picked in TikTok's own settings. When TikTok starts and decides the phone's language changed, it drops that pick and follows the phone, which can leave it in the wrong language after a reboot. Starts off. Turn it on in Larpfeed settings > App.",
       "category": "Settings",
       "use": true,
       "dependencies": [
@@ -6615,7 +6615,7 @@
     },
     {
       "name": "Keep the next videos in full screen",
-      "description": "From most pages, TikTok's full screen view opens with only the video you were on, so there's nothing to swipe to and it can't move on by itself. This brings the videos after it along. Starts off. Turn it on in Hushfeed settings > Playback.",
+      "description": "From most pages, TikTok's full screen view opens with only the video you were on, so there's nothing to swipe to and it can't move on by itself. This brings the videos after it along. Starts off. Turn it on in Larpfeed settings > Playback.",
       "category": "Playback",
       "use": true,
       "dependencies": [
@@ -6665,7 +6665,7 @@
     },
     {
       "name": "Keep the screen's brightness in the camera",
-      "description": "Stops TikTok from turning your screen brighter while you film, edit or post a video. Starts off. Turn it on in Hushfeed settings > App.",
+      "description": "Stops TikTok from turning your screen brighter while you film, edit or post a video. Starts off. Turn it on in Larpfeed settings > App.",
       "category": "Interface",
       "use": true,
       "dependencies": [
@@ -6715,7 +6715,7 @@
     },
     {
       "name": "Keep the screen's refresh rate",
-      "description": "Stops TikTok slowing your screen down to the video's frame rate, so scrolling stays smooth on 90 or 120 Hz phones. TikTok doesn't ask on every phone, and where it doesn't, this changes nothing. Starts off. Turn it on in Hushfeed settings > App.",
+      "description": "Stops TikTok slowing your screen down to the video's frame rate, so scrolling stays smooth on 90 or 120 Hz phones. TikTok doesn't ask on every phone, and where it doesn't, this changes nothing. Starts off. Turn it on in Larpfeed settings > App.",
       "category": "Playback",
       "use": true,
       "dependencies": [
@@ -6765,7 +6765,7 @@
     },
     {
       "name": "Keep unsent messages",
-      "description": "Keeps a message in your chat when the other person unsends it, instead of removing it, and can mark it as unsent. A button removes the kept messages. Messages you unsend yourself are still removed. Starts off. Turn it on in Hushfeed settings > Inbox.",
+      "description": "Keeps a message in your chat when the other person unsends it, instead of removing it, and can mark it as unsent. A button removes the kept messages. Messages you unsend yourself are still removed. Starts off. Turn it on in Larpfeed settings > Inbox.",
       "category": "Inbox",
       "use": true,
       "dependencies": [
@@ -6824,7 +6824,7 @@
     },
     {
       "name": "LIVE controls",
-      "description": "Stops a LIVE in the feed from opening by itself after a countdown. It can show a LIVE's exact viewer count instead of a rounded one, offer a quality choice and clear screen in more LIVE rooms, and keep your quality pick after TikTok restarts. Starts off. Turn it on in Hushfeed settings > Playback. It also keeps a LIVE in the feed from showing the Service+ row of the LIVE before it (or hides that row altogether), and can add a Record button to a LIVE room that saves what you watch from when you tap it.",
+      "description": "Stops a LIVE in the feed from opening by itself after a countdown. It can show a LIVE's exact viewer count instead of a rounded one, offer a quality choice and clear screen in more LIVE rooms, and keep your quality pick after TikTok restarts. Starts off. Turn it on in Larpfeed settings > Playback. It also keeps a LIVE in the feed from showing the Service+ row of the LIVE before it (or hides that row altogether), and can add a Record button to a LIVE room that saves what you watch from when you tap it.",
       "category": "Playback",
       "use": true,
       "dependencies": [
@@ -6992,7 +6992,7 @@
     },
     {
       "name": "Lift text length limits",
-      "description": "Lets you write longer comments, repost notes and bios than the app normally allows. TikTok can still refuse one that's too long. Starts off. Turn it on in Hushfeed settings > Comments.",
+      "description": "Lets you write longer comments, repost notes and bios than the app normally allows. TikTok can still refuse one that's too long. Starts off. Turn it on in Larpfeed settings > Comments.",
       "category": "Comments",
       "use": true,
       "dependencies": [
@@ -7042,7 +7042,7 @@
     },
     {
       "name": "Limit background traffic",
-      "description": "Lets you stop TikTok loading upcoming videos ahead of time, which uses less data in the background, but videos may take a moment longer to start. Starts off. Turn it on in Hushfeed settings > App.",
+      "description": "Lets you stop TikTok loading upcoming videos ahead of time, which uses less data in the background, but videos may take a moment longer to start. Starts off. Turn it on in Larpfeed settings > App.",
       "category": "Performance",
       "use": true,
       "dependencies": [
@@ -7082,7 +7082,7 @@
         {
           "key": "skipPushSetup",
           "title": "Skip notification setup",
-          "description": "With this on, the Limit background traffic switch in Hushfeed settings also stops TikTok setting up notifications, so you won't get any, messages included. Turn the switch off or pause Hushfeed to get them back.",
+          "description": "With this on, the Limit background traffic switch in Larpfeed settings also stops TikTok setting up notifications, so you won't get any, messages included. Turn the switch off or pause Larpfeed to get them back.",
           "required": false,
           "type": "kotlin.Boolean",
           "default": false,
@@ -7139,7 +7139,7 @@
     },
     {
       "name": "Location access governor",
-      "description": "Gives TikTok no location when it asks, so it can't see where you are from your phone's location services. Starts off. Turn it on in Hushfeed settings > Privacy.",
+      "description": "Gives TikTok no location when it asks, so it can't see where you are from your phone's location services. Starts off. Turn it on in Larpfeed settings > Privacy.",
       "category": "Privacy",
       "use": true,
       "dependencies": [
@@ -7189,7 +7189,7 @@
     },
     {
       "name": "Long-press controls",
-      "description": "Lets a long press on a video like it, open the comments, copy the link, save the sound or the frame on screen, or set a sleep timer, and can give a creator's videos For You's full long-press menu. Starts off. Pick an action in Hushfeed settings > Feed screen.",
+      "description": "Lets a long press on a video like it, open the comments, copy the link, save the sound or the frame on screen, or set a sleep timer, and can give a creator's videos For You's full long-press menu. Starts off. Pick an action in Larpfeed settings > Feed screen.",
       "category": "Interaction",
       "use": true,
       "dependencies": [
@@ -7321,7 +7321,7 @@
     },
     {
       "name": "Look like the store app",
-      "description": "Makes the patched app answer TikTok's checks as if it came from the Play Store, which can help when follows or likes undo themselves. TikTok has other checks, so it may not be enough. On once picked. Turn it off in Hushfeed settings > App.",
+      "description": "Makes the patched app answer TikTok's checks as if it came from the Play Store, which can help when follows or likes undo themselves. TikTok has other checks, so it may not be enough. On once picked. Turn it off in Larpfeed settings > App.",
       "category": "Privacy",
       "use": false,
       "dependencies": [
@@ -7380,7 +7380,7 @@
     },
     {
       "name": "Mute feed videos",
-      "description": "Mutes feed videos without changing your phone's volume, so music from another app keeps playing. You can also add a mute button on videos, or keep the sound and let other apps play until a video starts and after you leave it. Starts off. Turn it on in Hushfeed settings > Playback.",
+      "description": "Mutes feed videos without changing your phone's volume, so music from another app keeps playing. You can also add a mute button on videos, or keep the sound and let other apps play until a video starts and after you leave it. Starts off. Turn it on in Larpfeed settings > Playback.",
       "category": "Playback",
       "use": true,
       "dependencies": [
@@ -7458,7 +7458,7 @@
     },
     {
       "name": "Network proxy",
-      "description": "Sends TikTok's feed, search and comments through a proxy server you set up. Videos and LIVEs still load directly, and so do Hushfeed's own saves and short-link lookups. HTTP and SOCKS5 both work, with or without a password. Other apps aren't affected. Starts off. Turn it on in Hushfeed settings > Region, then restart TikTok.",
+      "description": "Sends TikTok's feed, search and comments through a proxy server you set up. Videos and LIVEs still load directly, and so do Larpfeed's own saves and short-link lookups. HTTP and SOCKS5 both work, with or without a password. Other apps aren't affected. Starts off. Turn it on in Larpfeed settings > Region, then restart TikTok.",
       "category": "Settings",
       "use": true,
       "dependencies": [
@@ -7591,7 +7591,7 @@
     },
     {
       "name": "Not interested button",
-      "description": "Adds a button on videos that tells TikTok you're not interested in one tap, so it can show you fewer like it. Starts off. Turn it on in Hushfeed settings > Feed screen.",
+      "description": "Adds a button on videos that tells TikTok you're not interested in one tap, so it can show you fewer like it. Starts off. Turn it on in Larpfeed settings > Feed screen.",
       "category": "Feed",
       "use": true,
       "dependencies": [
@@ -7651,7 +7651,7 @@
     },
     {
       "name": "Notification controls",
-      "description": "Lets you turn off new follower notifications and streak reminders, which TikTok has no switch for, or turn off TikTok's notifications altogether. Starts off. Turn it on in Hushfeed settings > Inbox.",
+      "description": "Lets you turn off new follower notifications and streak reminders, which TikTok has no switch for, or turn off TikTok's notifications altogether. Starts off. Turn it on in Larpfeed settings > Inbox.",
       "category": "Inbox",
       "use": true,
       "dependencies": [
@@ -7728,7 +7728,7 @@
     },
     {
       "name": "Open external links directly",
-      "description": "Opens website links from profiles and stories in your phone's own browser instead of TikTok's built-in one. On by default. Turn it off in Hushfeed settings > Privacy.",
+      "description": "Opens website links from profiles and stories in your phone's own browser instead of TikTok's built-in one. On by default. Turn it off in Larpfeed settings > Privacy.",
       "category": "Interaction",
       "use": true,
       "dependencies": [
@@ -7778,7 +7778,7 @@
     },
     {
       "name": "Open the comments at full height",
-      "description": "Opens the comment sheet at the full height of the screen instead of part way up. Starts off. Turn it on in Hushfeed settings > Comments.",
+      "description": "Opens the comment sheet at the full height of the screen instead of part way up. Starts off. Turn it on in Larpfeed settings > Comments.",
       "category": "Comments",
       "use": true,
       "dependencies": [
@@ -7828,7 +7828,7 @@
     },
     {
       "name": "Picture-in-picture",
-      "description": "Keeps the video playing in a small window when you leave TikTok, so you can keep watching while you use other apps. Starts off. Turn it on in Hushfeed settings > Playback.",
+      "description": "Keeps the video playing in a small window when you leave TikTok, so you can keep watching while you use other apps. Starts off. Turn it on in Larpfeed settings > Playback.",
       "category": "Playback",
       "use": true,
       "dependencies": [
@@ -7879,7 +7879,7 @@
     },
     {
       "name": "Play SDR instead of HDR",
-      "description": "Plays the normal version of HDR videos, so your screen doesn't suddenly jump to full brightness. Starts off. Turn it on in Hushfeed settings > Playback.",
+      "description": "Plays the normal version of HDR videos, so your screen doesn't suddenly jump to full brightness. Starts off. Turn it on in Larpfeed settings > Playback.",
       "category": "Playback",
       "use": true,
       "dependencies": [
@@ -7929,7 +7929,7 @@
     },
     {
       "name": "Playback quality",
-      "description": "Lets you choose the video quality, like highest, lowest or 720p, and set a lower quality for mobile data to use less data. Starts off. Pick a quality in Hushfeed settings > Playback.",
+      "description": "Lets you choose the video quality, like highest, lowest or 720p, and set a lower quality for mobile data to use less data. Starts off. Pick a quality in Larpfeed settings > Playback.",
       "category": "Playback",
       "use": true,
       "dependencies": [
@@ -7988,7 +7988,7 @@
     },
     {
       "name": "Playback speed",
-      "description": "Remembers the speed you picked for the next video, and lets you set a default speed, add speeds up to 3x to the menu and choose the speed for press and hold. On by default. Turn it off in Hushfeed settings > Playback.",
+      "description": "Remembers the speed you picked for the next video, and lets you set a default speed, add speeds up to 3x to the menu and choose the speed for press and hold. On by default. Turn it off in Larpfeed settings > Playback.",
       "category": "Playback",
       "use": true,
       "dependencies": [
@@ -8119,7 +8119,7 @@
     },
     {
       "name": "Prefer H.264 playback",
-      "description": "Plays videos in an older format your phone decodes more easily, which can help older phones play smoothly and run cooler. Videos without it play as before. Starts off. Turn it on in Hushfeed settings > Playback.",
+      "description": "Plays videos in an older format your phone decodes more easily, which can help older phones play smoothly and run cooler. Videos without it play as before. Starts off. Turn it on in Larpfeed settings > Playback.",
       "category": "Playback",
       "use": true,
       "dependencies": [
@@ -8169,7 +8169,7 @@
     },
     {
       "name": "Profile background",
-      "description": "Opens TikTok's own profile background editor in Edit profile on accounts TikTok hasn't offered it to yet, and shows the backgrounds other profiles have set. TikTok's servers may still refuse to save one for such an account. Starts off. Turn it on in Hushfeed settings > App.",
+      "description": "Opens TikTok's own profile background editor in Edit profile on accounts TikTok hasn't offered it to yet, and shows the backgrounds other profiles have set. TikTok's servers may still refuse to save one for such an account. Starts off. Turn it on in Larpfeed settings > App.",
       "category": "Interaction",
       "use": true,
       "dependencies": [
@@ -8219,7 +8219,7 @@
     },
     {
       "name": "Region spoof",
-      "description": "Makes TikTok's region and time zone match the country you set for SIM spoof. It changes every region check, sign-in included, and its store region switch is experimental, so it isn't picked for you. Starts off. Turn it on in Hushfeed settings > Region.",
+      "description": "Makes TikTok's region and time zone match the country you set for SIM spoof. It changes every region check, sign-in included, and its store region switch is experimental, so it isn't picked for you. Starts off. Turn it on in Larpfeed settings > Region.",
       "category": "Settings",
       "use": false,
       "dependencies": [
@@ -8341,7 +8341,7 @@
     },
     {
       "name": "Remember clear display",
-      "description": "Keeps clear display, TikTok's mode that hides the buttons over a video, on as you swipe to the next video (`Keep Clear display across videos` turns that part off). It can also turn on by itself after a delay you pick, which starts off in Hushfeed settings > Feed screen. When clear display ends, the Following stories bubble TikTok hid comes back too.",
+      "description": "Keeps clear display, TikTok's mode that hides the buttons over a video, on as you swipe to the next video (`Keep Clear display across videos` turns that part off). It can also turn on by itself after a delay you pick, which starts off in Larpfeed settings > Feed screen. When clear display ends, the Following stories bubble TikTok hid comes back too.",
       "category": "Playback",
       "use": true,
       "dependencies": [
@@ -8457,7 +8457,7 @@
     },
     {
       "name": "Remove avatar rings",
-      "description": "Takes the story and LIVE rings off profile pictures, so tapping a picture opens the profile instead of a story or LIVE. It can also open a LIVE creator's Story from their profile picture or their chat in the Inbox. Starts off. Turn it on in Hushfeed settings > Feed screen.",
+      "description": "Takes the story and LIVE rings off profile pictures, so tapping a picture opens the profile instead of a story or LIVE. It can also open a LIVE creator's Story from their profile picture or their chat in the Inbox. Starts off. Turn it on in Larpfeed settings > Feed screen.",
       "category": "Feed",
       "use": true,
       "dependencies": [
@@ -8689,7 +8689,7 @@
     },
     {
       "name": "Report a newer phone to effects",
-      "description": "Tells TikTok's effects server you have a newer phone, so effects it turns down on older phones get another chance. Starts off. Turn it on in Hushfeed settings > App.",
+      "description": "Tells TikTok's effects server you have a newer phone, so effects it turns down on older phones get another chance. Starts off. Turn it on in Larpfeed settings > App.",
       "category": "Interface",
       "use": true,
       "dependencies": [
@@ -8778,7 +8778,7 @@
     },
     {
       "name": "Resource and battery governor",
-      "description": "Stops TikTok reading your phone's motion sensors, which it can use to identify your phone, and stops a background speed test that can use a lot of memory. Starts off. Turn it on in Hushfeed settings > Privacy.",
+      "description": "Stops TikTok reading your phone's motion sensors, which it can use to identify your phone, and stops a background speed test that can use a lot of memory. Starts off. Turn it on in Larpfeed settings > Privacy.",
       "category": "Privacy",
       "use": true,
       "dependencies": [
@@ -8837,7 +8837,7 @@
     },
     {
       "name": "Resume videos after scrolling",
-      "description": "When you scroll back to a video, it picks up where you left off instead of starting over. On by default. Turn it off in Hushfeed settings > Playback.",
+      "description": "When you scroll back to a video, it picks up where you left off instead of starting over. On by default. Turn it off in Larpfeed settings > Playback.",
       "category": "Interaction",
       "use": true,
       "dependencies": [
@@ -8925,7 +8925,7 @@
     },
     {
       "name": "SIM spoof",
-      "description": "Makes TikTok see the SIM country and carrier you choose. It may not change your region, since TikTok also goes by your internet connection and account. Starts off. Turn it on in Hushfeed settings > Region.",
+      "description": "Makes TikTok see the SIM country and carrier you choose. It may not change your region, since TikTok also goes by your internet connection and account. Starts off. Turn it on in Larpfeed settings > Region.",
       "category": "Settings",
       "use": true,
       "dependencies": [
@@ -9011,7 +9011,7 @@
     },
     {
       "name": "Sanitize sharing links",
-      "description": "Removes the tracking codes from TikTok links you share, so the link carries less about you. It can also swap tiktok.com for another site. On by default. Turn it off in Hushfeed settings > Privacy.",
+      "description": "Removes the tracking codes from TikTok links you share, so the link carries less about you. It can also swap tiktok.com for another site. On by default. Turn it off in Larpfeed settings > Privacy.",
       "category": "Interaction",
       "use": true,
       "dependencies": [
@@ -9079,7 +9079,7 @@
     },
     {
       "name": "Settings",
-      "description": "Adds the Hushfeed settings page to TikTok, at the top of Settings and privacy. Pressing and holding For You at the top of the feed opens it too. That's where you turn Hushfeed's features on and off. Works as soon as you patch it in, with no switch.",
+      "description": "Adds the Larpfeed settings page to TikTok, at the top of Settings and privacy. Pressing and holding For You at the top of the feed opens it too. That's where you turn Larpfeed's features on and off. Works as soon as you patch it in, with no switch.",
       "category": "Settings",
       "use": true,
       "dependencies": [
@@ -9232,7 +9232,7 @@
     },
     {
       "name": "Share sheet tools",
-      "description": "Lets you hide people, apps and buttons you don't use from the share sheet, add apps you do use, and copy a video's link with one press on Share. Starts off. Turn it on in Hushfeed settings > Share sheet.",
+      "description": "Lets you hide people, apps and buttons you don't use from the share sheet, add apps you do use, and copy a video's link with one press on Share. Starts off. Turn it on in Larpfeed settings > Share sheet.",
       "category": "Interaction",
       "use": true,
       "dependencies": [
@@ -9354,7 +9354,7 @@
     },
     {
       "name": "Show LIVE search",
-      "description": "Adds TikTok's search button inside the LIVE section where TikTok supports it, so you can look for LIVEs. Starts off. Turn it on in Hushfeed settings > App.",
+      "description": "Adds TikTok's search button inside the LIVE section where TikTok supports it, so you can look for LIVEs. Starts off. Turn it on in Larpfeed settings > App.",
       "category": "Search",
       "use": true,
       "dependencies": [
@@ -9403,7 +9403,7 @@
     },
     {
       "name": "Show author region",
-      "description": "Shows the country a video was posted from next to the creator's name. Starts off. Turn it on in Hushfeed settings > Feed screen.",
+      "description": "Shows the country a video was posted from next to the creator's name. Starts off. Turn it on in Larpfeed settings > Feed screen.",
       "category": "Feed",
       "use": true,
       "dependencies": [
@@ -9471,7 +9471,7 @@
     },
     {
       "name": "Show commenter handle and region",
-      "description": "Shows a commenter's @username in place of their display name and the country their account is set to after the comment's time. It can also give each commenter's name a color of its own. Each starts off. Turn them on in Hushfeed settings > Comments.",
+      "description": "Shows a commenter's @username in place of their display name and the country their account is set to after the comment's time. It can also give each commenter's name a color of its own. Each starts off. Turn them on in Larpfeed settings > Comments.",
       "category": "Comments",
       "use": true,
       "dependencies": [
@@ -9548,7 +9548,7 @@
     },
     {
       "name": "Show engagement rate",
-      "description": "Shows how many people liked, commented on, shared or saved a video compared with how many watched it, next to the creator's name. Starts off. Turn it on in Hushfeed settings > Feed screen.",
+      "description": "Shows how many people liked, commented on, shared or saved a video compared with how many watched it, next to the creator's name. Starts off. Turn it on in Larpfeed settings > Feed screen.",
       "category": "Feed",
       "use": true,
       "dependencies": [
@@ -9598,7 +9598,7 @@
     },
     {
       "name": "Show exact counts",
-      "description": "Shows likes, comments and other counts as full numbers, like 1,234,567 instead of 1.2M. Starts off. Turn it on in Hushfeed settings > Feed screen.",
+      "description": "Shows likes, comments and other counts as full numbers, like 1,234,567 instead of 1.2M. Starts off. Turn it on in Larpfeed settings > Feed screen.",
       "category": "Feed",
       "use": true,
       "dependencies": [
@@ -9648,7 +9648,7 @@
     },
     {
       "name": "Show follow status",
-      "description": "Shows on a profile whether that person follows you back, and marks accounts in your follow lists that don't. On by default. Turn it off in Hushfeed settings > App. A separate switch adds the month an account was made. Optional local counts and appearance controls apply to your own profile.",
+      "description": "Shows on a profile whether that person follows you back, and marks accounts in your follow lists that don't. On by default. Turn it off in Larpfeed settings > App. A separate switch adds the month an account was made. Optional local counts and appearance controls apply to your own profile.",
       "category": "Interaction",
       "use": true,
       "dependencies": [
@@ -9743,7 +9743,7 @@
     },
     {
       "name": "Show the progress bar",
-      "description": "Shows the progress bar on videos where TikTok hides it, so you can see how long a video is and skip around. On by default. Turn it off in Hushfeed settings > Playback, where you can also show the time beside the bar or give it a bigger handle. Seek bars for video stories and sound previews are there too.",
+      "description": "Shows the progress bar on videos where TikTok hides it, so you can see how long a video is and skip around. On by default. Turn it off in Larpfeed settings > Playback, where you can also show the time beside the bar or give it a bigger handle. Seek bars for video stories and sound previews are there too.",
       "category": "Playback",
       "use": true,
       "dependencies": [
@@ -9847,7 +9847,7 @@
     },
     {
       "name": "Show the progress bar thumbnail",
-      "description": "Shows a small preview picture while you drag the progress bar, so you can find the part you want. On by default. Turn it off in Hushfeed settings > Playback.",
+      "description": "Shows a small preview picture while you drag the progress bar, so you can find the part you want. On by default. Turn it off in Larpfeed settings > Playback.",
       "category": "Playback",
       "use": true,
       "dependencies": [
@@ -9896,7 +9896,7 @@
     },
     {
       "name": "Skip content warnings",
-      "description": "Plays videos without the warning screen you'd have to tap through first, and can hide the Check sources and Check your sources banners. Starts off. Turn it on in Hushfeed settings > Feed screen.",
+      "description": "Plays videos without the warning screen you'd have to tap through first, and can hide the Check sources and Check your sources banners. Starts off. Turn it on in Larpfeed settings > Feed screen.",
       "category": "Feed",
       "use": true,
       "dependencies": [
@@ -9964,7 +9964,7 @@
     },
     {
       "name": "Skip first-launch setup",
-      "description": "Skips TikTok's setup screens on a fresh install, like the interest picker and the swipe tutorial. Sign-in and age screens still show. Its switch is on once picked, since setup runs before you can reach settings. Turn it off in Hushfeed settings > App.",
+      "description": "Skips TikTok's setup screens on a fresh install, like the interest picker and the swipe tutorial. Sign-in and age screens still show. Its switch is on once picked, since setup runs before you can reach settings. Turn it off in Larpfeed settings > App.",
       "category": "Settings",
       "use": false,
       "dependencies": [
@@ -10014,7 +10014,7 @@
     },
     {
       "name": "Skip passkey sign-in",
-      "description": "Lets you sign in another way, like your password or a code by email or text, when TikTok wants a passkey. Password managers won't hand a passkey to a patched app, so that step can't finish here. With the switch on, TikTok treats your phone as one without passkeys. Starts off. Turn it on in Hushfeed settings > App.",
+      "description": "Lets you sign in another way, like your password or a code by email or text, when TikTok wants a passkey. Password managers won't hand a passkey to a patched app, so that step can't finish here. With the switch on, TikTok treats your phone as one without passkeys. Starts off. Turn it on in Larpfeed settings > App.",
       "category": "Settings",
       "use": true,
       "dependencies": [
@@ -10064,7 +10064,7 @@
     },
     {
       "name": "Skip the splash ad",
-      "description": "Lets you stop the full-screen ad TikTok can show while it starts up. Starts off. Turn it on in Hushfeed settings > App.",
+      "description": "Lets you stop the full-screen ad TikTok can show while it starts up. Starts off. Turn it on in Larpfeed settings > App.",
       "category": "Performance",
       "use": true,
       "dependencies": [
@@ -10114,7 +10114,7 @@
     },
     {
       "name": "Skip update checks",
-      "description": "Lets you stop two background tasks TikTok uses to check for updates, one of them when your phone starts. Some in-app update prompts may stop. Play Store updates still work. Starts off. Turn it on in Hushfeed settings > App.",
+      "description": "Lets you stop two background tasks TikTok uses to check for updates, one of them when your phone starts. Some in-app update prompts may stop. Play Store updates still work. Starts off. Turn it on in Larpfeed settings > App.",
       "category": "Performance",
       "use": true,
       "dependencies": [
@@ -10164,7 +10164,7 @@
     },
     {
       "name": "Stay on the video in full screen",
-      "description": "When a video ends in TikTok's full screen view, it stays on that video instead of moving to the next one. Swiping still moves on. Starts off. Turn it on in Hushfeed settings > Playback.",
+      "description": "When a video ends in TikTok's full screen view, it stays on that video instead of moving to the next one. Swiping still moves on. Starts off. Turn it on in Larpfeed settings > Playback.",
       "category": "Playback",
       "use": true,
       "dependencies": [
@@ -10214,7 +10214,7 @@
     },
     {
       "name": "Stop on-device AI profiling",
-      "description": "Lets you stop TikTok's built-in AI engine from starting, so it doesn't get a copy of everything TikTok logs about your use. TikTok works as if the engine weren't there. Starts off. Turn it on in Hushfeed settings > Privacy.",
+      "description": "Lets you stop TikTok's built-in AI engine from starting, so it doesn't get a copy of everything TikTok logs about your use. TikTok works as if the engine weren't there. Starts off. Turn it on in Larpfeed settings > Privacy.",
       "category": "Privacy",
       "use": true,
       "dependencies": [
@@ -10264,7 +10264,7 @@
     },
     {
       "name": "Stop recording watch history",
-      "description": "Stops TikTok adding the videos you watch to your Watch history. The catch: your views stop counting, and For You learns less about what you like. Starts off. Turn it on in Hushfeed settings > Privacy.",
+      "description": "Stops TikTok adding the videos you watch to your Watch history. The catch: your views stop counting, and For You learns less about what you like. Starts off. Turn it on in Larpfeed settings > Privacy.",
       "category": "Privacy",
       "use": true,
       "dependencies": [
@@ -10314,7 +10314,7 @@
     },
     {
       "name": "Stop saving search history",
-      "description": "Stops TikTok saving your new searches on your phone. Older searches stay until you delete them, and TikTok's servers may keep their own record. Starts off. Turn it on in Hushfeed settings > Privacy.",
+      "description": "Stops TikTok saving your new searches on your phone. Older searches stay until you delete them, and TikTok's servers may keep their own record. Starts off. Turn it on in Larpfeed settings > Privacy.",
       "category": "Privacy",
       "use": true,
       "dependencies": [
@@ -10364,7 +10364,7 @@
     },
     {
       "name": "Stop search autoplay",
-      "description": "Stops videos in search results from playing by themselves. Each one shows its cover until you open it, so searching stays quiet. Starts off. Turn it on in Hushfeed settings > App.",
+      "description": "Stops videos in search results from playing by themselves. Each one shows its cover until you open it, so searching stays quiet. Starts off. Turn it on in Larpfeed settings > App.",
       "category": "Search",
       "use": true,
       "dependencies": [
@@ -10414,7 +10414,7 @@
     },
     {
       "name": "Stop video looping",
-      "description": "Stops a video at its end instead of playing it again. Starts off. Turn it on in Hushfeed settings > Playback.",
+      "description": "Stops a video at its end instead of playing it again. Starts off. Turn it on in Larpfeed settings > Playback.",
       "category": "Playback",
       "use": true,
       "dependencies": [
@@ -10464,7 +10464,7 @@
     },
     {
       "name": "Story controls",
-      "description": "Lets a story replay when it ends instead of moving on, and keeps a photo story on screen until you tap or swipe. Starts off. Turn it on in Hushfeed settings > Playback.",
+      "description": "Lets a story replay when it ends instead of moving on, and keeps a photo story on screen until you tap or swipe. Starts off. Turn it on in Larpfeed settings > Playback.",
       "category": "Playback",
       "use": true,
       "dependencies": [
@@ -10523,7 +10523,7 @@
     },
     {
       "name": "Subtitle tools",
-      "description": "Lets you make captions bigger, change their background and keep them in clear display, bring back TikTok's captions switch where it's missing, and save subtitle files with downloaded videos. Starts off. Turn it on in Hushfeed settings > Feed screen, and Downloads for subtitle files.",
+      "description": "Lets you make captions bigger, change their background and keep them in clear display, bring back TikTok's captions switch where it's missing, and save subtitle files with downloaded videos. Starts off. Turn it on in Larpfeed settings > Feed screen, and Downloads for subtitle files.",
       "category": "Playback",
       "use": true,
       "dependencies": [
@@ -10656,7 +10656,7 @@
     },
     {
       "name": "Swipe-left controls",
-      "description": "Lets a left swipe on a video open its comments or do nothing, instead of opening the creator's profile. Starts off. Pick an action in Hushfeed settings > Feed screen.",
+      "description": "Lets a left swipe on a video open its comments or do nothing, instead of opening the creator's profile. Starts off. Pick an action in Larpfeed settings > Feed screen.",
       "category": "Interaction",
       "use": true,
       "dependencies": [
@@ -10708,7 +10708,7 @@
     },
     {
       "name": "Translate comments",
-      "description": "Translates comments as they load, using TikTok's own translator, so you don't have to tap Translate on each one. Starts off. Turn it on in Hushfeed settings > Comments, where more rows list languages TikTok's automatic translation should leave alone, keep videos in the language they were made in, pick the language translations come out in, and add TikTok's translate button beside the comment count.",
+      "description": "Translates comments as they load, using TikTok's own translator, so you don't have to tap Translate on each one. Starts off. Turn it on in Larpfeed settings > Comments, where more rows list languages TikTok's automatic translation should leave alone, keep videos in the language they were made in, pick the language translations come out in, and add TikTok's translate button beside the comment count.",
       "category": "Comments",
       "use": true,
       "dependencies": [
@@ -10859,7 +10859,7 @@
     },
     {
       "name": "Turn off haptics",
-      "description": "Stops the little vibrations TikTok makes when you tap or hold things. Your keyboard and your phone's own vibrations stay. Starts off. Turn it on in Hushfeed settings > App.",
+      "description": "Stops the little vibrations TikTok makes when you tap or hold things. Your keyboard and your phone's own vibrations stay. Starts off. Turn it on in Larpfeed settings > App.",
       "category": "Interaction",
       "use": true,
       "dependencies": [
@@ -10909,7 +10909,7 @@
     },
     {
       "name": "Turn off screen transitions",
-      "description": "Opens and closes TikTok's screens without the sliding animation, so moving around feels quicker. Swipes still follow your finger. Starts off. Turn it on in Hushfeed settings > App.",
+      "description": "Opens and closes TikTok's screens without the sliding animation, so moving around feels quicker. Swipes still follow your finger. Starts off. Turn it on in Larpfeed settings > App.",
       "category": "Interface",
       "use": true,
       "dependencies": [
@@ -10959,7 +10959,7 @@
     },
     {
       "name": "Use non-personalized search",
-      "description": "Shows search results that aren't tailored to your account. Starts off. Turn it on in Hushfeed settings > App.",
+      "description": "Shows search results that aren't tailored to your account. Starts off. Turn it on in Larpfeed settings > App.",
       "category": "Search",
       "use": true,
       "dependencies": [
@@ -11009,7 +11009,7 @@
     },
     {
       "name": "Use system font",
-      "description": "Shows TikTok's text in your phone's own font or in a .ttf or .otf font file you import, instead of TikTok's, and can use your phone's emoji too. Starts off. Turn it on in Hushfeed settings > App, then restart TikTok.",
+      "description": "Shows TikTok's text in your phone's own font or in a .ttf or .otf font file you import, instead of TikTok's, and can use your phone's emoji too. Starts off. Turn it on in Larpfeed settings > App, then restart TikTok.",
       "category": "Interface",
       "use": true,
       "dependencies": [

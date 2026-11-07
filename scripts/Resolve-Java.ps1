@@ -44,7 +44,7 @@ function Resolve-Java {
     $candidates = [System.Collections.Generic.List[string]]::new()
     $preferredCandidates = @(
         [pscustomobject]@{ Path = $Explicit; Explicit = $true }
-        [pscustomobject]@{ Path = $env:HUSHFEED_JAVA; Explicit = $false }
+        [pscustomobject]@{ Path = $env:LARPFEED_JAVA; Explicit = $false }
     )
     foreach ($entry in $preferredCandidates) {
         $candidate = $entry.Path
@@ -97,5 +97,5 @@ function Resolve-Java {
     }
 
     throw ("No Java $Minimum or newer was found, and the Morphe desktop CLI needs one. Set " +
-        'HUSHFEED_JAVA to a JDK, or pass -Java. Tried: ' + ($rejected -join '; ') + '.')
+        'LARPFEED_JAVA to a JDK, or pass -Java. Tried: ' + ($rejected -join '; ') + '.')
 }

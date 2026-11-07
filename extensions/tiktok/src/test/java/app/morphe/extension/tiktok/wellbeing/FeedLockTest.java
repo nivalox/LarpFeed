@@ -44,7 +44,7 @@ import org.robolectric.util.ReflectionHelpers;
 
 /**
  * The feed lock is a second reason for the budget's panel, its stopped playback and its pager
- * block to be there. Off by default and off while Hushfeed is paused; on, it covers the
+ * block to be there. Off by default and off while Larpfeed is paused; on, it covers the
  * recommendation feed and nothing else, and a link to one video still opens that video.
  */
 @RunWith(RobolectricTestRunner.class)
@@ -143,7 +143,7 @@ public class FeedLockTest {
 
             PausedProcess.set(false);
             SessionLockOverlay.sync();
-            assertNotNull("the lock did not come back with Hushfeed", overlay());
+            assertNotNull("the lock did not come back with Larpfeed", overlay());
 
             Settings.FEED_LOCK.save(false);
             SessionLockOverlay.onForeground();

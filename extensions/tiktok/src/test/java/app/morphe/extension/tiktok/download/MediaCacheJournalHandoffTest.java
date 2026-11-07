@@ -1,6 +1,6 @@
 /*
- * Copyright 2026 Hushfeed contributors
- * https://github.com/SysAdminDoc/hushfeed
+ * Copyright 2026 Larpfeed contributors
+ * https://github.com/SysAdminDoc/larpfeed
  */
 package app.morphe.extension.tiktok.download;
 
@@ -53,7 +53,7 @@ import org.robolectric.annotation.RealObject;
 @Config(manifest = Config.NONE, sdk = 29)
 public class MediaCacheJournalHandoffTest {
     private static final Uri COLLECTION = Uri.parse("content://media/external_primary/downloads");
-    private static final String FOLDER = "Download/Hushfeed";
+    private static final String FOLDER = "Download/Larpfeed";
     @Rule public TemporaryFolder temporary = new TemporaryFolder();
     private Context context;
     private File cache, durable;
@@ -79,7 +79,7 @@ public class MediaCacheJournalHandoffTest {
         MediaCacheRecoveryTest.FakeMediaProvider.add(7L, name, 0, FOLDER);
         MediaCacheRecoveryTest.FakeMediaProvider.add(8L, "native-pending.jpg", 1, FOLDER);
         MediaCacheRecoveryTest.FakeMediaProvider.add(9L, name, 1, FOLDER);
-        MediaCacheRecoveryTest.FakeMediaProvider.add(10L, name, 1, "Movies/Hushfeed");
+        MediaCacheRecoveryTest.FakeMediaProvider.add(10L, name, 1, "Movies/Larpfeed");
         String intent = MediaCache.beginPending(context, COLLECTION, name, FOLDER);
         write(journal(durable), stale() + "\t" + intent + "\n");
         remove(cache);

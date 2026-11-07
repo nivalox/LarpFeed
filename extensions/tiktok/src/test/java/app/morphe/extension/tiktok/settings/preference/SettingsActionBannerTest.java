@@ -129,7 +129,7 @@ public class SettingsActionBannerTest {
 
     /**
      * A tap on the banner went through to the row under it: the banner wasn't clickable, so the
-     * pause notice could sit on Pause Hushfeed and a tap on the notice flipped the switch.
+     * pause notice could sit on Pause Larpfeed and a tap on the notice flipped the switch.
      */
     @Test public void aTapOnTheBannerClosesItAndNeverReachesTheRowUnderIt() {
         AtomicInteger beneath = new AtomicInteger();

@@ -25,7 +25,7 @@ val sanitizeShareUrlsPatch = bytecodePatch(
     name = "Sanitize sharing links",
     description = "Removes the tracking codes from TikTok links you share, so the link " +
         "carries less about you. It can also swap tiktok.com for another site. On by default. " +
-        "Turn it off in Hushfeed settings > Privacy.",
+        "Turn it off in Larpfeed settings > Privacy.",
     default = true,
 ) {
     category("Interaction")

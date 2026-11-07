@@ -58,10 +58,10 @@ public class SettingsHeadingSemanticsTest {
 
             boolean[] back = {false};
             LinearLayout header = SettingsHeaderPreference.createHeader(activity, "Comments", () -> back[0] = true);
-            TextView page = header.findViewWithTag("hushfeed_page_title");
+            TextView page = header.findViewWithTag("larpfeed_page_title");
             assertEquals("Comments", page.getText().toString());
             assertTrue("the page title is not a heading", isHeading(page));
-            View backButton = ((LinearLayout) header.findViewWithTag("hushfeed_toolbar")).getChildAt(0);
+            View backButton = ((LinearLayout) header.findViewWithTag("larpfeed_toolbar")).getChildAt(0);
             assertFalse("the Back control became a heading", isHeading(backButton));
             assertTrue("the Back control lost its action", backButton.createAccessibilityNodeInfo().isClickable());
             assertTrue(backButton.performClick());
