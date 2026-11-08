@@ -72,7 +72,7 @@ class AmoledComposeCardsTest {
             val painted = MutableMethod(builder)
             painted.paintCards(field, composeArgb("#000000"))
             val after = painted.implementation!!.instructions.toList()
-            assertEquals("$version: three instructions per card color", before.size + 3 * writes.size, after.size)
+            assertEquals("$version: two instructions per card color", before.size + 2 * writes.size, after.size)
             val added = mutableSetOf<Int>()
             after.forEachIndexed { index, instruction ->
                 val target = instruction.getReference<FieldReference>()
@@ -81,25 +81,24 @@ class AmoledComposeCardsTest {
                 ) {
                     return@forEachIndexed
                 }
-                val register = (instruction as OneRegisterInstruction).registerA
-                val literal = after[index - 3]
-                assertTrue("$version: the color isn't set right before the write", literal is WideLiteralInstruction)
-                assertEquals(register, (literal as OneRegisterInstruction).registerA)
-                assertEquals(0xff000000L, (literal as WideLiteralInstruction).wideLiteral)
-                val call = after[index - 2]
-                assertEquals(Opcode.INVOKE_STATIC_RANGE, call.opcode)
-                assertEquals(register, (call as RegisterRangeInstruction).startRegister)
-                assertEquals(2, call.registerCount)
-                val conversion = call.getReference<MethodReference>()!!
+                // The choice, its result, then the builder's own conversion and its result.
+                val choose = after[index - 4]
+                assertEquals("$version: the choice isn't asked right before the conversion", Opcode.INVOKE_STATIC_RANGE, choose.opcode)
+                val chooser = choose.getReference<MethodReference>()!!
+                assertEquals(AMOLED_THEME_EXTENSION, chooser.definingClass)
+                assertEquals("card", chooser.name)
+                assertEquals(2, (choose as RegisterRangeInstruction).registerCount)
+                val result = after[index - 3]
+                assertEquals(Opcode.MOVE_RESULT_WIDE, result.opcode)
+                assertEquals(choose.startRegister, (result as OneRegisterInstruction).registerA)
+                val conversion = after[index - 2].getReference<MethodReference>()!!
                 assertEquals(writes.first().conversion.definingClass, conversion.definingClass)
                 assertEquals(writes.first().conversion.name, conversion.name)
                 assertEquals(Opcode.MOVE_RESULT_WIDE, after[index - 1].opcode)
-                assertEquals(register, (after[index - 1] as OneRegisterInstruction).registerA)
+                added += index - 4
                 added += index - 3
-                added += index - 2
-                added += index - 1
             }
-            assertEquals("$version: every card color was repainted", 3 * writes.size, added.size)
+            assertEquals("$version: every card color goes through the choice", 2 * writes.size, added.size)
             assertEquals(
                 "$version: TikTok's own instructions keep their order",
                 before.map { it.opcode },

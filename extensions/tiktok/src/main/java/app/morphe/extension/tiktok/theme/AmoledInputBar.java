@@ -23,7 +23,7 @@ public final class AmoledInputBar {
 
     /** Called with the bar's row and the AMOLED color, right after TikTok sets the bar up. */
     public static void paint(View bar, int argb) {
-        if (bar == null) return;
+        if (bar == null || !AmoledTheme.isAmoled()) return;
         try {
             // The bar's own context carries the night mode TikTok applied, which the system's doesn't.
             if (SettingsUi.isDarkContext(bar.getContext())) bar.setBackgroundColor(argb);

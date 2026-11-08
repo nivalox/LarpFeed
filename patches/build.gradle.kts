@@ -301,7 +301,7 @@ group = "app.morphe"
 patches {
     about {
         name = "Larpfeed"
-        description = "Larpfeed patches for TikTok 47.7.2, built for Morphe. Fewer accidental taps, less noise, more control over the feed, inbox, comments and downloads."
+        description = "Larpfeed patches for TikTok 47.7.3, built for Morphe. Fewer accidental taps, less noise, more control over the feed, inbox, comments and downloads."
         source = "https://github.com/SysAdminDoc/larpfeed"
         author = "SysAdminDoc"
         contact = "https://github.com/SysAdminDoc/larpfeed/issues"
@@ -464,6 +464,7 @@ val extensionClasses = listOf(
     "app/morphe/patches/tiktok/interaction/downloads/StickerSourceFixturesTest.class",
     "app/morphe/patches/tiktok/interaction/downloads/StoryHoldFixturesTest.class",
     "app/morphe/patches/tiktok/interaction/gesture/LikePressAnchorsTest.class",
+    "app/morphe/patches/tiktok/interaction/publishdate/LikedJumpHooksTest.class",
     "app/morphe/patches/tiktok/interaction/publishdate/SoundGridSortHooksTest.class",
     "app/morphe/patches/tiktok/interaction/seekbar/SoundSeekbarBridgesTest.class",
     "app/morphe/patches/tiktok/interaction/videooverlays/MusicDiscSpinAnchorsTest.class",

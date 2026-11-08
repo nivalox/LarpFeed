@@ -8,6 +8,7 @@ import app.morphe.patcher.Fingerprint
 import app.morphe.patcher.fieldAccess
 import app.morphe.patcher.literal
 import app.morphe.patcher.patch.PatchException
+import app.morphe.patches.tiktok.misc.extension.sharedExtensionPatch
 import app.morphe.patches.tiktok.misc.settings.configurableBytecodePatch as bytecodePatch
 import app.morphe.patcher.util.proxy.mutableTypes.MutableMethod
 import app.morphe.util.addInstructions
@@ -23,6 +24,8 @@ import com.android.tools.smali.dexlib2.iface.instruction.WideLiteralInstruction
 import com.android.tools.smali.dexlib2.iface.reference.FieldReference
 import com.android.tools.smali.dexlib2.iface.reference.MethodReference
 import com.android.tools.smali.dexlib2.iface.reference.StringReference
+
+internal const val AMOLED_THEME_EXTENSION = "Lapp/morphe/extension/tiktok/theme/AmoledTheme;"
 
 /** What the Compose palette's toString prints before its UIPageGrouped2 color. */
 internal const val PAGE_GROUPED_2_LABEL = ", UIPageGrouped2="
@@ -140,19 +143,23 @@ internal fun Method.isDarkPaletteBuilder(field: FieldReference): Boolean {
 /** The opaque Compose literal for an AMOLED color, `#RRGGBB` or `#FFRRGGBB`. */
 internal fun composeArgb(color: String): Long = 0xff000000L or color.takeLast(6).toLong(16)
 
-/** Each card color this builder writes becomes [argb], packed by the builder's own conversion. */
-internal fun MutableMethod.paintCards(field: FieldReference, argb: Long) {
+/**
+ * Each card color this builder writes goes through AmoledTheme.card first, which hands back the
+ * AMOLED color (baked into the extension by the web pages patch, so [argb] isn't needed here) or
+ * TikTok's own, by the choice in Larpfeed settings. The call sits just before the builder's own
+ * conversion, on the register that conversion reads, so what the builder packs stays in its
+ * hands and nothing about the conversion is assumed.
+ */
+internal fun MutableMethod.paintCards(field: FieldReference, @Suppress("UNUSED_PARAMETER") argb: Long) {
     val writes = cardWrites(field)
         ?: throw PatchException("AMOLED dark theme: the dark palette's card colors are not written the way they were.")
     writes.asReversed().forEach { write ->
-        val register = write.register
-        val conversion = write.conversion
+        val argument = write.argument
         addInstructions(
-            write.index,
+            write.index - 2,
             """
-                const-wide v$register, 0x${argb.toString(16)}L
-                invoke-static/range {v$register .. v${register + 1}}, ${conversion.definingClass}->${conversion.name}(J)J
-                move-result-wide v$register
+                invoke-static/range {v$argument .. v${argument + 1}}, $AMOLED_THEME_EXTENSION->card(J)J
+                move-result-wide v$argument
             """,
         )
     }
@@ -170,6 +177,7 @@ internal fun MutableMethod.paintCards(field: FieldReference, argb: Long) {
  * side refuses it, so neither half goes in without the other.
  */
 internal fun amoledComposeCardsPatch(color: () -> String?) = bytecodePatch {
+    dependsOn(sharedExtensionPatch)
     execute {
         // Refuses an unread build before anything changes, as the resource side does.
         darkBackgroundColors(packageMetadata.versionName)

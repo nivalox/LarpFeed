@@ -23,8 +23,7 @@ val amoledThemePatch = resourcePatch(
     name = "AMOLED dark theme",
     description = "Makes TikTok's dark mode backgrounds pure black, or a dark color you pick " +
         "in this patch's options. Black lets OLED screens switch those pixels off. Light mode " +
-        "doesn't change. It's built in while patching, so only patching again without it undoes " +
-        "it.",
+        "doesn't change. Switch to TikTok's own dark gray any time in Larpfeed settings > Theme.",
     default = false,
 ) {
     category("Interface")
@@ -44,6 +43,8 @@ val amoledThemePatch = resourcePatch(
     dependsOn(amoledInputBarPatch { background })
     // Activity center and the history pages are TikTok web pages, out of the resources' reach (#263).
     dependsOn(amoledWebPagesPatch { background })
+    // The Dark theme row in Larpfeed settings, and the code behind its Standard dark choice.
+    dependsOn(amoledThemeRuntimePatch())
     execute {
         val packageRoot = get("res").parentFile
         val decodedRoots = decodedPackageRoots(packageRoot)
@@ -60,7 +61,9 @@ val amoledThemePatch = resourcePatch(
         // file is touched: a build whose palette was never read is refused with nothing changed.
         val backgrounds = darkBackgroundColors(packageMetadata.versionName)
         val surfaces = surfaceStyleItems(packageMetadata.versionName)
+        val raised = packageMetadata.versionName?.let { RAISED_STYLE_ITEMS[it] }.orEmpty()
         val found = mutableSetOf<String>()
+        val standardDark = StandardDarkTally()
         val styleItemsFound = mutableSetOf<String>()
         decode("res/values*/colors.xml", "res/values*/styles.xml")
         val valuesDirectories = get("res").listFiles().orEmpty()
@@ -68,10 +71,12 @@ val amoledThemePatch = resourcePatch(
         valuesDirectories.map { it.resolve("colors.xml") }.filter { it.exists() }.forEach { file ->
             document(file.relativeTo(get(".")).invariantSeparatorsPath).use { xml ->
                 val colors = xml.getElementsByTagName("color")
-                for (index in 0 until colors.length) {
-                    val entry = colors.item(index) as Element
+                // A snapshot: keeping an original adds a color to the live list.
+                val entries = (0 until colors.length).map { colors.item(it) as Element }
+                for (entry in entries) {
                     val name = entry.getAttribute("name")
                     if (name in backgrounds) {
+                        keepOriginalColor(xml, entry)
                         entry.textContent = color
                         found.add(name)
                     }
@@ -84,7 +89,9 @@ val amoledThemePatch = resourcePatch(
         // stays white.
         valuesDirectories.map { it.resolve("styles.xml") }.filter { it.exists() }.forEach { file ->
             document(file.relativeTo(get(".")).invariantSeparatorsPath).use { xml ->
-                styleItemsFound += rewriteDarkStyleItems(xml, surfaces, color)
+                // Read before the rewrite below: these are the values Standard dark puts back.
+                tallyStandardDark(xml, surfaces, backgrounds, raised, standardDark)
+                styleItemsFound += rewriteDarkStyleItems(xml, surfaces, color, raised)
             }
         }
         if (found != backgrounds) throw PatchException("Dark background palette is incomplete: $found")
@@ -92,6 +99,16 @@ val amoledThemePatch = resourcePatch(
         // build whose surface names are known, and one missing means an identity is wrong.
         if (styleItemsFound != surfaces) {
             throw PatchException("Dark surface style items are incomplete: $styleItemsFound")
+        }
+        // The overlay lives in the default styles.xml; the originals it points at are colors the
+        // loop above added next to each recolored one.
+        val defaultStyles = valuesDirectories.firstOrNull { it.name == "values" }?.resolve("styles.xml")
+        val restore = standardDark.items()
+        if (defaultStyles == null || !defaultStyles.exists() || restore.isEmpty()) {
+            throw PatchException("AMOLED dark theme: found nothing to restore for Standard dark, so nothing was changed.")
+        }
+        document(defaultStyles.relativeTo(get(".")).invariantSeparatorsPath).use { xml ->
+            addStandardDarkStyle(xml, restore)
         }
         BuildDetails.amoled(get(BUILD_DETAILS_ASSET), color)
     }
@@ -154,12 +171,12 @@ internal fun renamedPathCollisions(
  * (47.4.3 added two), and an older build's names there are an accent and see-through white
  * overlays, which the patch painted black until this was read off the fixture (AmoledPaletteTest
  * holds every fixture's block to its entry here). Only the declared build is listed, so a build
- * the bundle moves to needs its own entry read off its fixture. 47.7.2's sit at a2c to a2p, well
+ * the bundle moves to needs its own entry read off its fixture. 47.7.3's sit at a2c to a2p, well
  * short of 47.6.3's a3w to a49, so a shift by one would have painted other colors. The block's pure
  * black is a token of its own and stays.
  */
 internal val DARK_BACKGROUND_COLORS: Map<String, Set<String>> = linkedMapOf(
-    "47.7.2" to setOf("a2c", "a2e", "a2f", "a2h", "a2p"),
+    "47.7.3" to setOf("a2c", "a2e", "a2f", "a2h", "a2p"),
 )
 
 /** This build's background grays, or a refusal: a name carried over from another build is a guess. */
@@ -181,7 +198,7 @@ internal fun declaredVersions(): Set<String> =
 
 /**
  * The dark style literals behind TikTok's sheets and pages per build, named by TikTok's own token
- * table (AmoledSheetTokensTest). On 47.7.2:
+ * table (AmoledSheetTokensTest). On 47.7.3:
  * - aif is UISheetFlat1's dark value (attr/a26), the fill of the comment panel, the share sheet
  *   and TikTok's other sheets, panels and modals.
  * - ail is UISheetGrouped1's (attr/a2b), the fill of the feed's long-press panel and the other
@@ -201,12 +218,28 @@ internal fun declaredVersions(): Set<String> =
  *   and agm is UIPageFlat2 (attr/a0c), the gray band a page sets off a part of itself with.
  * - agp (UIPageFlat3Elevated) and c3 were the comments and share sheets' own through 46.x, under
  *   other names, and are dark surfaces of their own on 47.x.
+ * - aij is UISheetFlat3's (attr/a2_), the fill of TikTok's toasts (the "You'll see fewer posts
+ *   like this" one after Not interested) and of its popover menus, the comments' sort menu among
+ *   them: TuxToast's background and TuxTooltip's popover background both point at a2_. Both
+ *   stayed #3A3A3A under AMOLED through 0.81.0 (#368).
  * The token names move a place or two with every build, and on 46.x a name these use now was
  * another surface tier, which is why only a build whose names were read is patched.
  */
 internal val SURFACE_STYLE_ITEMS: Map<String, Set<String>> = linkedMapOf(
-    "47.7.2" to setOf("agp", "c3", "aif", "ail", "ain", "bx", "ags", "agk", "agl", "agm", "agq", "agr"),
+    "47.7.3" to setOf("agp", "c3", "aif", "ail", "ain", "bx", "ags", "agk", "agl", "agm", "agq", "agr", "aij"),
 )
+
+/**
+ * Surface items a palette sets lighter than [isDarkOpaqueLiteral]'s gate. UISheetFlat3 (aij) is
+ * #484848 in a_j and #323C43 and #333D43 in the two tinted palettes the dark-mode experiment
+ * applies, so under the 0x40 gate only the default palette's toast went black. These are taken
+ * up to [RAISED_SURFACE_CEILING]; every value they hold is a raised sheet gray, never text.
+ */
+internal val RAISED_STYLE_ITEMS: Map<String, Set<String>> = linkedMapOf(
+    "47.7.3" to setOf("aij"),
+)
+
+internal const val RAISED_SURFACE_CEILING = 0x50
 
 /** This build's surface style items, or a refusal like the palette's. */
 internal fun surfaceStyleItems(versionName: String?): Set<String> =
@@ -215,23 +248,36 @@ internal fun surfaceStyleItems(versionName: String?): Set<String> =
 /**
  * Sets every `<item name="...">` in the named set whose value is a dark opaque colour literal
  * to [color], and returns the names it changed. A value that is a reference, translucent or
- * light is left alone: those are the light theme's and the overlays', not the surface.
+ * light is left alone: those are the light theme's and the overlays', not the surface. A name in
+ * [raised] is taken up to [RAISED_SURFACE_CEILING] instead.
  */
-internal fun rewriteDarkStyleItems(styles: Document, names: Set<String>, color: String): Set<String> {
+internal fun rewriteDarkStyleItems(
+    styles: Document,
+    names: Set<String>,
+    color: String,
+    raised: Set<String> = emptySet(),
+): Set<String> {
     val changed = mutableSetOf<String>()
     val items = styles.getElementsByTagName("item")
     for (index in 0 until items.length) {
         val item = items.item(index) as Element
         val name = item.getAttribute("name")
-        if (name !in names || !isDarkOpaqueLiteral(item.textContent)) continue
+        if (name !in names) continue
+        val ceiling = if (name in raised) RAISED_SURFACE_CEILING else DARK_SURFACE_CEILING
+        if (!isOpaqueLiteralUnder(item.textContent, ceiling)) continue
         item.textContent = color
         changed.add(name)
     }
     return changed
 }
 
+private const val DARK_SURFACE_CEILING = 0x40
+
 /** `#RRGGBB` or `#FFRRGGBB`, every channel under 0x40: a surface colour, not a text or an overlay. */
-internal fun isDarkOpaqueLiteral(value: String): Boolean {
+internal fun isDarkOpaqueLiteral(value: String): Boolean = isOpaqueLiteralUnder(value, DARK_SURFACE_CEILING)
+
+/** `#RRGGBB` or `#FFRRGGBB` with every channel under [ceiling]. */
+internal fun isOpaqueLiteralUnder(value: String, ceiling: Int): Boolean {
     val hex = value.trim().removePrefix("#")
     val rgb = when (hex.length) {
         6 -> hex
@@ -239,5 +285,79 @@ internal fun isDarkOpaqueLiteral(value: String): Boolean {
         else -> return false
     }
     if (!rgb.all { it.isDigit() || it.lowercaseChar() in 'a'..'f' }) return false
-    return rgb.chunked(2).all { it.toInt(16) < 0x40 }
+    return rgb.chunked(2).all { it.toInt(16) < ceiling }
+}
+
+/** The overlay style the extension applies for Standard dark. Its name is the extension's STYLE_NAME. */
+internal const val STANDARD_DARK_STYLE = "larpfeed_standard_dark"
+
+/** The color holding [name]'s original value, which the palette rewrite leaves behind. */
+internal fun originalColorName(name: String) = "larpfeed_orig_$name"
+
+/**
+ * Leaves a copy of [entry]'s value, under [originalColorName], beside it before it is recolored.
+ * It goes in the same file, so every configuration that sets the color keeps its own original.
+ */
+internal fun keepOriginalColor(document: Document, entry: Element) {
+    val keep = document.createElement("color")
+    keep.setAttribute("name", originalColorName(entry.getAttribute("name")))
+    keep.textContent = entry.textContent
+    entry.parentNode.appendChild(keep)
+}
+
+/**
+ * What each theme item held before the rewrite, counted by value. A few items differ between
+ * TikTok's dark palettes (the tinted ones set UISheetFlat3 to other grays), and one overlay can
+ * hold only one value per item, so [items] takes the value most palettes agree on.
+ */
+internal class StandardDarkTally {
+    private val seen = linkedMapOf<String, LinkedHashMap<String, Int>>()
+
+    fun add(name: String, value: String) {
+        val counts = seen.getOrPut(name) { linkedMapOf() }
+        counts[value] = (counts[value] ?: 0) + 1
+    }
+
+    fun items(): Map<String, String> =
+        seen.mapValues { (_, counts) -> counts.entries.maxByOrNull { it.value }!!.key }
+}
+
+/**
+ * Reads [styles] before it is rewritten and tallies what Standard dark has to put back: each
+ * [surfaces] item whose value is a dark literal (up to the higher ceiling for the [raised]
+ * ones, as the rewrite itself decides) keeps that literal, and each item that points at one of
+ * the [palette] grays points at the kept original instead.
+ */
+internal fun tallyStandardDark(
+    styles: Document,
+    surfaces: Set<String>,
+    palette: Set<String>,
+    raised: Set<String>,
+    into: StandardDarkTally,
+) {
+    val items = styles.getElementsByTagName("item")
+    for (index in 0 until items.length) {
+        val item = items.item(index) as Element
+        val name = item.getAttribute("name")
+        val value = item.textContent.trim()
+        if (name in surfaces) {
+            val ceiling = if (name in raised) RAISED_SURFACE_CEILING else DARK_SURFACE_CEILING
+            if (isOpaqueLiteralUnder(value, ceiling)) into.add(name, value)
+        } else if (value.startsWith("@color/") && value.removePrefix("@color/") in palette) {
+            into.add(name, "@color/" + originalColorName(value.removePrefix("@color/")))
+        }
+    }
+}
+
+/** Adds the overlay style holding [items] to [styles]. */
+internal fun addStandardDarkStyle(styles: Document, items: Map<String, String>) {
+    val style = styles.createElement("style")
+    style.setAttribute("name", STANDARD_DARK_STYLE)
+    items.forEach { (name, value) ->
+        val item = styles.createElement("item")
+        item.setAttribute("name", name)
+        item.textContent = value
+        style.appendChild(item)
+    }
+    styles.documentElement.appendChild(style)
 }

@@ -44,6 +44,7 @@ public final class AmoledWebPages {
 
     /** Called at the start of TikTok's page-finished and page-visible callbacks. Never throws. */
     public static void onPage(WebView webView, String url) {
+        if (!AmoledTheme.isAmoled()) return;
         onPage(webView, url, color());
     }
 
@@ -60,7 +61,7 @@ public final class AmoledWebPages {
     }
 
     /** The AMOLED color, filled in by the patch. Zero leaves the pages as TikTok draws them. */
-    private static int color() {
+    static int color() {
         return 0;
     }
 
