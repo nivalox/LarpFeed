@@ -1,5 +1,5 @@
 {
-  "version": "v0.81.0",
+  "version": "v0.82.0",
   "appNames": {
     "com.zhiliaoapp.musically": "TikTok"
   },
@@ -4568,6 +4568,45 @@
           "values": null
         }
       ]
+    },
+    {
+      "name": "Hide Delete for me",
+      "description": "Removes the Delete for me button from the menu on a message in a chat, so it can't be tapped by mistake. Starts off. Turn it on in Larpfeed settings > Inbox.",
+      "category": "Inbox",
+      "use": true,
+      "dependencies": [
+        "BytecodePatch",
+        "Settings"
+      ],
+      "compatiblePackages": {
+        "com.zhiliaoapp.musically": [
+          "47.7.3"
+        ]
+      },
+      "compatibility": [
+        {
+          "name": "TikTok",
+          "packageName": "com.zhiliaoapp.musically",
+          "description": null,
+          "appIconColor": 16657493,
+          "signatures": [
+            "9041803e91bcb814b4b4399fb5c85a91640b755e5e8ba76813814bf4cf2ab5ba"
+          ],
+          "targets": [
+            {
+              "version": "47.7.3",
+              "experimental": false,
+              "versionCodes": {
+                "ARM64_V8A": 2024707030,
+                "ARMEABI_V7A": 2024707030,
+                "X86": 2024707030,
+                "X86_64": 2024707030
+              }
+            }
+          ]
+        }
+      ],
+      "options": []
     },
     {
       "name": "Hide Play Store update offer",
