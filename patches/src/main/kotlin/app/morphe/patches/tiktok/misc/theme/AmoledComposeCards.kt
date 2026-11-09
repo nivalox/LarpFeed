@@ -7,12 +7,15 @@ package app.morphe.patches.tiktok.misc.theme
 import app.morphe.patcher.Fingerprint
 import app.morphe.patcher.fieldAccess
 import app.morphe.patcher.literal
+import app.morphe.patcher.patch.BytecodePatchContext
 import app.morphe.patcher.patch.PatchException
 import app.morphe.patches.tiktok.misc.extension.sharedExtensionPatch
 import app.morphe.patches.tiktok.misc.settings.configurableBytecodePatch as bytecodePatch
 import app.morphe.patcher.util.proxy.mutableTypes.MutableMethod
 import app.morphe.util.addInstructions
+import app.morphe.util.cloneMutable
 import app.morphe.util.getReference
+import app.morphe.util.returnEarly
 import com.android.tools.smali.dexlib2.AccessFlags
 import com.android.tools.smali.dexlib2.Opcode
 import com.android.tools.smali.dexlib2.iface.ClassDef
@@ -24,8 +27,6 @@ import com.android.tools.smali.dexlib2.iface.instruction.WideLiteralInstruction
 import com.android.tools.smali.dexlib2.iface.reference.FieldReference
 import com.android.tools.smali.dexlib2.iface.reference.MethodReference
 import com.android.tools.smali.dexlib2.iface.reference.StringReference
-
-internal const val AMOLED_THEME_EXTENSION = "Lapp/morphe/extension/tiktok/theme/AmoledTheme;"
 
 /** What the Compose palette's toString prints before its UIPageGrouped2 color. */
 internal const val PAGE_GROUPED_2_LABEL = ", UIPageGrouped2="
@@ -144,25 +145,35 @@ internal fun Method.isDarkPaletteBuilder(field: FieldReference): Boolean {
 internal fun composeArgb(color: String): Long = 0xff000000L or color.takeLast(6).toLong(16)
 
 /**
- * Each card color this builder writes goes through AmoledTheme.card first, which hands back the
- * AMOLED color (baked into the extension by the web pages patch, so [argb] isn't needed here) or
- * TikTok's own, by the choice in Larpfeed settings. The call sits just before the builder's own
- * conversion, on the register that conversion reads, so what the builder packs stays in its
- * hands and nothing about the conversion is assumed.
+ * Each card color this builder writes goes through the extension's [AMOLED_THEME_EXTENSION]
+ * composeCard first, which answers the AMOLED color while the switch in Larpfeed settings is on
+ * and TikTok's own packed color while it's off (#372). The builder's conversion packs a color by
+ * shifting it left 32 bits (AmoledComposeCardsTest holds it to that), which is how the extension
+ * packs the AMOLED one.
  */
-internal fun MutableMethod.paintCards(field: FieldReference, @Suppress("UNUSED_PARAMETER") argb: Long) {
+internal fun MutableMethod.paintCards(field: FieldReference) {
     val writes = cardWrites(field)
         ?: throw PatchException("AMOLED dark theme: the dark palette's card colors are not written the way they were.")
     writes.asReversed().forEach { write ->
-        val argument = write.argument
+        val register = write.register
         addInstructions(
-            write.index - 2,
+            write.index,
             """
-                invoke-static/range {v$argument .. v${argument + 1}}, $AMOLED_THEME_EXTENSION->card(J)J
-                move-result-wide v$argument
+                invoke-static/range {v$register .. v${register + 1}}, $AMOLED_THEME_EXTENSION->composeCard(J)J
+                move-result-wide v$register
             """,
         )
     }
+}
+
+/** The extension's AMOLED color, filled in with the picked one so composeCard can answer it. */
+internal fun BytecodePatchContext.fillAmoledThemeColor(argb: Int) {
+    val extension = mutableClassDefBy(AMOLED_THEME_EXTENSION)
+    val stub = extension.methods.single { it.name == "color" && it.parameterTypes.isEmpty() }
+    val filled = stub.cloneMutable(additionalRegisters = 1)
+    extension.methods.remove(stub)
+    extension.methods.add(filled)
+    filled.returnEarly(argb)
 }
 
 /**
@@ -201,7 +212,8 @@ internal fun amoledComposeCardsPatch(color: () -> String?) = bytecodePatch {
         ).matchAllOrNull().orEmpty()
         val builder = builders.singleOrNull()
             ?: throw PatchException("AMOLED dark theme: expected one dark palette builder, found ${builders.size}.")
-        builder.method.paintCards(field, composeArgb(chosen))
+        builder.method.paintCards(field)
+        fillAmoledThemeColor(composeArgb(chosen).toInt())
     }
 }
 

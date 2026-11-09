@@ -4,113 +4,215 @@
  */
 package app.morphe.extension.tiktok.theme;
 
-import android.app.Activity;
-import android.app.Application;
-import android.os.Bundle;
+import android.app.Dialog;
+import android.content.Context;
+import android.content.res.Resources;
+import android.util.TypedValue;
 
-import app.morphe.extension.shared.Logger;
+import androidx.annotation.Nullable;
+
+import app.morphe.extension.shared.Utils;
+import app.morphe.extension.shared.diagnostics.HookStatus;
 import app.morphe.extension.tiktok.settings.Settings;
-import app.morphe.extension.tiktok.settings.preference.SettingsUi;
 
 /**
- * The choice between AMOLED dark and TikTok's standard dark, made in Larpfeed settings.
+ * The AMOLED dark mode switch in Larpfeed settings (#372).
  *
- * <p>The AMOLED dark theme patch paints TikTok's dark backgrounds black while patching, so
- * "AMOLED dark" is what the resources already are. "Standard dark" puts TikTok's own grays
- * back: the patch writes a theme overlay (style {@value #STYLE_NAME}) holding the original
- * values of every dark surface it recolored, and a dark-mode activity applies it when the
- * choice says standard. The parts drawn in code ask {@link #isAmoled()} too. Light mode is
- * never touched.
+ * <p>AMOLED dark theme paints TikTok's dark grays at patch time. Next to every surface it
+ * repaints, the resource side keeps TikTok's own value under a theme attribute of its own
+ * ({@code larpfeed_amoled_stock_<i>}), and it adds a style per surface
+ * ({@code larpfeed_amoled_restore_<i>}) that points the surface back at that value, plus one
+ * style that does all of them. While the switch is on, nothing here changes anything. While it's
+ * off, each theme TikTok builds gets those styles applied right after TikTok builds it, so its
+ * surfaces read TikTok's own grays again. The patch calls in from AppCompatActivity's setTheme,
+ * every Resources.Theme.applyStyle and Context.setTheme in TikTok's code, every
+ * ContextThemeWrapper TikTok makes (which becomes {@link AmoledThemeWrapper}) and every Dialog
+ * constructor. The Compose cards, the comment bar and the web pages ask {@link #on()}.
+ *
+ * <p>The answer is read once per process, so a screen never mixes the two looks: the switch
+ * takes effect at the next start. Pausing Larpfeed reads as off.
  */
 public final class AmoledTheme {
-    static final String STANDARD = "standard";
-    static final String STYLE_NAME = "larpfeed_standard_dark";
+    static final String HOOK_FAMILY = "amoled dark mode";
+    static final String STOCK_ATTRIBUTE = "larpfeed_amoled_stock_";
+    static final String RESTORE_STYLE = "larpfeed_amoled_restore_";
+    static final String RESTORE_ALL_STYLE = "larpfeed_amoled_restore_all";
 
-    private static final Application.ActivityLifecycleCallbacks CALLBACKS =
-            new Application.ActivityLifecycleCallbacks() {
-                // API 29 and up call this before the activity's own onCreate, ahead of its layout.
-                public void onActivityPreCreated(Activity activity, Bundle savedInstanceState) {
-                    apply(activity);
-                }
+    /** More than any build has: 47.7.3 keeps about twenty. */
+    private static final int MAX_SURFACES = 256;
 
-                @Override
-                public void onActivityCreated(Activity activity, Bundle savedInstanceState) {
-                    apply(activity);
-                }
+    /** The restore resources, read by name once. */
+    static final class Ids {
+        static final Ids NONE = new Ids(new int[0], new int[0], 0);
 
-                @Override public void onActivityStarted(Activity activity) {}
-                @Override public void onActivityResumed(Activity activity) {}
-                @Override public void onActivityPaused(Activity activity) {}
-                @Override public void onActivityStopped(Activity activity) {}
-                @Override public void onActivitySaveInstanceState(Activity activity, Bundle outState) {}
-                @Override public void onActivityDestroyed(Activity activity) {}
-            };
+        final int[] stockAttributes;
+        final int[] restoreStyles;
+        final int restoreAll;
 
-    private static boolean installed;
-    /** The overlay's id once looked up: zero when this build has none, -1 before the lookup. */
-    private static int styleId = -1;
+        Ids(int[] stockAttributes, int[] restoreStyles, int restoreAll) {
+            this.stockAttributes = stockAttributes;
+            this.restoreStyles = restoreStyles;
+            this.restoreAll = restoreAll;
+        }
+    }
+
+    @Nullable
+    private static volatile Boolean decided;
+    @Nullable
+    private static volatile Ids ids;
+    private static volatile int colorForTests;
 
     private AmoledTheme() {}
 
-    /** True for AMOLED dark, the default. Anything that can't be read counts as AMOLED. */
-    public static boolean isAmoled() {
+    /** True unless the switch is off (or Larpfeed is paused) in a build with AMOLED dark theme. */
+    public static boolean on() {
+        return !restoring();
+    }
+
+    /** Whether TikTok's own grays go back on the themes it builds. */
+    static boolean restoring() {
+        Boolean known = decided;
+        if (known != null) return known;
+        // Settings can't load before the app has a context; TikTok builds no screen before then.
+        if (amoledColor() == 0 || Utils.getContext() == null) return false;
+        boolean restore = !Settings.AMOLED_DARK_MODE.get();
+        decided = restore;
+        HookStatus.bound(HOOK_FAMILY, restore ? "TikTok's dark grays" : "AMOLED");
+        return restore;
+    }
+
+    /** Stands in for Resources.Theme.applyStyle in TikTok's code. The force flag comes as an int. */
+    public static void applyStyle(Resources.Theme theme, int resId, int force) {
+        theme.applyStyle(resId, force != 0);
+        restore(theme);
+    }
+
+    /** Stands in for setTheme(int) on a Context in TikTok's code. */
+    public static void setTheme(Context context, int resId) {
+        context.setTheme(resId);
+        restore(context);
+    }
+
+    /** Called right after a Dialog's constructor, before its window reads the theme. */
+    public static void dialog(Dialog dialog) {
+        if (dialog == null || !restoring()) return;
         try {
-            return !STANDARD.equals(Settings.AMOLED_THEME.get());
+            restore(dialog.getContext());
         } catch (Throwable failure) {
-            return true;
+            HookStatus.threw(HOOK_FAMILY, "dialog", failure);
         }
     }
 
-    /**
-     * Called first thing in the main and detail activities' onCreate: watches every activity
-     * from here on, and applies the choice to this one, which was created before it could watch.
-     */
-    public static void install(Activity activity) {
+    /** Called at the end of AppCompatActivity's setTheme with the activity. */
+    public static void restore(Context context) {
+        if (context == null || !restoring()) return;
         try {
-            if (activity == null) return;
-            Application application = activity.getApplication();
-            synchronized (AmoledTheme.class) {
-                if (!installed && application != null) {
-                    application.registerActivityLifecycleCallbacks(CALLBACKS);
-                    installed = true;
-                }
+            restore(context.getTheme());
+        } catch (Throwable failure) {
+            HookStatus.threw(HOOK_FAMILY, "setTheme", failure);
+        }
+    }
+
+    /** Puts TikTok's own value back on each surface this theme sets. Never throws. */
+    public static void restore(Resources.Theme theme) {
+        if (theme == null || !restoring()) return;
+        try {
+            for (int style : plan(theme, ids(theme.getResources()))) {
+                theme.applyStyle(style, true);
             }
-            apply(activity);
         } catch (Throwable failure) {
-            Logger.printException(() -> "Could not install the dark theme choice", failure);
+            HookStatus.threw(HOOK_FAMILY, "applyStyle", failure);
         }
-    }
-
-    static void apply(Activity activity) {
-        try {
-            // AMOLED is how the resources were patched. Only the standard choice has work to do.
-            if (isAmoled() || activity == null) return;
-            // The context carries the night mode TikTok applied; the system's doesn't.
-            if (!SettingsUi.isDarkContext(activity)) return;
-            int id = styleId(activity);
-            if (id != 0) activity.getTheme().applyStyle(id, true);
-        } catch (Throwable failure) {
-            Logger.printException(() -> "Could not apply standard dark", failure);
-        }
-    }
-
-    private static synchronized int styleId(Activity activity) {
-        if (styleId == -1) {
-            styleId = activity.getResources().getIdentifier(STYLE_NAME, "style", activity.getPackageName());
-        }
-        return styleId;
     }
 
     /**
-     * Called by the patched Compose palette with each dark card color TikTok sets, a color as the
-     * ARGB long the palette goes on to pack. Gives the patch's AMOLED color back for AMOLED dark
-     * and TikTok's own for standard dark.
+     * The restore styles this theme takes: the one for all surfaces when it sets every one, or
+     * the one for each surface it sets. A surface the theme never set stays unset, since its
+     * restore style would point it at a value that isn't there.
      */
-    public static long card(long original) {
-        if (isAmoled()) {
-            int argb = AmoledWebPages.color();
-            if (argb != 0) return 0xFF000000L | (argb & 0xFFFFFFL);
+    static int[] plan(Resources.Theme theme, Ids ids) {
+        int count = ids.stockAttributes.length;
+        if (count == 0) return new int[0];
+        boolean[] present = new boolean[count];
+        int found = 0;
+        TypedValue value = new TypedValue();
+        for (int i = 0; i < count; i++) {
+            if (theme.resolveAttribute(ids.stockAttributes[i], value, false)) {
+                present[i] = true;
+                found++;
+            }
         }
-        return original;
+        if (found == count && ids.restoreAll != 0) return new int[]{ids.restoreAll};
+        int[] styles = new int[found];
+        int at = 0;
+        for (int i = 0; i < count; i++) {
+            if (present[i]) styles[at++] = ids.restoreStyles[i];
+        }
+        return styles;
+    }
+
+    private static Ids ids(Resources resources) {
+        Ids known = ids;
+        if (known != null) return known;
+        Context context = Utils.getContext();
+        Ids found = context == null ? Ids.NONE : lookUp(resources, context.getPackageName());
+        if (found.stockAttributes.length == 0) {
+            HookStatus.missingMember(HOOK_FAMILY, "style", "res", RESTORE_ALL_STYLE);
+        }
+        ids = found;
+        return found;
+    }
+
+    /** The restore resources in [packageName], numbered from 0 until one is missing. */
+    @SuppressWarnings("DiscouragedApi")
+    static Ids lookUp(Resources resources, String packageName) {
+        int[] stock = new int[MAX_SURFACES];
+        int[] restore = new int[MAX_SURFACES];
+        int count = 0;
+        while (count < MAX_SURFACES) {
+            int attribute = resources.getIdentifier(STOCK_ATTRIBUTE + count, "attr", packageName);
+            int style = resources.getIdentifier(RESTORE_STYLE + count, "style", packageName);
+            if (attribute == 0 || style == 0) break;
+            stock[count] = attribute;
+            restore[count] = style;
+            count++;
+        }
+        if (count == 0) return Ids.NONE;
+        int[] stockAttributes = new int[count];
+        int[] restoreStyles = new int[count];
+        System.arraycopy(stock, 0, stockAttributes, 0, count);
+        System.arraycopy(restore, 0, restoreStyles, 0, count);
+        return new Ids(stockAttributes, restoreStyles,
+                resources.getIdentifier(RESTORE_ALL_STYLE, "style", packageName));
+    }
+
+    /**
+     * A Compose card color in TikTok's dark palette, packed the way Compose packs one: the AMOLED
+     * color while the switch is on, TikTok's own while it's off.
+     */
+    public static long composeCard(long packed) {
+        int argb = amoledColor();
+        if (argb == 0 || restoring()) return packed;
+        return ((long) argb & 0xFFFFFFFFL) << 32;
+    }
+
+    private static int amoledColor() {
+        int forTests = colorForTests;
+        return forTests != 0 ? forTests : color();
+    }
+
+    /** The AMOLED color, filled in by the patch. Zero means AMOLED dark theme isn't in this build. */
+    private static int color() {
+        return 0;
+    }
+
+    static void setForTests(int argb, @Nullable Ids lookedUp) {
+        colorForTests = argb;
+        ids = lookedUp;
+        decided = null;
+    }
+
+    static void resetForTests() {
+        setForTests(0, null);
     }
 }

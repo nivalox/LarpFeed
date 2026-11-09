@@ -7,14 +7,17 @@
 package app.morphe.patches.tiktok.misc.theme
 
 import app.morphe.patcher.patch.PatchException
+import app.morphe.patcher.patch.ResourcePatchContext
 import app.morphe.patcher.patch.colorOption
-import app.morphe.patcher.patch.resourcePatch
 import app.morphe.patches.shared.compat.AppCompatibilities
 import app.morphe.patches.tiktok.misc.diagnostics.BUILD_DETAILS_ASSET
 import app.morphe.patches.tiktok.misc.diagnostics.BuildChoice
 import app.morphe.patches.tiktok.misc.diagnostics.BuildDetails
 import app.morphe.patches.tiktok.misc.diagnostics.buildChoicePatch
+import app.morphe.patches.tiktok.misc.settings.configurableResourcePatch as resourcePatch
 import java.io.File
+import java.util.TreeSet
+import javax.xml.parsers.DocumentBuilderFactory
 import org.w3c.dom.Document
 import org.w3c.dom.Element
 
@@ -23,12 +26,15 @@ val amoledThemePatch = resourcePatch(
     name = "AMOLED dark theme",
     description = "Makes TikTok's dark mode backgrounds pure black, or a dark color you pick " +
         "in this patch's options. Black lets OLED screens switch those pixels off. Light mode " +
-        "doesn't change. Switch to TikTok's own dark gray any time in Larpfeed settings > Theme.",
+        "doesn't change. The AMOLED dark mode switch in Larpfeed settings > App starts on, and " +
+        "turning it off brings TikTok's own dark grays back.",
     default = false,
 ) {
     category("Interface")
     compatibleWith(*AppCompatibilities.tiktok())
     dependsOn(buildChoicePatch(BuildChoice.AMOLED))
+    // The switch in Larpfeed settings: the hooks that put TikTok's own grays back while it's off (#372).
+    dependsOn(amoledThemeSwitchPatch)
     val background by colorOption(
         key = "backgroundColor",
         default = "#000000",
@@ -43,75 +49,203 @@ val amoledThemePatch = resourcePatch(
     dependsOn(amoledInputBarPatch { background })
     // Activity center and the history pages are TikTok web pages, out of the resources' reach (#263).
     dependsOn(amoledWebPagesPatch { background })
-    // The Dark theme row in Larpfeed settings, and the code behind its Standard dark choice.
-    dependsOn(amoledThemeRuntimePatch())
     execute {
-        val packageRoot = get("res").parentFile
-        val decodedRoots = decodedPackageRoots(packageRoot)
-        val decodable by lazy { listDecodableFiles("res/**").toSet() }
-        val collisions = renamedPathCollisions(
-            entries = listApkEntries("res/"),
-            decodedDirectories = decodedResourceDirectories(decodedRoots),
-            aliasOf = { name -> get(name, false).relativeTo(packageRoot).invariantSeparatorsPath },
-            isDecoded = { name -> name in decodable || decodedRoots.any { it.resolve(name).isFile } },
-        )
-        if (collisions.isNotEmpty()) throw PatchException(renamedPathsRefusal(collisions.size))
-        val color = amoledColor(background)
-        // The dark token block's background grays under this build's own names. Read before any
-        // file is touched: a build whose palette was never read is refused with nothing changed.
-        val backgrounds = darkBackgroundColors(packageMetadata.versionName)
-        val surfaces = surfaceStyleItems(packageMetadata.versionName)
-        val raised = packageMetadata.versionName?.let { RAISED_STYLE_ITEMS[it] }.orEmpty()
-        val found = mutableSetOf<String>()
-        val standardDark = StandardDarkTally()
-        val styleItemsFound = mutableSetOf<String>()
-        decode("res/values*/colors.xml", "res/values*/styles.xml")
-        val valuesDirectories = get("res").listFiles().orEmpty()
-            .filter { it.isDirectory && it.name.startsWith("values") }
-        valuesDirectories.map { it.resolve("colors.xml") }.filter { it.exists() }.forEach { file ->
-            document(file.relativeTo(get(".")).invariantSeparatorsPath).use { xml ->
-                val colors = xml.getElementsByTagName("color")
-                // A snapshot: keeping an original adds a color to the live list.
-                val entries = (0 until colors.length).map { colors.item(it) as Element }
-                for (entry in entries) {
-                    val name = entry.getAttribute("name")
-                    if (name in backgrounds) {
-                        keepOriginalColor(xml, entry)
-                        entry.textContent = color
-                        found.add(name)
-                    }
+        paintAmoledResources(background)
+        BuildDetails.amoled(get(BUILD_DETAILS_ASSET), amoledColor(background))
+    }
+}
+
+/**
+ * The resource half of AMOLED dark theme: the dark palette's grays and the dark surface literals
+ * become [background], and TikTok's own values are kept beside them for the switch in Larpfeed
+ * settings (#372). Answers the theme attributes whose stock value was kept, by index.
+ */
+internal fun ResourcePatchContext.paintAmoledResources(background: String?): List<String> {
+    val packageRoot = get("res").parentFile
+    val decodedRoots = decodedPackageRoots(packageRoot)
+    val decodable by lazy { listDecodableFiles("res/**").toSet() }
+    val collisions = renamedPathCollisions(
+        entries = listApkEntries("res/"),
+        decodedDirectories = decodedResourceDirectories(decodedRoots),
+        aliasOf = { name -> get(name, false).relativeTo(packageRoot).invariantSeparatorsPath },
+        isDecoded = { name -> name in decodable || decodedRoots.any { it.resolve(name).isFile } },
+    )
+    if (collisions.isNotEmpty()) throw PatchException(renamedPathsRefusal(collisions.size))
+    val color = amoledColor(background)
+    // The dark token block's background grays under this build's own names. Read before any
+    // file is touched: a build whose palette was never read is refused with nothing changed.
+    val backgrounds = darkBackgroundColors(packageMetadata.versionName)
+    val surfaces = surfaceStyleItems(packageMetadata.versionName)
+    val raised = packageMetadata.versionName?.let { RAISED_STYLE_ITEMS[it] }.orEmpty()
+    val found = mutableSetOf<String>()
+    val styleItemsFound = mutableSetOf<String>()
+    decode("res/values*/colors.xml", "res/values*/styles.xml", "res/values/attrs.xml")
+    val valuesDirectories = get("res").listFiles().orEmpty()
+        .filter { it.isDirectory && it.name.startsWith("values") }
+    val colorFiles = valuesDirectories.map { it.resolve("colors.xml") }.filter { it.exists() }
+    val styleFiles = valuesDirectories.map { it.resolve("styles.xml") }.filter { it.exists() }
+    // Read only, before anything is written: which attributes to keep, and whether a name the
+    // switch adds is already taken, which refuses the build with nothing changed.
+    val reader = DocumentBuilderFactory.newInstance().newDocumentBuilder()
+    val styleDocuments = styleFiles.map { reader.parse(it) }
+    val attrsFile = get("res/values/attrs.xml")
+    val taken = restoreNamesTaken(
+        styleDocuments + colorFiles.map { reader.parse(it) } + listOfNotNull(attrsFile.takeIf { it.isFile }?.let { reader.parse(it) }),
+    )
+    if (taken.isNotEmpty()) {
+        throw PatchException("AMOLED dark theme: this TikTok already has resources named ${taken.take(3)}, so nothing was changed. Patch an unpatched APK.")
+    }
+    val restorable = restorableAttributes(styleDocuments, surfaces, backgrounds)
+    colorFiles.forEach { file ->
+        document(file.relativeTo(get(".")).invariantSeparatorsPath).use { xml ->
+            // TikTok's gray goes on under a name of its own first, for the switch to point back at.
+            addTwinColors(xml, backgrounds)
+            val colors = xml.getElementsByTagName("color")
+            for (index in 0 until colors.length) {
+                val entry = colors.item(index) as Element
+                val name = entry.getAttribute("name")
+                if (name in backgrounds) {
+                    entry.textContent = color
+                    found.add(name)
                 }
             }
         }
-        // The sheets, the long-press panel and the Inbox Activity page never touch colors.xml.
-        // They fill with theme attributes whose dark values are literals inside a <style>
-        // (SURFACE_STYLE_ITEMS). Only a dark literal is rewritten, so a light style's white
-        // stays white.
-        valuesDirectories.map { it.resolve("styles.xml") }.filter { it.exists() }.forEach { file ->
-            document(file.relativeTo(get(".")).invariantSeparatorsPath).use { xml ->
-                // Read before the rewrite below: these are the values Standard dark puts back.
-                tallyStandardDark(xml, surfaces, backgrounds, raised, standardDark)
-                styleItemsFound += rewriteDarkStyleItems(xml, surfaces, color, raised)
-            }
-        }
-        if (found != backgrounds) throw PatchException("Dark background palette is incomplete: $found")
-        // The palette check above refuses every build whose names weren't read, so this is a
-        // build whose surface names are known, and one missing means an identity is wrong.
-        if (styleItemsFound != surfaces) {
-            throw PatchException("Dark surface style items are incomplete: $styleItemsFound")
-        }
-        // The overlay lives in the default styles.xml; the originals it points at are colors the
-        // loop above added next to each recolored one.
-        val defaultStyles = valuesDirectories.firstOrNull { it.name == "values" }?.resolve("styles.xml")
-        val restore = standardDark.items()
-        if (defaultStyles == null || !defaultStyles.exists() || restore.isEmpty()) {
-            throw PatchException("AMOLED dark theme: found nothing to restore for Standard dark, so nothing was changed.")
-        }
-        document(defaultStyles.relativeTo(get(".")).invariantSeparatorsPath).use { xml ->
-            addStandardDarkStyle(xml, restore)
-        }
-        BuildDetails.amoled(get(BUILD_DETAILS_ASSET), color)
     }
+    // The sheets, the long-press panel and the Inbox Activity page never touch colors.xml.
+    // They fill with theme attributes whose dark values are literals inside a <style>
+    // (SURFACE_STYLE_ITEMS). Only a dark literal is rewritten, so a light style's white
+    // stays white. Every style keeps its own value beside each of those first.
+    styleFiles.forEach { file ->
+        document(file.relativeTo(get(".")).invariantSeparatorsPath).use { xml ->
+            addStockSiblings(xml, restorable, backgrounds)
+            styleItemsFound += rewriteDarkStyleItems(xml, surfaces, color, raised)
+        }
+    }
+    if (found != backgrounds) throw PatchException("Dark background palette is incomplete: $found")
+    // The palette check above refuses every build whose names weren't read, so this is a
+    // build whose surface names are known, and one missing means an identity is wrong.
+    if (styleItemsFound != surfaces) {
+        throw PatchException("Dark surface style items are incomplete: $styleItemsFound")
+    }
+    document("res/values/attrs.xml").use { declareStockAttributes(it, restorable) }
+    document("res/values/styles.xml").use { addRestoreStyles(it, restorable) }
+    return restorable
+}
+
+/**
+ * Every name the switch adds starts with this. The extension finds them by name, which is why an
+ * APK already holding one is refused rather than patched twice.
+ */
+internal const val AMOLED_RESTORE_PREFIX = "larpfeed_amoled_"
+
+/** TikTok's own value of a background color the patch repaints, kept under this name. */
+internal fun twinColor(name: String) = "${AMOLED_RESTORE_PREFIX}twin_$name"
+
+/** The attribute every style sets to its own stock value of restorable attribute [index]. */
+internal fun stockAttribute(index: Int) = "${AMOLED_RESTORE_PREFIX}stock_$index"
+
+/** The style pointing restorable attribute [index] at its stock attribute. */
+internal fun restoreStyleName(index: Int) = "${AMOLED_RESTORE_PREFIX}restore_$index"
+
+/** The style pointing every restorable attribute at its stock attribute at once. */
+internal const val RESTORE_ALL_STYLE = "${AMOLED_RESTORE_PREFIX}restore_all"
+
+/**
+ * The theme attributes the switch can put back, sorted so each keeps one index: every surface
+ * item, and every item whose value is one of the repainted colors itself (`@color/a2c`). On
+ * 47.7.3 those are the dark app themes' g5d to g62, which point straight at the palette.
+ */
+internal fun restorableAttributes(styles: List<Document>, surfaces: Set<String>, colors: Set<String>): List<String> {
+    val names = TreeSet(surfaces)
+    val references = colors.mapTo(HashSet()) { "@color/$it" }
+    styles.forEach { document ->
+        amoledElements(document, "item").forEach { item ->
+            if (item.textContent.trim() in references) names += item.getAttribute("name")
+        }
+    }
+    return names.toList()
+}
+
+/** The names among [documents]' attrs, colors and styles that a switch resource would take. */
+internal fun restoreNamesTaken(documents: List<Document>): List<String> =
+    documents.flatMap { document -> listOf("attr", "color", "style").flatMap { amoledElements(document, it) } }
+        .map { it.getAttribute("name") }
+        .filter { it.startsWith(AMOLED_RESTORE_PREFIX) }
+
+/** A twin holding TikTok's value for each of [names] this file defines, added at its end. */
+internal fun addTwinColors(colors: Document, names: Set<String>): Int {
+    val entries = amoledElements(colors, "color").filter { it.getAttribute("name") in names }
+    entries.forEach { entry ->
+        colors.documentElement.appendChild(colors.createElement("color").apply {
+            setAttribute("name", twinColor(entry.getAttribute("name")))
+            textContent = entry.textContent
+        })
+    }
+    return entries.size
+}
+
+/**
+ * Next to every item of a [restorable] attribute, an item of its stock attribute holding the same
+ * value, so whichever style a theme applied last also says what TikTok gave the attribute. A
+ * value naming one of the repainted [colors] names its twin instead. Answers how many it added.
+ */
+internal fun addStockSiblings(styles: Document, restorable: List<String>, colors: Set<String>): Int {
+    val index = restorable.withIndex().associate { it.value to it.index }
+    var added = 0
+    amoledElements(styles, "item").forEach { item ->
+        val at = index[item.getAttribute("name")] ?: return@forEach
+        val value = item.textContent.trim()
+        val named = value.removePrefix("@color/")
+        val stock = if (value.startsWith("@color/") && named in colors) "@color/${twinColor(named)}" else item.textContent
+        item.parentNode.insertBefore(styles.createElement("item").apply {
+            setAttribute("name", stockAttribute(at))
+            textContent = stock
+        }, item.nextSibling)
+        added++
+    }
+    return added
+}
+
+/**
+ * A stock attribute per restorable attribute, in the format the attribute itself takes, or a
+ * reference or color for one declared elsewhere (a framework attribute).
+ */
+internal fun declareStockAttributes(attrs: Document, restorable: List<String>) {
+    val formats = amoledElements(attrs, "attr").filter { it.getAttribute("format").isNotBlank() }
+        .associate { it.getAttribute("name") to it.getAttribute("format") }
+    restorable.forEachIndexed { index, name ->
+        attrs.documentElement.appendChild(attrs.createElement("attr").apply {
+            setAttribute("name", stockAttribute(index))
+            setAttribute("format", formats[name] ?: "reference|color")
+        })
+    }
+}
+
+/**
+ * The styles the extension applies while the switch is off: one per restorable attribute, and
+ * one with them all, each pointing the attribute at its stock attribute (`?attr/...`), which the
+ * theme answers with the value of whichever style it applied last.
+ */
+internal fun addRestoreStyles(styles: Document, restorable: List<String>) {
+    val all = styles.createElement("style").apply { setAttribute("name", RESTORE_ALL_STYLE) }
+    restorable.forEachIndexed { index, name ->
+        fun item() = styles.createElement("item").apply {
+            setAttribute("name", name)
+            textContent = "?attr/${stockAttribute(index)}"
+        }
+        styles.documentElement.appendChild(styles.createElement("style").apply {
+            setAttribute("name", restoreStyleName(index))
+            appendChild(item())
+        })
+        all.appendChild(item())
+    }
+    styles.documentElement.appendChild(all)
+}
+
+/** Every element named [tag] in [document], as a list taken before anything is added. */
+internal fun amoledElements(document: Document, tag: String): List<Element> {
+    val list = document.getElementsByTagName(tag)
+    return (0 until list.length).map { list.item(it) as Element }
 }
 
 internal fun renamedPathsRefusal(collisions: Int, patch: String = "AMOLED dark theme") =
@@ -286,78 +420,4 @@ internal fun isOpaqueLiteralUnder(value: String, ceiling: Int): Boolean {
     }
     if (!rgb.all { it.isDigit() || it.lowercaseChar() in 'a'..'f' }) return false
     return rgb.chunked(2).all { it.toInt(16) < ceiling }
-}
-
-/** The overlay style the extension applies for Standard dark. Its name is the extension's STYLE_NAME. */
-internal const val STANDARD_DARK_STYLE = "larpfeed_standard_dark"
-
-/** The color holding [name]'s original value, which the palette rewrite leaves behind. */
-internal fun originalColorName(name: String) = "larpfeed_orig_$name"
-
-/**
- * Leaves a copy of [entry]'s value, under [originalColorName], beside it before it is recolored.
- * It goes in the same file, so every configuration that sets the color keeps its own original.
- */
-internal fun keepOriginalColor(document: Document, entry: Element) {
-    val keep = document.createElement("color")
-    keep.setAttribute("name", originalColorName(entry.getAttribute("name")))
-    keep.textContent = entry.textContent
-    entry.parentNode.appendChild(keep)
-}
-
-/**
- * What each theme item held before the rewrite, counted by value. A few items differ between
- * TikTok's dark palettes (the tinted ones set UISheetFlat3 to other grays), and one overlay can
- * hold only one value per item, so [items] takes the value most palettes agree on.
- */
-internal class StandardDarkTally {
-    private val seen = linkedMapOf<String, LinkedHashMap<String, Int>>()
-
-    fun add(name: String, value: String) {
-        val counts = seen.getOrPut(name) { linkedMapOf() }
-        counts[value] = (counts[value] ?: 0) + 1
-    }
-
-    fun items(): Map<String, String> =
-        seen.mapValues { (_, counts) -> counts.entries.maxByOrNull { it.value }!!.key }
-}
-
-/**
- * Reads [styles] before it is rewritten and tallies what Standard dark has to put back: each
- * [surfaces] item whose value is a dark literal (up to the higher ceiling for the [raised]
- * ones, as the rewrite itself decides) keeps that literal, and each item that points at one of
- * the [palette] grays points at the kept original instead.
- */
-internal fun tallyStandardDark(
-    styles: Document,
-    surfaces: Set<String>,
-    palette: Set<String>,
-    raised: Set<String>,
-    into: StandardDarkTally,
-) {
-    val items = styles.getElementsByTagName("item")
-    for (index in 0 until items.length) {
-        val item = items.item(index) as Element
-        val name = item.getAttribute("name")
-        val value = item.textContent.trim()
-        if (name in surfaces) {
-            val ceiling = if (name in raised) RAISED_SURFACE_CEILING else DARK_SURFACE_CEILING
-            if (isOpaqueLiteralUnder(value, ceiling)) into.add(name, value)
-        } else if (value.startsWith("@color/") && value.removePrefix("@color/") in palette) {
-            into.add(name, "@color/" + originalColorName(value.removePrefix("@color/")))
-        }
-    }
-}
-
-/** Adds the overlay style holding [items] to [styles]. */
-internal fun addStandardDarkStyle(styles: Document, items: Map<String, String>) {
-    val style = styles.createElement("style")
-    style.setAttribute("name", STANDARD_DARK_STYLE)
-    items.forEach { (name, value) ->
-        val item = styles.createElement("item")
-        item.setAttribute("name", name)
-        item.textContent = value
-        style.appendChild(item)
-    }
-    styles.documentElement.appendChild(style)
 }

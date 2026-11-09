@@ -97,6 +97,8 @@ public class SettingsStatus {
     public static boolean alwaysShowPublishDateEnabled = false;
     public static boolean systemFontEnabled = false;
     public static boolean turnOffHapticsEnabled = false;
+    public static boolean hideDeleteForMeEnabled = false;
+    public static boolean amoledDarkModeEnabled = false;
     public static boolean screenTransitionsEnabled = false;
     public static boolean diagnosticsEnabled = false;
     public static boolean blockAuthorEnabled = false;
@@ -146,7 +148,6 @@ public class SettingsStatus {
     public static boolean commentsFullHeightEnabled = false;
     public static boolean videoOverlaysEnabled = false;
     public static boolean feedTextSizeEnabled = false;
-    public static boolean amoledThemeEnabled = false;
     public static boolean shareSheetEnabled = false;
     public static boolean seenVideoFilterEnabled = false;
     public static boolean ghostModeEnabled = false;
@@ -489,6 +490,14 @@ public class SettingsStatus {
         turnOffHapticsEnabled = true;
     }
 
+    public static void enableHideDeleteForMe() {
+        hideDeleteForMeEnabled = true;
+    }
+
+    public static void enableAmoledDarkMode() {
+        amoledDarkModeEnabled = true;
+    }
+
     public static void enableScreenTransitions() {
         screenTransitionsEnabled = true;
     }
@@ -727,10 +736,6 @@ public class SettingsStatus {
 
     public static void enableFeedTextSize() {
         feedTextSizeEnabled = true;
-    }
-
-    public static void enableAmoledTheme() {
-        amoledThemeEnabled = true;
     }
 
     /** Hide video overlays found the Footnotes banner's gate on this build and hooked it. */

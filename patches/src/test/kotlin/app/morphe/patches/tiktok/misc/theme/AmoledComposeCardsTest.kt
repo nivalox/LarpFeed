@@ -14,7 +14,6 @@ import com.android.tools.smali.dexlib2.iface.Method
 import com.android.tools.smali.dexlib2.iface.instruction.NarrowLiteralInstruction
 import com.android.tools.smali.dexlib2.iface.instruction.OneRegisterInstruction
 import com.android.tools.smali.dexlib2.iface.instruction.RegisterRangeInstruction
-import com.android.tools.smali.dexlib2.iface.instruction.WideLiteralInstruction
 import com.android.tools.smali.dexlib2.iface.reference.FieldReference
 import com.android.tools.smali.dexlib2.iface.reference.MethodReference
 import org.junit.Assert.assertEquals
@@ -26,8 +25,9 @@ import org.junit.Test
  * The Compose half of AMOLED dark theme (#152), held to each declared build: the palette labels
  * its UIPageGrouped2 field in toString, exactly one palette builder starts that field at TikTok's
  * dark gray, every card color that builder writes is a dark gray packed by one static `(J)J`
- * (a shift left by 32, the Compose Color packing), and after the repaint each of those writes
- * stores the chosen color through that same conversion, with TikTok's own instructions in order.
+ * (a shift left by 32, the Compose Color packing, which the extension packs the AMOLED color by),
+ * and after the repaint each of those writes stores what the switch in Larpfeed settings answers
+ * for TikTok's packed color, with TikTok's own instructions in order.
  * The light palettes and the high contrast dark one are other builders and aren't touched.
  */
 class AmoledComposeCardsTest {
@@ -70,7 +70,7 @@ class AmoledComposeCardsTest {
 
             val before = builder.implementation!!.instructions.toList()
             val painted = MutableMethod(builder)
-            painted.paintCards(field, composeArgb("#000000"))
+            painted.paintCards(field)
             val after = painted.implementation!!.instructions.toList()
             assertEquals("$version: two instructions per card color", before.size + 2 * writes.size, after.size)
             val added = mutableSetOf<Int>()
@@ -81,24 +81,25 @@ class AmoledComposeCardsTest {
                 ) {
                     return@forEachIndexed
                 }
-                // The choice, its result, then the builder's own conversion and its result.
-                val choose = after[index - 4]
-                assertEquals("$version: the choice isn't asked right before the conversion", Opcode.INVOKE_STATIC_RANGE, choose.opcode)
-                val chooser = choose.getReference<MethodReference>()!!
-                assertEquals(AMOLED_THEME_EXTENSION, chooser.definingClass)
-                assertEquals("card", chooser.name)
-                assertEquals(2, (choose as RegisterRangeInstruction).registerCount)
-                val result = after[index - 3]
-                assertEquals(Opcode.MOVE_RESULT_WIDE, result.opcode)
-                assertEquals(choose.startRegister, (result as OneRegisterInstruction).registerA)
-                val conversion = after[index - 2].getReference<MethodReference>()!!
+                val register = (instruction as OneRegisterInstruction).registerA
+                // TikTok's packed color goes through the switch, which answers the AMOLED one
+                // while it's on and TikTok's own while it's off (#372).
+                val call = after[index - 2]
+                assertEquals(Opcode.INVOKE_STATIC_RANGE, call.opcode)
+                assertEquals(register, (call as RegisterRangeInstruction).startRegister)
+                assertEquals(2, call.registerCount)
+                val hook = call.getReference<MethodReference>()!!
+                assertEquals("$AMOLED_THEME_EXTENSION->composeCard(J)J", hook.toString())
+                assertEquals(Opcode.MOVE_RESULT_WIDE, after[index - 1].opcode)
+                assertEquals(register, (after[index - 1] as OneRegisterInstruction).registerA)
+                // TikTok's own conversion still packs the color right before.
+                val conversion = after[index - 4].getReference<MethodReference>()!!
                 assertEquals(writes.first().conversion.definingClass, conversion.definingClass)
                 assertEquals(writes.first().conversion.name, conversion.name)
-                assertEquals(Opcode.MOVE_RESULT_WIDE, after[index - 1].opcode)
-                added += index - 4
-                added += index - 3
+                added += index - 2
+                added += index - 1
             }
-            assertEquals("$version: every card color goes through the choice", 2 * writes.size, added.size)
+            assertEquals("$version: every card color goes through the switch", 2 * writes.size, added.size)
             assertEquals(
                 "$version: TikTok's own instructions keep their order",
                 before.map { it.opcode },

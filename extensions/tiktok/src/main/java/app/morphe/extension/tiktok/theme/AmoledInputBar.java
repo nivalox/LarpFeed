@@ -23,8 +23,10 @@ public final class AmoledInputBar {
 
     /** Called with the bar's row and the AMOLED color, right after TikTok sets the bar up. */
     public static void paint(View bar, int argb) {
-        if (bar == null || !AmoledTheme.isAmoled()) return;
+        if (bar == null) return;
         try {
+            // Off in Larpfeed settings, the bar keeps TikTok's look like the rest (#372).
+            if (!AmoledTheme.on()) return;
             // The bar's own context carries the night mode TikTok applied, which the system's doesn't.
             if (SettingsUi.isDarkContext(bar.getContext())) bar.setBackgroundColor(argb);
         } catch (Throwable failure) {

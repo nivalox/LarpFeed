@@ -44,8 +44,8 @@ public class ExtensionPreferenceCategory extends ConditionalPreferenceCategory {
      * next to the rows it is a list of.
      */
     public static boolean isAvailable() {
-        return SettingsStatus.amoledThemeEnabled
-                || SettingsStatus.foldableSplitViewEnabled
+        return SettingsStatus.foldableSplitViewEnabled
+                || SettingsStatus.amoledDarkModeEnabled
                 || SettingsStatus.systemFontEnabled
                 || SettingsStatus.turnOffHapticsEnabled
                 || SettingsStatus.screenTransitionsEnabled
@@ -98,9 +98,19 @@ public class ExtensionPreferenceCategory extends ConditionalPreferenceCategory {
                     "Split comment minimum width", "Window width needed to enable the layout. Restart TikTok to apply this.",
                     Settings.FOLDABLE_SPLIT_VIEW_MIN_WIDTH_DP, "%1$s dp", "%1$s dp"));
         }
-        if (SettingsStatus.systemFontEnabled || SettingsStatus.turnOffHapticsEnabled
-                || SettingsStatus.screenTransitionsEnabled) {
+        if (SettingsStatus.amoledDarkModeEnabled || SettingsStatus.systemFontEnabled
+                || SettingsStatus.turnOffHapticsEnabled || SettingsStatus.screenTransitionsEnabled) {
             addPreference(new SectionHeadingPreference(context, "Appearance"));
+        }
+        if (SettingsStatus.amoledDarkModeEnabled) {
+            addPreference(new TogglePreference(
+                    context,
+                    "AMOLED dark mode",
+                    "Fills dark mode with the color picked while patching, pure black unless another "
+                            + "was chosen. Turn it off for TikTok's own dark grays. Light mode "
+                            + "doesn't change. Restart TikTok to see the change.",
+                    Settings.AMOLED_DARK_MODE
+            ));
         }
         if (SettingsStatus.systemFontEnabled) {
             addPreference(new TogglePreference(
@@ -376,15 +386,6 @@ public class ExtensionPreferenceCategory extends ConditionalPreferenceCategory {
                     Settings.HIDE_AI_CAST
             ));
         }
-        if (SettingsStatus.amoledThemeEnabled) {
-            addPreference(new SectionHeadingPreference(context, "Theme"));
-            addPreference(new ChoicePreference(context, "Dark theme", Settings.AMOLED_THEME,
-                    new String[]{"AMOLED dark", "Standard dark"},
-                    new String[]{"amoled", "standard"})
-                    .withNote("AMOLED dark paints TikTok's dark backgrounds black, or the color picked when patching. "
-                            + "Standard dark keeps TikTok's own gray. Light mode and the Light and Dark choice in "
-                            + "TikTok's Display settings aren't affected."));
-        }
         // The whole app, not the feed: screenshots and the status bar used to be on Feed screen and
         // the store check on Privacy, under a heading of its own.
         if (SettingsStatus.screenCaptureEnabled || SettingsStatus.videoOverlaysEnabled
@@ -452,11 +453,13 @@ public class ExtensionPreferenceCategory extends ConditionalPreferenceCategory {
                     Settings.REPORT_NEWER_PHONE_TO_EFFECTS
             ));
             addPreference(new InputTextPreference(context, "Phone model for effects",
-                    "The model the effects server is told, like SM-S938B for a Galaxy S25 Ultra or Pixel 9 Pro. "
-                            + "An effect turned down for one phone may open for another. Leave empty for the Galaxy S24 Ultra.",
+                    "Pick the phone the effects server is told about, or type any model. "
+                            + "An effect turned down for one phone may open for another. Empty means the Galaxy S24 Ultra.",
                     Settings.EFFECT_PHONE_MODEL)
                     .withFreeTextKeyboard()
-                    .withCheck(EffectDeviceSpoof::modelProblem));
+                    .withCheck(EffectDeviceSpoof::modelProblem)
+                    .withChoices(EffectDeviceSpoof.listedLabels(), EffectDeviceSpoof.listedModels(),
+                            "Type another model"));
         }
         if (SettingsStatus.launcherShortcutsEnabled) {
             addPreference(new TogglePreference(
@@ -493,6 +496,14 @@ public class ExtensionPreferenceCategory extends ConditionalPreferenceCategory {
                 "Close with Back or a tap outside",
                 "Off, only its button closes it.",
                 Settings.STARTUP_MESSAGE_DISMISSIBLE
+        ));
+        // Asked from the same opening of TikTok as the startup message (#377).
+        addPreference(new TogglePreference(
+                context,
+                "Check for Larpfeed updates",
+                "Once a day when TikTok opens, ask GitHub if a newer Larpfeed is out and show a "
+                        + "card when it is. The request carries your Larpfeed version and nothing else.",
+                Settings.CHECK_FOR_UPDATES
         ));
         if (SettingsStatus.firstLaunchSetupEnabled) {
             addPreference(new TogglePreference(

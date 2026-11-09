@@ -1,10 +1,16 @@
 name: Release bundle
 
-# Builds and signs patches-<version>.mpp, writes SHA256SUMS.txt, publishes a GitHub
-# release and refreshes patches-bundle.json (the file Morphe Manager reads).
+# Bumps the version, builds and signs patches-<version>.mpp, writes SHA256SUMS.txt, tags and
+# publishes a GitHub release, and refreshes patches-bundle.json (the file Morphe Manager reads).
 #
-# Run it from the Actions tab (Run workflow), or push a tag that matches
-# gradle.properties, for example v0.81.0.
+# Run it from the Actions tab (Run workflow) on the default branch and pick the bump:
+#   minor (default)  0.81.0 -> 0.82.0
+#   patch            0.81.0 -> 0.81.1
+#   major            0.81.0 -> 1.0.0
+#   none             release the version already in gradle.properties
+#
+# The bump is committed to the default branch only after the build has passed, so a failed
+# run leaves the repository as it was.
 #
 # One-time setup, repository secret MORPHE_SIGNING_KEY: the Base64 private key whose public half
 # is in morphe-signing.pub. Optional secret GPR_TOKEN: a personal access token with
@@ -12,8 +18,12 @@ name: Release bundle
 
 on:
   workflow_dispatch:
-  push:
-    tags: ['v*']
+    inputs:
+      bump:
+        description: How to bump the version
+        type: choice
+        options: [minor, patch, major, none]
+        default: minor
 
 permissions:
   contents: write
@@ -54,17 +64,13 @@ jobs:
 
       - uses: gradle/actions/setup-gradle@v4
 
-      - name: Check version and signing key
+      - name: Check the branch and signing key
         env:
           MORPHE_SIGNING_KEY: ${{ secrets.MORPHE_SIGNING_KEY }}
         run: |
           set -euo pipefail
-          VERSION=$(sed -n 's/^version *= *//p' gradle.properties | tr -d '[:space:]')
-          if [ -z "$VERSION" ]; then
-            echo "::error::gradle.properties has no version line."; exit 1
-          fi
-          if [ "$GITHUB_REF_TYPE" = "tag" ] && [ "$GITHUB_REF_NAME" != "v$VERSION" ]; then
-            echo "::error::Tag $GITHUB_REF_NAME doesn't match gradle.properties version $VERSION."; exit 1
+          if [ "$GITHUB_REF_NAME" != "${{ github.event.repository.default_branch }}" ]; then
+            echo "::error::Run this on the default branch (${{ github.event.repository.default_branch }}), not $GITHUB_REF_NAME."; exit 1
           fi
           if [ -z "${MORPHE_SIGNING_KEY:-}" ]; then
             echo "::error::Add the repository secret MORPHE_SIGNING_KEY (Settings > Secrets and variables > Actions)."; exit 1
@@ -86,7 +92,45 @@ jobs:
               print("::error::MORPHE_SIGNING_KEY doesn't match morphe-signing.pub. Commit your own public key first.")
               sys.exit(1)
           PY
-          echo "VERSION=$VERSION" >> "$GITHUB_ENV"
+
+      - name: Bump the version
+        env:
+          BUMP: ${{ inputs.bump }}
+        run: |
+          set -euo pipefail
+          python3 - <<'PY'
+          import os, re, subprocess, sys
+          text = open("gradle.properties", encoding="utf-8", newline="").read()
+          m = re.search(r"(?m)^version[ \t]*=[ \t]*(\d+)\.(\d+)\.(\d+)[ \t]*\r?$", text)
+          if not m:
+              print("::error::gradle.properties needs a version line like: version = 0.81.0"); sys.exit(1)
+          major, minor, patch = (int(part) for part in m.groups())
+          old = f"{major}.{minor}.{patch}"
+          bump = os.environ.get("BUMP") or "minor"
+          if bump == "major":
+              major, minor, patch = major + 1, 0, 0
+          elif bump == "minor":
+              minor, patch = minor + 1, 0
+          elif bump == "patch":
+              patch += 1
+          elif bump != "none":
+              print(f"::error::Unknown bump {bump}."); sys.exit(1)
+          new = f"{major}.{minor}.{patch}"
+          tags = subprocess.run(["git", "ls-remote", "--tags", "origin", f"refs/tags/v{new}"],
+                                capture_output=True, text=True, check=True).stdout.strip()
+          if tags:
+              print(f"::error::The tag v{new} already exists. Pick a bigger bump."); sys.exit(1)
+          if new != old:
+              eol = "\r" if m.group(0).endswith("\r") else ""
+              text = text[:m.start()] + f"version = {new}{eol}" + text[m.end():]
+              open("gradle.properties", "w", encoding="utf-8", newline="").write(text)
+              readme = open("README.md", encoding="utf-8", newline="").read()
+              readme = re.sub(r"(badge/version-)\d+\.\d+\.\d+(-)", lambda mo: mo.group(1) + new + mo.group(2), readme)
+              open("README.md", "w", encoding="utf-8", newline="").write(readme)
+          with open(os.environ["GITHUB_ENV"], "a") as env:
+              env.write(f"OLD_VERSION={old}\nVERSION={new}\n")
+          print(f"Version {old} -> {new}")
+          PY
 
       # gradle/verification-metadata.xml was generated on Windows and macOS, so it has no checksum
       # for the Linux aapt2 jar and Gradle refuses to use it on this runner. Fetch that one jar
@@ -126,6 +170,29 @@ jobs:
           print(f"Added {name} {digest}")
           PY
 
+      # The build checks patches-list.json against the version, so it is regenerated for the new
+      # one and committed with the bump before the build, which leaves the source it records clean.
+      - name: Update the patch list
+        env:
+          GITHUB_ACTOR: ${{ github.actor }}
+          GITHUB_TOKEN: ${{ secrets.GPR_TOKEN || github.token }}
+        run: |
+          set -euo pipefail
+          chmod +x gradlew
+          ./gradlew :patches:generatePatchesList --no-daemon --stacktrace
+
+      - name: Commit the version bump
+        run: |
+          set -euo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add gradle.properties patches-list.json README.md
+          if git diff --cached --quiet; then
+            echo "Nothing to commit."
+          else
+            git commit -m "chore(release): v$VERSION [skip ci]"
+          fi
+
       - name: Build and sign the bundle
         env:
           MORPHE_SIGNING_KEY: ${{ secrets.MORPHE_SIGNING_KEY }}
@@ -155,38 +222,37 @@ jobs:
         run: |
           set -euo pipefail
           TAG="v$VERSION"
+          # The build passed, so the bump goes to the default branch now and the tag points at it.
+          git push origin "HEAD:${{ github.event.repository.default_branch }}"
+          SHA=$(git rev-parse HEAD)
           cd patches/build/release
           if gh release view "$TAG" >/dev/null 2>&1; then
             gh release upload "$TAG" "patches-$VERSION.mpp" SHA256SUMS.txt --clobber
           else
             gh release create "$TAG" "patches-$VERSION.mpp" SHA256SUMS.txt \
-              --target "$GITHUB_SHA" --title "$TAG" --generate-notes
+              --target "$SHA" --title "$TAG" --generate-notes
           fi
 
       - name: Refresh patches-bundle.json
-        env:
-          GH_TOKEN: ${{ github.token }}
         run: |
           set -euo pipefail
+          DEFAULT="${{ github.event.repository.default_branch }}"
+          # The aapt2 checksum edit was for this run only.
           git checkout -- gradle/verification-metadata.xml
-          DEFAULT=$(gh repo view --json defaultBranchRef --jq .defaultBranchRef.name)
-          git fetch origin "$DEFAULT"
-          git checkout -B "$DEFAULT" "origin/$DEFAULT"
           jq --arg v "$VERSION" \
              --arg d "$(date -u +%Y-%m-%dT%H:%M:%S)" \
              --arg u "https://github.com/$GITHUB_REPOSITORY/releases/download/v$VERSION/patches-$VERSION.mpp" \
              --arg k "$(tr -d '[:space:]' < morphe-signing.pub)" \
-             '.version=$v | .created_at=$d | .download_url=$u | .public_key=$k' \
+             '.version=$v | .created_at=$d | .download_url=$u | .public_key=$k
+              | .description |= sub("Larpfeed v[0-9]+\\.[0-9]+\\.[0-9]+"; "Larpfeed v" + $v)' \
              patches-bundle.json > /tmp/patches-bundle.json
           cp /tmp/patches-bundle.json patches-bundle.json
           if git diff --quiet -- patches-bundle.json; then
             echo "patches-bundle.json is already current."
           else
-            git config user.name "github-actions[bot]"
-            git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
             git add patches-bundle.json
             git commit -m "chore(release): point patches-bundle.json at v$VERSION [skip ci]"
-            git push origin "$DEFAULT" || {
+            git push origin "HEAD:$DEFAULT" || {
               echo "::warning::Couldn't push to $DEFAULT (branch protection?). Update patches-bundle.json by hand:"
               cat patches-bundle.json
             }

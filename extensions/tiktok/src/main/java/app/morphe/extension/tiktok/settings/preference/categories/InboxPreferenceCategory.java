@@ -31,7 +31,8 @@ public final class InboxPreferenceCategory extends ConditionalPreferenceCategory
 
     /** Whether this page has anything on it. The row into it asks the same question. */
     public static boolean isAvailable() {
-        return SettingsStatus.inboxFilterEnabled
+        return SettingsStatus.hideDeleteForMeEnabled
+                || SettingsStatus.inboxFilterEnabled
                 || SettingsStatus.hideSuggestedAccountsEnabled
                 || SettingsStatus.hideInboxStoriesEnabled
                 || SettingsStatus.inboxOnThisDayEnabled
@@ -53,6 +54,22 @@ public final class InboxPreferenceCategory extends ConditionalPreferenceCategory
 
     @Override
     public void addPreferences(Context context) {
+        if (SettingsStatus.hideDeleteForMeEnabled) {
+            addPreference(new TogglePreference(
+                    context,
+                    "Hide Delete for me",
+                    "Removes the Delete for me button from the menu on a message in a chat, so it can't be tapped by mistake. "
+                            + "Other buttons in that menu are unchanged.",
+                    Settings.HIDE_DELETE_FOR_ME
+            ));
+            addPreference(new InputTextPreference(
+                    context,
+                    "Delete for me label",
+                    "Only if TikTok isn't in English: type the button's text exactly as it shows in your language. "
+                            + "Separate several with commas.",
+                    Settings.HIDE_DELETE_FOR_ME_TEXT
+            ));
+        }
         if (SettingsStatus.hideReadReceiptsEnabled) {
             addPreference(new TogglePreference(
                     context,

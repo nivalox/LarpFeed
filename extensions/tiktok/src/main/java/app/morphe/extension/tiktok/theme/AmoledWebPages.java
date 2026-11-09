@@ -44,13 +44,14 @@ public final class AmoledWebPages {
 
     /** Called at the start of TikTok's page-finished and page-visible callbacks. Never throws. */
     public static void onPage(WebView webView, String url) {
-        if (!AmoledTheme.isAmoled()) return;
         onPage(webView, url, color());
     }
 
     static void onPage(WebView webView, String url, int argb) {
         try {
             if (webView == null || argb == 0 || !BrowserPrivacyGuard.isTrustedAppPage(url)) return;
+            // Off in Larpfeed settings, the pages keep TikTok's grays like the app (#372).
+            if (!AmoledTheme.on()) return;
             HookStatus.bound(HOOK_FAMILY, cssColor(argb));
             // TikTok hands one page event down a chain of its clients, so a page can hear this a
             // few times. The script keeps one style element, so a repeat only rewrites it.
@@ -61,7 +62,7 @@ public final class AmoledWebPages {
     }
 
     /** The AMOLED color, filled in by the patch. Zero leaves the pages as TikTok draws them. */
-    static int color() {
+    private static int color() {
         return 0;
     }
 
