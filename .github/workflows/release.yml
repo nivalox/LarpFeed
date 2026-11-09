@@ -170,6 +170,10 @@ jobs:
           print(f"Added {name} {digest}")
           PY
 
+      # gradle/verification-metadata.xml was made on Windows and macOS and lacks some checksums
+      # (a few Maven POMs, the Linux aapt2). The two Gradle runs below run in write mode, which adds
+      # a checksum for anything unlisted and leaves the rest alone; the step after the build then
+      # fails the run if any checksum that was already listed changed or disappeared.
       # The build checks patches-list.json against the version, so it is regenerated for the new
       # one and committed with the bump before the build, which leaves the source it records clean.
       - name: Update the patch list
@@ -179,7 +183,7 @@ jobs:
         run: |
           set -euo pipefail
           chmod +x gradlew
-          ./gradlew :patches:generatePatchesList --no-daemon --stacktrace
+          ./gradlew --write-verification-metadata sha256 --no-configuration-cache :patches:generatePatchesList --no-daemon --stacktrace
 
       - name: Commit the version bump
         run: |
@@ -201,7 +205,44 @@ jobs:
         run: |
           set -euo pipefail
           chmod +x gradlew
-          ./gradlew :patches:buildAndroid --no-daemon --stacktrace
+          ./gradlew --write-verification-metadata sha256 --no-configuration-cache :patches:buildAndroid --no-daemon --stacktrace
+
+      - name: Check the checksum file only grew
+        run: |
+          set -euo pipefail
+          git show HEAD:gradle/verification-metadata.xml > "$RUNNER_TEMP/verification-before.xml"
+          python3 - <<'PY'
+          import os, sys
+          import xml.etree.ElementTree as ET
+
+          def load(path):
+              found = {}
+              for component in ET.parse(path).getroot().iter():
+                  if component.tag.split("}")[-1] != "component":
+                      continue
+                  for artifact in component:
+                      if artifact.tag.split("}")[-1] != "artifact":
+                          continue
+                      key = (component.get("group"), component.get("name"), component.get("version"), artifact.get("name"))
+                      values = found.setdefault(key, set())
+                      for checksum in artifact:
+                          kind = checksum.tag.split("}")[-1]
+                          if kind in ("md5", "sha1", "sha256", "sha512"):
+                              values.add((kind, checksum.get("value")))
+              return found
+
+          before = load(os.path.join(os.environ["RUNNER_TEMP"], "verification-before.xml"))
+          after = load("gradle/verification-metadata.xml")
+          lost = [key for key, values in before.items() if not values <= after.get(key, set())]
+          added = [key for key in after if key not in before]
+          print(f"{len(added)} checksums added by Gradle, {len(before)} already listed.")
+          for key in added:
+              print("  added:", ":".join(str(part) for part in key))
+          if lost:
+              for key in lost:
+                  print("::error::A listed checksum changed or went missing:", ":".join(str(part) for part in key))
+              sys.exit(1)
+          PY
 
       - name: Write SHA256SUMS.txt
         run: |
@@ -257,3 +298,4 @@ jobs:
               cat patches-bundle.json
             }
           fi
+          
