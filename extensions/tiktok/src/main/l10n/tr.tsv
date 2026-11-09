@@ -2642,3 +2642,17 @@ Dismiss	Yoksay
 Adds a Record button to LIVE rooms. Tap it to start or stop recording. Leaving the room also stops a recording.	LIVE odalarına Kaydet düğmesi ekler. Kaydı başlatmak veya durdurmak için dokun. Odadan çıkınca kayıt da durur.
 Automatically record LIVEs you enter	Girdiğin LIVE yayınlarını otomatik kaydet
 Start recording a LIVE's stream when you enter the room. Stop won't restart it until you leave and enter again. Screen recordings still need a tap and Android's permission.	Bir LIVE odasına girdiğinde yayını kaydetmeye başlar. Durdurduktan sonra odadan çıkıp yeniden girene kadar kayıt başlamaz. Ekran kaydı için yine dokunman ve Android izni gerekir.
+# context: the menu row that opens the Confirm before toggles, its dialog, and the message menu rows
+Confirm before…	Şunlardan önce onayla…
+Pick the taps that need a second tap before they go through.	Gerçekleşmeden önce ikinci bir dokunuş gerektirecek işlemleri seçin.
+Confirm before Unsend	Göndermeyi geri almadan önce onayla
+Confirm before Delete for me	“Benim için sil” öncesinde onayla
+Tap Unsend in a message's menu twice within %1$d seconds.	Bir mesajın menüsünde “Göndermeyi geri al” düğmesine %1$d saniye içinde iki kez dokunun.
+Tap Delete for me in a message's menu twice within %1$d seconds.	Bir mesajın menüsünde “Benim için sil” düğmesine %1$d saniye içinde iki kez dokunun.
+Hide Delete for me	“Benim için sil” düğmesini gizle
+Removes the Delete for me button from the menu on a message in a chat, so it can't be tapped by mistake. Other buttons in that menu are unchanged.	Bir sohbetteki mesajın menüsünden “Benim için sil” düğmesini kaldırır; böylece yanlışlıkla dokunulamaz. Menüdeki diğer düğmeler değişmez.
+Delete for me label	“Benim için sil” etiketi
+Unsend label	“Göndermeyi geri al” etiketi
+Only if TikTok isn't in English: type the button's text exactly as it shows in your language. Separate several with commas.	Yalnızca TikTok İngilizce değilse: düğmenin metnini kendi dilinizde göründüğü gibi yazın. Birden fazlasını virgülle ayırın.
+Tap again to unsend	Göndermeyi geri almak için yeniden dokun
+Tap again to delete for me	Benim için silmek için yeniden dokun

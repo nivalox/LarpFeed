@@ -14,7 +14,7 @@ import app.morphe.patches.tiktok.misc.settings.settingsPatch
 import app.morphe.util.addInstruction
 import com.android.tools.smali.dexlib2.Opcode
 
-private const val DELETE_FOR_ME_EXTENSION = "Lapp/morphe/extension/tiktok/inbox/DeleteForMe;"
+private const val MESSAGE_MENU_EXTENSION = "Lapp/morphe/extension/tiktok/inbox/MessageMenu;"
 
 /** TikTok's own text label. Tux keeps its real names, so this one doesn't depend on a renamed class. */
 private const val TUX_TEXT_VIEW_CLASS = "Lcom/bytedance/tux/input/TuxTextView;"
@@ -29,27 +29,29 @@ internal fun MutableMethod.watchBeforeReturns() {
         .filter { it.value.opcode == Opcode.RETURN_VOID }
         .map { it.index }
     if (returns.isEmpty()) {
-        throw PatchException("Hide Delete for me: a TuxTextView constructor has no return to hook.")
+        throw PatchException("Message menu controls: a TuxTextView constructor has no return to hook.")
     }
     returns.asReversed().forEach { index ->
         addInstruction(
             index,
-            "invoke-static/range { p0 .. p0 }, $DELETE_FOR_ME_EXTENSION->watch(Landroid/widget/TextView;)V",
+            "invoke-static/range { p0 .. p0 }, $MESSAGE_MENU_EXTENSION->watch(Landroid/widget/TextView;)V",
         )
     }
 }
 
 /**
- * Takes the Delete for me button out of the menu on a message in a chat. It watches every
- * TuxTextView, TikTok's label view, for the button's text and hides the row the label sits in,
- * so it needs no knowledge of the menu's own, renamed, classes. If the button isn't drawn by a
- * TuxTextView, or its text isn't the one in Larpfeed settings, nothing changes.
+ * The buttons in the menu on a message in a chat: hides Delete for me, or asks for a second tap
+ * before Unsend or Delete for me goes through. It watches every TuxTextView, TikTok's label
+ * view, for a button's text and acts on the row the label sits in, so it needs no knowledge of
+ * the menu's own, renamed, classes. If a button isn't drawn by a TuxTextView, or its text isn't
+ * the one in Larpfeed settings, nothing changes.
  */
 @Suppress("unused")
-val hideDeleteForMePatch = bytecodePatch(
-    name = "Hide Delete for me",
-    description = "Removes the Delete for me button from the menu on a message in a chat, so it " +
-        "can't be tapped by mistake. Starts off. Turn it on in Larpfeed settings > Inbox.",
+val messageMenuPatch = bytecodePatch(
+    name = "Message menu controls",
+    description = "Hides the Delete for me button in the menu on a message in a chat, or asks for a " +
+        "second tap before Unsend or Delete for me goes through. Starts off. Turn them on in " +
+        "Larpfeed settings.",
 ) {
     category("Inbox")
     dependsOn(settingsPatch, sharedExtensionPatch)
@@ -58,12 +60,12 @@ val hideDeleteForMePatch = bytecodePatch(
     execute {
         SettingsStatusLoadFingerprint.method.addInstruction(
             0,
-            "invoke-static {}, Lapp/morphe/extension/tiktok/settings/SettingsStatus;->enableHideDeleteForMe()V",
+            "invoke-static {}, Lapp/morphe/extension/tiktok/settings/SettingsStatus;->enableMessageMenu()V",
         )
         val constructors = mutableClassDefBy(TUX_TEXT_VIEW_CLASS).methods
             .filter { it.name == "<init>" && it.implementation != null }
         if (constructors.isEmpty()) {
-            throw PatchException("Hide Delete for me: TuxTextView has no constructor with code.")
+            throw PatchException("Message menu controls: TuxTextView has no constructor with code.")
         }
         constructors.forEach { it.watchBeforeReturns() }
     }

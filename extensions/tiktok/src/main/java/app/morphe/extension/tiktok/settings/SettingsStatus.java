@@ -97,7 +97,7 @@ public class SettingsStatus {
     public static boolean alwaysShowPublishDateEnabled = false;
     public static boolean systemFontEnabled = false;
     public static boolean turnOffHapticsEnabled = false;
-    public static boolean hideDeleteForMeEnabled = false;
+    public static boolean messageMenuEnabled = false;
     public static boolean amoledDarkModeEnabled = false;
     public static boolean screenTransitionsEnabled = false;
     public static boolean diagnosticsEnabled = false;
@@ -490,8 +490,8 @@ public class SettingsStatus {
         turnOffHapticsEnabled = true;
     }
 
-    public static void enableHideDeleteForMe() {
-        hideDeleteForMeEnabled = true;
+    public static void enableMessageMenu() {
+        messageMenuEnabled = true;
     }
 
     public static void enableAmoledDarkMode() {

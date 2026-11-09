@@ -1,7 +1,7 @@
 ![Larpfeed. Take back your feed with focused controls for filtering, gestures, playback, downloads and privacy.](assets/readme-hero.png)
 
 <p align="center">
-  <a href="CHANGELOG.md"><img alt="version" src="https://img.shields.io/badge/version-0.82.0-6f42c1.svg" /></a>
+  <a href="CHANGELOG.md"><img alt="version" src="https://img.shields.io/badge/version-0.81.0-6f42c1.svg" /></a>
   <a href="LICENSE"><img alt="license" src="https://img.shields.io/badge/license-GPLv3-blue.svg" /></a>
   <a href="https://www.android.com/"><img alt="platform" src="https://img.shields.io/badge/platform-Android-3ddc84.svg" /></a>
   <a href="https://github.com/MorpheApp/morphe-manager"><img alt="Morphe" src="https://img.shields.io/badge/works%20with-Morphe-00b894.svg" /></a>
@@ -20,6 +20,8 @@
 </p>
 
 # Larpfeed
+
+> **Larpfeed is a fork of [HushFeed](https://github.com/SysAdminDoc/HushFeed)** by SysAdminDoc, renamed and carried on with changes of its own. It keeps HushFeed's patches, its GPLv3 licence and its credits, and the work it builds on is listed under [Credits](#credits). The details are in the [changelog](CHANGELOG.md).
 
 Larpfeed is a set of [Morphe](https://github.com/MorpheApp/morphe-manager) patches for TikTok. You bring the TikTok APK, Morphe Manager patches it on your phone, and the patched app gets a Larpfeed page in its settings with a switch for each patch you picked. Hide the ads and the clutter over videos. Make Follow and Like ask for a second tap. Save videos without the watermark, and stop the usage statistics and crash reports TikTok sends home.
 
@@ -158,7 +160,7 @@ Simple mode in Morphe Manager selects 128 of these patches. Each row says what t
 | `Comment send fix` | Fixes comments that TikTok sometimes drops without any message, so the comment you send actually posts. Works as soon as you patch it in, with no switch. |
 | `Comment sort controls` | Shows TikTok's full comment sort menu on every video, with hot, newest, media and creator options, even when your account only got a cut-down version. Starts off. Turn it on in Larpfeed settings > Comments. |
 | `Comment tools` | Hides comments with words you pick or from accounts you pick, and adds a search box for a video's comments. It can also make links tappable and show poll results before you vote. Starts off. Turn it on in Larpfeed settings > Comments. |
-| `Confirm feed interactions` | Asks for a second tap before Follow, a like, or a quick repost goes through, so a stray tap doesn't count. Starts off. Turn it on in Larpfeed settings > Feed screen. |
+| `Confirm feed interactions` | Asks for a second tap before Follow, a like, or a quick repost goes through, so a stray tap doesn't count. Starts off. Turn each choice on in Larpfeed settings > Interface, under Confirm before.... |
 | `Copy bio and IDs` | Lets you long-press a bio to copy it, makes the @names in a bio open those profiles on a tap, and adds share sheet buttons that copy a display name, username, user ID or video ID. On a profile card inside a LIVE room, long-press the bio or the name to copy it, long-press the username for the user ID, or tap the copy mark by the username. On by default. Turn it off in Larpfeed settings > App. |
 | `Copy comments without username` | When you copy a comment, you get just its text, without the username in front. On by default. Turn it off in Larpfeed settings > Comments. |
 | `Create stickers` | Adds a Create button to the Saved page of the comment sticker panel. Pick a photo and it turns into one of your saved stickers. Make sticker in a video's share sheet opens TikTok's sticker editor for any video, or uses its cover when the editor can't open. Profiles that have stickers keep their Stickers tab, and it opens their sticker sets. Works as soon as you patch it in, with no switch. |
@@ -200,7 +202,7 @@ Simple mode in Morphe Manager selects 128 of these patches. Each row says what t
 | `Hide comment typing suggestions` | Hides the emoji and sticker suggestions that pop up above the comment box while you type. The emoji and sticker buttons still work. Starts off. Turn it on in Larpfeed settings > Comments. |
 | `Hide profile shortcuts` | Hides the shortcuts you pick from the row under a profile's bio, like TikTok Studio or Your orders, and can hide the Thoughts bubble, and Balance and the TikTok Minis icons in your profile's menu. It can also turn Thoughts on for accounts TikTok left out. Starts off. Turn it on in Larpfeed settings > App, then restart TikTok. |
 | `Hide read receipts` | Stops TikTok telling people you've read their messages. Your own unread badges still clear as usual. Starts off. Turn it on in Larpfeed settings > Inbox. |
-| `Hide Delete for me` | Removes the Delete for me button from the menu on a message in a chat, so it can't be tapped by mistake. Starts off. Turn it on in Larpfeed settings > Inbox. |
+| `Message menu controls` | Works on the menu you get from a message in a chat: hides Delete for me, or asks for a second tap before Unsend or Delete for me goes through. Starts off. Turn each on in Larpfeed settings. |
 | `Hide search suggestions` | Hides the searches TikTok suggests before you type, and can hide the search rewards banner. Your own search history stays. Starts off. Turn it on in Larpfeed settings > App. |
 | `Hide suggested accounts` | Hides TikTok's People you may like suggestions in the Inbox, on profiles, on the Friends tab and in the feed. It uses the same switch as Hide inbox items. Starts off. Turn it on in Larpfeed settings > Inbox. |
 | `Hide the launcher shortcuts` | Empties the menu that pops up when you press and hold TikTok's icon on your home screen. Tapping the icon still opens the app. Starts off. Turn it on in Larpfeed settings > App. |
@@ -441,6 +443,7 @@ The diagnostic report and a feed capture stay on your phone until you copy or sa
 
 Larpfeed stands on a lot of other people's work, and the licence asks that this stays visible.
 
+- [SysAdminDoc/HushFeed](https://github.com/SysAdminDoc/HushFeed), the project Larpfeed is a fork of. Nearly everything here started as its work.
 - [icysymmetra/tiktok-patches-for-morphe](https://github.com/icysymmetra/tiktok-patches-for-morphe), the Metra patches this project was forked from. Most of the original patch set, the settings framework and the Feature Gate Lab come from there, as does the release history below 0.8.0 in the changelog.
 - [kveld9/kveld-morphe-patches](https://github.com/kveld9/kveld-morphe-patches/tree/fcb1768620b8f98a6dd31e801074589ce9a63356) for the eight optional TikTok optimizer patches and the extra Npth telemetry coverage, adapted from v1.23.1 at commit `fcb1768620b8f98a6dd31e801074589ce9a63356`.
 - [ReVanced](https://gitlab.com/revanced/revanced-patches), whose TikTok patches the whole lineage continues, and [RookieEnough/De-Vanced](https://github.com/RookieEnough/De-Vanced), which upstream was built from.

@@ -2819,3 +2819,17 @@ Dismiss	Скрыть
 Adds a Record button to LIVE rooms. Tap it to start or stop recording. Leaving the room also stops a recording.	Добавляет кнопку записи в комнаты LIVE. Нажмите её, чтобы начать или остановить запись. При выходе из комнаты запись тоже останавливается.
 Automatically record LIVEs you enter	Автоматически записывать LIVE при входе
 Start recording a LIVE's stream when you enter the room. Stop won't restart it until you leave and enter again. Screen recordings still need a tap and Android's permission.	Начинает запись потока LIVE при входе в комнату. После остановки запись не возобновится, пока вы не выйдете и не зайдёте снова. Для записи экрана по-прежнему нужны нажатие и разрешение Android.
+# context: the menu row that opens the Confirm before toggles, its dialog, and the message menu rows
+Confirm before…	Подтверждать перед…
+Pick the taps that need a second tap before they go through.	Выберите действия, для которых нужно второе нажатие, прежде чем они сработают.
+Confirm before Unsend	Подтверждать перед отзывом сообщения
+Confirm before Delete for me	Подтверждать перед «Удалить у меня»
+Tap Unsend in a message's menu twice within %1$d seconds.	Нажмите «Отозвать» в меню сообщения дважды в течение %1$d сек.
+Tap Delete for me in a message's menu twice within %1$d seconds.	Нажмите «Удалить у меня» в меню сообщения дважды в течение %1$d сек.
+Hide Delete for me	Скрыть «Удалить у меня»
+Removes the Delete for me button from the menu on a message in a chat, so it can't be tapped by mistake. Other buttons in that menu are unchanged.	Убирает кнопку «Удалить у меня» из меню сообщения в чате, чтобы её нельзя было нажать по ошибке. Остальные кнопки меню не меняются.
+Delete for me label	Название кнопки «Удалить у меня»
+Unsend label	Название кнопки «Отозвать»
+Only if TikTok isn't in English: type the button's text exactly as it shows in your language. Separate several with commas.	Только если TikTok не на английском: введите текст кнопки точно так, как он показан на вашем языке. Несколько вариантов разделяйте запятыми.
+Tap again to unsend	Нажмите ещё раз, чтобы отозвать
+Tap again to delete for me	Нажмите ещё раз, чтобы удалить у меня

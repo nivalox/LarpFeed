@@ -480,6 +480,8 @@ public class Settings extends BaseSettings {
     public static final BooleanSetting CONFIRM_COMMENT_LIKE = new BooleanSetting("confirm_comment_like", FALSE);
     public static final BooleanSetting CONFIRM_STORY_LIKE = new BooleanSetting("confirm_story_like", FALSE);
     public static final BooleanSetting CONFIRM_QUICK_REPOST = new BooleanSetting("confirm_quick_repost", FALSE);
+    public static final BooleanSetting CONFIRM_UNSEND = new BooleanSetting("confirm_unsend", FALSE);
+    public static final BooleanSetting CONFIRM_DELETE_FOR_ME = new BooleanSetting("confirm_delete_for_me", FALSE);
     public static final StringSetting BLOCKED_CAPTION_WORDS =
             new FeedRuleStringSetting("blocked_caption_words", false);
     public static final BooleanSetting BLOCKED_WORDS_IN_STICKERS = new BooleanSetting("blocked_words_in_stickers", FALSE);
@@ -1310,6 +1312,8 @@ public class Settings extends BaseSettings {
     public static final BooleanSetting HIDE_DELETE_FOR_ME = new BooleanSetting("hide_delete_for_me", FALSE);
     /** Comma separated: the button's text in a language other than English. */
     public static final StringSetting HIDE_DELETE_FOR_ME_TEXT = new StringSetting("hide_delete_for_me_text", "");
+    /** Comma separated: the Unsend button's text in a language other than English. */
+    public static final StringSetting UNSEND_LABEL_TEXT = new StringSetting("unsend_label_text", "");
     // Feed filter additions. The list based ones are read live, so a sound blocked from
     // the player takes effect on the next feed page without a restart.
     public static final BooleanSetting HIDE_BLOCKED_SOUNDS = new BooleanSetting("hide_blocked_sounds", TRUE);

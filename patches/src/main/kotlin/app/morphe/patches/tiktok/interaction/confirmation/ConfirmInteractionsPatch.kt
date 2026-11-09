@@ -181,8 +181,8 @@ internal fun MutableMethod.hookStoryLike() {
 val confirmInteractionsPatch = bytecodePatch(
     name = "Confirm feed interactions",
     description = "Asks for a second tap before Follow, a like, or a quick repost goes " +
-        "through, so a stray tap doesn't count. Starts off. Turn it on in Larpfeed settings > " +
-        "Feed screen.",
+        "through, so a stray tap doesn't count. Starts off. Turn each choice on in Larpfeed " +
+        "settings > Interface, under Confirm before...",
 ) {
     category("Interaction")
     compatibleWith(*AppCompatibilities.tiktok())

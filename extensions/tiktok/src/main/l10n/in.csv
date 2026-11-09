@@ -2568,3 +2568,16 @@ Dismiss,Abaikan
 Adds a Record button to LIVE rooms. Tap it to start or stop recording. Leaving the room also stops a recording.,Menambahkan tombol Rekam di ruang LIVE. Ketuk untuk mulai atau berhenti merekam. Rekaman juga berhenti saat kamu meninggalkan ruang.
 Automatically record LIVEs you enter,Rekam LIVE secara otomatis saat masuk
 Start recording a LIVE's stream when you enter the room. Stop won't restart it until you leave and enter again. Screen recordings still need a tap and Android's permission.,"Mulai merekam siaran LIVE saat kamu masuk ke ruangnya. Setelah dihentikan, rekaman tidak dimulai lagi sampai kamu keluar dan masuk kembali. Perekaman layar tetap memerlukan ketukan dan izin Android."
+Confirm before…,Konfirmasi sebelum…
+Pick the taps that need a second tap before they go through.,Pilih ketukan yang memerlukan ketukan kedua sebelum dijalankan.
+Confirm before Unsend,Konfirmasi sebelum menarik pesan
+Confirm before Delete for me,Konfirmasi sebelum “Hapus untuk saya”
+Tap Unsend in a message's menu twice within %1$d seconds.,Ketuk “Tarik pesan” dua kali dalam %1$d detik di menu pesan.
+Tap Delete for me in a message's menu twice within %1$d seconds.,Ketuk “Hapus untuk saya” dua kali dalam %1$d detik di menu pesan.
+Hide Delete for me,Sembunyikan “Hapus untuk saya”
+"Removes the Delete for me button from the menu on a message in a chat, so it can't be tapped by mistake. Other buttons in that menu are unchanged.",Menghapus tombol “Hapus untuk saya” dari menu pesan di obrolan agar tidak terketuk secara tidak sengaja. Tombol lain di menu itu tidak berubah.
+Delete for me label,Teks “Hapus untuk saya”
+Unsend label,Teks “Tarik pesan”
+Only if TikTok isn't in English: type the button's text exactly as it shows in your language. Separate several with commas.,Hanya jika TikTok tidak berbahasa Inggris: ketik teks tombol persis seperti yang tampil dalam bahasa Anda. Pisahkan beberapa dengan koma.
+Tap again to unsend,Ketuk lagi untuk menarik pesan
+Tap again to delete for me,Ketuk lagi untuk menghapus untuk saya

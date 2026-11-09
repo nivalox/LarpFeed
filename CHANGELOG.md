@@ -6,7 +6,8 @@ Every Larpfeed release, newest first.
 
 ### Features
 
-* New patch `Hide Delete for me` removes the Delete for me button from the menu on a message in a chat. Turn it on in Larpfeed settings > Inbox. It finds the button by its text, so if TikTok isn't in English, type the button's text in `Delete for me label`.
+* New patch `Message menu controls` works on the menu you get from a message in a chat. Turn on `Hide Delete for me` in Larpfeed settings > Inbox to remove that button, or `Confirm before Unsend` and `Confirm before Delete for me` in the new `Confirm before...` menu to ask for a second tap first. It finds each button by its text, so if TikTok isn't in English, type the button's text in `Delete for me label` or `Unsend label`.
+* The `Confirm before...` toggles are one menu now, in Larpfeed settings > Interface. It holds Follow, a like, a comment like, a story like, a quick repost, Unsend and Delete for me. Your choices carry over.
 * Larpfeed now supports TikTok 47.7.3, and only that one. 47.7.2 isn't supported anymore. Grab the 47.7.3 bundle or APK from APKMirror and patch it with the same signing key, so your login and settings carry over.
 * Larpfeed builds on Morphe patcher 2.3.0 now, so it needs Morphe Manager 2.5.0 or newer, or morphe-desktop 2.1.1 on a computer. Older Managers refuse the bundle.
 * `Jump to a date on Liked grids` puts a button in the Liked grid's top corner. Pick a year, then a month or the whole year, and your likes start there, so older ones load without scrolling through everything newer. Newest likes in the same menu goes back. It starts off and lives in Larpfeed settings > Feed screen, under the grid sort rows (#350).

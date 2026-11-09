@@ -108,6 +108,14 @@ public final class TapConfirmation {
         return allow(owner, null, "repost", id, Settings.CONFIRM_QUICK_REPOST.get() && id != null);
     }
 
+    /**
+     * A button in the menu on a message in a chat: "unsend" or "delete" (Delete for me). The second
+     * tap has to come from the same row, inside the window.
+     */
+    public static boolean messageMenu(View row, String action) {
+        return allow(row, row, action, "message", true);
+    }
+
     static boolean allow(View view, String action, String id, boolean enabled) {
         return allow(view, view, action, id, enabled);
     }
@@ -149,6 +157,10 @@ public final class TapConfirmation {
                 ? L10n.t("Tap again to follow")
                 : "repost".equals(action)
                 ? L10n.t("Tap again to repost")
+                : "unsend".equals(action)
+                ? L10n.t("Tap again to unsend")
+                : "delete".equals(action)
+                ? L10n.t("Tap again to delete for me")
                 : L10n.t("Tap again to like");
         Utils.showToastShort(message);
         return false;

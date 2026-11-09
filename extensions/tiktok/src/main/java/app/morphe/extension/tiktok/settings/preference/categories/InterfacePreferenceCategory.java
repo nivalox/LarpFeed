@@ -20,6 +20,7 @@ import app.morphe.extension.tiktok.settings.L10n;
 import app.morphe.extension.tiktok.settings.Settings;
 import app.morphe.extension.tiktok.settings.SettingsStatus;
 import app.morphe.extension.tiktok.settings.preference.ChoicePreference;
+import app.morphe.extension.tiktok.settings.preference.ConfirmMenuPreference;
 import app.morphe.extension.tiktok.settings.preference.NumberInputPreference;
 import app.morphe.extension.tiktok.settings.preference.PopupLabelChecklistPreference;
 import app.morphe.extension.tiktok.settings.preference.SectionHeadingPreference;
@@ -75,7 +76,8 @@ public final class InterfacePreferenceCategory extends ConditionalPreferenceCate
                 || SettingsStatus.longPressSpeedLockEnabled
                 || SettingsStatus.disableLongPressQuickShareEnabled
                 || SettingsStatus.disableLongPressRepostEnabled
-                || SettingsStatus.confirmInteractionsEnabled;
+                || SettingsStatus.confirmInteractionsEnabled
+                || SettingsStatus.messageMenuEnabled;
     }
 
     @Override
@@ -888,6 +890,7 @@ public final class InterfacePreferenceCategory extends ConditionalPreferenceCate
                 || SettingsStatus.disableLongPressQuickShareEnabled
                 || SettingsStatus.disableLongPressRepostEnabled
                 || SettingsStatus.confirmInteractionsEnabled
+                || SettingsStatus.messageMenuEnabled
                 || SettingsStatus.videoOverlaysEnabled;
         if (!any) return;
         addPreference(new SectionHeadingPreference(context, "Gestures"));
@@ -1037,27 +1040,41 @@ public final class InterfacePreferenceCategory extends ConditionalPreferenceCate
                     Settings.DISABLE_LONG_PRESS_REPOST
             ));
         }
-        if (SettingsStatus.confirmInteractionsEnabled) {
-            addPreference(new TogglePreference(context, "Confirm before following",
-                    L10n.f(context, "Tap the feed Follow button twice within %1$d seconds.",
-                            TapConfirmation.CONFIRM_WINDOW_SECONDS),
-                    Settings.CONFIRM_FOLLOW));
-            addPreference(new TogglePreference(context, "Confirm before liking",
-                    L10n.f(context, "Tap the like heart twice within %1$d seconds. Removing a like stays immediate.",
-                            TapConfirmation.CONFIRM_WINDOW_SECONDS),
-                    Settings.CONFIRM_LIKE));
-            addPreference(new TogglePreference(context, "Confirm before liking a comment",
-                    L10n.f(context, "Tap a comment's heart twice within %1$d seconds. A double tap on the comment needs a second one too. Removing a like stays immediate.",
-                            TapConfirmation.CONFIRM_WINDOW_SECONDS),
-                    Settings.CONFIRM_COMMENT_LIKE));
-            addPreference(new TogglePreference(context, "Confirm before liking a story",
-                    L10n.f(context, "Tap a story's heart twice within %1$d seconds. Removing a like stays immediate.",
-                            TapConfirmation.CONFIRM_WINDOW_SECONDS),
-                    Settings.CONFIRM_STORY_LIKE));
-            addPreference(new TogglePreference(context, "Confirm before a quick repost",
-                    L10n.f(context, "Tap Repost on the bar under a video twice within %1$d seconds. A repost with a note is left alone.",
-                            TapConfirmation.CONFIRM_WINDOW_SECONDS),
-                    Settings.CONFIRM_QUICK_REPOST));
+        if (SettingsStatus.confirmInteractionsEnabled || SettingsStatus.messageMenuEnabled) {
+            List<ConfirmMenuPreference.Entry> confirmations = new ArrayList<>();
+            if (SettingsStatus.confirmInteractionsEnabled) {
+                confirmations.add(new ConfirmMenuPreference.Entry("Confirm before following",
+                        L10n.f(context, "Tap the feed Follow button twice within %1$d seconds.",
+                                TapConfirmation.CONFIRM_WINDOW_SECONDS),
+                        Settings.CONFIRM_FOLLOW));
+                confirmations.add(new ConfirmMenuPreference.Entry("Confirm before liking",
+                        L10n.f(context, "Tap the like heart twice within %1$d seconds. Removing a like stays immediate.",
+                                TapConfirmation.CONFIRM_WINDOW_SECONDS),
+                        Settings.CONFIRM_LIKE));
+                confirmations.add(new ConfirmMenuPreference.Entry("Confirm before liking a comment",
+                        L10n.f(context, "Tap a comment's heart twice within %1$d seconds. A double tap on the comment needs a second one too. Removing a like stays immediate.",
+                                TapConfirmation.CONFIRM_WINDOW_SECONDS),
+                        Settings.CONFIRM_COMMENT_LIKE));
+                confirmations.add(new ConfirmMenuPreference.Entry("Confirm before liking a story",
+                        L10n.f(context, "Tap a story's heart twice within %1$d seconds. Removing a like stays immediate.",
+                                TapConfirmation.CONFIRM_WINDOW_SECONDS),
+                        Settings.CONFIRM_STORY_LIKE));
+                confirmations.add(new ConfirmMenuPreference.Entry("Confirm before a quick repost",
+                        L10n.f(context, "Tap Repost on the bar under a video twice within %1$d seconds. A repost with a note is left alone.",
+                                TapConfirmation.CONFIRM_WINDOW_SECONDS),
+                        Settings.CONFIRM_QUICK_REPOST));
+            }
+            if (SettingsStatus.messageMenuEnabled) {
+                confirmations.add(new ConfirmMenuPreference.Entry("Confirm before Unsend",
+                        L10n.f(context, "Tap Unsend in a message's menu twice within %1$d seconds.",
+                                TapConfirmation.CONFIRM_WINDOW_SECONDS),
+                        Settings.CONFIRM_UNSEND));
+                confirmations.add(new ConfirmMenuPreference.Entry("Confirm before Delete for me",
+                        L10n.f(context, "Tap Delete for me in a message's menu twice within %1$d seconds.",
+                                TapConfirmation.CONFIRM_WINDOW_SECONDS),
+                        Settings.CONFIRM_DELETE_FOR_ME));
+            }
+            addPreference(new ConfirmMenuPreference(context, confirmations));
         }
     }
 }

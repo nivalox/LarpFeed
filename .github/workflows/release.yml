@@ -1,7 +1,13 @@
 name: Release bundle
 
-# Bumps the version, builds and signs patches-<version>.mpp, writes SHA256SUMS.txt, tags and
-# publishes a GitHub release, and refreshes patches-bundle.json (the file Morphe Manager reads).
+# Does what scripts/release/release.ps1 does, minus the two steps that need a TikTok APK and an
+# Android device: bumps the version, cuts the changelog, regenerates the release files, runs the
+# tests and lint, builds and signs patches-<version>.mpp, checks the bundle, publishes a GitHub
+# release (as a draft first, checked against the hosted files), and refreshes patches-bundle.json.
+#
+# Not covered here, because a hosted runner has neither: "apply" (every patch applied to a real
+# TikTok APK with morphe-desktop) and "walk" (the patched app run through every screen on a
+# device). Run those on your own machine before you trust a bundle on your phone.
 #
 # Run it from the Actions tab (Run workflow) on the default branch and pick the bump:
 #   minor (default)  0.81.0 -> 0.82.0
@@ -9,8 +15,9 @@ name: Release bundle
 #   major            0.81.0 -> 1.0.0
 #   none             release the version already in gradle.properties
 #
-# The bump is committed to the default branch only after the build has passed, so a failed
-# run leaves the repository as it was.
+# CHANGELOG.md needs entries under "## Unreleased": the cut turns them into the new version's
+# section. Nothing is pushed until the tests and the build have passed, so a failed run leaves
+# the repository as it was.
 #
 # One-time setup, repository secret MORPHE_SIGNING_KEY: the Base64 private key whose public half
 # is in morphe-signing.pub. Optional secret GPR_TOKEN: a personal access token with
@@ -36,7 +43,7 @@ concurrency:
 jobs:
   release:
     runs-on: ubuntu-latest
-    timeout-minutes: 90
+    timeout-minutes: 180
     steps:
       - uses: actions/checkout@v4
         with:
@@ -46,6 +53,10 @@ jobs:
         with:
           distribution: temurin
           java-version: '21'
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.13'
 
       # The runner image already has the Android SDK. android-actions/setup-android fails on it
       # ("Failed to find package 'tools'"), so use the preinstalled one and accept its licenses.
@@ -170,13 +181,23 @@ jobs:
           print(f"Added {name} {digest}")
           PY
 
+      - name: Cut the changelog
+        run: |
+          set -euo pipefail
+          # release.ps1's cut: the Unreleased entries become this version's section.
+          if grep -Eq "^## ${VERSION//./\\.} \\(" CHANGELOG.md; then
+            echo "CHANGELOG.md already has $VERSION."
+          else
+            python3 tools/release_text.py cut --version "$VERSION"
+          fi
+
       # gradle/verification-metadata.xml was made on Windows and macOS and lacks some checksums
       # (a few Maven POMs, the Linux aapt2). The two Gradle runs below run in write mode, which adds
       # a checksum for anything unlisted and leaves the rest alone; the step after the build then
       # fails the run if any checksum that was already listed changed or disappeared.
       # The build checks patches-list.json against the version, so it is regenerated for the new
       # one and committed with the bump before the build, which leaves the source it records clean.
-      - name: Update the patch list
+      - name: Update the patch list and release files
         env:
           GITHUB_ACTOR: ${{ github.actor }}
           GITHUB_TOKEN: ${{ secrets.GPR_TOKEN || github.token }}
@@ -184,18 +205,43 @@ jobs:
           set -euo pipefail
           chmod +x gradlew
           ./gradlew --write-verification-metadata sha256 --no-configuration-cache :patches:generatePatchesList --no-daemon --stacktrace
+          # The rest of release.ps1's cut: the guide, and the What's new data the app embeds.
+          python3 tools/release_text.py guide
+          python3 tools/gen-release-notes.py
+          # The generated translation classes have to match the tables, or the app shows stale text.
+          python3 scripts/gen-l10n.py
+          GENERATED='extensions/tiktok/src/main/java/app/morphe/extension/tiktok/settings/L10nTranslations*.java extensions/tiktok/src/main/l10n/en.csv'
+          # shellcheck disable=SC2086
+          if ! git diff --quiet -- $GENERATED; then
+            git status --short -- $GENERATED
+            echo "::error::The translation tables and the generated classes disagree. Run python scripts/gen-l10n.py and commit the result."
+            exit 1
+          fi
 
       - name: Commit the version bump
         run: |
           set -euo pipefail
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add gradle.properties patches-list.json README.md
+          git add -A -- . ':(exclude)local.properties' ':(exclude)**/__pycache__/**'
+          # The checksum additions are for this run only.
+          git reset -q gradle/verification-metadata.xml
           if git diff --cached --quiet; then
             echo "Nothing to commit."
           else
-            git commit -m "chore(release): v$VERSION [skip ci]"
+            git commit -m "chore(release): prepare $VERSION for publication [skip ci]"
           fi
+
+      - name: Run the tests and lint
+        env:
+          GITHUB_ACTOR: ${{ github.actor }}
+          GITHUB_TOKEN: ${{ secrets.GPR_TOKEN || github.token }}
+        run: |
+          set -euo pipefail
+          # The same tasks release.ps1's test step runs.
+          ./gradlew --write-verification-metadata sha256 --no-configuration-cache --continue \
+            :extensions:tiktok:test :patches:test :extensions:shared:library:lint :extensions:tiktok:lint \
+            --no-daemon --stacktrace
 
       - name: Build and sign the bundle
         env:
@@ -206,6 +252,26 @@ jobs:
           set -euo pipefail
           chmod +x gradlew
           ./gradlew --write-verification-metadata sha256 --no-configuration-cache :patches:buildAndroid --no-daemon --stacktrace
+
+      - name: Verify the bundle
+        run: |
+          set -euo pipefail
+          python3 - <<'PY'
+          import os, re, sys, zipfile
+          path = f"patches/build/release/patches-{os.environ['VERSION']}.mpp"
+          with zipfile.ZipFile(path) as bundle:
+              if "classes.dex" not in bundle.namelist():
+                  print("::error::The bundle has no classes.dex, so Manager would load no patches."); sys.exit(1)
+              comment = bundle.comment.decode("ascii", "replace")
+          match = re.fullmatch(r"MorpheSig1 ([A-Za-z0-9+/]{43}=) ([A-Za-z0-9+/]{86}==)", comment)
+          if not match:
+              print("::error::The bundle has no MorpheSig1 signature."); sys.exit(1)
+          published = open("morphe-signing.pub").read().strip()
+          # Manager pins the first key a source signs with and refuses any other.
+          if match.group(1) != published:
+              print("::error::The bundle isn't signed by morphe-signing.pub."); sys.exit(1)
+          print("classes.dex is there, and the signature is from morphe-signing.pub.")
+          PY
 
       - name: Check the checksum file only grew
         run: |
@@ -263,39 +329,97 @@ jobs:
         run: |
           set -euo pipefail
           TAG="v$VERSION"
-          # The build passed, so the bump goes to the default branch now and the tag points at it.
-          git push origin "HEAD:${{ github.event.repository.default_branch }}"
-          SHA=$(git rev-parse HEAD)
-          cd patches/build/release
-          if gh release view "$TAG" >/dev/null 2>&1; then
-            gh release upload "$TAG" "patches-$VERSION.mpp" SHA256SUMS.txt --clobber
-          else
-            gh release create "$TAG" "patches-$VERSION.mpp" SHA256SUMS.txt \
-              --target "$SHA" --title "$TAG" --generate-notes
+          DEFAULT="${{ github.event.repository.default_branch }}"
+          # The tests and the build passed, so the prepared commit goes to the default branch now.
+          git push origin "HEAD:$DEFAULT"
+          HEAD_SHA=$(git rev-parse HEAD)
+          REMOTE_TAG=$(git ls-remote origin "refs/tags/$TAG" | cut -f1)
+          if [ -n "$REMOTE_TAG" ] && [ "$REMOTE_TAG" != "$HEAD_SHA" ]; then
+            echo "::error::$TAG on GitHub is $REMOTE_TAG, not $HEAD_SHA."; exit 1
           fi
+          if [ -z "$REMOTE_TAG" ]; then
+            git tag "$TAG" "$HEAD_SHA"
+            git push origin "refs/tags/$TAG"
+          fi
+          # The notes: what this run checked, then the changelog's section for this version.
+          python3 - <<'PY' > "$RUNNER_TEMP/notes.md"
+          import os, re
+          version = os.environ["VERSION"]
+          changelog = open("CHANGELOG.md", encoding="utf-8").read()
+          found = re.search(rf"^## {re.escape(version)} \(.*?\)\n(.*?)(?=^## |\Z)", changelog, re.S | re.M)
+          print(f"Built by GitHub Actions from {os.environ['GITHUB_SHA'][:7]}.")
+          print()
+          print("What was checked:")
+          print()
+          print("* The unit tests and lint passed.")
+          print("* The bundle has its classes.dex and is signed by this source's key.")
+          print("* The files below are the ones that were uploaded, hash for hash.")
+          print("* Not checked here: the patches applied to a real TikTok APK, or the patched app run on a device.")
+          print()
+          print(found.group(1).strip() if found else "")
+          PY
+          cd patches/build/release
+          if gh release view "$TAG" --json isDraft --jq .isDraft 2>/dev/null | grep -q false; then
+            echo "::error::$TAG is already public."; exit 1
+          fi
+          if gh release view "$TAG" >/dev/null 2>&1; then
+            gh release edit "$TAG" --notes-file "$RUNNER_TEMP/notes.md"
+          else
+            gh release create "$TAG" --draft --verify-tag --title "$TAG" --notes-file "$RUNNER_TEMP/notes.md"
+          fi
+          gh release upload "$TAG" "patches-$VERSION.mpp" SHA256SUMS.txt --clobber
+          # Download them back and compare, and only then make the release public.
+          mkdir -p "$RUNNER_TEMP/downloaded"
+          gh release download "$TAG" --dir "$RUNNER_TEMP/downloaded" --clobber
+          for file in "patches-$VERSION.mpp" SHA256SUMS.txt; do
+            if [ "$(sha256sum "$file" | cut -d' ' -f1)" != "$(sha256sum "$RUNNER_TEMP/downloaded/$file" | cut -d' ' -f1)" ]; then
+              echo "::error::The hosted $file isn't the file that was uploaded. $TAG is still a draft."; exit 1
+            fi
+          done
+          gh release edit "$TAG" --draft=false --latest
+          echo "$TAG is public."
 
       - name: Refresh patches-bundle.json
+        env:
+          GH_TOKEN: ${{ github.token }}
         run: |
           set -euo pipefail
           DEFAULT="${{ github.event.repository.default_branch }}"
-          # The aapt2 checksum edit was for this run only.
+          # The aapt2 and other checksum additions were for this run only.
           git checkout -- gradle/verification-metadata.xml
-          jq --arg v "$VERSION" \
+          COUNT=$(jq '(.patches // .) | length' patches-list.json)
+          jq --arg v "$VERSION" --argjson n "$COUNT" \
              --arg d "$(date -u +%Y-%m-%dT%H:%M:%S)" \
              --arg u "https://github.com/$GITHUB_REPOSITORY/releases/download/v$VERSION/patches-$VERSION.mpp" \
              --arg k "$(tr -d '[:space:]' < morphe-signing.pub)" \
              '.version=$v | .created_at=$d | .download_url=$u | .public_key=$k
-              | .description |= sub("Larpfeed v[0-9]+\\.[0-9]+\\.[0-9]+"; "Larpfeed v" + $v)' \
-             patches-bundle.json > /tmp/patches-bundle.json
-          cp /tmp/patches-bundle.json patches-bundle.json
+              | .description |= (sub("Larpfeed v[0-9]+\\.[0-9]+\\.[0-9]+"; "Larpfeed v" + $v) | sub("[0-9]+ patches"; "\($n) patches"))' \
+             patches-bundle.json > "$RUNNER_TEMP/patches-bundle.json"
+          cp "$RUNNER_TEMP/patches-bundle.json" patches-bundle.json
           if git diff --quiet -- patches-bundle.json; then
             echo "patches-bundle.json is already current."
           else
             git add patches-bundle.json
-            git commit -m "chore(release): point patches-bundle.json at v$VERSION [skip ci]"
+            git commit -m "chore(release): point Manager to the verified $VERSION bundle [skip ci]"
             git push origin "HEAD:$DEFAULT" || {
-              echo "::warning::Couldn't push to $DEFAULT (branch protection?). Update patches-bundle.json by hand:"
+              echo "::error::Couldn't push to $DEFAULT (branch protection?). patches-bundle.json has to be updated by hand:"
               cat patches-bundle.json
+              exit 1
             }
           fi
-          
+          # What Manager reads is what GitHub hosts, so check that and not the local copy.
+          HOSTED=$(gh api "repos/$GITHUB_REPOSITORY/contents/patches-bundle.json?ref=$DEFAULT" -H 'Accept: application/vnd.github.raw' | jq -r .version)
+          if [ "$HOSTED" != "$VERSION" ]; then
+            echo "::error::GitHub's patches-bundle.json reads $HOSTED, not $VERSION."; exit 1
+          fi
+          echo "patches-bundle.json on $DEFAULT reads $VERSION."
+
+      - name: Keep the test reports
+        if: failure()
+        uses: actions/upload-artifact@v4
+        with:
+          name: reports
+          path: |
+            **/build/reports/**
+            **/build/test-results/**
+          if-no-files-found: ignore

@@ -2642,3 +2642,17 @@ Dismiss	Dispensar
 Adds a Record button to LIVE rooms. Tap it to start or stop recording. Leaving the room also stops a recording.	Adiciona um botão Gravar às salas de LIVE. Toque nele para iniciar ou parar uma gravação. Sair da sala também encerra a gravação.
 Automatically record LIVEs you enter	Gravar LIVEs automaticamente ao entrar
 Start recording a LIVE's stream when you enter the room. Stop won't restart it until you leave and enter again. Screen recordings still need a tap and Android's permission.	Começa a gravar a transmissão de uma LIVE quando você entra na sala. Depois de parar, não volta a gravar até você sair e entrar novamente. A gravação de tela ainda exige um toque e a permissão do Android.
+# context: the menu row that opens the Confirm before toggles, its dialog, and the message menu rows
+Confirm before…	Confirmar antes de…
+Pick the taps that need a second tap before they go through.	Escolha as ações que precisam de um segundo toque antes de serem feitas.
+Confirm before Unsend	Confirmar antes de cancelar o envio
+Confirm before Delete for me	Confirmar antes de “Excluir para mim”
+Tap Unsend in a message's menu twice within %1$d seconds.	Toque duas vezes em “Cancelar envio” no menu de uma mensagem em até %1$d segundos.
+Tap Delete for me in a message's menu twice within %1$d seconds.	Toque duas vezes em “Excluir para mim” no menu de uma mensagem em até %1$d segundos.
+Hide Delete for me	Ocultar “Excluir para mim”
+Removes the Delete for me button from the menu on a message in a chat, so it can't be tapped by mistake. Other buttons in that menu are unchanged.	Remove o botão “Excluir para mim” do menu de uma mensagem em um chat, para que não seja tocado por engano. Os outros botões do menu não mudam.
+Delete for me label	Texto de “Excluir para mim”
+Unsend label	Texto de “Cancelar envio”
+Only if TikTok isn't in English: type the button's text exactly as it shows in your language. Separate several with commas.	Somente se o TikTok não estiver em inglês: digite o texto do botão exatamente como aparece no seu idioma. Separe vários com vírgulas.
+Tap again to unsend	Toque de novo para cancelar o envio
+Tap again to delete for me	Toque de novo para excluir para mim
