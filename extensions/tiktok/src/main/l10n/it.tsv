@@ -346,11 +346,6 @@ Compare gate reads with their previous values.	Confronta le letture dei gate con
 Kept an interrupted change. Restart TikTok to apply.	Mantenuta una modifica interrotta. Riavvia TikTok.
 Config	Configurazione
 Config (Settings Manager)	Configurazione (Settings Manager)
-Confirm before a quick repost	Conferma prima di una ripubblicazione rapida
-Confirm before following	Conferma prima di seguire
-Confirm before liking	Conferma prima di mettere Mi piace
-Confirm before liking a comment	Conferma prima di mettere Mi piace a un commento
-Confirm before liking a story	Conferma prima di mettere Mi piace a una storia
 Continue supported videos from where you stopped when you scroll back to them.	Riprendi i video supportati dal punto in cui li avevi interrotti quando torni a scorrerli.
 Controls	Controlli
 Feature gate report copied	Rapporto dei gate copiato
@@ -1140,14 +1135,9 @@ Subtitles	Sottotitoli
 System	Sistema
 Feed tabs to keep	Schede del feed da mantenere
 Hide the streak button in a chat and the reminder message that goes with it.	Nasconde il pulsante della serie in una chat e il messaggio di promemoria che lo accompagna.
-Tap a comment's heart twice within %1$d seconds. A double tap on the comment needs a second one too. Removing a like stays immediate.	Tocca due volte il cuore di un commento entro %1$d secondi. Anche un doppio tocco sul commento ne richiede un secondo. La rimozione di un Mi piace resta immediata.
-Tap a story's heart twice within %1$d seconds. Removing a like stays immediate.	Tocca due volte il cuore di una storia entro %1$d secondi. La rimozione di un Mi piace resta immediata.
-Tap Repost on the bar under a video twice within %1$d seconds. A repost with a note is left alone.	Tocca due volte Ripubblica nella barra sotto un video entro %1$d secondi. Un repost con una nota resta invariato.
 Tap again to follow	Tocca di nuovo per seguire
 Tap again to like	Tocca di nuovo per mettere Mi piace
 Tap again to repost	Tocca di nuovo per ripubblicare
-Tap the feed Follow button twice within %1$d seconds.	Tocca due volte il pulsante Segui nel feed entro %1$d secondi.
-Tap the like heart twice within %1$d seconds. Removing a like stays immediate.	Tocca due volte il cuore del Mi piace entro %1$d secondi. La rimozione di un Mi piace resta immediata.
 Tap to start the feed	Tocca per avviare il feed
 Technical details	Dettagli tecnici
 Technical details, %1$s	Dettagli tecnici, %1$s
@@ -2644,11 +2634,6 @@ Automatically record LIVEs you enter	Registra automaticamente le LIVE quando ent
 Start recording a LIVE's stream when you enter the room. Stop won't restart it until you leave and enter again. Screen recordings still need a tap and Android's permission.	Avvia la registrazione dello stream LIVE quando entri nella stanza. Dopo aver premuto Stop, non ricomincia finché non esci e rientri. La registrazione dello schermo richiede ancora un tocco e il permesso di Android.
 # context: the menu row that opens the Confirm before toggles, its dialog, and the message menu rows
 Confirm before…	Conferma prima di…
-Pick the taps that need a second tap before they go through.	Scegli le azioni che richiedono un secondo tocco prima di essere eseguite.
-Confirm before Unsend	Conferma prima di annullare l'invio
-Confirm before Delete for me	Conferma prima di «Elimina per me»
-Tap Unsend in a message's menu twice within %1$d seconds.	Tocca due volte «Annulla invio» nel menu di un messaggio entro %1$d secondi.
-Tap Delete for me in a message's menu twice within %1$d seconds.	Tocca due volte «Elimina per me» nel menu di un messaggio entro %1$d secondi.
 Hide Delete for me	Nascondi «Elimina per me»
 Removes the Delete for me button from the menu on a message in a chat, so it can't be tapped by mistake. Other buttons in that menu are unchanged.	Rimuove il pulsante «Elimina per me» dal menu di un messaggio in una chat, così non può essere toccato per errore. Gli altri pulsanti del menu restano invariati.
 Delete for me label	Testo di «Elimina per me»
@@ -2656,3 +2641,13 @@ Unsend label	Testo di «Annulla invio»
 Only if TikTok isn't in English: type the button's text exactly as it shows in your language. Separate several with commas.	Solo se TikTok non è in inglese: scrivi il testo del pulsante esattamente come appare nella tua lingua. Separa più voci con virgole.
 Tap again to unsend	Tocca di nuovo per annullare l'invio
 Tap again to delete for me	Tocca di nuovo per eliminare per me
+Pick the taps that need a second tap within %1$d seconds.	Scegli le azioni che richiedono un secondo tocco entro %1$d secondi.
+Following someone	Seguire qualcuno
+Liking a video	Mettere Mi piace a un video
+Liking a comment	Mettere Mi piace a un commento
+Liking a story	Mettere Mi piace a una storia
+Reposting quickly	Ripubblicazione rapida
+Unsending a message	Annullare l'invio di un messaggio
+Deleting a message for me	Eliminare un messaggio per me
+Confirming: %1$s	Con conferma: %1$s
+Nothing needs confirming.	Niente richiede conferma.

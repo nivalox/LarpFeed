@@ -388,11 +388,6 @@ Compare gate reads with their previous values.,将门读数与其之前的值进
 Kept an interrupted change. Restart TikTok to apply.,已保留中断的更改。重启 TikTok 以生效.
 Config,配置
 Config (Settings Manager),配置（设置管理器）
-Confirm before a quick repost,快速重新发布之前先确认
-Confirm before following,关注前确认
-Confirm before liking,点赞前先确认
-Confirm before liking a comment,点赞评论前先确认
-Confirm before liking a story,喜欢故事之前先确认
 Continue supported videos from where you stopped when you scroll back to them.,当你滚动回支持的视频时，可以从停止处继续播放这些视频.
 Controls,控制
 Conversations,聊天
@@ -1819,14 +1814,9 @@ Open the Story when a creator is LIVE,创作者在 LIVE 时打开故事
 "When a creator who's LIVE also has a Story, tapping their picture on their profile or on your chat with them in the Inbox opens the Story. Tap the picture again to join the LIVE.",如果正在 LIVE 的创作者也有故事，在其个人资料或收件箱的聊天中点按头像会打开故事。再次点按头像即可进入 LIVE.
 "Take the story ring off profile pictures on the feed, in comments and on profiles. Tapping a picture opens the profile instead of the story.",将故事圈从信息流、评论和个人资料中的个人资料照片中删除。点击图片会打开个人资料而不是故事.
 Takes TikTok's own Auto scroll action out of the video panel and the Auto scroll label off the top of videos. Tablets and unfolded foldables also lose the Auto scroll switch beside videos. Works with Auto-advance off too.,从视频面板中移除 TikTok 自己的自动滚动操作，并去掉视频顶部的自动滚动标签。平板和展开的折叠屏上视频旁的自动滚动开关也会移除。关闭自动前进时也有效.
-Tap Repost on the bar under a video twice within %1$d seconds. A repost with a note is left alone.,在 %1$d 秒内点击视频下方栏上的重新发布两次。带注释的转发将被保留.
-Tap a comment's heart twice within %1$d seconds. A double tap on the comment needs a second one too. Removing a like stays immediate.,在 %1$d 秒内点击评论的心两次。双击评论还需要第二次。立即删除点赞.
-Tap a story's heart twice within %1$d seconds. Removing a like stays immediate.,在 %1$d 秒内点击故事的核心两次。立即删除点赞.
 Tap again to follow,再次点击即可关注
 Tap again to like,再次点按即可喜欢
 Tap again to repost,再次点击即可重新发布
-Tap the feed Follow button twice within %1$d seconds.,在 %1$d 秒内点击信息流 Follow 按钮两次.
-Tap the like heart twice within %1$d seconds. Removing a like stays immediate.,在 %1$d 秒内点击相似的心两次。立即删除点赞.
 Tap to start the feed,点击以开始信息流
 "Tap to start, then scroll until the feed problem shows up and come back here to save it. The file has no captions or names, and videos and creators appear only as short codes. Read it before you share it.",点击开始，然后滚动直到出现信息流问题，然后返回此处保存。该文件没有标题或名称，视频和创建者仅显示为短代码。在分享之前先阅读它.
 "Tap, then go to the screen with what you want hidden. After %1$d seconds Larpfeed records how that screen is built, without any of its text, for the diagnostic report.",点击，然后转到包含你想要隐藏的内容的屏幕。 %1$d 秒后，Larpfeed 记录该屏幕的构建方式（不包含任何文本）以用于诊断报告.
@@ -2311,10 +2301,10 @@ Recording files need recovery,录制文件需要恢复
 The recovery record is damaged. Export a copy of the recording files or delete them.,恢复记录已损坏。请导出录制文件的副本或将其删除.
 Export may be incomplete. The recordings are kept.,导出可能不完整，录制文件仍保留.
 Some recording files remain. Try deleting them again.,仍有录制文件未删除。请再次尝试删除.
-"Recovered recording saved to %1$s","已恢复的录制保存到 %1$s"
-"Open setting location","打开设置所在页面"
-"Expanded","已展开"
-"Collapsed","已折叠"
+Recovered recording saved to %1$s,已恢复的录制保存到 %1$s
+Open setting location,打开设置所在页面
+Expanded,已展开
+Collapsed,已折叠
 This setting isn't available. Search for another setting.,此设置不可用. 请搜索其他设置.
 Hide the Larpfeed row,隐藏 Larpfeed 入口
 "Take Larpfeed out of TikTok's Settings and privacy. To open these settings, press and hold For You at the top of the feed, or Home if Long-press Home for Larpfeed settings is on.",从 TikTok 的“设置和隐私”中移除 Larpfeed。要打开这些设置，请长按信息流顶部的“为你”，如果已开启“长按 Home 进行 Larpfeed 设置”，也可以长按 Home.
@@ -2513,7 +2503,7 @@ Audio only,仅音频
 Pick a video quality to record the screen,请选择视频画质再录屏
 Discover in the bottom bar,底部栏显示“发现”
 "Discover takes the place of Friends in the bottom bar, the way TikTok lays it out in some countries. Your region and your feed stay as they are.",在底部栏中用“发现”替换“好友”，与 TikTok 在部分国家的布局相同。你的地区和推荐内容保持不变.
-"%1$s, new","%1$s，新"
+"%1$s, new",%1$s，新
 Startup message,启动消息
 Show a message of your own each time TikTok opens.,每次打开 TikTok 时显示你自己的消息.
 Message title,消息标题
@@ -2567,15 +2557,20 @@ Adds a Record button to LIVE rooms. Tap it to start or stop recording. Leaving t
 Automatically record LIVEs you enter,进入直播间时自动录制
 Start recording a LIVE's stream when you enter the room. Stop won't restart it until you leave and enter again. Screen recordings still need a tap and Android's permission.,进入直播间时自动开始录制直播流。点击停止后，只有退出并重新进入该直播间才会再次录制。录屏仍需手动点击并获得 Android 授权.
 Confirm before…,操作前确认…
-Pick the taps that need a second tap before they go through.,选择需要再点按一次才会生效的操作。
-Confirm before Unsend,撤回前确认
-Confirm before Delete for me,点按“仅为我删除”前确认
-Tap Unsend in a message's menu twice within %1$d seconds.,在消息菜单中于 %1$d 秒内连续点按两次“撤回”。
-Tap Delete for me in a message's menu twice within %1$d seconds.,在消息菜单中于 %1$d 秒内连续点按两次“仅为我删除”。
 Hide Delete for me,隐藏“仅为我删除”
-"Removes the Delete for me button from the menu on a message in a chat, so it can't be tapped by mistake. Other buttons in that menu are unchanged.",从聊天消息的菜单中移除“仅为我删除”按钮，避免误触。菜单中的其他按钮保持不变。
+"Removes the Delete for me button from the menu on a message in a chat, so it can't be tapped by mistake. Other buttons in that menu are unchanged.",从聊天消息的菜单中移除“仅为我删除”按钮，避免误触。菜单中的其他按钮保持不变.
 Delete for me label,“仅为我删除”的文字
 Unsend label,“撤回”的文字
-Only if TikTok isn't in English: type the button's text exactly as it shows in your language. Separate several with commas.,仅当 TikTok 不是英文时：按该按钮在你的语言中显示的文字原样输入。多个用逗号分隔。
+Only if TikTok isn't in English: type the button's text exactly as it shows in your language. Separate several with commas.,仅当 TikTok 不是英文时：按该按钮在你的语言中显示的文字原样输入。多个用逗号分隔.
 Tap again to unsend,再次点按即可撤回
 Tap again to delete for me,再次点按即可仅为我删除
+Pick the taps that need a second tap within %1$d seconds.,选择需要在 %1$d 秒内再点按一次的操作.
+Following someone,关注某人
+Liking a video,点赞视频
+Liking a comment,点赞评论
+Liking a story,喜欢故事
+Reposting quickly,快速重新发布
+Unsending a message,撤回消息
+Deleting a message for me,仅为我删除消息
+Confirming: %1$s,需要确认：%1$s
+Nothing needs confirming.,没有需要确认的操作.

@@ -391,11 +391,6 @@ Compare gate reads with their previous values.	Сравнивать считан
 Kept an interrupted change. Restart TikTok to apply.	Прерванная правка сохранена. Перезапустите TikTok.
 Config	Конфигурация
 Config (Settings Manager)	Конфигурация (Settings Manager)
-Confirm before a quick repost	Подтверждать перед быстрым репостом
-Confirm before following	Подтверждать перед подпиской
-Confirm before liking	Подтверждать перед лайком
-Confirm before liking a comment	Подтверждать перед лайком комментария
-Confirm before liking a story	Подтверждать перед лайком истории
 Continue supported videos from where you stopped when you scroll back to them.	Продолжать поддерживаемые видео с того места, где вы остановились, когда вы пролистываете назад к ним.
 Controls	Элементы управления
 Feature gate report copied	Отчёт о переключателях скопирован
@@ -1215,14 +1210,9 @@ Subtitles	Субтитры
 System	Система
 Feed tabs to keep	Вкладки ленты, которые нужно оставить
 Hide the streak button in a chat and the reminder message that goes with it.	Скрывать кнопку серии в чате и напоминание, которое к ней прилагается.
-Tap a comment's heart twice within %1$d seconds. A double tap on the comment needs a second one too. Removing a like stays immediate.	Дважды нажмите на сердечко комментария в течение %1$d секунд. Двойное нажатие на сам комментарий тоже потребует повтора. Снятие лайка остаётся мгновенным.
-Tap a story's heart twice within %1$d seconds. Removing a like stays immediate.	Дважды нажмите на сердечко истории в течение %1$d секунд. Снятие лайка остаётся мгновенным.
-Tap Repost on the bar under a video twice within %1$d seconds. A repost with a note is left alone.	Дважды нажмите «Репост» на панели под видео в течение %1$d секунд. Репоста с подписью это не касается.
 Tap again to follow	Нажмите ещё раз, чтобы подписаться
 Tap again to like	Нажмите ещё раз, чтобы лайкнуть
 Tap again to repost	Нажмите ещё раз, чтобы сделать репост
-Tap the feed Follow button twice within %1$d seconds.	Дважды нажмите кнопку «Подписаться» в ленте в течение %1$d секунд.
-Tap the like heart twice within %1$d seconds. Removing a like stays immediate.	Дважды нажмите на сердечко лайка в течение %1$d секунд. Снятие лайка остаётся мгновенным.
 Tap to start the feed	Нажмите, чтобы запустить ленту
 Technical details	Технические сведения
 Technical details, %1$s	Технические сведения, %1$s
@@ -2821,11 +2811,6 @@ Automatically record LIVEs you enter	Автоматически записыва
 Start recording a LIVE's stream when you enter the room. Stop won't restart it until you leave and enter again. Screen recordings still need a tap and Android's permission.	Начинает запись потока LIVE при входе в комнату. После остановки запись не возобновится, пока вы не выйдете и не зайдёте снова. Для записи экрана по-прежнему нужны нажатие и разрешение Android.
 # context: the menu row that opens the Confirm before toggles, its dialog, and the message menu rows
 Confirm before…	Подтверждать перед…
-Pick the taps that need a second tap before they go through.	Выберите действия, для которых нужно второе нажатие, прежде чем они сработают.
-Confirm before Unsend	Подтверждать перед отзывом сообщения
-Confirm before Delete for me	Подтверждать перед «Удалить у меня»
-Tap Unsend in a message's menu twice within %1$d seconds.	Нажмите «Отозвать» в меню сообщения дважды в течение %1$d сек.
-Tap Delete for me in a message's menu twice within %1$d seconds.	Нажмите «Удалить у меня» в меню сообщения дважды в течение %1$d сек.
 Hide Delete for me	Скрыть «Удалить у меня»
 Removes the Delete for me button from the menu on a message in a chat, so it can't be tapped by mistake. Other buttons in that menu are unchanged.	Убирает кнопку «Удалить у меня» из меню сообщения в чате, чтобы её нельзя было нажать по ошибке. Остальные кнопки меню не меняются.
 Delete for me label	Название кнопки «Удалить у меня»
@@ -2833,3 +2818,13 @@ Unsend label	Название кнопки «Отозвать»
 Only if TikTok isn't in English: type the button's text exactly as it shows in your language. Separate several with commas.	Только если TikTok не на английском: введите текст кнопки точно так, как он показан на вашем языке. Несколько вариантов разделяйте запятыми.
 Tap again to unsend	Нажмите ещё раз, чтобы отозвать
 Tap again to delete for me	Нажмите ещё раз, чтобы удалить у меня
+Pick the taps that need a second tap within %1$d seconds.	Выберите действия, для которых нужно второе нажатие в течение %1$d секунд.
+Following someone	Подписка на человека
+Liking a video	Лайк видео
+Liking a comment	Лайк комментария
+Liking a story	Лайк истории
+Reposting quickly	Быстрый репост
+Unsending a message	Отзыв сообщения
+Deleting a message for me	Удаление сообщения у меня
+Confirming: %1$s	С подтверждением: %1$s
+Nothing needs confirming.	Ничего не требует подтверждения.

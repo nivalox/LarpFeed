@@ -343,11 +343,6 @@ Compare gate reads with their previous values.	Compara las lecturas de los inter
 Kept an interrupted change. Restart TikTok to apply.	Cambio a medias conservado. Reinicia TikTok.
 Config	Configuración
 Config (Settings Manager)	Configuración (Settings Manager)
-Confirm before a quick repost	Confirmar antes de un repost rápido
-Confirm before following	Confirmar antes de seguir
-Confirm before liking	Confirmar antes de dar me gusta
-Confirm before liking a comment	Confirmar antes de dar me gusta a un comentario
-Confirm before liking a story	Confirmar antes de dar me gusta a una historia
 Continue supported videos from where you stopped when you scroll back to them.	Continuar los vídeos compatibles desde donde los dejaste cuando vuelvas a ellos.
 Controls	Controles
 Feature gate report copied	Informe de interruptores copiado
@@ -1137,14 +1132,9 @@ Subtitles	Subtítulos
 System	Sistema
 Feed tabs to keep	Pestañas del feed que mantener
 Hide the streak button in a chat and the reminder message that goes with it.	Ocultar el botón de racha de un chat y el mensaje recordatorio que lo acompaña.
-Tap a comment's heart twice within %1$d seconds. A double tap on the comment needs a second one too. Removing a like stays immediate.	Toca el corazón de un comentario dos veces en menos de %1$d segundos. Un doble toque en el comentario también necesita un segundo. Quitar un me gusta sigue siendo inmediato.
-Tap a story's heart twice within %1$d seconds. Removing a like stays immediate.	Toca el corazón de una historia dos veces en menos de %1$d segundos. Quitar un me gusta sigue siendo inmediato.
-Tap Repost on the bar under a video twice within %1$d seconds. A repost with a note is left alone.	Toca Repost en la barra bajo un vídeo dos veces en menos de %1$d segundos. Un repost con nota no se toca.
 Tap again to follow	Toca otra vez para seguir
 Tap again to like	Toca otra vez para dar me gusta
 Tap again to repost	Toca otra vez para hacer repost
-Tap the feed Follow button twice within %1$d seconds.	Toca el botón Seguir del feed dos veces en menos de %1$d segundos.
-Tap the like heart twice within %1$d seconds. Removing a like stays immediate.	Toca el corazón de me gusta dos veces en menos de %1$d segundos. Quitar un me gusta sigue siendo inmediato.
 Tap to start the feed	Toca para poner el feed en marcha
 Technical details	Detalles técnicos
 Technical details, %1$s	Detalles técnicos, %1$s
@@ -2644,11 +2634,6 @@ Automatically record LIVEs you enter	Grabar automáticamente los LIVE al entrar
 Start recording a LIVE's stream when you enter the room. Stop won't restart it until you leave and enter again. Screen recordings still need a tap and Android's permission.	Empieza a grabar la transmisión LIVE cuando entras a la sala. Si tocas Detener, no se reiniciará hasta que salgas y vuelvas a entrar. Las grabaciones de pantalla siguen requiriendo un toque y el permiso de Android.
 # context: the menu row that opens the Confirm before toggles, its dialog, and the message menu rows
 Confirm before…	Confirmar antes de…
-Pick the taps that need a second tap before they go through.	Elige las acciones que necesitan un segundo toque antes de realizarse.
-Confirm before Unsend	Confirmar antes de anular el envío
-Confirm before Delete for me	Confirmar antes de «Eliminar para mí»
-Tap Unsend in a message's menu twice within %1$d seconds.	Toca «Anular el envío» dos veces en %1$d segundos en el menú de un mensaje.
-Tap Delete for me in a message's menu twice within %1$d seconds.	Toca «Eliminar para mí» dos veces en %1$d segundos en el menú de un mensaje.
 Hide Delete for me	Ocultar «Eliminar para mí»
 Removes the Delete for me button from the menu on a message in a chat, so it can't be tapped by mistake. Other buttons in that menu are unchanged.	Quita el botón «Eliminar para mí» del menú de un mensaje en un chat, para que no se toque por error. Los demás botones del menú no cambian.
 Delete for me label	Texto de «Eliminar para mí»
@@ -2656,3 +2641,13 @@ Unsend label	Texto de «Anular el envío»
 Only if TikTok isn't in English: type the button's text exactly as it shows in your language. Separate several with commas.	Solo si TikTok no está en inglés: escribe el texto del botón exactamente como aparece en tu idioma. Separa varios con comas.
 Tap again to unsend	Toca otra vez para anular el envío
 Tap again to delete for me	Toca otra vez para eliminar para mí
+Pick the taps that need a second tap within %1$d seconds.	Elige las acciones que necesitan un segundo toque en menos de %1$d segundos.
+Following someone	Seguir a alguien
+Liking a video	Dar me gusta a un video
+Liking a comment	Dar me gusta a un comentario
+Liking a story	Dar me gusta a una historia
+Reposting quickly	Reposteo rápido
+Unsending a message	Anular el envío de un mensaje
+Deleting a message for me	Eliminar un mensaje para mí
+Confirming: %1$s	Con confirmación: %1$s
+Nothing needs confirming.	Nada pide confirmación.

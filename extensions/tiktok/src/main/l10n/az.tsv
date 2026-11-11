@@ -341,11 +341,6 @@ Compare gate reads with their previous values.	Qapı oxunuşlarını əvvəlki d
 Kept an interrupted change. Restart TikTok to apply.	Kəsik əməliyyat saxlanıldı. TikTok-u yenidən başladın.
 Config	Konfiqurasiya
 Config (Settings Manager)	Konfiqurasiya (Ayar meneceri)
-Confirm before a quick repost	Sürətli yenidən paylaşmadan əvvəl təsdiq istəyin
-Confirm before following	İzləməzdən əvvəl təsdiq istəyin
-Confirm before liking	Bəyənməzdən əvvəl təsdiq istəyin
-Confirm before liking a comment	Şərhi bəyənməzdən əvvəl təsdiq istəyin
-Confirm before liking a story	Hekayəni bəyənməzdən əvvəl təsdiq istəyin
 Continue supported videos from where you stopped when you scroll back to them.	Dəstəklənən videolara geri sürüşdürəndə onları dayandığınız yerdən davam etdirin.
 Controls	İdarəetmələr
 Feature gate report copied	Funksiya qapısı hesabatı kopyalandı
@@ -1161,14 +1156,9 @@ Subtitle language	Altyazı dili
 Subtitles	Altyazılar
 System	Sistem
 Hide the streak button in a chat and the reminder message that goes with it.	Söhbətdəki seriya düyməsini və onunla gələn xatırlatma mesajını gizlədin.
-Tap a comment's heart twice within %1$d seconds. A double tap on the comment needs a second one too. Removing a like stays immediate.	Şərhin ürəyinə %1$d saniyə ərzində iki dəfə toxunun. Şərhə iki dəfə toxunmaq üçün də ikinci toxunuş lazımdır. Bəyənməni geri götürmək dərhal olur.
-Tap a story's heart twice within %1$d seconds. Removing a like stays immediate.	Hekayənin ürəyinə %1$d saniyə ərzində iki dəfə toxunun. Bəyənməni geri götürmək dərhal olur.
-Tap Repost on the bar under a video twice within %1$d seconds. A repost with a note is left alone.	Videonun altındakı paneldə Repost düyməsinə %1$d saniyə ərzində iki dəfə toxunun. Qeydli yenidən paylaşmaya toxunulmur.
 Tap again to follow	İzləmək üçün yenidən toxunun
 Tap again to like	Bəyənmək üçün yenidən toxunun
 Tap again to repost	Yenidən paylaşmaq üçün yenidən toxunun
-Tap the feed Follow button twice within %1$d seconds.	Lentdəki İzlə düyməsinə %1$d saniyə ərzində iki dəfə toxunun.
-Tap the like heart twice within %1$d seconds. Removing a like stays immediate.	Bəyənmə ürəyinə %1$d saniyə ərzində iki dəfə toxunun. Bəyənməni geri götürmək dərhal olur.
 Tap to start the feed	Lenti başlatmaq üçün toxunun
 Technical details	Texniki təfərrüatlar
 Technical details, %1$s	Texniki təfərrüatlar, %1$s
@@ -2644,11 +2634,6 @@ Automatically record LIVEs you enter	Daxil olduğun LIVE-ları avtomatik yaz
 Start recording a LIVE's stream when you enter the room. Stop won't restart it until you leave and enter again. Screen recordings still need a tap and Android's permission.	LIVE otağına daxil olanda yayımın videosunu yazmağa başlayır. Dayandırdıqdan sonra otaqdan çıxıb yenidən daxil olmayınca yazı başlamır. Ekran yazısı üçün yenə toxunmaq və Android icazəsi lazımdır.
 # context: the menu row that opens the Confirm before toggles, its dialog, and the message menu rows
 Confirm before…	Etməzdən əvvəl təsdiqlə…
-Pick the taps that need a second tap before they go through.	Keçməzdən əvvəl ikinci toxunuş tələb olunan əməliyyatları seçin.
-Confirm before Unsend	Geri götürməzdən əvvəl təsdiqlə
-Confirm before Delete for me	“Məndən sil” düyməsindən əvvəl təsdiqlə
-Tap Unsend in a message's menu twice within %1$d seconds.	Mesajın menyusunda “Geri götür” düyməsinə %1$d saniyə ərzində iki dəfə toxunun.
-Tap Delete for me in a message's menu twice within %1$d seconds.	Mesajın menyusunda “Məndən sil” düyməsinə %1$d saniyə ərzində iki dəfə toxunun.
 Hide Delete for me	“Məndən sil” düyməsini gizlət
 Removes the Delete for me button from the menu on a message in a chat, so it can't be tapped by mistake. Other buttons in that menu are unchanged.	Söhbətdəki mesajın menyusundan “Məndən sil” düyməsini götürür ki, səhvən toxunulmasın. Menyudakı digər düymələr dəyişmir.
 Delete for me label	“Məndən sil” yazısı
@@ -2656,3 +2641,13 @@ Unsend label	“Geri götür” yazısı
 Only if TikTok isn't in English: type the button's text exactly as it shows in your language. Separate several with commas.	Yalnız TikTok ingilis dilində deyilsə: düymənin mətnini öz dilinizdə göründüyü kimi yazın. Bir neçəsini vergüllə ayırın.
 Tap again to unsend	Geri götürmək üçün yenidən toxunun
 Tap again to delete for me	Məndən silmək üçün yenidən toxunun
+Pick the taps that need a second tap within %1$d seconds.	%1$d saniyə ərzində ikinci toxunuş tələb olunan əməliyyatları seçin.
+Following someone	Kimisə izləmək
+Liking a video	Videonu bəyənmək
+Liking a comment	Şərhi bəyənmək
+Liking a story	Hekayəni bəyənmək
+Reposting quickly	Sürətli yenidən paylaşma
+Unsending a message	Mesajı geri götürmək
+Deleting a message for me	Mesajı məndən silmək
+Confirming: %1$s	Təsdiq tələb olunan: %1$s
+Nothing needs confirming.	Heç nə təsdiq tələb etmir.

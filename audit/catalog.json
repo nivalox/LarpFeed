@@ -2748,31 +2748,31 @@
     "key": "confirm_like",
     "default": false,
     "type": "bool",
-    "row": "Confirm before liking"
+    "row": "Confirm before list: Liking a video"
    },
    {
     "key": "confirm_follow",
     "default": false,
     "type": "bool",
-    "row": "Confirm before following"
+    "row": "Confirm before list: Following someone"
    },
    {
     "key": "confirm_quick_repost",
     "default": false,
     "type": "bool",
-    "row": "Confirm before a quick repost"
+    "row": "Confirm before list: Reposting quickly"
    },
    {
     "key": "confirm_comment_like",
     "default": false,
     "type": "bool",
-    "row": "Confirm before liking a comment"
+    "row": "Confirm before list: Liking a comment"
    },
    {
     "key": "confirm_story_like",
     "default": false,
     "type": "bool",
-    "row": "Confirm before liking a story"
+    "row": "Confirm before list: Liking a story"
    }
   ],
   "surface": "feed",

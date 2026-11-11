@@ -68,8 +68,7 @@ public class LimitTextFollowsConstantsTest {
             new PlaybackPreferenceCategory(activity, screen);
 
             String window = TapConfirmation.CONFIRM_WINDOW_SECONDS + " seconds";
-            assertTrue(summary(screen, "Confirm before following").contains(window));
-            assertTrue(summary(screen, "Confirm before liking").contains(window));
+            assertTrue(summary(screen, "Confirm before\u2026").contains(window));
             assertTrue(summary(screen, "Caption text size")
                     .contains(CaptionStyle.MIN_TEXT_SIZE + " to " + CaptionStyle.MAX_TEXT_SIZE));
             for (String height : new String[]{"Caption height", "Caption height in landscape",
@@ -85,7 +84,7 @@ public class LimitTextFollowsConstantsTest {
                     + PlaybackSpeedPatch.speedLabel(PlaybackSpeedPatch.MIN_SPEED) + " to "
                     + PlaybackSpeedPatch.speedLabel(PlaybackSpeedPatch.MAX_SPEED)));
             // No placeholder survives into what the reader sees.
-            for (String title : new String[]{"Confirm before following", "Confirm before liking",
+            for (String title : new String[]{"Confirm before\u2026",
                     "Caption text size", "Caption height", "Caption height in landscape",
                     "Caption height in Clear display", "Offline videos limit",
                     "Forget seen videos after", "Speed menu choices"}) {

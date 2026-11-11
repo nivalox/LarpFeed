@@ -47,6 +47,9 @@ public final class SwitchListPreference extends Preference {
 
     private final List<Item> items;
     private final String description;
+    /** English keys: the state line when some switches are on, and when none are. */
+    private final String onLine;
+    private final String emptyLine;
     /** The dialog on screen and its unsaved boxes, kept so a recreated screen can reopen both. */
     private AlertDialog openDialog;
     private boolean[] openChoices;
@@ -57,11 +60,27 @@ public final class SwitchListPreference extends Preference {
      */
     public SwitchListPreference(Context context, String key, String title, String description,
             List<Item> items) {
+        this(context, key, title, description, new Object[0], items, "Hidden: %1$s", "Nothing hidden.");
+    }
+
+    /**
+     * For a family of switches that isn't about hiding: the description may carry numbers
+     * ({@code descriptionArgs} fill its placeholders), and the state line has its own words.
+     *
+     * @param onLine    an English key with one %1$s for the labels that are on
+     * @param emptyLine an English key for when none are
+     */
+    public SwitchListPreference(Context context, String key, String title, String description,
+            Object[] descriptionArgs, List<Item> items, String onLine, String emptyLine) {
         super(context);
         setKey(key);
         setTitle(L10n.t(context, title));
-        this.description = L10n.t(context, description);
+        this.description = descriptionArgs.length == 0
+                ? L10n.t(context, description)
+                : L10n.f(context, description, descriptionArgs);
         this.items = Collections.unmodifiableList(new ArrayList<>(items));
+        this.onLine = onLine;
+        this.emptyLine = emptyLine;
     }
 
     /** The switches behind the row, for whatever counts settings by row. */
@@ -82,8 +101,8 @@ public final class SwitchListPreference extends Preference {
         for (Item item : items) if (item.setting.savedValue()) on.add(item.label);
         String joined = String.join(", ", on);
         String state = on.isEmpty()
-                ? L10n.t(getContext(), "Nothing hidden.")
-                : L10n.f(getContext(), "Hidden: %1$s", joined);
+                ? L10n.t(getContext(), emptyLine)
+                : L10n.f(getContext(), onLine, joined);
         return description + "\n" + state;
     }
 

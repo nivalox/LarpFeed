@@ -148,13 +148,24 @@ public class TapConfirmationTest {
             PreferenceActivity activity = controller.get();
             Utils.setContext(activity);
             SettingsStatus.confirmInteractionsEnabled = true;
-            PreferenceScreen screen = activity.getPreferenceManager().createPreferenceScreen(activity);
-            new InterfacePreferenceCategory(activity, screen);
-            assertNotNull(screen.findPreference("confirm_follow"));
-            assertNotNull(screen.findPreference("confirm_like"));
-            assertNotNull(screen.findPreference("confirm_comment_like"));
-            assertNotNull(screen.findPreference("confirm_story_like"));
-            assertNotNull(screen.findPreference("confirm_quick_repost"));
+            boolean messageMenuBefore = SettingsStatus.messageMenuEnabled;
+            SettingsStatus.messageMenuEnabled = true;
+            try {
+                PreferenceScreen screen = activity.getPreferenceManager().createPreferenceScreen(activity);
+                new InterfacePreferenceCategory(activity, screen);
+                // The confirmations are one row over several switches, "Confirm before...".
+                android.preference.Preference menu = screen.findPreference("confirm_menu");
+                assertNotNull(menu);
+                java.util.List<String> keys = new java.util.ArrayList<>();
+                for (app.morphe.extension.shared.settings.BooleanSetting setting
+                        : ((app.morphe.extension.tiktok.settings.preference.SwitchListPreference) menu).settings()) {
+                    keys.add(setting.key);
+                }
+                assertEquals(java.util.Arrays.asList("confirm_follow", "confirm_like", "confirm_comment_like",
+                        "confirm_story_like", "confirm_quick_repost", "confirm_unsend", "confirm_delete_for_me"), keys);
+            } finally {
+                SettingsStatus.messageMenuEnabled = messageMenuBefore;
+            }
         }
     }
 

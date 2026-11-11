@@ -319,6 +319,9 @@ public class FeedScreenCoverageTest {
         // The story viewer only.
         put("confirm_story_like", NONE, NONE, NONE);
         put("confirm_quick_repost", YES, UNCHECKED, NONE);
+        // The menu on a message in a chat: not a feed window at all.
+        put("confirm_unsend", NONE, NONE, NONE);
+        put("confirm_delete_for_me", NONE, NONE, NONE);
     }
 
     private final Map<Field, Boolean> statuses = new LinkedHashMap<>();

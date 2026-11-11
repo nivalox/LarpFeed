@@ -207,8 +207,21 @@ public class SettingsL10nTest {
     }
 
     private static java.io.File tableFile(String language, String extension) {
-        java.io.File file = new java.io.File(l10nDirectory(), language + extension);
-        return file.isFile() ? file : null;
+        java.io.File directory = l10nDirectory();
+        java.io.File file = new java.io.File(directory, language + extension);
+        if (file.isFile()) return file;
+        // The languages are lower-cased above and pt-rBR.tsv isn't: Windows finds the file
+        // anyway, and Linux, which is where CI runs, asks the directory for its own spelling.
+        String wanted = (language + extension).toLowerCase(java.util.Locale.ROOT);
+        java.io.File[] files = directory.listFiles();
+        if (files != null) {
+            for (java.io.File candidate : files) {
+                if (candidate.isFile() && candidate.getName().toLowerCase(java.util.Locale.ROOT).equals(wanted)) {
+                    return candidate;
+                }
+            }
+        }
+        return null;
     }
 
     /** The keys are English text, so the base is a list of source strings, not a translation. */

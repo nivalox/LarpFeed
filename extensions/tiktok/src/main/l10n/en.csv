@@ -438,14 +438,8 @@ Compact long-press menu everywhere,Compact long-press menu everywhere
 Compare gate reads with their previous values.,Compare gate reads with their previous values.
 Config,Config
 Config (Settings Manager),Config (Settings Manager)
-Confirm before Delete for me,Confirm before Delete for me
-Confirm before Unsend,Confirm before Unsend
-Confirm before a quick repost,Confirm before a quick repost
-Confirm before following,Confirm before following
-Confirm before liking,Confirm before liking
-Confirm before liking a comment,Confirm before liking a comment
-Confirm before liking a story,Confirm before liking a story
 Confirm before…,Confirm before…
+Confirming: %1$s,Confirming: %1$s
 Continue supported videos from where you stopped when you scroll back to them.,Continue supported videos from where you stopped when you scroll back to them.
 Controls,Controls
 Conversations,Conversations
@@ -568,6 +562,7 @@ Delete recording files,Delete recording files
 Delete search,Delete search
 Deletes %1$s from TikTok's storage.,Deletes %1$s from TikTok's storage.
 Deletes all reposts from your account sequentially.,Deletes all reposts from your account sequentially.
+Deleting a message for me,Deleting a message for me
 Delivery unconfirmed: %1$d/%2$d chats. Remaining chats still need a message.,Delivery unconfirmed: %1$d/%2$d chats. Remaining chats still need a message.
 Delivery unconfirmed: %1$d/%2$d chats. Those chats won't be retried today.,Delivery unconfirmed: %1$d/%2$d chats. Those chats won't be retried today.
 Description text size,Description text size
@@ -702,6 +697,7 @@ Follow refused (%1$s). Maybe a hidden CAPTCHA.,Follow refused (%1$s). Maybe a hi
 "Follow refused, code %1$s. Maybe a hidden CAPTCHA.","Follow refused, code %1$s. Maybe a hidden CAPTCHA."
 Followers,Followers
 Following,Following
+Following someone,Following someone
 Follows you,Follows you
 "For OLED screens. After 5 seconds without a touch, the buttons, caption and tabs over the video dim to a quarter, and your next touch brings them back. Shift also moves everything on the feed a few pixels every 2 minutes.","For OLED screens. After 5 seconds without a touch, the buttons, caption and tabs over the video dim to a quarter, and your next touch brings them back. Shift also moves everything on the feed a few pixels every 2 minutes."
 For You,For You
@@ -1162,6 +1158,9 @@ Likes,Likes
 Likes aren't available for this video,Likes aren't available for this video
 Likes range,Likes range
 Likes removed: %1$d,Likes removed: %1$d
+Liking a comment,Liking a comment
+Liking a story,Liking a story
+Liking a video,Liking a video
 Limit background traffic,Limit background traffic
 Limits,Limits
 Link copied,Link copied
@@ -1353,6 +1352,7 @@ Nothing hidden.,Nothing hidden.
 Nothing is playing to seek,Nothing is playing to seek
 Nothing is playing to speed up,Nothing is playing to speed up
 Nothing is saving right now,Nothing is saving right now
+Nothing needs confirming.,Nothing needs confirming.
 Nothing new was imported,Nothing new was imported
 Nothing on this page changes what TikTok does until they are on.,Nothing on this page changes what TikTok does until they are on.
 "Nothing recorded. Start, then leave settings.","Nothing recorded. Start, then leave settings."
@@ -1487,7 +1487,7 @@ Pick the buttons to take off the column. The rest stay where they are.,Pick the 
 "Pick the phone the effects server is told about, or type any model. An effect turned down for one phone may open for another. Empty means the Galaxy S24 Ultra.","Pick the phone the effects server is told about, or type any model. An effect turned down for one phone may open for another. Empty means the Galaxy S24 Ultra."
 "Pick the popups to stop. The list holds the ones TikTok has tried to show on this phone, so a popup appears here after its first showing. CAPTCHA, verification, sign-in, age, ban and legal consent screens are never listed or blocked.","Pick the popups to stop. The list holds the ones TikTok has tried to show on this phone, so a popup appears here after its first showing. CAPTCHA, verification, sign-in, age, ban and legal consent screens are never listed or blocked."
 "Pick the shortcuts to remove from the row under a profile's bio, such as TikTok Studio or Your orders. Restart TikTok to apply this.","Pick the shortcuts to remove from the row under a profile's bio, such as TikTok Studio or Your orders. Restart TikTok to apply this."
-Pick the taps that need a second tap before they go through.,Pick the taps that need a second tap before they go through.
+Pick the taps that need a second tap within %1$d seconds.,Pick the taps that need a second tap within %1$d seconds.
 Pick videos to save from profile grids,Pick videos to save from profile grids
 "Picked %1$s. Save, then tap Pick all for more.","Picked %1$s. Save, then tap Pick all for more."
 Picked videos,Picked videos
@@ -1636,6 +1636,7 @@ Report a newer phone to effects,Report a newer phone to effects
 Report a problem,Report a problem
 Report saved to %1$s,Report saved to %1$s
 Repost with a comment,Repost with a comment
+Reposting quickly,Reposting quickly
 Reposts removed: %1$d,Reposts removed: %1$d
 Required,Required
 Researched,Researched
@@ -2104,19 +2105,12 @@ Takes TikTok's AI Cast button off the camera's side toolbar. Open the camera aga
 Takes TikTok's own Auto scroll action out of the video panel and the Auto scroll label off the top of videos. Tablets and unfolded foldables also lose the Auto scroll switch beside videos. Works with Auto-advance off too.,Takes TikTok's own Auto scroll action out of the video panel and the Auto scroll label off the top of videos. Tablets and unfolded foldables also lose the Auto scroll switch beside videos. Works with Auto-advance off too.
 "Takes out the small bar above the progress bar that says a friend reposted the video, or asks you to repost it.","Takes out the small bar above the progress bar that says a friend reposted the video, or asks you to repost it."
 Tap @names in bios,Tap @names in bios
-Tap Delete for me in a message's menu twice within %1$d seconds.,Tap Delete for me in a message's menu twice within %1$d seconds.
-Tap Repost on the bar under a video twice within %1$d seconds. A repost with a note is left alone.,Tap Repost on the bar under a video twice within %1$d seconds. A repost with a note is left alone.
 Tap Stop or leave the room to save it.,Tap Stop or leave the room to save it.
-Tap Unsend in a message's menu twice within %1$d seconds.,Tap Unsend in a message's menu twice within %1$d seconds.
-Tap a comment's heart twice within %1$d seconds. A double tap on the comment needs a second one too. Removing a like stays immediate.,Tap a comment's heart twice within %1$d seconds. A double tap on the comment needs a second one too. Removing a like stays immediate.
-Tap a story's heart twice within %1$d seconds. Removing a like stays immediate.,Tap a story's heart twice within %1$d seconds. Removing a like stays immediate.
 Tap again to delete for me,Tap again to delete for me
 Tap again to follow,Tap again to follow
 Tap again to like,Tap again to like
 Tap again to repost,Tap again to repost
 Tap again to unsend,Tap again to unsend
-Tap the feed Follow button twice within %1$d seconds.,Tap the feed Follow button twice within %1$d seconds.
-Tap the like heart twice within %1$d seconds. Removing a like stays immediate.,Tap the like heart twice within %1$d seconds. Removing a like stays immediate.
 Tap to start the feed,Tap to start the feed
 "Tap to start, then scroll until the feed problem shows up and come back here to save it. The file has no captions or names, and videos and creators appear only as short codes. Read it before you share it.","Tap to start, then scroll until the feed problem shows up and come back here to save it. The file has no captions or names, and videos and creators appear only as short codes. Read it before you share it."
 "Tap, then go to the screen with what you want hidden. After %1$d seconds Larpfeed records how that screen is built, without any of its text, for the diagnostic report.","Tap, then go to the screen with what you want hidden. After %1$d seconds Larpfeed records how that screen is built, without any of its text, for the diagnostic report."
@@ -2421,6 +2415,7 @@ Unlock,Unlock
 Unlock TikTok,Unlock TikTok
 Unpersonalized For You videos,Unpersonalized For You videos
 Unsend label,Unsend label
+Unsending a message,Unsending a message
 Unsent messages,Unsent messages
 "Until you choose here, this sheet follows your choices under Hide share actions.","Until you choose here, this sheet follows your choices under Hide share actions."
 Up and down,Up and down
